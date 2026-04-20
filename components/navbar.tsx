@@ -8,6 +8,19 @@ import Link from "next/link";
 const LOGO_URL = "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/753F2E3C-3CDB-4A85-BD6A-5DB0F9999C73-u3LzeIs3PNKVhlm4etlkSSvG0hJqKT.png";
 const WA_LINK = "https://wa.me/message/55HSHDNBMWPLA1";
 
+type NavLink = {
+  href: string;
+  zh: string;
+  en: string;
+};
+
+const navLinks: NavLink[] = [
+  { href: "/#services", zh: "服务", en: "Services" },
+  { href: "/#cases", zh: "案例", en: "Results" },
+  { href: "/#products", zh: "产品", en: "Products" },
+  { href: "/insights", zh: "洞察", en: "Insights" },
+];
+
 export default function Navbar() {
   const { lang, setLang, t } = useLanguage();
   const [scrolled, setScrolled] = useState(false);
@@ -19,12 +32,6 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const navLinks = [
-  { href: "#services", zh: "服务", en: "Services" },
-  { href: "#cases", zh: "案例", en: "Results" },
-  { href: "#products", zh: "产品", en: "Products" },
-  { href: "/insights", zh: "洞察", en: "Insights" },
-];
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
@@ -34,8 +41,7 @@ export default function Navbar() {
       }`}
     >
       <div className="container flex items-center justify-between h-16 md:h-20">
-        {/* Logo */}
-        <a href="#" className="flex items-center gap-3 group">
+        <Link href="/" className="flex items-center gap-3 group">
           <img
             src={LOGO_URL}
             alt="Qiming Feng Shui Logo"
@@ -47,34 +53,21 @@ export default function Navbar() {
           >
             {t("奇明風水", "QiMing Feng Shui")}
           </span>
-        </a>
+        </Link>
 
-        {/* Desktop Nav */}
         <nav className="hidden lg:flex items-center gap-8">
-          {navLinks.map((link) => 
-            (link as { isPage?: boolean }).isPage ? (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="text-sm font-medium text-[oklch(0.35_0.02_60)] hover:text-[oklch(0.60_0.08_65)] transition-colors duration-300 tracking-wide"
-                style={{ fontFamily: "var(--font-lato), var(--font-noto-sans), sans-serif" }}
-              >
-                {t(link.zh, link.en)}
-              </Link>
-            ) : (
-              <a
-                key={link.href}
-                href={link.href}
-                className="text-sm font-medium text-[oklch(0.35_0.02_60)] hover:text-[oklch(0.60_0.08_65)] transition-colors duration-300 tracking-wide"
-                style={{ fontFamily: "var(--font-lato), var(--font-noto-sans), sans-serif" }}
-              >
-                {t(link.zh, link.en)}
-              </a>
-            )
-          )}
+          {navLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className="text-sm font-medium text-[oklch(0.35_0.02_60)] hover:text-[oklch(0.60_0.08_65)] transition-colors duration-300 tracking-wide"
+              style={{ fontFamily: "var(--font-lato), var(--font-noto-sans), sans-serif" }}
+            >
+              {t(link.zh, link.en)}
+            </Link>
+          ))}
         </nav>
 
-        {/* Right side */}
         <div className="flex items-center gap-3">
           <button
             onClick={() => setLang(lang === "zh" ? "en" : "zh")}
@@ -84,7 +77,6 @@ export default function Navbar() {
             {lang === "zh" ? "EN" : "中文"}
           </button>
 
-          {/* Book Now CTA */}
           <a
             href={WA_LINK}
             target="_blank"
@@ -103,38 +95,26 @@ export default function Navbar() {
           <button
             onClick={() => setMenuOpen(!menuOpen)}
             className="lg:hidden p-2 text-[oklch(0.15_0.02_60)]"
+            aria-label="Toggle menu"
           >
             {menuOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
         </div>
       </div>
 
-      {/* Mobile Menu */}
       {menuOpen && (
         <div className="lg:hidden bg-[oklch(0.97_0.012_75)] border-t border-[oklch(0.88_0.018_70)] px-6 py-6 space-y-4">
-          {navLinks.map((link) => 
-            (link as { isPage?: boolean }).isPage ? (
-              <Link
-                key={link.href}
-                href={link.href}
-                onClick={() => setMenuOpen(false)}
-                className="block text-base font-medium text-[oklch(0.25_0.02_60)] hover:text-[oklch(0.60_0.08_65)] transition-colors py-2 border-b border-[oklch(0.92_0.015_70)]"
-                style={{ fontFamily: "var(--font-lato), var(--font-noto-sans), sans-serif" }}
-              >
-                {t(link.zh, link.en)}
-              </Link>
-            ) : (
-              <a
-                key={link.href}
-                href={link.href}
-                onClick={() => setMenuOpen(false)}
-                className="block text-base font-medium text-[oklch(0.25_0.02_60)] hover:text-[oklch(0.60_0.08_65)] transition-colors py-2 border-b border-[oklch(0.92_0.015_70)]"
-                style={{ fontFamily: "var(--font-lato), var(--font-noto-sans), sans-serif" }}
-              >
-                {t(link.zh, link.en)}
-              </a>
-            )
-          )}
+          {navLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              onClick={() => setMenuOpen(false)}
+              className="block text-base font-medium text-[oklch(0.25_0.02_60)] hover:text-[oklch(0.60_0.08_65)] transition-colors py-2 border-b border-[oklch(0.92_0.015_70)]"
+              style={{ fontFamily: "var(--font-lato), var(--font-noto-sans), sans-serif" }}
+            >
+              {t(link.zh, link.en)}
+            </Link>
+          ))}
           <div className="flex gap-3 pt-2">
             <button
               onClick={() => {
