@@ -20,11 +20,11 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { href: "#services", zh: "服务", en: "Services" },
-    { href: "#cases", zh: "案例", en: "Results" },
-    { href: "#products", zh: "产品", en: "Products" },
-  ];
-
+  { href: "#services", zh: "服务", en: "Services" },
+  { href: "#cases", zh: "案例", en: "Results" },
+  { href: "#products", zh: "产品", en: "Products" },
+  { href: "/insights", zh: "洞察", en: "Insights" },
+];
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
