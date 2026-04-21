@@ -9,76 +9,64 @@ import Link from "next/link";
 
 const INSIGHTS = [
   {
-    id: "hdb-bto-feng-shui-2026",
-    category: { zh: "住宅风水", en: "Residential Feng Shui" },
-    titleZh: "2026年HDB BTO风水评估指南",
-    titleEn: "Singapore HDB BTO Feng Shui Audit Guide 2026",
-    excerptZh: "新组屋收楼前必看！如何选择最佳单位朝向、避开不利格局、布置旺财风水阵。",
-    excerptEn: "Essential guide before collecting your new HDB flat! Learn how to choose the best unit orientation, avoid unfavorable layouts, and set up prosperity arrangements.",
-    date: "2026-04-10",
-    readTime: "8 min",
-    img: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/21711776224675_.pic_hd.jpg-e4KblAWrbDj5x5doZNK2XS1KduaUCr.png",
-    tags: ["HDB", "BTO", "2026"],
-  },
-  {
-    id: "bedok-feng-shui-guide",
-    category: { zh: "地区指南", en: "Area Guide" },
-    titleZh: "勿洛区风水布局要点",
-    titleEn: "Bedok Area Feng Shui Layout Guide",
-    excerptZh: "勿洛作为新加坡东部成熟社区，有其独特的地理能量特征。了解如何因地制宜进行风水布局。",
-    excerptEn: "As a mature community in East Singapore, Bedok has unique geographical energy characteristics. Learn location-specific feng shui optimization.",
-    date: "2026-03-28",
+    id: "feng-shui-wealth-improvement",
+    category: { zh: "财富风水", en: "Wealth Feng Shui" },
+    titleZh: "财富、住宅布局与风水：为什么有些家总是存不住钱",
+    titleEn: "Wealth, Home Layout, and Feng Shui: Why Some Homes Never Seem to Hold Money",
+    excerptZh: "从住宅动线、休息质量到空间支持感，解析为什么家居环境会影响财富流动与决策状态。",
+    excerptEn: "A practical look at how home layout, rest quality, and environmental support can affect wealth flow, decisions, and daily momentum.",
+    date: "2026-04-20",
     readTime: "6 min",
-    img: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/21641776221185_.pic-Y5lINHcCAGpCwsBdBQDkpS4zpNX9QV.jpg",
-    tags: ["Bedok", "East Singapore"],
+    img: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/21711776224675_.pic_hd.jpg-e4KblAWrbDj5x5doZNK2XS1KduaUCr.png",
+    tags: ["Wealth", "Home Layout", "Singapore"],
   },
   {
-    id: "office-wealth-layout",
-    category: { zh: "商业风水", en: "Business Feng Shui" },
-    titleZh: "CBD办公室招财布局秘诀",
-    titleEn: "Central Area Office Wealth Layout Secrets",
-    excerptZh: "新加坡CBD高楼林立，如何在有限空间内布置招财阵？老板位、财位、收银台的关键要点。",
-    excerptEn: "Singapore CBD is full of high-rises. How to arrange wealth corners in limited space? Key points for boss desk, wealth position, and cashier placement.",
-    date: "2026-03-15",
-    readTime: "10 min",
-    img: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/21551776220031_.pic_hd.jpg-GNpRqM2kWn8vIJ6dVMuaQl1bbVlyvR.png",
-    tags: ["CBD", "Office", "Business"],
-  },
-  {
-    id: "condo-feng-shui-tips",
-    category: { zh: "住宅风水", en: "Residential Feng Shui" },
-    titleZh: "公寓风水常见问题与解决方案",
-    titleEn: "Condo Feng Shui Common Issues & Solutions",
-    excerptZh: "公寓住宅常见的风水问题：门对门、镜子摆放、厨房方位等，以及简单有效的化解方法。",
-    excerptEn: "Common condo feng shui issues: door-facing-door, mirror placement, kitchen orientation, and simple effective remedies.",
-    date: "2026-03-01",
-    readTime: "7 min",
-    img: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/21631776220998_.pic_hd.jpg-PKkh2dr24Bhq47qG4H7Yr1oMBpIFnS.png",
-    tags: ["Condo", "Residential"],
-  },
-  {
-    id: "bazi-career-2026",
-    category: { zh: "八字命理", en: "Bazi Reading" },
-    titleZh: "2026丙午年事业运势分析",
-    titleEn: "2026 Year of Fire Horse Career Analysis",
-    excerptZh: "丙午年哪些生肖事业运最旺？如何根据八字选择最佳跳槽、创业时机？",
-    excerptEn: "Which zodiac signs have the best career luck in 2026? How to choose the best timing for job changes or starting a business based on Bazi?",
-    date: "2026-02-15",
-    readTime: "12 min",
+    id: "qimen-dunjia-decision-making",
+    category: { zh: "奇门遁甲", en: "Qi Men Dun Jia" },
+    titleZh: "奇门遁甲如何帮助现代人做关键决策",
+    titleEn: "How Qi Men Dun Jia Supports Better Timing and Decision-Making",
+    excerptZh: "不是神秘化，而是把时机、方向与行动策略结合起来，帮助事业与人生决策更有把握。",
+    excerptEn: "A grounded explanation of how timing, direction, and strategy come together in Qi Men Dun Jia for modern business and life decisions.",
+    date: "2026-04-20",
+    readTime: "6 min",
     img: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/21961776249570_.pic_hd.jpg-xVEyhvkF9jOSMdF8BUm6LtcClWKN8d.png",
-    tags: ["Bazi", "Career", "2026"],
+    tags: ["Qi Men Dun Jia", "Timing", "Business"],
   },
   {
-    id: "tongshifu-art-guide",
-    category: { zh: "能量器物", en: "Energy Artifacts" },
-    titleZh: "铜师傅艺术品选购指南",
-    titleEn: "Tongshifu Artisanal Copper Sculptures Guide",
-    excerptZh: "作为中国最大铜文创品牌，铜师傅如何将传统工艺与现代美学结合？如何选择适合自己的能量摆件？",
-    excerptEn: "As China's largest bronze art brand, how does Tongshifu combine traditional craftsmanship with modern aesthetics? How to choose the right energy piece for you?",
-    date: "2026-02-01",
-    readTime: "9 min",
-    img: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/21611776220612_.pic_hd.jpg-hejKHLcxZs2TYWp6aij5M4iQBddg4y.png",
-    tags: ["Tongshifu", "Art", "Collection"],
+    id: "space-energy-clearing",
+    category: { zh: "空间能量", en: "Space Energy" },
+    titleZh: "空间能量净化：当一个家看起来正常，却总让人疲惫",
+    titleEn: "Space Energy Clearing: When a Home Looks Fine but Feels Draining",
+    excerptZh: "为什么有些空间并没有明显问题，却长期影响睡眠、情绪和整体状态？这篇文章从环境与能量两层角度解释。",
+    excerptEn: "Why do some homes seem normal on the surface yet affect sleep, mood, and clarity over time? A practical perspective on environmental heaviness and clearing.",
+    date: "2026-04-20",
+    readTime: "5 min",
+    img: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/21631776220998_.pic_hd.jpg-PKkh2dr24Bhq47qG4H7Yr1oMBpIFnS.png",
+    tags: ["Space Energy", "Sleep", "Home"],
+  },
+  {
+    id: "singapore-qiming-feng-shui",
+    category: { zh: "新加坡风水", en: "Singapore Feng Shui" },
+    titleZh: "为什么新加坡风水更需要结合本地住宅与生活节奏来看",
+    titleEn: "Why Feng Shui in Singapore Must Be Read Through Local Homes and Urban Living",
+    excerptZh: "从 HDB、BTO、Condo 到店铺与办公室，新加坡的城市密度与生活节奏决定了风水不能照搬模板。",
+    excerptEn: "From HDB and BTO flats to condos, shops, and offices, Feng Shui in Singapore needs local context instead of generic formulas.",
+    date: "2026-04-20",
+    readTime: "5 min",
+    img: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/21641776221185_.pic-Y5lINHcCAGpCwsBdBQDkpS4zpNX9QV.jpg",
+    tags: ["HDB", "BTO", "Condo"],
+  },
+  {
+    id: "master-huang-qiming-biography",
+    category: { zh: "关于启明大师", en: "About Master Huang" },
+    titleZh: "黄启明大师简介：16年实战经验如何形成今天的奇明风水方法",
+    titleEn: "Master Huang QiMing: The 16+ Years of Hands-On Practice Behind Qiming Feng Shui",
+    excerptZh: "了解黄启明大师如何将传统玄学修习、实际勘测与现代生活判断结合，形成今天的咨询风格。",
+    excerptEn: "A closer look at Master Huang QiMing’s background, practice path, and how Qiming Feng Shui developed into a grounded modern advisory approach.",
+    date: "2026-04-20",
+    readTime: "5 min",
+    img: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/21801776239127_.pic_hd.jpg-EkcBpRqOTKcVaoZhsifm0L0hrfZ9uJ.png",
+    tags: ["Master Huang", "Qiming Feng Shui", "Biography"],
   },
 ];
 
@@ -90,15 +78,14 @@ function InsightsContent() {
     visible: (i: number) => ({
       opacity: 1,
       y: 0,
-      transition: { duration: 0.5, delay: i * 0.1 },
+      transition: { duration: 0.5, delay: i * 0.08 },
     }),
   };
 
   return (
     <div className="min-h-screen bg-[oklch(0.08_0.02_60)]">
       <Navbar />
-      
-      {/* Hero */}
+
       <section className="pt-32 pb-16 md:pt-40 md:pb-20">
         <div className="container">
           <motion.div
@@ -112,7 +99,7 @@ function InsightsContent() {
                 className="text-[0.6rem] tracking-[0.3em] uppercase text-[oklch(0.60_0.08_65)] font-semibold"
                 style={{ fontFamily: "var(--font-lato), sans-serif" }}
               >
-                {t("洞察与分享", "Insights & Blog")}
+                {t("洞察与博客", "Insights & Articles")}
               </span>
             </div>
             <h1
@@ -123,23 +110,22 @@ function InsightsContent() {
                 color: "oklch(0.95 0.01 75)",
               }}
             >
-              {t("风水洞察", "Feng Shui Insights")}
+              {t("奇明风水洞察", "Qiming Feng Shui Insights")}
             </h1>
             <p
-              className="text-lg max-w-2xl leading-relaxed"
+              className="text-lg max-w-3xl leading-relaxed"
               style={{
                 fontFamily: "var(--font-lato), var(--font-noto-sans), sans-serif",
                 color: "oklch(0.70 0.02 70)",
               }}
             >
               {t(
-                "新加坡本地风水知识、运势分析、空间布局技巧。助您在狮城实现事业与生活的双丰收。",
-                "Local Singapore feng shui knowledge, fortune analysis, and space layout tips. Helping you achieve success in both career and life in the Lion City."
+                "围绕新加坡住宅风水、奇门遁甲决策、空间能量净化与启明大师实战经验的专业文章。适合希望更系统了解风水与生活、事业、空间之间关系的读者。",
+                "Professional articles on Feng Shui in Singapore, Qi Men Dun Jia decision-making, space energy clearing, and the hands-on practice behind Qiming Feng Shui. Designed for readers who want a clearer and more grounded understanding of how space, timing, and daily life connect."
               )}
             </p>
           </motion.div>
 
-          {/* Location Badge */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -155,15 +141,14 @@ function InsightsContent() {
               }}
             >
               {t(
-                "Blk 210 New Upper Changi Road #01-729, Singapore 460210 (勿洛)",
-                "Blk 210 New Upper Changi Road #01-729, Singapore 460210 (Bedok)"
+                "新加坡本地视角：HDB / BTO / Condo / 店铺 / 办公室",
+                "Local Singapore perspective: HDB / BTO / Condo / Shop / Office"
               )}
             </span>
           </motion.div>
         </div>
       </section>
 
-      {/* Insights Grid */}
       <section className="pb-24 md:pb-32">
         <div className="container">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -177,117 +162,80 @@ function InsightsContent() {
                 variants={fadeIn}
                 className="group bg-[oklch(0.12_0.02_60)] border border-[oklch(0.20_0.02_60)] hover:border-[oklch(0.60_0.08_65)] transition-all duration-300"
               >
-                <div className="relative overflow-hidden aspect-[16/10]">
-                  <img
-                    src={insight.img}
-                    alt={lang === "zh" ? insight.titleZh : insight.titleEn}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                  <div className="absolute top-3 left-3">
-                    <span
-                      className="text-[0.5rem] tracking-[0.15em] uppercase px-2 py-1 bg-[oklch(0.60_0.08_65)] text-[oklch(0.10_0.02_60)] font-bold"
-                      style={{ fontFamily: "var(--font-lato), sans-serif" }}
-                    >
-                      {t(insight.category.zh, insight.category.en)}
-                    </span>
-                  </div>
-                </div>
-                <div className="p-6">
-                  <div className="flex items-center gap-4 mb-3">
-                    <span
-                      className="flex items-center gap-1.5 text-[0.65rem] text-[oklch(0.50_0.02_65)]"
-                      style={{ fontFamily: "var(--font-lato), sans-serif" }}
-                    >
-                      <Calendar size={11} />
-                      {insight.date}
-                    </span>
-                    <span
-                      className="flex items-center gap-1.5 text-[0.65rem] text-[oklch(0.50_0.02_65)]"
-                      style={{ fontFamily: "var(--font-lato), sans-serif" }}
-                    >
-                      <Clock size={11} />
-                      {insight.readTime}
-                    </span>
-                  </div>
-                  <h2
-                    className="font-bold mb-3 line-clamp-2 group-hover:text-[oklch(0.60_0.08_65)] transition-colors"
-                    style={{
-                      fontFamily: "var(--font-cormorant), var(--font-noto-serif), serif",
-                      fontSize: "1.15rem",
-                      color: "oklch(0.95 0.01 75)",
-                    }}
-                  >
-                    {lang === "zh" ? insight.titleZh : insight.titleEn}
-                  </h2>
-                  <p
-                    className="text-xs leading-relaxed line-clamp-3 mb-4"
-                    style={{
-                      fontFamily: "var(--font-lato), var(--font-noto-sans), sans-serif",
-                      color: "oklch(0.60 0.02 70)",
-                    }}
-                  >
-                    {lang === "zh" ? insight.excerptZh : insight.excerptEn}
-                  </p>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {insight.tags.map((tag, j) => (
+                <Link href={`/insights/${insight.id}`} className="block">
+                  <div className="relative overflow-hidden aspect-[16/10]">
+                    <img
+                      src={insight.img}
+                      alt={lang === "zh" ? insight.titleZh : insight.titleEn}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                    <div className="absolute top-3 left-3">
                       <span
-                        key={j}
-                        className="text-[0.5rem] tracking-[0.1em] uppercase px-2 py-0.5 border border-[oklch(0.25_0.02_60)] text-[oklch(0.50_0.02_65)]"
+                        className="text-[0.5rem] tracking-[0.15em] uppercase px-2 py-1 bg-[oklch(0.60_0.08_65)] text-[oklch(0.10_0.02_60)] font-bold"
                         style={{ fontFamily: "var(--font-lato), sans-serif" }}
                       >
-                        {tag}
+                        {t(insight.category.zh, insight.category.en)}
                       </span>
-                    ))}
+                    </div>
                   </div>
-                  <a
-                    href={`https://wa.me/message/55HSHDNBMWPLA1?text=${encodeURIComponent(lang === "zh" ? `您好，我想了解更多关于"${insight.titleZh}"的内容` : `Hi, I'd like to learn more about "${insight.titleEn}"`)}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-xs font-bold uppercase text-[oklch(0.60_0.08_65)] hover:gap-3 transition-all duration-300"
-                    style={{ fontFamily: "var(--font-lato), sans-serif", letterSpacing: "0.1em" }}
-                  >
-                    {t("咨询详情", "Learn More")} <ArrowRight size={10} />
-                  </a>
-                </div>
+                  <div className="p-6">
+                    <div className="flex items-center gap-4 mb-3">
+                      <span
+                        className="flex items-center gap-1.5 text-[0.65rem] text-[oklch(0.50_0.02_65)]"
+                        style={{ fontFamily: "var(--font-lato), sans-serif" }}
+                      >
+                        <Calendar size={11} />
+                        {insight.date}
+                      </span>
+                      <span
+                        className="flex items-center gap-1.5 text-[0.65rem] text-[oklch(0.50_0.02_65)]"
+                        style={{ fontFamily: "var(--font-lato), sans-serif" }}
+                      >
+                        <Clock size={11} />
+                        {insight.readTime}
+                      </span>
+                    </div>
+                    <h2
+                      className="font-bold mb-3 line-clamp-2 group-hover:text-[oklch(0.60_0.08_65)] transition-colors"
+                      style={{
+                        fontFamily: "var(--font-cormorant), var(--font-noto-serif), serif",
+                        fontSize: "1.15rem",
+                        color: "oklch(0.95 0.01 75)",
+                      }}
+                    >
+                      {lang === "zh" ? insight.titleZh : insight.titleEn}
+                    </h2>
+                    <p
+                      className="text-xs leading-relaxed line-clamp-3 mb-4"
+                      style={{
+                        fontFamily: "var(--font-lato), var(--font-noto-sans), sans-serif",
+                        color: "oklch(0.60 0.02 70)",
+                      }}
+                    >
+                      {lang === "zh" ? insight.excerptZh : insight.excerptEn}
+                    </p>
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {insight.tags.map((tag, j) => (
+                        <span
+                          key={j}
+                          className="text-[0.5rem] tracking-[0.1em] uppercase px-2 py-0.5 border border-[oklch(0.25_0.02_60)] text-[oklch(0.50_0.02_65)]"
+                          style={{ fontFamily: "var(--font-lato), sans-serif" }}
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                    <span
+                      className="inline-flex items-center gap-1.5 text-xs font-bold uppercase text-[oklch(0.60_0.08_65)] group-hover:gap-3 transition-all duration-300"
+                      style={{ fontFamily: "var(--font-lato), sans-serif", letterSpacing: "0.1em" }}
+                    >
+                      {t("阅读文章", "Read Article")} <ArrowRight size={10} />
+                    </span>
+                  </div>
+                </Link>
               </motion.article>
             ))}
           </div>
-
-          {/* CTA */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-            className="mt-16 text-center"
-          >
-            <p
-              className="text-sm mb-6"
-              style={{
-                fontFamily: "var(--font-lato), var(--font-noto-sans), sans-serif",
-                color: "oklch(0.60 0.02 70)",
-              }}
-            >
-              {t(
-                "想要了解更多个性化风水建议？预约启明大师一对一咨询",
-                "Want personalized feng shui advice? Book a one-on-one consultation with Master Qiming"
-              )}
-            </p>
-            <a
-              href="https://wa.me/message/55HSHDNBMWPLA1"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-8 py-4 text-sm font-bold uppercase tracking-widest transition-all duration-300 hover:opacity-90"
-              style={{
-                fontFamily: "var(--font-lato), sans-serif",
-                background: "oklch(0.60 0.08 65)",
-                color: "oklch(0.10 0.02 60)",
-                letterSpacing: "0.12em",
-              }}
-            >
-              {t("预约咨询", "Book Consultation")} <ArrowRight size={14} />
-            </a>
-          </motion.div>
         </div>
       </section>
 
