@@ -11,7 +11,7 @@ export default function Footer() {
   const navLinks = [
     { href: "#services", zh: "核心服务", en: "Services" },
     { href: "#clearing", zh: "能量净化", en: "Wellness" },
-    { href: "#master", zh: "关于启明", en: "Master" },
+    { href: "/insights", zh: "洞察博客", en: "Insights" },
     { href: "#products", zh: "能量载体", en: "Tools" },
     { href: "#contact", zh: "联系我们", en: "Contact" },
   ];
@@ -20,7 +20,6 @@ export default function Footer() {
     <footer className="bg-[oklch(0.10_0.015_60)] border-t border-[oklch(0.20_0.02_60)]">
       <div className="container py-12 md:py-16">
         <div className="grid md:grid-cols-3 gap-10 mb-12">
-          {/* Brand */}
           <div>
             <div className="mb-5 flex items-center gap-3">
               <img
@@ -43,7 +42,6 @@ export default function Footer() {
                 "We don't sell Feng Shui. We provide clarity and direction for your life's success."
               )}
             </p>
-            {/* Social */}
             <div className="flex gap-3 mt-5">
               <a href="https://www.instagram.com/qimingfengshui?igsh=MWlqODFyNDFzcHhuMQ%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer"
                 className="w-8 h-8 border border-[oklch(0.25_0.02_60)] flex items-center justify-center text-[oklch(0.45_0.01_75)] hover:border-[oklch(0.60_0.08_65)] hover:text-[oklch(0.60_0.08_65)] transition-all duration-300">
@@ -61,7 +59,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Navigation */}
           <div>
             <p className="text-[0.6rem] font-bold tracking-[0.2em] uppercase text-[oklch(0.60_0.08_65)] mb-4" style={{ fontFamily: "var(--font-lato), sans-serif" }}>
               {t("快速导航", "Quick Links")}
@@ -80,7 +77,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Contact */}
           <div>
             <p className="text-[0.6rem] font-bold tracking-[0.2em] uppercase text-[oklch(0.60_0.08_65)] mb-4" style={{ fontFamily: "var(--font-lato), sans-serif" }}>
               {t("联系方式", "Contact")}
@@ -107,10 +103,7 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom */}
         <div className="gold-line mb-8" />
-        
-        {/* Brand Tagline */}
         <div className="text-center mb-8 py-6">
           <p className="text-sm italic leading-relaxed text-[oklch(0.65_0.02_70)]" style={{ fontFamily: "var(--font-lato), var(--font-noto-sans), sans-serif" }}>
             {t(
@@ -121,7 +114,6 @@ export default function Footer() {
         </div>
 
         <div className="gold-line mb-6" />
-        
         <div className="flex flex-col md:flex-row items-center justify-between gap-3 text-[0.65rem] text-[oklch(0.35_0.01_75)]" style={{ fontFamily: "var(--font-lato), sans-serif" }}>
           <p>© {new Date().getFullYear()} {t("奇明風水 · 版权所有", "QiMing Feng Shui · All Rights Reserved")}</p>
           <p>
