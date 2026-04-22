@@ -3,9 +3,17 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLanguage } from "@/contexts/language-context";
-import { ChevronUp, MessageCircle, X, Sparkles, Home, Briefcase, GraduationCap } from "lucide-react";
+import {
+  ChevronUp,
+  MessageCircle,
+  X,
+  Sparkles,
+  Home,
+  Briefcase,
+  GraduationCap,
+} from "lucide-react";
 
-const WA_LINK = "https://wa.me/message/55HSHDNBMWPLA1";
+const WA_LINK = "https://wa.me/6589418791";
 
 const quickLinks = [
   {
@@ -46,8 +54,7 @@ export default function FloatingActions() {
   }, []);
 
   return (
-    <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-3 items-end">
-      {/* Back to top */}
+    <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3">
       <AnimatePresence>
         {showTop && (
           <motion.button
@@ -55,14 +62,13 @@ export default function FloatingActions() {
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.8 }}
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="w-10 h-10 bg-[oklch(0.97_0.012_75)] border border-[oklch(0.88_0.018_70)] flex items-center justify-center text-[oklch(0.50_0.02_65)] hover:border-[oklch(0.60_0.08_65)] hover:text-[oklch(0.60_0.08_65)] transition-all duration-300 shadow-md"
+            className="flex h-10 w-10 items-center justify-center border border-[oklch(0.88_0.018_70)] bg-[oklch(0.97_0.012_75)] text-[oklch(0.50_0.02_65)] shadow-md transition-all duration-300 hover:border-[oklch(0.60_0.08_65)] hover:text-[oklch(0.60_0.08_65)]"
           >
             <ChevronUp size={16} />
           </motion.button>
         )}
       </AnimatePresence>
 
-      {/* Quick Links Panel */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -70,10 +76,10 @@ export default function FloatingActions() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.9 }}
             transition={{ duration: 0.2 }}
-            className="bg-[oklch(0.10_0.02_60)] border border-[oklch(0.25_0.02_60)] shadow-2xl p-4 w-72"
+            className="w-72 border border-[oklch(0.25_0.02_60)] bg-[oklch(0.10_0.02_60)] p-4 shadow-2xl"
           >
             <p
-              className="text-xs text-[oklch(0.60_0.08_65)] font-semibold uppercase tracking-widest mb-3"
+              className="mb-3 text-xs font-semibold uppercase tracking-widest text-[oklch(0.60_0.08_65)]"
               style={{ fontFamily: "var(--font-lato), sans-serif" }}
             >
               {t("快速咨询", "Quick Enquiry")}
@@ -84,13 +90,13 @@ export default function FloatingActions() {
                 return (
                   <a
                     key={i}
-                    href={`${WA_LINK}&text=${encodeURIComponent(link.message)}`}
+                    href={`${WA_LINK}?text=${encodeURIComponent(link.message)}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={() => setIsOpen(false)}
-                    className="flex items-center gap-3 p-3 bg-[oklch(0.14_0.02_60)] hover:bg-[oklch(0.18_0.02_60)] border border-[oklch(0.22_0.02_60)] transition-all duration-200 group"
+                    className="group flex items-center gap-3 border border-[oklch(0.22_0.02_60)] bg-[oklch(0.14_0.02_60)] p-3 transition-all duration-200 hover:bg-[oklch(0.18_0.02_60)]"
                   >
-                    <Icon size={16} className="text-[oklch(0.60_0.08_65)] flex-shrink-0" />
+                    <Icon size={16} className="flex-shrink-0 text-[oklch(0.60_0.08_65)]" />
                     <span
                       className="text-sm text-[oklch(0.85_0.02_70)] group-hover:text-[oklch(0.95_0.01_75)]"
                       style={{ fontFamily: "var(--font-lato), var(--font-noto-sans), sans-serif" }}
@@ -105,7 +111,6 @@ export default function FloatingActions() {
         )}
       </AnimatePresence>
 
-      {/* WhatsApp Main Button */}
       <motion.button
         onClick={() => setIsOpen(!isOpen)}
         initial={{ opacity: 0, scale: 0.8 }}
@@ -118,7 +123,6 @@ export default function FloatingActions() {
           color: "oklch(0.98 0.005 75)",
         }}
       >
-        {/* Pulse animation */}
         {!isOpen && (
           <motion.span
             className="absolute inset-0"
@@ -127,7 +131,7 @@ export default function FloatingActions() {
             transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
           />
         )}
-        
+
         <span className="relative z-10">
           {isOpen ? <X size={18} /> : <MessageCircle size={18} />}
         </span>
