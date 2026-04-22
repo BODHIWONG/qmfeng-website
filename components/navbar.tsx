@@ -6,7 +6,7 @@ import { Menu, X } from "lucide-react";
 import Link from "next/link";
 
 const LOGO_URL = "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/753F2E3C-3CDB-4A85-BD6A-5DB0F9999C73-u3LzeIs3PNKVhlm4etlkSSvG0hJqKT.png";
-const WA_LINK = "https://wa.me/message/55HSHDNBMWPLA1";
+const WA_LINK = "https://wa.me/6589418791";
 
 export default function Navbar() {
   const { lang, setLang, t } = useLanguage();
@@ -18,12 +18,14 @@ export default function Navbar() {
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
-const navLinks = [
-  { href: "/#services", zh: "服务", en: "Services" },
-  { href: "/#cases", zh: "案例", en: "Results" },
-  { href: "/#products", zh: "产品", en: "Products" },
-  { href: "/insights", zh: "洞察", en: "Insights" },  
-];
+
+  const navLinks = [
+    { href: "/#services", zh: "服务", en: "Services" },
+    { href: "/#cases", zh: "案例", en: "Results" },
+    { href: "/#products", zh: "产品", en: "Products" },
+    { href: "/insights", zh: "洞察", en: "Insights", isPage: true },
+  ];
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
@@ -33,7 +35,6 @@ const navLinks = [
       }`}
     >
       <div className="container flex items-center justify-between h-16 md:h-20">
-        {/* Logo */}
         <Link href="/" className="flex items-center gap-3 group">
           <img
             src={LOGO_URL}
@@ -47,10 +48,10 @@ const navLinks = [
             {t("奇明風水", "QiMing Feng Shui")}
           </span>
         </Link>
-        {/* Desktop Nav */}
+
         <nav className="hidden lg:flex items-center gap-8">
-          {navLinks.map((link) => 
-            (link as { isPage?: boolean }).isPage ? (
+          {navLinks.map((link) =>
+            link.isPage ? (
               <Link
                 key={link.href}
                 href={link.href}
@@ -72,7 +73,6 @@ const navLinks = [
           )}
         </nav>
 
-        {/* Right side */}
         <div className="flex items-center gap-3">
           <button
             onClick={() => setLang(lang === "zh" ? "en" : "zh")}
@@ -82,9 +82,8 @@ const navLinks = [
             {lang === "zh" ? "EN" : "中文"}
           </button>
 
-          {/* Book Now CTA */}
           <a
-            href={WA_LINK}
+            href={`${WA_LINK}?text=${encodeURIComponent("Hello Master Huang, I would like to book a consultation.")}`}
             target="_blank"
             rel="noopener noreferrer"
             className="hidden md:flex items-center gap-2 px-5 py-2 text-xs font-bold tracking-widest uppercase transition-all duration-300 hover:scale-[1.02]"
@@ -107,11 +106,10 @@ const navLinks = [
         </div>
       </div>
 
-      {/* Mobile Menu */}
       {menuOpen && (
         <div className="lg:hidden bg-[oklch(0.97_0.012_75)] border-t border-[oklch(0.88_0.018_70)] px-6 py-6 space-y-4">
-          {navLinks.map((link) => 
-            (link as { isPage?: boolean }).isPage ? (
+          {navLinks.map((link) =>
+            link.isPage ? (
               <Link
                 key={link.href}
                 href={link.href}
@@ -145,7 +143,7 @@ const navLinks = [
               {lang === "zh" ? "English" : "中文"}
             </button>
             <a
-              href={WA_LINK}
+              href={`${WA_LINK}?text=${encodeURIComponent("Hello Master Huang, I would like to book a consultation.")}`}
               target="_blank"
               rel="noopener noreferrer"
               className="text-xs py-2 px-4 flex-1 text-center font-bold uppercase tracking-widest"
