@@ -18,12 +18,11 @@ export default function Navbar() {
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
-
-  const navLinks = [
-  { href: "#services", zh: "服务", en: "Services" },
-  { href: "#cases", zh: "案例", en: "Results" },
-  { href: "#products", zh: "产品", en: "Products" },
-  { href: "/insights", zh: "洞察", en: "Insights" },
+const navLinks = [
+  { href: "/#services", zh: "服务", en: "Services" },
+  { href: "/#cases", zh: "案例", en: "Results" },
+  { href: "/#products", zh: "产品", en: "Products" },
+  { href: "/insights", zh: "洞察", en: "Insights" },  
 ];
   return (
     <header
@@ -35,7 +34,7 @@ export default function Navbar() {
     >
       <div className="container flex items-center justify-between h-16 md:h-20">
         {/* Logo */}
-        <a href="#" className="flex items-center gap-3 group">
+        <Link href="/" className="flex items-center gap-3 group">
           <img
             src={LOGO_URL}
             alt="Qiming Feng Shui Logo"
@@ -47,8 +46,7 @@ export default function Navbar() {
           >
             {t("奇明風水", "QiMing Feng Shui")}
           </span>
-        </a>
-
+        </Link>
         {/* Desktop Nav */}
         <nav className="hidden lg:flex items-center gap-8">
           {navLinks.map((link) => 
