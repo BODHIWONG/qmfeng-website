@@ -10,8 +10,6 @@ const services = [
     titleZh: "事业与财富布局",
 titleEn: "Career & Wealth Alignment",
 painZh: "看清时机、稳住财富、减少错误决策。",
-painEn: "See timing clearly, stabilize wealth, and reduce costly mistakes.",
-    painZh: "别再做赔钱的决定。开始做赚钱的决定。",
     painEn: "Stop Making Costly Decisions. Start Making Profitable Ones.",
     descZh: "融合奇门遁甲、风水布局与八字解析三大玄学体系，精准分析投资时机、合作对象、方向选择。让每一个关键决策都有据可依。",
     descEn: "Integrating Qimen Dunjia, Feng Shui layout and Bazi analysis — three core metaphysical systems — to precisely analyze investment timing, partnerships, and strategic direction.",
