@@ -68,6 +68,18 @@ const INSIGHTS = [
     img: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/21801776239127_.pic_hd.jpg-EkcBpRqOTKcVaoZhsifm0L0hrfZ9uJ.png",
     tags: ["Sleep", "Energy Field", "Home"],
   },
+  {
+  id: "why-successful-women-still-feel-empty-in-love",
+  category: { zh: "情感疗愈", en: "Relationship Healing" },
+  titleZh: "为什么很多事业成功的女性，感情却长期空虚？",
+  titleEn: "Why Successful Women Still Feel Empty in Love",
+  excerptZh: "很多事业成功、生活体面的女性，并不缺能力，也不缺条件，却在感情中长期感到空虚、受伤、失衡。",
+  excerptEn: "Many successful women are not lacking in value or capability, yet still feel empty, wounded, or emotionally stuck in love.",
+  date: "2026-04-22",
+  readTime: "6 min",
+  img: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/21711776224675_.pic_hd.jpg",
+  tags: ["Relationship Healing", "Women", "Singapore"],
+},
 ];
 
 function InsightsContent() {
