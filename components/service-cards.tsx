@@ -38,10 +38,9 @@ painZh: "看清时机、稳住财富、减少错误决策。",
   ctaZh: "预约私密咨询",
   ctaEn: "Book Private Consultation",
   waMsg: "你好启明大师，我想咨询高端女性情感修复与能量重建服务。",
-  accentColor: "oklch(0.55 0.12 145)",
+  accentColor: "oklch(...)"
 },
-  {
-    {
+{
   id: 3,
   icon: Compass,
   titleZh: "企业与个人战略决策",
