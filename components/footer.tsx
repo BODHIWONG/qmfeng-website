@@ -8,14 +8,13 @@ const LOGO_URL = "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/753F2E
 export default function Footer() {
   const { t } = useLanguage();
 
-  const navLinks = [
-    { href: "#services", zh: "核心服务", en: "Services" },
-    { href: "#clearing", zh: "能量净化", en: "Wellness" },
-    { href: "/insights", zh: "洞察博客", en: "Insights" },
-    { href: "#products", zh: "能量载体", en: "Tools" },
-    { href: "#contact", zh: "联系我们", en: "Contact" },
+ const navLinks = [
+  { href: "/#services", zh: "核心服务", en: "Services" },
+  { href: "/#clearing", zh: "能量净化", en: "Wellness" },
+  { href: "/insights", zh: "洞察博客", en: "Insights" },
+  { href: "/#products", zh: "能量载体", en: "Tools" },
+  { href: "/#contact", zh: "联系我们", en: "Contact" },
   ];
-
   return (
     <footer className="bg-[oklch(0.10_0.015_60)] border-t border-[oklch(0.20_0.02_60)]">
       <div className="container py-12 md:py-16">
