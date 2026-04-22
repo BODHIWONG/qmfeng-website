@@ -10,6 +10,7 @@ import CasesSection from "@/components/cases-section";
 import TestimonialsSection from "@/components/testimonials-section";
 import VideoSection from "@/components/video-section";
 import ProductsSection from "@/components/products-section";
+import EnergyClearingSection from "@/components/energy-clearing-section";
 import FinalCTA from "@/components/final-cta";
 import Footer from "@/components/footer";
 import FloatingActions from "@/components/floating-actions";
@@ -48,7 +49,7 @@ export default function Home() {
         {/* SECTION 8 — PRODUCTS */}
         {/* Energy-Activated Products From $28 */}
         <ProductsSection />
-        
+        <EnergyClearingSection />
         {/* SECTION 9 — FINAL CTA */}
         {/* Don't Wait Until Problems Get Worse */}
         <FinalCTA />
