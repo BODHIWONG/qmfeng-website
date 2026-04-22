@@ -59,6 +59,7 @@ painZh: "看清时机、稳住财富、减少错误决策。",
   waMsg: "你好启明大师，我想咨询企业与个人战略决策服务。",
   accentColor: "oklch(0.62 0.10 230)",
 },
+  {
     id: 4,
 icon: Zap,
 titleZh: "空间能量净化",
