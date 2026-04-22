@@ -2,14 +2,15 @@
 
 import { motion } from "framer-motion";
 import { useLanguage } from "@/contexts/language-context";
-import { ArrowRight, TrendingUp, Heart, Zap } from "lucide-react";
-
+import { ArrowRight, TrendingUp, Heart, Compass, Zap } from "lucide-react";
 const services = [
   {
     id: 1,
     icon: TrendingUp,
-    titleZh: "财富与风险策略",
-    titleEn: "Wealth & Risk Strategy",
+    titleZh: "事业与财富布局",
+titleEn: "Career & Wealth Alignment",
+painZh: "看清时机、稳住财富、减少错误决策。",
+painEn: "See timing clearly, stabilize wealth, and reduce costly mistakes.",
     painZh: "别再做赔钱的决定。开始做赚钱的决定。",
     painEn: "Stop Making Costly Decisions. Start Making Profitable Ones.",
     descZh: "融合奇门遁甲、风水布局与八字解析三大玄学体系，精准分析投资时机、合作对象、方向选择。让每一个关键决策都有据可依。",
@@ -42,23 +43,42 @@ const services = [
   accentColor: "oklch(0.55 0.12 145)",
 },
   {
-    id: 3,
-    icon: Zap,
-    titleZh: "空间能量净化",
-    titleEn: "Space Energy Clearing",
-    painZh: "改变空间 → 改变人生方向",
-    painEn: "Change Your Space → Change Your Life Direction",
-    descZh: "空间能量净化是启明大师在16年深厚修行中觉醒的独特天赋。大师通过独特的感官与磁场共振，能够敏锐捕捉空间中肉眼不可见的能量淤积与负面频率。",
-    descEn: "Space energy clearing is Master Huang's unique gift awakened through 16+ years of deep cultivation. Through extraordinary sensory perception and magnetic field resonance, he detects invisible energy blockages and negative frequencies.",
-    badgeZh: "每周仅开放3个名额",
-    badgeEn: "Only 3 Slots Per Week",
-    bulletZh: ["16年修行觉醒天赋", "磁场共振感知能力", "远程空间能量诊断"],
-    bulletEn: ["16-year cultivated gift", "Magnetic field perception", "Remote energy diagnosis"],
-    price: "$488",
-    ctaZh: "预约空间净化",
-    ctaEn: "Book Space Clearing",
-    waMsg: "Hello Master Huang, I'd like to book a space energy clearing session.",
-    accentColor: "oklch(0.55 0.12 250)",
+    {
+  id: 3,
+  icon: Compass,
+  titleZh: "企业与个人战略决策",
+  titleEn: "Strategic Decision Guidance",
+  painZh: "在关键节点，做更稳、更准、更有利的选择。",
+  painEn: "Make clearer, stronger, and more advantageous decisions at critical turning points.",
+  descZh: "适用于企业合作、投资判断、跳槽转型、人生方向与重大关系抉择。启明大师通过奇门遁甲与整体格局判断，帮助你在关键节点规避损耗，抓住真正有利的机会。",
+  descEn: "Designed for business partnerships, investments, career transitions, major life direction choices, and important relationship decisions. Master Qiming uses Qi Men Dun Jia and overall pattern analysis to help you avoid loss and identify the strongest path forward.",
+  badgeZh: "重大节点策略判断",
+  badgeEn: "Critical Decision Strategy",
+  bulletZh: ["企业合作判断", "投资与转型时机", "人生方向选择"],
+  bulletEn: ["Business decision support", "Investment and transition timing", "Life direction clarity"],
+  price: "$388+",
+  ctaZh: "预约决策咨询",
+  ctaEn: "Book Strategy Consultation",
+  waMsg: "你好启明大师，我想咨询企业与个人战略决策服务。",
+  accentColor: "oklch(0.62 0.10 230)",
+},
+    id: 4,
+icon: Zap,
+titleZh: "空间能量净化",
+titleEn: "Space Energy Clearing",
+painZh: "净化耗损气场，改善睡眠、情绪与空间舒适度。",
+painEn: "Clear draining energy and support better sleep, mood, and daily wellbeing.",
+descZh: "针对家宅压抑、睡眠不稳、精神疲惫、情绪沉重、久住不顺的空间，启明大师通过多年空间感知与净化经验，帮助重塑环境磁场，改善休息质量与日常身心状态。",
+descEn: "For homes and spaces that feel heavy, draining, emotionally oppressive, or difficult to rest in, Master Qiming uses years of space-sensing and clearing practice to restore the environmental field and support better rest, sleep quality, and daily wellbeing.",
+badgeZh: "空间磁场重塑",
+badgeEn: "Environmental Field Reset",
+bulletZh: ["空间负能量净化", "睡眠与情绪改善", "居住与办公状态优化"],
+bulletEn: ["Space energy clearing", "Sleep and mood support", "Home and work environment optimization"],
+price: "$288+",
+ctaZh: "预约净化咨询",
+ctaEn: "Book Clearing Consultation",
+waMsg: "你好启明大师，我想咨询空间能量净化服务。",
+accentColor: "oklch(0.60 0.08 65)",
   },
 ];
 
@@ -95,8 +115,8 @@ export default function ServiceCards() {
           </h2>
         </motion.div>
 
-        {/* Three Column Cards */}
-        <div className="grid md:grid-cols-3 gap-6 md:gap-8">
+        {/* Four Core Service Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           {services.map((service, i) => (
             <motion.div
               key={service.id}
