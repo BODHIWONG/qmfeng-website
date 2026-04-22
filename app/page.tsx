@@ -32,7 +32,7 @@ export default function Home() {
         {/* SECTION 3 — CORE SERVICES (3 cards with pricing) */}
         {/* Wealth Strategy | Emotional Healing | Space Reset — From $288 each */}
         <ServiceCards />
-        
+       <EnergyClearingSection />
         {/* SECTION 4 — DIFFERENTIATION */}
         {/* This Is NOT Traditional Feng Shui — Strategic System */}
         <DifferentiationSection />
@@ -49,7 +49,6 @@ export default function Home() {
         {/* SECTION 8 — PRODUCTS */}
         {/* Energy-Activated Products From $28 */}
         <ProductsSection />
-        <EnergyClearingSection />
         {/* SECTION 9 — FINAL CTA */}
         {/* Don't Wait Until Problems Get Worse */}
         <FinalCTA />
