@@ -366,7 +366,7 @@ export default function ServiceCards() {
                       background: "transparent",
                     }}
                   >
-                    {t("查看案例", "View Example")}
+                    {t("查看细节", "View Details")}
                   </button>
 
                   <a
@@ -468,7 +468,7 @@ export default function ServiceCards() {
                       color: "oklch(0.98 0.005 75)",
                     }}
                   >
-                    {t(activeService.ctaZh, activeService.ctaEn)}
+                    {t("立即咨询", "Enquire Now")}
                     <ArrowRight size={16} />
                   </a>
                 </div>
