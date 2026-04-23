@@ -9,6 +9,18 @@ import Link from "next/link";
 
 const INSIGHTS = [
   {
+    id: "office-feng-shui-wealth-focus-singapore",
+    category: { zh: "商业风水", en: "Business Feng Shui" },
+    titleZh: "超越努力：办公室风水如何影响财富、专注力与业务节奏",
+    titleEn: "Beyond Hard Work: How Office Feng Shui Can Influence Wealth, Focus, and Business Momentum",
+    excerptZh: "从办公室布局、决策节奏到奇门时机，解析为什么商业空间的对齐程度会影响团队状态与财富流动。",
+    excerptEn: "A practical look at how office Feng Shui and Qi Men Dun Jia can affect wealth flow, focus, decision-making, and business momentum in Singapore’s working environment.",
+    date: "2026-04-23",
+    readTime: "6 min",
+    img: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/21961776249570_.pic_hd.jpg-xVEyhvkF9jOSMdF8BUm6LtcClWKN8d.png",
+    tags: ["Business Feng Shui", "Office", "Singapore"],
+  },
+  {
     id: "feng-shui-wealth-improvement",
     category: { zh: "财富风水", en: "Wealth Feng Shui" },
     titleZh: "财富、住宅布局与风水：为什么有些家总是存不住钱",
@@ -69,17 +81,17 @@ const INSIGHTS = [
     tags: ["Sleep", "Energy Field", "Home"],
   },
   {
-  id: "why-successful-women-still-feel-empty-in-love",
-  category: { zh: "情感疗愈", en: "Relationship Healing" },
-  titleZh: "为什么很多事业成功的女性，感情却长期空虚？",
-  titleEn: "Why Successful Women Still Feel Empty in Love",
-  excerptZh: "很多事业成功、生活体面的女性，并不缺能力，也不缺条件，却在感情中长期感到空虚、受伤、失衡。",
-  excerptEn: "Many successful women are not lacking in value or capability, yet still feel empty, wounded, or emotionally stuck in love.",
-  date: "2026-04-22",
-  readTime: "6 min",
-  img: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/21711776224675_.pic_hd.jpg",
-  tags: ["Relationship Healing", "Women", "Singapore"],
-},
+    id: "why-successful-women-still-feel-empty-in-love",
+    category: { zh: "情感疗愈", en: "Relationship Healing" },
+    titleZh: "为什么很多事业成功的女性，感情却长期空虚？",
+    titleEn: "Why Successful Women Still Feel Empty in Love",
+    excerptZh: "很多事业成功、生活体面的女性，并不缺能力，也不缺条件，却在感情中长期感到空虚、受伤、失衡。",
+    excerptEn: "Many successful women are not lacking in value or capability, yet still feel empty, wounded, or emotionally stuck in love.",
+    date: "2026-04-22",
+    readTime: "6 min",
+    img: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/21711776224675_.pic_hd.jpg",
+    tags: ["Relationship Healing", "Women", "Singapore"],
+  },
 ];
 
 function InsightsContent() {
