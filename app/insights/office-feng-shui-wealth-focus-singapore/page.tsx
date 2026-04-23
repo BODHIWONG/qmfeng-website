@@ -1,4 +1,4 @@
-"use client";
+
 
 import type { Metadata } from "next";
 import { LanguageProvider } from "@/contexts/language-context";
