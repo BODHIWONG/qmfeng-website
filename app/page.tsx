@@ -9,8 +9,8 @@ import DifferentiationSection from "@/components/differentiation-section";
 import CasesSection from "@/components/cases-section";
 import TestimonialsSection from "@/components/testimonials-section";
 import VideoSection from "@/components/video-section";
-import ProductsSection from "@/components/products-section";
 import EnergyClearingSection from "@/components/energy-clearing-section";
+import ProductsSection from "@/components/products-section";
 import FinalCTA from "@/components/final-cta";
 import Footer from "@/components/footer";
 import FloatingActions from "@/components/floating-actions";
@@ -20,39 +20,37 @@ export default function Home() {
     <LanguageProvider>
       <div className="min-h-screen bg-[oklch(0.97_0.012_75)]">
         <Navbar />
-        
-        {/* SECTION 1 — HERO (Full Screen) */}
-        {/* Fix Your Luck Before It Gets Worse + 3 CTAs + Urgency */}
+
+        {/* SECTION 1 — HERO */}
         <HeroSimple />
-        
-        {/* SECTION 2 — TRUST BAR (horizontal) */}
-        {/* 16+ Years | 5,000+ Consultations | SG & SEA | Proven Results */}
+
+        {/* SECTION 2 — TRUST BAR */}
         <TrustBar />
-        
-        {/* SECTION 3 — CORE SERVICES (3 cards with pricing) */}
-        {/* Wealth Strategy | Emotional Healing | Space Reset — From $288 each */}
-         <EnergyClearingSection />
+
+        {/* SECTION 3 — FIRST SPLIT USERS BY CORE PROBLEM */}
         <ServiceCards />
-        {/* SECTION 4 — DIFFERENTIATION */}
-        {/* This Is NOT Traditional Feng Shui — Strategic System */}
+
+        {/* SECTION 4 — WHY MASTER QIMING */}
         <DifferentiationSection />
-        
-        {/* SECTION 5 — RESULTS / CASE STUDIES */}
+
+        {/* SECTION 5 — CASE STUDIES */}
         <CasesSection />
-        
-        {/* SECTION 6 — REAL CLIENT TESTIMONIALS + SCREENSHOTS */}
+
+        {/* SECTION 6 — TESTIMONIALS */}
         <TestimonialsSection />
-        
-        {/* SECTION 7 — VIDEO TESTIMONIALS */}
+
+        {/* SECTION 7 — VIDEO PROOF */}
         <VideoSection />
-        
-        {/* SECTION 8 — PRODUCTS */}
-        {/* Energy-Activated Products From $28 */}
+
+        {/* SECTION 8 — SPACE CLEARING AS A SPECIALISED SECTION */}
+        <EnergyClearingSection />
+
+        {/* SECTION 9 — PRODUCTS (kept lower so they do not interrupt consultation flow) */}
         <ProductsSection />
-        {/* SECTION 9 — FINAL CTA */}
-        {/* Don't Wait Until Problems Get Worse */}
+
+        {/* SECTION 10 — STRONG CTA */}
         <FinalCTA />
-        
+
         <Footer />
         <FloatingActions />
       </div>
