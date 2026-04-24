@@ -84,8 +84,8 @@ const services: ServiceCard[] = [
   {
     id: 3,
     icon: Compass,
-    titleZh: "战略决策 · 关键判断",
-    titleEn: "Strategic Decisions · Critical Timing",
+    titleZh: "奇门遁甲战略决策 · 关键判断",
+    titleEn: "Qi Men Dun Jia Strategic Decisions · Critical Timing",
     painZh: "面对合作、投资、转型或人生抉择，最怕方向选错，一步错、步步耗损。",
     painEn:
       "In business, investment, transitions, or major life choices, one wrong decision can create long-term loss.",
@@ -101,8 +101,8 @@ const services: ServiceCard[] = [
     accentBg: "oklch(0.96 0.02 240)",
     accentBorder: "oklch(0.88 0.03 235)",
     imageSrc: "/Strategic.png",
-    imageAltZh: "战略决策服务展示图",
-    imageAltEn: "Strategic decision service visual",
+    imageAltZh: "奇门遁甲战略决策服务展示图",
+    imageAltEn: "Qi Men Dun Jia strategic decision service visual",
   },
   {
     id: 4,
