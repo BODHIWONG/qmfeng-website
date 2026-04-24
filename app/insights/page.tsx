@@ -7,6 +7,81 @@ import Link from "next/link";
 import { ArrowRight, Calendar, Clock } from "lucide-react";
 import { insightPosts } from "@/lib/insights-data";
 
+const legacyPosts = [
+  {
+    slug: "office-feng-shui-wealth-focus-singapore",
+    title: "Beyond Hard Work: How Office Feng Shui Can Influence Wealth, Focus, and Business Momentum",
+    excerpt:
+      "A practical look at how office Feng Shui and Qi Men Dun Jia can affect wealth flow, focus, decision-making, and business momentum in Singapore’s working environment.",
+    date: "2026-04-23",
+    readTime: "6 min",
+    category: "Business Feng Shui",
+    keywords: ["Business Feng Shui", "Office", "Singapore"],
+  },
+  {
+    slug: "feng-shui-wealth-improvement",
+    title: "Wealth, Home Layout, and Feng Shui: Why Some Homes Never Seem to Hold Money",
+    excerpt:
+      "A practical look at how home layout, rest quality, and environmental support can affect wealth flow, decisions, and daily momentum.",
+    date: "2026-04-20",
+    readTime: "6 min",
+    category: "Wealth Feng Shui",
+    keywords: ["Wealth", "Home Layout", "Singapore"],
+  },
+  {
+    slug: "qimen-dunjia-decision-making",
+    title: "How Qi Men Dun Jia Supports Better Timing and Decision-Making",
+    excerpt:
+      "A grounded explanation of how timing, direction, and strategy come together in Qi Men Dun Jia for modern business and life decisions.",
+    date: "2026-04-20",
+    readTime: "6 min",
+    category: "Qi Men Dun Jia",
+    keywords: ["Qi Men Dun Jia", "Timing", "Business"],
+  },
+  {
+    slug: "space-energy-clearing",
+    title: "Space Energy Clearing: When a Home Looks Fine but Feels Draining",
+    excerpt:
+      "Why do some homes seem normal on the surface yet affect sleep, mood, and clarity over time? A practical perspective on environmental heaviness and clearing.",
+    date: "2026-04-20",
+    readTime: "5 min",
+    category: "Space Energy",
+    keywords: ["Space Energy", "Sleep", "Home"],
+  },
+  {
+    slug: "singapore-qiming-feng-shui",
+    title: "Why Feng Shui in Singapore Must Be Read Through Local Homes and Urban Living",
+    excerpt:
+      "From HDB and BTO flats to condos, shops, and offices, Feng Shui in Singapore needs local context instead of generic formulas.",
+    date: "2026-04-20",
+    readTime: "5 min",
+    category: "Singapore Feng Shui",
+    keywords: ["HDB", "BTO", "Condo"],
+  },
+  {
+    slug: "sleep-quality-energy-field",
+    title: "Sleep Quality, Home Atmosphere, and the Energy of a Space",
+    excerpt:
+      "When poor sleep, heaviness at home, and low energy keep repeating, the condition of the space may be part of the picture.",
+    date: "2026-04-19",
+    readTime: "5 min",
+    category: "Sleep and Energy",
+    keywords: ["Sleep", "Energy Field", "Home"],
+  },
+  {
+    slug: "why-successful-women-still-feel-empty-in-love",
+    title: "Why Successful Women Still Feel Empty in Love",
+    excerpt:
+      "Many successful women are not lacking in value or capability, yet still feel empty, wounded, or emotionally stuck in love.",
+    date: "2026-04-22",
+    readTime: "6 min",
+    category: "Relationship Healing",
+    keywords: ["Relationship Healing", "Women", "Singapore"],
+  },
+];
+
+const allPosts = [...insightPosts, ...legacyPosts];
+
 function InsightsContent() {
   return (
     <div className="min-h-screen bg-[oklch(0.08_0.02_60)] text-white">
@@ -31,7 +106,7 @@ function InsightsContent() {
         </div>
 
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {insightPosts.map((post) => (
+          {allPosts.map((post) => (
             <article
               key={post.slug}
               className="border border-[oklch(0.20_0.02_60)] bg-[oklch(0.12_0.02_60)] p-6 transition-colors hover:border-[oklch(0.60_0.08_65)]"
