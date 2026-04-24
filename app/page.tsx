@@ -11,6 +11,7 @@ import TestimonialsSection from "@/components/testimonials-section";
 import VideoSection from "@/components/video-section";
 import EnergyClearingSection from "@/components/energy-clearing-section";
 import ProductsSection from "@/components/products-section";
+import InsightsHomeCTA from "@/components/insights-home-cta";
 import FinalCTA from "@/components/final-cta";
 import Footer from "@/components/footer";
 import FloatingActions from "@/components/floating-actions";
@@ -45,8 +46,11 @@ export default function Home() {
         {/* SECTION 8 — SPACE CLEARING AS A SPECIALISED SECTION */}
         <EnergyClearingSection />
 
-        {/* SECTION 9 — PRODUCTS (kept lower so they do not interrupt consultation flow) */}
+        {/* SECTION 9 — PRODUCTS */}
         <ProductsSection />
+
+        {/* NEW — BLOG TRAFFIC MODULE */}
+        <InsightsHomeCTA />
 
         {/* SECTION 10 — STRONG CTA */}
         <FinalCTA />
