@@ -3,6 +3,12 @@ import { LanguageProvider } from "@/contexts/language-context";
 import ServiceDetailTemplate from "@/components/service-detail-template";
 import { decisionPageContent } from "@/lib/service-page-data";
 
+const qiMenDecisionPageContent = {
+  ...decisionPageContent,
+  badgeZh: "奇门遁甲战略决策 · 关键判断",
+  pageTitleZh: "奇门遁甲战略决策 · 关键判断",
+};
+
 export const metadata: Metadata = {
   title: "奇门遁甲战略决策 · 关键判断 | QiMing Feng Shui Singapore",
   description:
@@ -22,7 +28,7 @@ export const metadata: Metadata = {
 export default function DecisionPage() {
   return (
     <LanguageProvider>
-      <ServiceDetailTemplate content={decisionPageContent} />
+      <ServiceDetailTemplate content={qiMenDecisionPageContent} />
     </LanguageProvider>
   );
 }
