@@ -58,8 +58,8 @@ export default function Footer() {
               }}
             >
               {t(
-                "我们不是在卖风水。我们提供的是更清晰的判断、更稳的布局，以及更适合当下阶段的方向。",
-                "We do not simply sell Feng Shui. We offer clearer judgment, steadier alignment, and more suitable direction for your current stage."
+                "以奇门定方向，以风水稳财运，以能量净空间，以心法疗愈关系，助你看清局势，精准布局。",
+                "We use Qi Men Dun Jia to clarify direction, Feng Shui to stabilise wealth, energy work to purify spaces, and mindful healing to restore relationships — helping you read the situation clearly and align with precision."
               )}
             </p>
 
