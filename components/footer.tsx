@@ -193,8 +193,8 @@ export default function Footer() {
             }}
           >
             {t(
-              '"先看清问题，再决定如何布局。"',
-              '"See the real problem first, then decide how to re-align."'
+              '"以奇门洞察本质，顺势定策，精准布局。"',
+              '"Use Qi Men insight to see the essence, set strategy with the momentum, and align with precision."'
             )}
           </p>
         </div>
