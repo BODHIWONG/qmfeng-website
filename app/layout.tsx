@@ -38,11 +38,11 @@ const OG_IMAGE =
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.qmfeng.com"),
   title: {
-    default: "奇明風水 | QiMing Feng Shui | Singapore Feng Shui & Strategic Guidance",
+    default: "奇明風水｜新加坡奇门遁甲风水师｜旺财布局 · 空间能量净化",
     template: "%s | QiMing Feng Shui",
   },
   description:
-    "QiMing Feng Shui by Master Huang Qiming in Singapore. 16+ years of practical experience in Feng Shui, Qi Men Dun Jia, emotional healing, and space energy clearing. Consultation for wealth, relationships, decision-making, and space alignment.",
+    "奇明風水由黄启明大师主理，结合16+年奇门遁甲、风水布局、八字命理与空间能量净化经验，为新加坡客户提供事业财运、情感疗愈、战略决策与住宅办公风水咨询。",
   keywords: [
     "QiMing Feng Shui",
     "Master Huang Qiming",
