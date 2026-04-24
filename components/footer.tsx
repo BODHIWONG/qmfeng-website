@@ -45,7 +45,7 @@ export default function Footer() {
                   {t("奇明風水", "QiMing Feng Shui")}
                 </p>
                 <p className="text-[0.55rem] uppercase tracking-[0.22em] text-[oklch(0.60_0.08_65)]">
-                  Feng Shui · Singapore
+                  Qi Men Dun Jia · Feng Shui · Singapore
                 </p>
               </div>
             </div>
