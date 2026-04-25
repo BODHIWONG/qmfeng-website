@@ -6,6 +6,7 @@ import HeroSimple from "@/components/hero-simple";
 import TrustBar from "@/components/trust-bar";
 import ServiceCards from "@/components/service-cards";
 import DifferentiationSection from "@/components/differentiation-section";
+import QimenMasterSection from "@/components/qimen-master-section";
 import CasesSection from "@/components/cases-section";
 import TestimonialsSection from "@/components/testimonials-section";
 import VideoSection from "@/components/video-section";
@@ -34,25 +35,28 @@ export default function Home() {
         {/* SECTION 4 — WHY MASTER QIMING */}
         <DifferentiationSection />
 
-        {/* SECTION 5 — CASE STUDIES */}
+        {/* SECTION 5 — QI MEN DUN JIA + MASTER QIMING */}
+        <QimenMasterSection />
+
+        {/* SECTION 6 — CASE STUDIES */}
         <CasesSection />
 
-        {/* SECTION 6 — TESTIMONIALS */}
+        {/* SECTION 7 — TESTIMONIALS */}
         <TestimonialsSection />
 
-        {/* SECTION 7 — VIDEO PROOF */}
+        {/* SECTION 8 — VIDEO PROOF */}
         <VideoSection />
 
-        {/* SECTION 8 — SPACE CLEARING AS A SPECIALISED SECTION */}
+        {/* SECTION 9 — SPACE CLEARING AS A SPECIALISED SECTION */}
         <EnergyClearingSection />
 
-        {/* SECTION 9 — PRODUCTS */}
+        {/* SECTION 10 — PRODUCTS */}
         <ProductsSection />
 
         {/* NEW — BLOG TRAFFIC MODULE */}
         <InsightsHomeCTA />
 
-        {/* SECTION 10 — STRONG CTA */}
+        {/* SECTION 11 — STRONG CTA */}
         <FinalCTA />
 
         <Footer />
