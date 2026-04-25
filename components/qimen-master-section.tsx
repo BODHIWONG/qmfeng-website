@@ -181,24 +181,12 @@ export default function QimenMasterSection() {
             transition={{ duration: 0.75, delay: 0.1 }}
             className="relative"
           >
-            <div className="relative overflow-hidden rounded-[2rem] border border-[oklch(0.72_0.12_70/0.25)] bg-[oklch(0.08_0.018_60)] shadow-[0_30px_90px_rgba(0,0,0,0.45)]">
+            <div className="relative mx-auto max-w-md overflow-hidden rounded-[2rem] border border-[oklch(0.72_0.12_70/0.25)] bg-[oklch(0.08_0.018_60)] shadow-[0_30px_90px_rgba(0,0,0,0.45)]">
               <img
                 src={MASTER_IMAGE}
                 alt="Master Huang Qiming practising Qi Men Dun Jia and Feng Shui in Singapore"
-                className="aspect-[4/3] w-full object-cover object-center md:aspect-[16/13]"
+                className="aspect-[4/5] w-full object-contain object-center"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/10" />
-              <div className="absolute inset-x-0 bottom-0 p-6 md:p-7">
-                <p className="text-xs uppercase tracking-[0.24em] text-[oklch(0.78_0.10_70)]">
-                  {t("Qiming Feng Shui Singapore", "Qiming Feng Shui Singapore")}
-                </p>
-                <p
-                  className="mt-2 text-2xl font-semibold text-[oklch(0.98_0.01_75)]"
-                  style={{ fontFamily: "var(--font-cormorant), var(--font-noto-serif), serif" }}
-                >
-                  {t("以奇门看时局，以风水稳格局", "See Timing with Qi Men, Steady Life with Feng Shui")}
-                </p>
-              </div>
             </div>
           </motion.div>
         </div>
