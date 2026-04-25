@@ -7,8 +7,7 @@ import { ArrowRight, MessageCircle } from "lucide-react";
 const WA_LINK =
   "https://wa.me/6589418791?text=Hello%20Master%20Qiming%2C%20I%20would%20like%20to%20book%20a%20professional%20consultation.";
 
-const BG_IMAGE =
-  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/21551776220031_.pic_hd.jpg-GNpRqM2kWn8vIJ6dVMuaQl1bbVlyvR.png";
+const BG_IMAGE = "/master-home-hero.png";
 
 export default function HeroSimple() {
   const { t } = useLanguage();
@@ -19,13 +18,13 @@ export default function HeroSimple() {
       <div className="absolute inset-0">
         <img
           src={BG_IMAGE}
-          alt="QiMing Feng Shui consultation"
-          className="h-full w-full object-cover object-center opacity-75"
+          alt="Master Huang Qiming Qi Men Dun Jia and Feng Shui consultation in Singapore"
+          className="h-full w-full object-cover object-center opacity-85"
         />
 
         {/* Premium black-gold overlays */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/35 via-black/62 to-black/95" />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-transparent to-black/90" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/20 via-black/58 to-black/95" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/25 via-transparent to-black/90" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_28%_45%,rgba(212,164,82,0.08),transparent_38%)]" />
       </div>
 
