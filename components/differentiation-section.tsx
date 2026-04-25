@@ -2,17 +2,18 @@
 
 import { motion } from "framer-motion";
 import { useLanguage } from "@/contexts/language-context";
-import { Target, Shield, TrendingUp, Briefcase, Heart, Compass } from "lucide-react";
+import { Target, Shield, TrendingUp, Briefcase, Heart, Compass, Home } from "lucide-react";
 
 const benefits = [
-  { icon: Target, labelZh: "预测结果", labelEn: "Predict Outcomes" },
-  { icon: Shield, labelZh: "规避风险", labelEn: "Avoid Risks" },
-  { icon: TrendingUp, labelZh: "做出更好决策", labelEn: "Make Better Decisions" },
+  { icon: Target, labelZh: "看清时机", labelEn: "Read the Timing" },
+  { icon: Shield, labelZh: "避开风险", labelEn: "Avoid Hidden Risks" },
+  { icon: TrendingUp, labelZh: "顺势布局", labelEn: "Align for Better Results" },
 ];
 
 const useCases = [
   { icon: Briefcase, labelZh: "商业决策", labelEn: "Business Decisions" },
-  { icon: TrendingUp, labelZh: "投资判断", labelEn: "Investments" },
+  { icon: TrendingUp, labelZh: "事业财富", labelEn: "Career & Wealth" },
+  { icon: Home, labelZh: "住宅办公风水", labelEn: "Home & Office Feng Shui" },
   { icon: Heart, labelZh: "感情关系", labelEn: "Relationships" },
   { icon: Compass, labelZh: "人生方向", labelEn: "Life Direction" },
 ];
@@ -38,7 +39,7 @@ export default function DifferentiationSection() {
                 color: "oklch(0.72 0.12 70)",
               }}
             >
-              {t("差异化定位", "What Makes Us Different")}
+              {t("高阶奇门风水策略", "Advanced Qi Men Feng Shui Strategy")}
             </p>
             
             <h2
@@ -49,8 +50,8 @@ export default function DifferentiationSection() {
               }}
             >
               {t(
-                "这不是传统风水",
-                "This Is NOT Traditional Feng Shui"
+                "不只是传统风水",
+                "More Than Traditional Feng Shui"
               )}
             </h2>
 
@@ -62,8 +63,8 @@ export default function DifferentiationSection() {
               }}
             >
               {t(
-                "这是一套预测与掌控结果的策略系统",
-                "This Is a Strategic System to Predict & Control Outcomes"
+                "这是一套结合奇门遁甲、风水布局与命理判断的决策系统",
+                "A decision system combining Qi Men Dun Jia, Feng Shui layout and destiny insight"
               )}
             </p>
           </motion.div>
@@ -81,8 +82,8 @@ export default function DifferentiationSection() {
             }}
           >
             {t(
-              "融合奇门遁甲、八字命理与能量调和，我们帮助您：",
-              "Combining Qimen Dunjia, Bazi and Energy Alignment, we help you:"
+              "由黄启明大师主理，融合奇门遁甲、八字命理、风水布局与空间能量调和，帮助您在事业财富、感情关系、住宅办公与人生关键选择中，看清时机、避开风险、顺势布局。",
+              "Led by Master Huang Qiming, this approach combines Qi Men Dun Jia, Bazi, Feng Shui layout and space energy alignment to help you read timing, avoid hidden risks and align your next move in wealth, relationships, homes, offices and major life decisions."
             )}
           </motion.p>
 
