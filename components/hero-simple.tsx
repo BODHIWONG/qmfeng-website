@@ -66,10 +66,26 @@ export default function HeroSimple() {
             )}
           </motion.h1>
 
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.65, delay: 0.14 }}
+            className="mt-5 max-w-2xl border-l-2 border-[#d0a14a] bg-black/35 px-4 py-3 text-sm font-semibold leading-7 text-[#f1d38a] backdrop-blur-sm md:text-base"
+            style={{
+              fontFamily:
+                "var(--font-lato), var(--font-noto-sans), sans-serif",
+            }}
+          >
+            {t(
+              "由黄启明大师主理｜16+年奇门遁甲、风水布局与空间能量净化实战经验",
+              "Led by Master Huang Qiming | 16+ years in Qi Men Dun Jia, Feng Shui layout and space energy purification"
+            )}
+          </motion.div>
+
           <motion.p
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.65, delay: 0.16 }}
+            transition={{ duration: 0.65, delay: 0.2 }}
             className="mt-7 max-w-2xl text-base leading-8 text-white/85 md:text-lg"
             style={{
               fontFamily:
@@ -77,15 +93,15 @@ export default function HeroSimple() {
             }}
           >
             {t(
-              "融合16+年奇门遁甲与风水实战经验，结合清华积极心理学训练，为事业财富、情感关系、空间能量与人生决策，提供清晰判断与落地布局。",
-              "With 16+ years of practical Qi Men Dun Jia and Feng Shui experience, combined with positive psychology training, we provide clear guidance and actionable solutions for wealth, relationships, space energy, and major life decisions."
+              "结合清华大学积极心理学培训认证，为事业财富、情感关系、空间能量与人生决策，提供清晰判断与落地布局。",
+              "Combining Tsinghua University Positive Psychology Training Certification with traditional Chinese metaphysics, we provide clear guidance and actionable solutions for wealth, relationships, space energy, and major life decisions."
             )}
           </motion.p>
 
           <motion.div
             initial={{ opacity: 0, y: 22 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.24 }}
+            transition={{ duration: 0.6, delay: 0.28 }}
             className="mt-7 flex flex-wrap gap-x-5 gap-y-3 border-y border-[#c89a45]/30 py-4 text-sm font-medium tracking-wide text-[#e6c785]"
             style={{
               fontFamily:
@@ -94,7 +110,7 @@ export default function HeroSimple() {
           >
             <span>{t("16+年实战经验", "16+ Years Practice")}</span>
             <span className="text-[#c89a45]">·</span>
-            <span>{t("清华积极心理学训练", "Positive Psychology Training")}</span>
+            <span>{t("清华大学积极心理学培训认证", "Tsinghua Positive Psychology Certification")}</span>
             <span className="text-[#c89a45]">·</span>
             <span>{t("新加坡本地服务", "Singapore Local Service")}</span>
           </motion.div>
@@ -102,7 +118,7 @@ export default function HeroSimple() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.32 }}
+            transition={{ duration: 0.6, delay: 0.36 }}
             className="mt-8"
           >
             <div
@@ -126,7 +142,7 @@ export default function HeroSimple() {
           <motion.div
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
+            transition={{ duration: 0.6, delay: 0.44 }}
             className="mt-9 flex flex-col gap-4 sm:flex-row"
           >
             <a
