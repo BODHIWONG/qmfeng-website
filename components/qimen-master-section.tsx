@@ -14,7 +14,7 @@ import {
 } from "lucide-react";
 
 const gold = "oklch(0.72 0.12 70)";
-const MASTER_IMAGE = "/master-home-hero.png";
+const MASTER_IMAGE = "/master-qiming-about.jpg";
 const WA_LINK =
   "https://wa.me/6589418791?text=Hello%20Master%20Qiming%2C%20I%20would%20like%20to%20understand%20Qi%20Men%20Dun%20Jia%20and%20Feng%20Shui%20consultation.";
 
@@ -185,7 +185,7 @@ export default function QimenMasterSection() {
               <img
                 src={MASTER_IMAGE}
                 alt="Master Huang Qiming practising Qi Men Dun Jia and Feng Shui in Singapore"
-                className="aspect-[4/3] w-full object-cover object-left md:aspect-[16/13]"
+                className="aspect-[4/3] w-full object-cover object-center md:aspect-[16/13]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/10" />
               <div className="absolute inset-x-0 bottom-0 p-6 md:p-7">
