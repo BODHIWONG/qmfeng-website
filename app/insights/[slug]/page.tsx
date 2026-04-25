@@ -3,12 +3,17 @@ import { insightPosts, getInsightPost } from "@/lib/insights-data";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 
+type InsightDetailProps = {
+  params: Promise<{ slug: string }>;
+};
+
 export function generateStaticParams() {
   return insightPosts.map((post) => ({ slug: post.slug }));
 }
 
-export default function InsightDetail({ params }: { params: { slug: string } }) {
-  const post = getInsightPost(params.slug);
+export default async function InsightDetail({ params }: InsightDetailProps) {
+  const { slug } = await params;
+  const post = getInsightPost(slug);
 
   if (!post) return notFound();
 
