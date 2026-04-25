@@ -6,6 +6,7 @@ import Footer from "@/components/footer";
 import Link from "next/link";
 import { ArrowRight, Calendar, Clock } from "lucide-react";
 import { insightPosts } from "@/lib/insights-data";
+import { qimenSingaporeBilingualPosts } from "@/lib/qimen-singapore-bilingual-posts";
 
 const legacyPosts = [
   {
@@ -80,7 +81,7 @@ const legacyPosts = [
   },
 ];
 
-const allPosts = [...insightPosts, ...legacyPosts];
+const allPosts = [...qimenSingaporeBilingualPosts, ...insightPosts, ...legacyPosts];
 
 function InsightsContent() {
   return (
@@ -101,7 +102,7 @@ function InsightsContent() {
           </h1>
 
           <p className="text-base leading-relaxed text-[oklch(0.72_0.02_70)] md:text-lg">
-            Practical articles by QiMing Feng Shui｜奇明風水 on Qi Men Dun Jia Singapore, Feng Shui Singapore, Bazi, space energy purification and real decision-making for life, business, wealth and relationships.
+            Practical Chinese and English articles by QiMing Feng Shui｜奇明風水 on Qi Men Dun Jia Singapore, 奇门遁甲新加坡, Feng Shui Singapore, Bazi, space energy purification and real decision-making for life, business, wealth and relationships.
           </p>
         </div>
 
