@@ -7,6 +7,15 @@ const qiMenDecisionPageContent = {
   ...decisionPageContent,
   badgeZh: "奇门遁甲战略决策 · 关键判断",
   pageTitleZh: "奇门遁甲战略决策 · 关键判断",
+  trustPointsZh: ["奇门遁甲实战判断", "16+ 年经验", "企业与个人重大决策辅助", "$388 起"],
+  trustPointsEn: ["Qi Men Decision Support", "16+ Years Experience", "Business and Personal Strategy", "From $388"],
+  priceZh: "$388 起",
+  priceEn: "From $388",
+  faqs: decisionPageContent.faqs.map((faq) => ({
+    ...faq,
+    aZh: faq.aZh.replace("$288", "$388"),
+    aEn: faq.aEn.replace("$288", "$388"),
+  })),
 };
 
 export const metadata: Metadata = {
