@@ -147,8 +147,8 @@ export default function QimenMasterSection() {
               </h3>
               <p className="text-sm leading-relaxed text-[oklch(0.74_0.025_70)] md:text-base">
                 {t(
-                  "黄启明大师长期深耕奇门遁甲、风水布局、八字命理与空间能量调整，拥有16+年传统术数与能量修行经验。大师同时具备清华大学积极心理学指导师背景，并创立「能量心理调频」方法，帮助客户不只看清外在局势，也稳定内在状态，重新建立人生方向感。",
-                  "Master Huang Qiming has over 16 years of practice in Qi Men Dun Jia, Feng Shui, Bazi and space energy alignment. With a background as a Tsinghua University positive psychology instructor, he integrates Eastern metaphysics with emotional and mental energy alignment for clearer inner and outer direction."
+                  "黄启明大师长期深耕奇门遁甲、风水布局、八字命理与空间能量调整，拥有16+年传统术数与能量修行经验，并结合清华大学积极心理学培训认证，帮助客户看清时局、稳定内在，重新布局人生方向。",
+                  "Master Huang Qiming has over 16 years of practice in Qi Men Dun Jia, Feng Shui, Bazi and space energy alignment. With Tsinghua University positive psychology training certification, he helps clients read the situation, stabilise their inner state and realign life direction."
                 )}
               </p>
             </div>
@@ -162,13 +162,13 @@ export default function QimenMasterSection() {
                 style={{ background: gold }}
               >
                 <MessageCircle size={18} />
-                {t("WhatsApp 咨询黄启明大师", "Consult Master Huang on WhatsApp")}
+                {t("立即咨询黄启明大师", "Consult Master Huang Now")}
               </a>
               <a
                 href="#services"
                 className="inline-flex items-center justify-center gap-3 rounded-full border border-[oklch(0.72_0.12_70/0.45)] px-7 py-3 text-sm font-bold text-[oklch(0.88_0.08_70)] transition hover:bg-[oklch(0.72_0.12_70/0.10)]"
               >
-                {t("了解四大咨询方向", "Explore Core Services")}
+                {t("查看适合我的咨询方向", "Find the Right Consultation")}
                 <ArrowRight size={17} />
               </a>
             </div>
@@ -181,12 +181,29 @@ export default function QimenMasterSection() {
             transition={{ duration: 0.75, delay: 0.1 }}
             className="relative"
           >
-            <div className="relative mx-auto max-w-md overflow-hidden rounded-[2rem] border border-[oklch(0.72_0.12_70/0.25)] bg-[oklch(0.08_0.018_60)] shadow-[0_30px_90px_rgba(0,0,0,0.45)]">
+            <div className="relative mx-auto max-w-lg overflow-hidden rounded-[2rem] border border-[oklch(0.72_0.12_70/0.25)] bg-[oklch(0.08_0.018_60)] shadow-[0_30px_90px_rgba(0,0,0,0.45)]">
               <img
                 src={MASTER_IMAGE}
                 alt="Master Huang Qiming practising Qi Men Dun Jia and Feng Shui in Singapore"
-                className="aspect-[4/5] w-full object-contain object-center"
+                className="aspect-[4/5] w-full object-cover object-center"
               />
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 via-black/45 to-transparent p-6 md:p-7">
+                <p
+                  className="text-2xl font-semibold text-[oklch(0.98_0.01_75)]"
+                  style={{ fontFamily: "var(--font-cormorant), var(--font-noto-serif), serif" }}
+                >
+                  {t("黄启明大师", "Master Huang Qiming")}
+                </p>
+                <p className="mt-2 text-sm font-semibold tracking-wide text-[oklch(0.78_0.10_70)]">
+                  {t(
+                    "奇门遁甲 · 风水布局 · 空间能量调和",
+                    "Qi Men Dun Jia · Feng Shui · Space Energy Alignment"
+                  )}
+                </p>
+                <p className="mt-2 text-xs uppercase tracking-[0.16em] text-white/70">
+                  {t("16+年实战经验", "16+ Years of Practical Experience")}
+                </p>
+              </div>
             </div>
           </motion.div>
         </div>
