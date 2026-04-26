@@ -4,6 +4,7 @@ import { useLanguage } from "@/contexts/language-context";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import FloatingActions from "@/components/floating-actions";
+import QimingSystemSection from "@/components/qiming-system-section";
 import {
   ArrowRight,
   CheckCircle2,
@@ -18,8 +19,6 @@ import {
 
 const WA_LINK =
   "https://wa.me/6589418791?text=Hello%20Master%20Qiming%2C%20I%20would%20like%20to%20consult%20about%20space%20energy%20purification.";
-
-const gold = "oklch(0.60 0.08 65)";
 
 const corePoints = [
   {
@@ -71,28 +70,28 @@ const values = [
 
 const cases = [
   {
-    titleZh: "长期身体紧绷与睡眠不稳后的反馈",
-    titleEn: "Feedback after long-term tension and unstable rest",
+    titleZh: "实录一｜长期紧绷与睡眠不稳后的反馈",
+    titleEn: "Record 01｜Feedback after long-term tension and unstable rest",
     bodyZh:
-      "一位六十多岁的女士长期感觉身体紧绷，夜间休息也不安稳。启明大师判断其居住空间后，为她进行空间能量净化与气场调和。客户第二天早上专程前来表达感谢，反馈当晚休息明显变好，身体紧绷感减轻，整个人感觉轻松了许多。",
+      "一位六十多岁的女士长期感觉身体紧绷，夜间休息也不安稳。启明大师判断其居住空间后，为她进行空间能量净化与气场调和。客户第二天早上专程前来表达感谢，反馈当晚休息明显变好，整个人感觉轻松了许多。",
     bodyEn:
-      "A lady in her sixties had long felt physical tension and unstable rest at night. After Master Qiming assessed her living space and performed space energy purification and field harmonisation, she returned the next morning to express gratitude. She shared that her rest had improved and her body felt noticeably lighter and more relaxed.",
+      "A lady in her sixties had long felt physical tension and unstable rest at night. After Master Qiming assessed her living space and performed space energy purification and field harmonisation, she returned the next morning to express gratitude. She shared that her rest had improved and that she felt noticeably lighter and more relaxed.",
   },
   {
-    titleZh: "家中压迫感与恐惧感减轻",
-    titleEn: "Reduced fear and heaviness at home",
+    titleZh: "实录二｜家中压迫感与恐惧感减轻",
+    titleEn: "Record 02｜Reduced fear and heaviness at home",
     bodyZh:
       "另一位女士长期觉得家中有压迫感，晚上不敢关灯，睡眠浅，容易醒，精神状态也影响到工作。空间能量净化后，她反馈家里的感觉明显变了，内心不再那么害怕，当晚睡得更安稳，第二天精神状态明显提升。",
     bodyEn:
       "Another client felt persistent heaviness at home, was afraid to sleep in the dark, woke frequently and felt her work energy declining. After the space clearing, she reported that the home felt different, her fear reduced, she slept more peacefully that night and felt more energised the next day.",
   },
   {
-    titleZh: "长期沉重感后的身心状态改善反馈",
-    titleEn: "Renewed energy after long-term heaviness",
+    titleZh: "实录三｜长期沉重感后的身心状态反馈",
+    titleEn: "Record 03｜Renewed energy after long-term heaviness",
     bodyZh:
-      "曾有一位女士因多年前的意外，长期感觉身体紧绷与精神面貌下降。启明大师根据她的个人状态与居住空间气场进行净化调整后，客户反馈身体舒展感明显改善，站立状态更自然，脸色与精神状态也变得更好。",
+      "曾有一位女士因多年前的意外，长期感觉身心状态沉重，精神面貌也逐渐下降。启明大师根据她的个人状态与居住空间气场进行净化调整后，客户反馈整个人感觉更轻松，站立与行动状态更自然，脸色与精神状态也变得更好。",
     bodyEn:
-      "A client who had experienced an accident years earlier felt long-term physical tightness and lowered vitality. After Master Qiming adjusted the space according to her personal condition and the home’s energy field, she reported feeling more open, more natural in posture and visibly more refreshed in spirit.",
+      "A client who had experienced an accident years earlier felt long-term heaviness and lowered vitality. After Master Qiming adjusted the space according to her personal condition and the home’s energy field, she reported feeling lighter, more natural in movement and visibly more refreshed in spirit.",
   },
 ];
 
@@ -223,6 +222,8 @@ export default function SpaceEnergyPurificationPage() {
           </div>
         </section>
 
+        <QimingSystemSection />
+
         <section className="bg-white py-16 md:py-24">
           <div className="container">
             <div className="mx-auto max-w-5xl text-center">
@@ -256,12 +257,12 @@ export default function SpaceEnergyPurificationPage() {
           </div>
         </section>
 
-        <section className="py-16 md:py-24">
+        <section id="purification-records" className="py-16 md:py-24">
           <div className="container">
             <div className="mx-auto max-w-6xl">
               <div className="mb-10 max-w-3xl">
                 <p className="mb-4 text-xs font-semibold uppercase tracking-[0.24em] text-[oklch(0.60_0.08_65)]">
-                  {t("真实客户反馈", "Real Client Feedback")}
+                  {t("启明大师空间净化实录", "Master Qiming Space Purification Records")}
                 </p>
                 <h2
                   className="mb-5 text-3xl font-bold leading-tight md:text-5xl"
@@ -274,8 +275,8 @@ export default function SpaceEnergyPurificationPage() {
                 </h2>
                 <p className="text-sm leading-8 text-[oklch(0.42_0.02_60)] md:text-base">
                   {t(
-                    "以下案例以客户反馈方式呈现，重点记录空间压迫感、睡眠、情绪与精神状态的变化。空间能量净化并不替代医疗或专业治疗，但许多客户在空间调整后，确实感受到身心状态与居住体验的改善。",
-                    "The following cases are presented as client feedback, focusing on changes in spatial heaviness, sleep, emotion and energy level. Space energy purification does not replace medical care or professional treatment, but many clients report meaningful improvements in how they feel and live in the space."
+                    "以下实录以客户反馈方式呈现，重点记录空间压迫感、睡眠、情绪与精神状态的变化。空间能量净化并不替代医疗或专业治疗，但许多客户在空间调整后，确实感受到身心状态与居住体验的改善。",
+                    "The following records are presented as client feedback, focusing on changes in spatial heaviness, sleep, emotion and energy level. Space energy purification does not replace medical care or professional treatment, but many clients report meaningful improvements in how they feel and live in the space."
                   )}
                 </p>
               </div>
@@ -284,7 +285,7 @@ export default function SpaceEnergyPurificationPage() {
                 {cases.map((item, index) => (
                   <div key={item.titleZh} className="border border-[oklch(0.88_0.018_70)] bg-white p-6">
                     <p className="mb-4 text-xs font-semibold uppercase tracking-[0.14em] text-[oklch(0.60_0.08_65)]">
-                      {`Case 0${index + 1}`}
+                      {`Record 0${index + 1}`}
                     </p>
                     <h3
                       className="mb-4 text-2xl font-bold leading-tight"
