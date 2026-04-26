@@ -1,19 +1,18 @@
 import type { Metadata } from "next";
 import { LanguageProvider } from "@/contexts/language-context";
-import ServiceDetailTemplate from "@/components/service-detail-template";
-import { spaceClearingPageContent } from "@/lib/service-page-data";
+import SpaceEnergyPurificationPage from "@/components/space-energy-purification-page";
 
 export const metadata: Metadata = {
-  title: "空间能量净化",
+  title: "空间能量净化与生命场域调和 | QiMing Feng Shui Singapore",
   description:
-    "QiMing Feng Shui Singapore consultation for space energy clearing, sleep disturbance, emotional heaviness, draining home environments, and office energy alignment. Helping restore steadiness through spatial assessment and adjustment.",
+    "Master Huang Qiming's space energy purification and life field harmonisation in Singapore. Helping clients restore clarity, steadiness, sleep quality, emotional calm and spatial support through Qi Men Dun Jia, Feng Shui, Bazi and energy alignment.",
   alternates: {
     canonical: "https://www.qmfeng.com/space-clearing",
   },
   openGraph: {
-    title: "空间能量净化 | QiMing Feng Shui",
+    title: "空间能量净化与生命场域调和 | QiMing Feng Shui Singapore",
     description:
-      "Consultation for sleep, mood, and draining spaces through energy clearing and environmental alignment in Singapore.",
+      "A core capability of QiMing Feng Shui, led by Master Huang Qiming: space energy purification for heavy spaces, unstable sleep, emotional pressure and life field harmonisation.",
     url: "https://www.qmfeng.com/space-clearing",
     type: "website",
   },
@@ -22,7 +21,7 @@ export const metadata: Metadata = {
 export default function SpaceClearingPage() {
   return (
     <LanguageProvider>
-      <ServiceDetailTemplate content={spaceClearingPageContent} />
+      <SpaceEnergyPurificationPage />
     </LanguageProvider>
   );
 }
