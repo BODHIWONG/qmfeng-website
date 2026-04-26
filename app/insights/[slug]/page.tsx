@@ -4,6 +4,10 @@ import {
   qimenSingaporeBilingualPosts,
   getQimenSingaporeBilingualPost,
 } from "@/lib/qimen-singapore-bilingual-posts";
+import {
+  spaceEnergyBlogPosts,
+  getSpaceEnergyBlogPost,
+} from "@/lib/space-energy-blog-posts";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 
@@ -11,7 +15,11 @@ type InsightDetailProps = {
   params: Promise<{ slug: string }>;
 };
 
-const allDynamicPosts = [...qimenSingaporeBilingualPosts, ...insightPosts];
+const allDynamicPosts = [
+  ...spaceEnergyBlogPosts,
+  ...qimenSingaporeBilingualPosts,
+  ...insightPosts,
+];
 
 export function generateStaticParams() {
   return allDynamicPosts.map((post) => ({ slug: post.slug }));
@@ -20,7 +28,9 @@ export function generateStaticParams() {
 export default async function InsightDetail({ params }: InsightDetailProps) {
   const { slug } = await params;
   const post =
-    getQimenSingaporeBilingualPost(slug) ?? getInsightPost(slug);
+    getSpaceEnergyBlogPost(slug) ??
+    getQimenSingaporeBilingualPost(slug) ??
+    getInsightPost(slug);
 
   if (!post) return notFound();
 
