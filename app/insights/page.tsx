@@ -7,6 +7,7 @@ import Link from "next/link";
 import { ArrowRight, Calendar, Clock } from "lucide-react";
 import { insightPosts } from "@/lib/insights-data";
 import { qimenSingaporeBilingualPosts } from "@/lib/qimen-singapore-bilingual-posts";
+import { spaceEnergyBlogPosts } from "@/lib/space-energy-blog-posts";
 
 const legacyPosts = [
   {
@@ -81,7 +82,7 @@ const legacyPosts = [
   },
 ];
 
-const allPosts = [...qimenSingaporeBilingualPosts, ...insightPosts, ...legacyPosts];
+const allPosts = [...spaceEnergyBlogPosts, ...qimenSingaporeBilingualPosts, ...insightPosts, ...legacyPosts];
 
 function InsightsContent() {
   return (
