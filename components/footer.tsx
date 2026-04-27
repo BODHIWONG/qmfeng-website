@@ -193,8 +193,8 @@ export default function Footer() {
             }}
           >
             {t(
-              '"以奇门洞察本质，顺势定策，精准布局。"',
-              '"Use Qi Men insight to see the essence, set strategy with the momentum, and align with precision."'
+              '"空间清明，人心才容易清明。"',
+              '"When a space becomes clear, the heart can return to clarity."'
             )}
           </p>
         </div>
