@@ -6,22 +6,22 @@ import { ArrowRight, Sparkles, Compass, MessageCircle } from "lucide-react";
 
 const pillars = [
   {
+    icon: Compass,
+    titleZh: "根基体系：奇门遁甲",
+    titleEn: "Foundation: Qi Men Dun Jia",
+    bodyZh:
+      "奇门遁甲是启明大师判断时间、方位与局势的根基。先定时位与方向，再进入空间判断与调和。",
+    bodyEn:
+      "Qi Men Dun Jia is the foundation for reading timing, direction and the situation. Timing and direction come first before spatial alignment.",
+  },
+  {
     icon: Sparkles,
     titleZh: "核心能力：空间能量净化",
     titleEn: "Core Ability: Space Energy Purification",
     bodyZh:
       "启明大师最特别、最不可复制的能力，是对空间中沉重、压迫、不安与滞重能量的敏锐感知，并通过独特方法进行净化与调和。",
     bodyEn:
-      "Master Qiming’s most distinctive ability is a refined sensitivity to heaviness, pressure, unease and stagnant energy within a space, followed by a unique process of purification and harmonisation.",
-  },
-  {
-    icon: Compass,
-    titleZh: "支撑体系：奇门遁甲 + 风水 + 八字",
-    titleEn: "Support System: Qi Men + Feng Shui + Bazi",
-    bodyZh:
-      "奇门遁甲判断时间与方位，风水布局调整空间结构，八字命理理解人与空间的关系。三者共同服务于空间能量净化。",
-    bodyEn:
-      "Qi Men Dun Jia reads timing and direction, Feng Shui layout adjusts spatial structure, and Bazi helps understand the relationship between people and their spaces.",
+      "Master Qiming’s distinctive ability is a refined sensitivity to heaviness, pressure, unease and stagnant energy within a space, followed by purification and harmonisation.",
   },
   {
     icon: MessageCircle,
@@ -37,7 +37,7 @@ const pillars = [
 const steps = [
   { zh: "一看", en: "Observe", detailZh: "看空间格局", detailEn: "Read the layout" },
   { zh: "二感", en: "Sense", detailZh: "感知滞重点", detailEn: "Sense stagnant points" },
-  { zh: "三断", en: "Read", detailZh: "奇门断时位", detailEn: "Read timing & direction" },
+  { zh: "三断", en: "Assess", detailZh: "奇门断时位", detailEn: "Assess timing & direction" },
   { zh: "四净", en: "Purify", detailZh: "净化空间场域", detailEn: "Purify the field" },
   { zh: "五调", en: "Align", detailZh: "调和人与空间", detailEn: "Align people and space" },
 ];
@@ -60,15 +60,15 @@ export default function MasterIPCoreSection() {
                 style={{ fontFamily: "var(--font-cormorant), var(--font-noto-serif), serif" }}
               >
                 {t(
-                  "不是普通看风水，而是以空间能量净化为核心的生命场域调和。",
-                  "Not ordinary Feng Shui, but life-field alignment with Space Energy Purification at the core."
+                  "以奇门遁甲为根基，以空间能量净化为核心能力。",
+                  "Rooted in Qi Men Dun Jia, expressed through Space Energy Purification."
                 )}
               </h2>
 
               <p className="mb-8 text-sm leading-8 text-white/72 md:text-base">
                 {t(
-                  "启明大师以空间能量净化为核心能力，以奇门遁甲、风水布局与八字命理为支撑，帮助人从沉重空间中重新回到安定、清明、有力量的状态。",
-                  "Master Qiming places Space Energy Purification at the core, supported by Qi Men Dun Jia, Feng Shui layout and Bazi, helping people return from heavy spaces to a calmer, clearer and stronger state of life."
+                  "黄启明大师以奇门遁甲判断时间、方位与局势，以空间能量净化调和居家与办公场域，并结合风水布局与八字命理，帮助人与空间重新回到清明、安定与支持关系。",
+                  "Master Qiming uses Qi Men Dun Jia to read timing, direction and situations, then applies Space Energy Purification to harmonise homes and offices, supported by Feng Shui layout and Bazi."
                 )}
               </p>
 
