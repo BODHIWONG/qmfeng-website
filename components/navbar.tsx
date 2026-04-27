@@ -68,6 +68,8 @@ export default function Navbar() {
             src={LOGO_URL}
             alt="Qiming Feng Shui Logo"
             className="h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105 md:h-12"
+            loading="eager"
+            fetchPriority="high"
           />
 
           <span className="hidden leading-none sm:block">
@@ -96,7 +98,7 @@ export default function Navbar() {
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-9 lg:flex">
+        <nav className="hidden items-center gap-8 lg:flex">
           <Link
             href="/"
             className={`text-sm font-medium tracking-wide transition-colors duration-300 ${navTextClass}`}
@@ -133,6 +135,14 @@ export default function Navbar() {
               ))}
             </div>
           </div>
+
+          <Link
+            href="/products"
+            className={`text-sm font-medium tracking-wide transition-colors duration-300 ${navTextClass}`}
+            style={{ fontFamily: "var(--font-lato), var(--font-noto-sans), sans-serif" }}
+          >
+            {t("产品", "Products")}
+          </Link>
 
           <Link
             href="/insights"
@@ -241,6 +251,15 @@ export default function Navbar() {
                 ))}
               </div>
             )}
+
+            <Link
+              href="/products"
+              onClick={() => setMenuOpen(false)}
+              className="block border-b border-[oklch(0.92_0.015_70)] py-3 text-base font-medium text-[oklch(0.25_0.02_60)] transition-colors hover:text-[oklch(0.60_0.08_65)]"
+              style={{ fontFamily: "var(--font-lato), var(--font-noto-sans), sans-serif" }}
+            >
+              {t("产品", "Products")}
+            </Link>
 
             <Link
               href="/insights"
