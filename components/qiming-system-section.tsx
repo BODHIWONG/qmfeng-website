@@ -25,11 +25,11 @@ const steps = [
   {
     icon: Compass,
     zh: "三断｜结合奇门判断时间与方位",
-    en: "Read｜Use Qi Men for Timing and Direction",
+    en: "Assess｜Use Qi Men for Timing and Direction",
     descZh:
       "通过奇门遁甲判断时间、方位、人与空间之间的互动关系，看现在是否适合净化、从哪个方位入手，以及如何顺势调整。",
     descEn:
-      "Use Qi Men Dun Jia to read timing, direction and the relationship between people and space, then decide how and where to begin alignment.",
+      "Use Qi Men Dun Jia to assess timing, direction and the relationship between people and space, then decide how and where to begin alignment.",
   },
   {
     icon: Sparkles,
@@ -70,8 +70,8 @@ export default function QimingSystemSection() {
             </h2>
             <p className="text-sm leading-8 text-[oklch(0.42_0.02_60)] md:text-base">
               {t(
-                "这是黄启明大师以空间能量净化为核心，结合奇门遁甲、风水布局、八字命理与多年实证经验所形成的五步调和方法。它让启明大师不只是普通风水师，而是拥有清晰方法论的空间能量净化与生命场域调和实践者。",
-                "This is Master Huang Qiming’s five-step alignment method, placing Space Energy Purification at the core and integrating Qi Men Dun Jia, Feng Shui layout, Bazi and years of practical experience. It turns his work from ordinary Feng Shui consultation into a clear life-field alignment methodology."
+                "这是黄启明大师以奇门遁甲为根基，以空间能量净化为核心能力，结合风水布局、八字命理与多年实证经验所形成的五步调和方法。它让启明大师不只是普通风水师，而是拥有清晰方法论的空间能量净化与生命场域调和实践者。",
+                "This is Master Huang Qiming’s five-step alignment method, rooted in Qi Men Dun Jia and expressed through Space Energy Purification, supported by Feng Shui layout, Bazi and years of practical experience."
               )}
             </p>
           </div>
@@ -112,8 +112,8 @@ export default function QimingSystemSection() {
               style={{ fontFamily: "var(--font-cormorant), var(--font-noto-serif), serif" }}
             >
               {t(
-                "启明空间能量调和系统的目的，不是制造神秘，而是让空间、人心与生活状态重新回到清明、安定与支持关系。",
-                "The purpose of the Qiming Space Energy Alignment System is not to create mystery, but to help space, heart and life return to clarity, steadiness and support."
+                "启明空间能量调和系统的目的，不是制造神秘，而是以奇门定时位，以净化调场域，让空间、人心与生活状态重新回到清明、安定与支持关系。",
+                "The purpose of the Qiming Space Energy Alignment System is to use Qi Men for timing and direction, and purification for field alignment — so space, heart and life can return to clarity, steadiness and support."
               )}
             </p>
           </div>
