@@ -12,8 +12,8 @@ import CasesSection from "@/components/cases-section";
 import TestimonialsSection from "@/components/testimonials-section";
 import VideoSection from "@/components/video-section";
 import EnergyClearingSection from "@/components/energy-clearing-section";
-import ProductsSection from "@/components/products-section";
 import InsightsHomeCTA from "@/components/insights-home-cta";
+import ConsultationForm from "@/components/consultation-form";
 import FinalCTA from "@/components/final-cta";
 import Footer from "@/components/footer";
 import FloatingActions from "@/components/floating-actions";
@@ -54,11 +54,15 @@ export default function Home() {
         {/* SECTION 10 — SPACE CLEARING AS A SPECIALISED SECTION */}
         <EnergyClearingSection />
 
-        {/* SECTION 11 — PRODUCTS */}
-        <ProductsSection />
-
         {/* NEW — BLOG TRAFFIC MODULE */}
         <InsightsHomeCTA />
+
+        {/* NEW — LIGHTWEIGHT LEAD CAPTURE */}
+        <section className="bg-[oklch(0.08_0.02_60)] py-16 md:py-24">
+          <div className="container">
+            <ConsultationForm />
+          </div>
+        </section>
 
         {/* SECTION 12 — STRONG CTA */}
         <FinalCTA />
