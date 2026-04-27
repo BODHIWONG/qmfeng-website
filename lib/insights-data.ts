@@ -10,9 +10,169 @@ export type InsightPost = {
 };
 
 const brandSignature =
-  "QiMing Feng Shui｜奇明風水 is a Singapore Qi Men Dun Jia & Feng Shui Consultant brand. Led by Master Huang Qiming, specialising in Qi Men Dun Jia, Feng Shui layout, Bazi and space energy purification.";
+  "QiMing Feng Shui｜奇明風水 is led by Master Huang Qiming in Singapore. His work combines Qi Men Dun Jia, Feng Shui layout, Bazi analysis and Space Energy Purification Singapore for clients who need clearer direction in career, wealth, property, business, relationships and home energy.";
 
 export const insightPosts: InsightPost[] = [
+  {
+    slug: "qi-men-dun-jia-for-bto-selection-singapore",
+    title: "Qi Men Dun Jia for BTO Selection in Singapore",
+    excerpt:
+      "A practical guide for Singapore homeowners using Qi Men Dun Jia and Feng Shui before choosing, renovating or moving into a BTO flat.",
+    date: "2026-04-27",
+    readTime: "7 min",
+    category: "BTO Feng Shui",
+    keywords: ["Qi Men Dun Jia Singapore", "BTO Feng Shui", "Singapore Feng Shui", "Qiming Feng Shui", "Master Huang Qiming"],
+    paragraphs: [
+      "Choosing a BTO flat in Singapore is not just a property decision. For many families, it is the first real home, the beginning of a marriage, a long mortgage commitment and a place where sleep, emotions, money habits and family rhythm will be shaped for years.",
+      "Most buyers naturally look at price, MRT access, school distance, floor level and renovation potential. Those are important. But from a Feng Shui point of view, the quieter questions matter as well: does the main door receive stable qi, does the kitchen sit in a supportive position, does the bedroom allow proper rest, and does the layout help the occupants feel settled rather than restless?",
+      "Qi Men Dun Jia adds another layer. It is not only about whether the unit looks good on paper. It also looks at timing, direction and the decision structure around the purchase or move. A flat can be acceptable in layout, but the timing of renovation, key collection or moving in may still affect how smoothly the family settles into the space.",
+      "At Qiming Feng Shui, Master Huang Qiming usually reads the BTO question through both space and timing. Feng Shui helps check the physical layout. Qi Men Dun Jia Singapore helps review whether this is a suitable time to act, whether a choice is supported, and where the hidden resistance may be.",
+      "For example, two units in the same block may feel very different after moving in. One may support better sleep and calm discussion. Another may create repeated arguments, financial pressure or a sense that the home never feels fully peaceful. These differences are often not obvious from the floor plan alone.",
+      "The most useful time to check a BTO is before renovation decisions become fixed. Bed position, stove placement, work desk, altar, entry flow and storage layout can be adjusted more easily before carpentry starts. Once everything is built, correction becomes more costly and less elegant.",
+      "Qi Men Dun Jia for BTO selection is not about creating fear. It is about helping families make a grounded decision before they spend large amounts of time and money. A home should support the people living inside it, not quietly drain them.",
+      brandSignature
+    ],
+  },
+  {
+    slug: "feng-shui-problems-commonly-seen-in-singapore-condos",
+    title: "Feng Shui Problems Commonly Seen in Singapore Condos",
+    excerpt:
+      "Common condo Feng Shui issues in Singapore, from balcony-door alignment to bedroom restlessness, kitchen placement and wealth leakage.",
+    date: "2026-04-27",
+    readTime: "7 min",
+    category: "Condo Feng Shui",
+    keywords: ["Singapore Feng Shui", "Condo Feng Shui Singapore", "Qiming Feng Shui", "Master Huang Qiming", "Space Energy Purification Singapore"],
+    paragraphs: [
+      "Singapore condos are usually designed with efficiency, light, views and lifestyle in mind. A unit may look bright and modern during viewing, but after living there for some time, some owners begin to notice a different story: poor sleep, constant fatigue, arguments, money pressure or a home that feels busy even when nobody is moving around.",
+      "One common issue is a direct line from the main door to the balcony or large window. Visually, it looks open and pleasant. Energetically, it may create a condition where qi enters and leaves too quickly. In practical terms, the home can feel difficult to settle in. People may feel unable to rest, and money may seem to pass through faster than expected.",
+      "Another issue appears in compact layouts where the kitchen, toilet and bedroom sit too close to one another. The home may be convenient, but the energy can become mixed. If the bedroom is affected, occupants may sleep lightly, wake up tired or feel emotionally short-tempered without understanding why.",
+      "Many condo owners also place a work desk wherever there is space left after renovation. This can weaken focus and authority. For business owners, managers or people working from home, the desk is not just furniture. It represents decision power, concentration and the ability to hold direction under pressure.",
+      "At Qiming Feng Shui, Master Huang Qiming does not read a condo using one fixed formula for every unit. Singapore homes are dense and vertical. A proper reading should consider the door, balcony, stove, toilets, bedrooms, facing, internal movement and how the home feels after people have actually lived in it.",
+      "Some cases also require Space Energy Purification Singapore, especially when a unit feels heavy despite having no obvious layout problem. This may happen after long vacancy, repeated quarrels, illness, renovation disturbance or previous occupants leaving behind a dense atmosphere.",
+      "Good Feng Shui in a condo is not about filling the home with objects. It is about helping the space breathe correctly, allowing people to sleep better, think more clearly and feel more supported by the place they return to every day.",
+      brandSignature
+    ],
+  },
+  {
+    slug: "how-qi-men-dun-jia-helps-business-owners-make-better-decisions",
+    title: "How Qi Men Dun Jia Helps Business Owners Make Better Decisions",
+    excerpt:
+      "How Singapore business owners use Qi Men Dun Jia to review timing, partners, expansion, risk and business momentum before committing resources.",
+    date: "2026-04-27",
+    readTime: "7 min",
+    category: "Business Qi Men",
+    keywords: ["Qi Men Dun Jia Singapore", "Business Feng Shui Singapore", "Qiming Feng Shui", "Master Huang Qiming", "Singapore Feng Shui"],
+    paragraphs: [
+      "Business owners usually do not lack effort. They carry responsibility, payroll, rent, reputation and the pressure of making decisions before the full picture is visible. A choice that looks logical in a spreadsheet may still feel wrong in the body. A partner may speak well, but something feels unsettled. A location may have traffic, yet the business cannot hold momentum.",
+      "This is where Qi Men Dun Jia Singapore becomes useful. It gives business owners another way to read timing, people dynamics, direction and hidden resistance. It is not a replacement for accounting, legal review or market research. It is a decision lens that helps the owner ask: is this the right moment, the right direction and the right person?",
+      "At Qiming Feng Shui, Master Huang Qiming often uses Qi Men Dun Jia for questions such as expansion timing, partnership risk, hiring key staff, moving office, launching a product, signing a contract or entering a new market. The reading is most useful when the question is specific and the decision still has room to move.",
+      "A good Qi Men consultation does not simply say yes or no. It looks at where support comes from, where pressure is building, what should be protected, and whether action, negotiation, delay or withdrawal is more suitable. Business is rarely about one heroic move. More often, success comes from avoiding the wrong move at the wrong time.",
+      "Feng Shui also matters. A boss may have a good strategy but sit in a weak position. A shop may attract footfall but leak attention at the entrance. An office may look modern but create poor focus, internal conflict or unstable cash flow. Singapore Feng Shui and Qi Men Dun Jia work best when they are read together.",
+      "For small and medium businesses, this kind of review can be especially valuable because one wrong decision can be expensive. Before committing rent, renovation, stock, advertising budget or partnership obligations, it is worth checking whether the timing and space are supporting the move.",
+      "Qi Men Dun Jia helps business owners slow down just enough to see clearly. In fast-moving Singapore, that pause can be the difference between a calculated step and a costly impulse.",
+      brandSignature
+    ],
+  },
+  {
+    slug: "office-feng-shui-for-small-businesses-in-singapore",
+    title: "Office Feng Shui for Small Businesses in Singapore",
+    excerpt:
+      "A practical look at office Feng Shui for small businesses, clinics, shops and service firms in Singapore.",
+    date: "2026-04-27",
+    readTime: "7 min",
+    category: "Office Feng Shui",
+    keywords: ["Singapore Feng Shui", "Office Feng Shui Singapore", "Qiming Feng Shui", "Master Huang Qiming", "Qi Men Dun Jia Singapore"],
+    paragraphs: [
+      "For a small business, the office is not only a workplace. It is where decisions are made, money is collected, clients form impressions and the team either becomes more focused or more scattered. In Singapore, where rental cost is high and space is limited, every square metre carries weight.",
+      "Office Feng Shui begins with the entrance. The entrance determines how opportunity enters the business. If the reception, doorway or first view is blocked, messy or confusing, the business may struggle to gather attention even when the service is good.",
+      "The boss or decision-maker's position is another important point. A leader who sits with poor support, direct disturbance or constant movement behind them may feel pressured, reactive or unable to hold authority. This is not just symbolic. The physical environment shapes how a person thinks and responds throughout the day.",
+      "Cashier position, consultation rooms, meeting tables, product display, staff seating and storage should also be considered. A small shop or office can lose momentum when energy is scattered, when clients do not naturally move toward the right area, or when staff cannot focus because the space keeps pulling attention away.",
+      "At Qiming Feng Shui, Master Huang Qiming often combines Singapore Feng Shui with Qi Men Dun Jia when reviewing offices. Feng Shui checks whether the space supports wealth, focus and authority. Qi Men Dun Jia Singapore helps assess whether a move, opening, renovation or expansion is happening at a suitable time.",
+      "For small businesses, the goal is not to create a mystical office. The goal is practical: improve clarity, reduce friction, support the owner, make the client journey smoother and help the business hold the opportunities it has already worked hard to attract.",
+      "Office Feng Shui works best when it respects real business operations. A layout must support sales, service, staff flow and client comfort. When Feng Shui becomes practical, it is no longer decoration. It becomes part of business discipline.",
+      brandSignature
+    ],
+  },
+  {
+    slug: "why-some-homes-affect-sleep-and-emotional-stability",
+    title: "Why Some Homes Affect Sleep and Emotional Stability",
+    excerpt:
+      "Why a home can affect sleep, mood and emotional steadiness, and when Feng Shui or space energy purification may be needed.",
+    date: "2026-04-27",
+    readTime: "7 min",
+    category: "Sleep & Energy",
+    keywords: ["Space Energy Purification Singapore", "Singapore Feng Shui", "Qiming Feng Shui", "Master Huang Qiming", "Feng Shui Singapore"],
+    paragraphs: [
+      "Some people sleep well in hotels but badly at home. Some wake up tired even after enough hours in bed. Some notice more arguments, anxiety or emotional heaviness after moving into a new place. When this pattern repeats, the home environment deserves a closer look.",
+      "A bedroom is not just a room for sleeping. It is the place where the nervous system tries to settle. If the bed is placed in an exposed position, if the door, mirror, toilet or sharp movement affects the resting area, the body may remain alert even when the person is trying to rest.",
+      "Singapore homes often have compact layouts. A bed may face a toilet door because there is no obvious alternative. A desk may be squeezed into the bedroom. Storage may sit above or around the bed. These arrangements can look normal, but over time they may affect sleep depth, patience and emotional balance.",
+      "There is also the atmosphere of the space itself. Some homes feel heavy after renovation, long vacancy, illness, repeated quarrels or stressful events. This is where Space Energy Purification Singapore may become relevant. The point is not to frighten anyone. The point is to recognise that people are sensitive to the places they live in.",
+      "At Qiming Feng Shui, Master Huang Qiming looks at both the physical layout and the felt quality of the space. Feng Shui checks the door, bed, toilet, kitchen, centre and movement of qi. Space energy work looks at whether the environment has become dense, unsettled or draining.",
+      "When a home begins to support rest, many other areas improve quietly. People speak with less sharpness. Children settle more easily. Work decisions become clearer. The home no longer feels like another source of pressure after a long day outside.",
+      "Sleep and emotional stability are not separate from the environment. A clear, settled space gives the person a better chance to become clear and settled too.",
+      brandSignature
+    ],
+  },
+  {
+    slug: "space-energy-purification-for-hdb-and-condo-homes",
+    title: "Space Energy Purification for HDB and Condo Homes",
+    excerpt:
+      "How Space Energy Purification Singapore can be used for homes that feel heavy, restless or emotionally draining despite normal renovation.",
+    date: "2026-04-27",
+    readTime: "7 min",
+    category: "Space Energy Purification",
+    keywords: ["Space Energy Purification Singapore", "HDB Feng Shui", "Condo Feng Shui Singapore", "Qiming Feng Shui", "Master Huang Qiming"],
+    paragraphs: [
+      "Many HDB and condo homes in Singapore look completely fine from the outside. The renovation is clean, the furniture is new, and nothing seems obviously wrong. Yet the people living inside may feel heavy, restless, unlucky, easily irritated or unable to sleep deeply.",
+      "Space Energy Purification Singapore is for this kind of situation. It looks beyond appearance and asks how the space feels, what has accumulated there, and whether the home is supporting or draining the occupants. This is especially important when problems start after moving in, renovation, conflict, illness or a long period of stress.",
+      "At Qiming Feng Shui, Master Huang Qiming treats space purification as part of a wider method, not as a dramatic performance. He may look at the entrance, bedrooms, kitchen, toilets, centre of the home and areas where the family feels uncomfortable. He may also use Qi Men Dun Jia to understand timing and hidden structure behind the issue.",
+      "A purification session should not be understood as magic that replaces common sense. It works best together with proper Feng Shui layout, practical adjustment and a clear understanding of the people living in the space. If the bed remains in a draining position, or if the home continues to collect clutter and tension, the problem may return.",
+      "For HDB homes, the focus is often rest, family harmony, children, wealth stability and emotional peace. For condo homes, the focus may include balcony-door alignment, compact bedrooms, study corners, high-floor wind movement and the way qi enters and leaves the unit.",
+      "The result clients look for is usually simple: the home feels lighter, sleep becomes steadier, arguments reduce, and people feel more willing to return home. These are practical changes, not abstract ideas.",
+      "Space should not feel like a burden. A good home gives support. When the energy of the home becomes clear again, the people inside often find it easier to regain strength, direction and peace.",
+      brandSignature
+    ],
+  },
+  {
+    slug: "qi-men-dun-jia-vs-feng-shui-which-one-do-you-need",
+    title: "Qi Men Dun Jia vs Feng Shui: Which One Do You Need?",
+    excerpt:
+      "A clear guide to when you need Qi Men Dun Jia, when you need Feng Shui, and when both should be read together.",
+    date: "2026-04-27",
+    readTime: "7 min",
+    category: "Qi Men Education",
+    keywords: ["Qi Men Dun Jia Singapore", "Singapore Feng Shui", "Qiming Feng Shui", "Master Huang Qiming", "Feng Shui Singapore"],
+    paragraphs: [
+      "Many people in Singapore hear both Qi Men Dun Jia and Feng Shui, but they are not always sure which one they need. The simplest way to understand the difference is this: Qi Men Dun Jia reads the timing and situation. Feng Shui reads the space and its influence on people.",
+      "If your question is about whether to act now, whether a partnership is suitable, whether to accept an offer, when to launch, or which direction carries more support, Qi Men Dun Jia Singapore may be more relevant. It helps read movement, timing, hidden resistance and the structure of a decision.",
+      "If your issue appears after moving into a home or office, or if the problem is connected to sleep, money leakage, family tension, business stagnation, staff instability or a space that feels wrong, Singapore Feng Shui may be needed. Feng Shui examines the main door, bedroom, kitchen, desk, toilet, flow of qi and the way the environment supports or drains people.",
+      "In many real cases, both are needed. A business owner may ask whether to expand, but the current office layout is already weakening authority. A couple may ask about relationship timing, but the bedroom arrangement is affecting rest and emotion. A family may ask about moving, but the property selection and move-in timing both matter.",
+      "At Qiming Feng Shui, Master Huang Qiming often combines Qi Men Dun Jia, Feng Shui, Bazi and space energy assessment because life problems do not sit neatly in one box. Time, space, people and energy are connected.",
+      "The question is not which system sounds more powerful. The question is which layer is causing the issue. Is the timing wrong? Is the direction wrong? Is the space not supporting you? Is your personal pattern repeating? A proper consultation should identify the layer before giving advice.",
+      "Qi Men Dun Jia and Feng Shui are most useful when they help a person become clearer, steadier and more practical. Good guidance should reduce confusion, not create more fear.",
+      brandSignature
+    ],
+  },
+  {
+    slug: "how-master-huang-qiming-uses-qi-men-dun-jia-in-real-consultations",
+    title: "How Master Huang Qiming Uses Qi Men Dun Jia in Real Consultations",
+    excerpt:
+      "A closer look at Master Huang Qiming's consultation style and how Qiming Feng Shui applies Qi Men Dun Jia to real situations in Singapore.",
+    date: "2026-04-27",
+    readTime: "7 min",
+    category: "Master Huang Qiming",
+    keywords: ["Master Huang Qiming", "Qiming Feng Shui", "Qi Men Dun Jia Singapore", "Singapore Feng Shui", "Space Energy Purification Singapore"],
+    paragraphs: [
+      "A real consultation rarely begins with a beautiful theory. It begins with a person sitting in front of a problem: business has slowed down, money cannot be held, a home feels heavy, sleep has changed, a relationship is painful, or a decision keeps pressing on the mind.",
+      "Master Huang Qiming's approach at Qiming Feng Shui is to first understand the actual situation. What changed? When did it begin? Who is involved? Is the problem connected to time, space, people, money, emotion or health? Without this step, even a technically correct reading may not be useful.",
+      "Qi Men Dun Jia Singapore is then used to read the timing, direction and hidden structure of the question. A business decision may show support in one direction but resistance in another. A partnership may look attractive but carry future cost. A move may be better delayed until the space and timing are more settled.",
+      "Feng Shui is brought in when the space itself is part of the issue. The home, office, shop, bedroom, desk, entrance and internal flow can either support a person or quietly work against them. If a client is sleeping badly, arguing frequently or feeling drained after moving, the physical and energetic condition of the space must be checked.",
+      "Bazi may also be used to understand the person's longer-term pattern. Some people are not failing because they lack ability. They are moving against their own rhythm, choosing the wrong role, or carrying pressure in a way that weakens their decision power.",
+      "When the space feels unusually heavy, Master Huang Qiming may recommend Space Energy Purification Singapore as part of the solution. This is handled together with practical layout correction, not as a stand-alone spectacle. The aim is to help the environment become clearer and more supportive.",
+      "The value of a consultation is not in sounding mysterious. The value is in helping the client see the real blockage and the next practical step. That is the working philosophy behind Qiming Feng Shui: read the situation clearly, adjust the space carefully, and help the person return to a steadier state before making important moves.",
+      brandSignature
+    ],
+  },
   {
     slug: "what-is-qi-men-dun-jia-singapore",
     title: "What Is Qi Men Dun Jia Singapore, and Why Do People Consult It?",
