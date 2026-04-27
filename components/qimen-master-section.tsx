@@ -61,8 +61,8 @@ const trustItems = [
     icon: Brain,
     zh: "心理学 + 东方智慧",
     en: "Psychology + Eastern Wisdom",
-    descZh: "结合清华大学积极心理学指导师背景与传统术数实践，帮助客户稳定内在状态与外在方向。",
-    descEn: "Combining positive psychology training with Eastern metaphysics to support inner stability and clearer direction.",
+    descZh: "结合清华大学积极心理学培训认证与传统术数实践，帮助客户稳定内在状态与外在方向。",
+    descEn: "Combining Tsinghua University positive psychology training certification with Eastern metaphysics to support inner stability and clearer direction.",
   },
 ];
 
