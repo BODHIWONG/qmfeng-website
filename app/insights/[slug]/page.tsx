@@ -5,6 +5,10 @@ import {
   getQimenSingaporeBilingualPost,
 } from "@/lib/qimen-singapore-bilingual-posts";
 import {
+  qimenDunJiaFoundationPosts,
+  getQimenDunJiaFoundationPost,
+} from "@/lib/qimen-dun-jia-foundation-post";
+import {
   spaceEnergyBlogPosts,
   getSpaceEnergyBlogPost,
 } from "@/lib/space-energy-blog-posts";
@@ -16,6 +20,7 @@ type InsightDetailProps = {
 };
 
 const allDynamicPosts = [
+  ...qimenDunJiaFoundationPosts,
   ...spaceEnergyBlogPosts,
   ...qimenSingaporeBilingualPosts,
   ...insightPosts,
@@ -28,6 +33,7 @@ export function generateStaticParams() {
 export default async function InsightDetail({ params }: InsightDetailProps) {
   const { slug } = await params;
   const post =
+    getQimenDunJiaFoundationPost(slug) ??
     getSpaceEnergyBlogPost(slug) ??
     getQimenSingaporeBilingualPost(slug) ??
     getInsightPost(slug);
