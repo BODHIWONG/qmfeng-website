@@ -7,9 +7,15 @@ import Link from "next/link";
 import { ArrowRight, Calendar, Clock } from "lucide-react";
 import { insightPosts } from "@/lib/insights-data";
 import { qimenSingaporeBilingualPosts } from "@/lib/qimen-singapore-bilingual-posts";
+import { qimenDunJiaFoundationPosts } from "@/lib/qimen-dun-jia-foundation-post";
 import { spaceEnergyBlogPosts } from "@/lib/space-energy-blog-posts";
 
-const allPosts = [...spaceEnergyBlogPosts, ...qimenSingaporeBilingualPosts, ...insightPosts];
+const allPosts = [
+  ...qimenDunJiaFoundationPosts,
+  ...spaceEnergyBlogPosts,
+  ...qimenSingaporeBilingualPosts,
+  ...insightPosts,
+];
 
 function InsightsContent() {
   return (
