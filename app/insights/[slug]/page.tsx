@@ -12,6 +12,10 @@ import {
   spaceEnergyBlogPosts,
   getSpaceEnergyBlogPost,
 } from "@/lib/space-energy-blog-posts";
+import {
+  executiveWellnessPosts,
+  getExecutiveWellnessPost,
+} from "@/lib/executive-wellness-posts";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 
@@ -20,6 +24,7 @@ type InsightDetailProps = {
 };
 
 const allDynamicPosts = [
+  ...executiveWellnessPosts,
   ...qimenDunJiaFoundationPosts,
   ...spaceEnergyBlogPosts,
   ...qimenSingaporeBilingualPosts,
@@ -33,6 +38,7 @@ export function generateStaticParams() {
 export default async function InsightDetail({ params }: InsightDetailProps) {
   const { slug } = await params;
   const post =
+    getExecutiveWellnessPost(slug) ??
     getQimenDunJiaFoundationPost(slug) ??
     getSpaceEnergyBlogPost(slug) ??
     getQimenSingaporeBilingualPost(slug) ??
