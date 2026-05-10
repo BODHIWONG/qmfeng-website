@@ -5,6 +5,7 @@ import Navbar from "@/components/navbar";
 import HeroSimple from "@/components/hero-simple";
 import TrustBar from "@/components/trust-bar";
 import ServiceCards from "@/components/service-cards";
+import BrandWorldviewSection from "@/components/brand-worldview-section";
 import DifferentiationSection from "@/components/differentiation-section";
 import QimenMasterSection from "@/components/qimen-master-section";
 import MasterIPCoreSection from "@/components/master-ip-core-section";
@@ -28,6 +29,9 @@ export default function Home() {
 
         {/* SECTION 2 — TRUST BAR */}
         <TrustBar />
+
+        {/* NEW — STRATEGIC BRAND WORLDVIEW */}
+        <BrandWorldviewSection />
 
         {/* SECTION 3 — FIRST SPLIT USERS BY CORE PROBLEM */}
         <ServiceCards />
