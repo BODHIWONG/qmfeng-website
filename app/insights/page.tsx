@@ -9,8 +9,10 @@ import { insightPosts } from "@/lib/insights-data";
 import { qimenSingaporeBilingualPosts } from "@/lib/qimen-singapore-bilingual-posts";
 import { qimenDunJiaFoundationPosts } from "@/lib/qimen-dun-jia-foundation-post";
 import { spaceEnergyBlogPosts } from "@/lib/space-energy-blog-posts";
+import { executiveWellnessPosts } from "@/lib/executive-wellness-posts";
 
 const allPosts = [
+  ...executiveWellnessPosts,
   ...qimenDunJiaFoundationPosts,
   ...spaceEnergyBlogPosts,
   ...qimenSingaporeBilingualPosts,
