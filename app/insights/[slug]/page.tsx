@@ -16,6 +16,10 @@ import {
   executiveWellnessPosts,
   getExecutiveWellnessPost,
 } from "@/lib/executive-wellness-posts";
+import {
+  qimenStrategyPositioningPosts,
+  getQimenStrategyPositioningPost,
+} from "@/lib/qimen-strategy-positioning-post";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 
@@ -24,6 +28,7 @@ type InsightDetailProps = {
 };
 
 const allDynamicPosts = [
+  ...qimenStrategyPositioningPosts,
   ...executiveWellnessPosts,
   ...qimenDunJiaFoundationPosts,
   ...spaceEnergyBlogPosts,
@@ -38,6 +43,7 @@ export function generateStaticParams() {
 export default async function InsightDetail({ params }: InsightDetailProps) {
   const { slug } = await params;
   const post =
+    getQimenStrategyPositioningPost(slug) ??
     getExecutiveWellnessPost(slug) ??
     getQimenDunJiaFoundationPost(slug) ??
     getSpaceEnergyBlogPost(slug) ??
