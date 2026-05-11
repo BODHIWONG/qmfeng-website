@@ -109,8 +109,8 @@ export default function HeroSimple() {
             }}
           >
             {t(
-              "结合奇门遁甲、风水布局与清华大学积极心理学培训认证，为事业财富、合作判断、情感关系、空间布局与人生转折，提供清晰判断与落地建议。",
-              "Combining Qi Men Dun Jia, Feng Shui layout, and Tsinghua University Positive Psychology Training Certification, we provide clear judgment and practical guidance for business, wealth, partnerships, relationships, spatial alignment, and major life transitions."
+              "奇门决策不是算命，是帮你看清现在为什么卡住，以及下一步该怎么走。结合奇门遁甲、风水布局与清华大学积极心理学培训认证，为事业财富、合作判断、情感关系、空间布局与人生转折，提供清晰判断与落地建议。",
+              "Qi Men Strategy is not fortune telling. It helps you see why you are stuck now — and what your next move should be. Combining Qi Men Dun Jia, Feng Shui layout, and Tsinghua University Positive Psychology Training Certification, we provide clear judgment and practical guidance for business, wealth, partnerships, relationships, spatial alignment, and major life transitions."
             )}
           </motion.p>
 
