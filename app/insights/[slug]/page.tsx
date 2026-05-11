@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { insightPosts, getInsightPost } from "@/lib/insights-data";
 import {
@@ -36,19 +37,61 @@ const allDynamicPosts = [
   ...insightPosts,
 ];
 
-export function generateStaticParams() {
-  return allDynamicPosts.map((post) => ({ slug: post.slug }));
-}
-
-export default async function InsightDetail({ params }: InsightDetailProps) {
-  const { slug } = await params;
-  const post =
+function findPost(slug: string) {
+  return (
     getQimenStrategyPositioningPost(slug) ??
     getExecutiveWellnessPost(slug) ??
     getQimenDunJiaFoundationPost(slug) ??
     getSpaceEnergyBlogPost(slug) ??
     getQimenSingaporeBilingualPost(slug) ??
-    getInsightPost(slug);
+    getInsightPost(slug)
+  );
+}
+
+export function generateStaticParams() {
+  return allDynamicPosts.map((post) => ({ slug: post.slug }));
+}
+
+export async function generateMetadata({ params }: InsightDetailProps): Promise<Metadata> {
+  const { slug } = await params;
+  const post = findPost(slug);
+
+  if (!post) {
+    return {
+      title: "Article Not Found | QiMing Feng Shui",
+    };
+  }
+
+  const url = `https://www.qmfeng.com/insights/${post.slug}`;
+
+  return {
+    title: `${post.title} | QiMing Feng Shui Singapore`,
+    description: post.excerpt,
+    keywords: post.keywords,
+    alternates: {
+      canonical: url,
+    },
+    openGraph: {
+      title: post.title,
+      description: post.excerpt,
+      url,
+      type: "article",
+      siteName: "QiMing Feng Shui",
+      locale: "zh_SG",
+      publishedTime: post.date,
+      tags: post.keywords,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.excerpt,
+    },
+  };
+}
+
+export default async function InsightDetail({ params }: InsightDetailProps) {
+  const { slug } = await params;
+  const post = findPost(slug);
 
   if (!post) return notFound();
 
