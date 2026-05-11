@@ -29,6 +29,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
     },
     {
+      url: `${baseUrl}/insights/qi-men-strategy-not-fortune-telling`,
+      lastModified: new Date(),
+    },
+    {
       url: `${baseUrl}/insights/feng-shui-wealth-improvement`,
       lastModified: new Date(),
     },
