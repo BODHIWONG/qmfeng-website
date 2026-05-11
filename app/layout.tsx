@@ -38,37 +38,41 @@ const OG_IMAGE =
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.qmfeng.com"),
   title: {
-    default: "奇明風水｜新加坡奇门遁甲风水师｜旺财布局 · 空间能量净化",
+    default: "奇明風水｜新加坡奇门决策与奇门风水布局｜Qi Men Strategy Singapore",
     template: "%s | QiMing Feng Shui",
   },
   description:
-    "奇明風水由黄启明大师主理，结合16+年奇门遁甲、风水布局、八字命理与空间能量净化经验，为新加坡客户提供事业财运、情感疗愈、战略决策与住宅办公风水咨询。",
+    "奇门决策不是算命，是帮你看清现在为什么卡住，以及下一步该怎么走。奇明風水由黄启明大师主理，结合16+年奇门遁甲、奇门风水布局、空间能量与积极心理学经验，为新加坡客户提供事业财富、合作判断、人生选择与风水布局咨询。",
   keywords: [
     "QiMing Feng Shui",
     "Master Huang Qiming",
+    "Qi Men Strategy Singapore",
+    "Qi Men decision consultation",
+    "Qi Men Dun Jia Singapore",
     "Singapore Feng Shui",
     "Feng Shui consultation Singapore",
-    "Qi Men Dun Jia Singapore",
+    "Qi Men Feng Shui",
+    "Feng Shui alignment",
     "space energy clearing",
-    "wealth Feng Shui",
-    "relationship healing",
     "strategic decision consultation",
     "奇明風水",
     "黄启明大师",
+    "奇门决策",
+    "奇门风水",
+    "新加坡奇门遁甲",
     "新加坡风水",
     "奇门遁甲",
+    "风水布局",
     "空间能量净化",
-    "财运风水",
-    "情感疗愈",
   ],
   authors: [{ name: "Master Huang Qiming 黄启明大师" }],
   alternates: {
     canonical: "https://www.qmfeng.com",
   },
   openGraph: {
-    title: "奇明風水 | QiMing Feng Shui",
+    title: "奇门决策不是算命 | QiMing Feng Shui Singapore",
     description:
-      "Singapore-based Feng Shui, Qi Men Dun Jia, emotional healing, and space energy clearing by Master Huang Qiming.",
+      "Qi Men Strategy helps you see why you are stuck now and what your next move should be. Led by Master Huang Qiming in Singapore.",
     url: "https://www.qmfeng.com",
     siteName: "QiMing Feng Shui",
     images: [
@@ -76,7 +80,7 @@ export const metadata: Metadata = {
         url: OG_IMAGE,
         width: 1200,
         height: 630,
-        alt: "QiMing Feng Shui",
+        alt: "QiMing Feng Shui Qi Men Strategy Singapore",
       },
     ],
     locale: "zh_SG",
@@ -84,9 +88,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "QiMing Feng Shui | Master Huang Qiming",
+    title: "Qi Men Strategy Singapore | Master Huang Qiming",
     description:
-      "Singapore-based Feng Shui, Qi Men Dun Jia, emotional healing, and space energy clearing.",
+      "Qi Men Strategy is not fortune telling. It helps you see why you are stuck and what your next move should be.",
     images: [OG_IMAGE],
   },
   robots: {
