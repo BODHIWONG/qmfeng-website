@@ -10,8 +10,10 @@ import { qimenSingaporeBilingualPosts } from "@/lib/qimen-singapore-bilingual-po
 import { qimenDunJiaFoundationPosts } from "@/lib/qimen-dun-jia-foundation-post";
 import { spaceEnergyBlogPosts } from "@/lib/space-energy-blog-posts";
 import { executiveWellnessPosts } from "@/lib/executive-wellness-posts";
+import { qimenStrategyPositioningPosts } from "@/lib/qimen-strategy-positioning-post";
 
 const allPosts = [
+  ...qimenStrategyPositioningPosts,
   ...executiveWellnessPosts,
   ...qimenDunJiaFoundationPosts,
   ...spaceEnergyBlogPosts,
@@ -34,11 +36,11 @@ function InsightsContent() {
           </div>
 
           <h1 className="mb-5 text-4xl font-bold leading-tight md:text-6xl">
-            Qi Men Dun Jia Singapore Insights
+            Qi Men Strategy & Feng Shui Insights Singapore
           </h1>
 
           <p className="text-base leading-relaxed text-[oklch(0.72_0.02_70)] md:text-lg">
-            Practical Chinese and English articles by QiMing Feng Shui｜奇明風水 on Qi Men Dun Jia Singapore, 奇门遁甲新加坡, Feng Shui Singapore, Bazi, space energy purification and real decision-making for life, business, wealth and relationships.
+            Practical Chinese and English articles by QiMing Feng Shui｜奇明風水 on Qi Men Strategy, 奇门决策, Qi Men Dun Jia Singapore, Feng Shui Singapore, Bazi, space energy purification and real decision-making for life, business, wealth and relationships.
           </p>
         </div>
 
