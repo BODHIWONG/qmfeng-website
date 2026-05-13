@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
 
-const LOGO_URL = "/logo-qimen-strategy.png";
+const LOGO_URL = "/logo-qimen-strategy.jpg";
 const WA_LINK = "https://wa.me/6589418791";
 
 const serviceLinks = [
@@ -33,8 +33,6 @@ export default function Navbar() {
       }`}
     >
       <div className="container flex items-center justify-between py-4">
-
-        {/* Logo Section */}
         <Link href="/" className="flex items-center gap-3">
           <img
             src={LOGO_URL}
@@ -45,13 +43,12 @@ export default function Navbar() {
             <div className="text-sm font-semibold tracking-wider text-white">
               QIMEN STRATEGY
             </div>
-            <div className="text-[0.65rem] tracking-[0.25em] text-gold-400">
+            <div className="text-[0.65rem] tracking-[0.25em] text-yellow-500">
               启明遁甲
             </div>
           </div>
         </Link>
 
-        {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-8">
           {serviceLinks.map((link) => (
             <Link
@@ -73,16 +70,15 @@ export default function Navbar() {
           </a>
         </div>
 
-        {/* Mobile Menu Button */}
         <button
           className="md:hidden text-white"
+          aria-label={isOpen ? "Close menu" : "Open menu"}
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
-      {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden bg-black px-6 pb-6">
           {serviceLinks.map((link) => (
