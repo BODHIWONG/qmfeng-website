@@ -3,18 +3,20 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
+import { useLanguage } from "@/contexts/language-context";
 
 const LOGO_URL = "/logo-qimen-strategy.jpg";
 const WA_LINK = "https://wa.me/6589418791";
 
 const serviceLinks = [
-  { href: "/decision", label: "Qimen Strategy" },
-  { href: "/wealth", label: "Wealth & Career" },
-  { href: "/healing", label: "Relationship Alignment" },
-  { href: "/space-clearing", label: "Space Alignment" },
+  { href: "/decision", zh: "奇门决策", en: "Qimen Strategy" },
+  { href: "/wealth", zh: "事业财富", en: "Wealth & Career" },
+  { href: "/healing", zh: "关系调和", en: "Relationship Alignment" },
+  { href: "/space-clearing", zh: "空间调频", en: "Space Alignment" },
 ];
 
 export default function Navbar() {
+  const { lang, setLang } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -23,6 +25,8 @@ export default function Navbar() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const toggleLanguage = () => setLang(lang === "zh" ? "en" : "zh");
 
   return (
     <nav
@@ -49,16 +53,25 @@ export default function Navbar() {
           </div>
         </Link>
 
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-7">
           {serviceLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               className="text-sm text-white/80 hover:text-yellow-400 transition-colors"
             >
-              {link.label}
+              {lang === "zh" ? link.zh : link.en}
             </Link>
           ))}
+
+          <button
+            type="button"
+            onClick={toggleLanguage}
+            className="border border-white/25 px-3 py-2 text-xs font-semibold tracking-[0.18em] text-white/75 transition-all hover:border-yellow-500 hover:text-yellow-500"
+            aria-label="Switch language"
+          >
+            {lang === "zh" ? "EN" : "中文"}
+          </button>
 
           <a
             href={WA_LINK}
@@ -70,13 +83,24 @@ export default function Navbar() {
           </a>
         </div>
 
-        <button
-          className="md:hidden text-white"
-          aria-label={isOpen ? "Close menu" : "Open menu"}
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          {isOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        <div className="flex items-center gap-3 md:hidden">
+          <button
+            type="button"
+            onClick={toggleLanguage}
+            className="border border-white/25 px-2.5 py-1.5 text-[0.65rem] font-semibold tracking-[0.16em] text-white/80"
+            aria-label="Switch language"
+          >
+            {lang === "zh" ? "EN" : "中"}
+          </button>
+
+          <button
+            className="text-white"
+            aria-label={isOpen ? "Close menu" : "Open menu"}
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            {isOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </div>
 
       {isOpen && (
@@ -88,7 +112,7 @@ export default function Navbar() {
               className="block py-3 text-white/80"
               onClick={() => setIsOpen(false)}
             >
-              {link.label}
+              {lang === "zh" ? link.zh : link.en}
             </Link>
           ))}
           <a
@@ -97,7 +121,7 @@ export default function Navbar() {
             rel="noopener noreferrer"
             className="block mt-4 text-yellow-500"
           >
-            WhatsApp Consultation
+            {lang === "zh" ? "WhatsApp 咨询" : "WhatsApp Consultation"}
           </a>
         </div>
       )}
