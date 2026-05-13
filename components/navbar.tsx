@@ -5,8 +5,7 @@ import { useLanguage } from "@/contexts/language-context";
 import { Menu, X, ChevronDown } from "lucide-react";
 import Link from "next/link";
 
-const LOGO_URL =
-  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/753F2E3C-3CDB-4A85-BD6A-5DB0F9999C73-u3LzeIs3PNKVhlm4etlkSSvG0hJqKT.png";
+const LOGO_URL = "/logo-qimen-strategy.png";
 const WA_LINK = "https://wa.me/6589418791";
 
 const serviceLinks = [
