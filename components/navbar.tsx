@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
 
-const LOGO_URL = "/logo-qimen-strategy.png";
+const LOGO_URL = "/logo-qimen-strategy.jpg";
 const WA_LINK = "https://wa.me/6589418791";
 
 const serviceLinks = [
