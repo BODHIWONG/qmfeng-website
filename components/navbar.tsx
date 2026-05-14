@@ -10,6 +10,7 @@ const WA_LINK = "https://wa.me/6589418791";
 
 const serviceLinks = [
   { href: "/decision", zh: "奇门决策", en: "Qimen Strategy" },
+  { href: "/insights", zh: "战略洞察", en: "Strategic Insights" },
   { href: "/wealth", zh: "事业财富", en: "Wealth & Career" },
   { href: "/healing", zh: "关系调和", en: "Relationship Alignment" },
   { href: "/space-clearing", zh: "空间调频", en: "Space Alignment" },
