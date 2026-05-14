@@ -36,18 +36,18 @@ export default function Navbar() {
           : "bg-transparent"
       }`}
     >
-      <div className="container flex items-center justify-between py-4">
-        <Link href="/" className="flex items-center gap-3">
+      <div className="container flex items-center justify-between py-4 md:py-5">
+        <Link href="/" className="flex items-center gap-4">
           <img
             src={LOGO_URL}
             alt="Qimen Strategy Singapore Logo"
-            className="h-11 w-auto object-contain"
+            className="h-14 w-auto object-contain md:h-16"
           />
           <div className="hidden sm:block leading-tight">
-            <div className="text-sm font-semibold tracking-wider text-white">
+            <div className="text-base font-semibold tracking-wider text-white md:text-lg">
               QIMEN STRATEGY
             </div>
-            <div className="text-[0.65rem] tracking-[0.25em] text-yellow-500">
+            <div className="text-xs tracking-[0.28em] text-yellow-500 md:text-sm">
               启明遁甲
             </div>
           </div>
