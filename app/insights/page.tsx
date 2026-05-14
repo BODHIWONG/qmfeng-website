@@ -31,16 +31,16 @@ function InsightsContent() {
           <div className="mb-6 flex items-center gap-3">
             <div className="h-px w-8 bg-[oklch(0.60_0.08_65)]" />
             <span className="text-[0.65rem] font-semibold uppercase tracking-[0.3em] text-[oklch(0.60_0.08_65)]">
-              Insights & Articles
+              Strategic Insights
             </span>
           </div>
 
           <h1 className="mb-5 text-4xl font-bold leading-tight md:text-6xl">
-            Qi Men Strategy & Feng Shui Insights Singapore
+            Qimen Strategy & Feng Shui Insights Singapore
           </h1>
 
           <p className="text-base leading-relaxed text-[oklch(0.72_0.02_70)] md:text-lg">
-            Practical Chinese and English articles by QiMing Feng Shui｜奇明風水 on Qi Men Strategy, 奇门决策, Qi Men Dun Jia Singapore, Feng Shui Singapore, Bazi, space energy purification and real decision-making for life, business, wealth and relationships.
+            Practical Chinese and English articles by Qimen Strategy｜启明遁甲 on Qi Men Strategy, 奇门决策, Qi Men Dun Jia Singapore, Feng Shui Singapore, Bazi, space energy purification and real decision-making for life, business, wealth and relationships.
           </p>
         </div>
 
