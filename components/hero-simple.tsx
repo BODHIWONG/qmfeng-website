@@ -19,13 +19,23 @@ export default function HeroSimple() {
           loading="eager"
           fetchPriority="high"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/35 via-black/72 to-black/96" />
+
+        <div className="absolute inset-0 bg-gradient-to-r from-black/45 via-black/72 to-black/96" />
         <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/92" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_72%_38%,rgba(212,164,82,0.13),transparent_36%)]" />
+
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_72%_38%,rgba(212,164,82,0.12),transparent_34%)]" />
+
+        <div className="absolute right-[-10%] top-1/2 hidden h-[1200px] w-[1200px] -translate-y-1/2 opacity-[0.06] lg:block">
+          <img
+            src="/qimen-compass-gold.png"
+            alt="Qimen compass background"
+            className="h-full w-full object-contain"
+          />
+        </div>
       </div>
 
       <div className="relative container flex min-h-screen items-center pb-16 pt-32 md:pb-24 md:pt-40">
-        <div className="ml-auto w-full max-w-4xl text-left">
+        <div className="ml-auto w-full max-w-5xl text-left">
           <motion.div
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
@@ -34,7 +44,7 @@ export default function HeroSimple() {
           >
             <span className="h-px w-10 bg-[#c89a45]" />
             <span
-              className="text-xs font-semibold uppercase tracking-[0.30em] text-[#d6ad63]"
+              className="text-xs font-semibold uppercase tracking-[0.32em] text-[#d6ad63]"
               style={{ fontFamily: "var(--font-lato), var(--font-noto-sans), sans-serif" }}
             >
               Singapore · Eastern Strategic Decision System
@@ -46,37 +56,47 @@ export default function HeroSimple() {
             initial={{ opacity: 0, y: 26 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.65, delay: 0.08 }}
-            className="max-w-4xl text-5xl font-semibold uppercase leading-[0.95] tracking-[0.06em] text-[#f4dfb0] drop-shadow-[0_8px_28px_rgba(0,0,0,0.62)] sm:text-6xl md:text-7xl lg:text-8xl"
+            className="max-w-5xl text-5xl font-semibold uppercase leading-[0.92] tracking-[0.08em] text-[#f4dfb0] drop-shadow-[0_8px_28px_rgba(0,0,0,0.62)] sm:text-6xl md:text-7xl lg:text-[8rem]"
             style={{ fontFamily: "var(--font-cormorant), var(--font-noto-serif), serif" }}
           >
             Qimen Strategy
           </motion.h1>
 
-          <motion.p
-            initial={{ opacity: 0, y: 18 }}
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.12 }}
-            className="mt-5 max-w-3xl text-2xl font-semibold leading-snug text-[#e2bd6b] md:text-4xl"
+            className="mt-4 text-3xl font-semibold tracking-[0.26em] text-[#e2bd6b] md:text-5xl"
             style={{ fontFamily: "var(--font-cormorant), var(--font-noto-serif), serif" }}
           >
-            Strategic Decision Intelligence
-          </motion.p>
+            启明遁甲
+          </motion.h2>
 
           <motion.p
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.58, delay: 0.15 }}
-            className="mt-3 text-lg font-medium tracking-[0.24em] text-[#f1d38a] md:text-xl"
-            style={{ fontFamily: "var(--font-noto-serif), var(--font-lato), serif" }}
+            transition={{ duration: 0.58, delay: 0.16 }}
+            className="mt-6 text-2xl font-semibold uppercase tracking-[0.28em] text-[#f1d38a] md:text-4xl"
+            style={{ fontFamily: "var(--font-lato), var(--font-noto-serif), sans-serif" }}
           >
-            启明遁甲 · 奇门决策 · 洞察全局
+            See the Whole Game
+          </motion.p>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.62, delay: 0.2 }}
+            className="mt-5 max-w-3xl text-lg leading-8 text-white/86 md:text-2xl"
+            style={{ fontFamily: "var(--font-cormorant), var(--font-noto-serif), serif" }}
+          >
+            Strategic Insight for Business & Life Decisions
           </motion.p>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.65, delay: 0.2 }}
-            className="mt-6 max-w-2xl border-l-2 border-[#d0a14a] bg-black/38 px-5 py-4 text-sm font-semibold leading-7 text-[#f1d38a] backdrop-blur-sm md:text-base"
+            transition={{ duration: 0.65, delay: 0.24 }}
+            className="mt-8 max-w-2xl border-l-2 border-[#d0a14a] bg-black/38 px-5 py-4 text-sm font-semibold leading-7 text-[#f1d38a] backdrop-blur-sm md:text-base"
             style={{ fontFamily: "var(--font-lato), var(--font-noto-sans), sans-serif" }}
           >
             Led by Master Huang Qiming · 16+ years of Qi Men Dun Jia, strategic alignment and Feng Shui practice in Singapore
@@ -85,8 +105,8 @@ export default function HeroSimple() {
           <motion.p
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.65, delay: 0.25 }}
-            className="mt-7 max-w-3xl text-base leading-8 text-white/86 md:text-lg"
+            transition={{ duration: 0.65, delay: 0.28 }}
+            className="mt-7 max-w-3xl text-base leading-8 text-white/82 md:text-lg"
             style={{ fontFamily: "var(--font-lato), var(--font-noto-sans), sans-serif" }}
           >
             Most people are not lacking effort. They are trapped in the wrong timing, direction, people dynamics or environment. Qimen Strategy helps business owners and individuals see the bigger picture before making important decisions.
@@ -95,7 +115,7 @@ export default function HeroSimple() {
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
+            transition={{ duration: 0.6, delay: 0.32 }}
             className="mt-3 max-w-3xl text-sm leading-7 text-white/70 md:text-base"
             style={{ fontFamily: "var(--font-noto-sans), var(--font-lato), sans-serif" }}
           >
@@ -105,30 +125,30 @@ export default function HeroSimple() {
           <motion.div
             initial={{ opacity: 0, y: 22 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.35 }}
-            className="mt-7 grid max-w-3xl grid-cols-1 gap-3 border-y border-[#c89a45]/30 py-4 text-sm font-medium tracking-wide text-[#e6c785] sm:grid-cols-2 lg:grid-cols-4"
+            transition={{ duration: 0.6, delay: 0.36 }}
+            className="mt-9 grid max-w-4xl grid-cols-2 gap-4 border-y border-[#c89a45]/30 py-5 text-center text-sm font-semibold uppercase tracking-[0.18em] text-[#e6c785] md:grid-cols-4"
             style={{ fontFamily: "var(--font-lato), var(--font-noto-sans), sans-serif" }}
           >
-            <span>Business Decisions</span>
-            <span>Life Direction</span>
-            <span>Timing Intelligence</span>
-            <span>Space Alignment</span>
+            <span>奇门决策</span>
+            <span>战略咨询</span>
+            <span>风水布局</span>
+            <span>能量疗愈</span>
           </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
+            transition={{ duration: 0.6, delay: 0.42 }}
             className="mt-8"
           >
             <div
               className="text-3xl font-semibold tracking-wide text-[#e2bd6b] md:text-4xl"
               style={{ fontFamily: "var(--font-cormorant), var(--font-noto-serif), serif" }}
             >
-              Qimen Strategy Consultation From $288
+              Qimen Strategy Session From $288
             </div>
             <p className="mt-2 text-sm text-white/75 md:text-base">
-              See the situation clearly before deciding direction, timing, people and next move.
+              See timing, direction, people and environment before your next move.
             </p>
           </motion.div>
 
@@ -150,7 +170,7 @@ export default function HeroSimple() {
             </a>
 
             <a
-              href="/decision"
+              href="/qimen-strategy-business"
               className="inline-flex items-center justify-center gap-3 border border-[#c89a45] px-7 py-4 text-sm font-bold uppercase tracking-[0.12em] text-[#f4dfb0] transition-colors duration-300 hover:bg-[#c89a45]/10"
               style={{ fontFamily: "var(--font-lato), sans-serif" }}
             >
