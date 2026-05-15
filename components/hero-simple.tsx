@@ -22,16 +22,13 @@ export default function HeroSimple() {
 
         <div className="absolute inset-0 bg-gradient-to-r from-black/45 via-black/72 to-black/96" />
         <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/92" />
-
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_72%_38%,rgba(212,164,82,0.12),transparent_34%)]" />
 
-        <div className="absolute right-[-10%] top-1/2 hidden h-[1200px] w-[1200px] -translate-y-1/2 opacity-[0.06] lg:block">
-          <img
-            src="/qimen-compass-gold.png"
-            alt="Qimen compass background"
-            className="h-full w-full object-contain"
-          />
-        </div>
+        <div className="absolute right-[-12%] top-1/2 hidden h-[980px] w-[980px] -translate-y-1/2 rounded-full border border-[#d6ad63]/10 opacity-60 lg:block" />
+        <div className="absolute right-[-8%] top-1/2 hidden h-[760px] w-[760px] -translate-y-1/2 rounded-full border border-[#d6ad63]/10 opacity-50 lg:block" />
+        <div className="absolute right-[-4%] top-1/2 hidden h-[540px] w-[540px] -translate-y-1/2 rounded-full border border-[#d6ad63]/10 opacity-40 lg:block" />
+        <div className="absolute right-[8%] top-[18%] hidden h-[70%] w-px rotate-45 bg-[#d6ad63]/10 lg:block" />
+        <div className="absolute right-[8%] top-[18%] hidden h-[70%] w-px -rotate-45 bg-[#d6ad63]/10 lg:block" />
       </div>
 
       <div className="relative container flex min-h-screen items-center pb-16 pt-32 md:pb-24 md:pt-40">
