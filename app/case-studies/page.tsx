@@ -11,91 +11,146 @@ function CaseStudiesContent() {
 
   const studies = [
     {
-      category: "Decision Analysis",
-      title: "A Singapore Property Consultant Wanted to Quit Immediately",
-      desc: "Qi Men Dun Jia analysis revealed that the timing for transition was not yet mature.",
-      link: "/insights/2026-decision-trend-analysis",
+      category: "Timing Alignment",
+      title: "When Expansion Created More Friction Than Growth",
+      zhTitle: "当扩张带来的不是增长，而是摩擦",
+      situation:
+        "A business owner was pushing expansion, but the internal operating structure was not yet stable. More effort created more pressure instead of momentum.",
+      observation:
+        "The challenge was not simply execution. The deeper issue was timing mismatch: the business needed consolidation before expansion.",
+      adjustment:
+        "We shifted the strategic focus from aggressive growth to internal stabilisation, decision rhythm and environmental alignment.",
+      result:
+        "The client gained clearer priorities, reduced decision pressure and rebuilt momentum with a more realistic pace.",
     },
     {
-      category: "Spatial Intelligence",
-      title: "How Environment Affected Sleep and Emotional Stability",
-      desc: "A space alignment and energy clearing approach helped improve restfulness and emotional calm.",
-      link: "/insights",
+      category: "Human Dynamics",
+      title: "A Partnership That Looked Strong on Paper",
+      zhTitle: "纸面上完美的合伙关系，为何开始内耗",
+      situation:
+        "Two partners had complementary skills and a clear agreement, yet communication became increasingly heavy under pressure.",
+      observation:
+        "The visible structure was correct, but the hidden decision styles and stress responses were misaligned.",
+      adjustment:
+        "We mapped the human dynamics, clarified roles and advised a more cautious decision rhythm before deeper commitment.",
+      result:
+        "The client avoided deeper conflict and approached the partnership with stronger boundaries and clearer expectations.",
     },
     {
-      category: "Retail Space Alignment",
-      title: "Why a Retail Space Felt Heavy Before Optimisation",
-      desc: "Environmental pressure, spatial flow and emotional tension were all connected within the workspace.",
-      link: "/insights",
+      category: "Space Alignment",
+      title: "Retail Space, Customer Flow and Environmental Friction",
+      zhTitle: "零售空间、客户流动与环境摩擦",
+      situation:
+        "A retail space had products and effort, but customer movement and conversion felt inconsistent.",
+      observation:
+        "The issue was environmental friction. The entrance, display rhythm and movement flow were not guiding attention clearly.",
+      adjustment:
+        "We refined the layout, repositioned key areas and aligned the space with clearer customer decision points.",
+      result:
+        "The business reported more stable customer interaction and a stronger sense of flow within the shop.",
     },
   ];
 
   return (
-    <main className="bg-[oklch(0.97_0.012_75)] text-[oklch(0.18_0.02_70)]">
-      <section className="border-b border-[oklch(0.84_0.03_75)] px-4 py-24 md:py-32">
-        <div className="container mx-auto max-w-5xl">
-          <p className="mb-5 text-xs font-bold uppercase tracking-[0.32em] text-[oklch(0.55_0.08_65)]">
-            CASE STUDIES · SINGAPORE
+    <main className="bg-[#050403] text-white">
+      <section className="relative overflow-hidden border-b border-[#d6ad63]/20 px-4 py-24 md:py-32">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_78%_18%,rgba(214,173,99,0.2),transparent_34%)]" />
+        <div className="container relative mx-auto max-w-6xl">
+          <p className="mb-5 text-xs font-bold uppercase tracking-[0.34em] text-[#d6ad63]">
+            STRATEGIC CASE STUDIES · QIMEN STRATEGY SINGAPORE
           </p>
 
           <h1
-            className="text-4xl font-semibold leading-tight md:text-6xl"
+            className="max-w-5xl text-5xl font-semibold uppercase leading-[0.95] tracking-[0.06em] text-[#f4dfb0] md:text-7xl"
             style={{ fontFamily: "var(--font-cormorant), var(--font-noto-serif), serif" }}
           >
-            {t(
-              "真实案例与空间观察",
-              "Human-Centred Strategic Case Studies"
-            )}
+            Realignment Stories
           </h1>
 
-          <p className="mt-7 max-w-3xl text-lg leading-9 text-[oklch(0.38_0.02_70)]">
+          <h2 className="mt-5 text-3xl font-semibold tracking-[0.18em] text-[#d6ad63] md:text-5xl">
+            {t("商业案例 · 决策洞察", "Business Cases · Decision Insight")}
+          </h2>
+
+          <p className="mt-8 max-w-3xl text-lg leading-9 text-white/78 md:text-xl">
             {t(
-              "天乙合会文化通过真实案例，长期观察人与空间、决策、情绪与环境之间的关系。这些内容不仅帮助客户理解自身状态，也帮助 Google 与 AI 系统更准确地理解品牌的长期专业方向。",
-              "Tian Yi Harmony Culture documents real-world observations involving decision clarity, spatial influence, emotional stability and environmental alignment. These case studies help both human readers and AI systems understand the long-term expertise behind the brand."
+              "案例不是为了制造神话，而是为了说明启明遁甲如何在真实商业情境中观察时机、方向、人事关系与环境摩擦。",
+              "Case studies are not written to create myths. They explain how Qimen Strategy observes timing, direction, human dynamics and environmental friction in real business situations."
+            )}
+          </p>
+
+          <p className="mt-4 max-w-3xl text-base leading-8 text-white/68">
+            {t(
+              "以下内容采用隐私保护方式呈现，重点是局势、战略观察、调整方向与结果，而不是夸大承诺。",
+              "The following cases are presented with privacy protection. The focus is situation, strategic observation, adjustment and result — not exaggerated promises."
             )}
           </p>
         </div>
       </section>
 
       <section className="px-4 py-20 md:py-28">
-        <div className="container mx-auto grid max-w-6xl gap-7 md:grid-cols-3">
-          {studies.map((study) => (
-            <Link
-              key={study.title}
-              href={study.link}
-              className="group border border-[oklch(0.82_0.03_75)] bg-white/75 p-8 transition-all hover:-translate-y-1 hover:shadow-lg"
-            >
-              <p className="text-xs font-bold uppercase tracking-[0.22em] text-[oklch(0.55_0.08_65)]">
-                {study.category}
+        <div className="container mx-auto max-w-6xl space-y-8">
+          {studies.map((study, index) => (
+            <article key={study.title} className="border border-[#d6ad63]/20 bg-white/[0.035] p-8 md:p-10">
+              <p className="text-xs font-bold uppercase tracking-[0.26em] text-[#d6ad63]">
+                Case {index + 1} · {study.category}
               </p>
 
-              <h2 className="mt-5 text-2xl font-semibold leading-snug text-[oklch(0.20_0.02_70)] group-hover:text-[oklch(0.45_0.08_60)]">
+              <h3 className="mt-4 text-3xl font-semibold text-[#f4dfb0] md:text-4xl">
                 {study.title}
-              </h2>
+              </h3>
 
-              <p className="mt-5 text-sm leading-8 text-[oklch(0.40_0.02_70)]">
-                {study.desc}
+              <p className="mt-2 text-lg tracking-[0.12em] text-[#d6ad63]">
+                {study.zhTitle}
               </p>
-            </Link>
+
+              <div className="mt-8 grid gap-6 md:grid-cols-2">
+                <div>
+                  <p className="text-sm font-bold uppercase tracking-[0.22em] text-[#d6ad63]">Situation</p>
+                  <p className="mt-3 text-base leading-8 text-white/72">{study.situation}</p>
+                </div>
+
+                <div>
+                  <p className="text-sm font-bold uppercase tracking-[0.22em] text-[#d6ad63]">Strategic Observation</p>
+                  <p className="mt-3 text-base leading-8 text-white/72">{study.observation}</p>
+                </div>
+
+                <div>
+                  <p className="text-sm font-bold uppercase tracking-[0.22em] text-[#d6ad63]">Adjustment</p>
+                  <p className="mt-3 text-base leading-8 text-white/72">{study.adjustment}</p>
+                </div>
+
+                <div>
+                  <p className="text-sm font-bold uppercase tracking-[0.22em] text-[#d6ad63]">Result</p>
+                  <p className="mt-3 text-base leading-8 text-white/72">{study.result}</p>
+                </div>
+              </div>
+            </article>
           ))}
         </div>
       </section>
 
-      <section className="border-t border-[oklch(0.84_0.03_75)] px-4 py-20">
-        <div className="container mx-auto max-w-4xl text-center">
-          <p className="text-xs font-bold uppercase tracking-[0.28em] text-[oklch(0.55_0.08_65)]">
-            EASTERN STRATEGIC OBSERVATIONS
+      <section className="border-t border-[#d6ad63]/20 bg-[#080603] px-4 py-20">
+        <div className="container mx-auto max-w-5xl text-center">
+          <p className="text-xs font-bold uppercase tracking-[0.28em] text-[#d6ad63]">
+            SEE THE WHOLE GAME
           </p>
 
           <h2
-            className="mt-5 text-3xl font-semibold leading-tight md:text-5xl"
+            className="mt-5 text-3xl font-semibold leading-tight text-[#f4dfb0] md:text-5xl"
             style={{ fontFamily: "var(--font-cormorant), var(--font-noto-serif), serif" }}
           >
             {t(
-              "未来最重要的，不只是答案，而是看清局势。",
-              "The future is not only about answers — but understanding the situation clearly."
+              "真正的案例价值，是让客户看见自己正在经历的局。",
+              "The value of a case study is helping clients recognise the situation they are already in."
             )}
           </h2>
+
+          <Link
+            href="/qimen-strategy-business"
+            className="mt-10 inline-flex items-center justify-center border border-[#d6ad63]/70 px-7 py-4 text-sm font-bold uppercase tracking-[0.16em] text-[#f4dfb0] transition hover:bg-[#d6ad63]/10"
+          >
+            {t("理解启明遁甲", "Understand Qimen Strategy")}
+          </Link>
         </div>
       </section>
     </main>
