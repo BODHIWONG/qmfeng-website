@@ -38,42 +38,43 @@ const OG_IMAGE =
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.qmfeng.com"),
   title: {
-    default: "启明遁甲｜Qimen Strategy Singapore｜奇门决策与风水布局",
+    default:
+      "Qimen Strategy Singapore｜Strategic Insight for Business｜启明遁甲",
     template: "%s | Qimen Strategy Singapore",
   },
   description:
-    "启明遁甲 Qimen Strategy 由黄启明大师主理，专注新加坡高端奇门决策、事业财富判断、商业合作时机、人生方向与风水布局。不是简单算命，而是看清局势、时机、方向、人与环境，帮助你做出更稳、更清晰的关键决策。",
+    "启明遁甲 Qimen Strategy 由黄启明大师主理，专注新加坡高端奇门决策、战略咨询、风水布局与能量疗愈。帮助企业主与个人在关键时刻看清时机、方向、人事关系与环境格局，做出更稳、更清晰的决策。",
   keywords: [
     "Qimen Strategy Singapore",
+    "Strategic Insight for Business",
+    "Qimen Strategy in Modern Business",
     "Qi Men Strategy Singapore",
     "Qimen Decision Consultation",
-    "Qi Men decision consultation",
     "Qi Men Dun Jia Singapore",
+    "business decision consultant Singapore",
+    "business timing consultation Singapore",
     "Master Huang Qiming",
     "Huang Qiming Singapore",
     "Qiming Feng Shui",
     "Singapore Feng Shui",
-    "Feng Shui alignment",
-    "strategic decision consultation",
-    "business timing consultation Singapore",
     "启明遁甲",
     "黄启明大师",
     "奇门决策",
-    "奇门战略",
+    "战略咨询",
     "奇门遁甲",
     "新加坡奇门遁甲",
     "新加坡风水",
     "风水布局",
-    "空间能量净化",
+    "能量疗愈"
   ],
   authors: [{ name: "Master Huang Qiming 黄启明大师" }],
   alternates: {
     canonical: "https://www.qmfeng.com",
   },
   openGraph: {
-    title: "启明遁甲 | Qimen Strategy Singapore",
+    title: "Qimen Strategy Singapore | Strategic Insight for Business",
     description:
-      "High-end Qi Men Strategy consultation in Singapore for business, wealth, timing, direction and Feng Shui alignment. Led by Master Huang Qiming.",
+      "High-end Qimen Strategy consultation in Singapore for business decisions, timing, direction and Feng Shui alignment.",
     url: "https://www.qmfeng.com",
     siteName: "Qimen Strategy Singapore",
     images: [
@@ -89,9 +90,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Qimen Strategy Singapore | Master Huang Qiming",
+    title: "Qimen Strategy Singapore | Strategic Insight for Business",
     description:
-      "Qi Men Strategy helps you see timing, direction, people and environment before making important decisions.",
+      "Qimen Strategy helps business owners and individuals see timing, direction, people and environment before making important decisions.",
     images: [OG_IMAGE],
   },
   robots: {
