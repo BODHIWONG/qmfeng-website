@@ -6,14 +6,15 @@ import Link from "next/link";
 import { useLanguage } from "@/contexts/language-context";
 
 const LOGO_URL = "/logo-qimen-strategy.jpg";
-const WA_LINK = "https://wa.me/6589418791";
+const WA_LINK =
+  "https://wa.me/6589418791?text=Hello%20Master%20Qiming%2C%20I%20would%20like%20to%20book%20a%20Qimen%20Strategy%20consultation.";
 
 const serviceLinks = [
-  { href: "/decision", zh: "奇门决策", en: "Qimen Strategy" },
-  { href: "/wealth", zh: "事业财富", en: "Wealth & Career" },
-  { href: "/healing", zh: "关系调和", en: "Relationship Alignment" },
-  { href: "/space-clearing", zh: "空间调频", en: "Space Alignment" },
-  { href: "/insights", zh: "战略洞察", en: "Strategic Insights" },
+  { href: "/qimen-strategy-business", zh: "启明遁甲", en: "Qimen Strategy" },
+  { href: "/decision", zh: "奇门决策", en: "Decision" },
+  { href: "/insights", zh: "战略洞察", en: "Insights" },
+  { href: "/space-clearing", zh: "空间布局", en: "Space" },
+  { href: "/founder", zh: "黄启明", en: "Master Qiming" },
 ];
 
 export default function Navbar() {
@@ -38,10 +39,10 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+      className={`fixed top-0 z-50 w-full transition-all duration-300 ${
         scrolled
-          ? "bg-black/95 backdrop-blur-md shadow-lg"
-          : "bg-[#f7f1e7]/72 backdrop-blur-sm border-b border-[#d7c4ad]/25"
+          ? "bg-black/95 shadow-lg backdrop-blur-md"
+          : "border-b border-[#d7c4ad]/25 bg-[#f7f1e7]/72 backdrop-blur-sm"
       }`}
     >
       <div className="container flex items-center justify-between py-4 md:py-5">
@@ -51,7 +52,7 @@ export default function Navbar() {
             alt="Qimen Strategy Singapore Logo"
             className="h-14 w-auto object-contain md:h-16"
           />
-          <div className="hidden sm:block leading-tight">
+          <div className="hidden leading-tight sm:block">
             <div className={`text-base font-semibold tracking-wider md:text-lg ${brandTextClass}`}>
               QIMEN STRATEGY
             </div>
@@ -61,13 +62,9 @@ export default function Navbar() {
           </div>
         </Link>
 
-        <div className="hidden md:flex items-center gap-6 lg:gap-7">
+        <div className="hidden items-center gap-6 md:flex lg:gap-7">
           {serviceLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className={`text-sm transition-colors ${navTextClass}`}
-            >
+            <Link key={link.href} href={link.href} className={`text-sm transition-colors ${navTextClass}`}>
               {lang === "zh" ? link.zh : link.en}
             </Link>
           ))}
@@ -89,9 +86,9 @@ export default function Navbar() {
             href={WA_LINK}
             target="_blank"
             rel="noopener noreferrer"
-            className="px-5 py-2 border border-yellow-600 text-yellow-600 text-sm hover:bg-yellow-600 hover:text-black transition-all"
+            className="border border-yellow-600 px-5 py-2 text-sm text-yellow-600 transition-all hover:bg-yellow-600 hover:text-black"
           >
-            WhatsApp
+            Strategy Session
           </a>
         </div>
 
@@ -118,7 +115,7 @@ export default function Navbar() {
       </div>
 
       {isOpen && (
-        <div className="md:hidden bg-black px-6 pb-6">
+        <div className="bg-black px-6 pb-6 md:hidden">
           {serviceLinks.map((link) => (
             <Link
               key={link.href}
@@ -133,9 +130,9 @@ export default function Navbar() {
             href={WA_LINK}
             target="_blank"
             rel="noopener noreferrer"
-            className="block mt-4 text-yellow-500"
+            className="mt-4 block text-yellow-500"
           >
-            {lang === "zh" ? "WhatsApp 咨询" : "WhatsApp Consultation"}
+            {lang === "zh" ? "预约奇门决策" : "Book Strategy Session"}
           </a>
         </div>
       )}
