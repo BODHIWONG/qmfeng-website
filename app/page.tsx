@@ -12,7 +12,6 @@ import MasterIPCoreSection from "@/components/master-ip-core-section";
 import CasesSection from "@/components/cases-section";
 import TestimonialsSection from "@/components/testimonials-section";
 import VideoSection from "@/components/video-section";
-import EnergyClearingSection from "@/components/energy-clearing-section";
 import InsightsHomeCTA from "@/components/insights-home-cta";
 import FinalCTA from "@/components/final-cta";
 import Footer from "@/components/footer";
@@ -24,43 +23,17 @@ export default function Home() {
       <div className="min-h-screen bg-[oklch(0.97_0.012_75)]">
         <Navbar />
 
-        {/* SECTION 1 — HERO */}
         <HeroSimple />
-
-        {/* SECTION 2 — TRUST BAR */}
         <TrustBar />
-
-        {/* NEW — STRATEGIC BRAND WORLDVIEW */}
         <BrandWorldviewSection />
-
-        {/* SECTION 3 — FIRST SPLIT USERS BY CORE PROBLEM */}
         <ServiceCards />
-
-        {/* SECTION 4 — WHY MASTER QIMING */}
         <DifferentiationSection />
-
-        {/* SECTION 5 — QI MEN DUN JIA + MASTER QIMING */}
         <QimenMasterSection />
-
-        {/* SECTION 6 — MASTER QIMING PERSONAL IP CORE */}
         <MasterIPCoreSection />
-
-        {/* SECTION 7 — CASE STUDIES */}
         <CasesSection />
-
-        {/* SECTION 8 — TESTIMONIALS */}
         <TestimonialsSection />
-
-        {/* SECTION 9 — VIDEO PROOF */}
         <VideoSection />
-
-        {/* SECTION 10 — SPACE CLEARING AS A SPECIALISED SECTION */}
-        <EnergyClearingSection />
-
-        {/* NEW — BLOG TRAFFIC MODULE */}
         <InsightsHomeCTA />
-
-        {/* SECTION 12 — STRONG CTA */}
         <FinalCTA />
 
         <Footer />
