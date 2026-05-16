@@ -2,19 +2,19 @@
 
 import { motion } from "framer-motion";
 import { useLanguage } from "@/contexts/language-context";
-import { Target, Shield, TrendingUp, Briefcase, Heart, Compass, Home } from "lucide-react";
+import { Target, Shield, TrendingUp, Briefcase, Users, Compass, AlertTriangle } from "lucide-react";
 
 const benefits = [
-  { icon: Target, labelZh: "看清时机", labelEn: "Read the Timing" },
-  { icon: Shield, labelZh: "避开风险", labelEn: "Avoid Hidden Risks" },
-  { icon: TrendingUp, labelZh: "顺势布局", labelEn: "Align for Better Results" },
+  { icon: Target, labelZh: "看清时机", labelEn: "Read Timing" },
+  { icon: Compass, labelZh: "判断方向", labelEn: "Clarify Direction" },
+  { icon: Shield, labelZh: "识别风险", labelEn: "Map Risk" },
 ];
 
 const useCases = [
   { icon: Briefcase, labelZh: "商业决策", labelEn: "Business Decisions" },
-  { icon: TrendingUp, labelZh: "事业财富", labelEn: "Career & Wealth" },
-  { icon: Home, labelZh: "住宅办公风水", labelEn: "Home & Office Feng Shui" },
-  { icon: Heart, labelZh: "感情关系", labelEn: "Relationships" },
+  { icon: TrendingUp, labelZh: "投资与扩张", labelEn: "Investment & Expansion" },
+  { icon: Users, labelZh: "合作与人事", labelEn: "Partnerships & People" },
+  { icon: AlertTriangle, labelZh: "风险与转型", labelEn: "Risk & Transition" },
   { icon: Compass, labelZh: "人生方向", labelEn: "Life Direction" },
 ];
 
@@ -22,10 +22,9 @@ export default function DifferentiationSection() {
   const { t } = useLanguage();
 
   return (
-    <section className="py-20 md:py-28 bg-[oklch(0.06_0.02_60)]">
+    <section className="bg-[oklch(0.06_0.02_60)] py-20 md:py-28">
       <div className="container">
-        <div className="max-w-4xl mx-auto text-center">
-          {/* Headline */}
+        <div className="mx-auto max-w-4xl text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -33,72 +32,64 @@ export default function DifferentiationSection() {
             transition={{ duration: 0.7 }}
           >
             <p
-              className="text-xs tracking-[0.25em] uppercase mb-4"
-              style={{
-                fontFamily: "var(--font-lato), sans-serif",
-                color: "oklch(0.72 0.12 70)",
-              }}
+              className="mb-4 text-xs uppercase tracking-[0.25em]"
+              style={{ fontFamily: "var(--font-lato), sans-serif", color: "oklch(0.72 0.12 70)" }}
             >
-              {t("高阶奇门风水策略", "Advanced Qi Men Feng Shui Strategy")}
+              {t("为什么是启明遁甲", "Why Qimen Strategy")}
             </p>
-            
+
             <h2
-              className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6"
+              className="mb-6 text-3xl font-bold sm:text-4xl md:text-5xl"
               style={{
                 fontFamily: "var(--font-cormorant), var(--font-noto-serif), serif",
                 color: "oklch(0.98 0.01 75)",
               }}
             >
-              {t(
-                "不只是传统风水",
-                "More Than Traditional Feng Shui"
-              )}
+              {t("不是娱乐化算命，而是东方智慧决策系统", "Not Fortune Telling — An Eastern Wisdom Decision System")}
             </h2>
 
             <p
-              className="text-xl md:text-2xl mb-12"
+              className="mb-12 text-xl md:text-2xl"
               style={{
                 fontFamily: "var(--font-cormorant), var(--font-noto-serif), serif",
                 color: "oklch(0.72 0.10 70)",
               }}
             >
               {t(
-                "这是一套结合奇门遁甲、风水布局与命理判断的决策系统",
-                "A decision system combining Qi Men Dun Jia, Feng Shui layout and destiny insight"
+                "以奇门遁甲为根基，转化为现代关键决策前的战略判断。",
+                "Rooted in Qi Men Dun Jia, translated into strategic judgment before critical decisions."
               )}
             </p>
           </motion.div>
 
-          {/* Description */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-base md:text-lg leading-relaxed mb-12 max-w-3xl mx-auto"
+            className="mx-auto mb-12 max-w-3xl text-base leading-relaxed md:text-lg"
             style={{
               fontFamily: "var(--font-lato), var(--font-noto-sans), sans-serif",
               color: "oklch(0.65 0.02 70)",
             }}
           >
             {t(
-              "由黄启明大师主理，融合奇门遁甲、八字命理、风水布局与空间能量调和，帮助您在事业财富、感情关系、住宅办公与人生关键选择中，看清时机、避开风险、顺势布局。",
-              "Led by Master Huang Qiming, this approach combines Qi Men Dun Jia, Bazi, Feng Shui layout and space energy alignment to help you read timing, avoid hidden risks and align your next move in wealth, relationships, homes, offices and major life decisions."
+              "黄启明大师以 16+ 年奇门遁甲实战经验，帮助企业主、创始人、高管与个人在关键行动前，看清时机、方向、人事关系与局势风险。启明遁甲的重点不是制造神秘，而是提供更清醒、更可执行的决策视角。",
+              "With 16+ years of practical Qi Men Dun Jia experience, Master Huang Qiming helps business owners, founders, executives and individuals read timing, direction, people dynamics and risk before important moves. Qimen Strategy is not about creating mystery; it is about clearer, more actionable strategic perspective."
             )}
           </motion.p>
 
-          {/* Benefits - 3 columns */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="grid grid-cols-3 gap-6 md:gap-12 mb-16"
+            className="mb-16 grid grid-cols-3 gap-6 md:gap-12"
           >
             {benefits.map((benefit, i) => (
               <div key={i} className="flex flex-col items-center">
                 <div
-                  className="w-14 h-14 md:w-16 md:h-16 flex items-center justify-center mb-4"
+                  className="mb-4 flex h-14 w-14 items-center justify-center md:h-16 md:w-16"
                   style={{
                     background: "oklch(0.72 0.12 70 / 0.1)",
                     border: "1px solid oklch(0.72 0.12 70 / 0.3)",
@@ -107,7 +98,7 @@ export default function DifferentiationSection() {
                   <benefit.icon size={28} className="text-[oklch(0.72_0.12_70)]" />
                 </div>
                 <p
-                  className="text-sm md:text-base font-semibold"
+                  className="text-sm font-semibold md:text-base"
                   style={{
                     fontFamily: "var(--font-lato), var(--font-noto-sans), sans-serif",
                     color: "oklch(0.90 0.02 70)",
@@ -119,7 +110,6 @@ export default function DifferentiationSection() {
             ))}
           </motion.div>
 
-          {/* Use Cases */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -127,32 +117,23 @@ export default function DifferentiationSection() {
             transition={{ duration: 0.6, delay: 0.4 }}
           >
             <p
-              className="text-xs tracking-[0.2em] uppercase mb-6"
-              style={{
-                fontFamily: "var(--font-lato), sans-serif",
-                color: "oklch(0.55 0.02 70)",
-              }}
+              className="mb-6 text-xs uppercase tracking-[0.2em]"
+              style={{ fontFamily: "var(--font-lato), sans-serif", color: "oklch(0.55 0.02 70)" }}
             >
-              {t("适用于", "Used For")}
+              {t("适用于关键决策场景", "Used For Critical Decision Scenarios")}
             </p>
-            
+
             <div className="flex flex-wrap items-center justify-center gap-4">
               {useCases.map((useCase, i) => (
                 <div
                   key={i}
                   className="flex items-center gap-2 px-5 py-3"
-                  style={{
-                    background: "oklch(0.10 0.02 60)",
-                    border: "1px solid oklch(0.20 0.02 60)",
-                  }}
+                  style={{ background: "oklch(0.10 0.02 60)", border: "1px solid oklch(0.20 0.02 60)" }}
                 >
                   <useCase.icon size={16} className="text-[oklch(0.72_0.10_70)]" />
                   <span
                     className="text-sm"
-                    style={{
-                      fontFamily: "var(--font-lato), var(--font-noto-sans), sans-serif",
-                      color: "oklch(0.75 0.02 70)",
-                    }}
+                    style={{ fontFamily: "var(--font-lato), var(--font-noto-sans), sans-serif", color: "oklch(0.75 0.02 70)" }}
                   >
                     {t(useCase.labelZh, useCase.labelEn)}
                   </span>
