@@ -2,61 +2,61 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Qimen Strategy Executive Advisory Singapore｜启明遁甲企业战略顾问",
+  title: "Qimen Strategy Advisory Singapore｜启明遁甲奇门决策顾问",
   description:
-    "Qimen Strategy Singapore executive decision advisory programs by Master Huang Qiming. Pricing: S$980 single advisory, S$2,800 quarterly retainer, S$9,800 annual advisory, and premium strategic projects from S$25,000.",
+    "启明遁甲 Qimen Strategy 奇门决策顾问方案。黄启明大师以 16 年奇门决策实战经验，长期服务企业主与个人关键决策。",
   alternates: {
     canonical: "https://www.qmfeng.com/qimen-strategy-business",
   },
 };
 
 const WA_LINK =
-  "https://wa.me/6589418791?text=Hello%20Master%20Qiming%2C%20I%20would%20like%20to%20book%20a%20private%20Qimen%20Strategy%20briefing.";
+  "https://wa.me/6589418791?text=Hello%20Master%20Qiming%2C%20I%20would%20like%20to%20book%20a%20private%20Qimen%20Strategy%20session.";
 
 const programs = [
   {
     no: "01",
-    title: "Single Executive Advisory",
-    zh: "单项战略决策咨询",
+    title: "Single Qimen Strategy Session",
+    zh: "单项奇门决策咨询",
     price: "S$980",
     unit: "/ session",
-    body: "One critical decision. Clear insight. Confident move.",
-    bodyZh: "适合单一重大决策判断。",
-    points: ["Private 1-on-1 consultation", "Qimen Strategy analysis", "Actionable recommendation"],
-    tag: "Best for one critical decision",
+    body: "One critical decision. Clear situation. Better next move.",
+    bodyZh: "适合一个关键决定前的局势判断。",
+    points: ["Private 1-on-1 consultation", "Timing, direction, people and risk review", "Action-oriented recommendation"],
+    tag: "For one critical decision",
   },
   {
     no: "02",
-    title: "Quarterly Executive Retainer",
-    zh: "季度企业战略顾问",
+    title: "Quarterly Qimen Strategy Advisory",
+    zh: "季度奇门决策顾问",
     price: "S$2,800",
     unit: "/ quarter",
-    body: "Ongoing guidance for business owners.",
+    body: "Ongoing Qimen decision support for business owners.",
     bodyZh: "企业主最推荐起步方案。",
-    points: ["Quarterly business review", "Up to 3 advisory cases", "Priority response within 48h"],
+    points: ["Quarterly decision review", "Up to 3 advisory cases", "Priority response within 48h"],
     tag: "Most Recommended",
     featured: true,
   },
   {
     no: "03",
-    title: "Annual Executive Advisory",
-    zh: "年度企业战略幕僚",
+    title: "Annual Qimen Strategy Advisory",
+    zh: "年度奇门决策顾问",
     price: "S$9,800",
     unit: "/ year",
-    body: "Founder-level ongoing advisory support.",
-    bodyZh: "创始人级长期顾问支持。",
-    points: ["Annual strategy planning", "Quarterly strategic review", "Up to 2 priority sessions / month"],
-    tag: "Founder-level advisory",
+    body: "Long-term decision support for founders and business owners.",
+    bodyZh: "适合长期重大决策与阶段性复盘。",
+    points: ["Annual direction review", "Quarterly decision review", "Up to 2 priority sessions / month"],
+    tag: "Long-term advisory",
   },
   {
     no: "04",
-    title: "Premium Strategic Execution",
-    zh: "顶层战略项目顾问",
+    title: "Major Project Qimen Strategy Advisory",
+    zh: "重大项目奇门决策顾问",
     price: "From S$25,000",
     unit: "/ project",
-    body: "For major strategic projects and business expansion.",
-    bodyZh: "适用于重大商业项目。",
-    points: ["End-to-end strategic advisory", "Expansion and transformation", "High-value strategic support"],
+    body: "For major business projects, transformation and high-value decisions.",
+    bodyZh: "适用于重大商业项目与高价值决策。",
+    points: ["Project-based Qimen decision advisory", "Expansion and transformation review", "High-value strategic support"],
     tag: "For major projects",
   },
 ];
@@ -64,8 +64,8 @@ const programs = [
 const pillars = [
   ["Timing", "时机", "When to move, wait, adjust or redirect."],
   ["Direction", "方向", "Which path is more aligned and less draining."],
-  ["People", "人事", "How partnerships, teams and decision dynamics affect the outcome."],
-  ["Environment", "环境", "How space and context support or weaken action."],
+  ["People", "人事", "How partnerships, teams and key people affect the outcome."],
+  ["Risk", "风险", "Where hidden resistance, blind spots and decision costs may appear."],
 ];
 
 export default function QimenStrategyBusinessPage() {
@@ -75,22 +75,22 @@ export default function QimenStrategyBusinessPage() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_20%,rgba(214,173,99,0.22),transparent_34%)]" />
         <div className="container relative mx-auto max-w-6xl">
           <p className="mb-5 text-xs font-bold uppercase tracking-[0.36em] text-[#d6ad63]">
-            Qimen Strategy Singapore · Executive Decision Advisory
+            Qimen Strategy Singapore · Strategic Wisdom Decision Method
           </p>
           <h1 className="max-w-5xl text-4xl font-semibold uppercase leading-[0.98] tracking-[0.05em] text-[#f4dfb0] md:text-7xl">
-            Executive Decision Advisory
+            Qimen Strategy Advisory
           </h1>
           <h2 className="mt-5 text-3xl font-semibold tracking-[0.18em] text-[#e2bd6b] md:text-5xl">
-            企业主战略决策顾问方案
+            启明遁甲 · 奇门决策顾问方案
           </h2>
           <p className="mt-6 text-lg font-semibold uppercase tracking-[0.20em] text-[#d6ad63] md:text-2xl">
-            See Timing · Direction · People · Environment Before You Decide
+            See Timing · Direction · People · Risk Before You Decide
           </p>
           <p className="mt-8 max-w-3xl text-lg leading-8 text-white/78 md:text-xl">
-            A confidential executive advisory system for business owners facing high-stakes decisions. Rooted in Qi Men Dun Jia, translated into modern strategic decision-making.
+            A private Qimen Strategy advisory approach for business owners and individuals facing critical decisions. Rooted in Qi Men Dun Jia, shaped into practical strategic judgment before action.
           </p>
           <p className="mt-4 max-w-3xl text-base leading-8 text-white/70">
-            为企业主重大决策而设的私密战略顾问系统。启明遁甲不是娱乐化算命，而是帮助客户在关键时刻看清时机、方向、人事与环境格局。
+            启明遁甲以奇门决策咨询为核心，帮助企业主与个人在合作、投资、转型、任用、签约或人生方向选择前，看清时机、方向、人事关系与风险结构。
           </p>
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
             <a
@@ -99,10 +99,10 @@ export default function QimenStrategyBusinessPage() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Book a Private Strategy Briefing
+              Book a Private Qimen Strategy Session
             </a>
             <Link href="/decision" className="inline-flex items-center justify-center border border-[#d6ad63]/70 px-7 py-4 text-sm font-bold uppercase tracking-[0.16em] text-[#f4dfb0] transition hover:bg-[#d6ad63]/10">
-              Single Advisory S$980
+              View Single Advisory
             </Link>
           </div>
         </div>
@@ -110,7 +110,7 @@ export default function QimenStrategyBusinessPage() {
 
       <section className="border-y border-[#d6ad63]/20 bg-[#070707] px-4 py-16">
         <div className="container mx-auto max-w-6xl">
-          <p className="text-xs font-bold uppercase tracking-[0.32em] text-[#d6ad63]">Official Advisory Pricing</p>
+          <p className="text-xs font-bold uppercase tracking-[0.32em] text-[#d6ad63]">Qimen Strategy Advisory Pricing</p>
           <div className="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
             {programs.map((program) => (
               <article
@@ -160,12 +160,12 @@ export default function QimenStrategyBusinessPage() {
       <section className="px-4 py-20 md:py-28">
         <div className="container mx-auto max-w-6xl">
           <div className="max-w-3xl">
-            <p className="mb-4 text-xs font-bold uppercase tracking-[0.32em] text-[#d6ad63]">The Four Decision Dimensions</p>
+            <p className="mb-4 text-xs font-bold uppercase tracking-[0.32em] text-[#d6ad63]">Four Decision Dimensions</p>
             <h2 className="text-3xl font-semibold leading-tight text-[#f4dfb0] md:text-5xl">
-              The advisory work focuses on timing, direction, people and environment.
+              The advisory work focuses on timing, direction, people and risk.
             </h2>
             <p className="mt-6 text-base leading-8 text-white/72 md:text-lg">
-              Many mistakes are not caused by lack of effort. They come from unclear timing, wrong direction, weak people dynamics or an environment that does not support clarity.
+              Many mistakes are not caused by lack of effort. They come from unclear timing, wrong direction, weak people dynamics or hidden risk that has not been recognised early enough.
             </p>
           </div>
 
@@ -178,6 +178,12 @@ export default function QimenStrategyBusinessPage() {
                 <p className="mt-5 text-base leading-8 text-white/72">{body}</p>
               </article>
             ))}
+          </div>
+
+          <div className="mt-12 border border-[#d6ad63]/25 bg-white/[0.035] p-6 text-sm leading-7 text-white/62">
+            <p>
+              Advisory note: Qimen Strategy provides strategic judgment and decision reference. Final decisions and actions remain the client’s responsibility. No guaranteed business, legal, financial or personal outcome is promised.
+            </p>
           </div>
         </div>
       </section>
