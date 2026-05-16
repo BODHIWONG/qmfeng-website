@@ -18,8 +18,8 @@ const programs = [
     no: "01",
     title: "Single Qimen Strategy Session",
     zh: "单项奇门决策咨询",
-    price: "S$980",
-    unit: "/ session",
+    fee: "Private Session",
+    feeZh: "预约制咨询",
     body: "One critical decision. Clear situation. Better next move.",
     bodyZh: "适合一个关键决定前的局势判断。",
     points: ["Private 1-on-1 consultation", "Timing, direction, people and risk review", "Action-oriented recommendation"],
@@ -29,8 +29,8 @@ const programs = [
     no: "02",
     title: "Quarterly Qimen Strategy Advisory",
     zh: "季度奇门决策顾问",
-    price: "S$2,800",
-    unit: "/ quarter",
+    fee: "Private Arrangement",
+    feeZh: "季度顾问 · 私密确认",
     body: "Ongoing Qimen decision support for business owners.",
     bodyZh: "企业主最推荐起步方案。",
     points: ["Quarterly decision review", "Up to 3 advisory cases", "Priority response within 48h"],
@@ -41,19 +41,19 @@ const programs = [
     no: "03",
     title: "Annual Qimen Strategy Advisory",
     zh: "年度奇门决策顾问",
-    price: "S$9,800",
-    unit: "/ year",
+    fee: "By Private Arrangement",
+    feeZh: "年度顾问 · 私密确认",
     body: "Long-term decision support for founders and business owners.",
     bodyZh: "适合长期重大决策与阶段性复盘。",
-    points: ["Annual direction review", "Quarterly decision review", "Up to 2 priority sessions / month"],
+    points: ["Annual direction review", "Quarterly decision review", "Priority sessions by arrangement"],
     tag: "Long-term advisory",
   },
   {
     no: "04",
     title: "Major Project Qimen Strategy Advisory",
     zh: "重大项目奇门决策顾问",
-    price: "From S$25,000",
-    unit: "/ project",
+    fee: "Proposal Based",
+    feeZh: "项目制顾问 · 提案确认",
     body: "For major business projects, transformation and high-value decisions.",
     bodyZh: "适用于重大商业项目与高价值决策。",
     points: ["Project-based Qimen decision advisory", "Expansion and transformation review", "High-value strategic support"],
@@ -90,7 +90,7 @@ export default function QimenStrategyBusinessPage() {
             A private Qimen Strategy advisory approach for business owners and individuals facing critical decisions. Rooted in Qi Men Dun Jia, shaped into practical strategic judgment before action.
           </p>
           <p className="mt-4 max-w-3xl text-base leading-8 text-white/70">
-            启明遁甲以奇门决策咨询为核心，帮助企业主与个人在合作、投资、转型、任用、签约或人生方向选择前，看清时机、方向、人事关系与风险结构。
+            启明遁甲以奇门决策咨询为核心，帮助企业主与个人在合作、投资、转型、任用、签约或人生方向选择前，看清时机、方向、人事关系与风险结构。费用根据咨询范围与问题复杂度私密确认。
           </p>
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
             <a
@@ -110,7 +110,7 @@ export default function QimenStrategyBusinessPage() {
 
       <section className="border-y border-[#d6ad63]/20 bg-[#070707] px-4 py-16">
         <div className="container mx-auto max-w-6xl">
-          <p className="text-xs font-bold uppercase tracking-[0.32em] text-[#d6ad63]">Qimen Strategy Advisory Pricing</p>
+          <p className="text-xs font-bold uppercase tracking-[0.32em] text-[#d6ad63]">Qimen Strategy Advisory Programs</p>
           <div className="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
             {programs.map((program) => (
               <article
@@ -137,8 +137,8 @@ export default function QimenStrategyBusinessPage() {
                   ))}
                 </ul>
                 <div className="mt-auto pt-8">
-                  <p className="text-4xl font-bold text-[#f4dfb0]">{program.price}</p>
-                  <p className="mt-1 text-sm uppercase tracking-[0.14em] text-white/58">{program.unit}</p>
+                  <p className="text-sm font-bold uppercase tracking-[0.16em] text-[#f4dfb0]">{program.fee}</p>
+                  <p className="mt-1 text-sm text-white/58">{program.feeZh}</p>
                   <p className="mt-4 border border-[#d6ad63]/35 px-3 py-2 text-center text-xs font-bold uppercase tracking-[0.12em] text-[#d6ad63]">
                     {program.tag}
                   </p>
@@ -149,10 +149,12 @@ export default function QimenStrategyBusinessPage() {
 
           <div className="mt-6 flex flex-col items-center justify-between gap-4 border border-[#d6ad63]/50 bg-black p-5 md:flex-row">
             <div>
-              <p className="text-lg font-bold uppercase tracking-[0.14em] text-[#d6ad63]">Priority Upgrade · 加急优先处理</p>
-              <p className="mt-1 text-sm text-white/66">For urgent cases requiring priority review and recommended action timing.</p>
+              <p className="text-lg font-bold uppercase tracking-[0.14em] text-[#d6ad63]">Priority Review Available · 加急优先处理可申请</p>
+              <p className="mt-1 text-sm text-white/66">For urgent cases, priority review may be arranged after private context review.</p>
             </div>
-            <p className="text-4xl font-bold text-[#f4dfb0]">S$1,500 <span className="text-base text-white/60">/ case</span></p>
+            <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="text-sm font-bold uppercase tracking-[0.14em] text-[#f4dfb0] transition hover:text-[#d6ad63]">
+              Request Private Review →
+            </a>
           </div>
         </div>
       </section>
@@ -182,7 +184,7 @@ export default function QimenStrategyBusinessPage() {
 
           <div className="mt-12 border border-[#d6ad63]/25 bg-white/[0.035] p-6 text-sm leading-7 text-white/62">
             <p>
-              Advisory note: Qimen Strategy provides strategic judgment and decision reference. Final decisions and actions remain the client’s responsibility. No guaranteed business, legal, financial or personal outcome is promised.
+              Advisory note: Qimen Strategy provides strategic judgment and decision reference. Final decisions and actions remain the client’s responsibility. Fees are confirmed privately after context review. No guaranteed business, legal, financial or personal outcome is promised.
             </p>
           </div>
         </div>
