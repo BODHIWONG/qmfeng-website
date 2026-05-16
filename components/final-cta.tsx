@@ -4,103 +4,95 @@ import { motion } from "framer-motion";
 import { useLanguage } from "@/contexts/language-context";
 import { ArrowRight, MessageCircle, Calendar } from "lucide-react";
 
-const WA_LINK = "https://wa.me/6589418791?text=Hello%20Master%20Huang%2C%20I%27d%20like%20to%20book%20a%20consultation%20today.";
+const WA_LINK =
+  "https://wa.me/6589418791?text=Hello%20Master%20Qiming%2C%20I%20would%20like%20to%20book%20a%20private%20Qimen%20Strategy%20briefing.";
 
 export default function FinalCTA() {
   const { t } = useLanguage();
 
   return (
-    <section className="py-20 md:py-28 bg-[oklch(0.06_0.02_60)] relative overflow-hidden">
-      {/* Subtle gradient overlay */}
-      <div 
+    <section className="relative overflow-hidden bg-[oklch(0.06_0.02_60)] py-20 md:py-28">
+      <div
         className="absolute inset-0 opacity-30"
         style={{
-          background: "radial-gradient(ellipse at center, oklch(0.72 0.12 70 / 0.1) 0%, transparent 70%)",
+          background:
+            "radial-gradient(ellipse at center, oklch(0.72 0.12 70 / 0.1) 0%, transparent 70%)",
         }}
       />
 
       <div className="container relative">
-        <div className="max-w-3xl mx-auto text-center">
-          {/* Headline */}
+        <div className="mx-auto max-w-4xl text-center">
+          <motion.p
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.55 }}
+            className="mb-5 text-xs font-bold uppercase tracking-[0.28em] text-[oklch(0.72_0.12_70)]"
+          >
+            {t("预约私密战略简报", "Book a Private Strategy Briefing")}
+          </motion.p>
+
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6"
+            className="mb-6 text-3xl font-bold leading-tight text-white sm:text-4xl md:text-5xl"
             style={{
-              fontFamily: "var(--font-cormorant), var(--font-noto-serif), serif",
-              color: "oklch(0.98 0.01 75)",
+              fontFamily:
+                "var(--font-cormorant), var(--font-noto-serif), serif",
             }}
           >
             {t(
-              "别等问题恶化",
-              "Don't Wait Until Problems Get Worse"
+              "关键决定之前，先看清时机、方向、人事与环境",
+              "Before a critical decision, see timing, direction, people and environment"
             )}
           </motion.h2>
 
-          {/* Subheadline */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-xl md:text-2xl mb-8"
-            style={{
-              fontFamily: "var(--font-cormorant), var(--font-noto-serif), serif",
-              color: "oklch(0.72 0.10 70)",
-            }}
+            transition={{ duration: 0.6, delay: 0.15 }}
+            className="mx-auto mb-8 max-w-2xl text-base leading-8 text-white/76 md:text-lg"
           >
             {t(
-              "运势可以改变 — 但时机很重要",
-              "Your Luck Can Change — But Timing Matters"
+              "启明遁甲提供企业主战略决策顾问服务。单项战略决策咨询 S$980 起，季度企业战略顾问 S$2,800。所有服务均为预约制。",
+              "Qimen Strategy provides executive decision advisory for business owners. Single Executive Advisory starts at S$980, and the Quarterly Executive Retainer is S$2,800. All services are by appointment."
             )}
           </motion.p>
 
-          {/* Price */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="flex items-center justify-center gap-4 mb-10"
+            transition={{ duration: 0.6, delay: 0.25 }}
+            className="mb-10 grid gap-3 text-center sm:grid-cols-3"
           >
-            <span
-              className="text-3xl md:text-4xl font-bold"
-              style={{
-                fontFamily: "var(--font-cormorant), serif",
-                color: "oklch(0.72 0.12 70)",
-              }}
-            >
-              From $288
-            </span>
-            <span
-              className="text-sm px-3 py-1"
-              style={{
-                fontFamily: "var(--font-lato), sans-serif",
-                background: "oklch(0.72 0.12 70 / 0.15)",
-                color: "oklch(0.72 0.12 70)",
-                border: "1px solid oklch(0.72 0.12 70 / 0.3)",
-              }}
-            >
-              {t("每日限额", "Limited Daily Slots")}
-            </span>
+            {[
+              ["S$980", t("单项咨询", "Single Advisory")],
+              ["S$2,800", t("季度顾问", "Quarterly Retainer")],
+              ["S$9,800", t("年度幕僚", "Annual Advisory")],
+            ].map(([price, label]) => (
+              <div key={price} className="border border-[oklch(0.72_0.12_70/0.35)] bg-white/[0.04] px-5 py-4">
+                <div className="text-3xl font-bold text-[oklch(0.72_0.12_70)]">{price}</div>
+                <div className="mt-1 text-xs uppercase tracking-[0.18em] text-white/70">{label}</div>
+              </div>
+            ))}
           </motion.div>
 
-          {/* CTA Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4"
+            transition={{ duration: 0.6, delay: 0.35 }}
+            className="flex flex-col items-center justify-center gap-4 sm:flex-row"
           >
-            {/* Primary CTA */}
             <a
               href={WA_LINK}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-10 py-5 text-base font-bold uppercase tracking-wider transition-all duration-300 hover:scale-[1.02]"
+              className="inline-flex w-full items-center justify-center gap-3 px-10 py-5 text-base font-bold uppercase tracking-wider transition-all duration-300 hover:scale-[1.02] sm:w-auto"
               style={{
                 fontFamily: "var(--font-lato), sans-serif",
                 background: "oklch(0.72 0.12 70)",
@@ -109,24 +101,16 @@ export default function FinalCTA() {
               }}
             >
               <MessageCircle size={20} />
-              {t("WhatsApp 大师", "WhatsApp Master Now")}
+              {t("WhatsApp 预约", "Book on WhatsApp")}
             </a>
 
-            {/* Secondary CTA */}
             <a
-              href={WA_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-10 py-5 text-base font-bold uppercase tracking-wider transition-all duration-300 hover:bg-[oklch(0.72_0.12_70)] hover:text-[oklch(0.06_0.02_60)]"
-              style={{
-                fontFamily: "var(--font-lato), sans-serif",
-                background: "transparent",
-                color: "oklch(0.72 0.12 70)",
-                border: "2px solid oklch(0.72 0.12 70)",
-              }}
+              href="/qimen-strategy-business"
+              className="inline-flex w-full items-center justify-center gap-3 border-2 border-[oklch(0.72_0.12_70)] px-10 py-5 text-base font-bold uppercase tracking-wider text-[oklch(0.72_0.12_70)] transition-all duration-300 hover:bg-[oklch(0.72_0.12_70)] hover:text-[oklch(0.06_0.02_60)] sm:w-auto"
+              style={{ fontFamily: "var(--font-lato), sans-serif" }}
             >
               <Calendar size={20} />
-              {t("立即预约", "Book My Consultation Today")}
+              {t("查看企业顾问方案", "View Advisory Programs")}
               <ArrowRight size={18} />
             </a>
           </motion.div>
