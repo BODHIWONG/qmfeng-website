@@ -5,7 +5,7 @@ import { useLanguage } from "@/contexts/language-context";
 import { ArrowRight, MessageCircle, Calendar } from "lucide-react";
 
 const WA_LINK =
-  "https://wa.me/6589418791?text=Hello%20Master%20Qiming%2C%20I%20would%20like%20to%20book%20a%20private%20Qimen%20Strategy%20briefing.";
+  "https://wa.me/6589418791?text=Hello%20Master%20Qiming%2C%20I%20would%20like%20to%20book%20a%20private%20Qimen%20Strategy%20session.";
 
 export default function FinalCTA() {
   const { t } = useLanguage();
@@ -29,7 +29,7 @@ export default function FinalCTA() {
             transition={{ duration: 0.55 }}
             className="mb-5 text-xs font-bold uppercase tracking-[0.28em] text-[oklch(0.72_0.12_70)]"
           >
-            {t("预约私密战略简报", "Book a Private Strategy Briefing")}
+            {t("预约私密奇门决策咨询", "Book a Private Qimen Strategy Session")}
           </motion.p>
 
           <motion.h2
@@ -44,8 +44,8 @@ export default function FinalCTA() {
             }}
           >
             {t(
-              "关键决定之前，先看清时机、方向、人事与环境",
-              "Before a critical decision, see timing, direction, people and environment"
+              "关键决定前，先看清局势",
+              "See the situation clearly before you decide"
             )}
           </motion.h2>
 
@@ -54,32 +54,13 @@ export default function FinalCTA() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.15 }}
-            className="mx-auto mb-8 max-w-2xl text-base leading-8 text-white/76 md:text-lg"
+            className="mx-auto mb-10 max-w-2xl text-base leading-8 text-white/76 md:text-lg"
           >
             {t(
-              "启明遁甲提供企业主战略决策顾问服务。单项战略决策咨询 S$980 起，季度企业战略顾问 S$2,800。所有服务均为预约制。",
-              "Qimen Strategy provides executive decision advisory for business owners. Single Executive Advisory starts at S$980, and the Quarterly Executive Retainer is S$2,800. All services are by appointment."
+              "如果你正在面对合作、投资、转型、任用、签约或人生方向选择，可以先通过一次私密奇门决策咨询，看清时机、方向、人事关系与风险结构。",
+              "If you are facing a partnership, investment, transition, appointment, contract or major life-direction choice, a private Qimen Strategy session can help you read timing, direction, people dynamics and risk structure before action."
             )}
           </motion.p>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.25 }}
-            className="mb-10 grid gap-3 text-center sm:grid-cols-3"
-          >
-            {[
-              ["S$980", t("单项咨询", "Single Advisory")],
-              ["S$2,800", t("季度顾问", "Quarterly Retainer")],
-              ["S$9,800", t("年度幕僚", "Annual Advisory")],
-            ].map(([price, label]) => (
-              <div key={price} className="border border-[oklch(0.72_0.12_70/0.35)] bg-white/[0.04] px-5 py-4">
-                <div className="text-3xl font-bold text-[oklch(0.72_0.12_70)]">{price}</div>
-                <div className="mt-1 text-xs uppercase tracking-[0.18em] text-white/70">{label}</div>
-              </div>
-            ))}
-          </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -110,7 +91,7 @@ export default function FinalCTA() {
               style={{ fontFamily: "var(--font-lato), sans-serif" }}
             >
               <Calendar size={20} />
-              {t("查看企业顾问方案", "View Advisory Programs")}
+              {t("查看顾问方案", "View Advisory Programs")}
               <ArrowRight size={18} />
             </a>
           </motion.div>
