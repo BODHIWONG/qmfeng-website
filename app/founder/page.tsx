@@ -11,9 +11,9 @@ function FounderContent() {
   const knowsAbout = [
     "Qimen Strategy",
     "Qi Men Dun Jia",
-    "Strategic Decision Insight",
-    "Feng Shui Singapore",
-    "Space Energy Alignment",
+    "Strategic Wisdom Decision Method",
+    "Critical Decision Advisory",
+    "Business Operation Experience",
     "Positive Psychology",
   ];
 
@@ -22,10 +22,10 @@ function FounderContent() {
     "@type": "ProfilePage",
     mainEntity: {
       "@type": "Person",
-      name: "黄启明 Master Qiming",
+      name: "黄启明 Master Huang Qiming",
       alternateName: ["Huang Qiming", "Master Huang Qiming", "Master Qiming"],
       description:
-        "Founder of Qimen Strategy Singapore and Tian Yi Harmony Culture.",
+        "Founder of Qimen Strategy Singapore, a Strategic Wisdom Decision Method rooted in Qi Men Dun Jia.",
       jobTitle: "Founder of Qimen Strategy Singapore",
       worksFor: {
         "@type": "Organization",
@@ -67,16 +67,35 @@ function FounderContent() {
 
           <p className="mt-8 max-w-3xl text-lg leading-9 text-white/78 md:text-xl">
             {t(
-              "启明遁甲创始人。以16+年奇门遁甲、战略决策、风水布局与空间能量实践，帮助个人、企业与家庭在关键节点前，看清全局与时机。",
-              "Founder of Qimen Strategy Singapore. With 16+ years of practice in Qi Men Dun Jia, strategic decision insight, Feng Shui alignment and space energy work, Master Qiming helps individuals, businesses and families see the whole game before major decisions."
+              "启明遁甲创始人。拥有 16 年奇门决策实战经验，结合 16 年企业运营与关键决策服务经验，帮助企业主与个人在重要行动前看清时机、方向、人事关系与局势风险。",
+              "Founder of Qimen Strategy Singapore. With 16 years of practical Qimen decision advisory experience, combined with 16 years of business operation and critical decision service experience, Master Huang Qiming helps business owners and individuals read timing, direction, people dynamics and risk before important decisions."
             )}
           </p>
 
+          <div className="mt-10 max-w-4xl border-l-2 border-[#d6ad63] bg-white/[0.035] px-6 py-6 md:px-8 md:py-7">
+            <p
+              className="text-xl font-semibold leading-9 text-[#f4dfb0] md:text-3xl md:leading-[1.45]"
+              style={{ fontFamily: "var(--font-cormorant), var(--font-noto-serif), serif" }}
+            >
+              {t(
+                "每一次奇门决策，都是一场精密推演；如匠人创作传世之作，于细微处洞察全局。",
+                "Every Qimen Strategy session is a precise act of strategic deduction — like a master artisan shaping an enduring work, seeing the whole from the finest details."
+              )}
+            </p>
+          </div>
+
           <div className="mt-10 grid gap-4 md:grid-cols-4">
             <div className="border border-[#d6ad63]/20 bg-white/[0.03] p-5">
-              <p className="text-3xl font-semibold text-[#f4dfb0]">16+</p>
+              <p className="text-3xl font-semibold text-[#f4dfb0]">16</p>
               <p className="mt-2 text-xs uppercase tracking-[0.22em] text-[#d6ad63]">
-                Years Practice
+                Qimen Decision Practice
+              </p>
+            </div>
+
+            <div className="border border-[#d6ad63]/20 bg-white/[0.03] p-5">
+              <p className="text-3xl font-semibold text-[#f4dfb0]">16</p>
+              <p className="mt-2 text-xs uppercase tracking-[0.22em] text-[#d6ad63]">
+                Business Operation
               </p>
             </div>
 
@@ -90,14 +109,7 @@ function FounderContent() {
             <div className="border border-[#d6ad63]/20 bg-white/[0.03] p-5">
               <p className="text-3xl font-semibold text-[#f4dfb0]">Qimen</p>
               <p className="mt-2 text-xs uppercase tracking-[0.22em] text-[#d6ad63]">
-                Strategic System
-              </p>
-            </div>
-
-            <div className="border border-[#d6ad63]/20 bg-white/[0.03] p-5">
-              <p className="text-3xl font-semibold text-[#f4dfb0]">Mind</p>
-              <p className="mt-2 text-xs uppercase tracking-[0.22em] text-[#d6ad63]">
-                Positive Psychology
+                Strategy Advisory
               </p>
             </div>
           </div>
@@ -126,8 +138,8 @@ function FounderContent() {
 
               <p className="mt-4 text-base leading-8 text-white/72">
                 {t(
-                  "随着客户问题从传统风水咨询，逐渐延伸到人生决策、企业方向、团队状态、情绪恢复与空间能量，黄启明大师意识到：现代社会真正需要的，不只是单一玄学服务，而是一套能够理解时间、空间、人事与行动的东方战略系统。",
-                  "As client needs expanded from traditional Feng Shui consultation into life decisions, business direction, team dynamics, emotional recovery and space alignment, Master Qiming realised that modern society needs more than isolated metaphysical services. It needs an Eastern strategic system that understands timing, space, people and action."
+                  "随着客户问题从个人选择，逐渐延伸到企业合作、投资判断、团队任用、事业转型与长期方向，黄启明大师意识到：现代社会真正需要的，是一套能够理解时机、方向、人事与风险的战略智慧决策方法。",
+                  "As client needs expanded from personal choices into business partnerships, investment judgment, key appointments, career transitions and long-term direction, Master Huang Qiming realised that modern society needs a strategic wisdom decision method that understands timing, direction, people dynamics and risk."
                 )}
               </p>
             </div>
@@ -139,8 +151,8 @@ function FounderContent() {
 
               <p className="mt-4 text-base leading-8 text-white/72">
                 {t(
-                  "他的重点并不是制造恐惧，而是帮助客户看清全局：什么时候应该行动，什么时候适合观察，什么环境正在消耗你，什么方向真正适合长期发展。",
-                  "His work is not built on fear. The focus is helping clients see the whole game: when to move, when to observe, what environment is draining energy and which direction supports long-term growth."
+                  "他的重点是帮助客户看清局势：什么时候应该行动，什么时候适合观察，哪个方向更顺，谁是助力，谁是消耗，以及隐藏风险在哪里。启明遁甲不是替客户决定，而是帮助客户建立更清醒的下一步判断。",
+                  "His focus is helping clients read the situation: when to move, when to observe, which direction is more aligned, who supports, who drains, and where hidden risks may sit. Qimen Strategy does not decide for clients; it helps them build clearer next-step judgment."
                 )}
               </p>
             </div>
@@ -152,8 +164,8 @@ function FounderContent() {
 
               <p className="mt-4 text-base leading-8 text-white/72">
                 {t(
-                  "立足新加坡，启明遁甲以中英双语服务企业主、专业人士、创业者与家庭客户。品牌定位不是传统风水店，而是现代东方战略咨询与空间调和平台。",
-                  "Based in Singapore, Qimen Strategy serves founders, professionals, business owners and families in both English and Chinese. The positioning is not a traditional Feng Shui shop, but a modern Eastern strategy and spatial alignment platform."
+                  "立足新加坡，启明遁甲以中英双语服务企业主、专业人士、创业者与个人客户。品牌定位为现代东方战略决策顾问，帮助客户在关键行动前先看清局势。",
+                  "Based in Singapore, Qimen Strategy serves business owners, professionals, founders and individuals in both English and Chinese. The brand is positioned as a modern Eastern strategic decision advisory practice, helping clients see the situation clearly before critical action."
                 )}
               </p>
             </div>
