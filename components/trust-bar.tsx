@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 import { useLanguage } from "@/contexts/language-context";
 
 const stats = [
-  { valueZh: "16+", valueEn: "16+", labelZh: "年奇门实战", labelEn: "Years Qimen Practice" },
-  { valueZh: "5,000+", valueEn: "5,000+", labelZh: "决策咨询案例", labelEn: "Advisory Cases" },
+  { valueZh: "16年", valueEn: "16 Years", labelZh: "奇门决策实战经验", labelEn: "Qimen Decision Practice" },
+  { valueZh: "长期", valueEn: "Long-Term", labelZh: "服务企业主关键决策", labelEn: "Business Owner Decisions" },
   { valueZh: "新加坡", valueEn: "Singapore", labelZh: "本地顾问服务", labelEn: "Based Advisory" },
-  { valueZh: "私密", valueEn: "Private", labelZh: "预约制战略简报", labelEn: "Strategy Briefing" },
+  { valueZh: "私密", valueEn: "Private", labelZh: "预约制奇门决策咨询", labelEn: "Qimen Strategy Session" },
 ];
 
 export default function TrustBar() {
