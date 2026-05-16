@@ -7,14 +7,14 @@ import { useLanguage } from "@/contexts/language-context";
 
 const LOGO_URL = "/logo-qimen-strategy.jpg";
 const WA_LINK =
-  "https://wa.me/6589418791?text=Hello%20Master%20Qiming%2C%20I%20would%20like%20to%20book%20a%20Qimen%20Strategy%20consultation.";
+  "https://wa.me/6589418791?text=Hello%20Master%20Qiming%2C%20I%20would%20like%20to%20book%20a%20private%20Qimen%20Strategy%20briefing.";
 
 const serviceLinks = [
   { href: "/qimen-strategy-business", zh: "启明遁甲", en: "Qimen Strategy" },
-  { href: "/decision", zh: "奇门决策", en: "Decision" },
+  { href: "/decision", zh: "奇门决策", en: "Decision Advisory" },
+  { href: "/qimen-strategy-business", zh: "顾问方案", en: "Programs" },
   { href: "/insights", zh: "战略洞察", en: "Insights" },
-  { href: "/space-clearing", zh: "空间布局", en: "Space" },
-  { href: "/founder", zh: "黄启明", en: "Master Qiming" },
+  { href: "/founder", zh: "黄启明", en: "Founder" },
 ];
 
 export default function Navbar() {
@@ -63,8 +63,8 @@ export default function Navbar() {
         </Link>
 
         <div className="hidden items-center gap-6 md:flex lg:gap-7">
-          {serviceLinks.map((link) => (
-            <Link key={link.href} href={link.href} className={`text-sm transition-colors ${navTextClass}`}>
+          {serviceLinks.map((link, index) => (
+            <Link key={`${link.href}-${index}`} href={link.href} className={`text-sm transition-colors ${navTextClass}`}>
               {lang === "zh" ? link.zh : link.en}
             </Link>
           ))}
@@ -88,7 +88,7 @@ export default function Navbar() {
             rel="noopener noreferrer"
             className="border border-yellow-600 px-5 py-2 text-sm text-yellow-600 transition-all hover:bg-yellow-600 hover:text-black"
           >
-            Strategy Session
+            {lang === "zh" ? "私密简报" : "Private Briefing"}
           </a>
         </div>
 
@@ -116,9 +116,9 @@ export default function Navbar() {
 
       {isOpen && (
         <div className="bg-black px-6 pb-6 md:hidden">
-          {serviceLinks.map((link) => (
+          {serviceLinks.map((link, index) => (
             <Link
-              key={link.href}
+              key={`${link.href}-${index}`}
               href={link.href}
               className="block py-3 text-white/80"
               onClick={() => setIsOpen(false)}
@@ -132,7 +132,7 @@ export default function Navbar() {
             rel="noopener noreferrer"
             className="mt-4 block text-yellow-500"
           >
-            {lang === "zh" ? "预约奇门决策" : "Book Strategy Session"}
+            {lang === "zh" ? "预约私密战略简报" : "Book Private Briefing"}
           </a>
         </div>
       )}
