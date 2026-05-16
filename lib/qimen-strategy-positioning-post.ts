@@ -1,45 +1,44 @@
 import type { InsightPost } from "@/lib/insights-data";
 
 const brandSignature =
-  "QiMing Feng Shui｜奇明風水 is led by Master Huang Qiming in Singapore. His work combines 16+ years of Qi Men Dun Jia practice, Qi Men Strategy, Feng Shui layout and space energy work to help clients understand timing, direction, people, space and the next practical step.";
+  "Qimen Strategy｜启明遁甲 is led by Master Huang Qiming in Singapore. Built on 16 years of practical Qimen decision advisory experience and 16 years of business operation and critical decision service experience, it helps business owners and individuals read timing, direction, people dynamics and risk before important decisions.";
 
 export const qimenStrategyPositioningPosts: InsightPost[] = [
   {
-    slug: "qi-men-strategy-not-fortune-telling",
-    title: "奇门决策不是算命：看清你为什么卡住，以及下一步该怎么走",
+    slug: "qimen-strategy-strategic-wisdom-decision-method",
+    title: "启明遁甲 Qimen Strategy：一套面向关键决定的战略智慧决策方法",
     excerpt:
-      "A clear explanation of why Qi Men Strategy is not fortune telling, but a practical decision system for seeing why you are stuck and what your next move should be.",
-    date: "2026-05-11",
-    readTime: "8 min",
-    category: "Qi Men Strategy",
+      "Qimen Strategy by Master Huang Qiming is a strategic wisdom decision method rooted in Qi Men Dun Jia, helping business owners and individuals read timing, direction, people dynamics and risk before important decisions.",
+    date: "2026-05-16",
+    readTime: "7 min",
+    category: "Qimen Strategy",
     keywords: [
-      "奇门决策不是算命",
+      "Qimen Strategy Singapore",
+      "启明遁甲",
       "奇门决策",
-      "Qi Men Strategy Singapore",
-      "Qi Men Dun Jia Singapore",
+      "战略智慧决策方法",
       "Master Huang Qiming",
-      "Qiming Feng Shui",
-      "奇明風水",
-      "奇门风水",
-      "新加坡风水"
+      "Huang Qiming Singapore",
+      "Qi Men Dun Jia Singapore",
+      "business decision advisory",
+      "critical decision advisory",
+      "Singapore Qimen Strategy"
     ],
     paragraphs: [
-      "很多人第一次听到奇门遁甲，都会以为它只是算命、预测，或者给一个简单的答案：好或不好，可以或不可以。其实真正有价值的奇门决策，并不是让人迷信一个结果，而是帮助一个人看清自己现在为什么卡住，以及下一步到底该怎么走。",
-      "这也是奇明風水现在最核心的一句话：奇门决策不是算命，是帮你看清现在为什么卡住，以及下一步该怎么走。它不是为了制造神秘感，而是为了让一个正在事业、财富、关系、合作或人生选择中迷茫的人，先从混乱中看见结构。",
-      "人在卡住的时候，往往以为问题只是自己不够努力。事业没有突破，就继续加班；财富不稳定，就继续追更多机会；感情反复，就继续忍耐或纠缠；店铺生意不动，就不断换广告、换产品、换价格。可是很多时候，真正的问题不是努力不够，而是方向、时机、人事关系和空间能量没有对上。",
-      "奇门决策看的，正是这些隐藏在表面问题背后的结构。它会看当下的时机是否适合推进，哪个方向有助力，哪里有阻力，谁是真正的支持者，谁正在消耗你，以及这个空间、这个局势、这个选择是否真的有利于你继续前进。",
-      "For Singapore clients searching for Qi Men Strategy Singapore or Qi Men Dun Jia Singapore, this is especially important. Modern life moves very fast. People need to make decisions about career, business, investment, partnership, property, relocation, relationship and family direction. A wrong move may not only cost money, but also time, energy and confidence.",
-      "所以，奇门决策不是替你做决定。真正专业的奇门咨询，不是简单告诉你“可以”或“不可以”，而是帮助你看清：如果现在进，会遇到什么；如果现在守，能不能稳住；如果换方向，哪一条路更顺；如果继续拖延，代价在哪里。这样你才能带着清醒去选择，而不是在焦虑里冲动行动。",
-      "从黄启明大师的实战经验来看，很多客户的问题表面不同，背后却有相似的逻辑。有的人事业卡住，不是能力差，而是长期处在一个不适合自己的位置；有的人财运不稳，不是没有机会，而是进财、守财、用财的节奏混乱；有的人关系反复，不只是缘分问题，而是自己一直陷在同一种情绪和选择模式里。",
-      "奇门决策的价值，在于先判断“局”。你现在是在进攻局、守成局、消耗局，还是转折局？该主动出击，还是先整理内部？该合作，还是先观察？该换空间，还是先稳住自己的状态？当局势看清之后，下一步才不会盲目。",
-      "这也是为什么奇门决策常常要和奇门风水布局一起看。因为人不是活在真空里。一个人的选择，会受到时间、空间、人际关系和自身状态共同影响。办公室的位置、店铺的入口、住宅的卧室、财富位的动线、空间是否沉重，都会影响人的判断、睡眠、情绪和行动力。",
-      "At QiMing Feng Shui, Master Huang Qiming does not position Qi Men Strategy as superstition. It is used as a structured decision lens. Feng Shui alignment then turns the insight into practical adjustment: where to sit, how to arrange the space, when to move, when to pause, and how to reduce unnecessary energy loss.",
-      "举个简单例子：一个人想换工作。普通的想法是看薪水、职位、公司名气。奇门决策会进一步看：现在是否适合动？新机会是否真的有助力？原来的位置是不是已经进入消耗？这个决定是因为清醒判断，还是因为一时情绪逃离？如果只是逃离，换一个地方也可能重复同样的问题。",
-      "再比如企业主面对合作。表面看，对方资源很好，条件也不错。但奇门决策会看合作背后的气机、时机、风险与人事结构。对方是真正带来资源，还是以后会形成消耗？现在签约是推进，还是被局势推着走？这些问题，往往比表面条件更关键。",
-      "对于风水布局也是一样。很多人以为风水只是摆物品、看方向。真正的奇门风水，不只是看空间漂亮不漂亮，而是看这个空间是否支持你的目标。你的办公桌是否有决策力？店铺是否能聚气？卧室是否让人休息得稳？家中是否有长期压住情绪和财富节奏的地方？",
-      "所以，这句话背后的真正含义是：不要急着问结果，先看清你所在的局。人一旦看不清局，就会把努力用错地方，把好机会变成压力，把坏关系误以为考验，把错误方向坚持成执念。",
-      "奇门决策帮助你做的第一件事，就是停止盲目消耗。第二件事，是看清下一步的方向。第三件事，是结合风水、空间能量与现实行动，把判断落到生活和事业里。真正的改变，不是听到一句神秘的预言，而是终于知道自己为什么卡住，以及下一步该怎么走。",
-      "For this reason, Qi Men Strategy is best understood as strategic clarity. It helps a person slow down, read the pattern, align the space, and make a wiser move. This is the practical foundation behind QiMing Feng Shui｜奇明風水 in Singapore.",
+      "在重新梳理 Qimen Strategy｜启明遁甲 的网站定位之后，我们把品牌主线收得更清楚：启明遁甲不是一个泛泛而谈的服务集合，而是一套以奇门遁甲为根基、面向关键决定的战略智慧决策方法。",
+      "这套方法由黄启明大师主理，核心服务对象是企业主、创业者、创始人、高管，以及正在面对重要选择的个人。客户来到这里，不是为了获得一个简单标签，而是希望在行动之前，看清自己所处的局势。",
+      "启明遁甲的核心判断维度可以概括为四个词：时机、方向、人事、风险。一个决定是否适合推进，不只取决于个人意愿，也取决于当下是否顺势、方向是否清晰、关键人物是否支持，以及隐藏风险是否已经被看见。",
+      "在企业经营中，很多问题表面看是业绩、合作、资金、团队或扩张问题，背后往往是决策节奏的问题。什么时候该进，什么时候该守，什么时候该等，什么时候该转向，这些判断如果不清楚，越努力反而越容易消耗资源。",
+      "在个人选择中，也同样如此。人生方向、关系与婚姻决策、家庭压力、事业转折，都不只是情绪问题，而是需要看清局势、人事关系、时间节点和后续代价。启明遁甲把这些问题放回到“关键决策”的框架中处理。",
+      "因此，网站的服务结构也被重新梳理为四个层级：单项奇门决策咨询、季度奇门决策顾问、年度奇门决策顾问，以及重大项目奇门决策顾问。单项咨询解决一个明确问题；季度顾问适合阶段性持续判断；年度顾问适合长期决策支持；重大项目顾问则适合高价值、高复杂度的商业行动。",
+      "其中，“人生与关系决策｜Life & Relationship Decisions”并不单独变成一个独立主产品，而是纳入单项奇门决策咨询的适用场景。这样既保留个人客户入口，又不会削弱启明遁甲作为奇门决策咨询的主线。",
+      "网站公开端也采用了更稳的表达方式：重点展示服务层级、适合人群、判断价值与预约入口，而不是直接公开价格。因为奇门决策咨询不是标准化商品，每个问题的复杂度、背景资料、是否加急、是否需要后续复盘都不同，费用更适合在私密沟通后确认。",
+      "这也符合高端咨询的基本逻辑：先理解问题，再确认范围；先建立信任，再讨论方案。公开页面的任务，是让客户知道启明遁甲能帮助他看清什么，而不是让客户只围绕价格做判断。",
+      "黄启明大师拥有 16 年奇门决策实战经验，结合 16 年企业运营与关键决策服务经验。这一点非常重要，因为启明遁甲不只是理论推演，也要贴近真实商业中的合作、投资、签约、任用、转型、团队与行动成本。",
+      "当客户面对一个重要决定时，启明遁甲不会替客户做决定，而是帮助客户把局势看清楚：现在是否适合行动？哪个方向更顺？谁是助力，谁是消耗？风险在哪里？如果继续推进，下一步应该怎样安排？",
+      "真正有价值的咨询，不是制造焦虑，也不是给客户一个空泛答案，而是帮助客户在复杂局势中恢复判断力。一个人只要能看清局势，就更容易减少盲目试错，也更容易把行动放在正确的位置上。",
+      "因此，启明遁甲的核心口号可以浓缩为一句话：关键决定前，先看清局势。",
+      "For business owners and individuals in Singapore, Qimen Strategy offers a private advisory approach before important action. It helps clients read timing, direction, people dynamics and risk so that decisions can be made with more clarity, structure and calm judgment.",
       brandSignature
     ],
   },
