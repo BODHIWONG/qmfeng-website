@@ -39,16 +39,15 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.qmfeng.com"),
   title: {
     default:
-      "Qimen Strategy Singapore｜启明遁甲｜东方智慧决策系统",
+      "Qimen Strategy Singapore｜启明遁甲｜战略智慧决策方法",
     template: "%s | Qimen Strategy Singapore",
   },
   description:
-    "启明遁甲 Qimen Strategy 由黄启明大师主理，是一套以奇门遁甲为根基的东方智慧决策系统。帮助企业主、创始人、高管与关键决策者在重要行动前看清时机、方向、人事关系与局势风险，做出更清醒的战略判断。",
+    "启明遁甲 Qimen Strategy 由黄启明大师主理，是一套以奇门遁甲为根基的战略智慧决策方法。帮助企业主、创始人、高管与个人在重要行动前看清时机、方向、人事关系与局势风险，做出更清醒的战略判断。",
   keywords: [
     "Qimen Strategy Singapore",
     "Qi Men Strategy Singapore",
-    "Eastern Wisdom Decision System",
-    "Eastern Strategic Decision System",
+    "Strategic Wisdom Decision Method",
     "Qimen Decision Consultation",
     "Qi Men Dun Jia Singapore",
     "Executive Decision Advisory Singapore",
@@ -60,7 +59,7 @@ export const metadata: Metadata = {
     "黄启明大师",
     "奇门决策",
     "战略决策",
-    "东方智慧决策系统",
+    "战略智慧决策方法",
     "企业主战略顾问",
     "奇门遁甲",
     "新加坡奇门遁甲"
@@ -70,7 +69,7 @@ export const metadata: Metadata = {
     canonical: "https://www.qmfeng.com",
   },
   openGraph: {
-    title: "Qimen Strategy Singapore | 启明遁甲东方智慧决策系统",
+    title: "Qimen Strategy Singapore | 启明遁甲战略智慧决策方法",
     description:
       "Qimen Strategy helps business owners and decision makers see timing, direction, people and risk before important decisions.",
     url: "https://www.qmfeng.com",
@@ -88,9 +87,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Qimen Strategy Singapore | Eastern Wisdom Decision System",
+    title: "Qimen Strategy Singapore | Strategic Wisdom Decision Method",
     description:
-      "Eastern wisdom-based strategic decision advisory for timing, direction, people and risk.",
+      "Strategic wisdom decision advisory for timing, direction, people and risk.",
     images: [OG_IMAGE],
   },
   robots: {
