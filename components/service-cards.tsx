@@ -39,61 +39,61 @@ const services: ServiceCard[] = [
   {
     id: 1,
     icon: Crown,
-    titleZh: "单项战略决策咨询",
-    titleEn: "Single Executive Advisory",
-    painZh: "针对一个关键商业或人生决策，快速看清时机、方向、人事与风险。",
+    titleZh: "单项奇门决策咨询",
+    titleEn: "Single Qimen Strategy Session",
+    painZh: "针对一个关键商业或人生决定，看清时机、方向、人事与风险。",
     painEn:
       "For one critical business or life decision, clarify timing, direction, people dynamics and risk.",
-    audienceZh: "适合：合作、投资、签约、选址、任用、转型或重大方向判断。",
+    audienceZh: "适合：合作、投资、签约、任用、转型或重大方向判断。",
     audienceEn:
-      "For partnership, investment, signing, site selection, key appointment, transition or major direction decisions.",
+      "For partnership, investment, signing, key appointment, transition or major direction decisions.",
     priceZh: "S$980 / 次",
     priceEn: "S$980 / session",
     ctaZh: "查看单项咨询",
-    ctaEn: "View Advisory",
+    ctaEn: "View Session",
     href: "/decision",
     accentColor: "oklch(0.60 0.08 65)",
     accentBg: "oklch(0.96 0.02 75)",
     accentBorder: "oklch(0.88 0.03 70)",
     imageSrc: "/Strategic.png",
-    imageAltZh: "企业主单项战略决策咨询",
-    imageAltEn: "Single executive advisory visual",
+    imageAltZh: "单项奇门决策咨询",
+    imageAltEn: "Single Qimen Strategy session visual",
   },
   {
     id: 2,
     icon: TrendingUp,
-    titleZh: "季度企业战略顾问",
-    titleEn: "Quarterly Executive Retainer",
-    painZh: "企业主推荐起步方案，用季度陪伴式顾问支持持续关键决策。",
+    titleZh: "季度奇门决策顾问",
+    titleEn: "Quarterly Qimen Strategy Advisory",
+    painZh: "企业主推荐起步方案，用季度陪伴式咨询支持持续关键决策。",
     painEn:
       "The recommended starting point for business owners who need ongoing decision support across a quarter.",
-    audienceZh: "适合：企业转型、业务扩张、团队调整、合作谈判与阶段性战略复盘。",
+    audienceZh: "适合：企业转型、业务扩张、团队调整、合作谈判与阶段性复盘。",
     audienceEn:
-      "For business transition, expansion, team adjustment, negotiation and quarterly strategic review.",
+      "For business transition, expansion, team adjustment, negotiation and quarterly decision review.",
     priceZh: "S$2,800 / 季度",
     priceEn: "S$2,800 / quarter",
     ctaZh: "查看季度顾问",
-    ctaEn: "View Retainer",
+    ctaEn: "View Quarterly Advisory",
     href: "/qimen-strategy-business",
     accentColor: "oklch(0.72 0.12 70)",
     accentBg: "oklch(0.97 0.03 85)",
     accentBorder: "oklch(0.90 0.04 80)",
     imageSrc: "/Wealth.png",
-    imageAltZh: "季度企业战略顾问",
-    imageAltEn: "Quarterly executive retainer visual",
+    imageAltZh: "季度奇门决策顾问",
+    imageAltEn: "Quarterly Qimen Strategy advisory visual",
     recommended: true,
   },
   {
     id: 3,
     icon: Crown,
-    titleZh: "年度企业战略幕僚",
-    titleEn: "Annual Executive Advisory",
-    painZh: "为创始人、企业主与高净值决策者提供长期战略陪伴。",
+    titleZh: "年度奇门决策顾问",
+    titleEn: "Annual Qimen Strategy Advisory",
+    painZh: "为企业主、创始人与长期决策者提供持续判断支持。",
     painEn:
-      "Founder-level ongoing advisory support for business owners and high-net-worth decision makers.",
-    audienceZh: "适合：全年战略规划、季度复盘、关键合作、任用、扩张与长期布局。",
+      "Ongoing decision advisory support for business owners, founders and long-term decision makers.",
+    audienceZh: "适合：年度规划、季度复盘、关键合作、任用、扩张与长期方向。",
     audienceEn:
-      "For annual planning, quarterly reviews, key partnerships, appointments, expansion and long-term strategy.",
+      "For annual planning, quarterly reviews, key partnerships, appointments, expansion and long-term direction.",
     priceZh: "S$9,800 / 年度",
     priceEn: "S$9,800 / year",
     ctaZh: "查看年度顾问",
@@ -103,20 +103,20 @@ const services: ServiceCard[] = [
     accentBg: "oklch(0.96 0.02 75)",
     accentBorder: "oklch(0.88 0.03 70)",
     imageSrc: "/Emotional.png",
-    imageAltZh: "年度企业战略幕僚",
-    imageAltEn: "Annual executive advisory visual",
+    imageAltZh: "年度奇门决策顾问",
+    imageAltEn: "Annual Qimen Strategy advisory visual",
   },
   {
     id: 4,
     icon: Gem,
-    titleZh: "顶层战略项目顾问",
-    titleEn: "Premium Strategic Execution",
+    titleZh: "重大项目奇门决策顾问",
+    titleEn: "Major Project Qimen Strategy Advisory",
     painZh: "针对重大商业项目、转型升级、跨境拓展与高价值战略布局。",
     painEn:
       "For major business projects, transformation, cross-border expansion and high-value strategic moves.",
-    audienceZh: "适合：重大项目、企业重组、旗舰店布局、品牌升级与高标的合作。",
+    audienceZh: "适合：重大项目、企业重组、品牌升级与高标的合作。",
     audienceEn:
-      "For major projects, restructuring, flagship location planning, brand transformation and high-value partnerships.",
+      "For major projects, restructuring, brand transformation and high-value partnerships.",
     priceZh: "S$25,000 起 / 项目",
     priceEn: "From S$25,000 / project",
     ctaZh: "查看项目顾问",
@@ -126,8 +126,8 @@ const services: ServiceCard[] = [
     accentBg: "oklch(0.96 0.02 75)",
     accentBorder: "oklch(0.88 0.03 70)",
     imageSrc: "/Space.png",
-    imageAltZh: "顶层战略项目顾问",
-    imageAltEn: "Premium strategic execution visual",
+    imageAltZh: "重大项目奇门决策顾问",
+    imageAltEn: "Major project Qimen Strategy advisory visual",
   },
 ];
 
@@ -147,14 +147,14 @@ export default function ServiceCards() {
             className="mb-3 text-xs uppercase tracking-[0.25em]"
             style={{ fontFamily: "var(--font-lato), sans-serif", color: "oklch(0.60 0.08 65)" }}
           >
-            {t("企业主战略顾问方案", "Executive Advisory Programs")}
+            {t("奇门决策顾问方案", "Qimen Strategy Advisory Programs")}
           </p>
 
           <h2
             className="mb-5 text-3xl font-bold leading-tight md:text-5xl"
             style={{ fontFamily: "var(--font-cormorant), var(--font-noto-serif), serif", color: "oklch(0.15 0.02 60)" }}
           >
-            {t("在关键商业决策前，先看清全局", "See the Whole Game Before You Decide")}
+            {t("关键决定前，先看清局势", "See the Situation Clearly Before You Decide")}
           </h2>
 
           <p
@@ -162,8 +162,8 @@ export default function ServiceCards() {
             style={{ fontFamily: "var(--font-lato), var(--font-noto-sans), sans-serif", color: "oklch(0.42 0.02 60)" }}
           >
             {t(
-              "启明遁甲以奇门决策为核心，为企业主、创始人、高管与高净值客户提供私密战略顾问支持。价格体系已统一为预约制企业顾问方案。",
-              "Qimen Strategy provides confidential advisory support for business owners, founders, executives and high-net-worth clients. Pricing is now aligned with the executive advisory program structure."
+              "启明遁甲以 16 年奇门决策实战经验为根基，长期服务企业主与个人关键决策。所有咨询均为预约制，根据问题背景进行私密判断。",
+              "Qimen Strategy is rooted in 16 years of practical Qimen decision advisory experience, serving business owners and individuals facing critical decisions. All sessions are by appointment and based on private context review."
             )}
           </p>
         </motion.div>
@@ -216,7 +216,7 @@ export default function ServiceCards() {
                       border: `1px solid ${service.accentBorder}`,
                     }}
                   >
-                    {service.priceEn}
+                    {t("预约制", "By Appointment")}
                   </span>
                 </div>
 
