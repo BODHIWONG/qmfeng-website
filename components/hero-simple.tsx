@@ -93,10 +93,10 @@ export default function HeroSimple() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.65, delay: 0.24 }}
-            className="mt-8 max-w-2xl border-l-2 border-[#d0a14a] bg-black/38 px-5 py-4 text-sm font-semibold leading-7 text-[#f1d38a] backdrop-blur-sm md:text-base"
+            className="mt-8 max-w-3xl border-l-2 border-[#d0a14a] bg-black/38 px-5 py-4 text-sm font-semibold leading-7 text-[#f1d38a] backdrop-blur-sm md:text-base"
             style={{ fontFamily: "var(--font-lato), var(--font-noto-sans), sans-serif" }}
           >
-            Led by Master Huang Qiming · 16+ years of Qi Men Dun Jia practice and strategic decision advisory experience
+            Led by Master Huang Qiming · 16+ years of Qimen decision practice, combined with 16 years of business operation experience
           </motion.div>
 
           <motion.p
@@ -116,7 +116,7 @@ export default function HeroSimple() {
             className="mt-3 max-w-3xl text-sm leading-7 text-white/70 md:text-base"
             style={{ fontFamily: "var(--font-noto-sans), var(--font-lato), sans-serif" }}
           >
-            启明遁甲以奇门决策为核心，帮助企业主与个人在关键行动前，看清时机、方向、人事关系与局势风险，做出更清醒的战略判断。
+            启明遁甲以 16 年奇门决策实战为根基，结合 16 年企业运营经验，帮助企业主与个人在关键行动前，看清时机、方向、人事关系与局势风险。
           </motion.p>
 
           <motion.div
