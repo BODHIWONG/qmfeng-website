@@ -8,13 +8,13 @@ const WA_LINK = "https://wa.me/6589418791";
 
 const serviceLinks = [
   { href: "/qimen-strategy-business", zh: "启明遁甲", en: "Qimen Strategy" },
-  { href: "/decision", zh: "单项战略决策", en: "Single Advisory" },
-  { href: "/qimen-strategy-business", zh: "企业顾问方案", en: "Advisory Programs" },
+  { href: "/decision", zh: "单项奇门决策", en: "Single Qimen Session" },
+  { href: "/qimen-strategy-business", zh: "顾问方案", en: "Advisory Programs" },
   { href: "/founder", zh: "黄启明大师", en: "Founder" },
 ];
 
 const insightLinks = [
-  { href: "/insights/qi-men-strategy-not-fortune-telling", zh: "奇门决策不是算命", en: "Not Fortune Telling" },
+  { href: "/insights/qimen-strategy-strategic-wisdom-decision-method", zh: "战略智慧决策方法", en: "Strategic Wisdom Method" },
   { href: "/insights/qimen-dunjia-decision-making", zh: "奇门遁甲与决策", en: "Qimen Decision-Making" },
   { href: "/insights", zh: "战略洞察中心", en: "Strategic Insights" },
 ];
@@ -39,8 +39,8 @@ export default function Footer() {
 
             <p className="text-xs leading-relaxed text-white/55" style={{ fontFamily: "var(--font-lato), var(--font-noto-sans), sans-serif" }}>
               {t(
-                "启明遁甲是由黄启明大师主理的东方智慧决策系统，以奇门决策为核心，帮助企业主与个人在关键行动前看清时机、方向、人事关系与局势风险。",
-                "Qimen Strategy is an Eastern Wisdom Decision System led by Master Huang Qiming, helping business owners and individuals read timing, direction, people dynamics and risk before important decisions."
+                "启明遁甲由黄启明大师主理，是一套以奇门遁甲为根基的战略智慧决策方法，帮助企业主与个人在关键行动前看清时机、方向、人事关系与局势风险。",
+                "Qimen Strategy is led by Master Huang Qiming. It is a Strategic Wisdom Decision Method rooted in Qi Men Dun Jia, helping business owners and individuals read timing, direction, people dynamics and risk before important decisions."
               )}
             </p>
           </div>
@@ -73,13 +73,13 @@ export default function Footer() {
 
           <div>
             <p className="mb-4 text-[0.6rem] font-bold uppercase tracking-[0.2em] text-[#d6ad63]" style={{ fontFamily: "var(--font-lato), sans-serif" }}>
-              {t("预约私密战略简报", "Book Private Briefing")}
+              {t("预约私密奇门决策咨询", "Book Private Session")}
             </p>
             <div className="space-y-3 text-xs text-white/50" style={{ fontFamily: "var(--font-lato), var(--font-noto-sans), sans-serif" }}>
               <p>Blk 210 New Upper Changi Road #01-729<br />Singapore 460210</p>
               <p>{t("营业时间：每日 10:00 — 20:00", "Hours: Daily 10:00 — 20:00")}</p>
-              <a href={`${WA_LINK}?text=${encodeURIComponent("Hello Master Qiming, I would like to book a private Qimen Strategy briefing.")}`} target="_blank" rel="noopener noreferrer" className="inline-block font-semibold text-[#d6ad63] transition-colors duration-300 hover:text-[#f4dfb0]">
-                {t("预约启明遁甲私密战略简报", "Book a Qimen Strategy Briefing")} →
+              <a href={`${WA_LINK}?text=${encodeURIComponent("Hello Master Qiming, I would like to book a private Qimen Strategy session.")}`} target="_blank" rel="noopener noreferrer" className="inline-block font-semibold text-[#d6ad63] transition-colors duration-300 hover:text-[#f4dfb0]">
+                {t("预约启明遁甲私密咨询", "Book a Qimen Strategy Session")} →
               </a>
             </div>
           </div>
@@ -88,7 +88,7 @@ export default function Footer() {
         <div className="mb-8 h-px bg-gradient-to-r from-transparent via-[#c89a45]/40 to-transparent" />
         <div className="mb-8 py-6 text-center">
           <p className="text-sm italic leading-relaxed text-white/55" style={{ fontFamily: "var(--font-lato), var(--font-noto-sans), sans-serif" }}>
-            {t('"先看清局势，再决定方向。"', '"See the bigger picture before you decide."')}
+            {t('"关键决定前，先看清局势。"', '"See the situation clearly before you decide."')}
           </p>
         </div>
         <div className="mb-6 h-px bg-gradient-to-r from-transparent via-[#c89a45]/25 to-transparent" />
