@@ -44,7 +44,7 @@ export default function HeroSimple() {
               className="text-xs font-semibold uppercase tracking-[0.32em] text-[#d6ad63]"
               style={{ fontFamily: "var(--font-lato), var(--font-noto-sans), sans-serif" }}
             >
-              Singapore · Eastern Strategic Decision System
+              Singapore · Eastern Wisdom Decision System
             </span>
             <span className="hidden h-px w-10 bg-[#c89a45] sm:block" />
           </motion.div>
@@ -76,7 +76,7 @@ export default function HeroSimple() {
             className="mt-6 text-2xl font-semibold uppercase tracking-[0.28em] text-[#f1d38a] md:text-4xl"
             style={{ fontFamily: "var(--font-lato), var(--font-noto-serif), sans-serif" }}
           >
-            See the Whole Game
+            Eastern Wisdom for Strategic Decision-Making
           </motion.p>
 
           <motion.p
@@ -86,7 +86,7 @@ export default function HeroSimple() {
             className="mt-5 max-w-3xl text-lg leading-8 text-white/86 md:text-2xl"
             style={{ fontFamily: "var(--font-cormorant), var(--font-noto-serif), serif" }}
           >
-            Strategic Insight for Business & Life Decisions
+            东方智慧决策系统 · 奇门决策 · See the Whole Game
           </motion.p>
 
           <motion.div
@@ -96,7 +96,7 @@ export default function HeroSimple() {
             className="mt-8 max-w-2xl border-l-2 border-[#d0a14a] bg-black/38 px-5 py-4 text-sm font-semibold leading-7 text-[#f1d38a] backdrop-blur-sm md:text-base"
             style={{ fontFamily: "var(--font-lato), var(--font-noto-sans), sans-serif" }}
           >
-            Led by Master Huang Qiming · 16+ years of Qi Men Dun Jia, strategic alignment and Feng Shui practice in Singapore
+            Led by Master Huang Qiming · 16+ years of Qi Men Dun Jia practice and strategic decision advisory experience
           </motion.div>
 
           <motion.p
@@ -106,7 +106,7 @@ export default function HeroSimple() {
             className="mt-7 max-w-3xl text-base leading-8 text-white/82 md:text-lg"
             style={{ fontFamily: "var(--font-lato), var(--font-noto-sans), sans-serif" }}
           >
-            Most people are not lacking effort. They are trapped in the wrong timing, direction, people dynamics or environment. Qimen Strategy helps business owners and individuals see the bigger picture before making important decisions.
+            Qimen Strategy helps business owners, founders and individuals see timing, direction, people dynamics and risk before important decisions.
           </motion.p>
 
           <motion.p
@@ -116,7 +116,7 @@ export default function HeroSimple() {
             className="mt-3 max-w-3xl text-sm leading-7 text-white/70 md:text-base"
             style={{ fontFamily: "var(--font-noto-sans), var(--font-lato), sans-serif" }}
           >
-            很多人不是不努力，而是困在错误的时机、方向、人事关系与环境格局里。启明遁甲以奇门决策为核心，帮助你在事业、合作、财富、人生转折与空间布局前，先看清全局。
+            启明遁甲以奇门决策为核心，帮助企业主与个人在关键行动前，看清时机、方向、人事关系与局势风险，做出更清醒的战略判断。
           </motion.p>
 
           <motion.div
@@ -126,10 +126,10 @@ export default function HeroSimple() {
             className="mt-9 grid max-w-4xl grid-cols-2 gap-4 border-y border-[#c89a45]/30 py-5 text-center text-sm font-semibold uppercase tracking-[0.18em] text-[#e6c785] md:grid-cols-4"
             style={{ fontFamily: "var(--font-lato), var(--font-noto-sans), sans-serif" }}
           >
-            <span>奇门决策</span>
-            <span>战略咨询</span>
-            <span>风水布局</span>
-            <span>能量疗愈</span>
+            <span>时机判断</span>
+            <span>方向选择</span>
+            <span>人事关系</span>
+            <span>局势风险</span>
           </motion.div>
 
           <motion.div
@@ -145,7 +145,7 @@ export default function HeroSimple() {
               Executive Decision Advisory From S$980
             </div>
             <p className="mt-2 text-sm text-white/75 md:text-base">
-              See timing, direction, people and environment before your next move.
+              See timing, direction, people and risk before your next move.
             </p>
           </motion.div>
 
@@ -171,7 +171,7 @@ export default function HeroSimple() {
               className="inline-flex items-center justify-center gap-3 border border-[#c89a45] px-7 py-4 text-sm font-bold uppercase tracking-[0.12em] text-[#f4dfb0] transition-colors duration-300 hover:bg-[#c89a45]/10"
               style={{ fontFamily: "var(--font-lato), sans-serif" }}
             >
-              View Advisory Programs
+              View Qimen Strategy Programs
               <ArrowRight size={18} />
             </a>
           </motion.div>
