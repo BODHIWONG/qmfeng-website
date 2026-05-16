@@ -45,24 +45,24 @@ const qimenPoints = [
 const trustItems = [
   {
     icon: Brain,
-    zh: "16+ 年奇门实战经验",
-    en: "16+ Years of Qimen Practice",
-    descZh: "长期以奇门遁甲辅助企业与个人关键决策判断。",
-    descEn: "Long-term Qi Men Dun Jia practice applied to business and personal decision advisory.",
+    zh: "16 年奇门决策实战经验",
+    en: "16 Years of Qimen Decision Practice",
+    descZh: "长期服务企业主与个人关键决策，聚焦时机、方向、人事与风险判断。",
+    descEn: "Serving business owners and individuals facing critical decisions, with focus on timing, direction, people and risk.",
   },
   {
     icon: Building2,
-    zh: "新加坡本地顾问经验",
-    en: "Singapore-Based Advisory",
-    descZh: "面向企业主、创业者、高管与个人关键转折客户。",
-    descEn: "Serving business owners, founders, executives and clients at key turning points.",
+    zh: "16 年企业运营与决策服务经验",
+    en: "16 Years of Business Operation Experience",
+    descZh: "理解真实商业中的合作、投资、转型、团队与行动成本。",
+    descEn: "Understanding real-world business partnership, investment, transition, team and action cost.",
   },
   {
     icon: ShieldCheck,
     zh: "私密预约制咨询",
     en: "Confidential Advisory",
-    descZh: "重大决策先沟通背景，再进行私密战略判断。",
-    descEn: "High-stakes decisions begin with context briefing and confidential strategic review.",
+    descZh: "重大决策先沟通背景，再进行私密奇门决策判断。",
+    descEn: "High-stakes decisions begin with context briefing and confidential Qimen Strategy review.",
   },
 ];
 
@@ -113,8 +113,8 @@ export default function QimenMasterSection() {
               }}
             >
               {t(
-                "启明遁甲以奇门遁甲为根基，不以娱乐化预测为目的，而是帮助企业主与个人在关键行动前，看清时机、方向、人事关系与局势风险，减少盲目试错。",
-                "Qimen Strategy is rooted in Qi Men Dun Jia. It is not built for entertainment prediction, but for helping business owners and individuals read timing, direction, people dynamics and risk before important moves."
+                "启明遁甲以奇门决策咨询为核心，帮助企业主与个人在关键行动前，看清时机、方向、人事关系与局势风险，减少盲目试错。",
+                "Qimen Strategy focuses on Qimen decision advisory, helping business owners and individuals read timing, direction, people dynamics and risk before important moves."
               )}
             </p>
 
@@ -147,8 +147,8 @@ export default function QimenMasterSection() {
               </h3>
               <p className="text-sm leading-relaxed text-[oklch(0.74_0.025_70)] md:text-base">
                 {t(
-                  "黄启明大师拥有 16+ 年奇门遁甲实战经验，长期服务新加坡企业主、创业者、高管与个人关键转折客户。启明遁甲的核心，不是替客户决定，而是帮助客户看清局势、识别风险、建立更清醒的下一步判断。",
-                  "Master Huang Qiming has 16+ years of practical Qi Men Dun Jia experience, serving Singapore business owners, founders, executives and individuals at key turning points. Qimen Strategy does not decide for clients; it helps them see the situation, recognise risk and make clearer next-step judgments."
+                  "黄启明大师拥有 16 年奇门决策实战经验，结合 16 年企业运营与关键决策服务经验，帮助企业主与个人在重要行动前看清时机、方向、人事关系与局势风险。启明遁甲的核心，不是替客户决定，而是帮助客户看清局势、识别风险、建立更清醒的下一步判断。",
+                  "Master Huang Qiming brings 16 years of practical Qimen decision advisory experience, combined with 16 years of business operation and critical decision service experience, helping business owners and individuals gain clarity on timing, direction, people dynamics and risk before important decisions. Qimen Strategy does not decide for clients; it helps them see the situation, recognise risk and make clearer next-step judgments."
                 )}
               </p>
             </div>
@@ -162,7 +162,7 @@ export default function QimenMasterSection() {
                 style={{ background: gold }}
               >
                 <MessageCircle size={18} />
-                {t("预约私密战略简报", "Book Private Strategy Briefing")}
+                {t("预约私密奇门决策咨询", "Book Private Qimen Strategy Session")}
               </a>
               <a
                 href="/qimen-strategy-business"
@@ -196,12 +196,12 @@ export default function QimenMasterSection() {
                 </p>
                 <p className="mt-2 text-sm font-semibold tracking-wide text-[oklch(0.78_0.10_70)]">
                   {t(
-                    "启明遁甲 · 东方智慧决策系统",
-                    "Qimen Strategy · Eastern Wisdom Decision System"
+                    "启明遁甲 · 战略智慧决策方法",
+                    "Qimen Strategy · Strategic Wisdom Decision Method"
                   )}
                 </p>
                 <p className="mt-2 text-xs uppercase tracking-[0.16em] text-white/70">
-                  {t("16+年奇门实战经验", "16+ Years of Qimen Practice")}
+                  {t("16 年奇门决策实战经验", "16 Years of Qimen Decision Practice")}
                 </p>
               </div>
             </div>
