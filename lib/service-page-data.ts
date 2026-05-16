@@ -140,35 +140,35 @@ export const healingPageContent: ServicePageContent = {
 };
 
 export const decisionPageContent: ServicePageContent = {
-  badgeZh: "单项战略决策咨询",
-  badgeEn: "Single Executive Advisory",
-  pageTitleZh: "单项战略决策咨询",
-  pageTitleEn: "Single Executive Advisory",
-  heroTitleZh: "一个关键决定，值得一次清晰的战略判断",
-  heroTitleEn: "One critical decision deserves a clear strategic review",
+  badgeZh: "单项奇门决策咨询",
+  badgeEn: "Single Qimen Strategy Session",
+  pageTitleZh: "单项奇门决策咨询",
+  pageTitleEn: "Single Qimen Strategy Session",
+  heroTitleZh: "一个关键决定，值得一次清晰的奇门决策判断",
+  heroTitleEn: "One critical decision deserves a clear Qimen Strategy review",
   heroSubtitleZh:
-    "启明遁甲不是娱乐化算命，而是将奇门遁甲转化为现代战略决策咨询。适用于合作、投资、签约、选址、任用、转型与关键人生选择。",
+    "启明遁甲将奇门遁甲转化为现代关键决策前的战略智慧决策方法。适用于合作、投资、签约、任用、转型、人生方向、关系与婚姻决策。",
   heroSubtitleEn:
-    "Qimen Strategy is not entertainment fortune telling. It translates Qi Men Dun Jia into modern strategic decision advisory for partnerships, investments, contracts, site selection, key appointments, transitions and major life choices.",
-  trustPointsZh: ["单一重大决策", "私密战略咨询", "可执行建议", "S$980 / 次"],
-  trustPointsEn: ["One Critical Decision", "Private Strategic Advisory", "Actionable Insight", "S$980 / session"],
-  priceZh: "S$980 / 次",
-  priceEn: "S$980 / session",
+    "Qimen Strategy translates Qi Men Dun Jia into a practical strategic wisdom decision method before critical action. It is suitable for partnerships, investments, contracts, key appointments, transitions, life direction, relationship and marriage decisions.",
+  trustPointsZh: ["一个关键决定", "私密奇门决策咨询", "可执行建议", "预约制咨询"],
+  trustPointsEn: ["One Critical Decision", "Private Qimen Strategy Session", "Actionable Insight", "By Appointment"],
+  priceZh: "预约制｜私密确认",
+  priceEn: "By Appointment · Privately Confirmed",
   symptomsTitleZh: "适合哪些关键决定？",
   symptomsTitleEn: "Which critical decisions is this for?",
-  symptomsZh: ["是否合作、签约或投资。", "是否开店、选址或扩张。", "是否任用关键人员或调整团队。", "是否转型、跳槽或改变事业方向。", "是否推进某个重大计划。", "是否需要加急判断行动时机。"],
-  symptomsEn: ["Whether to partner, sign or invest.", "Whether to open, choose a site or expand.", "Whether to appoint key people or adjust a team.", "Whether to transition or change direction.", "Whether to move forward with a major plan.", "Whether urgent timing guidance is needed."],
+  symptomsZh: ["是否合作、签约或投资。", "是否任用关键人员或调整团队。", "是否转型、跳槽或改变事业方向。", "是否推进某个重大计划。", "人生方向、关系或婚姻决策。", "是否需要加急判断行动时机。"],
+  symptomsEn: ["Whether to partner, sign or invest.", "Whether to appoint key people or adjust a team.", "Whether to transition or change direction.", "Whether to move forward with a major plan.", "Life direction, relationship or marriage decisions.", "Whether urgent timing guidance is needed."],
   suitableTitleZh: "适合对象",
   suitableTitleEn: "Who This Is For",
-  suitableZh: ["企业主、创业者、高管。", "面对重大合作或投资判断的人。", "正处于转型、扩张、换赛道阶段的人。", "不想只靠感觉做决定的人。"],
-  suitableEn: ["Business owners, founders and executives.", "Clients facing major partnership or investment decisions.", "People in transition, expansion or strategic change.", "Those who do not want to decide by instinct alone."],
+  suitableZh: ["企业主、创业者、高管。", "面对重大合作或投资判断的人。", "正处于转型、扩张、换赛道阶段的人。", "面对人生方向、关系与婚姻选择的人。"],
+  suitableEn: ["Business owners, founders and executives.", "Clients facing major partnership or investment decisions.", "People in transition, expansion or strategic change.", "Those facing life direction, relationship or marriage choices."],
   approachTitleZh: "单项咨询如何进行？",
   approachTitleEn: "How the single advisory session works",
-  approachIntroZh: "咨询围绕一个核心问题展开，重点看清时机、方向、人事、环境、风险与下一步行动建议。",
-  approachIntroEn: "The session focuses on one core question, reviewing timing, direction, people, environment, risk and recommended next action.",
+  approachIntroZh: "咨询围绕一个核心问题展开，重点看清时机、方向、人事、风险与下一步行动建议。",
+  approachIntroEn: "The session focuses on one core question, reviewing timing, direction, people dynamics, risk and recommended next action.",
   steps: [
     { titleZh: "背景沟通", titleEn: "Briefing", descZh: "先了解问题背景与当前选择。", descEn: "Understand the background and available options." },
-    { titleZh: "奇门判断", titleEn: "Qimen Review", descZh: "判断时机、方向、人事与环境格局。", descEn: "Review timing, direction, people dynamics and environment." },
+    { titleZh: "奇门判断", titleEn: "Qimen Review", descZh: "判断时机、方向、人事与风险结构。", descEn: "Review timing, direction, people dynamics and risk structure." },
     { titleZh: "风险提示", titleEn: "Risk Mapping", descZh: "指出容易忽略的阻力与风险。", descEn: "Identify overlooked resistance and risk." },
     { titleZh: "行动摘要", titleEn: "Action Summary", descZh: "给出更清晰的下一步建议。", descEn: "Provide clearer next-step guidance." }
   ],
@@ -176,22 +176,22 @@ export const decisionPageContent: ServicePageContent = {
   casesTitleEn: "Common Advisory Directions",
   cases: [
     { titleZh: "合作与投资", titleEn: "Partnership & Investment", bodyZh: "判断合作是否顺势、风险点在哪里。", bodyEn: "Review whether cooperation is aligned and where risks may sit." },
-    { titleZh: "选址与布局", titleEn: "Site & Space", bodyZh: "判断办公室、店铺或空间是否支持当前目标。", bodyEn: "Review whether an office, shop or space supports the goal." },
+    { titleZh: "人生与关系决策", titleEn: "Life & Relationship Decisions", bodyZh: "看清关系、婚姻、家庭或人生方向中的时机与人事结构。", bodyEn: "Clarify timing and people dynamics in relationship, marriage, family or life-direction choices." },
     { titleZh: "转型与时机", titleEn: "Transition & Timing", bodyZh: "看清现在是进、守、等，还是转向。", bodyEn: "Clarify whether to move, hold, wait or redirect." }
   ],
   faqTitleZh: "常见问题",
   faqTitleEn: "FAQ",
   faqs: [
-    { qZh: "单项咨询费用是多少？", qEn: "What is the fee for one session?", aZh: "单项战略决策咨询为 S$980 / 次。", aEn: "Single Executive Advisory is S$980 / session." },
-    { qZh: "加急如何收费？", qEn: "How does priority review work?", aZh: "紧急个案可选择加急优先处理，S$1,500 / 个案。", aEn: "Urgent cases may use Priority Upgrade at S$1,500 / case." },
+    { qZh: "单项咨询费用如何确认？", qEn: "How is the fee confirmed?", aZh: "单项奇门决策咨询为预约制，费用根据问题复杂度、是否加急与交付深度私密确认。", aEn: "Single Qimen Strategy sessions are by appointment. Fees are privately confirmed based on complexity, urgency and depth of deliverables." },
+    { qZh: "可以加急吗？", qEn: "Is priority review available?", aZh: "紧急个案可申请加急优先处理，是否安排及费用将在沟通背景后确认。", aEn: "Priority review may be available for urgent cases. Arrangement and fee are confirmed after private context review." },
     ...appointmentFaqs,
   ],
   ctaTitleZh: "关键决定，不要只靠感觉",
   ctaTitleEn: "Do not rely on instinct alone for a critical decision",
-  ctaBodyZh: "一次清晰的战略判断，往往可以减少后续更高的试错成本。",
-  ctaBodyEn: "One clear strategic review can reduce the cost of trial and error later.",
-  waTextZh: "你好启明大师，我想预约单项战略决策咨询。",
-  waTextEn: "Hello Master Qiming, I would like to book a Single Executive Advisory session."
+  ctaBodyZh: "一次清晰的奇门决策判断，往往可以减少后续更高的试错成本。费用将根据咨询范围私密确认。",
+  ctaBodyEn: "One clear Qimen Strategy review can reduce the cost of trial and error later. Fees are confirmed privately based on advisory scope.",
+  waTextZh: "你好启明大师，我想预约单项奇门决策咨询。",
+  waTextEn: "Hello Master Qiming, I would like to book a Single Qimen Strategy Session."
 };
 
 export const spaceClearingPageContent: ServicePageContent = {
