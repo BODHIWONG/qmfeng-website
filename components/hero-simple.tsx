@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, MessageCircle } from "lucide-react";
 
 const WA_LINK =
-  "https://wa.me/6589418791?text=Hello%20Master%20Qiming%2C%20I%20would%20like%20to%20book%20a%20Qimen%20Strategy%20consultation.";
+  "https://wa.me/6589418791?text=Hello%20Master%20Qiming%2C%20I%20would%20like%20to%20book%20a%20private%20Qimen%20Strategy%20briefing.";
 
 const BG_IMAGE = "/master-home-hero.png";
 
@@ -142,7 +142,7 @@ export default function HeroSimple() {
               className="text-3xl font-semibold tracking-wide text-[#e2bd6b] md:text-4xl"
               style={{ fontFamily: "var(--font-cormorant), var(--font-noto-serif), serif" }}
             >
-              Qimen Strategy Session From $288
+              Executive Decision Advisory From S$980
             </div>
             <p className="mt-2 text-sm text-white/75 md:text-base">
               See timing, direction, people and environment before your next move.
@@ -163,7 +163,7 @@ export default function HeroSimple() {
               style={{ fontFamily: "var(--font-lato), sans-serif" }}
             >
               <MessageCircle size={18} />
-              Start Your Strategy Session
+              Book a Private Strategy Briefing
             </a>
 
             <a
@@ -171,7 +171,7 @@ export default function HeroSimple() {
               className="inline-flex items-center justify-center gap-3 border border-[#c89a45] px-7 py-4 text-sm font-bold uppercase tracking-[0.12em] text-[#f4dfb0] transition-colors duration-300 hover:bg-[#c89a45]/10"
               style={{ fontFamily: "var(--font-lato), sans-serif" }}
             >
-              Explore Qimen Strategy
+              View Advisory Programs
               <ArrowRight size={18} />
             </a>
           </motion.div>
