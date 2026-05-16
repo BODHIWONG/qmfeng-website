@@ -190,13 +190,12 @@ export default function ServiceCards() {
 
               <div className="absolute inset-x-0 top-0 z-10 h-[3px]" style={{ background: service.accentColor }} />
 
-              <div className="relative h-56 w-full overflow-hidden md:h-64">
+              <div className="relative aspect-video w-full overflow-hidden bg-black">
                 <img
                   src={service.imageSrc}
                   alt={t(service.imageAltZh, service.imageAltEn)}
-                  className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
+                  className="h-full w-full object-contain object-center transition-transform duration-500 hover:scale-[1.02]"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-black/10 to-transparent" />
               </div>
 
               <div className="flex flex-1 flex-col p-6 md:p-8 xl:p-10">
