@@ -8,31 +8,31 @@ export default function VideoSection() {
 
   const videos = [
     {
-      titleZh: "客户受益后专程道谢",
-      titleEn: "Client Returns to Express Gratitude",
-      descZh: "客户在受益后专程前来道谢，真实见证风水调整带来的显著改变",
-      descEn: "Client specially came back to express gratitude after experiencing significant positive changes",
+      titleZh: "什么是奇门决策",
+      titleEn: "What Is Qimen Strategy?",
+      descZh: "用东方智慧看清时机、方向、人事与局势风险。",
+      descEn: "Using Eastern wisdom to read timing, direction, people and risk before decisions.",
       url: "https://www.youtube.com/embed/3Rpj8CotZVo",
     },
     {
-      titleZh: "客户真实见证",
-      titleEn: "Real Client Testimonial",
-      descZh: "客户亲身分享：风水调整后的显著改变",
-      descEn: "Client shares real transformation after feng shui consultation",
+      titleZh: "关键行动前，为什么要先看局势",
+      titleEn: "Why Read the Situation Before Major Action",
+      descZh: "很多错误不是能力不足，而是时机、方向与人事关系判断失衡。",
+      descEn: "Many mistakes come from unclear timing, direction and people dynamics, not lack of ability.",
       url: "https://www.youtube.com/embed/XgWq0l8HZYw",
     },
     {
-      titleZh: "空间净化实录",
-      titleEn: "Energy Clearing Session",
-      descZh: "现场记录：空间能量净化的完整过程",
-      descEn: "On-site recording of space energy clearing process",
+      titleZh: "启明遁甲私密战略简报",
+      titleEn: "Private Qimen Strategy Briefing",
+      descZh: "适合企业主、创业者与个人在重大决定前先获得清晰判断。",
+      descEn: "For business owners, founders and individuals seeking clarity before critical decisions.",
       url: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/418_1775979850-pvyOpTK41utkXOXMEkJAbNAeuk0Wuo.mp4",
       isVideo: true,
     },
   ];
 
   return (
-    <section className="py-24 bg-[oklch(0.95_0.013_75)]">
+    <section className="bg-[oklch(0.95_0.013_75)] py-24">
       <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -41,26 +41,26 @@ export default function VideoSection() {
           transition={{ duration: 0.7 }}
           className="mb-16"
         >
-          <div className="flex items-center gap-3 mb-5">
-            <div className="w-8 h-px bg-[oklch(0.60_0.08_65)]" />
-            <span className="text-[0.6rem] tracking-[0.25em] uppercase text-[oklch(0.60_0.08_65)] font-semibold" style={{ fontFamily: "var(--font-lato), sans-serif" }}>
-              {t("真实案例与讲解", "Real Cases")}
+          <div className="mb-5 flex items-center gap-3">
+            <div className="h-px w-8 bg-[oklch(0.60_0.08_65)]" />
+            <span className="text-[0.6rem] font-semibold uppercase tracking-[0.25em] text-[oklch(0.60_0.08_65)]" style={{ fontFamily: "var(--font-lato), sans-serif" }}>
+              {t("启明遁甲战略洞察", "Qimen Strategy Video Insights")}
             </span>
           </div>
 
-          <h2 className="text-3xl md:text-5xl font-bold mb-4" style={{ fontFamily: "var(--font-cormorant), var(--font-noto-serif), serif", color: "oklch(0.12 0.02 60)" }}>
-            {t("看得见的改变，更有说服力", "Real Transformation Speaks")}
+          <h2 className="mb-4 text-3xl font-bold md:text-5xl" style={{ fontFamily: "var(--font-cormorant), var(--font-noto-serif), serif", color: "oklch(0.12 0.02 60)" }}>
+            {t("用短视频理解东方智慧决策系统", "Understand Eastern Decision Wisdom Through Video")}
           </h2>
 
-          <p className="text-sm text-[oklch(0.50_0.02_65)] max-w-xl" style={{ fontFamily: "var(--font-lato), var(--font-noto-sans), sans-serif" }}>
+          <p className="max-w-xl text-sm text-[oklch(0.50_0.02_65)]" style={{ fontFamily: "var(--font-lato), var(--font-noto-sans), sans-serif" }}>
             {t(
-              "通过真实视频，展示空间调整、客户反馈与风水影响。",
-              "See real results through actual cases and explanations."
+              "围绕奇门决策、时机判断、方向选择、人事关系与局势风险，帮助客户在关键行动前建立更清晰的判断。",
+              "Focused on Qimen Strategy, timing, direction, people dynamics and risk so clients can build clearer judgment before important moves."
             )}
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid gap-6 md:grid-cols-3">
           {videos.map((v, i) => (
             <motion.div
               key={i}
@@ -68,20 +68,20 @@ export default function VideoSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="bg-white border border-[oklch(0.88_0.018_70)]"
+              className="border border-[oklch(0.88_0.018_70)] bg-white"
             >
               <div className="aspect-video">
                 {v.isVideo ? (
                   <video
                     src={v.url}
-                    className="w-full h-full object-cover"
+                    className="h-full w-full object-cover"
                     controls
                     playsInline
                   />
                 ) : (
                   <iframe
                     src={v.url}
-                    className="w-full h-full"
+                    className="h-full w-full"
                     allowFullScreen
                     title={t(v.titleZh, v.titleEn)}
                   />
@@ -89,7 +89,7 @@ export default function VideoSection() {
               </div>
 
               <div className="p-5">
-                <h3 className="font-bold mb-2" style={{ fontFamily: "var(--font-cormorant), var(--font-noto-serif), serif", color: "oklch(0.15 0.02 60)" }}>
+                <h3 className="mb-2 font-bold" style={{ fontFamily: "var(--font-cormorant), var(--font-noto-serif), serif", color: "oklch(0.15 0.02 60)" }}>
                   {t(v.titleZh, v.titleEn)}
                 </h3>
                 <p className="text-sm text-[oklch(0.50_0.02_65)]" style={{ fontFamily: "var(--font-lato), var(--font-noto-sans), sans-serif" }}>
