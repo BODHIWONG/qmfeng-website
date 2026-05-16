@@ -44,7 +44,7 @@ export default function HeroSimple() {
               className="text-xs font-semibold uppercase tracking-[0.32em] text-[#d6ad63]"
               style={{ fontFamily: "var(--font-lato), var(--font-noto-sans), sans-serif" }}
             >
-              Singapore · Eastern Wisdom Decision System
+              Singapore · Strategic Wisdom Decision Method
             </span>
             <span className="hidden h-px w-10 bg-[#c89a45] sm:block" />
           </motion.div>
@@ -76,7 +76,7 @@ export default function HeroSimple() {
             className="mt-6 text-2xl font-semibold uppercase tracking-[0.28em] text-[#f1d38a] md:text-4xl"
             style={{ fontFamily: "var(--font-lato), var(--font-noto-serif), sans-serif" }}
           >
-            Eastern Wisdom for Strategic Decision-Making
+            Strategic Wisdom for Critical Decisions
           </motion.p>
 
           <motion.p
@@ -86,7 +86,7 @@ export default function HeroSimple() {
             className="mt-5 max-w-3xl text-lg leading-8 text-white/86 md:text-2xl"
             style={{ fontFamily: "var(--font-cormorant), var(--font-noto-serif), serif" }}
           >
-            东方智慧决策系统 · 奇门决策 · See the Whole Game
+            战略智慧决策方法 · 奇门决策咨询 · See the Whole Game
           </motion.p>
 
           <motion.div
@@ -142,7 +142,7 @@ export default function HeroSimple() {
               className="text-3xl font-semibold tracking-wide text-[#e2bd6b] md:text-4xl"
               style={{ fontFamily: "var(--font-cormorant), var(--font-noto-serif), serif" }}
             >
-              Executive Decision Advisory From S$980
+              Qimen Decision Advisory From S$980
             </div>
             <p className="mt-2 text-sm text-white/75 md:text-base">
               See timing, direction, people and risk before your next move.
@@ -163,7 +163,7 @@ export default function HeroSimple() {
               style={{ fontFamily: "var(--font-lato), sans-serif" }}
             >
               <MessageCircle size={18} />
-              Book a Private Strategy Briefing
+              Book a Private Qimen Strategy Session
             </a>
 
             <a
