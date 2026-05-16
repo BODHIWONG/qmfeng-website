@@ -38,7 +38,7 @@ export default function BrandWorldviewSection() {
       <div className="container">
         <div className="mx-auto max-w-5xl text-center">
           <p className="mb-5 text-lg font-bold uppercase tracking-[0.34em] text-[oklch(0.55_0.08_65)] md:text-xl">
-            {t("东方智慧战略决策系统", "Eastern Wisdom for Strategic Decision-Making")}
+            {t("战略智慧决策方法", "Strategic Wisdom Decision Method")}
           </p>
           <h2 className="text-4xl font-semibold leading-tight text-[oklch(0.18_0.02_70)] md:text-6xl">
             {t("启明遁甲 · 奇门决策", "QIMEN STRATEGY")}
@@ -48,14 +48,14 @@ export default function BrandWorldviewSection() {
           </p>
           <p className="mx-auto mt-10 max-w-4xl text-lg leading-9 text-[oklch(0.32_0.02_70)] md:text-2xl">
             {t(
-              "启明遁甲不是娱乐化算命，而是一套以奇门遁甲为根基的东方战略决策系统。",
-              "Qimen Strategy is not entertainment fortune telling. It is an Eastern strategic decision system rooted in Qi Men Dun Jia."
+              "启明遁甲是一套以奇门遁甲为根基的战略智慧决策方法。",
+              "Qimen Strategy is a strategic wisdom decision method rooted in Qi Men Dun Jia."
             )}
           </p>
           <p className="mx-auto mt-8 max-w-3xl text-base leading-8 text-[oklch(0.38_0.02_70)] md:text-lg">
             {t(
-              "由 Master Huang Qiming 创建，帮助企业主与关键决策者在复杂局势中看清时机、方向、人事与风险，做出更清醒的战略判断。",
-              "Founded by Master Huang Qiming to help business owners and decision makers read timing, direction, people and risk before important moves."
+              "由 Master Huang Qiming 主理，帮助企业主与个人在复杂局势中看清时机、方向、人事与风险，做出更清醒的战略判断。",
+              "Led by Master Huang Qiming to help business owners and individuals read timing, direction, people and risk before important moves."
             )}
           </p>
         </div>
