@@ -39,42 +39,40 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.qmfeng.com"),
   title: {
     default:
-      "Qimen Strategy Singapore｜Strategic Insight for Business｜启明遁甲",
+      "Qimen Strategy Singapore｜启明遁甲｜东方智慧决策系统",
     template: "%s | Qimen Strategy Singapore",
   },
   description:
-    "启明遁甲 Qimen Strategy 由黄启明大师主理，专注新加坡高端奇门决策、战略咨询、风水布局与能量疗愈。帮助企业主与个人在关键时刻看清时机、方向、人事关系与环境格局，做出更稳、更清晰的决策。",
+    "启明遁甲 Qimen Strategy 由黄启明大师主理，是一套以奇门遁甲为根基的东方智慧决策系统。帮助企业主、创始人、高管与关键决策者在重要行动前看清时机、方向、人事关系与局势风险，做出更清醒的战略判断。",
   keywords: [
     "Qimen Strategy Singapore",
-    "Strategic Insight for Business",
-    "Qimen Strategy in Modern Business",
     "Qi Men Strategy Singapore",
+    "Eastern Wisdom Decision System",
+    "Eastern Strategic Decision System",
     "Qimen Decision Consultation",
     "Qi Men Dun Jia Singapore",
+    "Executive Decision Advisory Singapore",
     "business decision consultant Singapore",
     "business timing consultation Singapore",
     "Master Huang Qiming",
     "Huang Qiming Singapore",
-    "Qiming Feng Shui",
-    "Singapore Feng Shui",
     "启明遁甲",
     "黄启明大师",
     "奇门决策",
-    "战略咨询",
+    "战略决策",
+    "东方智慧决策系统",
+    "企业主战略顾问",
     "奇门遁甲",
-    "新加坡奇门遁甲",
-    "新加坡风水",
-    "风水布局",
-    "能量疗愈"
+    "新加坡奇门遁甲"
   ],
   authors: [{ name: "Master Huang Qiming 黄启明大师" }],
   alternates: {
     canonical: "https://www.qmfeng.com",
   },
   openGraph: {
-    title: "Qimen Strategy Singapore | Strategic Insight for Business",
+    title: "Qimen Strategy Singapore | 启明遁甲东方智慧决策系统",
     description:
-      "High-end Qimen Strategy consultation in Singapore for business decisions, timing, direction and Feng Shui alignment.",
+      "Qimen Strategy helps business owners and decision makers see timing, direction, people and risk before important decisions.",
     url: "https://www.qmfeng.com",
     siteName: "Qimen Strategy Singapore",
     images: [
@@ -90,9 +88,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Qimen Strategy Singapore | Strategic Insight for Business",
+    title: "Qimen Strategy Singapore | Eastern Wisdom Decision System",
     description:
-      "Qimen Strategy helps business owners and individuals see timing, direction, people and environment before making important decisions.",
+      "Eastern wisdom-based strategic decision advisory for timing, direction, people and risk.",
     images: [OG_IMAGE],
   },
   robots: {
