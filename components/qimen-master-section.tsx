@@ -4,65 +4,65 @@ import { motion } from "framer-motion";
 import { useLanguage } from "@/contexts/language-context";
 import {
   Clock3,
-  MapPinned,
   ShieldCheck,
-  Sparkles,
   Brain,
   Building2,
   ArrowRight,
   MessageCircle,
+  Compass,
+  Users,
 } from "lucide-react";
 
 const gold = "oklch(0.72 0.12 70)";
 const MASTER_IMAGE = "/master-qiming-about.jpg";
 const WA_LINK =
-  "https://wa.me/6589418791?text=Hello%20Master%20Qiming%2C%20I%20would%20like%20to%20understand%20Qi%20Men%20Dun%20Jia%20and%20Feng%20Shui%20consultation.";
+  "https://wa.me/6589418791?text=Hello%20Master%20Qiming%2C%20I%20would%20like%20to%20book%20a%20private%20Qimen%20Strategy%20briefing.";
 
 const qimenPoints = [
   {
     icon: Clock3,
     zh: "判断时机",
-    en: "Timing Clarity",
-    descZh: "看清当下是否适合行动、调整、合作或暂停。",
-    descEn: "Understand whether it is the right moment to act, adjust, cooperate or pause.",
+    en: "Timing",
+    descZh: "看清现在适合进、守、等，还是转向。",
+    descEn: "Understand whether to move, hold, wait or redirect.",
   },
   {
-    icon: MapPinned,
-    zh: "看清方向",
-    en: "Direction Awareness",
-    descZh: "从方位、空间与局势关系中，寻找更有利的突破点。",
-    descEn: "Identify more supportive directions through space, timing and situational patterns.",
+    icon: Compass,
+    zh: "判断方向",
+    en: "Direction",
+    descZh: "在多个选择中看清哪条路径更顺势。",
+    descEn: "See which path is more aligned among multiple options.",
   },
   {
-    icon: ShieldCheck,
-    zh: "识别风险",
-    en: "Risk Awareness",
-    descZh: "提前看见事业、财富、关系或合作中的潜在阻力。",
-    descEn: "Recognise hidden resistance in career, wealth, relationships or partnerships.",
+    icon: Users,
+    zh: "判断人事",
+    en: "People",
+    descZh: "识别合作、团队、谈判中的助力与消耗。",
+    descEn: "Read support and resistance within partnerships, teams and negotiations.",
   },
 ];
 
 const trustItems = [
   {
-    icon: Sparkles,
-    zh: "16+ 年实战经验",
-    en: "16+ Years of Practice",
-    descZh: "长期深耕奇门遁甲、风水布局、八字命理与空间能量调整。",
-    descEn: "Long-term practice in Qi Men Dun Jia, Feng Shui, Bazi and space energy alignment.",
+    icon: Brain,
+    zh: "16+ 年奇门实战经验",
+    en: "16+ Years of Qimen Practice",
+    descZh: "长期以奇门遁甲辅助企业与个人关键决策判断。",
+    descEn: "Long-term Qi Men Dun Jia practice applied to business and personal decision advisory.",
   },
   {
     icon: Building2,
-    zh: "新加坡本地服务",
-    en: "Singapore Local Expertise",
-    descZh: "熟悉 HDB、Condo、办公室与商业空间的真实使用场景。",
-    descEn: "Familiar with HDB, condo, office and commercial space needs in Singapore.",
+    zh: "新加坡本地顾问经验",
+    en: "Singapore-Based Advisory",
+    descZh: "面向企业主、创业者、高管与个人关键转折客户。",
+    descEn: "Serving business owners, founders, executives and clients at key turning points.",
   },
   {
-    icon: Brain,
-    zh: "心理学 + 东方智慧",
-    en: "Psychology + Eastern Wisdom",
-    descZh: "结合清华大学积极心理学培训认证与传统术数实践，帮助客户稳定内在状态与外在方向。",
-    descEn: "Combining Tsinghua University positive psychology training certification with Eastern metaphysics to support inner stability and clearer direction.",
+    icon: ShieldCheck,
+    zh: "私密预约制咨询",
+    en: "Confidential Advisory",
+    descZh: "重大决策先沟通背景，再进行私密战略判断。",
+    descEn: "High-stakes decisions begin with context briefing and confidential strategic review.",
   },
 ];
 
@@ -89,7 +89,7 @@ export default function QimenMasterSection() {
               className="mb-4 text-xs uppercase tracking-[0.28em]"
               style={{ fontFamily: "var(--font-lato), sans-serif", color: gold }}
             >
-              {t("奇门遁甲 · 黄启明大师", "Qi Men Dun Jia · Master Huang Qiming")}
+              {t("黄启明大师 · 启明遁甲", "Master Huang Qiming · Qimen Strategy")}
             </p>
 
             <h2
@@ -100,8 +100,8 @@ export default function QimenMasterSection() {
               }}
             >
               {t(
-                "奇门遁甲，不只是预测，而是一套东方决策系统",
-                "Qi Men Dun Jia Is Not Only Prediction — It Is an Eastern Decision System"
+                "把奇门遁甲，转化为现代关键决策前的战略判断",
+                "Translating Qi Men Dun Jia into Strategic Judgment Before Critical Decisions"
               )}
             </h2>
 
@@ -113,8 +113,8 @@ export default function QimenMasterSection() {
               }}
             >
               {t(
-                "奇门遁甲自古被称为“帝王之术”。它的核心不在于神秘，而在于通过时间、空间、方位、人物与事件之间的关系，判断趋势、识别风险，并找到更适合行动的时机与方向。",
-                "Known historically as a strategic art, Qi Men Dun Jia studies the relationship between time, space, direction, people and events to reveal timing, risks and clearer action paths."
+                "启明遁甲以奇门遁甲为根基，不以娱乐化预测为目的，而是帮助企业主与个人在关键行动前，看清时机、方向、人事关系与局势风险，减少盲目试错。",
+                "Qimen Strategy is rooted in Qi Men Dun Jia. It is not built for entertainment prediction, but for helping business owners and individuals read timing, direction, people dynamics and risk before important moves."
               )}
             </p>
 
@@ -147,8 +147,8 @@ export default function QimenMasterSection() {
               </h3>
               <p className="text-sm leading-relaxed text-[oklch(0.74_0.025_70)] md:text-base">
                 {t(
-                  "黄启明大师长期深耕奇门遁甲、风水布局、八字命理与空间能量调整，拥有16+年传统术数与能量修行经验，并结合清华大学积极心理学培训认证，帮助客户看清时局、稳定内在，重新布局人生方向。",
-                  "Master Huang Qiming has over 16 years of practice in Qi Men Dun Jia, Feng Shui, Bazi and space energy alignment. With Tsinghua University positive psychology training certification, he helps clients read the situation, stabilise their inner state and realign life direction."
+                  "黄启明大师拥有 16+ 年奇门遁甲实战经验，长期服务新加坡企业主、创业者、高管与个人关键转折客户。启明遁甲的核心，不是替客户决定，而是帮助客户看清局势、识别风险、建立更清醒的下一步判断。",
+                  "Master Huang Qiming has 16+ years of practical Qi Men Dun Jia experience, serving Singapore business owners, founders, executives and individuals at key turning points. Qimen Strategy does not decide for clients; it helps them see the situation, recognise risk and make clearer next-step judgments."
                 )}
               </p>
             </div>
@@ -162,13 +162,13 @@ export default function QimenMasterSection() {
                 style={{ background: gold }}
               >
                 <MessageCircle size={18} />
-                {t("立即咨询黄启明大师", "Consult Master Huang Now")}
+                {t("预约私密战略简报", "Book Private Strategy Briefing")}
               </a>
               <a
-                href="#services"
+                href="/qimen-strategy-business"
                 className="inline-flex items-center justify-center gap-3 rounded-full border border-[oklch(0.72_0.12_70/0.45)] px-7 py-3 text-sm font-bold text-[oklch(0.88_0.08_70)] transition hover:bg-[oklch(0.72_0.12_70/0.10)]"
               >
-                {t("查看适合我的咨询方向", "Find the Right Consultation")}
+                {t("查看启明遁甲顾问方案", "View Qimen Strategy Programs")}
                 <ArrowRight size={17} />
               </a>
             </div>
@@ -184,7 +184,7 @@ export default function QimenMasterSection() {
             <div className="relative mx-auto max-w-lg overflow-hidden rounded-[2rem] border border-[oklch(0.72_0.12_70/0.25)] bg-[oklch(0.08_0.018_60)] shadow-[0_30px_90px_rgba(0,0,0,0.45)]">
               <img
                 src={MASTER_IMAGE}
-                alt="Master Huang Qiming practising Qi Men Dun Jia and Feng Shui in Singapore"
+                alt="Master Huang Qiming Qimen Strategy Singapore"
                 className="aspect-[4/5] w-full object-cover object-center"
               />
               <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 via-black/45 to-transparent p-6 md:p-7">
@@ -196,12 +196,12 @@ export default function QimenMasterSection() {
                 </p>
                 <p className="mt-2 text-sm font-semibold tracking-wide text-[oklch(0.78_0.10_70)]">
                   {t(
-                    "奇门遁甲 · 风水布局 · 空间能量调和",
-                    "Qi Men Dun Jia · Feng Shui · Space Energy Alignment"
+                    "启明遁甲 · 东方智慧决策系统",
+                    "Qimen Strategy · Eastern Wisdom Decision System"
                   )}
                 </p>
                 <p className="mt-2 text-xs uppercase tracking-[0.16em] text-white/70">
-                  {t("16+年实战经验", "16+ Years of Practical Experience")}
+                  {t("16+年奇门实战经验", "16+ Years of Qimen Practice")}
                 </p>
               </div>
             </div>
