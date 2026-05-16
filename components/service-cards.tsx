@@ -17,21 +17,22 @@ type ServiceCard = {
   icon: LucideIcon;
   titleZh: string;
   titleEn: string;
+  visualZh: string;
+  visualEn: string;
+  visualSubZh: string;
+  visualSubEn: string;
   painZh: string;
   painEn: string;
   audienceZh: string;
   audienceEn: string;
-  priceZh: string;
-  priceEn: string;
+  feeZh: string;
+  feeEn: string;
   ctaZh: string;
   ctaEn: string;
   href: string;
   accentColor: string;
   accentBg: string;
   accentBorder: string;
-  imageSrc: string;
-  imageAltZh: string;
-  imageAltEn: string;
   recommended?: boolean;
 };
 
@@ -41,46 +42,48 @@ const services: ServiceCard[] = [
     icon: Crown,
     titleZh: "单项奇门决策咨询",
     titleEn: "Single Qimen Strategy Session",
+    visualZh: "单项奇门决策咨询",
+    visualEn: "Single Qimen Strategy Session",
+    visualSubZh: "一个关键决定 · 先看清局势",
+    visualSubEn: "One Critical Decision · See the Situation First",
     painZh: "针对一个关键商业或人生决定，看清时机、方向、人事与风险。",
     painEn:
       "For one critical business or life decision, clarify timing, direction, people dynamics and risk.",
-    audienceZh: "适合：合作、投资、签约、任用、转型或重大方向判断。",
+    audienceZh: "适合：合作、投资、签约、任用、转型、人生方向、关系与婚姻决策。",
     audienceEn:
-      "For partnership, investment, signing, key appointment, transition or major direction decisions.",
-    priceZh: "S$980 / 次",
-    priceEn: "S$980 / session",
+      "For partnership, investment, signing, key appointment, transition, life direction, relationship and marriage decisions.",
+    feeZh: "预约制咨询",
+    feeEn: "Private Session",
     ctaZh: "查看单项咨询",
     ctaEn: "View Session",
     href: "/decision",
     accentColor: "oklch(0.60 0.08 65)",
     accentBg: "oklch(0.96 0.02 75)",
     accentBorder: "oklch(0.88 0.03 70)",
-    imageSrc: "/Strategic.png",
-    imageAltZh: "单项奇门决策咨询",
-    imageAltEn: "Single Qimen Strategy session visual",
   },
   {
     id: 2,
     icon: TrendingUp,
     titleZh: "季度奇门决策顾问",
     titleEn: "Quarterly Qimen Strategy Advisory",
+    visualZh: "季度奇门决策顾问",
+    visualEn: "Quarterly Qimen Strategy Advisory",
+    visualSubZh: "企业主持续关键决策支持",
+    visualSubEn: "Ongoing Support for Business Decisions",
     painZh: "企业主推荐起步方案，用季度陪伴式咨询支持持续关键决策。",
     painEn:
       "The recommended starting point for business owners who need ongoing decision support across a quarter.",
     audienceZh: "适合：企业转型、业务扩张、团队调整、合作谈判与阶段性复盘。",
     audienceEn:
       "For business transition, expansion, team adjustment, negotiation and quarterly decision review.",
-    priceZh: "S$2,800 / 季度",
-    priceEn: "S$2,800 / quarter",
+    feeZh: "季度顾问 · 私密确认",
+    feeEn: "Private Arrangement",
     ctaZh: "查看季度顾问",
     ctaEn: "View Quarterly Advisory",
     href: "/qimen-strategy-business",
     accentColor: "oklch(0.72 0.12 70)",
     accentBg: "oklch(0.97 0.03 85)",
     accentBorder: "oklch(0.90 0.04 80)",
-    imageSrc: "/Wealth.png",
-    imageAltZh: "季度奇门决策顾问",
-    imageAltEn: "Quarterly Qimen Strategy advisory visual",
     recommended: true,
   },
   {
@@ -88,46 +91,48 @@ const services: ServiceCard[] = [
     icon: Crown,
     titleZh: "年度奇门决策顾问",
     titleEn: "Annual Qimen Strategy Advisory",
+    visualZh: "年度奇门决策顾问",
+    visualEn: "Annual Qimen Strategy Advisory",
+    visualSubZh: "企业主 · 创始人 · 长期关键决策",
+    visualSubEn: "Business Owners · Founders · Long-Term Decisions",
     painZh: "为企业主、创始人与长期决策者提供持续判断支持。",
     painEn:
       "Ongoing decision advisory support for business owners, founders and long-term decision makers.",
     audienceZh: "适合：年度规划、季度复盘、关键合作、任用、扩张与长期方向。",
     audienceEn:
       "For annual planning, quarterly reviews, key partnerships, appointments, expansion and long-term direction.",
-    priceZh: "S$9,800 / 年度",
-    priceEn: "S$9,800 / year",
+    feeZh: "年度顾问 · 私密确认",
+    feeEn: "By Private Arrangement",
     ctaZh: "查看年度顾问",
     ctaEn: "View Annual Advisory",
     href: "/qimen-strategy-business",
     accentColor: "oklch(0.64 0.09 70)",
     accentBg: "oklch(0.96 0.02 75)",
     accentBorder: "oklch(0.88 0.03 70)",
-    imageSrc: "/Emotional.png",
-    imageAltZh: "年度奇门决策顾问",
-    imageAltEn: "Annual Qimen Strategy advisory visual",
   },
   {
     id: 4,
     icon: Gem,
     titleZh: "重大项目奇门决策顾问",
     titleEn: "Major Project Qimen Strategy Advisory",
+    visualZh: "重大项目奇门决策顾问",
+    visualEn: "Major Project Qimen Strategy Advisory",
+    visualSubZh: "重大项目 · 转型升级 · 高价值决策",
+    visualSubEn: "Major Projects · Transformation · High-Value Decisions",
     painZh: "针对重大商业项目、转型升级、跨境拓展与高价值战略布局。",
     painEn:
       "For major business projects, transformation, cross-border expansion and high-value strategic moves.",
     audienceZh: "适合：重大项目、企业重组、品牌升级与高标的合作。",
     audienceEn:
       "For major projects, restructuring, brand transformation and high-value partnerships.",
-    priceZh: "S$25,000 起 / 项目",
-    priceEn: "From S$25,000 / project",
+    feeZh: "项目制顾问 · 提案确认",
+    feeEn: "Proposal Based",
     ctaZh: "查看项目顾问",
     ctaEn: "View Project Advisory",
     href: "/qimen-strategy-business",
     accentColor: "oklch(0.60 0.08 65)",
     accentBg: "oklch(0.96 0.02 75)",
     accentBorder: "oklch(0.88 0.03 70)",
-    imageSrc: "/Space.png",
-    imageAltZh: "重大项目奇门决策顾问",
-    imageAltEn: "Major project Qimen Strategy advisory visual",
   },
 ];
 
@@ -162,8 +167,8 @@ export default function ServiceCards() {
             style={{ fontFamily: "var(--font-lato), var(--font-noto-sans), sans-serif", color: "oklch(0.42 0.02 60)" }}
           >
             {t(
-              "启明遁甲以 16 年奇门决策实战经验为根基，长期服务企业主与个人关键决策。所有咨询均为预约制，根据问题背景进行私密判断。",
-              "Qimen Strategy is rooted in 16 years of practical Qimen decision advisory experience, serving business owners and individuals facing critical decisions. All sessions are by appointment and based on private context review."
+              "启明遁甲以 16 年奇门决策实战经验为根基，长期服务企业主与个人关键决策。所有咨询均为预约制，根据问题背景进行私密判断，费用将在沟通范围后确认。",
+              "Qimen Strategy is rooted in 16 years of practical Qimen decision advisory experience, serving business owners and individuals facing critical decisions. All sessions are by appointment; fees are confirmed after private context review."
             )}
           </p>
         </motion.div>
@@ -191,11 +196,26 @@ export default function ServiceCards() {
               <div className="absolute inset-x-0 top-0 z-10 h-[3px]" style={{ background: service.accentColor }} />
 
               <div className="relative aspect-video w-full overflow-hidden bg-black">
-                <img
-                  src={service.imageSrc}
-                  alt={t(service.imageAltZh, service.imageAltEn)}
-                  className="h-full w-full object-contain object-center transition-transform duration-500 hover:scale-[1.02]"
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_25%,rgba(214,173,99,0.22),transparent_32%),linear-gradient(135deg,#090704,#19120a_45%,#050403)]" />
+                <div
+                  className="absolute inset-0 opacity-30"
+                  style={{
+                    backgroundImage:
+                      "linear-gradient(90deg, rgba(214,173,99,.12) 1px, transparent 1px), linear-gradient(0deg, rgba(214,173,99,.08) 1px, transparent 1px)",
+                    backgroundSize: "42px 42px",
+                  }}
                 />
+                <div className="relative flex h-full flex-col items-center justify-center px-6 text-center">
+                  <p className="mb-3 text-[0.62rem] font-bold uppercase tracking-[0.24em] text-[oklch(0.72_0.12_70)]">
+                    QIMEN STRATEGY
+                  </p>
+                  <h3 className="max-w-[92%] text-2xl font-bold leading-tight text-[#f4dfb0] md:text-3xl" style={{ fontFamily: "var(--font-cormorant), var(--font-noto-serif), serif" }}>
+                    {t(service.visualZh, service.visualEn)}
+                  </h3>
+                  <p className="mt-4 text-xs font-semibold uppercase tracking-[0.16em] text-white/70 md:text-sm">
+                    {t(service.visualSubZh, service.visualSubEn)}
+                  </p>
+                </div>
               </div>
 
               <div className="flex flex-1 flex-col p-6 md:p-8 xl:p-10">
@@ -246,10 +266,10 @@ export default function ServiceCards() {
 
                 <div className="mt-auto flex items-center justify-between gap-4">
                   <p
-                    className="text-xl font-bold md:text-2xl"
-                    style={{ fontFamily: "var(--font-cormorant), serif", color: "oklch(0.15 0.02 60)" }}
+                    className="text-sm font-bold uppercase tracking-[0.14em] md:text-base"
+                    style={{ fontFamily: "var(--font-lato), sans-serif", color: service.accentColor }}
                   >
-                    {t(service.priceZh, service.priceEn)}
+                    {t(service.feeZh, service.feeEn)}
                   </p>
 
                   <Link
@@ -271,14 +291,19 @@ export default function ServiceCards() {
             <Zap className="text-[oklch(0.72_0.12_70)]" size={24} />
             <div>
               <p className="text-sm font-bold uppercase tracking-[0.18em] text-[oklch(0.72_0.12_70)]">
-                {t("加急优先处理", "Priority Upgrade")}
+                {t("加急优先处理", "Priority Review Available")}
               </p>
               <p className="text-sm text-white/72">
-                {t("适用于紧急个案，优先复盘并提供行动时机建议。", "For urgent cases requiring priority review and recommended action timing.")}
+                {t("适用于紧急个案，可在私密沟通后确认是否安排优先复盘。", "For urgent cases, priority review may be arranged after private context review.")}
               </p>
             </div>
           </div>
-          <p className="text-2xl font-bold text-[oklch(0.72_0.12_70)]">S$1,500 / case</p>
+          <Link
+            href="/qimen-strategy-business"
+            className="text-sm font-bold uppercase tracking-[0.14em] text-[oklch(0.72_0.12_70)] transition hover:text-white"
+          >
+            {t("查看顾问方案", "View Advisory Programs")} →
+          </Link>
         </div>
       </div>
     </section>
