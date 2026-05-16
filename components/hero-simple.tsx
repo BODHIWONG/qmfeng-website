@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, MessageCircle } from "lucide-react";
 
 const WA_LINK =
-  "https://wa.me/6589418791?text=Hello%20Master%20Qiming%2C%20I%20would%20like%20to%20book%20a%20private%20Qimen%20Strategy%20briefing.";
+  "https://wa.me/6589418791?text=Hello%20Master%20Qiming%2C%20I%20would%20like%20to%20book%20a%20private%20Qimen%20Strategy%20session.";
 
 const BG_IMAGE = "/master-home-hero.png";
 
@@ -130,23 +130,6 @@ export default function HeroSimple() {
             <span>方向选择</span>
             <span>人事关系</span>
             <span>局势风险</span>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.42 }}
-            className="mt-8"
-          >
-            <div
-              className="text-3xl font-semibold tracking-wide text-[#e2bd6b] md:text-4xl"
-              style={{ fontFamily: "var(--font-cormorant), var(--font-noto-serif), serif" }}
-            >
-              Qimen Decision Advisory From S$980
-            </div>
-            <p className="mt-2 text-sm text-white/75 md:text-base">
-              See timing, direction, people and risk before your next move.
-            </p>
           </motion.div>
 
           <motion.div
