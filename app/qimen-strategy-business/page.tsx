@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import QimenStrategyValueSection from "@/components/qimen-strategy-value-section";
 
 export const metadata: Metadata = {
   title: "Qimen Strategy Advisory Singapore｜启明遁甲奇门决策顾问",
@@ -22,7 +23,7 @@ const programs = [
     unit: "/ session",
     body: "One critical decision. Clear situation. Better next move.",
     bodyZh: "适合一个关键决定前的局势判断。",
-    points: ["Private 1-on-1 consultation", "Timing, direction, people and risk review", "Action-oriented recommendation"],
+    points: ["Private 1-on-1 consultation", "Timing, direction, people-environment and risk review", "Action-oriented recommendation"],
     tag: "For one critical decision",
   },
   {
@@ -64,7 +65,7 @@ const programs = [
 const pillars = [
   ["Timing", "时机", "When to move, wait, adjust or redirect."],
   ["Direction", "方向", "Which path is more aligned and less draining."],
-  ["People", "人事", "How partnerships, teams and key people affect the outcome."],
+  ["People & Environment", "人事环境", "How people, cooperation conditions and environment affect the outcome."],
   ["Risk", "风险", "Where hidden resistance, blind spots and decision costs may appear."],
 ];
 
@@ -84,13 +85,13 @@ export default function QimenStrategyBusinessPage() {
             启明遁甲 · 奇门决策顾问方案
           </h2>
           <p className="mt-6 text-lg font-semibold uppercase tracking-[0.20em] text-[#d6ad63] md:text-2xl">
-            See Timing · Direction · People · Risk Before You Decide
+            See Timing · Direction · People & Environment · Risk Before You Decide
           </p>
           <p className="mt-8 max-w-3xl text-lg leading-8 text-white/78 md:text-xl">
             A private Qimen Strategy advisory approach for business owners and individuals facing critical decisions. Rooted in Qi Men Dun Jia, shaped into practical strategic judgment before action.
           </p>
           <p className="mt-4 max-w-3xl text-base leading-8 text-white/70">
-            启明遁甲以奇门决策咨询为核心，帮助企业主与个人在合作、投资、转型、任用、签约或人生方向选择前，看清时机、方向、人事关系与风险结构。价格在本方案页公开展示，具体范围与交付深度可在预约前进一步确认。
+            启明遁甲以奇门决策咨询为核心，帮助企业主与个人在合作、投资、转型、任用、签约或人生方向选择前，看清时机、方向、人事环境与风险结构。价格在本方案页公开展示，具体范围与交付深度可在预约前进一步确认。
           </p>
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
             <a
@@ -108,7 +109,9 @@ export default function QimenStrategyBusinessPage() {
         </div>
       </section>
 
-      <section className="border-y border-[#d6ad63]/20 bg-[#070707] px-4 py-16">
+      <QimenStrategyValueSection />
+
+      <section className="border-b border-[#d6ad63]/20 bg-[#070707] px-4 py-16">
         <div className="container mx-auto max-w-6xl">
           <p className="text-xs font-bold uppercase tracking-[0.32em] text-[#d6ad63]">Qimen Strategy Advisory Programs</p>
           <div className="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
@@ -162,10 +165,10 @@ export default function QimenStrategyBusinessPage() {
           <div className="max-w-3xl">
             <p className="mb-4 text-xs font-bold uppercase tracking-[0.32em] text-[#d6ad63]">Four Decision Dimensions</p>
             <h2 className="text-3xl font-semibold leading-tight text-[#f4dfb0] md:text-5xl">
-              The advisory work focuses on timing, direction, people and risk.
+              The advisory work focuses on timing, direction, people and environment, and risk.
             </h2>
             <p className="mt-6 text-base leading-8 text-white/72 md:text-lg">
-              Many mistakes are not caused by lack of effort. They come from unclear timing, wrong direction, weak people dynamics or hidden risk that has not been recognised early enough.
+              Many mistakes are not caused by lack of effort. They come from unclear timing, wrong direction, weak people-environment dynamics or hidden risk that has not been recognised early enough.
             </p>
           </div>
 
