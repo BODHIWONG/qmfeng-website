@@ -4,16 +4,16 @@ import ServiceDetailTemplate from "@/components/service-detail-template";
 import { decisionPageContent } from "@/lib/service-page-data";
 
 export const metadata: Metadata = {
-  title: "单项战略决策咨询 S$980｜Qi Men Strategy Singapore",
+  title: "单项奇门决策咨询｜Qimen Strategy Singapore",
   description:
-    "Single Executive Advisory by Qimen Strategy Singapore. S$980 per session for one critical decision, including timing, direction, people dynamics, risk and actionable next-step review.",
+    "Single Qimen Strategy advisory by Master Huang Qiming. Private appointment-based consultation for one critical business or life decision, reviewing timing, direction, people dynamics, risk and actionable next steps.",
   keywords: [
-    "Single Executive Advisory Singapore",
+    "Single Qimen Strategy Session Singapore",
     "Qi Men Strategy Singapore",
     "Qimen decision consultation",
-    "S$980 Qimen Strategy",
+    "private Qimen Strategy session",
     "奇门决策",
-    "单项战略决策咨询",
+    "单项奇门决策咨询",
     "启明遁甲",
     "黄启明大师",
   ],
@@ -21,9 +21,9 @@ export const metadata: Metadata = {
     canonical: "https://www.qmfeng.com/decision",
   },
   openGraph: {
-    title: "Single Executive Advisory | Qi Men Strategy Singapore",
+    title: "Single Qimen Strategy Session | Qi Men Strategy Singapore",
     description:
-      "One critical decision. Clear insight. Confident move. Single Executive Advisory is S$980 / session.",
+      "One critical decision. Clear situation. Better next move. Private appointment-based Qimen Strategy advisory.",
     url: "https://www.qmfeng.com/decision",
     type: "website",
   },
