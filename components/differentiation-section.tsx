@@ -45,7 +45,7 @@ export default function DifferentiationSection() {
                 color: "oklch(0.98 0.01 75)",
               }}
             >
-              {t("不是娱乐化算命，而是东方智慧决策系统", "Not Fortune Telling — An Eastern Wisdom Decision System")}
+              {t("专注奇门决策咨询，服务关键行动前的战略判断", "Focused on Qimen Strategy Advisory Before Critical Decisions")}
             </h2>
 
             <p
@@ -56,8 +56,8 @@ export default function DifferentiationSection() {
               }}
             >
               {t(
-                "以奇门遁甲为根基，转化为现代关键决策前的战略判断。",
-                "Rooted in Qi Men Dun Jia, translated into strategic judgment before critical decisions."
+                "以奇门遁甲为根基，形成适合现代企业主与个人的战略智慧决策方法。",
+                "Rooted in Qi Men Dun Jia, shaped into a Strategic Wisdom Decision Method for business owners and individuals."
               )}
             </p>
           </motion.div>
@@ -74,8 +74,8 @@ export default function DifferentiationSection() {
             }}
           >
             {t(
-              "黄启明大师以 16+ 年奇门遁甲实战经验，帮助企业主、创始人、高管与个人在关键行动前，看清时机、方向、人事关系与局势风险。启明遁甲的重点不是制造神秘，而是提供更清醒、更可执行的决策视角。",
-              "With 16+ years of practical Qi Men Dun Jia experience, Master Huang Qiming helps business owners, founders, executives and individuals read timing, direction, people dynamics and risk before important moves. Qimen Strategy is not about creating mystery; it is about clearer, more actionable strategic perspective."
+              "黄启明大师以 16+ 年奇门遁甲实战经验，帮助企业主、创始人、高管与个人在关键行动前，看清时机、方向、人事关系与局势风险。启明遁甲的重点，是提供更清醒、更可执行的决策视角。",
+              "With 16+ years of practical Qi Men Dun Jia experience, Master Huang Qiming helps business owners, founders, executives and individuals read timing, direction, people dynamics and risk before important moves. Qimen Strategy focuses on clearer, more actionable decision perspective."
             )}
           </motion.p>
 
