@@ -7,7 +7,7 @@ import { useLanguage } from "@/contexts/language-context";
 
 const LOGO_URL = "/logo-qimen-strategy.jpg";
 const WA_LINK =
-  "https://wa.me/6589418791?text=Hello%20Master%20Qiming%2C%20I%20would%20like%20to%20book%20a%20private%20Qimen%20Strategy%20briefing.";
+  "https://wa.me/6589418791?text=Hello%20Master%20Qiming%2C%20I%20would%20like%20to%20consult%20about%20Qimen%20Strategy.";
 
 const serviceLinks = [
   { href: "/qimen-strategy-business", zh: "启明遁甲", en: "Qimen Strategy" },
@@ -88,7 +88,7 @@ export default function Navbar() {
             rel="noopener noreferrer"
             className="border border-yellow-600 px-5 py-2 text-sm text-yellow-600 transition-all hover:bg-yellow-600 hover:text-black"
           >
-            {lang === "zh" ? "私密简报" : "Private Briefing"}
+            {lang === "zh" ? "立即咨询" : "Consult Now"}
           </a>
         </div>
 
@@ -132,7 +132,7 @@ export default function Navbar() {
             rel="noopener noreferrer"
             className="mt-4 block text-yellow-500"
           >
-            {lang === "zh" ? "预约私密战略简报" : "Book Private Briefing"}
+            {lang === "zh" ? "立即咨询" : "Consult Now"}
           </a>
         </div>
       )}
