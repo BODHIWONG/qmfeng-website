@@ -31,23 +31,23 @@ function InsightsContent() {
           <div className="mb-6 flex items-center gap-3">
             <div className="h-px w-8 bg-[oklch(0.60_0.08_65)]" />
             <span className="text-[0.65rem] font-semibold uppercase tracking-[0.3em] text-[oklch(0.60_0.08_65)]">
-              Qimen Strategy Intelligence
+              启明案例智库
             </span>
           </div>
 
           <h1 className="mb-5 text-4xl font-bold leading-tight md:text-6xl">
-            Strategic Insights on Qimen Strategy & Eastern Decision Wisdom
+            Qimen Strategy Case Library
           </h1>
 
           <p className="text-base leading-relaxed text-[oklch(0.72_0.02_70)] md:text-lg">
-            A focused knowledge hub by Qimen Strategy｜启明遁甲 on Qi Men Dun Jia, 奇门决策, timing, direction, people dynamics, risk patterns and strategic decision-making for business owners and individuals.
+            Real-world Qimen Strategy case studies on business, Feng Shui, relationships, timing, and decision-making. A growing archive of real cases and practical insights by Qimen Strategy｜启明遁甲.
           </p>
 
           <div className="mt-8 grid gap-3 text-xs font-bold uppercase tracking-[0.16em] text-[oklch(0.72_0.12_70)] sm:grid-cols-4">
-            <div className="border border-[oklch(0.60_0.08_65/0.35)] px-4 py-3">Timing</div>
-            <div className="border border-[oklch(0.60_0.08_65/0.35)] px-4 py-3">Direction</div>
-            <div className="border border-[oklch(0.60_0.08_65/0.35)] px-4 py-3">People</div>
-            <div className="border border-[oklch(0.60_0.08_65/0.35)] px-4 py-3">Risk Pattern</div>
+            <div className="border border-[oklch(0.60_0.08_65/0.35)] px-4 py-3">Business & Career</div>
+            <div className="border border-[oklch(0.60_0.08_65/0.35)] px-4 py-3">Relationships</div>
+            <div className="border border-[oklch(0.60_0.08_65/0.35)] px-4 py-3">Feng Shui Cases</div>
+            <div className="border border-[oklch(0.60_0.08_65/0.35)] px-4 py-3">Energy & Life</div>
           </div>
         </div>
 
@@ -88,7 +88,7 @@ function InsightsContent() {
                 href={`/insights/${post.slug}`}
                 className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.12em] text-[oklch(0.60_0.08_65)] transition-all hover:gap-3"
               >
-                Read Strategic Insight <ArrowRight size={12} />
+                Read Case Study <ArrowRight size={12} />
               </Link>
             </article>
           ))}
