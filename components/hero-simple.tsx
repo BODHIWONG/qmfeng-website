@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, MessageCircle } from "lucide-react";
 
 const WA_LINK =
-  "https://wa.me/6589418791?text=Hello%20Master%20Qiming%2C%20I%20would%20like%20to%20book%20a%20private%20Qimen%20Strategy%20session.";
+  "https://wa.me/6589418791?text=Hello%20Master%20Qiming%2C%20I%20would%20like%20to%20consult%20about%20Qimen%20Strategy.";
 
 const BG_IMAGE = "/master-home-hero.png";
 
@@ -44,7 +44,7 @@ export default function HeroSimple() {
               className="text-xs font-semibold uppercase tracking-[0.32em] text-[#d6ad63]"
               style={{ fontFamily: "var(--font-lato), var(--font-noto-sans), sans-serif" }}
             >
-              Singapore · Strategic Wisdom Decision Method
+              Singapore · Qimen Strategy Consultation
             </span>
             <span className="hidden h-px w-10 bg-[#c89a45] sm:block" />
           </motion.div>
@@ -73,10 +73,10 @@ export default function HeroSimple() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.58, delay: 0.16 }}
-            className="mt-6 text-2xl font-semibold uppercase tracking-[0.28em] text-[#f1d38a] md:text-4xl"
+            className="mt-6 text-2xl font-semibold uppercase tracking-[0.18em] text-[#f1d38a] md:text-4xl"
             style={{ fontFamily: "var(--font-lato), var(--font-noto-serif), sans-serif" }}
           >
-            Strategic Wisdom for Critical Decisions
+            See the Situation Clearly Before You Decide
           </motion.p>
 
           <motion.p
@@ -86,7 +86,7 @@ export default function HeroSimple() {
             className="mt-5 max-w-3xl text-lg leading-8 text-white/86 md:text-2xl"
             style={{ fontFamily: "var(--font-cormorant), var(--font-noto-serif), serif" }}
           >
-            战略智慧决策方法 · 奇门决策咨询 · See the Whole Game
+            奇门决策 · 风水布局 · 真实案例咨询
           </motion.p>
 
           <motion.div
@@ -106,7 +106,7 @@ export default function HeroSimple() {
             className="mt-7 max-w-3xl text-base leading-8 text-white/82 md:text-lg"
             style={{ fontFamily: "var(--font-lato), var(--font-noto-sans), sans-serif" }}
           >
-            Qimen Strategy helps business owners, founders and individuals see timing, direction, people dynamics and risk before important decisions.
+            Qimen Strategy helps business owners, founders and individuals in Singapore review timing, direction, people dynamics, environment and risk before important decisions.
           </motion.p>
 
           <motion.p
@@ -146,15 +146,15 @@ export default function HeroSimple() {
               style={{ fontFamily: "var(--font-lato), sans-serif" }}
             >
               <MessageCircle size={18} />
-              Book a Private Qimen Strategy Session
+              Consult Now
             </a>
 
             <a
-              href="/qimen-strategy-business"
+              href="/insights"
               className="inline-flex items-center justify-center gap-3 border border-[#c89a45] px-7 py-4 text-sm font-bold uppercase tracking-[0.12em] text-[#f4dfb0] transition-colors duration-300 hover:bg-[#c89a45]/10"
               style={{ fontFamily: "var(--font-lato), sans-serif" }}
             >
-              View Qimen Strategy Programs
+              View Case Library
               <ArrowRight size={18} />
             </a>
           </motion.div>
