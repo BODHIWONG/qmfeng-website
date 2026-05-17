@@ -27,8 +27,6 @@ type ServiceCard = {
   audienceEn: string;
   feeZh: string;
   feeEn: string;
-  ctaZh: string;
-  ctaEn: string;
   href: string;
   accentColor: string;
   accentBg: string;
@@ -54,8 +52,6 @@ const services: ServiceCard[] = [
       "For partnership, investment, signing, key appointment, transition, life direction, relationship and marriage decisions.",
     feeZh: "预约制咨询",
     feeEn: "Private Session",
-    ctaZh: "查看单项咨询",
-    ctaEn: "View Session",
     href: "/decision",
     accentColor: "oklch(0.60 0.08 65)",
     accentBg: "oklch(0.96 0.02 75)",
@@ -78,8 +74,6 @@ const services: ServiceCard[] = [
       "For business transition, expansion, team adjustment, negotiation and quarterly decision review.",
     feeZh: "季度顾问 · 私密确认",
     feeEn: "Private Arrangement",
-    ctaZh: "查看季度顾问",
-    ctaEn: "View Quarterly Advisory",
     href: "/qimen-strategy-business",
     accentColor: "oklch(0.72 0.12 70)",
     accentBg: "oklch(0.97 0.03 85)",
@@ -103,8 +97,6 @@ const services: ServiceCard[] = [
       "For annual planning, quarterly reviews, key partnerships, appointments, expansion and long-term direction.",
     feeZh: "年度顾问 · 私密确认",
     feeEn: "By Private Arrangement",
-    ctaZh: "查看年度顾问",
-    ctaEn: "View Annual Advisory",
     href: "/qimen-strategy-business",
     accentColor: "oklch(0.64 0.09 70)",
     accentBg: "oklch(0.96 0.02 75)",
@@ -127,8 +119,6 @@ const services: ServiceCard[] = [
       "For major projects, restructuring, brand transformation and high-value partnerships.",
     feeZh: "项目制顾问 · 提案确认",
     feeEn: "Proposal Based",
-    ctaZh: "查看项目顾问",
-    ctaEn: "View Project Advisory",
     href: "/qimen-strategy-business",
     accentColor: "oklch(0.60 0.08 65)",
     accentBg: "oklch(0.96 0.02 75)",
@@ -277,7 +267,7 @@ export default function ServiceCards() {
                     className="inline-flex items-center justify-center gap-2 px-5 py-3 text-xs font-bold uppercase tracking-[0.14em] transition-all duration-300 hover:opacity-90 hover:shadow-[0_10px_25px_rgba(0,0,0,0.12)]"
                     style={{ fontFamily: "var(--font-lato), sans-serif", background: service.accentColor, color: "oklch(0.98 0.005 75)" }}
                   >
-                    {t(service.ctaZh, service.ctaEn)}
+                    {t("了解咨询", "View Consultation")}
                     <ArrowRight size={15} />
                   </Link>
                 </div>
@@ -302,7 +292,7 @@ export default function ServiceCards() {
             href="/qimen-strategy-business"
             className="text-sm font-bold uppercase tracking-[0.14em] text-[oklch(0.72_0.12_70)] transition hover:text-white"
           >
-            {t("查看顾问方案", "View Advisory Programs")} →
+            {t("了解咨询", "View Consultation")} →
           </Link>
         </div>
       </div>
