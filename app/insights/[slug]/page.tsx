@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { insightPosts, getInsightPost } from "@/lib/insights-data";
 import {
+  qimenCaseLibraryPosts,
+  getQimenCaseLibraryPost,
+} from "@/lib/qimen-case-library-posts";
+import {
   qimenSingaporeBilingualPosts,
   getQimenSingaporeBilingualPost,
 } from "@/lib/qimen-singapore-bilingual-posts";
@@ -29,6 +33,7 @@ type InsightDetailProps = {
 };
 
 const allDynamicPosts = [
+  ...qimenCaseLibraryPosts,
   ...qimenStrategyPositioningPosts,
   ...executiveWellnessPosts,
   ...qimenDunJiaFoundationPosts,
@@ -39,6 +44,7 @@ const allDynamicPosts = [
 
 function findPost(slug: string) {
   return (
+    getQimenCaseLibraryPost(slug) ??
     getQimenStrategyPositioningPost(slug) ??
     getExecutiveWellnessPost(slug) ??
     getQimenDunJiaFoundationPost(slug) ??
