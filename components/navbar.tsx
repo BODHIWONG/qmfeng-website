@@ -10,6 +10,7 @@ const WA_LINK =
   "https://wa.me/6589418791?text=Hello%20Master%20Qiming%2C%20I%20would%20like%20to%20consult%20about%20Qimen%20Strategy.";
 
 const serviceLinks = [
+  { href: "/", zh: "首页", en: "Home" },
   { href: "/qimen-strategy-business", zh: "启明遁甲", en: "Qimen Strategy" },
   { href: "/decision", zh: "奇门决策", en: "Decision Advisory" },
   { href: "/qimen-strategy-business", zh: "顾问方案", en: "Programs" },
@@ -62,7 +63,7 @@ export default function Navbar() {
           </div>
         </Link>
 
-        <div className="hidden items-center gap-6 md:flex lg:gap-7">
+        <div className="hidden items-center gap-5 md:flex lg:gap-6">
           {serviceLinks.map((link, index) => (
             <Link key={`${link.href}-${index}`} href={link.href} className={`text-sm transition-colors ${navTextClass}`}>
               {lang === "zh" ? link.zh : link.en}
