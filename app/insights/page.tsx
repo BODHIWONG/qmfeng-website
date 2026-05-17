@@ -6,11 +6,13 @@ import Footer from "@/components/footer";
 import Link from "next/link";
 import { ArrowRight, Calendar, Clock } from "lucide-react";
 import { insightPosts } from "@/lib/insights-data";
+import { qimenCaseLibraryPosts } from "@/lib/qimen-case-library-posts";
 import { qimenSingaporeBilingualPosts } from "@/lib/qimen-singapore-bilingual-posts";
 import { qimenDunJiaFoundationPosts } from "@/lib/qimen-dun-jia-foundation-post";
 import { qimenStrategyPositioningPosts } from "@/lib/qimen-strategy-positioning-post";
 
 const allPosts = [
+  ...qimenCaseLibraryPosts,
   ...qimenStrategyPositioningPosts,
   ...qimenDunJiaFoundationPosts,
   ...qimenSingaporeBilingualPosts,
