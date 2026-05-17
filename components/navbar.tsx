@@ -13,7 +13,7 @@ const serviceLinks = [
   { href: "/qimen-strategy-business", zh: "启明遁甲", en: "Qimen Strategy" },
   { href: "/decision", zh: "奇门决策", en: "Decision Advisory" },
   { href: "/qimen-strategy-business", zh: "顾问方案", en: "Programs" },
-  { href: "/insights", zh: "战略洞察", en: "Insights" },
+  { href: "/insights", zh: "案例智库", en: "Case Library" },
   { href: "/founder", zh: "黄启明", en: "Founder" },
 ];
 
