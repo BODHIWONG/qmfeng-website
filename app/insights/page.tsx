@@ -10,9 +10,11 @@ import { qimenCaseLibraryPosts } from "@/lib/qimen-case-library-posts";
 import { qimenSingaporeBilingualPosts } from "@/lib/qimen-singapore-bilingual-posts";
 import { qimenDunJiaFoundationPosts } from "@/lib/qimen-dun-jia-foundation-post";
 import { qimenStrategyPositioningPosts } from "@/lib/qimen-strategy-positioning-post";
+import { qimenStrategyDecisionIntelligencePosts } from "@/lib/qimen-strategy-decision-intelligence-post";
 import { applyInsightPostOverrides } from "@/lib/insights-overrides";
 
 const allPosts = [
+  ...qimenStrategyDecisionIntelligencePosts,
   ...qimenCaseLibraryPosts,
   ...qimenStrategyPositioningPosts,
   ...qimenDunJiaFoundationPosts,
@@ -49,10 +51,10 @@ function InsightsContent() {
           </p>
 
           <div className="mt-8 grid gap-3 text-xs font-bold uppercase tracking-[0.16em] text-[oklch(0.72_0.12_70)] sm:grid-cols-4">
-            <div className="border border-[oklch(0.60_0.08_65/0.35)] px-4 py-3">Business Strategy</div>
-            <div className="border border-[oklch(0.60_0.08_65/0.35)] px-4 py-3">Life Clarity</div>
+            <div className="border border-[oklch(0.60_0.08_65/0.35)] px-4 py-3">Decision Intelligence</div>
+            <div className="border border-[oklch(0.60_0.08_65/0.35)] px-4 py-3">Strategic Timing</div>
+            <div className="border border-[oklch(0.60_0.08_65/0.35)] px-4 py-3">Human Dynamics</div>
             <div className="border border-[oklch(0.60_0.08_65/0.35)] px-4 py-3">Environmental Alignment</div>
-            <div className="border border-[oklch(0.60_0.08_65/0.35)] px-4 py-3">Strategic Insight</div>
           </div>
         </div>
 
