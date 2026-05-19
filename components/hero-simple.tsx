@@ -66,7 +66,7 @@ export default function HeroSimple() {
             className="mt-4 text-3xl font-semibold tracking-[0.26em] text-[#e2bd6b] md:text-5xl"
             style={{ fontFamily: "var(--font-cormorant), var(--font-noto-serif), serif" }}
           >
-            启明决策
+            启明遁甲
           </motion.h2>
 
           <motion.p
@@ -116,7 +116,7 @@ export default function HeroSimple() {
             className="mt-3 max-w-3xl text-sm leading-7 text-white/70 md:text-base"
             style={{ fontFamily: "var(--font-noto-sans), var(--font-lato), sans-serif" }}
           >
-            启明决策以 16 年奇门决策实战为根基，结合 16 年企业运营经验，帮助企业主与个人在关键行动前，看清时机、方向、人事关系与局势风险。
+            启明遁甲以 16 年奇门决策实战为根基，结合 16 年企业运营经验，帮助企业主与个人在关键行动前，看清时机、方向、人事关系与局势风险。
           </motion.p>
 
           <motion.div
