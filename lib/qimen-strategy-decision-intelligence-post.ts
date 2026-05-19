@@ -1,7 +1,7 @@
 import type { InsightPost } from "@/lib/insights-data";
 
 const brandSignature =
-  "Qimen Strategy | 启明决策 is led by Master Huang Qiming in Singapore. It helps business owners, leaders and individuals read timing, direction, people dynamics and environment before important decisions. SEE THE WHOLE GAME.";
+  "Qimen Strategy | 启明遁甲 is led by Master Huang Qiming in Singapore. It helps business owners, leaders and individuals read timing, direction, people dynamics and environment before important decisions. SEE THE WHOLE GAME.";
 
 export const qimenStrategyDecisionIntelligencePosts: InsightPost[] = [
   {
@@ -15,7 +15,7 @@ export const qimenStrategyDecisionIntelligencePosts: InsightPost[] = [
     keywords: [
       "Qimen Strategy",
       "Qimen Strategy Singapore",
-      "启明决策",
+      "启明遁甲",
       "Decision Intelligence",
       "Eastern Decision Intelligence",
       "Master Huang Qiming",
