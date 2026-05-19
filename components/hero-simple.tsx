@@ -116,7 +116,7 @@ export default function HeroSimple() {
             className="mt-3 max-w-3xl text-sm leading-7 text-white/70 md:text-base"
             style={{ fontFamily: "var(--font-noto-sans), var(--font-lato), sans-serif" }}
           >
-            启明遁甲以 16 年奇门决策实战为根基，结合 16 年企业运营经验，帮助企业主与个人在关键行动前，看清时机、方向、人事关系与局势风险。
+            启明遁甲以 16 年奇门决策实战经验为根基，长期服务企业主与个人关键决策。所有咨询均为预约制，根据问题背景进行私密判断，费用将在沟通范围后确认。
           </motion.p>
 
           <motion.div
