@@ -86,7 +86,7 @@ export default function HeroSimple() {
             className="mt-5 max-w-3xl text-lg leading-8 text-white/86 md:text-2xl"
             style={{ fontFamily: "var(--font-cormorant), var(--font-noto-serif), serif" }}
           >
-            奇门决策 · 风水布局 · 真实案例咨询
+            奇门决策 · 战略咨询 · 风水布局
           </motion.p>
 
           <motion.div
