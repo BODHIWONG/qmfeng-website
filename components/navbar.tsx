@@ -11,7 +11,7 @@ const WA_LINK =
 
 const serviceLinks = [
   { href: "/", zh: "首页", en: "Home" },
-  { href: "/qimen-strategy-business", zh: "启明决策", en: "Qimen Strategy" },
+  { href: "/qimen-strategy-business", zh: "启明遁甲", en: "Qimen Strategy" },
   { href: "/decision", zh: "奇门决策", en: "Decision Advisory" },
   { href: "/qimen-strategy-business", zh: "顾问方案", en: "Programs" },
   { href: "/insights", zh: "案例智库", en: "Case Library" },
@@ -58,7 +58,7 @@ export default function Navbar() {
               QIMEN STRATEGY
             </div>
             <div className="text-xs tracking-[0.28em] text-yellow-600 md:text-sm">
-              启明决策
+              启明遁甲
             </div>
           </div>
         </Link>
