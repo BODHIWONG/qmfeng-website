@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import {
   Noto_Serif_SC,
   Noto_Sans_SC,
@@ -125,6 +126,11 @@ export default function RootLayout({
       <body
         className={`${notoSerifSC.variable} ${notoSansSC.variable} ${lato.variable} ${cormorant.variable} font-sans antialiased`}
       >
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=AW-17926881970"
+          strategy="afterInteractive"
+        />
         {children}
         {process.env.NODE_ENV === "production" && <Analytics />}
       </body>
