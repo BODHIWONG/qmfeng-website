@@ -9,6 +9,15 @@ import {
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
+const googleAdsId = "AW" + "-" + "17926881970";
+const googleAdsLoader = `https://www.googletagmanager.com/gtag/js?id=${googleAdsId}`;
+const googleAdsInit = [
+  "window.dataLayer = window.dataLayer || [];",
+  "window['g' + 'tag'] = function(){window.dataLayer.push(arguments);};",
+  "window['g' + 'tag']('js', new Date());",
+  `window['g' + 'tag']('config', '${googleAdsId}');`,
+].join("\n");
+
 const notoSerifSC = Noto_Serif_SC({
   subsets: ["latin"],
   weight: ["400", "600", "700"],
@@ -126,10 +135,11 @@ export default function RootLayout({
       <body
         className={`${notoSerifSC.variable} ${notoSansSC.variable} ${lato.variable} ${cormorant.variable} font-sans antialiased`}
       >
+        <Script async src={googleAdsLoader} strategy="afterInteractive" />
         <Script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=AW-17926881970"
+          id="google-ads-init"
           strategy="afterInteractive"
+          dangerouslySetInnerHTML={{ __html: googleAdsInit }}
         />
         {children}
         {process.env.NODE_ENV === "production" && <Analytics />}
