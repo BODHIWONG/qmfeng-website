@@ -14,6 +14,10 @@ import {
   getQimenDunJiaFoundationPost,
 } from "@/lib/qimen-dun-jia-foundation-post";
 import {
+  qimenStrategyDecisionIntelligencePosts,
+  getQimenStrategyDecisionIntelligencePost,
+} from "@/lib/qimen-strategy-decision-intelligence-post";
+import {
   spaceEnergyBlogPosts,
   getSpaceEnergyBlogPost,
 } from "@/lib/space-energy-blog-posts";
@@ -34,6 +38,7 @@ type InsightDetailProps = {
 
 const allDynamicPosts = [
   ...qimenCaseLibraryPosts,
+  ...qimenStrategyDecisionIntelligencePosts,
   ...qimenStrategyPositioningPosts,
   ...executiveWellnessPosts,
   ...qimenDunJiaFoundationPosts,
@@ -45,6 +50,7 @@ const allDynamicPosts = [
 function findPost(slug: string) {
   return (
     getQimenCaseLibraryPost(slug) ??
+    getQimenStrategyDecisionIntelligencePost(slug) ??
     getQimenStrategyPositioningPost(slug) ??
     getExecutiveWellnessPost(slug) ??
     getQimenDunJiaFoundationPost(slug) ??
