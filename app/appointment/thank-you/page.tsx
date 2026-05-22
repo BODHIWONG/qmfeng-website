@@ -13,6 +13,7 @@ function AppointmentThankYouContent() {
   const [message, setMessage] = useState("");
   const [leadId, setLeadId] = useState("");
   const [redirectSeconds, setRedirectSeconds] = useState(3);
+  const [hasTriedRedirect, setHasTriedRedirect] = useState(false);
 
   useEffect(() => {
     const storedLeadId = window.sessionStorage.getItem("qimenAppointmentLeadId");
@@ -30,13 +31,16 @@ function AppointmentThankYouContent() {
       }, 1000);
 
       const redirect = window.setTimeout(() => {
-        window.location.href = storedUrl;
+        setHasTriedRedirect(true);
+        window.location.assign(storedUrl);
       }, 3000);
 
       return () => {
         window.clearInterval(countdown);
         window.clearTimeout(redirect);
       };
+    } else {
+      setHasTriedRedirect(true);
     }
   }, []);
 
@@ -64,10 +68,12 @@ function AppointmentThankYouContent() {
                 Appointment Request Saved
               </p>
               <h1 className="mb-5 text-4xl font-bold leading-tight text-[oklch(0.15_0.02_60)] md:text-5xl" style={{ fontFamily: "var(--font-cormorant), var(--font-noto-serif), serif" }}>
-                Redirecting You to WhatsApp
+                {hasTriedRedirect ? "Open WhatsApp to Complete" : "Redirecting You to WhatsApp"}
               </h1>
               <p className="mx-auto mb-5 max-w-2xl text-base leading-8 text-[oklch(0.42_0.02_60)]">
-                Your appointment request has been saved. WhatsApp will open automatically in {redirectSeconds} seconds so you can send the prepared message to Master Qiming.
+                {hasTriedRedirect
+                  ? "Your appointment request has been saved. If WhatsApp did not open automatically, please click the button below to send the prepared message to Master Qiming."
+                  : `Your appointment request has been saved. WhatsApp will open automatically in ${redirectSeconds} seconds so you can send the prepared message to Master Qiming.`}
               </p>
 
               {leadId && (
