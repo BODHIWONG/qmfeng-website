@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { LanguageProvider } from "@/contexts/language-context";
@@ -11,14 +11,27 @@ import FloatingActions from "@/components/floating-actions";
 function AppointmentThankYouContent() {
   const [whatsAppUrl, setWhatsAppUrl] = useState("https://wa.me/6589418791");
   const [message, setMessage] = useState("");
+  const [leadId, setLeadId] = useState("");
 
   useEffect(() => {
+    const storedLeadId = window.sessionStorage.getItem("qimenAppointmentLeadId");
     const storedUrl = window.sessionStorage.getItem("qimenAppointmentWhatsAppUrl");
     const storedMessage = window.sessionStorage.getItem("qimenAppointmentMessage");
 
+    if (storedLeadId) setLeadId(storedLeadId);
     if (storedUrl) setWhatsAppUrl(storedUrl);
     if (storedMessage) setMessage(storedMessage);
   }, []);
+
+  const copyButtonLabel = useMemo(() => {
+    if (!message) return "Prepared Message Saved";
+    return "Copy Prepared Message";
+  }, [message]);
+
+  async function copyPreparedMessage() {
+    if (!message || typeof navigator === "undefined") return;
+    await navigator.clipboard.writeText(message);
+  }
 
   return (
     <div className="min-h-screen bg-[oklch(0.97_0.012_75)]">
@@ -31,29 +44,46 @@ function AppointmentThankYouContent() {
                 <CheckCircle2 size={34} />
               </div>
               <p className="mb-4 text-xs font-bold uppercase tracking-[0.28em] text-[oklch(0.60_0.08_65)]">
-                Appointment Request Prepared
+                Appointment Request Saved
               </p>
               <h1 className="mb-5 text-4xl font-bold leading-tight text-[oklch(0.15_0.02_60)] md:text-5xl" style={{ fontFamily: "var(--font-cormorant), var(--font-noto-serif), serif" }}>
-                Continue To WhatsApp Confirmation
+                Final Step: Send Your Request on WhatsApp
               </h1>
-              <p className="mx-auto mb-8 max-w-2xl text-base leading-8 text-[oklch(0.42_0.02_60)]">
-                Your appointment request has been prepared. Please send it through WhatsApp so Master Qiming can review your context and confirm the next step.
+              <p className="mx-auto mb-5 max-w-2xl text-base leading-8 text-[oklch(0.42_0.02_60)]">
+                Your appointment request has been saved. Please send the prepared WhatsApp message so Master Qiming can review your situation and confirm the next step directly.
               </p>
 
-              <a
-                href={whatsAppUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 bg-[oklch(0.60_0.08_65)] px-7 py-4 text-sm font-bold uppercase tracking-[0.14em] text-white transition hover:opacity-90"
-              >
-                Send Request On WhatsApp
-                <ArrowRight size={16} />
-              </a>
+              {leadId && (
+                <p className="mx-auto mb-8 inline-flex border border-[oklch(0.88_0.018_70)] bg-[oklch(0.98_0.006_75)] px-4 py-2 text-xs font-bold uppercase tracking-[0.12em] text-[oklch(0.38_0.02_60)]">
+                  Reference: {leadId}
+                </p>
+              )}
+
+              <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
+                <a
+                  href={whatsAppUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 bg-[oklch(0.60_0.08_65)] px-7 py-4 text-sm font-bold uppercase tracking-[0.14em] text-white transition hover:opacity-90"
+                >
+                  Send Request On WhatsApp
+                  <ArrowRight size={16} />
+                </a>
+                {message && (
+                  <button
+                    type="button"
+                    onClick={copyPreparedMessage}
+                    className="inline-flex items-center justify-center border border-[oklch(0.82_0.018_70)] px-7 py-4 text-sm font-bold uppercase tracking-[0.12em] text-[oklch(0.35_0.02_60)] transition hover:bg-[oklch(0.98_0.006_75)]"
+                  >
+                    {copyButtonLabel}
+                  </button>
+                )}
+              </div>
 
               {message && (
                 <div className="mt-8 text-left">
                   <p className="mb-2 text-xs font-bold uppercase tracking-[0.14em] text-[oklch(0.35_0.02_60)]">
-                    Prepared Message
+                    Prepared WhatsApp Message
                   </p>
                   <pre className="max-h-72 overflow-auto whitespace-pre-wrap border border-[oklch(0.88_0.018_70)] bg-[oklch(0.98_0.006_75)] p-4 text-xs leading-6 text-[oklch(0.32_0.02_60)]">
                     {message}
