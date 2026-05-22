@@ -12,6 +12,7 @@ function AppointmentThankYouContent() {
   const [whatsAppUrl, setWhatsAppUrl] = useState("https://wa.me/6589418791");
   const [message, setMessage] = useState("");
   const [leadId, setLeadId] = useState("");
+  const [redirectSeconds, setRedirectSeconds] = useState(3);
 
   useEffect(() => {
     const storedLeadId = window.sessionStorage.getItem("qimenAppointmentLeadId");
@@ -19,8 +20,24 @@ function AppointmentThankYouContent() {
     const storedMessage = window.sessionStorage.getItem("qimenAppointmentMessage");
 
     if (storedLeadId) setLeadId(storedLeadId);
-    if (storedUrl) setWhatsAppUrl(storedUrl);
     if (storedMessage) setMessage(storedMessage);
+
+    if (storedUrl) {
+      setWhatsAppUrl(storedUrl);
+
+      const countdown = window.setInterval(() => {
+        setRedirectSeconds((current) => Math.max(current - 1, 0));
+      }, 1000);
+
+      const redirect = window.setTimeout(() => {
+        window.location.href = storedUrl;
+      }, 3000);
+
+      return () => {
+        window.clearInterval(countdown);
+        window.clearTimeout(redirect);
+      };
+    }
   }, []);
 
   const copyButtonLabel = useMemo(() => {
@@ -47,10 +64,10 @@ function AppointmentThankYouContent() {
                 Appointment Request Saved
               </p>
               <h1 className="mb-5 text-4xl font-bold leading-tight text-[oklch(0.15_0.02_60)] md:text-5xl" style={{ fontFamily: "var(--font-cormorant), var(--font-noto-serif), serif" }}>
-                Final Step: Send Your Request on WhatsApp
+                Redirecting You to WhatsApp
               </h1>
               <p className="mx-auto mb-5 max-w-2xl text-base leading-8 text-[oklch(0.42_0.02_60)]">
-                Your appointment request has been saved. Please send the prepared WhatsApp message so Master Qiming can review your situation and confirm the next step directly.
+                Your appointment request has been saved. WhatsApp will open automatically in {redirectSeconds} seconds so you can send the prepared message to Master Qiming.
               </p>
 
               {leadId && (
@@ -62,11 +79,9 @@ function AppointmentThankYouContent() {
               <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
                 <a
                   href={whatsAppUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 bg-[oklch(0.60_0.08_65)] px-7 py-4 text-sm font-bold uppercase tracking-[0.14em] text-white transition hover:opacity-90"
                 >
-                  Send Request On WhatsApp
+                  Open WhatsApp Now
                   <ArrowRight size={16} />
                 </a>
                 {message && (
@@ -81,14 +96,14 @@ function AppointmentThankYouContent() {
               </div>
 
               {message && (
-                <div className="mt-8 text-left">
-                  <p className="mb-2 text-xs font-bold uppercase tracking-[0.14em] text-[oklch(0.35_0.02_60)]">
-                    Prepared WhatsApp Message
-                  </p>
-                  <pre className="max-h-72 overflow-auto whitespace-pre-wrap border border-[oklch(0.88_0.018_70)] bg-[oklch(0.98_0.006_75)] p-4 text-xs leading-6 text-[oklch(0.32_0.02_60)]">
+                <details className="mt-8 text-left">
+                  <summary className="cursor-pointer text-xs font-bold uppercase tracking-[0.14em] text-[oklch(0.35_0.02_60)]">
+                    View Prepared WhatsApp Message
+                  </summary>
+                  <pre className="mt-3 max-h-72 overflow-auto whitespace-pre-wrap border border-[oklch(0.88_0.018_70)] bg-[oklch(0.98_0.006_75)] p-4 text-xs leading-6 text-[oklch(0.32_0.02_60)]">
                     {message}
                   </pre>
-                </div>
+                </details>
               )}
 
               <div className="mt-8">
