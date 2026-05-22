@@ -1,7 +1,7 @@
 "use client";
 
 import { FormEvent, useMemo, useState } from "react";
-import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { ArrowRight, CheckCircle2, Loader2 } from "lucide-react";
 import { LanguageProvider } from "@/contexts/language-context";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
@@ -42,10 +42,11 @@ const initialForm: AppointmentFormState = {
   background: "",
 };
 
-function buildMessage(form: AppointmentFormState) {
+function buildMessage(form: AppointmentFormState, leadId?: string) {
   return [
     "Hello Master Qiming, I would like to request a private Qimen Strategy appointment.",
     "",
+    leadId ? `Appointment Reference: ${leadId}` : "Appointment Reference: Pending",
     `Name: ${form.name || "-"}`,
     `WhatsApp / Phone: ${form.phone || "-"}`,
     `Email: ${form.email || "-"}`,
@@ -56,27 +57,75 @@ function buildMessage(form: AppointmentFormState) {
     "",
     "Background / Question:",
     form.background || "-",
+    "",
+    "Sent from: qmfeng.com/appointment",
   ].join("\n");
+}
+
+function collectUtm() {
+  if (typeof window === "undefined") return {};
+
+  const params = new URLSearchParams(window.location.search);
+  const utmKeys = ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content", "gclid", "gbraid", "wbraid"];
+
+  return Object.fromEntries(
+    utmKeys
+      .map((key) => [key, params.get(key) || ""] as const)
+      .filter(([, value]) => value),
+  );
+}
+
+function buildWhatsAppUrl(message: string) {
+  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
 }
 
 function AppointmentPageContent() {
   const [form, setForm] = useState<AppointmentFormState>(initialForm);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState("");
 
-  const waUrl = useMemo(() => {
-    const message = buildMessage(form);
-    return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
-  }, [form]);
+  const waUrl = useMemo(() => buildWhatsAppUrl(buildMessage(form)), [form]);
 
   function updateField<K extends keyof AppointmentFormState>(field: K, value: AppointmentFormState[K]) {
     setForm((current) => ({ ...current, [field]: value }));
   }
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    const message = buildMessage(form);
-    window.sessionStorage.setItem("qimenAppointmentMessage", message);
-    window.sessionStorage.setItem("qimenAppointmentWhatsAppUrl", waUrl);
-    window.location.href = "/appointment/thank-you";
+    setIsSubmitting(true);
+    setSubmitError("");
+
+    try {
+      const response = await fetch("/api/appointment", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({
+          ...form,
+          pageUrl: window.location.href,
+          referrer: document.referrer,
+          userAgent: window.navigator.userAgent,
+          utm: collectUtm(),
+        }),
+      });
+
+      const result = (await response.json()) as { ok?: boolean; leadId?: string; error?: string };
+
+      if (!response.ok || !result.ok) {
+        throw new Error(result.error || "Unable to save this appointment request.");
+      }
+
+      const message = buildMessage(form, result.leadId);
+      const finalWaUrl = buildWhatsAppUrl(message);
+
+      window.sessionStorage.setItem("qimenAppointmentLeadId", result.leadId || "");
+      window.sessionStorage.setItem("qimenAppointmentMessage", message);
+      window.sessionStorage.setItem("qimenAppointmentWhatsAppUrl", finalWaUrl);
+      window.location.href = "/appointment/thank-you";
+    } catch (error) {
+      const message = error instanceof Error ? error.message : "Unable to save this appointment request.";
+      setSubmitError(message);
+      setIsSubmitting(false);
+    }
   }
 
   return (
@@ -115,11 +164,12 @@ function AppointmentPageContent() {
                   See the situation more clearly before your next move.
                 </h2>
                 <p className="mb-8 text-sm leading-7 text-white/72 md:text-base">
-                  This appointment form prepares a structured consultation request and guides you to WhatsApp for direct confirmation.
+                  This appointment form saves your consultation request first, then prepares a structured WhatsApp message for direct confirmation.
                 </p>
                 <div className="space-y-4">
                   {[
                     "Private appointment-based consultation",
+                    "Your request is recorded before WhatsApp confirmation",
                     "Suitable for one important decision or business review",
                     "English and Chinese communication available",
                     "Final scope and fee are confirmed after context review",
@@ -175,12 +225,28 @@ function AppointmentPageContent() {
                     <textarea required rows={6} value={form.background} onChange={(event) => updateField("background", event.target.value)} className="w-full border border-[oklch(0.84_0.018_70)] bg-white px-4 py-3 text-sm leading-7 outline-none transition focus:border-[oklch(0.60_0.08_65)]" placeholder="Briefly describe the decision, situation, timing, options or concerns." />
                   </label>
                 </div>
-                <button type="submit" className="mt-7 inline-flex w-full items-center justify-center gap-2 bg-[oklch(0.60_0.08_65)] px-7 py-4 text-sm font-bold uppercase tracking-[0.14em] text-white transition hover:opacity-90 md:w-auto">
-                  Continue To Appointment Review
-                  <ArrowRight size={16} />
+
+                {submitError && (
+                  <div className="mt-5 border border-red-200 bg-red-50 px-4 py-3 text-sm leading-6 text-red-700">
+                    {submitError}
+                  </div>
+                )}
+
+                <button disabled={isSubmitting} type="submit" className="mt-7 inline-flex w-full items-center justify-center gap-2 bg-[oklch(0.60_0.08_65)] px-7 py-4 text-sm font-bold uppercase tracking-[0.14em] text-white transition hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-65 md:w-auto">
+                  {isSubmitting ? (
+                    <>
+                      Saving Request
+                      <Loader2 className="h-4 w-4 animate-spin" />
+                    </>
+                  ) : (
+                    <>
+                      Save Request & Continue
+                      <ArrowRight size={16} />
+                    </>
+                  )}
                 </button>
                 <p className="mt-4 text-xs leading-6 text-[oklch(0.45_0.02_60)]">
-                  After submitting, you will continue to a confirmation page where you can send the prepared request through WhatsApp.
+                  Your request is saved first. You will then continue to a confirmation page where the prepared WhatsApp message can be sent directly.
                 </p>
               </form>
             </div>
