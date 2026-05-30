@@ -49,39 +49,42 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.qmfeng.com"),
   title: {
     default:
-      "Qimen Strategy Singapore｜启明遁甲｜战略智慧决策方法",
+      "QIMEN STRATEGY｜Enterprise Strategic Decision Advisory Singapore｜启明遁甲",
     template: "%s | Qimen Strategy Singapore",
   },
   description:
-    "启明遁甲 Qimen Strategy 由黄启明大师主理，是一套以奇门遁甲为根基的战略智慧决策方法。帮助企业主、创始人、高管与个人在重要行动前看清时机、方向、人事关系与局势风险，做出更清醒的战略判断。",
+    "QIMEN STRATEGY｜启明遁甲 provides Enterprise Strategic Decision Advisory for business owners, founders and key decision-makers in Singapore, covering annual strategic forecasting, business and personal Feng Shui alignment, people and partnership assessment, and major decision advisory.",
   keywords: [
     "Qimen Strategy Singapore",
-    "Qi Men Strategy Singapore",
-    "Strategic Wisdom Decision Method",
-    "Qimen Decision Consultation",
-    "Qi Men Dun Jia Singapore",
-    "Executive Decision Advisory Singapore",
-    "business decision consultant Singapore",
-    "business timing consultation Singapore",
+    "Enterprise Strategic Decision Advisory Singapore",
+    "Enterprise Decision Advisory Singapore",
+    "Founder Strategic Advisory Singapore",
+    "Annual Strategic Forecast",
+    "Business Feng Shui Singapore",
+    "Feng Shui Alignment Singapore",
+    "People and Partnership Assessment",
+    "Qi Men Dun Jia Business Strategy",
+    "Strategic Decision Consultant Singapore",
     "Master Huang Qiming",
     "Huang Qiming Singapore",
     "启明遁甲",
+    "企业战略决策顾问",
+    "企业战略顾问",
+    "年度战略预判",
+    "企业风水布局",
+    "人事合作关系判断",
+    "企业主战略陪跑",
     "黄启明大师",
-    "奇门决策",
-    "战略决策",
-    "战略智慧决策方法",
-    "企业主战略顾问",
-    "奇门遁甲",
-    "新加坡奇门遁甲"
+    "奇门遁甲"
   ],
   authors: [{ name: "Master Huang Qiming 黄启明大师" }],
   alternates: {
     canonical: "https://www.qmfeng.com",
   },
   openGraph: {
-    title: "Qimen Strategy Singapore | 启明遁甲战略智慧决策方法",
+    title: "QIMEN STRATEGY｜Enterprise Strategic Decision Advisory Singapore｜启明遁甲",
     description:
-      "Qimen Strategy helps business owners and decision makers see timing, direction, people and risk before important decisions.",
+      "Enterprise Strategic Decision Advisory for business owners, founders and key decision-makers: annual strategy, Feng Shui alignment, people assessment and founder advisory.",
     url: "https://www.qmfeng.com",
     siteName: "Qimen Strategy Singapore",
     images: [
@@ -89,7 +92,7 @@ export const metadata: Metadata = {
         url: OG_IMAGE,
         width: 1200,
         height: 630,
-        alt: "Qimen Strategy Singapore by Master Huang Qiming",
+        alt: "QIMEN STRATEGY Enterprise Strategic Decision Advisory Singapore by Master Huang Qiming",
       },
     ],
     locale: "zh_SG",
@@ -97,9 +100,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Qimen Strategy Singapore | Strategic Wisdom Decision Method",
+    title: "QIMEN STRATEGY | Enterprise Strategic Decision Advisory Singapore",
     description:
-      "Strategic wisdom decision advisory for timing, direction, people and risk.",
+      "QIMEN STRATEGY helps business owners and founders see timing, direction, people and environment before important decisions.",
     images: [OG_IMAGE],
   },
   robots: {
