@@ -37,44 +37,45 @@ type ServiceCard = {
 const services: ServiceCard[] = [
   {
     id: 1,
-    icon: Crown,
-    titleZh: "单项奇门决策咨询",
-    titleEn: "Single Qimen Strategy Session",
-    visualZh: "单项奇门决策咨询",
-    visualEn: "Single Qimen Strategy Session",
-    visualSubZh: "一个关键决定 · 先看清局势",
-    visualSubEn: "One Critical Decision · See the Situation First",
-    painZh: "针对一个关键商业或人生决定，看清时机、方向、人事与风险。",
+    icon: TrendingUp,
+    titleZh: "年度战略预判",
+    titleEn: "Annual Strategic Forecast",
+    visualZh: "年度战略预判",
+    visualEn: "Annual Strategic Forecast",
+    visualSubZh: "年度方向 · 月度趋势 · 关键时机",
+    visualSubEn: "Annual Direction · Monthly Trends · Key Timing",
+    painZh:
+      "为企业主判断一整年的战略节奏，包括年度总体发展方向、企业核心定位、年度批语、12个月月度趋势判断与关键月份提醒。",
     painEn:
-      "For one critical business or life decision, clarify timing, direction, people dynamics and risk.",
-    audienceZh: "适合：合作、投资、签约、任用、转型、人生方向、关系与婚姻决策。",
+      "A yearly strategic reading for business owners, covering overall development direction, core positioning, annual guidance, monthly trend reading and key timing reminders.",
+    audienceZh: "核心价值：提前看清什么时候进、什么时候守、什么时候调整，减少错误时机带来的高成本试错。",
     audienceEn:
-      "For partnership, investment, signing, key appointment, transition, life direction, relationship and marriage decisions.",
-    feeZh: "预约制咨询",
-    feeEn: "Private Session",
-    href: "/decision",
+      "Core value: know when to move, hold, adjust and avoid high-cost decisions caused by wrong timing.",
+    feeZh: "根据范围确认",
+    feeEn: "Based on Scope",
+    href: "/enterprise-strategic-advisory",
     accentColor: "oklch(0.60 0.08 65)",
     accentBg: "oklch(0.96 0.02 75)",
     accentBorder: "oklch(0.88 0.03 70)",
   },
   {
     id: 2,
-    icon: TrendingUp,
-    titleZh: "季度奇门决策顾问",
-    titleEn: "Quarterly Qimen Strategy Advisory",
-    visualZh: "季度奇门决策顾问",
-    visualEn: "Quarterly Qimen Strategy Advisory",
-    visualSubZh: "企业主持续关键决策支持",
-    visualSubEn: "Ongoing Support for Business Decisions",
-    painZh: "企业主推荐起步方案，用季度陪伴式咨询支持持续关键决策。",
+    icon: Crown,
+    titleZh: "企业与个人风水布局",
+    titleEn: "Feng Shui Alignment for Business & Founder",
+    visualZh: "企业与个人风水布局",
+    visualEn: "Business & Founder Feng Shui Alignment",
+    visualSubZh: "企业空间 · 个人住宅 · 决策环境",
+    visualSubEn: "Business Space · Residence · Decision Environment",
+    painZh:
+      "结合企业办公室、商铺、商业空间与企业主个人住宅进行风水布局，协助稳定经营环境、财富承载、决策状态与企业发展势能。",
     painEn:
-      "The recommended starting point for business owners who need ongoing decision support across a quarter.",
-    audienceZh: "适合：企业转型、业务扩张、团队调整、合作谈判与阶段性复盘。",
-    audienceEn:
-      "For business transition, expansion, team adjustment, negotiation and quarterly decision review.",
-    feeZh: "季度顾问 · 私密确认",
-    feeEn: "Private Arrangement",
-    href: "/qimen-strategy-business",
+      "A combined Feng Shui review of the business space and the founder's personal residence to support decision clarity, wealth flow, stability and business momentum.",
+    audienceZh: "核心价值：让企业空间与企业主个人状态形成更稳定的支持系统。",
+    audienceEn: "Core value: align the business environment and the founder's personal field to support more stable growth.",
+    feeZh: "预约制顾问",
+    feeEn: "By Appointment",
+    href: "/enterprise-strategic-advisory",
     accentColor: "oklch(0.72 0.12 70)",
     accentBg: "oklch(0.97 0.03 85)",
     accentBorder: "oklch(0.90 0.04 80)",
@@ -82,44 +83,45 @@ const services: ServiceCard[] = [
   },
   {
     id: 3,
-    icon: Crown,
-    titleZh: "年度奇门决策顾问",
-    titleEn: "Annual Qimen Strategy Advisory",
-    visualZh: "年度奇门决策顾问",
-    visualEn: "Annual Qimen Strategy Advisory",
-    visualSubZh: "企业主 · 创始人 · 长期关键决策",
-    visualSubEn: "Business Owners · Founders · Long-Term Decisions",
-    painZh: "为企业主、创始人与长期决策者提供持续判断支持。",
+    icon: Gem,
+    titleZh: "人事与合作关系判断",
+    titleEn: "People & Partnership Assessment",
+    visualZh: "人事与合作关系判断",
+    visualEn: "People & Partnership Assessment",
+    visualSubZh: "管理层 · 供应链 · 合作伙伴",
+    visualSubEn: "Management · Supply Chain · Partners",
+    painZh:
+      "协助企业主判断管理层、核心员工、供应链、合作伙伴与关键人事关系，识别助力、阻力与潜在风险。",
     painEn:
-      "Ongoing decision advisory support for business owners, founders and long-term decision makers.",
-    audienceZh: "适合：年度规划、季度复盘、关键合作、任用、扩张与长期方向。",
-    audienceEn:
-      "For annual planning, quarterly reviews, key partnerships, appointments, expansion and long-term direction.",
-    feeZh: "年度顾问 · 私密确认",
-    feeEn: "By Private Arrangement",
-    href: "/qimen-strategy-business",
+      "Assessment of management, key employees, suppliers, cooperation partners and important business relationships before deeper commitment.",
+    audienceZh: "核心价值：看清谁是助力，谁是风险，谁不适合进入企业核心局。",
+    audienceEn: "Core value: know who supports the business, who creates risk and who should not enter the core structure.",
+    feeZh: "私密判断",
+    feeEn: "Private Review",
+    href: "/enterprise-strategic-advisory",
     accentColor: "oklch(0.64 0.09 70)",
     accentBg: "oklch(0.96 0.02 75)",
     accentBorder: "oklch(0.88 0.03 70)",
   },
   {
     id: 4,
-    icon: Gem,
-    titleZh: "重大项目奇门决策顾问",
-    titleEn: "Major Project Qimen Strategy Advisory",
-    visualZh: "重大项目奇门决策顾问",
-    visualEn: "Major Project Qimen Strategy Advisory",
-    visualSubZh: "重大项目 · 转型升级 · 高价值决策",
-    visualSubEn: "Major Projects · Transformation · High-Value Decisions",
-    painZh: "针对重大商业项目、转型升级、跨境拓展与高价值战略布局。",
+    icon: Zap,
+    titleZh: "企业主战略陪跑顾问",
+    titleEn: "Founder Strategic Advisory",
+    visualZh: "企业主战略陪跑顾问",
+    visualEn: "Founder Strategic Advisory",
+    visualSubZh: "扩张 · 投资 · 签约 · 转型",
+    visualSubEn: "Expansion · Investment · Signing · Transformation",
+    painZh:
+      "长期陪伴企业主在扩张、投资、签约、搬迁、合作、团队调整与业务转型等重大节点做出战略判断。",
     painEn:
-      "For major business projects, transformation, cross-border expansion and high-value strategic moves.",
-    audienceZh: "适合：重大项目、企业重组、品牌升级与高标的合作。",
+      "Long-term strategic advisory support for founders during major decisions such as expansion, investment, relocation, cooperation, signing, restructuring and transformation.",
+    audienceZh: "核心价值：在重大行动前，帮助企业主看清时机、方向、人和与环境，减少盲动，提高决策稳定性。",
     audienceEn:
-      "For major projects, restructuring, brand transformation and high-value partnerships.",
-    feeZh: "项目制顾问 · 提案确认",
-    feeEn: "Proposal Based",
-    href: "/qimen-strategy-business",
+      "Core value: support the founder before major decisions with clearer timing, direction, people judgment and environmental awareness.",
+    feeZh: "长期顾问",
+    feeEn: "Retainer Advisory",
+    href: "/enterprise-strategic-advisory",
     accentColor: "oklch(0.60 0.08 65)",
     accentBg: "oklch(0.96 0.02 75)",
     accentBorder: "oklch(0.88 0.03 70)",
@@ -142,14 +144,14 @@ export default function ServiceCards() {
             className="mb-3 text-xs uppercase tracking-[0.25em]"
             style={{ fontFamily: "var(--font-lato), sans-serif", color: "oklch(0.60 0.08 65)" }}
           >
-            {t("奇门决策顾问方案", "Qimen Strategy Advisory Programs")}
+            {t("企业战略决策顾问服务", "Enterprise Strategic Decision Advisory")}
           </p>
 
           <h2
             className="mb-5 text-3xl font-bold leading-tight md:text-5xl"
             style={{ fontFamily: "var(--font-cormorant), var(--font-noto-serif), serif", color: "oklch(0.15 0.02 60)" }}
           >
-            {t("关键决定前，先看清局势", "See the Situation Clearly Before You Decide")}
+            {t("关键决策前，先看清全局", "See the Whole Game Before You Decide")}
           </h2>
 
           <p
@@ -157,8 +159,8 @@ export default function ServiceCards() {
             style={{ fontFamily: "var(--font-lato), var(--font-noto-sans), sans-serif", color: "oklch(0.42 0.02 60)" }}
           >
             {t(
-              "启明遁甲以 16 年奇门决策实战经验为根基，长期服务企业主与个人关键决策。所有咨询均为预约制，根据问题背景进行私密判断，费用将在沟通范围后确认。",
-              "Qimen Strategy is rooted in 16 years of practical Qimen decision advisory experience, serving business owners and individuals facing critical decisions. All sessions are by appointment; fees are confirmed after private context review."
+              "启明遁甲以 16 年奇门决策实战经验为根基，结合年度战略预判、企业与个人风水布局、人事合作关系判断及重大决策陪跑，长期服务企业主、创始人与关键决策者。",
+              "QIMEN STRATEGY supports business owners, founders and key decision-makers through annual strategic forecasting, business and personal Feng Shui alignment, people and partnership assessment, and major decision advisory."
             )}
           </p>
         </motion.div>
@@ -179,7 +181,7 @@ export default function ServiceCards() {
             >
               {service.recommended && (
                 <div className="absolute right-5 top-5 z-20 bg-[oklch(0.72_0.12_70)] px-3 py-1 text-[0.62rem] font-bold uppercase tracking-[0.14em] text-black">
-                  {t("最推荐", "Most Recommended")}
+                  {t("核心服务", "Core Service")}
                 </div>
               )}
 
@@ -254,7 +256,7 @@ export default function ServiceCards() {
                   {t(service.audienceZh, service.audienceEn)}
                 </p>
 
-                <div className="mt-auto flex items-center justify-between gap-4">
+                <div className="mt-auto flex items-center justify-between gap-4 border-t border-[oklch(0.88_0.018_70)] pt-6">
                   <p
                     className="text-sm font-bold uppercase tracking-[0.14em] md:text-base"
                     style={{ fontFamily: "var(--font-lato), sans-serif", color: service.accentColor }}
@@ -267,7 +269,7 @@ export default function ServiceCards() {
                     className="inline-flex items-center justify-center gap-2 px-5 py-3 text-xs font-bold uppercase tracking-[0.14em] transition-all duration-300 hover:opacity-90 hover:shadow-[0_10px_25px_rgba(0,0,0,0.12)]"
                     style={{ fontFamily: "var(--font-lato), sans-serif", background: service.accentColor, color: "oklch(0.98 0.005 75)" }}
                   >
-                    {t("了解咨询", "View Consultation")}
+                    {t("了解企业顾问", "View Advisory")}
                     <ArrowRight size={15} />
                   </Link>
                 </div>
@@ -281,18 +283,18 @@ export default function ServiceCards() {
             <Zap className="text-[oklch(0.72_0.12_70)]" size={24} />
             <div>
               <p className="text-sm font-bold uppercase tracking-[0.18em] text-[oklch(0.72_0.12_70)]">
-                {t("加急优先处理", "Priority Review Available")}
+                {t("企业主私人战略顾问", "Private Founder Strategic Advisory")}
               </p>
               <p className="text-sm text-white/72">
-                {t("适用于紧急个案，可在私密沟通后确认是否安排优先复盘。", "For urgent cases, priority review may be arranged after private context review.")}
+                {t("适用于年度预判、企业风水、人事合作判断与重大决策陪跑。", "For annual strategy, Feng Shui alignment, people assessment and major decision advisory.")}
               </p>
             </div>
           </div>
           <Link
-            href="/qimen-strategy-business"
+            href="/enterprise-strategic-advisory"
             className="text-sm font-bold uppercase tracking-[0.14em] text-[oklch(0.72_0.12_70)] transition hover:text-white"
           >
-            {t("了解咨询", "View Consultation")} →
+            {t("查看企业战略顾问", "View Enterprise Advisory")} →
           </Link>
         </div>
       </div>
