@@ -10,17 +10,22 @@ const WA_LINK =
 export const metadata: Metadata = {
   title: "Enterprise Strategic Decision Advisory｜QIMEN STRATEGY Singapore",
   description:
-    "QIMEN STRATEGY｜启明遁甲 provides Enterprise Strategic Decision Advisory for business owners, founders and key decision-makers in Singapore, covering annual strategic forecasting, Feng Shui alignment, people assessment and major decision advisory.",
+    "QIMEN STRATEGY｜启明遁甲 provides Enterprise Strategic Decision Advisory for business owners, founders and key decision-makers in Singapore, covering timing, environment, people dynamics, founder inner mastery, strategic growth, annual strategic forecasting, Feng Shui alignment and major decision advisory.",
   keywords: [
     "Enterprise Strategic Decision Advisory Singapore",
     "Qimen Strategy Singapore",
     "Founder Strategic Advisory",
+    "Founder Inner Mastery",
+    "Strategic Growth Advisory",
     "Annual Strategic Forecast",
     "Business Feng Shui Singapore",
     "People and Partnership Assessment",
     "Master Huang Qiming",
     "启明遁甲",
     "企业战略决策顾问",
+    "天时地利人和",
+    "创始人内在修为",
+    "企业成长陪跑",
     "企业风水布局",
     "年度战略预判"
   ],
@@ -30,7 +35,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Enterprise Strategic Decision Advisory｜QIMEN STRATEGY Singapore",
     description:
-      "An Eastern strategic decision advisory system for business owners, founders and key decision-makers before important decisions.",
+      "An Eastern strategic decision advisory system for business owners and founders, integrating timing, environment, people dynamics, founder inner mastery and strategic growth before important decisions.",
     url: "https://www.qmfeng.com/enterprise-strategic-advisory",
     type: "website",
     siteName: "Qimen Strategy Singapore",
@@ -97,6 +102,44 @@ const pillars = [
   },
 ];
 
+const fiveDimensions = [
+  {
+    title: "Timing",
+    zh: "天时",
+    body:
+      "Read when to move, hold, wait, adjust or avoid action before resources are committed.",
+    bodyZh: "判断什么时候进、什么时候守、什么时候等待、什么时候调整，避免在错误时机投入过高成本。",
+  },
+  {
+    title: "Environment",
+    zh: "地利",
+    body:
+      "Assess business space, location, office layout, Feng Shui structure and market environment as strategic conditions.",
+    bodyZh: "判断企业空间、位置、办公室布局、风水格局与市场环境是否支持企业发展。",
+  },
+  {
+    title: "People Dynamics",
+    zh: "人和",
+    body:
+      "Review management, staff, partners, suppliers and key relationships to identify support, friction and hidden risk.",
+    bodyZh: "判断管理层、员工、合伙人、供应链与关键关系中的助力、阻力与潜在风险。",
+  },
+  {
+    title: "Founder Inner Mastery",
+    zh: "创始人内在修为",
+    body:
+      "Support the founder's judgment, emotional steadiness, clarity, capacity and decision state under pressure.",
+    bodyZh: "协助企业主提升判断力、情绪稳定性、定力、承载力与关键压力下的决策状态。",
+  },
+  {
+    title: "Strategic Growth",
+    zh: "企业成长",
+    body:
+      "Connect the founder's growth with the company's next stage, so expansion, structure and direction can move together.",
+    bodyZh: "将企业主个人成长与企业下一阶段发展结合，让扩张、结构调整与战略方向形成同步。",
+  },
+];
+
 const audience = [
   "Business owners and founders",
   "Chain store owners and SME operators",
@@ -119,7 +162,7 @@ const process = [
   ["Initial Inquiry", "初步沟通", "Understand the business background, current situation, decision pressure and advisory needs."],
   ["Scope Confirmation", "确认服务范围", "Confirm whether the case is suitable for single decision, enterprise audit, annual advisory or founder retainer."],
   ["Information Collection", "资料收集", "Review company background, key people, floor plans, important dates or cooperation context when required."],
-  ["Strategic Assessment", "战略判断", "Assess the situation through Timing, Direction, People and Environment."],
+  ["Strategic Assessment", "战略判断", "Assess the situation through Timing, Environment, People Dynamics, Founder Inner Mastery and Strategic Growth."],
   ["Advisory Output", "顾问建议", "Provide clear guidance: proceed, delay, adjust, avoid, restructure or review further."],
   ["Review & Adjustment", "后续复盘", "Annual and premium clients may continue with monthly or quarterly reviews."],
 ];
@@ -199,6 +242,32 @@ export default function EnterpriseStrategicAdvisoryPage() {
 
           <section className="px-4 py-20 md:py-28">
             <div className="container mx-auto max-w-6xl">
+              <p className="text-xs font-bold uppercase tracking-[0.32em] text-[#d6ad63]">Five Dimensions of Qimen Strategy</p>
+              <h2 className="mt-4 max-w-5xl text-3xl font-semibold leading-tight text-[#f4dfb0] md:text-5xl">
+                天时 · 地利 · 人和 · 修为 · 成长
+              </h2>
+              <p className="mt-6 max-w-4xl text-base leading-8 text-white/68 md:text-lg">
+                QIMEN STRATEGY integrates Timing, Environment, People Dynamics, Founder Inner Mastery and Strategic Growth. It is designed to help business owners read external conditions and internal decision capacity before important business moves.
+              </p>
+              <p className="mt-3 max-w-4xl text-sm leading-7 text-white/56 md:text-base">
+                启明遁甲不只判断外部局势，也关注企业主自身的判断力、定力、承载力与成长节奏。真正的企业战略决策，不只是看外部机会，也要看创始人是否有能力承接下一阶段的发展。
+              </p>
+              <div className="mt-12 grid gap-5 md:grid-cols-5">
+                {fiveDimensions.map((item, index) => (
+                  <article key={item.title} className="border border-[#d6ad63]/25 bg-white/[0.035] p-5">
+                    <p className="text-sm font-bold text-[#d6ad63]">0{index + 1}</p>
+                    <h3 className="mt-3 text-xl font-semibold leading-tight text-[#f4dfb0]">{item.title}</h3>
+                    <p className="mt-2 text-lg font-semibold text-[#d6ad63]">{item.zh}</p>
+                    <p className="mt-5 text-sm leading-7 text-white/62">{item.body}</p>
+                    <p className="mt-3 text-sm leading-7 text-white/48">{item.bodyZh}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section className="border-y border-[#d6ad63]/20 bg-[#070707] px-4 py-20 md:py-28">
+            <div className="container mx-auto max-w-6xl">
               <p className="text-xs font-bold uppercase tracking-[0.32em] text-[#d6ad63]">Four Core Advisory Services</p>
               <h2 className="mt-4 max-w-4xl text-3xl font-semibold leading-tight text-[#f4dfb0] md:text-5xl">
                 Annual Forecast · Feng Shui Alignment · People Assessment · Founder Advisory
@@ -222,7 +291,7 @@ export default function EnterpriseStrategicAdvisoryPage() {
             </div>
           </section>
 
-          <section className="border-y border-[#d6ad63]/20 bg-[#070707] px-4 py-20 md:py-28">
+          <section className="px-4 py-20 md:py-28">
             <div className="container mx-auto max-w-6xl">
               <p className="text-xs font-bold uppercase tracking-[0.32em] text-[#d6ad63]">Who This Is For</p>
               <h2 className="mt-4 max-w-4xl text-3xl font-semibold leading-tight text-[#f4dfb0] md:text-5xl">
@@ -239,7 +308,7 @@ export default function EnterpriseStrategicAdvisoryPage() {
             </div>
           </section>
 
-          <section className="px-4 py-20 md:py-28">
+          <section className="border-y border-[#d6ad63]/20 bg-[#070707] px-4 py-20 md:py-28">
             <div className="container mx-auto max-w-6xl">
               <p className="text-xs font-bold uppercase tracking-[0.32em] text-[#d6ad63]">Advisory Process</p>
               <h2 className="mt-4 max-w-4xl text-3xl font-semibold leading-tight text-[#f4dfb0] md:text-5xl">
