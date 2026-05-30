@@ -8,28 +8,34 @@ export default function BrandWorldviewSection() {
 
   const pillars = [
     {
-      zh: "时机判断",
+      zh: "天时",
       en: "Timing",
-      descZh: "什么时候该进、该守、该等，决定了行动的成本与结果。",
-      descEn: "Know when to move, hold, wait or redirect before the cost becomes too high.",
+      descZh: "判断什么时候该进、该守、该等、该调整，避免在错误时机消耗过高成本。",
+      descEn: "Know when to move, hold, wait or adjust before the cost becomes too high.",
     },
     {
-      zh: "方向选择",
-      en: "Direction",
-      descZh: "在多个选择中看清哪条路径更顺势、更少消耗。",
-      descEn: "Compare options and identify which path is more aligned and less draining.",
+      zh: "地利",
+      en: "Environment",
+      descZh: "结合企业空间、方位、办公室、门店与住宅格局，判断环境是否支持发展。",
+      descEn: "Assess business space, direction, office, shop and residence as strategic conditions.",
     },
     {
-      zh: "人事关系",
+      zh: "人和",
       en: "People",
-      descZh: "合作、团队、谈判与关键人物，往往决定事情能否成局。",
-      descEn: "Partnerships, teams, negotiations and key people often determine whether a decision can succeed.",
+      descZh: "看清管理层、员工、合伙人、供应链与关键关系中的助力、阻力与风险。",
+      descEn: "Read management, staff, partners, suppliers and key relationships before deeper commitment.",
     },
     {
-      zh: "局势风险",
-      en: "Risk Pattern",
-      descZh: "提前看见隐藏阻力、盲区与错误代价，减少关键决策的试错。",
-      descEn: "Recognise hidden resistance, blind spots and potential cost before committing to action.",
+      zh: "修为",
+      en: "Inner Mastery",
+      descZh: "关注企业主的判断力、定力、情绪稳定性、承载力与关键压力下的决策状态。",
+      descEn: "Support the founder's judgment, steadiness, capacity and decision state under pressure.",
+    },
+    {
+      zh: "成长",
+      en: "Growth",
+      descZh: "将企业主个人成长与企业下一阶段发展结合，让战略、组织与空间同步升级。",
+      descEn: "Connect founder growth with the company's next stage, structure and strategic direction.",
     },
   ];
 
@@ -38,29 +44,29 @@ export default function BrandWorldviewSection() {
       <div className="container">
         <div className="mx-auto max-w-5xl text-center">
           <p className="mb-5 text-lg font-bold uppercase tracking-[0.34em] text-[oklch(0.55_0.08_65)] md:text-xl">
-            {t("战略智慧决策方法", "Strategic Wisdom Decision Method")}
+            {t("企业战略决策智慧", "Enterprise Strategic Decision Wisdom")}
           </p>
           <h2 className="text-4xl font-semibold leading-tight text-[oklch(0.18_0.02_70)] md:text-6xl">
-            {t("启明遁甲 · 奇门决策", "QIMEN STRATEGY")}
+            {t("启明遁甲五维战略模型", "The Five Dimensions of Qimen Strategy")}
           </h2>
-          <p className="mt-5 text-base font-semibold uppercase tracking-[0.24em] text-[oklch(0.55_0.08_65)] md:text-lg">
-            SEE TIMING · DIRECTION · PEOPLE · RISK BEFORE YOU DECIDE
+          <p className="mt-5 text-base font-semibold uppercase tracking-[0.18em] text-[oklch(0.55_0.08_65)] md:text-lg">
+            TIMING · ENVIRONMENT · PEOPLE · INNER MASTERY · GROWTH
           </p>
           <p className="mx-auto mt-10 max-w-4xl text-lg leading-9 text-[oklch(0.32_0.02_70)] md:text-2xl">
             {t(
-              "启明遁甲是一套以奇门遁甲为根基的战略智慧决策方法。",
-              "Qimen Strategy is a strategic wisdom decision method rooted in Qi Men Dun Jia."
+              "启明遁甲以奇门遁甲为底层决策模型，结合天时、地利、人和、创始人内在修为与企业成长节奏，帮助企业主在关键行动前先看清全局。",
+              "Qimen Strategy integrates timing, environment, people dynamics, founder inner mastery and strategic growth to help business owners see the whole game before important action."
             )}
           </p>
-          <p className="mx-auto mt-8 max-w-3xl text-base leading-8 text-[oklch(0.38_0.02_70)] md:text-lg">
+          <p className="mx-auto mt-8 max-w-4xl text-base leading-8 text-[oklch(0.38_0.02_70)] md:text-lg">
             {t(
-              "由 Master Huang Qiming 主理，帮助企业主与个人在复杂局势中看清时机、方向、人事与风险，做出更清醒的战略判断。",
-              "Led by Master Huang Qiming to help business owners and individuals read timing, direction, people and risk before important moves."
+              "真正的企业战略决策，不只是判断外部机会，也要看企业主是否具备承接下一阶段发展的判断力、定力与承载力。",
+              "True enterprise decision-making is not only about external opportunity. It also depends on whether the founder has the judgment, steadiness and capacity to carry the next stage."
             )}
           </p>
         </div>
 
-        <div className="mt-16 grid gap-6 md:grid-cols-4">
+        <div className="mt-16 grid gap-6 md:grid-cols-5">
           {pillars.map((pillar) => (
             <div key={pillar.en} className="border border-[oklch(0.82_0.03_75)] bg-white/70 p-7 shadow-sm">
               <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-[oklch(0.55_0.08_65)]">
@@ -77,8 +83,8 @@ export default function BrandWorldviewSection() {
         </div>
 
         <div className="mt-12 flex justify-center">
-          <Link href="/qimen-strategy-business" className="border border-[oklch(0.55_0.08_65)] px-7 py-4 text-xs font-bold uppercase tracking-[0.18em] text-[oklch(0.30_0.03_70)] transition-colors hover:bg-[oklch(0.55_0.08_65)] hover:text-white">
-            {t("查看奇门决策顾问方案", "View Qimen Strategy Programs")}
+          <Link href="/enterprise-strategic-advisory" className="border border-[oklch(0.55_0.08_65)] px-7 py-4 text-xs font-bold uppercase tracking-[0.18em] text-[oklch(0.30_0.03_70)] transition-colors hover:bg-[oklch(0.55_0.08_65)] hover:text-white">
+            {t("查看企业战略顾问", "View Enterprise Advisory")}
           </Link>
         </div>
       </div>
