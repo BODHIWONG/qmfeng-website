@@ -135,13 +135,14 @@ export default function HeroSimple() {
             initial={{ opacity: 0, y: 22 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.38 }}
-            className="mt-9 grid max-w-4xl grid-cols-2 gap-4 border-y border-[#c89a45]/30 py-5 text-center text-sm font-semibold uppercase tracking-[0.18em] text-[#e6c785] md:grid-cols-4"
+            className="mt-9 grid max-w-5xl grid-cols-2 gap-4 border-y border-[#c89a45]/30 py-5 text-center text-sm font-semibold uppercase tracking-[0.14em] text-[#e6c785] md:grid-cols-5"
             style={{ fontFamily: "var(--font-lato), var(--font-noto-sans), sans-serif" }}
           >
-            <span>Timing · 时机</span>
-            <span>Direction · 方向</span>
+            <span>Timing · 天时</span>
+            <span>Environment · 地利</span>
             <span>People · 人和</span>
-            <span>Environment · 环境</span>
+            <span>Inner Mastery · 修为</span>
+            <span>Growth · 成长</span>
           </motion.div>
 
           <motion.div
