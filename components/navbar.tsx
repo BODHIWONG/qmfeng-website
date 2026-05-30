@@ -7,15 +7,14 @@ import { useLanguage } from "@/contexts/language-context";
 
 const LOGO_URL = "/logo-qimen-strategy.jpg";
 const WA_LINK =
-  "https://wa.me/6589418791?text=Hello%20Master%20Qiming%2C%20I%20would%20like%20to%20consult%20about%20Qimen%20Strategy.";
+  "https://wa.me/6589418791?text=Hello%20Master%20Qiming%2C%20I%20would%20like%20to%20consult%20about%20Enterprise%20Strategic%20Decision%20Advisory.";
 
 const serviceLinks = [
   { href: "/", zh: "首页", en: "Home" },
+  { href: "/enterprise-strategic-advisory", zh: "企业战略顾问", en: "Enterprise Advisory" },
   { href: "/qimen-strategy-business", zh: "启明遁甲", en: "Qimen Strategy" },
-  { href: "/decision", zh: "奇门决策", en: "Decision Advisory" },
-  { href: "/qimen-strategy-business", zh: "顾问方案", en: "Programs" },
   { href: "/insights", zh: "案例智库", en: "Case Library" },
-  { href: "/founder", zh: "黄启明", en: "Founder" },
+  { href: "/founder", zh: "黄启明大师", en: "Founder" },
 ];
 
 export default function Navbar() {
@@ -89,7 +88,7 @@ export default function Navbar() {
             rel="noopener noreferrer"
             className="border border-yellow-600 px-5 py-2 text-sm text-yellow-600 transition-all hover:bg-yellow-600 hover:text-black"
           >
-            {lang === "zh" ? "立即咨询" : "Consult Now"}
+            {lang === "zh" ? "预约咨询" : "Book Consultation"}
           </a>
         </div>
 
@@ -133,7 +132,7 @@ export default function Navbar() {
             rel="noopener noreferrer"
             className="mt-4 block text-yellow-500"
           >
-            {lang === "zh" ? "立即咨询" : "Consult Now"}
+            {lang === "zh" ? "预约咨询" : "Book Consultation"}
           </a>
         </div>
       )}
