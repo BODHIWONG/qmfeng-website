@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, MessageCircle } from "lucide-react";
 
 const WA_LINK =
-  "https://wa.me/6589418791?text=Hello%20Master%20Qiming%2C%20I%20would%20like%20to%20consult%20about%20Qimen%20Strategy.";
+  "https://wa.me/6589418791?text=Hello%20Master%20Qiming%2C%20I%20would%20like%20to%20consult%20about%20Enterprise%20Strategic%20Decision%20Advisory.";
 
 const BG_IMAGE = "/master-home-hero.png";
 
@@ -14,7 +14,7 @@ export default function HeroSimple() {
       <div className="absolute inset-0">
         <img
           src={BG_IMAGE}
-          alt="Master Huang Qiming Qimen Strategy Singapore strategic decision consultation"
+          alt="Master Huang Qiming Enterprise Strategic Decision Advisory Singapore"
           className="h-full w-full object-cover object-center opacity-82"
           loading="eager"
           fetchPriority="high"
@@ -44,7 +44,7 @@ export default function HeroSimple() {
               className="text-xs font-semibold uppercase tracking-[0.32em] text-[#d6ad63]"
               style={{ fontFamily: "var(--font-lato), var(--font-noto-sans), sans-serif" }}
             >
-              Singapore · Qimen Strategy Consultation
+              Singapore · Enterprise Strategic Decision Advisory
             </span>
             <span className="hidden h-px w-10 bg-[#c89a45] sm:block" />
           </motion.div>
@@ -76,60 +76,72 @@ export default function HeroSimple() {
             className="mt-6 text-2xl font-semibold uppercase tracking-[0.18em] text-[#f1d38a] md:text-4xl"
             style={{ fontFamily: "var(--font-lato), var(--font-noto-serif), sans-serif" }}
           >
-            See the Situation Clearly Before You Decide
+            Enterprise Strategic Decision Advisory
+          </motion.p>
+
+          <motion.p
+            initial={{ opacity: 0, y: 18 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.58, delay: 0.18 }}
+            className="mt-3 text-xl font-semibold tracking-[0.18em] text-[#e2bd6b] md:text-3xl"
+            style={{ fontFamily: "var(--font-noto-serif), var(--font-cormorant), serif" }}
+          >
+            企业战略决策顾问
           </motion.p>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.62, delay: 0.2 }}
-            className="mt-5 max-w-3xl text-lg leading-8 text-white/86 md:text-2xl"
+            transition={{ duration: 0.62, delay: 0.22 }}
+            className="mt-5 max-w-4xl text-lg leading-8 text-white/86 md:text-2xl"
             style={{ fontFamily: "var(--font-cormorant), var(--font-noto-serif), serif" }}
           >
-            奇门决策 · 战略咨询 · 风水布局
+            See the Whole Game Before You Decide · 关键决策前，先看清全局
           </motion.p>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.65, delay: 0.24 }}
-            className="mt-8 max-w-3xl border-l-2 border-[#d0a14a] bg-black/38 px-5 py-4 text-sm font-semibold leading-7 text-[#f1d38a] backdrop-blur-sm md:text-base"
+            transition={{ duration: 0.65, delay: 0.26 }}
+            className="mt-8 max-w-4xl border-l-2 border-[#d0a14a] bg-black/38 px-5 py-4 text-sm font-semibold leading-7 text-[#f1d38a] backdrop-blur-sm md:text-base"
             style={{ fontFamily: "var(--font-lato), var(--font-noto-sans), sans-serif" }}
           >
-            Led by Master Huang Qiming · 16+ years of Qimen decision practice, combined with 16 years of business operation experience
+            Annual Strategy · Feng Shui Alignment · People Assessment · Founder Advisory
+            <br />
+            年度战略预判 · 企业风水布局 · 人事合作判断 · 重大决策陪跑
           </motion.div>
 
           <motion.p
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.65, delay: 0.28 }}
-            className="mt-7 max-w-3xl text-base leading-8 text-white/82 md:text-lg"
+            transition={{ duration: 0.65, delay: 0.3 }}
+            className="mt-7 max-w-4xl text-base leading-8 text-white/82 md:text-lg"
             style={{ fontFamily: "var(--font-lato), var(--font-noto-sans), sans-serif" }}
           >
-            Qimen Strategy helps business owners, founders and individuals in Singapore review timing, direction, people dynamics, environment and risk before important decisions.
+            QIMEN STRATEGY is an Enterprise Strategic Decision Advisory system rooted in 16+ years of Qi Men decision practice. We support business owners, founders and key decision-makers through annual strategic forecasting, business and personal Feng Shui alignment, people and partnership assessment, and major decision advisory.
           </motion.p>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.32 }}
-            className="mt-3 max-w-3xl text-sm leading-7 text-white/70 md:text-base"
+            transition={{ duration: 0.6, delay: 0.34 }}
+            className="mt-3 max-w-4xl text-sm leading-7 text-white/70 md:text-base"
             style={{ fontFamily: "var(--font-noto-sans), var(--font-lato), sans-serif" }}
           >
-            启明遁甲以 16 年奇门决策实战经验为根基，长期服务企业主与个人关键决策。所有咨询均为预约制，根据问题背景进行私密判断，费用将在沟通范围后确认。
+            启明遁甲以 16 年奇门决策实战经验为根基，结合年度战略预判、企业与个人风水布局、人事合作关系判断及重大决策陪跑，长期服务企业主、创始人与关键决策者。所有咨询均采用预约制，并根据具体问题背景、决策难度与服务范围进行私密判断及顾问安排。
           </motion.p>
 
           <motion.div
             initial={{ opacity: 0, y: 22 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.36 }}
+            transition={{ duration: 0.6, delay: 0.38 }}
             className="mt-9 grid max-w-4xl grid-cols-2 gap-4 border-y border-[#c89a45]/30 py-5 text-center text-sm font-semibold uppercase tracking-[0.18em] text-[#e6c785] md:grid-cols-4"
             style={{ fontFamily: "var(--font-lato), var(--font-noto-sans), sans-serif" }}
           >
-            <span>时机判断</span>
-            <span>方向选择</span>
-            <span>人事关系</span>
-            <span>局势风险</span>
+            <span>Timing · 时机</span>
+            <span>Direction · 方向</span>
+            <span>People · 人和</span>
+            <span>Environment · 环境</span>
           </motion.div>
 
           <motion.div
@@ -146,15 +158,15 @@ export default function HeroSimple() {
               style={{ fontFamily: "var(--font-lato), sans-serif" }}
             >
               <MessageCircle size={18} />
-              Consult Now
+              Book Consultation
             </a>
 
             <a
-              href="/insights"
+              href="/enterprise-strategic-advisory"
               className="inline-flex items-center justify-center gap-3 border border-[#c89a45] px-7 py-4 text-sm font-bold uppercase tracking-[0.12em] text-[#f4dfb0] transition-colors duration-300 hover:bg-[#c89a45]/10"
               style={{ fontFamily: "var(--font-lato), sans-serif" }}
             >
-              View Case Library
+              Enterprise Advisory
               <ArrowRight size={18} />
             </a>
           </motion.div>
