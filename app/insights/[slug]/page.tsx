@@ -18,6 +18,10 @@ import {
   getQimenStrategyDecisionIntelligencePost,
 } from "@/lib/qimen-strategy-decision-intelligence-post";
 import {
+  qimenStrategyModernDecisionMakingPosts,
+  getQimenStrategyModernDecisionMakingPost,
+} from "@/lib/qimen-strategy-modern-decision-making-post";
+import {
   spaceEnergyBlogPosts,
   getSpaceEnergyBlogPost,
 } from "@/lib/space-energy-blog-posts";
@@ -37,6 +41,7 @@ type InsightDetailProps = {
 };
 
 const allDynamicPosts = [
+  ...qimenStrategyModernDecisionMakingPosts,
   ...qimenCaseLibraryPosts,
   ...qimenStrategyDecisionIntelligencePosts,
   ...qimenStrategyPositioningPosts,
@@ -49,6 +54,7 @@ const allDynamicPosts = [
 
 function findPost(slug: string) {
   return (
+    getQimenStrategyModernDecisionMakingPost(slug) ??
     getQimenCaseLibraryPost(slug) ??
     getQimenStrategyDecisionIntelligencePost(slug) ??
     getQimenStrategyPositioningPost(slug) ??
