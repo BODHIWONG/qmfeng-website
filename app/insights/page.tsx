@@ -11,9 +11,11 @@ import { qimenSingaporeBilingualPosts } from "@/lib/qimen-singapore-bilingual-po
 import { qimenDunJiaFoundationPosts } from "@/lib/qimen-dun-jia-foundation-post";
 import { qimenStrategyPositioningPosts } from "@/lib/qimen-strategy-positioning-post";
 import { qimenStrategyDecisionIntelligencePosts } from "@/lib/qimen-strategy-decision-intelligence-post";
+import { qimenStrategyModernDecisionMakingPosts } from "@/lib/qimen-strategy-modern-decision-making-post";
 import { applyInsightPostOverrides } from "@/lib/insights-overrides";
 
 const allPosts = [
+  ...qimenStrategyModernDecisionMakingPosts,
   ...qimenStrategyDecisionIntelligencePosts,
   ...qimenCaseLibraryPosts,
   ...qimenStrategyPositioningPosts,
