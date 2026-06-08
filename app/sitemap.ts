@@ -9,6 +9,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
     },
     {
+      url: `${baseUrl}/singapore-qi-men-dun-jia-consultant`,
+      lastModified: new Date(),
+    },
+    {
+      url: `${baseUrl}/enterprise-strategic-advisory`,
+      lastModified: new Date(),
+    },
+    {
       url: `${baseUrl}/qimen-strategy-business`,
       lastModified: new Date(),
     },
