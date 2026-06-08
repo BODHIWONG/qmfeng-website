@@ -11,10 +11,11 @@ const WA_LINK =
 
 const serviceLinks = [
   { href: "/", zh: "首页", en: "Home" },
+  { href: "/singapore-qi-men-dun-jia-consultant", zh: "新加坡奇门遁甲", en: "Qi Men Dun Jia SG" },
   { href: "/enterprise-strategic-advisory", zh: "企业战略顾问", en: "Enterprise Advisory" },
   { href: "/qimen-strategy-business", zh: "启明遁甲", en: "Qimen Strategy" },
   { href: "/insights", zh: "案例智库", en: "Case Library" },
-  { href: "/founder", zh: "黄启明大师", en: "Founder" },
+  { href: "/founder", zh: "创始人", en: "Founder" },
 ];
 
 export default function Navbar() {
@@ -49,7 +50,7 @@ export default function Navbar() {
         <Link href="/" className="flex items-center gap-4">
           <img
             src={LOGO_URL}
-            alt="Qimen Strategy Singapore Logo"
+            alt="Qimen Strategy Singapore Qi Men Dun Jia Logo"
             className="h-14 w-auto object-contain md:h-16"
           />
           <div className="hidden leading-tight sm:block">
@@ -62,7 +63,7 @@ export default function Navbar() {
           </div>
         </Link>
 
-        <div className="hidden items-center gap-5 md:flex lg:gap-6">
+        <div className="hidden items-center gap-4 md:flex lg:gap-5">
           {serviceLinks.map((link, index) => (
             <Link key={`${link.href}-${index}`} href={link.href} className={`text-sm transition-colors ${navTextClass}`}>
               {lang === "zh" ? link.zh : link.en}
