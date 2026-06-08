@@ -7,7 +7,7 @@ import { useLanguage } from "@/contexts/language-context";
 
 const LOGO_URL = "/logo-qimen-strategy.jpg";
 const WA_LINK =
-  "https://wa.me/6589418791?text=Hello%20Master%20Qiming%2C%20I%20would%20like%20to%20consult%20about%20Enterprise%20Strategic%20Decision%20Advisory.";
+  "https://wa.me/6589418791?text=Hello%20Qimen%20Strategy%2C%20I%20would%20like%20to%20consult%20about%20Qi%20Men%20Dun%20Jia%20Strategic%20Decision%20Advisory%20in%20Singapore.";
 
 const serviceLinks = [
   { href: "/", zh: "首页", en: "Home" },
