@@ -7,13 +7,15 @@ const LOGO_URL = "/logo-qimen-strategy.jpg";
 const WA_LINK = "https://wa.me/6589418791";
 
 const serviceLinks = [
+  { href: "/singapore-qi-men-dun-jia-consultant", zh: "新加坡奇门遁甲", en: "Qi Men Dun Jia Singapore" },
   { href: "/enterprise-strategic-advisory", zh: "企业战略顾问", en: "Enterprise Advisory" },
   { href: "/qimen-strategy-business", zh: "启明遁甲", en: "Qimen Strategy" },
   { href: "/insights", zh: "案例智库", en: "Case Library" },
-  { href: "/founder", zh: "黄启明大师", en: "Founder" },
+  { href: "/founder", zh: "创始人", en: "Founder" },
 ];
 
 const insightLinks = [
+  { href: "/singapore-qi-men-dun-jia-consultant", zh: "奇门遁甲决策顾问", en: "Qi Men Dun Jia Consultant" },
   { href: "/enterprise-strategic-advisory", zh: "企业战略决策顾问", en: "Enterprise Strategic Advisory" },
   { href: "/insights/qimen-strategy-is-decision-intelligence-not-fatalism", zh: "决策情报方法论", en: "Decision Intelligence" },
   { href: "/insights", zh: "战略洞察中心", en: "Strategic Insights" },
@@ -28,7 +30,7 @@ export default function Footer() {
         <div className="mb-12 grid gap-10 md:grid-cols-4">
           <div>
             <div className="mb-5 flex items-center gap-3">
-              <img src={LOGO_URL} alt="Qimen Strategy Singapore Logo" className="h-14 w-14 object-contain" />
+              <img src={LOGO_URL} alt="Qimen Strategy Singapore Qi Men Dun Jia Logo" className="h-14 w-14 object-contain" />
               <div>
                 <p className="text-lg font-bold uppercase tracking-[0.12em] text-white" style={{ fontFamily: "var(--font-lato), var(--font-noto-sans), sans-serif" }}>
                   Qimen Strategy
@@ -39,8 +41,8 @@ export default function Footer() {
 
             <p className="text-xs leading-relaxed text-white/55" style={{ fontFamily: "var(--font-lato), var(--font-noto-sans), sans-serif" }}>
               {t(
-                "启明遁甲由黄启明大师主理，是面向企业主、创始人与关键决策者的企业战略决策顾问系统，结合年度战略预判、企业与个人风水布局、人事合作关系判断及重大决策陪跑。",
-                "Qimen Strategy is led by Master Huang Qiming. It is an Enterprise Strategic Decision Advisory system for business owners, founders and key decision-makers, covering annual strategic forecasting, Feng Shui alignment, people assessment and major decision advisory."
+                "启明遁甲 Qimen Strategy 是新加坡的奇门遁甲战略决策顾问品牌，面向企业主、创始人、高管、投资者与个人重大决策客户，提供商业决策、投资判断、人事合作、事业方向及住宅/办公室风水调理支持。",
+                "Qimen Strategy, also known as 启明遁甲, is a Singapore-based Qi Men Dun Jia strategic decision advisory brand for business owners, founders, executives, investors and individuals, covering business decisions, investment timing, people assessment, career direction and Feng Shui alignment."
               )}
             </p>
           </div>
@@ -73,13 +75,13 @@ export default function Footer() {
 
           <div>
             <p className="mb-4 text-[0.6rem] font-bold uppercase tracking-[0.2em] text-[#d6ad63]" style={{ fontFamily: "var(--font-lato), sans-serif" }}>
-              {t("预约企业战略决策顾问", "Book Enterprise Advisory")}
+              {t("预约奇门遁甲决策顾问", "Book Qimen Strategy Advisory")}
             </p>
             <div className="space-y-3 text-xs text-white/50" style={{ fontFamily: "var(--font-lato), var(--font-noto-sans), sans-serif" }}>
               <p>Blk 210 New Upper Changi Road #01-729<br />Singapore 460210</p>
               <p>{t("营业时间：每日 10:00 — 20:00", "Hours: Daily 10:00 — 20:00")}</p>
-              <a href={`${WA_LINK}?text=${encodeURIComponent("Hello Master Qiming, I would like to book an Enterprise Strategic Decision Advisory session.")}`} target="_blank" rel="noopener noreferrer" className="inline-block font-semibold text-[#d6ad63] transition-colors duration-300 hover:text-[#f4dfb0]">
-                {t("预约企业战略顾问咨询", "Book Enterprise Advisory")} →
+              <a href={`${WA_LINK}?text=${encodeURIComponent("Hello Qimen Strategy, I would like to book a Qi Men Dun Jia strategic decision advisory session in Singapore.")}`} target="_blank" rel="noopener noreferrer" className="inline-block font-semibold text-[#d6ad63] transition-colors duration-300 hover:text-[#f4dfb0]">
+                {t("预约奇门遁甲决策顾问", "Book Qimen Strategy Advisory")} →
               </a>
             </div>
           </div>
@@ -93,7 +95,7 @@ export default function Footer() {
         </div>
         <div className="mb-6 h-px bg-gradient-to-r from-transparent via-[#c89a45]/25 to-transparent" />
         <div className="flex flex-col items-center justify-between gap-3 text-[0.65rem] text-white/35 md:flex-row" style={{ fontFamily: "var(--font-lato), sans-serif" }}>
-          <p>© {new Date().getFullYear()} Qimen Strategy · 启明遁甲</p>
+          <p>© {new Date().getFullYear()} Qimen Strategy · 启明遁甲 · Qiming Feng Shui Wisdom Pte. Ltd.</p>
           <p>{t("本网站内容仅供战略参考。最终判断与决定由客户自行作出。", "Content on this website is for strategic reference only. Final judgment and decisions remain the client’s own responsibility.")}</p>
         </div>
       </div>
