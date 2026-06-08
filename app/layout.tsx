@@ -7,6 +7,7 @@ import {
   Cormorant_Garamond,
 } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
+import SiteStructuredData from "@/components/site-structured-data";
 import "./globals.css";
 
 const googleAdsId = "AW" + "-" + "17926881970";
@@ -149,6 +150,7 @@ export default function RootLayout({
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{ __html: googleAdsInit }}
         />
+        <SiteStructuredData />
         {children}
         {process.env.NODE_ENV === "production" && <Analytics />}
       </body>
