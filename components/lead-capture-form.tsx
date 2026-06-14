@@ -23,7 +23,7 @@ export default function LeadCaptureForm() {
     const payload = {
       name: String(formData.get("name") || "").trim(),
       whatsapp: String(formData.get("whatsapp") || "").trim(),
-      service: String(formData.get("service") || "Qimen Strategy Consultation"),
+      service: String(formData.get("service") || "First-Time Qimen Strategy Consultation S$168"),
       message: String(formData.get("message") || "").trim(),
       source: "Qimen Website Lead Form",
       website: String(formData.get("website") || "").trim(),
@@ -79,12 +79,12 @@ export default function LeadCaptureForm() {
               className="mb-5 text-3xl font-bold leading-tight text-white sm:text-4xl md:text-5xl"
               style={{ fontFamily: "var(--font-cormorant), var(--font-noto-serif), serif" }}
             >
-              {t("让我们先看清你的局", "Let us understand your situation first")}
+              {t("先从一次完整咨询开始", "Start with one complete consultation")}
             </h2>
             <p className="max-w-xl text-base leading-8 text-white/75 md:text-lg">
               {t(
-                "填写你的姓名、WhatsApp 与当前问题。资料会自动进入预约系统，我们会尽快通过 WhatsApp 与你联系。",
-                "Leave your name, WhatsApp number and current question. Your enquiry will enter our appointment system and we will contact you via WhatsApp shortly."
+                "首次客户可选择 S$168 奇门决策咨询。填写你的姓名、WhatsApp 与当前问题，我们会通过 WhatsApp 与你确认预约。",
+                "First-time clients may start with the S$168 Qimen Strategy consultation. Leave your name, WhatsApp number and current question, and we will confirm your appointment via WhatsApp."
               )}
             </p>
           </motion.div>
@@ -126,8 +126,9 @@ export default function LeadCaptureForm() {
               <select
                 name="service"
                 className="w-full border border-white/15 bg-[oklch(0.10_0.02_60)] px-4 py-3 text-white outline-none transition focus:border-[oklch(0.72_0.12_70)]"
-                defaultValue="Qimen Strategy Consultation"
+                defaultValue="First-Time Qimen Strategy Consultation S$168"
               >
+                <option value="First-Time Qimen Strategy Consultation S$168">{t("首次奇门决策咨询 S$168", "First-Time Qimen Strategy Consultation S$168")}</option>
                 <option value="Qimen Strategy Consultation">{t("启明遁甲 / Qimen Strategy", "Qimen Strategy Consultation")}</option>
                 <option value="Feng Shui Alignment">{t("风水布局 / Feng Shui Alignment", "Feng Shui Alignment")}</option>
                 <option value="Space Clearing Energy Reset">{t("空间净化 / Energy Reset", "Space Clearing · Energy Reset")}</option>
