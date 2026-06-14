@@ -2,6 +2,37 @@ import type { InsightPost } from "./insights-data";
 
 export const qimenCaseLibraryPosts: InsightPost[] = [
   {
+    slug: "feng-shui-adjustment-citrine-energy-resonance-case-study",
+    title: "Case Study: When a Feng Shui Adjustment Begins to Shift the Energy of a Space",
+    excerpt:
+      "A real Feng Shui alignment case in which a yellow citrine bracelet was placed at a carefully selected point. The client later shared that the atmosphere felt clearer, customer traffic increased, and sales performance improved compared with the previous period.",
+    date: "2026-06-15",
+    readTime: "5 min",
+    category: "Feng Shui Alignment",
+    keywords: [
+      "Feng Shui Alignment Singapore",
+      "Qimen Strategy Singapore",
+      "Business Feng Shui Singapore",
+      "Yellow Citrine Feng Shui",
+      "Environmental Alignment",
+      "Master Huang Qiming",
+      "Qimen Case Study",
+    ],
+    paragraphs: [
+      "During a recent Feng Shui adjustment for a client, I experienced a distinct moment of energy resonance.",
+      "Based on the property’s internal layout, qi flow, key energy openings, wealth position, and Five Element alignment, I placed a yellow citrine bracelet at a carefully selected point within the Feng Shui setup.",
+      "As the bracelet was positioned, I felt a sudden tingling sensation through my arm, almost like a mild electric current.",
+      "From a Feng Shui and energy alignment perspective, such a response may indicate a moment of resonance between the practitioner, the object, and the space. In practical Feng Shui work, this type of subtle physical response can sometimes appear when a stagnant energy point is activated and the flow of qi begins to move.",
+      "Yellow citrine is traditionally associated with the Earth element, carrying qualities of grounding, stability, transformation, and wealth support. When placed correctly, it is not merely a decorative item, but a symbolic and energetic medium used to support the adjustment of the space.",
+      "After the Feng Shui arrangement was completed, the client shared that the atmosphere of the property felt noticeably different — clearer, lighter, and more open.",
+      "The following day, the client provided further feedback: customer traffic at the shop had visibly increased, and sales performance had also improved compared with the previous period.",
+      "This is why Qimen Strategy does not treat Feng Shui as simple object placement or superstition.",
+      "A proper Feng Shui adjustment requires a comprehensive reading of the space, including qi flow, directional structure, Five Element balance, timing, business context, and the people using the environment.",
+      "When the right point is activated, the energy of a space can begin to shift. And when the environment becomes more aligned, people, opportunities, and business outcomes may also move in a more positive direction.",
+      "Qimen Strategy combines traditional time-space wisdom, Feng Shui alignment, and strategic decision consulting to help business owners and individuals see the bigger picture before they decide.",
+    ],
+  },
+  {
     slug: "business-debt-recovery-qimen-strategy-singapore",
     title: "商业案例纪实｜一笔拖了很久的30多万货款，如何通过奇门分析重新推动回款？",
     excerpt:
