@@ -4,22 +4,15 @@ import { motion } from "framer-motion";
 import { ArrowRight, BadgeDollarSign, CheckCircle2, Clock3, MessageCircle, ShieldCheck } from "lucide-react";
 import { useLanguage } from "@/contexts/language-context";
 
-const WA_LINK =
-  "https://wa.me/6589418791?text=Hello%20Qiming%2C%20I%20would%20like%20to%20book%20the%20first-time%20Qimen%20Strategy%20consultation%20at%20S%24168.";
+const WA_LINK = [
+  "https://wa.me/6589418791",
+  "text=Hello%20Qimen%20Strategy%2C%20I%20would%20like%20to%20book%20the%20first-time%20Qimen%20Strategy%20consultation%20at%20S%24168.",
+].join("?");
 
 const includedItems = [
-  {
-    zh: "完整奇门决策分析",
-    en: "Full Qimen Strategy reading",
-  },
-  {
-    zh: "当前局势、问题关键与下一步判断",
-    en: "Current situation, core issue and next-step guidance",
-  },
-  {
-    zh: "45–60 分钟私密咨询与问答",
-    en: "45–60 minutes private consultation with Q&A",
-  },
+  { zh: "完整奇门决策分析", en: "Full Qimen Strategy reading" },
+  { zh: "当前局势、问题关键与下一步判断", en: "Current situation, core issue and next-step guidance" },
+  { zh: "45–60 分钟私密咨询与问答", en: "45–60 minutes private consultation with Q&A" },
 ];
 
 const boundaryItems = [
@@ -28,8 +21,8 @@ const boundaryItems = [
     en: "This does not include a full annual plan, long-term business retainer, detailed Feng Shui layout or formal written report.",
   },
   {
-    zh: "适合第一次接触启明决策的客户，先建立信任，再决定是否进入更深度的顾问服务。",
-    en: "Designed for first-time clients to build trust first before deciding whether to enter deeper advisory work.",
+    zh: "适合第一次接触启明遁甲 Qimen Strategy 的客户，先建立信任，再决定是否进入更深度的顾问服务。",
+    en: "Designed for first-time Qimen Strategy clients to build trust first before deciding whether to enter deeper advisory work.",
   },
 ];
 
@@ -55,27 +48,18 @@ export default function FirstTimeConsultationSection() {
             transition={{ duration: 0.6 }}
             className="border border-[oklch(0.88_0.03_70)] bg-[oklch(0.98_0.012_75)] p-7 md:p-10"
           >
-            <p
-              className="mb-4 text-xs font-bold uppercase tracking-[0.28em]"
-              style={{ fontFamily: "var(--font-lato), sans-serif", color: "oklch(0.60 0.08 65)" }}
-            >
+            <p className="mb-4 text-xs font-bold uppercase tracking-[0.28em] text-[oklch(0.60_0.08_65)]">
               {t("首次咨询体验价", "First-Time Consultation Rate")}
             </p>
 
-            <h2
-              className="mb-5 text-3xl font-bold leading-tight md:text-5xl"
-              style={{ fontFamily: "var(--font-cormorant), var(--font-noto-serif), serif", color: "oklch(0.15 0.02 60)" }}
-            >
+            <h2 className="mb-5 text-3xl font-bold leading-tight text-[oklch(0.15_0.02_60)] md:text-5xl" style={{ fontFamily: "var(--font-cormorant), var(--font-noto-serif), serif" }}>
               {t("先看清局势，再决定下一步", "Understand the situation before your next move")}
             </h2>
 
-            <p
-              className="mb-7 text-base leading-8 md:text-lg"
-              style={{ fontFamily: "var(--font-lato), var(--font-noto-sans), sans-serif", color: "oklch(0.40 0.02 60)" }}
-            >
+            <p className="mb-7 text-base leading-8 text-[oklch(0.40_0.02_60)] md:text-lg">
               {t(
-                "第一次接触启明决策的客户，可以先通过一次完整的奇门决策咨询，看清当前问题、关键阻力与下一步选择。我们希望先建立信任，再进入更深度的顾问合作。",
-                "For first-time clients, this session provides a complete Qimen Strategy consultation to clarify the current issue, key obstacles and next practical step. We believe trust should be built first before deeper advisory work."
+                "第一次接触启明遁甲 Qimen Strategy 的客户，可以先通过一次完整的奇门决策咨询，看清当前问题、关键阻力与下一步选择。我们希望先建立信任，再进入更深度的顾问合作。",
+                "For first-time Qimen Strategy clients, this session provides a complete consultation to clarify the current issue, key obstacles and next practical step. We believe trust should be built first before deeper advisory work."
               )}
             </p>
 
@@ -95,9 +79,7 @@ export default function FirstTimeConsultationSection() {
               <div className="border border-[oklch(0.86_0.035_70)] bg-white p-5">
                 <ShieldCheck className="mb-3 text-[oklch(0.60_0.08_65)]" size={26} />
                 <p className="text-xs font-bold uppercase tracking-[0.18em] text-[oklch(0.50_0.03_60)]">{t("对象", "For")}</p>
-                <p className="mt-2 text-lg font-bold leading-tight text-[oklch(0.15_0.02_60)]">
-                  {t("首次客户", "First-Time Clients")}
-                </p>
+                <p className="mt-2 text-lg font-bold leading-tight text-[oklch(0.15_0.02_60)]">{t("首次客户", "First-Time Clients")}</p>
               </div>
             </div>
           </motion.div>
@@ -110,13 +92,8 @@ export default function FirstTimeConsultationSection() {
             className="flex flex-col justify-between border border-[oklch(0.72_0.12_70_/_0.42)] bg-[oklch(0.08_0.02_60)] p-7 shadow-[0_24px_70px_rgba(0,0,0,0.16)] md:p-10"
           >
             <div>
-              <p className="mb-3 text-xs font-bold uppercase tracking-[0.28em] text-[oklch(0.72_0.12_70)]">
-                QIMEN STRATEGY
-              </p>
-              <h3
-                className="mb-6 text-2xl font-bold leading-tight text-white md:text-4xl"
-                style={{ fontFamily: "var(--font-cormorant), var(--font-noto-serif), serif" }}
-              >
+              <p className="mb-3 text-xs font-bold uppercase tracking-[0.28em] text-[oklch(0.72_0.12_70)]">QIMEN STRATEGY</p>
+              <h3 className="mb-6 text-2xl font-bold leading-tight text-white md:text-4xl" style={{ fontFamily: "var(--font-cormorant), var(--font-noto-serif), serif" }}>
                 {t("S$168 包含什么？", "What is included in S$168?")}
               </h3>
 
@@ -133,30 +110,18 @@ export default function FirstTimeConsultationSection() {
 
               <div className="space-y-3">
                 {boundaryItems.map((item) => (
-                  <p key={item.en} className="text-sm leading-7 text-white/64">
-                    {t(item.zh, item.en)}
-                  </p>
+                  <p key={item.en} className="text-sm leading-7 text-white/64">{t(item.zh, item.en)}</p>
                 ))}
               </div>
             </div>
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <a
-                href={WA_LINK}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex flex-1 items-center justify-center gap-3 bg-[oklch(0.72_0.12_70)] px-6 py-4 text-sm font-bold uppercase tracking-wider text-[oklch(0.06_0.02_60)] transition hover:scale-[1.01]"
-                style={{ fontFamily: "var(--font-lato), sans-serif" }}
-              >
+              <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="inline-flex flex-1 items-center justify-center gap-3 bg-[oklch(0.72_0.12_70)] px-6 py-4 text-sm font-bold uppercase tracking-wider text-[oklch(0.06_0.02_60)] transition hover:scale-[1.01]">
                 <MessageCircle size={18} />
                 {t("预约首次咨询", "Book First-Time Session")}
               </a>
 
-              <a
-                href="#enquiry"
-                className="inline-flex flex-1 items-center justify-center gap-3 border border-[oklch(0.72_0.12_70)] px-6 py-4 text-sm font-bold uppercase tracking-wider text-[oklch(0.72_0.12_70)] transition hover:bg-[oklch(0.72_0.12_70)] hover:text-[oklch(0.06_0.02_60)]"
-                style={{ fontFamily: "var(--font-lato), sans-serif" }}
-              >
+              <a href="#enquiry" className="inline-flex flex-1 items-center justify-center gap-3 border border-[oklch(0.72_0.12_70)] px-6 py-4 text-sm font-bold uppercase tracking-wider text-[oklch(0.72_0.12_70)] transition hover:bg-[oklch(0.72_0.12_70)] hover:text-[oklch(0.06_0.02_60)]">
                 {t("提交问题", "Submit Question")}
                 <ArrowRight size={18} />
               </a>
