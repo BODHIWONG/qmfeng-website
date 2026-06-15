@@ -11,7 +11,7 @@ const WA_LINK =
 export const metadata: Metadata = {
   title: "Relationship Decision Clarity Singapore｜Qimen Strategy Advisory",
   description:
-    "Relationship Decision Clarity Singapore by Qimen Strategy is a focused branch of enterprise and life decision advisory, helping clients see relationship uncertainty, the other person's position, key obstacles, boundaries and next steps before making a major emotional decision.",
+    "A private Qimen Strategy consultation in Singapore for emotional relationship uncertainty and major relationship decisions. Understand the situation, the other person's position, key obstacles, boundaries and next steps before deciding whether to move closer, wait, repair, adjust or let go.",
   keywords: [
     "Relationship Decision Clarity Singapore",
     "Relationship Clarity Reading Singapore",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Relationship Decision Clarity Singapore｜Qimen Strategy",
     description:
-      "A private Qimen Strategy consultation for relationship uncertainty. See the situation clearly before deciding whether to move closer, wait, repair, adjust or let go.",
+      "Relationship uncertainty? Gain clarity before your next move with Qimen Strategy. A private consultation for major relationship decisions in Singapore.",
     url: "https://www.qmfeng.com/relationship-clarity-reading-singapore",
     type: "website",
     siteName: "Qimen Strategy Singapore",
@@ -39,12 +39,12 @@ export const metadata: Metadata = {
 };
 
 const clarityPoints = [
-  "What is the current state of this emotional relationship?",
-  "What may be the other person's present position and attitude?",
-  "Where is the key blockage or hidden resistance now?",
-  "Is the relationship still moving, or mainly draining your energy?",
-  "Should you move closer, wait, communicate, adjust, stop or let go?",
-  "What should you avoid doing next so the situation does not become more chaotic?",
+  "The current state of this emotional relationship",
+  "The other person’s present position and attitude",
+  "The key blockage, pressure or hidden resistance",
+  "Whether the relationship still has movement or is mainly draining you",
+  "Whether to move closer, wait, communicate, adjust, stop or let go",
+  "What to avoid doing next so the situation does not become more chaotic",
 ];
 
 const scenarios = [
@@ -61,7 +61,8 @@ const boundaryRules = [
   "The session provides decision reference; it does not guarantee reconciliation, marriage or a specific outcome.",
   "We do not provide emotional dependency, surveillance, manipulation or privacy-intrusive requests.",
   "Legal, medical and clinical psychological matters should be handled by qualified professionals.",
-  "All consultation details are handled confidentially. Public case sharing only happens with consent and anonymisation.",
+  "Consultation details, personal stories, names, screenshots and identifiable information are handled confidentially.",
+  "Case sharing only happens with permission and will be anonymised or blurred where necessary.",
 ];
 
 const serviceLevels = [
@@ -73,12 +74,12 @@ const serviceLevels = [
   {
     title: "Deep Relationship & Life Decision Session",
     price: "S$688",
-    detail: "For more complex relationship, marriage, family, career and life-direction issues",
+    detail: "For complex relationship, marriage, family, career and life-direction issues",
   },
   {
     title: "Personal Direction & Energy Advisory",
     price: "S$980+",
-    detail: "For clients who need broader life direction, home energy, career state and relationship structure review",
+    detail: "For broader life direction, home energy, career state and relationship structure review",
   },
 ];
 
@@ -109,7 +110,7 @@ export default function RelationshipClarityReadingSingaporePage() {
             <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(214,173,99,0.06)_1px,transparent_1px)] bg-[length:54px_54px] opacity-20" />
             <div className="container relative mx-auto max-w-6xl">
               <p className="mb-5 text-xs font-bold uppercase tracking-[0.34em] text-[#d6ad63]">
-                Qimen Strategy Decision Advisory · Relationship Decision Clarity
+                Qimen Strategy Advisory · Relationship Decisions
               </p>
               <h1 className="max-w-5xl text-4xl font-semibold uppercase leading-[0.98] tracking-[0.04em] text-[#f4dfb0] md:text-7xl">
                 Relationship Decision Clarity Singapore
@@ -118,10 +119,13 @@ export default function RelationshipClarityReadingSingaporePage() {
                 情感关系反复，不要一直靠猜。
               </h2>
               <p className="mt-8 max-w-4xl text-lg leading-8 text-white/78 md:text-xl">
-                Relationship Decision Clarity is not a separate emotional counselling brand. It is a focused branch of Qimen Strategy's enterprise and life decision advisory ecosystem.
+                Relationship uncertainty? Gain clarity before your next move with Qimen Strategy.
               </p>
               <p className="mt-4 max-w-4xl text-base leading-8 text-white/70 md:text-lg">
                 启明遁甲 Qimen Strategy 以重大决策视角，帮助你看清关系局势、对方状态、关键阻碍与下一步选择。先看清局，再决定该靠近、等待、调整，还是放下。
+              </p>
+              <p className="mt-4 max-w-4xl text-base leading-8 text-white/62 md:text-lg">
+                This is a specialised advisory area within Qimen Strategy’s major decision framework. It is not emotional dependency, not therapy and not a promise of outcome — it is a private decision reference before an important relationship choice.
               </p>
               <div className="mt-10 flex flex-col gap-4 sm:flex-row">
                 <a
@@ -133,10 +137,10 @@ export default function RelationshipClarityReadingSingaporePage() {
                   Book First-Time Consultation · S$168
                 </a>
                 <a
-                  href="#boundaries"
+                  href="#scope"
                   className="inline-flex items-center justify-center border border-[#d6ad63]/70 px-7 py-4 text-sm font-bold uppercase tracking-[0.16em] text-[#f4dfb0] transition hover:bg-[#d6ad63]/10"
                 >
-                  Scope & Boundaries
+                  Scope & Confidentiality
                 </a>
               </div>
             </div>
@@ -150,8 +154,8 @@ export default function RelationshipClarityReadingSingaporePage() {
                 <p className="mt-2 text-sm uppercase tracking-[0.16em] text-white/50">45–60 minutes · one core theme</p>
               </div>
               <div className="border border-[#d6ad63]/30 bg-black/40 p-7">
-                <p className="text-xs font-bold uppercase tracking-[0.24em] text-[#d6ad63]">Service Role</p>
-                <p className="mt-4 text-2xl font-semibold leading-tight text-[#f4dfb0]">A value-added branch and entry product within the Qimen Strategy advisory ecosystem.</p>
+                <p className="text-xs font-bold uppercase tracking-[0.24em] text-[#d6ad63]">Advisory Position</p>
+                <p className="mt-4 text-2xl font-semibold leading-tight text-[#f4dfb0]">A focused relationship decision consultation within the Qimen Strategy advisory system.</p>
               </div>
               <div className="border border-[#d6ad63]/30 bg-black/40 p-7">
                 <p className="text-xs font-bold uppercase tracking-[0.24em] text-[#d6ad63]">Official WhatsApp</p>
@@ -164,20 +168,20 @@ export default function RelationshipClarityReadingSingaporePage() {
           <section className="px-4 py-20 md:py-28">
             <div className="container mx-auto grid max-w-6xl gap-10 md:grid-cols-[0.9fr_1.1fr] md:items-start">
               <div>
-                <p className="mb-4 text-xs font-bold uppercase tracking-[0.32em] text-[#d6ad63]">Brand Position</p>
+                <p className="mb-4 text-xs font-bold uppercase tracking-[0.32em] text-[#d6ad63]">Why This Matters</p>
                 <h2 className="text-3xl font-semibold leading-tight text-[#f4dfb0] md:text-5xl">
-                  The main trunk remains Enterprise & Life Decision Advisory.
+                  When a relationship becomes unclear, the real problem is often the decision that follows.
                 </h2>
               </div>
               <div className="space-y-5 text-base leading-8 text-white/72 md:text-lg">
                 <p>
-                  Qimen Strategy｜启明遁甲 is positioned as an enterprise and major life decision advisory brand. Relationship Decision Clarity is only one application scenario within that larger advisory system.
+                  Emotional relationships can affect your mood, dignity, family, career and long-term direction. The most exhausting stage is often not separation itself, but repeated guessing without a clear judgment point.
                 </p>
                 <p>
-                  Emotional relationships often become major decisions: continue or stop, wait or communicate, repair or leave, protect dignity or keep consuming energy. This page exists to serve that decision moment with clear scope, time boundary, fee boundary and confidentiality.
+                  A proper relationship decision consultation helps you step back, see the structure of the situation and decide your next move with more calmness and self-respect.
                 </p>
                 <p>
-                  It is not unlimited emotional companionship, not therapy, not a guarantee of reconciliation and not a promise to change another person. It is a private decision reference before your next move.
+                  Qimen Strategy｜启明遁甲 remains an enterprise and major life decision advisory brand. Relationship Decision Clarity is one specialised consultation area for clients facing important relationship choices.
                 </p>
               </div>
             </div>
@@ -188,10 +192,10 @@ export default function RelationshipClarityReadingSingaporePage() {
               <div className="mb-12 max-w-4xl">
                 <p className="mb-4 text-xs font-bold uppercase tracking-[0.32em] text-[#d6ad63]">What It Helps Clarify</p>
                 <h2 className="text-3xl font-semibold leading-tight text-[#f4dfb0] md:text-5xl">
-                  This is not about chasing an answer. It is about seeing the situation clearly.
+                  Stop circling in the same question. See the situation before you decide.
                 </h2>
                 <p className="mt-6 text-base leading-8 text-white/70 md:text-lg">
-                  In an emotional relationship, unclear situations often create the most exhaustion. A structured reading helps you step out of repeated guessing and look at the matter from a calmer decision angle.
+                  In an emotional relationship, unclear situations often create the most exhaustion. This consultation helps you look at the matter from a calmer decision angle.
                 </p>
               </div>
               <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
@@ -222,13 +226,16 @@ export default function RelationshipClarityReadingSingaporePage() {
             </div>
           </section>
 
-          <section id="boundaries" className="border-y border-[#d6ad63]/20 bg-[#070707] px-4 py-20 md:py-28">
+          <section id="scope" className="border-y border-[#d6ad63]/20 bg-[#070707] px-4 py-20 md:py-28">
             <div className="container mx-auto max-w-6xl">
               <div className="mb-12 max-w-4xl">
                 <p className="mb-4 text-xs font-bold uppercase tracking-[0.32em] text-[#d6ad63]">Scope · Boundary · Confidentiality</p>
                 <h2 className="text-3xl font-semibold leading-tight text-[#f4dfb0] md:text-5xl">
-                  Clear boundaries protect the client, the consultation quality and the Qimen Strategy brand.
+                  Clear boundaries create a safer, more focused consultation.
                 </h2>
+                <p className="mt-6 text-base leading-8 text-white/70 md:text-lg">
+                  The purpose is to provide a private decision reference, not to create emotional dependence or promise a predetermined result.
+                </p>
               </div>
               <div className="grid gap-5 md:grid-cols-2">
                 {boundaryRules.map((rule) => (
@@ -237,9 +244,6 @@ export default function RelationshipClarityReadingSingaporePage() {
                   </div>
                 ))}
               </div>
-              <p className="mt-8 border-l-2 border-[#d6ad63] bg-black/35 px-6 py-5 text-sm leading-7 text-white/66">
-                Confidentiality note: consultation details, personal stories, names, screenshots and identifiable information are not published without permission. Case sharing, when authorised, is anonymised or blurred where necessary.
-              </p>
             </div>
           </section>
 
@@ -248,7 +252,7 @@ export default function RelationshipClarityReadingSingaporePage() {
               <div className="mb-12 max-w-4xl">
                 <p className="mb-4 text-xs font-bold uppercase tracking-[0.32em] text-[#d6ad63]">Consultation Structure</p>
                 <h2 className="text-3xl font-semibold leading-tight text-[#f4dfb0] md:text-5xl">
-                  Start with one focused question. Upgrade only when the situation requires deeper advisory work.
+                  Start with one focused question. Go deeper only when the situation requires it.
                 </h2>
               </div>
               <div className="grid gap-5 md:grid-cols-3">
