@@ -220,6 +220,136 @@ export default function EnterpriseStrategicAdvisoryPage() {
               </div>
             </div>
           </section>
+
+          <section className="border-y border-[#d6ad63]/20 bg-[#070707] px-4 py-20 md:py-28">
+            <div className="container mx-auto max-w-6xl">
+              <div className="max-w-4xl">
+                <p className="mb-4 text-xs font-bold uppercase tracking-[0.32em] text-[#d6ad63]">
+                  Why It Matters
+                </p>
+                <h2 className="text-3xl font-semibold leading-tight text-[#f4dfb0] md:text-5xl">
+                  Business decisions are rarely caused by one single factor.
+                </h2>
+                <p className="mt-6 text-base leading-8 text-white/72 md:text-lg">
+                  A company may have a good product, but the timing may not be right. A partnership may look profitable, but the people dynamics may carry hidden risks. An office may look impressive, but the environment may not support wealth flow, leadership authority or stable decision-making.
+                </p>
+                <p className="mt-4 text-base leading-8 text-white/62 md:text-lg">
+                  企业经营很少只卡在一个问题上。真正影响结果的，往往是时机、空间、人事、创始人状态与战略节奏共同作用的结果。
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section className="px-4 py-20 md:py-28">
+            <div className="container mx-auto max-w-6xl">
+              <div className="mb-12 max-w-4xl">
+                <p className="mb-4 text-xs font-bold uppercase tracking-[0.32em] text-[#d6ad63]">
+                  Advisory Scope
+                </p>
+                <h2 className="text-3xl font-semibold text-[#f4dfb0] md:text-5xl">
+                  Four core advisory pillars
+                </h2>
+              </div>
+              <div className="grid gap-6 md:grid-cols-2">
+                {pillars.map((item) => (
+                  <article key={item.no} className="border border-[#d6ad63]/20 bg-white/[0.035] p-7">
+                    <p className="text-sm font-bold text-[#d6ad63]">{item.no}</p>
+                    <h3 className="mt-3 text-2xl font-semibold text-[#f4dfb0]">{item.title}</h3>
+                    <p className="mt-2 text-lg font-semibold text-[#d6ad63]">{item.zh}</p>
+                    <p className="mt-2 text-xs uppercase tracking-[0.18em] text-white/45">{item.subtitle}</p>
+                    <p className="mt-5 text-sm leading-7 text-white/70">{item.body}</p>
+                    <p className="mt-3 text-sm leading-7 text-white/56">{item.bodyZh}</p>
+                    <div className="mt-6 border-l-2 border-[#d6ad63] pl-4 text-sm leading-7 text-[#f4dfb0]/82">
+                      <p>{item.value}</p>
+                      <p className="mt-2 text-white/58">{item.valueZh}</p>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section className="border-y border-[#d6ad63]/20 bg-[#070707] px-4 py-20 md:py-28">
+            <div className="container mx-auto max-w-6xl">
+              <div className="mb-12 max-w-4xl">
+                <p className="mb-4 text-xs font-bold uppercase tracking-[0.32em] text-[#d6ad63]">
+                  Five-Dimensional Framework
+                </p>
+                <h2 className="text-3xl font-semibold text-[#f4dfb0] md:text-5xl">
+                  Timing · Environment · People · Inner Mastery · Growth
+                </h2>
+              </div>
+              <div className="grid gap-5 md:grid-cols-5">
+                {fiveDimensions.map((item) => (
+                  <article key={item.title} className="border border-[#d6ad63]/20 bg-black/35 p-5">
+                    <p className="text-xs font-bold uppercase tracking-[0.20em] text-[#d6ad63]">{item.title}</p>
+                    <h3 className="mt-3 text-xl font-semibold text-[#f4dfb0]">{item.zh}</h3>
+                    <p className="mt-4 text-sm leading-7 text-white/66">{item.body}</p>
+                    <p className="mt-3 text-sm leading-7 text-white/48">{item.bodyZh}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section className="px-4 py-20 md:py-28">
+            <div className="container mx-auto grid max-w-6xl gap-10 md:grid-cols-2">
+              <div>
+                <p className="mb-4 text-xs font-bold uppercase tracking-[0.32em] text-[#d6ad63]">
+                  Suitable For
+                </p>
+                <h2 className="text-3xl font-semibold text-[#f4dfb0] md:text-5xl">
+                  Built for founders and key decision-makers
+                </h2>
+                <div className="mt-8 space-y-3 text-sm leading-7 text-white/70">
+                  {audience.map((item, index) => (
+                    <p key={item}>• {item}｜{audienceZh[index]}</p>
+                  ))}
+                </div>
+              </div>
+              <div className="border border-[#d6ad63]/25 bg-white/[0.035] p-7">
+                <p className="mb-4 text-xs font-bold uppercase tracking-[0.32em] text-[#d6ad63]">
+                  Advisory Process
+                </p>
+                <div className="space-y-4">
+                  {process.map(([en, zh, body], index) => (
+                    <div key={en} className="border border-[#d6ad63]/15 bg-black/30 p-4">
+                      <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#d6ad63]">{String(index + 1).padStart(2, "0")}</p>
+                      <h3 className="mt-2 text-lg font-semibold text-[#f4dfb0]">{en}｜{zh}</h3>
+                      <p className="mt-2 text-sm leading-6 text-white/60">{body}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section className="border-t border-[#d6ad63]/20 bg-[#070707] px-4 py-20">
+            <div className="container mx-auto max-w-5xl text-center">
+              <p className="mb-5 text-xs font-bold uppercase tracking-[0.32em] text-[#d6ad63]">
+                Private Enterprise Advisory
+              </p>
+              <h2 className="text-3xl font-semibold text-[#f4dfb0] md:text-5xl">
+                Review the whole game before the next major move.
+              </h2>
+              <p className="mx-auto mt-6 max-w-3xl text-base leading-8 text-white/68 md:text-lg">
+                For enterprise strategic advisory enquiries, contact Qimen Strategy directly through WhatsApp at +65 8959 3499.
+              </p>
+              <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
+                <a
+                  href={WA_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center bg-[#d6ad63] px-7 py-4 text-sm font-bold uppercase tracking-[0.16em] text-black transition hover:bg-[#f4dfb0]"
+                >
+                  WhatsApp +65 8959 3499
+                </a>
+                <Link href="/insights" className="inline-flex items-center justify-center border border-[#d6ad63]/70 px-7 py-4 text-sm font-bold uppercase tracking-[0.16em] text-[#f4dfb0] transition hover:bg-[#d6ad63]/10">
+                  View Strategic Insights
+                </Link>
+              </div>
+            </div>
+          </section>
         </main>
 
         <Footer />
