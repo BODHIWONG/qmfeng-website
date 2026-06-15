@@ -8,6 +8,8 @@ type Testimonial = {
   en: string;
   clientZh: string;
   clientEn: string;
+  sourceZh?: string;
+  sourceEn?: string;
   rating?: number;
 };
 
@@ -25,10 +27,21 @@ export default function TestimonialsSection() {
 
   const testimonials: Testimonial[] = [
     {
+      zh: "非常专业且亲切的老师，解读非常准确。他也非常耐心、友善。强烈推荐！",
+      en: "A very professional and kind master with very accurate reading. He is very patient and nice as well. Will highly recommend!",
+      clientZh: "Sharon Loh · Google 评价",
+      clientEn: "Sharon Loh · Google Review",
+      sourceZh: "公开评价",
+      sourceEn: "Public Review",
+      rating: 5,
+    },
+    {
       zh: "启明大师很快帮我看清问题的核心。原本我一直纠结该不该推进合作，经过分析后，我更清楚知道哪些条件要先谈清楚。",
       en: "Master Qiming helped me see the core issue quickly. I was unsure whether to move forward with a partnership, but after the review I understood which terms needed to be clarified first.",
       clientZh: "新加坡 · 企业主",
       clientEn: "Singapore · Business Owner",
+      sourceZh: "私密咨询",
+      sourceEn: "Private Advisory",
       rating: 5,
     },
     {
@@ -36,6 +49,8 @@ export default function TestimonialsSection() {
       en: "This did not feel like ordinary fortune telling. It was a clear strategic review. Master Qiming helped me organise timing, direction and people dynamics, and risks I could not see became clearer.",
       clientZh: "创业者 · 私密咨询",
       clientEn: "Founder · Private Advisory",
+      sourceZh: "客户反馈",
+      sourceEn: "Client Feedback",
       rating: 5,
     },
     {
@@ -43,6 +58,8 @@ export default function TestimonialsSection() {
       en: "The most valuable part was not receiving a simple answer, but knowing what to protect first and what to move forward with next. The clarity helped me become much calmer.",
       clientZh: "个人重大决策客户",
       clientEn: "Major Life Decision Client",
+      sourceZh: "私密咨询",
+      sourceEn: "Private Advisory",
       rating: 5,
     },
   ];
@@ -77,13 +94,13 @@ export default function TestimonialsSection() {
 
           <p className="max-w-2xl text-sm leading-relaxed text-[oklch(0.50_0.02_65)]" style={{ fontFamily: "var(--font-lato), var(--font-noto-sans), sans-serif" }}>
             {t(
-              "以下反馈以匿名方式整理，重点呈现客户在合作、转型、人生方向与重大行动前获得的判断清晰度。",
-              "The following anonymised feedback highlights how clients gained decision clarity before partnerships, transitions, life-direction choices and major actions."
+              "以下反馈包含公开 Google 评价与匿名整理的客户反馈，重点呈现客户在合作、转型、人生方向与重大行动前获得的判断清晰度。",
+              "The following feedback includes public Google reviews and anonymised client comments, highlighting how clients gained decision clarity before partnerships, transitions, life-direction choices and major actions."
             )}
           </p>
         </motion.div>
 
-        <div className="grid gap-px bg-[oklch(0.88_0.018_70)] md:grid-cols-3">
+        <div className="grid gap-px bg-[oklch(0.88_0.018_70)] md:grid-cols-2 xl:grid-cols-4">
           {testimonials.map((item, i) => (
             <motion.div
               key={i}
@@ -100,7 +117,9 @@ export default function TestimonialsSection() {
                     <span key={idx} className="text-[oklch(0.70_0.15_85)]">&#9733;</span>
                   ))}
                 </div>
-                <span className="text-xs text-[oklch(0.50_0.02_65)]" style={{ fontFamily: "var(--font-lato), sans-serif" }}>Private Advisory</span>
+                <span className="text-xs text-[oklch(0.50_0.02_65)]" style={{ fontFamily: "var(--font-lato), sans-serif" }}>
+                  {t(item.sourceZh || "私密咨询", item.sourceEn || "Private Advisory")}
+                </span>
               </div>
 
               <p className="flex-1 text-sm leading-relaxed" style={{ fontFamily: "var(--font-lato), var(--font-noto-sans), sans-serif", color: "oklch(0.28 0.02 60)" }}>
