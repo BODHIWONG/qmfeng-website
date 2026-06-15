@@ -83,8 +83,8 @@ export default function LeadCaptureForm() {
             </h2>
             <p className="max-w-xl text-base leading-8 text-white/75 md:text-lg">
               {t(
-                "首次客户可选择 S$168 奇门决策咨询。填写你的姓名、WhatsApp 与当前问题，我们会通过 WhatsApp 与你确认预约。",
-                "First-time clients may start with the S$168 Qimen Strategy consultation. Leave your name, WhatsApp number and current question, and we will confirm your appointment via WhatsApp."
+                "首次客户可选择 S$168 奇门决策咨询。填写你的姓名、WhatsApp 与当前问题，我们会通过 WhatsApp 与你确认预约。正式 WhatsApp：+65 8959 3499。",
+                "First-time clients may start with the S$168 Qimen Strategy consultation. Leave your name, WhatsApp number and current question, and we will confirm your appointment via WhatsApp. Official WhatsApp: +65 8959 3499."
               )}
             </p>
           </motion.div>
