@@ -8,6 +8,7 @@ This repository is the current official production website codebase for **Qiming
 - Brand: Qiming Feng Shui｜奇明風水
 - Founder / Principal: Master Huang Qiming｜黄启明大师
 - Main services: Qi Men Dun Jia, Feng Shui Alignment, Bazi Analysis, Space Energy Purification, Energy Adjustment
+- Official Phone / WhatsApp: +65 8959 3499
 
 ## Repository Status
 
