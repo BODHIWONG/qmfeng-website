@@ -11,11 +11,11 @@ const WA_LINK =
 
 const serviceLinks = [
   { href: "/", zh: "首页", en: "Home" },
-  { href: "/singapore-qi-men-dun-jia-consultant", zh: "新加坡奇门遁甲", en: "Qi Men Dun Jia SG" },
-  { href: "/relationship-clarity-reading-singapore", zh: "感情清晰咨询", en: "Relationship Clarity" },
-  { href: "/enterprise-strategic-advisory", zh: "企业战略顾问", en: "Enterprise Advisory" },
+  { href: "/enterprise-strategic-advisory", zh: "企业决策", en: "Enterprise Advisory" },
   { href: "/qimen-strategy-business", zh: "启明遁甲", en: "Qimen Strategy" },
-  { href: "/insights", zh: "案例智库", en: "Case Library" },
+  { href: "/relationship-clarity-reading-singapore", zh: "关系决策", en: "Relationship Decisions" },
+  { href: "/singapore-qi-men-dun-jia-consultant", zh: "奇门遁甲", en: "Qi Men Dun Jia" },
+  { href: "/insights", zh: "案例智库", en: "Insights" },
   { href: "/founder", zh: "创始人", en: "Founder" },
 ];
 
