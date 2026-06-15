@@ -7,18 +7,18 @@ const LOGO_URL = "/logo-qimen-strategy.jpg";
 const WA_LINK = "https://wa.me/6589593499";
 
 const serviceLinks = [
-  { href: "/singapore-qi-men-dun-jia-consultant", zh: "新加坡奇门遁甲", en: "Qi Men Dun Jia Singapore" },
-  { href: "/relationship-clarity-reading-singapore", zh: "感情关系清晰咨询", en: "Relationship Clarity Reading" },
-  { href: "/enterprise-strategic-advisory", zh: "企业战略顾问", en: "Enterprise Advisory" },
+  { href: "/enterprise-strategic-advisory", zh: "企业决策顾问", en: "Enterprise Advisory" },
   { href: "/qimen-strategy-business", zh: "启明遁甲", en: "Qimen Strategy" },
+  { href: "/relationship-clarity-reading-singapore", zh: "关系决策", en: "Relationship Decisions" },
+  { href: "/singapore-qi-men-dun-jia-consultant", zh: "新加坡奇门遁甲", en: "Qi Men Dun Jia Singapore" },
   { href: "/insights", zh: "案例智库", en: "Case Library" },
   { href: "/founder", zh: "创始人", en: "Founder" },
 ];
 
 const insightLinks = [
-  { href: "/relationship-clarity-reading-singapore", zh: "感情关系清晰咨询", en: "Relationship Clarity" },
-  { href: "/singapore-qi-men-dun-jia-consultant", zh: "奇门遁甲决策顾问", en: "Qi Men Dun Jia Consultant" },
   { href: "/enterprise-strategic-advisory", zh: "企业战略决策顾问", en: "Enterprise Strategic Advisory" },
+  { href: "/relationship-clarity-reading-singapore", zh: "情感关系决策咨询", en: "Relationship Decision Clarity" },
+  { href: "/singapore-qi-men-dun-jia-consultant", zh: "奇门遁甲决策顾问", en: "Qi Men Dun Jia Consultant" },
   { href: "/insights/qimen-strategy-is-decision-intelligence-not-fatalism", zh: "决策情报方法论", en: "Decision Intelligence" },
   { href: "/insights", zh: "战略洞察中心", en: "Strategic Insights" },
 ];
@@ -43,8 +43,8 @@ export default function Footer() {
 
             <p className="text-xs leading-relaxed text-white/55" style={{ fontFamily: "var(--font-lato), var(--font-noto-sans), sans-serif" }}>
               {t(
-                "启明遁甲 Qimen Strategy 是新加坡的奇门遁甲战略决策顾问品牌，面向企业主、创始人、高管、投资者与个人重大决策客户，提供商业决策、感情关系清晰咨询、投资判断、人事合作、事业方向及住宅/办公室风水调理支持。",
-                "Qimen Strategy, also known as 启明遁甲, is a Singapore-based Qi Men Dun Jia strategic decision advisory brand for business owners, founders, executives, investors and individuals, covering business decisions, relationship clarity, investment timing, people assessment, career direction and Feng Shui alignment."
+                "启明遁甲 Qimen Strategy 是新加坡的企业与人生重大决策顾问品牌，面向企业主、创始人、高管、投资者与个人重大决策客户，提供企业决策、人生事业方向、关系决策、人事合作判断及住宅/办公室风水空间调理支持。",
+                "Qimen Strategy, also known as 启明遁甲, is a Singapore-based enterprise and life decision advisory brand for business owners, founders, executives, investors and individuals, covering enterprise decisions, life and career direction, relationship decisions, people assessment and Feng Shui alignment."
               )}
             </p>
           </div>
@@ -77,14 +77,14 @@ export default function Footer() {
 
           <div>
             <p className="mb-4 text-[0.6rem] font-bold uppercase tracking-[0.2em] text-[#d6ad63]" style={{ fontFamily: "var(--font-lato), sans-serif" }}>
-              {t("预约奇门遁甲决策顾问", "Book Qimen Strategy Advisory")}
+              {t("预约启明遁甲决策顾问", "Book Qimen Strategy Advisory")}
             </p>
             <div className="space-y-3 text-xs text-white/50" style={{ fontFamily: "var(--font-lato), var(--font-noto-sans), sans-serif" }}>
               <p>Blk 210 New Upper Changi Road #01-729<br />Singapore 460210</p>
               <p>{t("营业时间：每日 10:00 — 20:00", "Hours: Daily 10:00 — 20:00")}</p>
               <p>{t("正式联络电话 / WhatsApp：+65 8959 3499", "Official Phone / WhatsApp: +65 8959 3499")}</p>
-              <a href={`${WA_LINK}?text=${encodeURIComponent("Hello Qimen Strategy, I would like to book a Qi Men Dun Jia strategic decision advisory session in Singapore.")}`} target="_blank" rel="noopener noreferrer" className="inline-block font-semibold text-[#d6ad63] transition-colors duration-300 hover:text-[#f4dfb0]">
-                {t("预约奇门遁甲决策顾问", "Book Qimen Strategy Advisory")} →
+              <a href={`${WA_LINK}?text=${encodeURIComponent("Hello Qimen Strategy, I would like to book a Qimen Strategy decision advisory session in Singapore.")}`} target="_blank" rel="noopener noreferrer" className="inline-block font-semibold text-[#d6ad63] transition-colors duration-300 hover:text-[#f4dfb0]">
+                {t("预约启明遁甲决策顾问", "Book Qimen Strategy Advisory")} →
               </a>
             </div>
           </div>
