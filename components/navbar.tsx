@@ -133,7 +133,7 @@ export default function Navbar() {
             rel="noopener noreferrer"
             className="mt-4 block text-yellow-500"
           >
-            {lang === "zh" ? "预约咨询" : "Book Consultation"}
+            {lang === "zh" ? "预约咨询：+65 8959 3499" : "Book Consultation: +65 8959 3499"}
           </a>
         </div>
       )}
