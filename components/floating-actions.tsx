@@ -13,7 +13,7 @@ import {
   GraduationCap,
 } from "lucide-react";
 
-const WA_LINK = "https://wa.me/6589418791";
+const WA_LINK = "https://wa.me/6589593499";
 
 const quickLinks = [
   {
