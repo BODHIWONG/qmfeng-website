@@ -15,7 +15,7 @@ export default function SiteStructuredData() {
     legalName: "Qiming Feng Shui Wisdom Pte. Ltd.",
     url: "https://www.qmfeng.com",
     logo: "https://www.qmfeng.com/logo-qimen-strategy.jpg",
-    telephone: "+65 89593499",
+    telephone: "+65 8959 3499",
     priceRange: "S$980+",
     address: {
       "@type": "PostalAddress",
