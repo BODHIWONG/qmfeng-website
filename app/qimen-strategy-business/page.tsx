@@ -3,6 +3,7 @@ import Link from "next/link";
 import { LanguageProvider } from "@/contexts/language-context";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
+import FloatingActions from "@/components/floating-actions";
 import QimenStrategyValueSection from "@/components/qimen-strategy-value-section";
 
 export const metadata: Metadata = {
@@ -200,6 +201,7 @@ export default function QimenStrategyBusinessPage() {
         </main>
 
         <Footer />
+        <FloatingActions />
       </div>
     </LanguageProvider>
   );
