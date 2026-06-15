@@ -9,12 +9,14 @@ import { insightPosts } from "@/lib/insights-data";
 import { qimenCaseLibraryPosts } from "@/lib/qimen-case-library-posts";
 import { qimenSingaporeBilingualPosts } from "@/lib/qimen-singapore-bilingual-posts";
 import { qimenDunJiaFoundationPosts } from "@/lib/qimen-dun-jia-foundation-post";
+import { qimenSingaporeSeoPosts } from "@/lib/qimen-singapore-seo-posts";
 import { qimenStrategyPositioningPosts } from "@/lib/qimen-strategy-positioning-post";
 import { qimenStrategyDecisionIntelligencePosts } from "@/lib/qimen-strategy-decision-intelligence-post";
 import { qimenStrategyModernDecisionMakingPosts } from "@/lib/qimen-strategy-modern-decision-making-post";
 import { applyInsightPostOverrides } from "@/lib/insights-overrides";
 
 const allPosts = [
+  ...qimenSingaporeSeoPosts,
   ...qimenStrategyModernDecisionMakingPosts,
   ...qimenStrategyDecisionIntelligencePosts,
   ...qimenCaseLibraryPosts,
