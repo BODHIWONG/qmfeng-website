@@ -14,6 +14,10 @@ import {
   getQimenDunJiaFoundationPost,
 } from "@/lib/qimen-dun-jia-foundation-post";
 import {
+  qimenSingaporeSeoPosts,
+  getQimenSingaporeSeoPost,
+} from "@/lib/qimen-singapore-seo-posts";
+import {
   qimenStrategyDecisionIntelligencePosts,
   getQimenStrategyDecisionIntelligencePost,
 } from "@/lib/qimen-strategy-decision-intelligence-post";
@@ -41,6 +45,7 @@ type InsightDetailProps = {
 };
 
 const allDynamicPosts = [
+  ...qimenSingaporeSeoPosts,
   ...qimenStrategyModernDecisionMakingPosts,
   ...qimenCaseLibraryPosts,
   ...qimenStrategyDecisionIntelligencePosts,
@@ -54,6 +59,7 @@ const allDynamicPosts = [
 
 function findPost(slug: string) {
   return (
+    getQimenSingaporeSeoPost(slug) ??
     getQimenStrategyModernDecisionMakingPost(slug) ??
     getQimenCaseLibraryPost(slug) ??
     getQimenStrategyDecisionIntelligencePost(slug) ??
