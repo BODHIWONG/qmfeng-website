@@ -5,7 +5,7 @@ import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 
 const WA_LINK =
-  "https://wa.me/6589418791?text=Hello%20Master%20Qiming%2C%20I%20would%20like%20to%20consult%20about%20Enterprise%20Strategic%20Decision%20Advisory.";
+  "https://wa.me/6589593499?text=Hello%20Master%20Qiming%2C%20I%20would%20like%20to%20consult%20about%20Enterprise%20Strategic%20Decision%20Advisory.";
 
 export const metadata: Metadata = {
   title: "Enterprise Strategic Decision Advisory｜QIMEN STRATEGY Singapore",
@@ -218,135 +218,6 @@ export default function EnterpriseStrategicAdvisoryPage() {
                   View Case Library
                 </Link>
               </div>
-            </div>
-          </section>
-
-          <section className="border-y border-[#d6ad63]/20 bg-[#070707] px-4 py-20 md:py-28">
-            <div className="container mx-auto max-w-6xl">
-              <div className="max-w-4xl">
-                <p className="mb-4 text-xs font-bold uppercase tracking-[0.32em] text-[#d6ad63]">
-                  Why It Matters
-                </p>
-                <h2 className="text-3xl font-semibold leading-tight text-[#f4dfb0] md:text-5xl">
-                  Business decisions are rarely caused by one single factor.
-                </h2>
-                <p className="mt-6 text-base leading-8 text-white/72 md:text-lg">
-                  A company may have a good product, but the timing may not be right. A partnership may look profitable, but the people dynamics may carry hidden risks. An office may look impressive, but the environment may not support wealth flow, leadership clarity or business stability.
-                </p>
-                <p className="mt-4 text-base leading-8 text-white/66">
-                  企业经营中的很多问题，不是单一问题。有些企业不是产品不好，而是时机不对；有些合作不是没有机会，而是人事关系隐藏风险；有些办公室看起来很好，但空间格局未必支持财气、管理力与稳定性。
-                </p>
-              </div>
-            </div>
-          </section>
-
-          <section className="px-4 py-20 md:py-28">
-            <div className="container mx-auto max-w-6xl">
-              <p className="text-xs font-bold uppercase tracking-[0.32em] text-[#d6ad63]">Five Dimensions of Qimen Strategy</p>
-              <h2 className="mt-4 max-w-5xl text-3xl font-semibold leading-tight text-[#f4dfb0] md:text-5xl">
-                天时 · 地利 · 人和 · 修为 · 成长
-              </h2>
-              <p className="mt-6 max-w-4xl text-base leading-8 text-white/68 md:text-lg">
-                QIMEN STRATEGY integrates Timing, Environment, People Dynamics, Founder Inner Mastery and Strategic Growth. It is designed to help business owners read external conditions and internal decision capacity before important business moves.
-              </p>
-              <p className="mt-3 max-w-4xl text-sm leading-7 text-white/56 md:text-base">
-                启明遁甲不只判断外部局势，也关注企业主自身的判断力、定力、承载力与成长节奏。真正的企业战略决策，不只是看外部机会，也要看创始人是否有能力承接下一阶段的发展。
-              </p>
-              <div className="mt-12 grid gap-5 md:grid-cols-5">
-                {fiveDimensions.map((item, index) => (
-                  <article key={item.title} className="border border-[#d6ad63]/25 bg-white/[0.035] p-5">
-                    <p className="text-sm font-bold text-[#d6ad63]">0{index + 1}</p>
-                    <h3 className="mt-3 text-xl font-semibold leading-tight text-[#f4dfb0]">{item.title}</h3>
-                    <p className="mt-2 text-lg font-semibold text-[#d6ad63]">{item.zh}</p>
-                    <p className="mt-5 text-sm leading-7 text-white/62">{item.body}</p>
-                    <p className="mt-3 text-sm leading-7 text-white/48">{item.bodyZh}</p>
-                  </article>
-                ))}
-              </div>
-            </div>
-          </section>
-
-          <section className="border-y border-[#d6ad63]/20 bg-[#070707] px-4 py-20 md:py-28">
-            <div className="container mx-auto max-w-6xl">
-              <p className="text-xs font-bold uppercase tracking-[0.32em] text-[#d6ad63]">Four Core Advisory Services</p>
-              <h2 className="mt-4 max-w-4xl text-3xl font-semibold leading-tight text-[#f4dfb0] md:text-5xl">
-                Annual Forecast · Feng Shui Alignment · People Assessment · Founder Advisory
-              </h2>
-              <div className="mt-12 grid gap-6 md:grid-cols-2">
-                {pillars.map((pillar) => (
-                  <article key={pillar.no} className="border border-[#d6ad63]/25 bg-white/[0.035] p-7 md:p-9">
-                    <p className="text-sm font-bold text-[#d6ad63]">{pillar.no}</p>
-                    <h3 className="mt-3 text-2xl font-semibold leading-tight text-[#f4dfb0] md:text-3xl">{pillar.title}</h3>
-                    <p className="mt-2 text-xl font-semibold text-[#d6ad63]">{pillar.zh}</p>
-                    <p className="mt-3 text-xs font-bold uppercase tracking-[0.18em] text-white/48">{pillar.subtitle}</p>
-                    <p className="mt-6 text-base leading-8 text-white/72">{pillar.body}</p>
-                    <p className="mt-3 text-sm leading-7 text-white/58">{pillar.bodyZh}</p>
-                    <div className="mt-7 border-l-2 border-[#d6ad63] pl-4">
-                      <p className="text-sm font-semibold text-[#f4dfb0]">{pillar.value}</p>
-                      <p className="mt-2 text-sm text-white/58">{pillar.valueZh}</p>
-                    </div>
-                  </article>
-                ))}
-              </div>
-            </div>
-          </section>
-
-          <section className="px-4 py-20 md:py-28">
-            <div className="container mx-auto max-w-6xl">
-              <p className="text-xs font-bold uppercase tracking-[0.32em] text-[#d6ad63]">Who This Is For</p>
-              <h2 className="mt-4 max-w-4xl text-3xl font-semibold leading-tight text-[#f4dfb0] md:text-5xl">
-                Built for founders, business owners and key decision-makers.
-              </h2>
-              <div className="mt-10 grid gap-4 md:grid-cols-2">
-                {audience.map((item, index) => (
-                  <div key={item} className="border border-[#d6ad63]/20 bg-black/35 p-5">
-                    <p className="font-semibold text-[#f4dfb0]">{item}</p>
-                    <p className="mt-2 text-sm text-white/58">{audienceZh[index]}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-
-          <section className="border-y border-[#d6ad63]/20 bg-[#070707] px-4 py-20 md:py-28">
-            <div className="container mx-auto max-w-6xl">
-              <p className="text-xs font-bold uppercase tracking-[0.32em] text-[#d6ad63]">Advisory Process</p>
-              <h2 className="mt-4 max-w-4xl text-3xl font-semibold leading-tight text-[#f4dfb0] md:text-5xl">
-                A private, structured and confidential advisory process.
-              </h2>
-              <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-                {process.map(([title, zh, body], index) => (
-                  <article key={title} className="border border-[#d6ad63]/20 bg-white/[0.035] p-6">
-                    <p className="text-sm font-bold text-[#d6ad63]">0{index + 1}</p>
-                    <h3 className="mt-3 text-xl font-semibold text-[#f4dfb0]">{title}</h3>
-                    <p className="mt-1 text-lg font-semibold text-[#d6ad63]">{zh}</p>
-                    <p className="mt-4 text-sm leading-7 text-white/62">{body}</p>
-                  </article>
-                ))}
-              </div>
-            </div>
-          </section>
-
-          <section className="border-t border-[#d6ad63]/20 bg-[#070707] px-4 py-20 md:py-28">
-            <div className="container mx-auto max-w-5xl text-center">
-              <p className="text-xs font-bold uppercase tracking-[0.32em] text-[#d6ad63]">Confidentiality & Boundaries</p>
-              <h2 className="mt-4 text-3xl font-semibold leading-tight text-[#f4dfb0] md:text-5xl">
-                By appointment only. Strictly confidential.
-              </h2>
-              <p className="mx-auto mt-6 max-w-3xl text-base leading-8 text-white/68">
-                QIMEN STRATEGY provides strategic judgment and decision reference. Final decisions and actions remain the client’s responsibility. This advisory service does not replace legal, financial, medical or licensed investment advice. No absolute outcome is promised.
-              </p>
-              <p className="mx-auto mt-4 max-w-3xl text-sm leading-7 text-white/54">
-                所有咨询均采用预约制，客户资料与企业信息严格保密。所有判断仅作为战略参考，不替代客户最终商业决定，不替代法律、财务、医疗或持牌投资意见，不承诺绝对结果。
-              </p>
-              <a
-                href={WA_LINK}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-10 inline-flex items-center justify-center bg-[#d6ad63] px-8 py-4 text-sm font-bold uppercase tracking-[0.16em] text-black transition hover:bg-[#f4dfb0]"
-              >
-                Book a Private Strategic Advisory Session
-              </a>
             </div>
           </section>
         </main>
