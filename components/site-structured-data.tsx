@@ -16,7 +16,7 @@ export default function SiteStructuredData() {
     url: "https://www.qmfeng.com",
     logo: "https://www.qmfeng.com/logo-qimen-strategy.jpg",
     telephone: "+65 8959 3499",
-    priceRange: "S$980+",
+    priceRange: "S$168+",
     address: {
       "@type": "PostalAddress",
       streetAddress: "Blk 210 New Upper Changi Road #01-729",
@@ -32,26 +32,33 @@ export default function SiteStructuredData() {
       jobTitle: "Founder, Qimen Strategy"
     },
     description:
-      "启明遁甲 Qimen Strategy is a Singapore-based Qi Men Dun Jia strategic decision advisory brand applying Qi Men Dun Jia, business strategy analysis, Feng Shui alignment and people assessment for business owners, founders, executives, investors and individuals before major decisions.",
+      "启明遁甲 Qimen Strategy is a Singapore-based enterprise and life decision advisory brand applying Qi Men Dun Jia, business strategy analysis, Feng Shui alignment and people assessment for business owners, founders, executives, investors and individuals before major decisions.",
     knowsAbout: [
       "Qi Men Dun Jia",
       "Qimen Dunjia",
       "Qimen Strategy",
       "Strategic Decision Advisory",
+      "Enterprise Decision Advisory",
       "Business Strategy",
       "Investment Timing",
       "Partnership Assessment",
+      "Relationship Decision Clarity",
+      "Life and Career Decision Clarity",
       "Office Feng Shui",
       "Residential Feng Shui",
       "Feng Shui Alignment"
     ],
     serviceType: [
+      "Enterprise Decision Advisory",
       "Qi Men Dun Jia Consultation",
       "Qimen Strategy Advisory",
       "Enterprise Strategic Decision Advisory",
       "Business Decision Consulting",
       "Investment Timing Analysis",
       "People and Partnership Assessment",
+      "Relationship Decision Clarity",
+      "Relationship Clarity Reading",
+      "Life and Career Decision Clarity",
       "Career Direction Consultation",
       "Office Feng Shui Consultation",
       "Residential Feng Shui Consultation"
