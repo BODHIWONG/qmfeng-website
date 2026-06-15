@@ -5,7 +5,7 @@ import { useLanguage } from "@/contexts/language-context";
 import { ArrowRight, MessageCircle, Calendar } from "lucide-react";
 
 const WA_LINK =
-  "https://wa.me/6589418791?text=Hello%20Master%20Qiming%2C%20I%20would%20like%20to%20book%20a%20private%20Qimen%20Strategy%20session.";
+  "https://wa.me/6589593499?text=Hello%20Master%20Qiming%2C%20I%20would%20like%20to%20book%20a%20private%20Qimen%20Strategy%20session.";
 
 export default function FinalCTA() {
   const { t } = useLanguage();
