@@ -10,12 +10,14 @@ import { qimenCaseLibraryPosts } from "@/lib/qimen-case-library-posts";
 import { qimenSingaporeBilingualPosts } from "@/lib/qimen-singapore-bilingual-posts";
 import { qimenDunJiaFoundationPosts } from "@/lib/qimen-dun-jia-foundation-post";
 import { qimenSingaporeSeoPosts } from "@/lib/qimen-singapore-seo-posts";
+import { qimenRelationshipSeoPosts } from "@/lib/qimen-relationship-seo-posts";
 import { qimenStrategyPositioningPosts } from "@/lib/qimen-strategy-positioning-post";
 import { qimenStrategyDecisionIntelligencePosts } from "@/lib/qimen-strategy-decision-intelligence-post";
 import { qimenStrategyModernDecisionMakingPosts } from "@/lib/qimen-strategy-modern-decision-making-post";
 import { applyInsightPostOverrides } from "@/lib/insights-overrides";
 
 const allPosts = [
+  ...qimenRelationshipSeoPosts,
   ...qimenSingaporeSeoPosts,
   ...qimenStrategyModernDecisionMakingPosts,
   ...qimenStrategyDecisionIntelligencePosts,
@@ -27,6 +29,12 @@ const allPosts = [
 ]
   .map((post) => applyInsightPostOverrides(post))
   .filter((post) => {
+    const isRelationshipClarity =
+      post.category.toLowerCase().includes("relationship") ||
+      post.keywords.some((keyword) => keyword.toLowerCase().includes("relationship clarity"));
+
+    if (isRelationshipClarity) return true;
+
     const text = `${post.title} ${post.excerpt} ${post.category} ${post.keywords.join(" ")}`.toLowerCase();
     const excluded = ["space clearing", "space energy", "sleep", "relationship", "emotional", "feng shui wealth"];
     return !excluded.some((term) => text.includes(term));
