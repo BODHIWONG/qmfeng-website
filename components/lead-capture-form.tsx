@@ -116,7 +116,7 @@ export default function LeadCaptureForm() {
                   name="whatsapp"
                   required
                   className="w-full border border-white/15 bg-white/8 px-4 py-3 text-white outline-none transition focus:border-[oklch(0.72_0.12_70)]"
-                  placeholder="+65 8959 3499"
+                  placeholder={t("你的 WhatsApp 号码", "Your WhatsApp number")}
                 />
               </label>
             </div>
