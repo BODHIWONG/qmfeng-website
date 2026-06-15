@@ -6,7 +6,7 @@ import Footer from "@/components/footer";
 import FloatingActions from "@/components/floating-actions";
 
 const WA_LINK =
-  "https://wa.me/6589418791?text=Hello%20Qimen%20Strategy%2C%20I%20would%20like%20to%20consult%20about%20Qi%20Men%20Dun%20Jia%20Strategic%20Decision%20Advisory%20in%20Singapore.";
+  "https://wa.me/6589593499?text=Hello%20Qimen%20Strategy%2C%20I%20would%20like%20to%20consult%20about%20Qi%20Men%20Dun%20Jia%20Strategic%20Decision%20Advisory%20in%20Singapore.";
 
 export const metadata: Metadata = {
   title:
@@ -73,6 +73,14 @@ const applications = [
     bodyZh:
       "判断办公室、店铺、商业空间或住宅是否支持决策状态、财富承载与发展势能。",
   },
+  {
+    title: "Relationship Clarity",
+    zh: "感情关系清晰咨询",
+    body:
+      "Review relationship dynamics, emotional uncertainty, current blockage and the likely direction ahead before a major personal decision.",
+    bodyZh:
+      "在感情重大选择前，看清关系状态、情绪困局、当前阻碍与后续走向。",
+  },
 ];
 
 const faqs = [
@@ -101,13 +109,21 @@ const faqs = [
       "适合企业主、创始人、高管、投资者，以及正在面对合作、投资、事业、物业、搬迁、关系或人生方向重大选择的个人客户。",
   },
   {
-    q: "Is this the same as Feng Shui?",
-    qZh: "这和风水一样吗？",
+    q: "How do I book a consultation?",
+    qZh: "如何预约咨询？",
     a:
-      "No. Feng Shui focuses mainly on spatial and environmental alignment. Qimen Strategy uses Qi Men Dun Jia as a decision framework, while Feng Shui alignment may be included when space affects the decision or business momentum.",
+      "You can contact Qimen Strategy directly on WhatsApp at +65 8959 3499 to confirm your question, timing and consultation type.",
     aZh:
-      "不完全一样。风水主要关注空间与环境格局；启明遁甲以奇门遁甲作为决策判断框架，当空间影响事业、状态或决策时，也会结合住宅、办公室或店铺风水调理。",
+      "你可以直接通过 WhatsApp +65 8959 3499 联系启明遁甲，确认你的问题、时间与咨询类型。",
   },
+];
+
+const process = [
+  ["01", "Clarify the Question", "先确认真正要判断的核心问题"],
+  ["02", "Review the Context", "梳理背景、人事、时间与空间条件"],
+  ["03", "Read the Qi Men Structure", "以奇门遁甲判断局势结构"],
+  ["04", "Map Risk and Direction", "整理阻力、风险与行动方向"],
+  ["05", "Advise the Next Step", "给出更清晰的下一步建议"],
 ];
 
 export default function SingaporeQiMenDunJiaConsultantPage() {
@@ -130,10 +146,10 @@ export default function SingaporeQiMenDunJiaConsultantPage() {
                 新加坡奇门遁甲战略决策顾问
               </h2>
               <p className="mt-8 max-w-4xl text-lg leading-8 text-white/78 md:text-xl">
-                Qimen Strategy, also known as 启明遁甲, is a Singapore-based Qi Men Dun Jia strategic decision advisory brand led by Huang Qiming. We support business owners, founders, executives, investors and individuals before major decisions involving business strategy, investment timing, partnership, career direction and Feng Shui alignment.
+                Qimen Strategy, also known as 启明遁甲, is a Singapore-based Qi Men Dun Jia strategic decision advisory brand led by Huang Qiming. We support business owners, founders, executives, investors and individuals before major decisions involving business strategy, investment timing, partnership, career direction, relationship clarity and Feng Shui alignment.
               </p>
               <p className="mt-4 max-w-4xl text-base leading-8 text-white/72 md:text-lg">
-                启明遁甲 Qimen Strategy 是新加坡的奇门遁甲战略决策顾问品牌。我们将传统奇门遁甲的时空推演体系，与现代企业战略、投资判断、职业发展、人事布局及住宅/办公室风水调理结合，帮助客户在重大选择前看清时机、方向、人事关系与风险结构。
+                启明遁甲 Qimen Strategy 是新加坡的奇门遁甲战略决策顾问品牌。我们将传统奇门遁甲的时空推演体系，与现代企业战略、投资判断、职业发展、人事布局、感情关系清晰咨询及住宅/办公室风水调理结合，帮助客户在重大选择前看清时机、方向、人事关系与风险结构。
               </p>
               <div className="mt-10 flex flex-col gap-4 sm:flex-row">
                 <a
@@ -142,7 +158,7 @@ export default function SingaporeQiMenDunJiaConsultantPage() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center bg-[#d6ad63] px-7 py-4 text-sm font-bold uppercase tracking-[0.16em] text-black transition hover:bg-[#f4dfb0]"
                 >
-                  WhatsApp Private Consultation
+                  WhatsApp +65 8959 3499
                 </a>
                 <Link
                   href="/qimen-strategy-business"
@@ -183,10 +199,10 @@ export default function SingaporeQiMenDunJiaConsultantPage() {
                   Where Qimen Strategy supports real decisions
                 </h2>
                 <p className="mt-5 text-base leading-8 text-white/70 md:text-lg">
-                  常见应用范围包括企业发展、商业投资、合作签约、关键人事、事业转型、住宅风水、办公室风水与重大人生选择。
+                  常见应用范围包括企业发展、商业投资、合作签约、关键人事、事业转型、感情关系、住宅风水、办公室风水与重大人生选择。
                 </p>
               </div>
-              <div className="grid gap-5 md:grid-cols-2">
+              <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
                 {applications.map((item) => (
                   <div key={item.title} className="border border-[#d6ad63]/20 bg-white/[0.03] p-7">
                     <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#d6ad63]">
@@ -214,13 +230,7 @@ export default function SingaporeQiMenDunJiaConsultantPage() {
                 </h2>
               </div>
               <div className="space-y-5">
-                {[
-                  ["01", "Clarify the question", "先确认真正要判断的核心问题"],
-                  ["02", "Review context, people, timing and environment", "梳理背景、人事、时间与空间条件"],
-                  ["03", "Apply Qi Men Dun Jia strategic assessment", "以奇门遁甲进行时空与局势判断"],
-                  ["04", "Map risks and decision direction", "整理风险结构与行动方向"],
-                  ["05", "Provide next-step advisory", "给出更清晰的下一步顾问建议"],
-                ].map(([no, en, zh]) => (
+                {process.map(([no, en, zh]) => (
                   <div key={no} className="flex gap-5 border border-[#d6ad63]/15 bg-black/30 p-5">
                     <span className="text-lg font-semibold text-[#d6ad63]">{no}</span>
                     <div>
@@ -235,43 +245,51 @@ export default function SingaporeQiMenDunJiaConsultantPage() {
 
           <section className="px-4 py-20 md:py-28">
             <div className="container mx-auto max-w-6xl">
-              <div className="mb-10 max-w-4xl">
+              <div className="mb-12 max-w-4xl">
                 <p className="mb-4 text-xs font-bold uppercase tracking-[0.32em] text-[#d6ad63]">
                   FAQ
                 </p>
                 <h2 className="text-3xl font-semibold text-[#f4dfb0] md:text-5xl">
-                  Common questions about Qi Men Dun Jia in Singapore
+                  Common questions before booking
                 </h2>
               </div>
               <div className="grid gap-5 md:grid-cols-2">
                 {faqs.map((item) => (
-                  <div key={item.q} className="border border-[#d6ad63]/20 bg-white/[0.03] p-7">
+                  <article key={item.q} className="border border-[#d6ad63]/20 bg-white/[0.03] p-7">
                     <h3 className="text-xl font-semibold text-[#f4dfb0]">{item.q}</h3>
-                    <p className="mt-2 text-base font-semibold text-[#d6ad63]">{item.qZh}</p>
-                    <p className="mt-4 text-sm leading-7 text-white/66">{item.a}</p>
-                    <p className="mt-3 text-sm leading-7 text-white/56">{item.aZh}</p>
-                  </div>
+                    <p className="mt-2 text-sm font-semibold text-[#d6ad63]">{item.qZh}</p>
+                    <p className="mt-4 text-sm leading-7 text-white/68">{item.a}</p>
+                    <p className="mt-3 text-sm leading-7 text-white/52">{item.aZh}</p>
+                  </article>
                 ))}
               </div>
             </div>
           </section>
 
-          <section className="px-4 pb-24">
-            <div className="container mx-auto max-w-5xl border border-[#d6ad63]/30 bg-[#d6ad63]/10 p-8 text-center md:p-12">
-              <h2 className="text-3xl font-semibold text-[#f4dfb0] md:text-5xl">
-                Before a major decision, see the whole game first.
-              </h2>
-              <p className="mt-5 text-base leading-8 text-white/70 md:text-lg">
-                适合正在面对合作、投资、扩张、任用、转型、签约、职业方向或重大人生选择的客户。
+          <section className="border-t border-[#d6ad63]/20 bg-[#070707] px-4 py-20">
+            <div className="container mx-auto max-w-5xl text-center">
+              <p className="mb-5 text-xs font-bold uppercase tracking-[0.32em] text-[#d6ad63]">
+                Private Qimen Strategy Advisory
               </p>
-              <a
-                href={WA_LINK}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-8 inline-flex items-center justify-center bg-[#d6ad63] px-8 py-4 text-sm font-bold uppercase tracking-[0.16em] text-black transition hover:bg-[#f4dfb0]"
-              >
-                Book via WhatsApp
-              </a>
+              <h2 className="text-3xl font-semibold text-[#f4dfb0] md:text-5xl">
+                See the bigger picture before you decide.
+              </h2>
+              <p className="mx-auto mt-6 max-w-3xl text-base leading-8 text-white/68 md:text-lg">
+                Contact Qimen Strategy directly through WhatsApp at +65 8959 3499 to book a private Qi Men Dun Jia consultation in Singapore.
+              </p>
+              <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
+                <a
+                  href={WA_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center bg-[#d6ad63] px-7 py-4 text-sm font-bold uppercase tracking-[0.16em] text-black transition hover:bg-[#f4dfb0]"
+                >
+                  WhatsApp +65 8959 3499
+                </a>
+                <Link href="/insights" className="inline-flex items-center justify-center border border-[#d6ad63]/70 px-7 py-4 text-sm font-bold uppercase tracking-[0.16em] text-[#f4dfb0] transition hover:bg-[#d6ad63]/10">
+                  View Case Library
+                </Link>
+              </div>
             </div>
           </section>
         </main>
