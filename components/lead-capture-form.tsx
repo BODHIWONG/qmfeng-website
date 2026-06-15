@@ -79,12 +79,12 @@ export default function LeadCaptureForm() {
               className="mb-5 text-3xl font-bold leading-tight text-white sm:text-4xl md:text-5xl"
               style={{ fontFamily: "var(--font-cormorant), var(--font-noto-serif), serif" }}
             >
-              {t("先从一次完整咨询开始", "Start with one complete consultation")}
+              {t("先从一次完整决策咨询开始", "Start with one complete decision consultation")}
             </h2>
             <p className="max-w-xl text-base leading-8 text-white/75 md:text-lg">
               {t(
-                "首次客户可选择 S$168 奇门决策咨询。填写你的姓名、WhatsApp 与当前问题，我们会通过 WhatsApp 与你确认预约。正式 WhatsApp：+65 8959 3499。",
-                "First-time clients may start with the S$168 Qimen Strategy consultation. Leave your name, WhatsApp number and current question, and we will confirm your appointment via WhatsApp. Official WhatsApp: +65 8959 3499."
+                "首次客户可选择 S$168 启明遁甲决策咨询。适用于企业、事业、人生方向与情感关系决策。填写姓名、WhatsApp 与当前问题，我们会通过 WhatsApp 与你确认预约。正式 WhatsApp：+65 8959 3499。",
+                "First-time clients may start with the S$168 Qimen Strategy decision consultation. It can cover enterprise, career, life-direction and relationship decisions. Leave your name, WhatsApp number and current question, and we will confirm your appointment via WhatsApp. Official WhatsApp: +65 8959 3499."
               )}
             </p>
           </motion.div>
@@ -128,7 +128,10 @@ export default function LeadCaptureForm() {
                 className="w-full border border-white/15 bg-[oklch(0.10_0.02_60)] px-4 py-3 text-white outline-none transition focus:border-[oklch(0.72_0.12_70)]"
                 defaultValue="First-Time Qimen Strategy Consultation S$168"
               >
-                <option value="First-Time Qimen Strategy Consultation S$168">{t("首次奇门决策咨询 S$168", "First-Time Qimen Strategy Consultation S$168")}</option>
+                <option value="First-Time Qimen Strategy Consultation S$168">{t("首次启明遁甲决策咨询 S$168", "First-Time Qimen Strategy Consultation S$168")}</option>
+                <option value="Enterprise Decision Advisory">{t("企业决策顾问", "Enterprise Decision Advisory")}</option>
+                <option value="Life and Career Decision Clarity">{t("人生与事业决策咨询", "Life & Career Decision Clarity")}</option>
+                <option value="Relationship Decision Clarity">{t("情感关系决策咨询", "Relationship Decision Clarity")}</option>
                 <option value="Qimen Strategy Consultation">{t("启明遁甲 / Qimen Strategy", "Qimen Strategy Consultation")}</option>
                 <option value="Feng Shui Alignment">{t("风水布局 / Feng Shui Alignment", "Feng Shui Alignment")}</option>
                 <option value="Space Clearing Energy Reset">{t("空间净化 / Energy Reset", "Space Clearing · Energy Reset")}</option>
@@ -142,7 +145,7 @@ export default function LeadCaptureForm() {
                 name="message"
                 rows={5}
                 className="w-full resize-none border border-white/15 bg-white/8 px-4 py-3 text-white outline-none transition focus:border-[oklch(0.72_0.12_70)]"
-                placeholder={t("请简单说明你当前面对的决定、事业、合作、空间或人生问题。", "Briefly describe the decision, business, partnership, space or life issue you are facing.")}
+                placeholder={t("请简单说明你当前面对的企业、事业、合作、情感关系、空间或人生决策问题。", "Briefly describe the enterprise, career, partnership, relationship, space or life decision you are facing.")}
               />
             </label>
 
