@@ -1,9 +1,50 @@
 import type { InsightPost } from "@/lib/insights-data";
 
 const relationshipCta =
-  "Qimen Strategy｜启明遁甲 offers Relationship Clarity Reading in Singapore as part of personal decision advisory. For a private consultation, contact the official WhatsApp: +65 8959 3499. See the Truth Before You Decide.";
+  "Qimen Strategy｜启明遁甲 offers Relationship Decision Clarity in Singapore as a specialised advisory area within major life decision consulting. For a private consultation, contact the official WhatsApp: +65 8959 3499. See the situation clearly before you decide.";
 
 export const qimenRelationshipSeoPosts: InsightPost[] = [
+  {
+    slug: "affair-relationship-decision-clarity-singapore",
+    title: "When an Affair Creates Relationship Uncertainty｜Qimen Strategy Singapore",
+    excerpt:
+      "When an affair creates relationship uncertainty, Qimen Strategy helps clients gain clarity before deciding whether to repair, wait, step back or let go.",
+    date: "2026-06-15",
+    readTime: "8 min",
+    category: "Relationship Decision Clarity",
+    keywords: [
+      "affair relationship consultation Singapore",
+      "extramarital affair Singapore",
+      "relationship decision clarity Singapore",
+      "Qimen Strategy relationship reading",
+      "Qi Men Dun Jia relationship reading Singapore"
+    ],
+    paragraphs: [
+      `An affair does not only create emotional pain. It creates uncertainty. Should you continue? Should you wait? Should you confront the situation? Should you repair the relationship? Or should you step back and protect yourself?`,
+      `For many people, the most painful part is not only what happened. It is not knowing what to do next. At Qimen Strategy｜启明遁甲, we view this kind of situation not as gossip, blame or emotional drama, but as a major relationship decision. When a relationship becomes unclear, the next move matters.`,
+      `In a recent private consultation, a client came with a relationship situation involving emotional uncertainty, broken trust and the presence of another person in the relationship field. For privacy reasons, all personal details have been removed and the case is shared only as an anonymised decision-learning reflection.`,
+      `The client was not simply asking, “Will this relationship continue?” The deeper question was: “What is the real situation now, and what should I do next?”`,
+      `Through Qimen Strategy, the consultation focused on several decision points: the current state of the relationship, the other person’s position and emotional movement, the hidden pressure behind the situation, whether there was still space for repair, what the client should avoid doing next, and whether the next step should be communication, waiting, adjustment, emotional withdrawal or letting go.`,
+      `The purpose was not to create fear. The purpose was not to promise reconciliation. The purpose was to help the client stop guessing and see the situation from a clearer decision angle.`,
+      `When an affair or third-party involvement appears in a relationship, the impact often goes beyond emotion. It can affect sleep, confidence, family stability, career focus, business performance and self-worth.`,
+      `Many clients are not only asking, “Does this person still care?” They are really asking: “Is this relationship still worth protecting? Is the other person avoiding responsibility? Am I waiting for something that is no longer moving? Should I repair, wait, confront, step back or let go? What is the most dignified next move?”`,
+      `These are not small emotional questions. They are major life decisions. This is why Relationship Decision Clarity is part of Qimen Strategy’s broader decision advisory framework.`,
+      `A Relationship Decision Clarity consultation may help you understand the current relationship state. Is the relationship still active, blocked, unstable, divided or moving toward separation?`,
+      `It may also help review the other person’s position. Is the other person emotionally present, avoiding responsibility, confused, passive, divided or withdrawing?`,
+      `The consultation also looks at the real blockage. Is the obstacle emotional, timing-related, family-related, external pressure, personal weakness or third-party interference?`,
+      `From there, the focus moves to the next decision point. Should you communicate, wait, repair, step back, protect boundaries or let go?`,
+      `In a relationship crisis, the wrong move can make the situation more chaotic. Sometimes the first step is not action. It is clarity.`,
+      `At Qimen Strategy｜启明遁甲, we maintain clear boundaries. This is not emotional dependency. This is not psychological therapy. This is not a promise of reconciliation. This is not a method to control another person. This is not a service to investigate private behaviour or invade privacy.`,
+      `It is a private decision reference before an important relationship choice. All consultation details are handled confidentially. Names, screenshots, private stories and identifiable information will not be published without permission. Any case shared publicly will be anonymised or adjusted to protect the client’s privacy.`,
+      `Qimen Strategy is not positioned as a love counselling brand. Our core work is enterprise and major life decision advisory. Relationship Decision Clarity is one specialised consultation area within that larger advisory framework.`,
+      `Whether the question is business, career, partnership, marriage or emotional relationship, the principle is the same: see the situation clearly before making the next move.`,
+      `In relationship cases, Qimen Strategy helps clients move from emotional guessing to structured decision-making. Instead of asking only, “Will this person come back?” a stronger question is: “What is the situation now, what is the real blockage, and what is the most dignified next step?”`,
+      `For first-time clients, the consultation is structured and focused: First-Time Relationship Decision Clarity, S$168 / 45–60 minutes, one core relationship decision theme, private consultation by appointment.`,
+      `This is suitable for clients facing affair-related relationship uncertainty, emotional confusion, unclear commitment, marriage tension, third-party involvement, repeated emotional exhaustion, or the decision to continue, repair, wait, step back or let go.`,
+      `When an affair appears in a relationship, the pain is real. But do not make a major relationship decision only from fear, anger or obsession. First, see the situation clearly. Then decide your next move with calmness, dignity and strength.`,
+      relationshipCta
+    ],
+  },
   {
     slug: "qi-men-dun-jia-relationship-reading-singapore-clarity-in-love",
     title: "Qi Men Dun Jia Relationship Reading Singapore｜When You Need Clarity in Love",
