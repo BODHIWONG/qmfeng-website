@@ -4,7 +4,7 @@ import { useLanguage } from "@/contexts/language-context";
 import Link from "next/link";
 
 const LOGO_URL = "/logo-qimen-strategy.jpg";
-const WA_LINK = "https://wa.me/6589418791";
+const WA_LINK = "https://wa.me/6589593499";
 
 const serviceLinks = [
   { href: "/singapore-qi-men-dun-jia-consultant", zh: "新加坡奇门遁甲", en: "Qi Men Dun Jia Singapore" },
@@ -80,6 +80,7 @@ export default function Footer() {
             <div className="space-y-3 text-xs text-white/50" style={{ fontFamily: "var(--font-lato), var(--font-noto-sans), sans-serif" }}>
               <p>Blk 210 New Upper Changi Road #01-729<br />Singapore 460210</p>
               <p>{t("营业时间：每日 10:00 — 20:00", "Hours: Daily 10:00 — 20:00")}</p>
+              <p>{t("联络电话 / WhatsApp：+65 8959 3499", "Phone / WhatsApp: +65 8959 3499")}</p>
               <a href={`${WA_LINK}?text=${encodeURIComponent("Hello Qimen Strategy, I would like to book a Qi Men Dun Jia strategic decision advisory session in Singapore.")}`} target="_blank" rel="noopener noreferrer" className="inline-block font-semibold text-[#d6ad63] transition-colors duration-300 hover:text-[#f4dfb0]">
                 {t("预约奇门遁甲决策顾问", "Book Qimen Strategy Advisory")} →
               </a>
