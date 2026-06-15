@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 };
 
 const WA_LINK =
-  "https://wa.me/6589418791?text=Hello%20Master%20Qiming%2C%20I%20would%20like%20to%20consult%20about%20Qimen%20Strategy.";
+  "https://wa.me/6589593499?text=Hello%20Master%20Qiming%2C%20I%20would%20like%20to%20consult%20about%20Qimen%20Strategy.";
 
 const programs = [
   {
