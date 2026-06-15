@@ -8,6 +8,7 @@ const WA_LINK = "https://wa.me/6589593499";
 
 const serviceLinks = [
   { href: "/singapore-qi-men-dun-jia-consultant", zh: "新加坡奇门遁甲", en: "Qi Men Dun Jia Singapore" },
+  { href: "/relationship-clarity-reading-singapore", zh: "感情关系清晰咨询", en: "Relationship Clarity Reading" },
   { href: "/enterprise-strategic-advisory", zh: "企业战略顾问", en: "Enterprise Advisory" },
   { href: "/qimen-strategy-business", zh: "启明遁甲", en: "Qimen Strategy" },
   { href: "/insights", zh: "案例智库", en: "Case Library" },
@@ -15,6 +16,7 @@ const serviceLinks = [
 ];
 
 const insightLinks = [
+  { href: "/relationship-clarity-reading-singapore", zh: "感情关系清晰咨询", en: "Relationship Clarity" },
   { href: "/singapore-qi-men-dun-jia-consultant", zh: "奇门遁甲决策顾问", en: "Qi Men Dun Jia Consultant" },
   { href: "/enterprise-strategic-advisory", zh: "企业战略决策顾问", en: "Enterprise Strategic Advisory" },
   { href: "/insights/qimen-strategy-is-decision-intelligence-not-fatalism", zh: "决策情报方法论", en: "Decision Intelligence" },
@@ -41,8 +43,8 @@ export default function Footer() {
 
             <p className="text-xs leading-relaxed text-white/55" style={{ fontFamily: "var(--font-lato), var(--font-noto-sans), sans-serif" }}>
               {t(
-                "启明遁甲 Qimen Strategy 是新加坡的奇门遁甲战略决策顾问品牌，面向企业主、创始人、高管、投资者与个人重大决策客户，提供商业决策、投资判断、人事合作、事业方向及住宅/办公室风水调理支持。",
-                "Qimen Strategy, also known as 启明遁甲, is a Singapore-based Qi Men Dun Jia strategic decision advisory brand for business owners, founders, executives, investors and individuals, covering business decisions, investment timing, people assessment, career direction and Feng Shui alignment."
+                "启明遁甲 Qimen Strategy 是新加坡的奇门遁甲战略决策顾问品牌，面向企业主、创始人、高管、投资者与个人重大决策客户，提供商业决策、感情关系清晰咨询、投资判断、人事合作、事业方向及住宅/办公室风水调理支持。",
+                "Qimen Strategy, also known as 启明遁甲, is a Singapore-based Qi Men Dun Jia strategic decision advisory brand for business owners, founders, executives, investors and individuals, covering business decisions, relationship clarity, investment timing, people assessment, career direction and Feng Shui alignment."
               )}
             </p>
           </div>
