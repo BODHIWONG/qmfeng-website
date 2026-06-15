@@ -18,27 +18,27 @@ const WA_LINK = "https://wa.me/6589593499";
 const quickLinks = [
   {
     icon: Sparkles,
-    labelZh: "立即预约 能量咨询",
-    labelEn: "Schedule Consultation",
-    message: "Hi Master Huang, I'd like to book a consultation.",
+    labelZh: "预约奇门决策咨询",
+    labelEn: "Book Qimen Consultation",
+    message: "Hi Qimen Strategy, I'd like to book a consultation.",
   },
   {
     icon: Home,
     labelZh: "获取住宅风水建议",
     labelEn: "Home Assessment",
-    message: "Hi Master Huang, I need a home energy assessment.",
+    message: "Hi Qimen Strategy, I need a home Feng Shui assessment.",
   },
   {
     icon: Briefcase,
     labelZh: "商业空间优化咨询",
     labelEn: "Business Optimisation",
-    message: "Hi Master Huang, I need to optimise my business space.",
+    message: "Hi Qimen Strategy, I need to optimise my business space.",
   },
   {
     icon: GraduationCap,
-    labelZh: "了解风水课程",
+    labelZh: "了解奇门课程",
     labelEn: "Courses & Training",
-    message: "Hi Master Huang, could you share details about your courses?",
+    message: "Hi Qimen Strategy, could you share details about your courses?",
   },
 ];
 
@@ -83,6 +83,9 @@ export default function FloatingActions() {
               style={{ fontFamily: "var(--font-lato), sans-serif" }}
             >
               {t("快速咨询", "Quick Enquiry")}
+            </p>
+            <p className="mb-3 text-xs text-[oklch(0.72_0.02_70)]">
+              {t("正式 WhatsApp：+65 8959 3499", "Official WhatsApp: +65 8959 3499")}
             </p>
             <div className="space-y-2">
               {quickLinks.map((link, i) => {
