@@ -54,13 +54,17 @@ export default function FinalCTA() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.15 }}
-            className="mx-auto mb-10 max-w-2xl text-base leading-8 text-white/76 md:text-lg"
+            className="mx-auto mb-5 max-w-2xl text-base leading-8 text-white/76 md:text-lg"
           >
             {t(
               "如果你正在面对合作、投资、转型、任用、签约或人生方向选择，可以先通过一次私密奇门决策咨询，看清时机、方向、人事关系与风险结构。",
               "If you are facing a partnership, investment, transition, appointment, contract or major life-direction choice, a private Qimen Strategy session can help you read timing, direction, people dynamics and risk structure before action."
             )}
           </motion.p>
+
+          <p className="mb-10 text-sm font-semibold text-[oklch(0.72_0.12_70)]">
+            {t("正式联络电话 / WhatsApp：+65 8959 3499", "Official Phone / WhatsApp: +65 8959 3499")}
+          </p>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
