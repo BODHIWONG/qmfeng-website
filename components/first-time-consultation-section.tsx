@@ -5,7 +5,7 @@ import { ArrowRight, BadgeDollarSign, CheckCircle2, Clock3, MessageCircle, Shiel
 import { useLanguage } from "@/contexts/language-context";
 
 const WA_LINK = [
-  "https://wa.me/6589418791",
+  "https://wa.me/6589593499",
   "text=Hello%20Qimen%20Strategy%2C%20I%20would%20like%20to%20book%20the%20first-time%20Qimen%20Strategy%20consultation%20at%20S%24168.",
 ].join("?");
 
