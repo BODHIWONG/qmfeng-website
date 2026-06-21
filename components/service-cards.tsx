@@ -39,43 +39,20 @@ type ServiceCard = {
 const services: ServiceCard[] = [
   {
     id: 1,
-    icon: Activity,
-    titleZh: "个人运势与状态诊断",
-    titleEn: "Personal Luck & Life-State Diagnostic",
-    visualZh: "个人运势与状态诊断",
-    visualEn: "Life-State Diagnostic",
-    visualSubZh: "运势节奏 · 状态卡点 · 下一步方向",
-    visualSubEn: "Momentum · State Blocks · Next Direction",
-    painZh:
-      "适合事业、感情、财运、睡眠状态、情绪能量或人生方向出现卡点的人，通过综合诊断看清当前阶段的主要阻力、风险信号与下一步选择。",
-    painEn:
-      "For clients facing blocks in career, relationships, wealth flow, sleep, emotional energy or life direction, reviewing current resistance, risk signals and next-step choices.",
-    audienceZh: "核心价值：不是医疗诊断，而是人生状态、运势节奏与决策方向的综合评估。",
-    audienceEn:
-      "Core value: not medical diagnosis, but an advisory review of life state, momentum and decision direction.",
-    feeZh: "S$396 起",
-    feeEn: "From S$396",
-    href: "/personal-life-state-diagnostic",
-    accentColor: "oklch(0.60 0.08 65)",
-    accentBg: "oklch(0.96 0.02 75)",
-    accentBorder: "oklch(0.88 0.03 70)",
-  },
-  {
-    id: 2,
     icon: Building2,
-    titleZh: "企业战略健康诊断",
-    titleEn: "Enterprise Strategic Health Diagnostic",
-    visualZh: "企业战略健康诊断",
-    visualEn: "Enterprise Strategic Health Diagnostic",
-    visualSubZh: "方向 · 人事 · 现金流 · 空间支持力",
-    visualSubEn: "Direction · People · Cashflow · Space Support",
+    titleZh: "企业奇门战略诊断",
+    titleEn: "Business Qi Men Strategic Diagnosis",
+    visualZh: "企业奇门战略诊断",
+    visualEn: "Business Qi Men Diagnosis",
+    visualSubZh: "生意卡点 · 方向判断 · 行动节奏",
+    visualSubEn: "Business Blocks · Direction · Action Timing",
     painZh:
-      "专为企业主、创始人与管理层设计，诊断企业方向、经营节奏、客户流动、人事合作、空间支持力与未来 3–12 个月关键风险。",
+      "适合生意卡住、扩张犹豫、客户流动变慢或企业方向不清的企业主，通过奇门遁甲看清当前局势、主要阻力与下一步行动方向。",
     painEn:
-      "Designed for business owners, founders and management teams to review business direction, operating rhythm, client flow, people dynamics, space support and 3–12 month risks.",
-    audienceZh: "核心价值：企业卡住时，先找出系统性失衡点，再决定扩张、收缩、调整或转型。",
+      "For business owners facing stagnation, expansion hesitation, slower client flow or unclear direction, using Qi Men Dun Jia to read the current situation, main resistance and next strategic move.",
+    audienceZh: "核心价值：先看清时机、方向、人事与行动节奏，再决定进、守、调、转或暂缓。",
     audienceEn:
-      "Core value: when the business is stuck, identify systemic imbalance before expansion, contraction, adjustment or transformation.",
+      "Core value: read timing, direction, people dynamics and action rhythm before deciding whether to move, hold, adjust, transform or wait.",
     feeZh: "S$3,996 起",
     feeEn: "From S$3,996",
     href: "/enterprise-strategic-health-diagnostic",
@@ -85,43 +62,21 @@ const services: ServiceCard[] = [
     recommended: true,
   },
   {
-    id: 3,
-    icon: TrendingUp,
-    titleZh: "年度战略预判",
-    titleEn: "Annual Strategic Forecast",
-    visualZh: "年度战略预判",
-    visualEn: "Annual Strategic Forecast",
-    visualSubZh: "年度方向 · 月度趋势 · 关键时机",
-    visualSubEn: "Annual Direction · Monthly Trends · Key Timing",
-    painZh:
-      "为企业主判断一整年的战略节奏，包括年度总体发展方向、企业核心定位、年度批语、12个月月度趋势判断与关键月份提醒。",
-    painEn:
-      "A yearly strategic reading for business owners, covering overall development direction, core positioning, annual guidance, monthly trend reading and key timing reminders.",
-    audienceZh: "核心价值：提前看清什么时候进、什么时候守、什么时候调整，减少错误时机带来的高成本试错。",
-    audienceEn:
-      "Core value: know when to move, hold, adjust and avoid high-cost decisions caused by wrong timing.",
-    feeZh: "根据范围确认",
-    feeEn: "Based on Scope",
-    href: "/enterprise-strategic-advisory",
-    accentColor: "oklch(0.60 0.08 65)",
-    accentBg: "oklch(0.96 0.02 75)",
-    accentBorder: "oklch(0.88 0.03 70)",
-  },
-  {
-    id: 4,
+    id: 2,
     icon: Crown,
-    titleZh: "企业与个人风水布局",
-    titleEn: "Feng Shui Alignment for Business & Founder",
-    visualZh: "企业与个人风水布局",
-    visualEn: "Business & Founder Feng Shui Alignment",
-    visualSubZh: "企业空间 · 个人住宅 · 决策环境",
-    visualSubEn: "Business Space · Residence · Decision Environment",
+    titleZh: "企业风水与空间布局",
+    titleEn: "Business Feng Shui Alignment",
+    visualZh: "企业风水与空间布局",
+    visualEn: "Business Feng Shui Alignment",
+    visualSubZh: "办公室 · 商铺 · 企业主住宅 · 决策环境",
+    visualSubEn: "Office · Shop · Founder Residence · Decision Environment",
     painZh:
-      "结合企业办公室、商铺、商业空间与企业主个人住宅进行风水布局，协助稳定经营环境、财富承载、决策状态与企业发展势能。",
+      "结合企业办公室、商铺、商业空间与企业主住宅进行风水布局，协助稳定经营环境、团队状态、决策清晰度与企业发展势能。",
     painEn:
-      "A combined Feng Shui review of the business space and the founder's personal residence to support decision clarity, wealth flow, stability and business momentum.",
-    audienceZh: "核心价值：让企业空间与企业主个人状态形成更稳定的支持系统。",
-    audienceEn: "Core value: align the business environment and the founder's personal field to support more stable growth.",
+      "A Feng Shui review of office, shop, business space and founder residence to support operating environment, team state, decision clarity and business momentum.",
+    audienceZh: "核心价值：让企业空间、企业主状态与经营节奏形成更稳定的支持系统。",
+    audienceEn:
+      "Core value: align the business environment, founder state and operating rhythm into a stronger support system.",
     feeZh: "预约制顾问",
     feeEn: "By Appointment",
     href: "/enterprise-strategic-advisory",
@@ -130,20 +85,21 @@ const services: ServiceCard[] = [
     accentBorder: "oklch(0.90 0.04 80)",
   },
   {
-    id: 5,
+    id: 3,
     icon: Gem,
-    titleZh: "人事与合作关系判断",
-    titleEn: "People & Partnership Assessment",
-    visualZh: "人事与合作关系判断",
-    visualEn: "People & Partnership Assessment",
-    visualSubZh: "管理层 · 供应链 · 合作伙伴",
-    visualSubEn: "Management · Supply Chain · Partners",
+    titleZh: "合作与人事判断",
+    titleEn: "Partnership & People Assessment",
+    visualZh: "合作与人事判断",
+    visualEn: "Partnership & People Assessment",
+    visualSubZh: "合伙人 · 股东 · 核心员工 · 供应链",
+    visualSubEn: "Partners · Shareholders · Key Staff · Suppliers",
     painZh:
-      "协助企业主判断管理层、核心员工、供应链、合作伙伴与关键人事关系，识别助力、阻力与潜在风险。",
+      "协助企业主判断合伙人、股东、核心员工、供应链、合作对象与关键人事关系，识别助力、阻力、消耗与潜在问题。",
     painEn:
-      "Assessment of management, key employees, suppliers, cooperation partners and important business relationships before deeper commitment.",
-    audienceZh: "核心价值：看清谁是助力，谁是风险，谁不适合进入企业核心局。",
-    audienceEn: "Core value: know who supports the business, who creates risk and who should not enter the core structure.",
+      "Assessment of partners, shareholders, key employees, suppliers, cooperation targets and important business relationships to identify support, resistance, drain and potential issues.",
+    audienceZh: "核心价值：看清谁是助力，谁是阻力，谁不适合进入企业核心结构。",
+    audienceEn:
+      "Core value: know who supports the business, who creates resistance and who should not enter the core structure.",
     feeZh: "私密判断",
     feeEn: "Private Review",
     href: "/enterprise-strategic-advisory",
@@ -152,7 +108,30 @@ const services: ServiceCard[] = [
     accentBorder: "oklch(0.88 0.03 70)",
   },
   {
-    id: 6,
+    id: 4,
+    icon: TrendingUp,
+    titleZh: "年度企业趋势与战略预判",
+    titleEn: "Annual Business Forecast & Strategy",
+    visualZh: "年度企业趋势与战略预判",
+    visualEn: "Annual Business Forecast",
+    visualSubZh: "年度方向 · 月度趋势 · 关键时机",
+    visualSubEn: "Annual Direction · Monthly Trends · Key Timing",
+    painZh:
+      "为企业主判断一整年的经营节奏，包括年度总体方向、核心定位、关键月份、扩张节奏、合作窗口与调整节点。",
+    painEn:
+      "A yearly strategic reading for business owners, covering annual direction, core positioning, key months, expansion rhythm, partnership windows and adjustment points.",
+    audienceZh: "核心价值：提前看清什么时候进、什么时候守、什么时候调整，减少错误时机带来的高成本试错。",
+    audienceEn:
+      "Core value: know when to move, hold and adjust, reducing high-cost trial and error caused by wrong timing.",
+    feeZh: "根据范围确认",
+    feeEn: "Based on Scope",
+    href: "/enterprise-strategic-advisory",
+    accentColor: "oklch(0.60 0.08 65)",
+    accentBg: "oklch(0.96 0.02 75)",
+    accentBorder: "oklch(0.88 0.03 70)",
+  },
+  {
+    id: 5,
     icon: Zap,
     titleZh: "企业主战略陪跑顾问",
     titleEn: "Founder Strategic Advisory",
@@ -170,6 +149,29 @@ const services: ServiceCard[] = [
     feeZh: "长期顾问",
     feeEn: "Retainer Advisory",
     href: "/enterprise-strategic-advisory",
+    accentColor: "oklch(0.60 0.08 65)",
+    accentBg: "oklch(0.96 0.02 75)",
+    accentBorder: "oklch(0.88 0.03 70)",
+  },
+  {
+    id: 6,
+    icon: Activity,
+    titleZh: "个人重大决策咨询",
+    titleEn: "Personal Major Decision Advisory",
+    visualZh: "个人重大决策咨询",
+    visualEn: "Personal Major Decisions",
+    visualSubZh: "事业 · 关系 · 搬迁 · 投资 · 家庭",
+    visualSubEn: "Career · Relationship · Move · Investment · Family",
+    painZh:
+      "适合事业、关系、搬家、家庭选择或人生方向出现卡点的人，通过奇门遁甲看清当前阶段的主要阻力、信号与下一步选择。",
+    painEn:
+      "For clients facing major choices in career, relationships, relocation, family matters or life direction, reviewing current resistance, signals and next-step choices through Qi Men Dun Jia.",
+    audienceZh: "核心价值：不是替你决定，而是帮助你在关键选择前看清局势与方向。",
+    audienceEn:
+      "Core value: not deciding for you, but helping you see the situation and direction before a key choice.",
+    feeZh: "S$396 起",
+    feeEn: "From S$396",
+    href: "/personal-life-state-diagnostic",
     accentColor: "oklch(0.60 0.08 65)",
     accentBg: "oklch(0.96 0.02 75)",
     accentBorder: "oklch(0.88 0.03 70)",
@@ -192,14 +194,14 @@ export default function ServiceCards() {
             className="mb-3 text-xs uppercase tracking-[0.25em]"
             style={{ fontFamily: "var(--font-lato), sans-serif", color: "oklch(0.60 0.08 65)" }}
           >
-            {t("诊断与企业战略决策顾问服务", "Diagnostic & Enterprise Strategic Decision Advisory")}
+            {t("奇门遁甲企业决策顾问服务", "Qi Men Dun Jia Business Decision Advisory")}
           </p>
 
           <h2
             className="mb-5 text-3xl font-bold leading-tight md:text-5xl"
             style={{ fontFamily: "var(--font-cormorant), var(--font-noto-serif), serif", color: "oklch(0.15 0.02 60)" }}
           >
-            {t("关键决策前，先看清全局", "See the Whole Game Before You Decide")}
+            {t("生意卡住？合作不明？关键决策前，先看清全局", "Business Stuck? Partnership Unclear? See the Whole Game Before You Decide")}
           </h2>
 
           <p
@@ -207,8 +209,8 @@ export default function ServiceCards() {
             style={{ fontFamily: "var(--font-lato), var(--font-noto-sans), sans-serif", color: "oklch(0.42 0.02 60)" }}
           >
             {t(
-              "启明遁甲以 16 年奇门决策实战经验为根基，结合个人状态诊断、企业战略健康诊断、年度战略预判、企业风水布局、人事合作判断及重大决策陪跑，长期服务企业主、创始人与关键决策者。",
-              "QIMEN STRATEGY supports business owners, founders and key decision-makers through personal life-state diagnostics, enterprise strategic health diagnostics, annual strategic forecasting, Feng Shui alignment, people assessment and major decision advisory."
+              "启明遁甲以奇门遁甲为核心方法，结合 16 年企业决策顾问经验、两家企业 18 年稳健运营实战背书与多家企业战略决策顾问经验，服务企业主、创始人与关键决策者。",
+              "QIMEN STRATEGY uses Qi Men Dun Jia as the core decision method, supported by 16 years of business advisory experience, practical backing from two businesses operating steadily for 18 years, and strategic advisory work for multiple companies."
             )}
           </p>
         </motion.div>
@@ -331,10 +333,10 @@ export default function ServiceCards() {
             <Zap className="text-[oklch(0.72_0.12_70)]" size={24} />
             <div>
               <p className="text-sm font-bold uppercase tracking-[0.18em] text-[oklch(0.72_0.12_70)]">
-                {t("企业主私人战略顾问", "Private Founder Strategic Advisory")}
+                {t("启明大师企业奇门顾问", "Master Qiming Business Qi Men Advisory")}
               </p>
               <p className="text-sm text-white/72">
-                {t("适用于企业健康诊断、年度预判、企业风水、人事合作判断与重大决策陪跑。", "For enterprise diagnostics, annual strategy, Feng Shui alignment, people assessment and major decision advisory.")}
+                {t("适用于企业奇门诊断、年度预判、企业风水、人事合作判断与重大决策陪跑。", "For business Qi Men diagnosis, annual forecast, Feng Shui alignment, people assessment and major decision advisory.")}
               </p>
             </div>
           </div>
