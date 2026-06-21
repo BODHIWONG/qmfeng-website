@@ -16,7 +16,7 @@ import {
 const gold = "oklch(0.72 0.12 70)";
 const MASTER_IMAGE = "/master-qiming-about.jpg";
 const WA_LINK =
-  "https://wa.me/6589418791?text=Hello%20Master%20Qiming%2C%20I%20would%20like%20to%20book%20a%20private%20Qimen%20Strategy%20briefing.";
+  "https://wa.me/6589593499?text=Hello%20Master%20Qiming%2C%20I%20would%20like%20to%20book%20a%20private%20Qi%20Men%20Dun%20Jia%20business%20decision%20advisory%20session.";
 
 const qimenPoints = [
   {
@@ -45,24 +45,24 @@ const qimenPoints = [
 const trustItems = [
   {
     icon: Brain,
-    zh: "16 年奇门决策实战经验",
-    en: "16 Years of Qimen Decision Practice",
-    descZh: "长期服务企业主与个人关键决策，聚焦时机、方向、人事与风险判断。",
-    descEn: "Serving business owners and individuals facing critical decisions, with focus on timing, direction, people and risk.",
+    zh: "16 年奇门遁甲企业决策经验",
+    en: "16 Years of Qi Men Dun Jia Business Advisory",
+    descZh: "长期服务企业主与个人关键决策，聚焦时机、方向、人事与行动判断。",
+    descEn: "Serving business owners and individuals facing important decisions, with focus on timing, direction, people and action clarity.",
   },
   {
     icon: Building2,
-    zh: "16 年企业运营与决策服务经验",
-    en: "16 Years of Business Operation Experience",
-    descZh: "理解真实商业中的合作、投资、转型、团队与行动成本。",
-    descEn: "Understanding real-world business partnership, investment, transition, team and action cost.",
+    zh: "两家企业 18 年稳健运营实战背书",
+    en: "Two Businesses Operating Steadily for 18 Years",
+    descZh: "长期参与真实企业经营与决策，更理解企业主面对的现金流、合作、人事与扩张压力。",
+    descEn: "Long-term involvement in real business operations and decision-making, with understanding of cash flow, partnership, people and expansion pressure.",
   },
   {
     icon: ShieldCheck,
-    zh: "私密预约制咨询",
-    en: "Confidential Advisory",
-    descZh: "重大决策先沟通背景，再进行私密奇门决策判断。",
-    descEn: "High-stakes decisions begin with context briefing and confidential Qimen Strategy review.",
+    zh: "多家企业战略决策顾问",
+    en: "Strategic Decision Advisor to Multiple Companies",
+    descZh: "以私密预约制方式，为企业关键节点提供奇门遁甲战略判断与决策参考。",
+    descEn: "Private advisory for key business moments, applying Qi Men Dun Jia as strategic decision reference.",
   },
 ];
 
@@ -100,8 +100,8 @@ export default function QimenMasterSection() {
               }}
             >
               {t(
-                "把奇门遁甲，转化为现代关键决策前的战略判断",
-                "Translating Qi Men Dun Jia into Strategic Judgment Before Critical Decisions"
+                "16 年奇门遁甲企业决策经验，服务真实商业判断",
+                "16 Years of Qi Men Dun Jia Business Advisory for Real Business Decisions"
               )}
             </h2>
 
@@ -113,8 +113,8 @@ export default function QimenMasterSection() {
               }}
             >
               {t(
-                "启明遁甲以奇门决策咨询为核心，帮助企业主与个人在关键行动前，看清时机、方向、人事关系与局势风险，减少盲目试错。",
-                "Qimen Strategy focuses on Qimen decision advisory, helping business owners and individuals read timing, direction, people dynamics and risk before important moves."
+                "启明大师黄启明以奇门遁甲为核心决策方法，结合真实企业经营经验，帮助企业主与个人在关键行动前看清时机、方向、人事关系与局势结构。",
+                "Master Huang Qiming uses Qi Men Dun Jia as the core decision method, combining real business operating experience to help business owners and individuals read timing, direction, people dynamics and situation structure before important moves."
               )}
             </p>
 
@@ -147,8 +147,8 @@ export default function QimenMasterSection() {
               </h3>
               <p className="text-sm leading-relaxed text-[oklch(0.74_0.025_70)] md:text-base">
                 {t(
-                  "黄启明大师拥有 16 年奇门决策实战经验，结合 16 年企业运营与关键决策服务经验，帮助企业主与个人在重要行动前看清时机、方向、人事关系与局势风险。启明遁甲的核心，不是替客户决定，而是帮助客户看清局势、识别风险、建立更清醒的下一步判断。",
-                  "Master Huang Qiming brings 16 years of practical Qimen decision advisory experience, combined with 16 years of business operation and critical decision service experience, helping business owners and individuals gain clarity on timing, direction, people dynamics and risk before important decisions. Qimen Strategy does not decide for clients; it helps them see the situation, recognise risk and make clearer next-step judgments."
+                  "黄启明大师拥有 16 年奇门遁甲企业决策顾问经验，长期参与两家已稳健运营 18 年企业的经营与决策，并为多家企业提供战略决策顾问支持。启明遁甲的核心，不是替客户决定，而是帮助客户看清局势、识别重点、建立更清醒的下一步判断。",
+                  "Master Huang Qiming brings 16 years of Qi Men Dun Jia business advisory experience. He has long been involved in the operation and decision-making of two businesses that have operated steadily for 18 years, and has advised multiple companies on strategic decisions. Qimen Strategy does not decide for clients; it helps clients see the situation, identify key points and form clearer next-step judgment."
                 )}
               </p>
             </div>
@@ -162,7 +162,7 @@ export default function QimenMasterSection() {
                 style={{ background: gold }}
               >
                 <MessageCircle size={18} />
-                {t("预约私密奇门决策咨询", "Book Private Qimen Strategy Session")}
+                {t("预约私密奇门决策咨询", "Book Private Qi Men Advisory")}
               </a>
               <a
                 href="/qimen-strategy-business"
@@ -196,12 +196,12 @@ export default function QimenMasterSection() {
                 </p>
                 <p className="mt-2 text-sm font-semibold tracking-wide text-[oklch(0.78_0.10_70)]">
                   {t(
-                    "启明遁甲 · 战略智慧决策方法",
-                    "Qimen Strategy · Strategic Wisdom Decision Method"
+                    "奇门遁甲企业决策顾问",
+                    "Qi Men Dun Jia Business Decision Advisor"
                   )}
                 </p>
                 <p className="mt-2 text-xs uppercase tracking-[0.16em] text-white/70">
-                  {t("16 年奇门决策实战经验", "16 Years of Qimen Decision Practice")}
+                  {t("16 年企业奇门决策经验", "16 Years of Business Qi Men Advisory")}
                 </p>
               </div>
             </div>
