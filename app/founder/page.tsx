@@ -11,6 +11,7 @@ function FounderContent() {
   const knowsAbout = [
     "Qimen Strategy",
     "Qi Men Dun Jia",
+    "Qi Men Dun Jia Business Decision Advisory",
     "Enterprise Strategic Decision Advisory",
     "Business Decision Consulting",
     "Investment Timing Analysis",
@@ -18,6 +19,7 @@ function FounderContent() {
     "Business Feng Shui Alignment",
     "Office Feng Shui",
     "Residential Feng Shui",
+    "Founder Strategic Advisory",
     "Positive Psychology",
   ];
 
@@ -27,10 +29,10 @@ function FounderContent() {
     mainEntity: {
       "@type": "Person",
       name: "Huang Qiming 黄启明",
-      alternateName: ["Huang Qiming", "Qiming Huang", "黄启明"],
+      alternateName: ["Master Huang Qiming", "Qiming Huang", "黄启明", "启明大师"],
       description:
-        "Founder and Chief Strategic Advisor of Qimen Strategy Singapore, a Singapore-based Qi Men Dun Jia strategic decision advisory brand applying Qi Men Dun Jia, business judgment, Feng Shui alignment and people assessment for major decisions.",
-      jobTitle: "Founder | Chief Strategic Advisor, Qimen Strategy",
+        "Founder and Chief Strategic Advisor of Qimen Strategy Singapore. Master Huang Qiming has 16 years of practical Qi Men Dun Jia business advisory experience, has been involved in the strategic decision-making of two businesses operating steadily for 18 years, and has advised multiple companies on key strategic decisions.",
+      jobTitle: "Founder | Qi Men Dun Jia Business Decision Advisor, Qimen Strategy",
       worksFor: {
         "@type": "Organization",
         name: "启明遁甲 Qimen Strategy",
@@ -55,14 +57,14 @@ function FounderContent() {
 
         <div className="container relative mx-auto max-w-6xl">
           <p className="mb-5 text-xs font-bold uppercase tracking-[0.34em] text-[#d6ad63]">
-            {t("启明遁甲创始人｜首席战略决策顾问", "Founder, Qimen Strategy | Chief Strategic Advisor")}
+            {t("启明遁甲创始人｜奇门遁甲企业决策顾问", "Founder, Qimen Strategy | Qi Men Dun Jia Business Decision Advisor")}
           </p>
 
           <h1
             className="max-w-5xl text-5xl font-semibold leading-[0.96] tracking-[0.04em] text-[#f4dfb0] md:text-7xl"
             style={{ fontFamily: "var(--font-cormorant), var(--font-noto-serif), serif" }}
           >
-            {t("黄启明", "Huang Qiming")}
+            {t("黄启明大师", "Master Huang Qiming")}
           </h1>
 
           <p className="mt-5 text-2xl font-semibold uppercase tracking-[0.18em] text-[#d6ad63] md:text-4xl">
@@ -70,13 +72,13 @@ function FounderContent() {
           </p>
 
           <p className="mt-3 text-xl font-semibold tracking-[0.16em] text-[#e2bd6b] md:text-3xl">
-            启明遁甲创始人｜首席战略决策顾问
+            启明遁甲创始人｜奇门遁甲企业决策顾问
           </p>
 
           <p className="mt-8 max-w-3xl text-lg leading-9 text-white/78 md:text-xl">
             {t(
-              "黄启明是启明遁甲 Qimen Strategy 创始人及首席战略决策顾问。长期研究奇门遁甲、风水空间布局与东方决策智慧，并结合多年企业经营、客户咨询与正向心理学训练经验，形成启明遁甲的五维战略判断系统：天时、地利、人和、修为、成长。",
-              "Huang Qiming is the Founder and Chief Strategic Advisor of Qimen Strategy, also known as 启明遁甲. His work applies Qi Men Dun Jia, Feng Shui alignment, business judgment and positive psychology training through a five-dimensional decision framework: timing, environment, people dynamics, inner mastery and growth."
+              "黄启明大师是启明遁甲 Qimen Strategy 创始人及奇门遁甲企业决策顾问。16 年来长期以奇门遁甲协助企业主判断时机、方向、人事合作、风水空间与重大行动节奏，并结合真实企业经营与客户咨询经验，形成启明遁甲五维战略判断系统：天时、地利、人和、修为、成长。",
+              "Master Huang Qiming is the Founder of Qimen Strategy and a Qi Men Dun Jia Business Decision Advisor. For 16 years, his work has supported business owners in reading timing, direction, people dynamics, Feng Shui alignment and major action rhythm, forming the Qimen Strategy five-dimensional decision framework: timing, environment, people dynamics, inner mastery and growth."
             )}
           </p>
 
@@ -86,8 +88,8 @@ function FounderContent() {
               style={{ fontFamily: "var(--font-cormorant), var(--font-noto-serif), serif" }}
             >
               {t(
-                "每一次关键判断，都是在天时、地利、人和、修为与成长之间寻找更清晰的行动路径。",
-                "Every serious decision seeks a clearer path of action through timing, environment, people dynamics, inner mastery and growth."
+                "16 年奇门遁甲企业决策经验｜两家企业 18 年稳健运营实战背书｜多家企业战略决策顾问",
+                "16 Years of Qi Men Dun Jia Business Advisory · Two Businesses Operating Steadily for 18 Years · Strategic Decision Advisor to Multiple Companies"
               )}
             </p>
           </div>
@@ -96,21 +98,21 @@ function FounderContent() {
             <div className="border border-[#d6ad63]/20 bg-white/[0.03] p-5">
               <p className="text-3xl font-semibold text-[#f4dfb0]">16+</p>
               <p className="mt-2 text-xs uppercase tracking-[0.22em] text-[#d6ad63]">
-                Qimen Decision Practice
+                Qi Men Business Advisory
               </p>
             </div>
 
             <div className="border border-[#d6ad63]/20 bg-white/[0.03] p-5">
-              <p className="text-3xl font-semibold text-[#f4dfb0]">SG</p>
+              <p className="text-3xl font-semibold text-[#f4dfb0]">18</p>
               <p className="mt-2 text-xs uppercase tracking-[0.22em] text-[#d6ad63]">
-                Singapore Qi Men Dun Jia
+                Years Business Operation
               </p>
             </div>
 
             <div className="border border-[#d6ad63]/20 bg-white/[0.03] p-5">
-              <p className="text-3xl font-semibold text-[#f4dfb0]">Chief</p>
+              <p className="text-3xl font-semibold text-[#f4dfb0]">多家</p>
               <p className="mt-2 text-xs uppercase tracking-[0.22em] text-[#d6ad63]">
-                Strategic Advisor
+                Company Strategy Advisory
               </p>
             </div>
 
@@ -146,8 +148,21 @@ function FounderContent() {
 
               <p className="mt-4 text-base leading-8 text-white/72">
                 {t(
-                  "随着客户问题从个人选择，逐渐延伸到企业合作、投资判断、团队任用、事业转型与长期方向，黄启明意识到：现代企业主真正需要的，不只是一次判断，而是一套能够理解时机、空间、人事、风险与创始人状态的战略决策顾问系统。",
-                  "As client needs expanded from personal choices into business partnerships, investment judgment, key appointments, business transitions and long-term direction, Huang Qiming realised that modern business owners need more than a single reading: they need a strategic advisory system that understands timing, environment, people dynamics, risk and the founder's decision state."
+                  "随着客户问题从个人选择，逐渐延伸到企业合作、投资判断、团队任用、事业转型与长期方向，黄启明大师意识到：现代企业主真正需要的，不只是一次判断，而是一套能够理解时机、空间、人事、行动节奏与企业主状态的奇门遁甲战略决策顾问系统。",
+                  "As client needs expanded from personal choices into business partnerships, investment judgment, key appointments, business transitions and long-term direction, Master Huang realised that modern business owners need more than a single reading: they need a Qi Men Dun Jia strategic decision advisory system that understands timing, environment, people dynamics, action rhythm and the founder's decision state."
+                )}
+              </p>
+            </div>
+
+            <div>
+              <h2 className="text-2xl font-semibold text-[#f4dfb0] md:text-3xl">
+                {t("商业实战背书", "Practical Business Backing")}
+              </h2>
+
+              <p className="mt-4 text-base leading-8 text-white/72">
+                {t(
+                  "黄启明大师长期参与两家已稳健运营 18 年企业的经营与决策，并为多家企业提供战略决策顾问支持。因此，启明遁甲的判断不是停留在理论层面，而是结合企业主真实面对的合作、人事、扩张、空间环境、行动成本与长期承载力。",
+                  "Master Huang has long been involved in the operation and decision-making of two businesses that have operated steadily for 18 years, and has advised multiple companies on strategic decisions. This gives Qimen Strategy a practical commercial perspective across partnership, people, expansion, operating environment, action cost and long-term business capacity."
                 )}
               </p>
             </div>
@@ -159,8 +174,8 @@ function FounderContent() {
 
               <p className="mt-4 text-base leading-8 text-white/72">
                 {t(
-                  "他的工作重点不是替客户做决定，而是在重大行动前帮助客户看清局势、识别风险、稳定判断，并形成更清晰的下一步行动策略：什么时候应该行动，什么时候适合观察，哪个空间与方向更顺，谁是助力，谁是消耗。",
-                  "His work is not to make decisions for clients, but to help them see the situation, identify risk, stabilise judgment and form clearer next steps before major action: when to move, when to observe, which direction is more aligned, who supports and who drains."
+                  "他的工作重点不是替客户做决定，而是在重大行动前帮助客户看清局势、识别重点、稳定判断，并形成更清晰的下一步行动策略：什么时候应该行动，什么时候适合观察，哪个空间与方向更顺，谁是助力，谁是消耗。",
+                  "His work is not to make decisions for clients, but to help them see the situation, identify key points, stabilise judgment and form clearer next steps before major action: when to move, when to observe, which direction is more aligned, who supports and who drains."
                 )}
               </p>
             </div>
@@ -172,8 +187,8 @@ function FounderContent() {
 
               <p className="mt-4 text-base leading-8 text-white/72">
                 {t(
-                  "立足新加坡，启明遁甲 Qimen Strategy 以中英双语服务企业主、创始人、专业人士与关键决策者。品牌定位为新加坡奇门遁甲战略决策顾问，帮助客户在商业、投资、合作、职业、住宅与办公室风水相关的关键行动前先看清全局。",
-                  "Based in Singapore, Qimen Strategy serves business owners, founders, professionals and key decision-makers in both English and Chinese. The brand is positioned as a Singapore Qi Men Dun Jia strategic decision advisory practice, helping clients see the whole game before critical action in business, investment, partnership, career, residential Feng Shui and office Feng Shui matters."
+                  "立足新加坡，启明遁甲 Qimen Strategy 以中英双语服务企业主、创始人、专业人士与关键决策者。品牌定位为新加坡奇门遁甲企业决策顾问，帮助客户在商业、投资、合作、职业、住宅与办公室风水相关的关键行动前先看清全局。",
+                  "Based in Singapore, Qimen Strategy serves business owners, founders, professionals and key decision-makers in both English and Chinese. The brand is positioned as a Singapore Qi Men Dun Jia business decision advisory practice, helping clients see the whole game before critical action in business, investment, partnership, career, residential Feng Shui and office Feng Shui matters."
                 )}
               </p>
             </div>
