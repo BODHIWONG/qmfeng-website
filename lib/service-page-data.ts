@@ -84,8 +84,8 @@ export const wealthPageContent: ServicePageContent = {
   ctaTitleEn: "See the situation clearly before deciding the next move",
   ctaBodyZh: "事业财富咨询不再公开低价展示，统一采用预约制与服务范围报价。",
   ctaBodyEn: "Business and wealth advisory is now by appointment with scope-based pricing.",
-  waTextZh: "你好启明大师，我想咨询事业财富与商业方向问题。",
-  waTextEn: "Hello Master Qiming, I would like to consult about business and wealth direction."
+  waTextZh: "你好，启明遁甲 Qimen Strategy，我想咨询事业财富与商业方向问题。",
+  waTextEn: "Hello Qimen Strategy, I would like to consult about business and wealth direction."
 };
 
 export const healingPageContent: ServicePageContent = {
@@ -96,9 +96,9 @@ export const healingPageContent: ServicePageContent = {
   heroTitleZh: "有些关系与情绪问题，需要先看清内在状态与环境结构",
   heroTitleEn: "Some emotional and relationship issues require clarity of inner state and environment first",
   heroSubtitleZh:
-    "启明大师结合积极心理学视角、命理判断、空间环境与能量调和，帮助客户看清关系反复、情绪内耗与状态失衡背后的结构。",
+    "启明遁甲结合积极心理学视角、命理判断、空间环境与能量调和，帮助客户看清关系反复、情绪内耗与状态失衡背后的结构。",
   heroSubtitleEn:
-    "Master Qiming combines positive psychology perspective, destiny insight, spatial environment and energy alignment to clarify the structure behind emotional exhaustion, relationship patterns and inner imbalance.",
+    "Qimen Strategy combines positive psychology perspective, destiny insight, spatial environment and energy alignment to clarify the structure behind emotional exhaustion, relationship patterns and inner imbalance.",
   trustPointsZh: ["私密咨询", "关系 · 情绪 · 空间", "预约制咨询", "按范围确认"],
   trustPointsEn: ["Private Advisory", "Relationship · Emotion · Space", "By Appointment", "Scope-Based Pricing"],
   priceZh: "预约制｜按服务范围确认",
@@ -135,25 +135,25 @@ export const healingPageContent: ServicePageContent = {
   ctaTitleEn: "Stabilise yourself first, then the relationship can change",
   ctaBodyZh: "身心能量与关系咨询统一采用预约制与服务范围报价。",
   ctaBodyEn: "Inner clarity and relationship advisory is by appointment with scope-based pricing.",
-  waTextZh: "你好启明大师，我想咨询关系、情绪与身心能量问题。",
-  waTextEn: "Hello Master Qiming, I would like to consult about relationship, emotion and inner clarity."
+  waTextZh: "你好，启明遁甲 Qimen Strategy，我想咨询关系、情绪与身心能量问题。",
+  waTextEn: "Hello Qimen Strategy, I would like to consult about relationship, emotion and inner clarity."
 };
 
 export const decisionPageContent: ServicePageContent = {
   badgeZh: "单项奇门决策咨询",
-  badgeEn: "Single Qimen Strategy Session",
+  badgeEn: "Single Qimen Decision Consultation",
   pageTitleZh: "单项奇门决策咨询",
-  pageTitleEn: "Single Qimen Strategy Session",
+  pageTitleEn: "Single Qimen Decision Consultation",
   heroTitleZh: "一个关键决定，值得一次清晰的奇门决策判断",
   heroTitleEn: "One critical decision deserves a clear Qimen Strategy review",
   heroSubtitleZh:
     "启明遁甲将奇门遁甲转化为现代关键决策前的战略智慧决策方法。适用于合作、投资、签约、任用、转型、人生方向、关系与婚姻决策。",
   heroSubtitleEn:
     "Qimen Strategy translates Qi Men Dun Jia into a practical strategic wisdom decision method before critical action. It is suitable for partnerships, investments, contracts, key appointments, transitions, life direction, relationship and marriage decisions.",
-  trustPointsZh: ["一个关键决定", "私密奇门决策咨询", "可执行建议", "预约制咨询"],
-  trustPointsEn: ["One Critical Decision", "Private Qimen Strategy Session", "Actionable Insight", "By Appointment"],
-  priceZh: "预约制｜私密确认",
-  priceEn: "By Appointment · Privately Confirmed",
+  trustPointsZh: ["一个关键决定", "私密奇门决策咨询", "可执行建议", "S$396 起"],
+  trustPointsEn: ["One Critical Decision", "Private Qimen Decision Consultation", "Actionable Insight", "From S$396"],
+  priceZh: "S$396 起｜按复杂度确认",
+  priceEn: "From S$396 · Scope-Based Pricing",
   symptomsTitleZh: "适合哪些关键决定？",
   symptomsTitleEn: "Which critical decisions is this for?",
   symptomsZh: ["是否合作、签约或投资。", "是否任用关键人员或调整团队。", "是否转型、跳槽或改变事业方向。", "是否推进某个重大计划。", "人生方向、关系或婚姻决策。", "是否需要加急判断行动时机。"],
@@ -164,8 +164,8 @@ export const decisionPageContent: ServicePageContent = {
   suitableEn: ["Business owners, founders and executives.", "Clients facing major partnership or investment decisions.", "People in transition, expansion or strategic change.", "Those facing life direction, relationship or marriage choices."],
   approachTitleZh: "单项咨询如何进行？",
   approachTitleEn: "How the single advisory session works",
-  approachIntroZh: "咨询围绕一个核心问题展开，重点看清时机、方向、人事、风险与下一步行动建议。",
-  approachIntroEn: "The session focuses on one core question, reviewing timing, direction, people dynamics, risk and recommended next action.",
+  approachIntroZh: "咨询围绕一个核心问题展开，重点看清时机、方向、人事、风险与下一步行动建议。基础奇门决策咨询 S$396 起，复杂商业或多人关系个案将根据范围确认费用。",
+  approachIntroEn: "The session focuses on one core question, reviewing timing, direction, people dynamics, risk and recommended next action. Entry Qimen Decision Consultation starts from S$396; complex business or multi-party cases are scoped separately.",
   steps: [
     { titleZh: "背景沟通", titleEn: "Briefing", descZh: "先了解问题背景与当前选择。", descEn: "Understand the background and available options." },
     { titleZh: "奇门判断", titleEn: "Qimen Review", descZh: "判断时机、方向、人事与风险结构。", descEn: "Review timing, direction, people dynamics and risk structure." },
@@ -182,16 +182,16 @@ export const decisionPageContent: ServicePageContent = {
   faqTitleZh: "常见问题",
   faqTitleEn: "FAQ",
   faqs: [
-    { qZh: "单项咨询费用如何确认？", qEn: "How is the fee confirmed?", aZh: "单项奇门决策咨询为预约制，费用根据问题复杂度、是否加急与交付深度私密确认。", aEn: "Single Qimen Strategy sessions are by appointment. Fees are privately confirmed based on complexity, urgency and depth of deliverables." },
+    { qZh: "单项咨询费用如何确认？", qEn: "How is the fee confirmed?", aZh: "基础奇门决策咨询 S$396 起。费用会根据问题复杂度、是否涉及企业决策、多人关系、是否加急与交付深度确认。", aEn: "Entry Qimen Decision Consultation starts from S$396. The fee is confirmed based on complexity, whether business decisions or multiple parties are involved, urgency and deliverable depth." },
     { qZh: "可以加急吗？", qEn: "Is priority review available?", aZh: "紧急个案可申请加急优先处理，是否安排及费用将在沟通背景后确认。", aEn: "Priority review may be available for urgent cases. Arrangement and fee are confirmed after private context review." },
     ...appointmentFaqs,
   ],
   ctaTitleZh: "关键决定，不要只靠感觉",
   ctaTitleEn: "Do not rely on instinct alone for a critical decision",
-  ctaBodyZh: "一次清晰的奇门决策判断，往往可以减少后续更高的试错成本。费用将根据咨询范围私密确认。",
-  ctaBodyEn: "One clear Qimen Strategy review can reduce the cost of trial and error later. Fees are confirmed privately based on advisory scope.",
-  waTextZh: "你好启明大师，我想预约单项奇门决策咨询。",
-  waTextEn: "Hello Master Qiming, I would like to book a Single Qimen Strategy Session."
+  ctaBodyZh: "一次清晰的奇门决策判断，往往可以减少后续更高的试错成本。基础咨询 S$396 起，复杂个案将根据咨询范围确认。",
+  ctaBodyEn: "One clear Qimen Strategy review can reduce the cost of trial and error later. Entry consultation starts from S$396; complex cases are confirmed based on advisory scope.",
+  waTextZh: "你好，启明遁甲 Qimen Strategy，我想预约单项奇门决策咨询。",
+  waTextEn: "Hello Qimen Strategy, I would like to book a Single Qimen Decision Consultation."
 };
 
 export const spaceClearingPageContent: ServicePageContent = {
@@ -239,6 +239,6 @@ export const spaceClearingPageContent: ServicePageContent = {
   ctaTitleEn: "When space is clear, life and business can become steadier",
   ctaBodyZh: "空间相关服务统一采用预约制与范围报价。",
   ctaBodyEn: "Space-related services are offered by appointment with scope-based pricing.",
-  waTextZh: "你好启明大师，我想咨询空间与环境调和。",
-  waTextEn: "Hello Master Qiming, I would like to consult about space and environment alignment."
+  waTextZh: "你好，启明遁甲 Qimen Strategy，我想咨询空间与环境调和。",
+  waTextEn: "Hello Qimen Strategy, I would like to consult about space and environment alignment."
 };
