@@ -9,29 +9,42 @@ import QimenStrategyValueSection from "@/components/qimen-strategy-value-section
 export const metadata: Metadata = {
   title: "Qimen Strategy Advisory Singapore｜启明遁甲奇门决策顾问",
   description:
-    "启明遁甲 Qimen Strategy 奇门决策顾问方案。黄启明大师以 16 年奇门决策实战经验，长期服务企业主与个人关键决策。",
+    "启明遁甲 Qimen Strategy 奇门决策顾问方案。由 Huang Qiming 创立，服务企业主、创始人与个人关键决策，涵盖时机、方向、人事与风险判断。",
   alternates: {
     canonical: "https://www.qmfeng.com/qimen-strategy-business",
   },
 };
 
-const WA_LINK =
-  "https://wa.me/6589593499?text=Hello%20Master%20Qiming%2C%20I%20would%20like%20to%20consult%20about%20Qimen%20Strategy.";
+const WA_LINK = [
+  "https://wa.me/6589593499",
+  "text=Hello%20Qimen%20Strategy%2C%20I%20would%20like%20to%20consult%20about%20Qimen%20Strategy%20Advisory.",
+].join("?");
 
 const programs = [
   {
     no: "01",
-    title: "Single Qimen Strategy Session",
-    zh: "单项奇门决策咨询",
-    price: "S$980",
-    unit: "/ session",
-    body: "One critical decision. Clear situation. Better next move.",
-    bodyZh: "适合一个关键决定前的局势判断。",
-    points: ["Private 1-on-1 consultation", "Timing, direction, people-environment and risk review", "Action-oriented recommendation"],
-    tag: "For one critical decision",
+    title: "Entry Qimen Decision Consultation",
+    zh: "基础奇门决策咨询",
+    price: "From S$396",
+    unit: "/ case",
+    body: "For one clearly defined personal, career or relationship decision.",
+    bodyZh: "适合一个清晰的个人、事业或关系决策问题。",
+    points: ["One core question", "45–60 minutes private consultation", "Decision direction and next-step clarity"],
+    tag: "Entry consultation",
   },
   {
     no: "02",
+    title: "Single Qimen Strategy Session",
+    zh: "深度单项奇门决策咨询",
+    price: "From S$980",
+    unit: "/ session",
+    body: "For complex business, investment, partnership or marriage decisions.",
+    bodyZh: "适合复杂商业、投资、合作或婚姻关系判断。",
+    points: ["Private 1-on-1 consultation", "Timing, direction, people-environment and risk review", "Action-oriented recommendation"],
+    tag: "Deep advisory session",
+  },
+  {
+    no: "03",
     title: "Quarterly Qimen Strategy Advisory",
     zh: "季度奇门决策顾问",
     price: "S$2,800",
@@ -43,7 +56,7 @@ const programs = [
     featured: true,
   },
   {
-    no: "03",
+    no: "04",
     title: "Annual Qimen Strategy Advisory",
     zh: "年度奇门决策顾问",
     price: "S$9,800",
@@ -54,7 +67,7 @@ const programs = [
     tag: "Long-term advisory",
   },
   {
-    no: "04",
+    no: "05",
     title: "Major Project Qimen Strategy Advisory",
     zh: "重大项目奇门决策顾问",
     price: "From S$25,000",
@@ -99,7 +112,7 @@ export default function QimenStrategyBusinessPage() {
                 A private Qimen Strategy advisory approach for business owners and individuals facing critical decisions. Rooted in Qi Men Dun Jia, shaped into practical strategic judgment before action.
               </p>
               <p className="mt-4 max-w-3xl text-base leading-8 text-white/70">
-                启明遁甲以奇门决策咨询为核心，帮助企业主与个人在合作、投资、转型、任用、签约或人生方向选择前，看清时机、方向、人事环境与风险结构。价格在本方案页公开展示，具体范围与交付深度可在预约前进一步确认。
+                启明遁甲以奇门决策咨询为核心，帮助企业主与个人在合作、投资、转型、任用、签约或人生方向选择前，看清时机、方向、人事环境与风险结构。基础奇门决策咨询 S$396 起，深度单项咨询与企业顾问方案根据复杂度和交付深度确认。
               </p>
               <div className="mt-10 flex flex-col gap-4 sm:flex-row">
                 <a
@@ -119,10 +132,32 @@ export default function QimenStrategyBusinessPage() {
 
           <QimenStrategyValueSection />
 
+          <section className="border-y border-[#d6ad63]/20 bg-black px-4 py-8">
+            <div className="container mx-auto max-w-6xl">
+              <div className="grid gap-4 md:grid-cols-3">
+                <div className="border border-[#d6ad63]/35 p-5">
+                  <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#d6ad63]">Entry</p>
+                  <p className="mt-2 text-2xl font-bold text-[#f4dfb0]">From S$396</p>
+                  <p className="mt-2 text-sm leading-6 text-white/64">For one clearly defined personal, career or relationship decision.</p>
+                </div>
+                <div className="border border-[#d6ad63]/35 p-5">
+                  <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#d6ad63]">Deep Advisory</p>
+                  <p className="mt-2 text-2xl font-bold text-[#f4dfb0]">From S$980</p>
+                  <p className="mt-2 text-sm leading-6 text-white/64">For complex business, investment, partnership or marriage decisions.</p>
+                </div>
+                <div className="border border-[#d6ad63]/35 p-5">
+                  <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#d6ad63]">Retainer</p>
+                  <p className="mt-2 text-2xl font-bold text-[#f4dfb0]">From S$2,800</p>
+                  <p className="mt-2 text-sm leading-6 text-white/64">For ongoing quarterly, annual or project-based advisory support.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
           <section className="border-b border-[#d6ad63]/20 bg-[#070707] px-4 py-16">
             <div className="container mx-auto max-w-6xl">
               <p className="text-xs font-bold uppercase tracking-[0.32em] text-[#d6ad63]">Qimen Strategy Advisory Programs</p>
-              <div className="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+              <div className="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-5">
                 {programs.map((program) => (
                   <article
                     key={program.no}
@@ -148,7 +183,7 @@ export default function QimenStrategyBusinessPage() {
                       ))}
                     </ul>
                     <div className="mt-auto pt-8">
-                      <p className="text-4xl font-bold text-[#f4dfb0]">{program.price}</p>
+                      <p className="text-3xl font-bold text-[#f4dfb0]">{program.price}</p>
                       <p className="mt-1 text-sm uppercase tracking-[0.14em] text-white/58">{program.unit}</p>
                       <p className="mt-4 border border-[#d6ad63]/35 px-3 py-2 text-center text-xs font-bold uppercase tracking-[0.12em] text-[#d6ad63]">
                         {program.tag}
