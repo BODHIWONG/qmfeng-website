@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, MessageCircle } from "lucide-react";
 
 const WA_LINK =
-  "https://wa.me/6589593499?text=Hello%20Qimen%20Strategy%2C%20I%20would%20like%20to%20consult%20about%20Qi%20Men%20Dun%20Jia%20Strategic%20Decision%20Advisory%20in%20Singapore.";
+  "https://wa.me/6589593499?text=Hello%20Qimen%20Strategy%2C%20I%20would%20like%20to%20consult%20about%20Qi%20Men%20Dun%20Jia%20Business%20Decision%20Advisory%20in%20Singapore.";
 
 const BG_IMAGE = "/master-home-hero.png";
 
@@ -14,7 +14,7 @@ export default function HeroSimple() {
       <div className="absolute inset-0">
         <img
           src={BG_IMAGE}
-          alt="Qimen Strategy Singapore Qi Men Dun Jia Strategic Decision Advisory by Huang Qiming"
+          alt="Master Huang Qiming Qimen Strategy Singapore Qi Men Dun Jia Business Decision Advisory"
           className="h-full w-full object-cover object-center opacity-82"
           loading="eager"
           fetchPriority="high"
@@ -44,7 +44,7 @@ export default function HeroSimple() {
               className="text-xs font-semibold uppercase tracking-[0.32em] text-[#d6ad63]"
               style={{ fontFamily: "var(--font-lato), var(--font-noto-sans), sans-serif" }}
             >
-              Singapore · Qi Men Dun Jia · Strategic Decision Advisory
+              Singapore · Qi Men Dun Jia · Business Decision Advisory
             </span>
             <span className="hidden h-px w-10 bg-[#c89a45] sm:block" />
           </motion.div>
@@ -56,7 +56,7 @@ export default function HeroSimple() {
             className="max-w-5xl text-4xl font-semibold uppercase leading-[0.98] tracking-[0.06em] text-[#f4dfb0] drop-shadow-[0_8px_28px_rgba(0,0,0,0.62)] sm:text-5xl md:text-6xl lg:text-7xl"
             style={{ fontFamily: "var(--font-cormorant), var(--font-noto-serif), serif" }}
           >
-            Singapore Qi Men Dun Jia Strategic Decision Advisory
+            Singapore Qi Men Dun Jia Business Decision Advisory
           </motion.h1>
 
           <motion.h2
@@ -66,7 +66,7 @@ export default function HeroSimple() {
             className="mt-5 text-2xl font-semibold tracking-[0.16em] text-[#e2bd6b] md:text-4xl"
             style={{ fontFamily: "var(--font-noto-serif), var(--font-cormorant), serif" }}
           >
-            新加坡奇门遁甲战略决策顾问
+            新加坡奇门遁甲企业决策顾问
           </motion.h2>
 
           <motion.p
@@ -76,7 +76,7 @@ export default function HeroSimple() {
             className="mt-6 text-2xl font-semibold tracking-[0.18em] text-[#f1d38a] md:text-4xl"
             style={{ fontFamily: "var(--font-cormorant), var(--font-noto-serif), serif" }}
           >
-            启明遁甲 Qimen Strategy
+            启明大师黄启明 · 启明遁甲 Qimen Strategy
           </motion.p>
 
           <motion.p
@@ -96,9 +96,9 @@ export default function HeroSimple() {
             className="mt-8 max-w-4xl border-l-2 border-[#d0a14a] bg-black/38 px-5 py-4 text-sm font-semibold leading-7 text-[#f1d38a] backdrop-blur-sm md:text-base"
             style={{ fontFamily: "var(--font-lato), var(--font-noto-sans), sans-serif" }}
           >
-            Business Strategy · Investment Timing · Partnership Assessment · Feng Shui Alignment
+            Business Qi Men Diagnosis · Investment Timing · Partnership & People · Business Feng Shui
             <br />
-            商业决策 · 投资判断 · 合作人事 · 住宅与办公室风水调理
+            企业奇门诊断 · 投资时机 · 合作人事 · 企业风水布局
           </motion.div>
 
           <motion.p
@@ -108,7 +108,7 @@ export default function HeroSimple() {
             className="mt-7 max-w-4xl text-base leading-8 text-white/82 md:text-lg"
             style={{ fontFamily: "var(--font-lato), var(--font-noto-sans), sans-serif" }}
           >
-            Qimen Strategy, also known as 启明遁甲, is a Singapore-based Qi Men Dun Jia strategic decision advisory brand led by Huang Qiming. It helps business owners, founders, executives, investors and individuals evaluate timing, direction, people dynamics, Feng Shui alignment and hidden risks before major business, investment, career and life decisions.
+            Led by Master Huang Qiming, Qimen Strategy is a Singapore-based Qi Men Dun Jia business decision advisory brand with 16 years of practical Qi Men Dun Jia advisory experience. Master Huang has been involved in the strategic decision-making of two businesses operating steadily for 18 years and has advised multiple companies on key business decisions.
           </motion.p>
 
           <motion.p
@@ -118,7 +118,7 @@ export default function HeroSimple() {
             className="mt-3 max-w-4xl text-sm leading-7 text-white/70 md:text-base"
             style={{ fontFamily: "var(--font-noto-sans), var(--font-lato), sans-serif" }}
           >
-            启明遁甲 Qimen Strategy 是新加坡的奇门遁甲战略决策顾问品牌。以 16 年奇门决策实战经验为根基，结合企业经营判断、风水空间布局、人事合作分析与重大决策陪跑，帮助企业主、创始人、高管与个人在合作、投资、扩张、任用、转型、签约和重大人生选择前，看清时机、方向、人事关系与风险结构。
+            启明遁甲 Qimen Strategy 以奇门遁甲为核心决策方法，结合企业经营判断、风水空间布局、人事合作分析与重大决策陪跑，协助企业主、创始人、高管与个人在生意卡住、合作不明、投资扩张、任用调整、签约搬迁及重大人生选择前，看清时机、方向、人事关系与风险结构。
           </motion.p>
 
           <motion.div
@@ -149,15 +149,15 @@ export default function HeroSimple() {
               style={{ fontFamily: "var(--font-lato), sans-serif" }}
             >
               <MessageCircle size={18} />
-              Book Consultation
+              Book Qi Men Consultation
             </a>
 
             <a
-              href="/singapore-qi-men-dun-jia-consultant"
+              href="/enterprise-strategic-advisory"
               className="inline-flex items-center justify-center gap-3 border border-[#c89a45] px-7 py-4 text-sm font-bold uppercase tracking-[0.12em] text-[#f4dfb0] transition-colors duration-300 hover:bg-[#c89a45]/10"
               style={{ fontFamily: "var(--font-lato), sans-serif" }}
             >
-              Qi Men Dun Jia Consultant
+              Business Advisory Services
               <ArrowRight size={18} />
             </a>
           </motion.div>
