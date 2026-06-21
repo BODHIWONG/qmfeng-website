@@ -83,8 +83,8 @@ export default function LeadCaptureForm() {
             </h2>
             <p className="max-w-xl text-base leading-8 text-white/75 md:text-lg">
               {t(
-                "奇门决策咨询 S$396 起，个人运势与状态诊断 S$396 起，企业战略健康诊断 S$3,966 起。填写姓名、WhatsApp 与当前问题，我们会通过 WhatsApp 与你确认预约。正式 WhatsApp：+65 8959 3499。",
-                "Qimen Decision Consultation starts from S$396. Personal Life-State Diagnostic starts from S$396. Enterprise Strategic Health Diagnostic starts from S$3,966. Leave your name, WhatsApp number and current question, and we will confirm your appointment via WhatsApp. Official WhatsApp: +65 8959 3499."
+                "奇门决策咨询 S$396 起，个人运势与状态诊断 S$396 起，企业战略健康诊断 S$3,996 起。填写姓名、WhatsApp 与当前问题，我们会通过 WhatsApp 与你确认预约。正式 WhatsApp：+65 8959 3499。",
+                "Qimen Decision Consultation starts from S$396. Personal Life-State Diagnostic starts from S$396. Enterprise Strategic Health Diagnostic starts from S$3,996. Leave your name, WhatsApp number and current question, and we will confirm your appointment via WhatsApp. Official WhatsApp: +65 8959 3499."
               )}
             </p>
           </motion.div>
@@ -130,7 +130,7 @@ export default function LeadCaptureForm() {
               >
                 <option value="Qimen Decision Consultation From S$396">{t("奇门决策咨询 S$396 起", "Qimen Decision Consultation From S$396")}</option>
                 <option value="Personal Luck and Life-State Diagnostic From S$396">{t("个人运势与状态诊断 S$396 起", "Personal Luck & Life-State Diagnostic From S$396")}</option>
-                <option value="Enterprise Strategic Health Diagnostic From S$3966">{t("企业战略健康诊断 S$3,966 起", "Enterprise Strategic Health Diagnostic From S$3,966")}</option>
+                <option value="Enterprise Strategic Health Diagnostic From S$3996">{t("企业战略健康诊断 S$3,996 起", "Enterprise Strategic Health Diagnostic From S$3,996")}</option>
                 <option value="Enterprise Decision Advisory">{t("企业决策顾问", "Enterprise Decision Advisory")}</option>
                 <option value="Life and Career Decision Clarity">{t("人生与事业决策咨询", "Life & Career Decision Clarity")}</option>
                 <option value="Relationship Decision Clarity">{t("情感关系决策咨询", "Relationship Decision Clarity")}</option>
