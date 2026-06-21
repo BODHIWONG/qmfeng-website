@@ -38,10 +38,10 @@ const content: ServicePageContent = {
     "启明遁甲企业战略健康诊断，专为企业主、创始人与管理层设计，通过奇门决策、经营结构分析、人事合作判断与企业空间观察，帮助企业看清当前经营状态、隐藏风险与下一阶段调整方向。",
   heroSubtitleEn:
     "Qimen Strategy Enterprise Strategic Health Diagnostic is designed for business owners, founders and management teams. It reviews decision timing, business structure, people dynamics and business environment to clarify current condition, hidden risks and next-stage adjustment direction.",
-  trustPointsZh: ["企业方向", "人事合作", "空间支持力", "S$3,996 起"],
-  trustPointsEn: ["Business Direction", "People & Partnership", "Space Support", "From S$3,996"],
-  priceZh: "S$3,996 起｜按企业范围确认",
-  priceEn: "From S$3,996 · Scope-Based Pricing",
+  trustPointsZh: ["企业方向", "人事合作", "空间支持力", "S$3,966 起"],
+  trustPointsEn: ["Business Direction", "People & Partnership", "Space Support", "From S$3,966"],
+  priceZh: "S$3,966 起｜按企业范围确认",
+  priceEn: "From S$3,966 · Scope-Based Pricing",
   symptomsTitleZh: "企业是否出现这些信号？",
   symptomsTitleEn: "Is your business showing these signals?",
   symptomsZh: [
@@ -95,8 +95,8 @@ const content: ServicePageContent = {
     {
       qZh: "费用如何确认？",
       qEn: "How is the fee confirmed?",
-      aZh: "企业战略健康诊断 S$3,996 起。最终费用会根据企业规模、问题复杂度、是否到场、是否包含空间判断与交付深度确认。",
-      aEn: "Enterprise Strategic Health Diagnostic starts from S$3,996. Final fee depends on business size, complexity, on-site requirements, space review and deliverable depth.",
+      aZh: "企业战略健康诊断 S$3,966 起。最终费用会根据企业规模、问题复杂度、是否到场、是否包含空间判断与交付深度确认。",
+      aEn: "Enterprise Strategic Health Diagnostic starts from S$3,966. Final fee depends on business size, complexity, on-site requirements, space review and deliverable depth.",
     },
     {
       qZh: "适合做年度顾问前的入口吗？",
@@ -107,8 +107,8 @@ const content: ServicePageContent = {
   ],
   ctaTitleZh: "先看清企业系统，再决定下一步动作",
   ctaTitleEn: "Clarify the business system before your next move",
-  ctaBodyZh: "企业战略健康诊断适合企业卡住、准备扩张、转型、搬迁、合作或调整团队前进行。基础诊断 S$3,996 起。",
-  ctaBodyEn: "Enterprise Strategic Health Diagnostic is suitable when the business is stuck or before expansion, transformation, relocation, partnership or team adjustment. Entry diagnostic starts from S$3,996.",
+  ctaBodyZh: "企业战略健康诊断适合企业卡住、准备扩张、转型、搬迁、合作或调整团队前进行。基础诊断 S$3,966 起。",
+  ctaBodyEn: "Enterprise Strategic Health Diagnostic is suitable when the business is stuck or before expansion, transformation, relocation, partnership or team adjustment. Entry diagnostic starts from S$3,966.",
   waTextZh: "你好，启明遁甲 Qimen Strategy，我想预约企业战略健康诊断。",
   waTextEn: "Hello Qimen Strategy, I would like to book an Enterprise Strategic Health Diagnostic."
 };
