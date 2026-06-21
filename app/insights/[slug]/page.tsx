@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { insightPosts, getInsightPost } from "@/lib/insights-data";
+import { qimenDiagnosticPosts, getQimenDiagnosticPost } from "@/lib/qimen-diagnostic-posts";
 import { qimenCaseLibraryPosts, getQimenCaseLibraryPost } from "@/lib/qimen-case-library-posts";
 import { qimenSingaporeBilingualPosts, getQimenSingaporeBilingualPost } from "@/lib/qimen-singapore-bilingual-posts";
 import { qimenDunJiaFoundationPosts, getQimenDunJiaFoundationPost } from "@/lib/qimen-dun-jia-foundation-post";
@@ -19,6 +20,7 @@ type InsightDetailProps = {
 };
 
 const allDynamicPosts = [
+  ...qimenDiagnosticPosts,
   ...qimenRelationshipSeoPosts,
   ...qimenSingaporeSeoPosts,
   ...qimenStrategyModernDecisionMakingPosts,
@@ -34,6 +36,7 @@ const allDynamicPosts = [
 
 function findPost(slug: string) {
   return (
+    getQimenDiagnosticPost(slug) ??
     getQimenRelationshipSeoPost(slug) ??
     getQimenSingaporeSeoPost(slug) ??
     getQimenStrategyModernDecisionMakingPost(slug) ??
@@ -57,13 +60,13 @@ export async function generateMetadata({ params }: InsightDetailProps): Promise<
   const post = findPost(slug);
 
   if (!post) {
-    return { title: "Article Not Found | QiMing Feng Shui" };
+    return { title: "Article Not Found | Qimen Strategy Singapore" };
   }
 
   const url = `https://www.qmfeng.com/insights/${post.slug}`;
 
   return {
-    title: `${post.title} | QiMing Feng Shui Singapore`,
+    title: `${post.title} | Qimen Strategy Singapore`,
     description: post.excerpt,
     keywords: post.keywords,
     alternates: { canonical: url },
@@ -72,7 +75,7 @@ export async function generateMetadata({ params }: InsightDetailProps): Promise<
       description: post.excerpt,
       url,
       type: "article",
-      siteName: "QiMing Feng Shui",
+      siteName: "Qimen Strategy Singapore",
       locale: "zh_SG",
       publishedTime: post.date,
       tags: post.keywords,
