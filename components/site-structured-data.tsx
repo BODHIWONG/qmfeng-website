@@ -16,7 +16,7 @@ export default function SiteStructuredData() {
     url: "https://www.qmfeng.com",
     logo: "https://www.qmfeng.com/logo-qimen-strategy.jpg",
     telephone: "+65 8959 3499",
-    priceRange: "S$168+",
+    priceRange: "From S$396",
     address: {
       "@type": "PostalAddress",
       streetAddress: "Blk 210 New Upper Changi Road #01-729",
@@ -49,6 +49,7 @@ export default function SiteStructuredData() {
       "Feng Shui Alignment"
     ],
     serviceType: [
+      "Qimen Decision Consultation From S$396",
       "Enterprise Decision Advisory",
       "Qi Men Dun Jia Consultation",
       "Qimen Strategy Advisory",
