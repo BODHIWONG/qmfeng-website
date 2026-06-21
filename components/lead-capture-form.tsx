@@ -23,7 +23,7 @@ export default function LeadCaptureForm() {
     const payload = {
       name: String(formData.get("name") || "").trim(),
       whatsapp: String(formData.get("whatsapp") || "").trim(),
-      service: String(formData.get("service") || "First-Time Qimen Strategy Consultation S$168"),
+      service: String(formData.get("service") || "Qimen Decision Consultation From S$396"),
       message: String(formData.get("message") || "").trim(),
       source: "Qimen Website Lead Form",
       website: String(formData.get("website") || "").trim(),
@@ -83,8 +83,8 @@ export default function LeadCaptureForm() {
             </h2>
             <p className="max-w-xl text-base leading-8 text-white/75 md:text-lg">
               {t(
-                "首次客户可选择 S$168 启明遁甲决策咨询。适用于企业、事业、人生方向与情感关系决策。填写姓名、WhatsApp 与当前问题，我们会通过 WhatsApp 与你确认预约。正式 WhatsApp：+65 8959 3499。",
-                "First-time clients may start with the S$168 Qimen Strategy decision consultation. It can cover enterprise, career, life-direction and relationship decisions. Leave your name, WhatsApp number and current question, and we will confirm your appointment via WhatsApp. Official WhatsApp: +65 8959 3499."
+                "奇门决策咨询 S$396 起。适用于企业、事业、合作、情感关系与人生方向等重大判断。填写姓名、WhatsApp 与当前问题，我们会通过 WhatsApp 与你确认预约。正式 WhatsApp：+65 8959 3499。",
+                "Qimen Decision Consultation starts from S$396. It can cover enterprise, career, partnership, relationship and life-direction decisions. Leave your name, WhatsApp number and current question, and we will confirm your appointment via WhatsApp. Official WhatsApp: +65 8959 3499."
               )}
             </p>
           </motion.div>
@@ -126,9 +126,9 @@ export default function LeadCaptureForm() {
               <select
                 name="service"
                 className="w-full border border-white/15 bg-[oklch(0.10_0.02_60)] px-4 py-3 text-white outline-none transition focus:border-[oklch(0.72_0.12_70)]"
-                defaultValue="First-Time Qimen Strategy Consultation S$168"
+                defaultValue="Qimen Decision Consultation From S$396"
               >
-                <option value="First-Time Qimen Strategy Consultation S$168">{t("首次启明遁甲决策咨询 S$168", "First-Time Qimen Strategy Consultation S$168")}</option>
+                <option value="Qimen Decision Consultation From S$396">{t("奇门决策咨询 S$396 起", "Qimen Decision Consultation From S$396")}</option>
                 <option value="Enterprise Decision Advisory">{t("企业决策顾问", "Enterprise Decision Advisory")}</option>
                 <option value="Life and Career Decision Clarity">{t("人生与事业决策咨询", "Life & Career Decision Clarity")}</option>
                 <option value="Relationship Decision Clarity">{t("情感关系决策咨询", "Relationship Decision Clarity")}</option>
