@@ -76,8 +76,8 @@ const services: ServiceCard[] = [
     audienceZh: "核心价值：企业卡住时，先找出系统性失衡点，再决定扩张、收缩、调整或转型。",
     audienceEn:
       "Core value: when the business is stuck, identify systemic imbalance before expansion, contraction, adjustment or transformation.",
-    feeZh: "S$3,800 起",
-    feeEn: "From S$3,800",
+    feeZh: "S$3,966 起",
+    feeEn: "From S$3,966",
     href: "/enterprise-strategic-health-diagnostic",
     accentColor: "oklch(0.72 0.12 70)",
     accentBg: "oklch(0.97 0.03 85)",
