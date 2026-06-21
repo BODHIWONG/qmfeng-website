@@ -15,9 +15,11 @@ import { qimenRelationshipSeoPosts } from "@/lib/qimen-relationship-seo-posts";
 import { qimenStrategyPositioningPosts } from "@/lib/qimen-strategy-positioning-post";
 import { qimenStrategyDecisionIntelligencePosts } from "@/lib/qimen-strategy-decision-intelligence-post";
 import { qimenStrategyModernDecisionMakingPosts } from "@/lib/qimen-strategy-modern-decision-making-post";
+import { qimenWuweiStrategyPosts } from "@/lib/qimen-wuwei-strategy-post";
 import { applyInsightPostOverrides } from "@/lib/insights-overrides";
 
 const allPosts = [
+  ...qimenWuweiStrategyPosts,
   ...qimenDiagnosticPosts,
   ...qimenRelationshipSeoPosts,
   ...qimenSingaporeSeoPosts,
