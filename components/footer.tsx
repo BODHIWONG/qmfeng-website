@@ -9,17 +9,17 @@ const WA_LINK = "https://wa.me/6589593499";
 const serviceLinks = [
   { href: "/enterprise-strategic-advisory", zh: "企业决策顾问", en: "Enterprise Advisory" },
   { href: "/qimen-strategy-business", zh: "启明遁甲", en: "Qimen Strategy" },
-  { href: "/relationship-clarity-reading-singapore", zh: "关系决策", en: "Relationship Decisions" },
   { href: "/singapore-qi-men-dun-jia-consultant", zh: "新加坡奇门遁甲", en: "Qi Men Dun Jia Singapore" },
+  { href: "/relationship-clarity-reading-singapore", zh: "关系决策", en: "Relationship Decisions" },
   { href: "/insights", zh: "案例智库", en: "Case Library" },
   { href: "/founder", zh: "创始人", en: "Founder" },
 ];
 
 const insightLinks = [
   { href: "/enterprise-strategic-advisory", zh: "企业战略决策顾问", en: "Enterprise Strategic Advisory" },
-  { href: "/relationship-clarity-reading-singapore", zh: "情感关系决策咨询", en: "Relationship Decision Clarity" },
   { href: "/singapore-qi-men-dun-jia-consultant", zh: "奇门遁甲决策顾问", en: "Qi Men Dun Jia Consultant" },
   { href: "/insights/qimen-strategy-is-decision-intelligence-not-fatalism", zh: "决策情报方法论", en: "Decision Intelligence" },
+  { href: "/relationship-clarity-reading-singapore", zh: "情感关系决策咨询", en: "Relationship Decision Clarity" },
   { href: "/insights", zh: "战略洞察中心", en: "Strategic Insights" },
 ];
 
@@ -43,8 +43,8 @@ export default function Footer() {
 
             <p className="text-xs leading-relaxed text-white/55" style={{ fontFamily: "var(--font-lato), var(--font-noto-sans), sans-serif" }}>
               {t(
-                "启明遁甲 Qimen Strategy 是新加坡的企业与人生重大决策顾问品牌，面向企业主、创始人、高管、投资者与个人重大决策客户，提供企业决策、人生事业方向、关系决策、人事合作判断及住宅/办公室风水空间调理支持。",
-                "Qimen Strategy, also known as 启明遁甲, is a Singapore-based enterprise and life decision advisory brand for business owners, founders, executives, investors and individuals, covering enterprise decisions, life and career direction, relationship decisions, people assessment and Feng Shui alignment."
+                "启明遁甲 Qimen Strategy 是新加坡奇门遁甲企业决策顾问品牌，由启明大师黄启明主理，结合 16 年奇门遁甲企业决策经验、两家企业 18 年稳健运营实战背书与多家企业战略决策顾问经验，服务企业主、创始人、高管与个人重大决策客户。",
+                "Qimen Strategy, also known as 启明遁甲, is a Singapore Qi Men Dun Jia business decision advisory brand led by Master Huang Qiming, combining 16 years of Qi Men Dun Jia business advisory experience, practical backing from two businesses operating steadily for 18 years, and strategic advisory work for multiple companies."
               )}
             </p>
           </div>
@@ -83,7 +83,7 @@ export default function Footer() {
               <p>Blk 210 New Upper Changi Road #01-729<br />Singapore 460210</p>
               <p>{t("营业时间：每日 10:00 — 20:00", "Hours: Daily 10:00 — 20:00")}</p>
               <p>{t("正式联络电话 / WhatsApp：+65 8959 3499", "Official Phone / WhatsApp: +65 8959 3499")}</p>
-              <a href={`${WA_LINK}?text=${encodeURIComponent("Hello Qimen Strategy, I would like to book a Qimen Strategy decision advisory session in Singapore.")}`} target="_blank" rel="noopener noreferrer" className="inline-block font-semibold text-[#d6ad63] transition-colors duration-300 hover:text-[#f4dfb0]">
+              <a href={`${WA_LINK}?text=${encodeURIComponent("Hello Qimen Strategy, I would like to book a Qi Men Dun Jia business decision advisory session in Singapore.")}`} target="_blank" rel="noopener noreferrer" className="inline-block font-semibold text-[#d6ad63] transition-colors duration-300 hover:text-[#f4dfb0]">
                 {t("预约启明遁甲决策顾问", "Book Qimen Strategy Advisory")} →
               </a>
             </div>
