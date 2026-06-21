@@ -4,7 +4,9 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { useLanguage } from "@/contexts/language-context";
 import {
+  Activity,
   ArrowRight,
+  Building2,
   Crown,
   Gem,
   TrendingUp,
@@ -37,6 +39,53 @@ type ServiceCard = {
 const services: ServiceCard[] = [
   {
     id: 1,
+    icon: Activity,
+    titleZh: "个人运势与状态诊断",
+    titleEn: "Personal Luck & Life-State Diagnostic",
+    visualZh: "个人运势与状态诊断",
+    visualEn: "Life-State Diagnostic",
+    visualSubZh: "运势节奏 · 状态卡点 · 下一步方向",
+    visualSubEn: "Momentum · State Blocks · Next Direction",
+    painZh:
+      "适合事业、感情、财运、睡眠状态、情绪能量或人生方向出现卡点的人，通过综合诊断看清当前阶段的主要阻力、风险信号与下一步选择。",
+    painEn:
+      "For clients facing blocks in career, relationships, wealth flow, sleep, emotional energy or life direction, reviewing current resistance, risk signals and next-step choices.",
+    audienceZh: "核心价值：不是医疗诊断，而是人生状态、运势节奏与决策方向的综合评估。",
+    audienceEn:
+      "Core value: not medical diagnosis, but an advisory review of life state, momentum and decision direction.",
+    feeZh: "S$396 起",
+    feeEn: "From S$396",
+    href: "/personal-life-state-diagnostic",
+    accentColor: "oklch(0.60 0.08 65)",
+    accentBg: "oklch(0.96 0.02 75)",
+    accentBorder: "oklch(0.88 0.03 70)",
+  },
+  {
+    id: 2,
+    icon: Building2,
+    titleZh: "企业战略健康诊断",
+    titleEn: "Enterprise Strategic Health Diagnostic",
+    visualZh: "企业战略健康诊断",
+    visualEn: "Enterprise Strategic Health Diagnostic",
+    visualSubZh: "方向 · 人事 · 现金流 · 空间支持力",
+    visualSubEn: "Direction · People · Cashflow · Space Support",
+    painZh:
+      "专为企业主、创始人与管理层设计，诊断企业方向、经营节奏、客户流动、人事合作、空间支持力与未来 3–12 个月关键风险。",
+    painEn:
+      "Designed for business owners, founders and management teams to review business direction, operating rhythm, client flow, people dynamics, space support and 3–12 month risks.",
+    audienceZh: "核心价值：企业卡住时，先找出系统性失衡点，再决定扩张、收缩、调整或转型。",
+    audienceEn:
+      "Core value: when the business is stuck, identify systemic imbalance before expansion, contraction, adjustment or transformation.",
+    feeZh: "S$3,800 起",
+    feeEn: "From S$3,800",
+    href: "/enterprise-strategic-health-diagnostic",
+    accentColor: "oklch(0.72 0.12 70)",
+    accentBg: "oklch(0.97 0.03 85)",
+    accentBorder: "oklch(0.90 0.04 80)",
+    recommended: true,
+  },
+  {
+    id: 3,
     icon: TrendingUp,
     titleZh: "年度战略预判",
     titleEn: "Annual Strategic Forecast",
@@ -59,7 +108,7 @@ const services: ServiceCard[] = [
     accentBorder: "oklch(0.88 0.03 70)",
   },
   {
-    id: 2,
+    id: 4,
     icon: Crown,
     titleZh: "企业与个人风水布局",
     titleEn: "Feng Shui Alignment for Business & Founder",
@@ -79,10 +128,9 @@ const services: ServiceCard[] = [
     accentColor: "oklch(0.72 0.12 70)",
     accentBg: "oklch(0.97 0.03 85)",
     accentBorder: "oklch(0.90 0.04 80)",
-    recommended: true,
   },
   {
-    id: 3,
+    id: 5,
     icon: Gem,
     titleZh: "人事与合作关系判断",
     titleEn: "People & Partnership Assessment",
@@ -104,7 +152,7 @@ const services: ServiceCard[] = [
     accentBorder: "oklch(0.88 0.03 70)",
   },
   {
-    id: 4,
+    id: 6,
     icon: Zap,
     titleZh: "企业主战略陪跑顾问",
     titleEn: "Founder Strategic Advisory",
@@ -144,7 +192,7 @@ export default function ServiceCards() {
             className="mb-3 text-xs uppercase tracking-[0.25em]"
             style={{ fontFamily: "var(--font-lato), sans-serif", color: "oklch(0.60 0.08 65)" }}
           >
-            {t("企业战略决策顾问服务", "Enterprise Strategic Decision Advisory")}
+            {t("诊断与企业战略决策顾问服务", "Diagnostic & Enterprise Strategic Decision Advisory")}
           </p>
 
           <h2
@@ -159,8 +207,8 @@ export default function ServiceCards() {
             style={{ fontFamily: "var(--font-lato), var(--font-noto-sans), sans-serif", color: "oklch(0.42 0.02 60)" }}
           >
             {t(
-              "启明遁甲以 16 年奇门决策实战经验为根基，结合年度战略预判、企业与个人风水布局、人事合作关系判断及重大决策陪跑，长期服务企业主、创始人与关键决策者。",
-              "QIMEN STRATEGY supports business owners, founders and key decision-makers through annual strategic forecasting, business and personal Feng Shui alignment, people and partnership assessment, and major decision advisory."
+              "启明遁甲以 16 年奇门决策实战经验为根基，结合个人状态诊断、企业战略健康诊断、年度战略预判、企业风水布局、人事合作判断及重大决策陪跑，长期服务企业主、创始人与关键决策者。",
+              "QIMEN STRATEGY supports business owners, founders and key decision-makers through personal life-state diagnostics, enterprise strategic health diagnostics, annual strategic forecasting, Feng Shui alignment, people assessment and major decision advisory."
             )}
           </p>
         </motion.div>
@@ -181,7 +229,7 @@ export default function ServiceCards() {
             >
               {service.recommended && (
                 <div className="absolute right-5 top-5 z-20 bg-[oklch(0.72_0.12_70)] px-3 py-1 text-[0.62rem] font-bold uppercase tracking-[0.14em] text-black">
-                  {t("核心服务", "Core Service")}
+                  {t("核心入口", "Core Entry")}
                 </div>
               )}
 
@@ -269,7 +317,7 @@ export default function ServiceCards() {
                     className="inline-flex items-center justify-center gap-2 px-5 py-3 text-xs font-bold uppercase tracking-[0.14em] transition-all duration-300 hover:opacity-90 hover:shadow-[0_10px_25px_rgba(0,0,0,0.12)]"
                     style={{ fontFamily: "var(--font-lato), sans-serif", background: service.accentColor, color: "oklch(0.98 0.005 75)" }}
                   >
-                    {t("了解企业顾问", "View Advisory")}
+                    {t("查看详情", "View Details")}
                     <ArrowRight size={15} />
                   </Link>
                 </div>
@@ -286,7 +334,7 @@ export default function ServiceCards() {
                 {t("企业主私人战略顾问", "Private Founder Strategic Advisory")}
               </p>
               <p className="text-sm text-white/72">
-                {t("适用于年度预判、企业风水、人事合作判断与重大决策陪跑。", "For annual strategy, Feng Shui alignment, people assessment and major decision advisory.")}
+                {t("适用于企业健康诊断、年度预判、企业风水、人事合作判断与重大决策陪跑。", "For enterprise diagnostics, annual strategy, Feng Shui alignment, people assessment and major decision advisory.")}
               </p>
             </div>
           </div>
