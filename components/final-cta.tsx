@@ -4,8 +4,10 @@ import { motion } from "framer-motion";
 import { useLanguage } from "@/contexts/language-context";
 import { ArrowRight, MessageCircle, Calendar } from "lucide-react";
 
-const WA_LINK =
-  "https://wa.me/6589593499?text=Hello%20Master%20Qiming%2C%20I%20would%20like%20to%20book%20a%20private%20Qimen%20Strategy%20session.";
+const WA_LINK = [
+  "https://wa.me/6589593499",
+  "text=Hello%20Qimen%20Strategy%2C%20I%20would%20like%20to%20book%20a%20Qimen%20Decision%20Consultation.",
+].join("?");
 
 export default function FinalCTA() {
   const { t } = useLanguage();
@@ -29,7 +31,7 @@ export default function FinalCTA() {
             transition={{ duration: 0.55 }}
             className="mb-5 text-xs font-bold uppercase tracking-[0.28em] text-[oklch(0.72_0.12_70)]"
           >
-            {t("预约私密奇门决策咨询", "Book a Private Qimen Strategy Session")}
+            {t("预约私密奇门决策咨询", "Book a Private Qimen Decision Consultation")}
           </motion.p>
 
           <motion.h2
@@ -58,7 +60,7 @@ export default function FinalCTA() {
           >
             {t(
               "如果你正在面对合作、投资、转型、任用、签约或人生方向选择，可以先通过一次私密奇门决策咨询，看清时机、方向、人事关系与风险结构。",
-              "If you are facing a partnership, investment, transition, appointment, contract or major life-direction choice, a private Qimen Strategy session can help you read timing, direction, people dynamics and risk structure before action."
+              "If you are facing a partnership, investment, transition, appointment, contract or major life-direction choice, a private Qimen Decision Consultation can help you read timing, direction, people dynamics and risk structure before action."
             )}
           </motion.p>
 
