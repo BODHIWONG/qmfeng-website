@@ -79,12 +79,12 @@ export default function LeadCaptureForm() {
               className="mb-5 text-3xl font-bold leading-tight text-white sm:text-4xl md:text-5xl"
               style={{ fontFamily: "var(--font-cormorant), var(--font-noto-serif), serif" }}
             >
-              {t("先从一次完整决策咨询开始", "Start with one complete decision consultation")}
+              {t("先从一次清晰诊断或决策咨询开始", "Start with one clear diagnostic or decision consultation")}
             </h2>
             <p className="max-w-xl text-base leading-8 text-white/75 md:text-lg">
               {t(
-                "奇门决策咨询 S$396 起。适用于企业、事业、合作、情感关系与人生方向等重大判断。填写姓名、WhatsApp 与当前问题，我们会通过 WhatsApp 与你确认预约。正式 WhatsApp：+65 8959 3499。",
-                "Qimen Decision Consultation starts from S$396. It can cover enterprise, career, partnership, relationship and life-direction decisions. Leave your name, WhatsApp number and current question, and we will confirm your appointment via WhatsApp. Official WhatsApp: +65 8959 3499."
+                "奇门决策咨询 S$396 起，个人运势与状态诊断 S$396 起，企业战略健康诊断 S$3,800 起。填写姓名、WhatsApp 与当前问题，我们会通过 WhatsApp 与你确认预约。正式 WhatsApp：+65 8959 3499。",
+                "Qimen Decision Consultation starts from S$396. Personal Life-State Diagnostic starts from S$396. Enterprise Strategic Health Diagnostic starts from S$3,800. Leave your name, WhatsApp number and current question, and we will confirm your appointment via WhatsApp. Official WhatsApp: +65 8959 3499."
               )}
             </p>
           </motion.div>
@@ -129,6 +129,8 @@ export default function LeadCaptureForm() {
                 defaultValue="Qimen Decision Consultation From S$396"
               >
                 <option value="Qimen Decision Consultation From S$396">{t("奇门决策咨询 S$396 起", "Qimen Decision Consultation From S$396")}</option>
+                <option value="Personal Luck and Life-State Diagnostic From S$396">{t("个人运势与状态诊断 S$396 起", "Personal Luck & Life-State Diagnostic From S$396")}</option>
+                <option value="Enterprise Strategic Health Diagnostic From S$3800">{t("企业战略健康诊断 S$3,800 起", "Enterprise Strategic Health Diagnostic From S$3,800")}</option>
                 <option value="Enterprise Decision Advisory">{t("企业决策顾问", "Enterprise Decision Advisory")}</option>
                 <option value="Life and Career Decision Clarity">{t("人生与事业决策咨询", "Life & Career Decision Clarity")}</option>
                 <option value="Relationship Decision Clarity">{t("情感关系决策咨询", "Relationship Decision Clarity")}</option>
@@ -145,7 +147,7 @@ export default function LeadCaptureForm() {
                 name="message"
                 rows={5}
                 className="w-full resize-none border border-white/15 bg-white/8 px-4 py-3 text-white outline-none transition focus:border-[oklch(0.72_0.12_70)]"
-                placeholder={t("请简单说明你当前面对的企业、事业、合作、情感关系、空间或人生决策问题。", "Briefly describe the enterprise, career, partnership, relationship, space or life decision you are facing.")}
+                placeholder={t("请简单说明你当前面对的企业、事业、合作、情感关系、空间、状态或人生决策问题。", "Briefly describe the enterprise, career, partnership, relationship, space, state or life decision you are facing.")}
               />
             </label>
 
