@@ -12,6 +12,7 @@ import { qimenStrategyModernDecisionMakingPosts, getQimenStrategyModernDecisionM
 import { spaceEnergyBlogPosts, getSpaceEnergyBlogPost } from "@/lib/space-energy-blog-posts";
 import { executiveWellnessPosts, getExecutiveWellnessPost } from "@/lib/executive-wellness-posts";
 import { qimenStrategyPositioningPosts, getQimenStrategyPositioningPost } from "@/lib/qimen-strategy-positioning-post";
+import { qimenWuweiStrategyPosts, getQimenWuweiStrategyPost } from "@/lib/qimen-wuwei-strategy-post";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 
@@ -20,6 +21,7 @@ type InsightDetailProps = {
 };
 
 const allDynamicPosts = [
+  ...qimenWuweiStrategyPosts,
   ...qimenDiagnosticPosts,
   ...qimenRelationshipSeoPosts,
   ...qimenSingaporeSeoPosts,
@@ -36,6 +38,7 @@ const allDynamicPosts = [
 
 function findPost(slug: string) {
   return (
+    getQimenWuweiStrategyPost(slug) ??
     getQimenDiagnosticPost(slug) ??
     getQimenRelationshipSeoPost(slug) ??
     getQimenSingaporeSeoPost(slug) ??
