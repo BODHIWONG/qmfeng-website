@@ -6,8 +6,8 @@ export default function SiteStructuredData() {
     name: "启明遁甲 Qimen Strategy",
     alternateName: [
       "Qimen Strategy Singapore",
-      "Singapore Qi Men Dun Jia Strategic Decision Advisory",
-      "新加坡奇门遁甲战略决策顾问",
+      "Singapore Qi Men Dun Jia Business Decision Advisory",
+      "新加坡奇门遁甲企业决策顾问",
       "Qi Men Dun Jia Singapore",
       "Qimen Dunjia Singapore",
       "Qiming Feng Shui Wisdom"
@@ -28,23 +28,22 @@ export default function SiteStructuredData() {
     founder: {
       "@type": "Person",
       name: "Huang Qiming",
-      alternateName: ["黄启明", "Qiming Huang"],
-      jobTitle: "Founder, Qimen Strategy"
+      alternateName: ["Master Huang Qiming", "黄启明", "启明大师", "Qiming Huang"],
+      jobTitle: "Founder, Qimen Strategy | Qi Men Dun Jia Business Decision Advisor"
     },
     description:
-      "启明遁甲 Qimen Strategy is a Singapore-based enterprise and life decision advisory brand applying Qi Men Dun Jia, business strategy analysis, Feng Shui alignment and people assessment for business owners, founders, executives, investors and individuals before major decisions.",
+      "启明遁甲 Qimen Strategy is a Singapore-based Qi Men Dun Jia business decision advisory brand led by Master Huang Qiming, applying Qi Men Dun Jia, business judgment, Feng Shui alignment and people assessment for business owners, founders, executives, investors and individuals before major decisions.",
     knowsAbout: [
       "Qi Men Dun Jia",
       "Qimen Dunjia",
       "Qimen Strategy",
+      "Qi Men Dun Jia Business Decision Advisory",
       "Strategic Decision Advisory",
       "Enterprise Decision Advisory",
-      "Personal Luck and Life-State Diagnostic",
       "Enterprise Strategic Health Diagnostic",
       "Business Strategy",
       "Investment Timing",
       "Partnership Assessment",
-      "Relationship Decision Clarity",
       "Life and Career Decision Clarity",
       "Office Feng Shui",
       "Residential Feng Shui",
@@ -52,19 +51,13 @@ export default function SiteStructuredData() {
     ],
     serviceType: [
       "Qimen Decision Consultation From S$396",
-      "Personal Luck and Life-State Diagnostic From S$396",
       "Enterprise Strategic Health Diagnostic From S$3,996",
-      "Enterprise Decision Advisory",
       "Qi Men Dun Jia Consultation",
       "Qimen Strategy Advisory",
       "Enterprise Strategic Decision Advisory",
       "Business Decision Consulting",
       "Investment Timing Analysis",
       "People and Partnership Assessment",
-      "Relationship Decision Clarity",
-      "Relationship Clarity Reading",
-      "Life and Career Decision Clarity",
-      "Career Direction Consultation",
       "Office Feng Shui Consultation",
       "Residential Feng Shui Consultation"
     ],
