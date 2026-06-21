@@ -39,6 +39,8 @@ export default function SiteStructuredData() {
       "Qimen Strategy",
       "Strategic Decision Advisory",
       "Enterprise Decision Advisory",
+      "Personal Luck and Life-State Diagnostic",
+      "Enterprise Strategic Health Diagnostic",
       "Business Strategy",
       "Investment Timing",
       "Partnership Assessment",
@@ -50,6 +52,8 @@ export default function SiteStructuredData() {
     ],
     serviceType: [
       "Qimen Decision Consultation From S$396",
+      "Personal Luck and Life-State Diagnostic From S$396",
+      "Enterprise Strategic Health Diagnostic From S$3,800",
       "Enterprise Decision Advisory",
       "Qi Men Dun Jia Consultation",
       "Qimen Strategy Advisory",
