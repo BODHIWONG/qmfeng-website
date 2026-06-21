@@ -6,22 +6,23 @@ import { decisionPageContent } from "@/lib/service-page-data";
 export const metadata: Metadata = {
   title: "单项奇门决策咨询｜Qimen Strategy Singapore",
   description:
-    "Single Qimen Strategy advisory by Master Huang Qiming. Private appointment-based consultation for one critical business or life decision, reviewing timing, direction, people dynamics, risk and actionable next steps.",
+    "Single Qimen Decision Consultation by Qimen Strategy Singapore. Private appointment-based advisory for one critical business, career, relationship or life decision, reviewing timing, direction, people dynamics, risk and actionable next steps.",
   keywords: [
     "Single Qimen Strategy Session Singapore",
+    "Qimen Decision Consultation Singapore",
     "Qi Men Strategy Singapore",
     "Qimen decision consultation",
     "private Qimen Strategy session",
     "奇门决策",
     "单项奇门决策咨询",
     "启明遁甲",
-    "黄启明大师",
+    "黄启明 奇门决策",
   ],
   alternates: {
     canonical: "https://www.qmfeng.com/decision",
   },
   openGraph: {
-    title: "Single Qimen Strategy Session | Qi Men Strategy Singapore",
+    title: "Single Qimen Decision Consultation | Qimen Strategy Singapore",
     description:
       "One critical decision. Clear situation. Better next move. Private appointment-based Qimen Strategy advisory.",
     url: "https://www.qmfeng.com/decision",
