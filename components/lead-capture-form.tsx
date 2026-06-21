@@ -23,7 +23,7 @@ export default function LeadCaptureForm() {
     const payload = {
       name: String(formData.get("name") || "").trim(),
       whatsapp: String(formData.get("whatsapp") || "").trim(),
-      service: String(formData.get("service") || "Qimen Decision Consultation From S$396"),
+      service: String(formData.get("service") || "Business Qi Men Strategic Diagnosis From S$3996"),
       message: String(formData.get("message") || "").trim(),
       source: "Qimen Website Lead Form",
       website: String(formData.get("website") || "").trim(),
@@ -79,12 +79,12 @@ export default function LeadCaptureForm() {
               className="mb-5 text-3xl font-bold leading-tight text-white sm:text-4xl md:text-5xl"
               style={{ fontFamily: "var(--font-cormorant), var(--font-noto-serif), serif" }}
             >
-              {t("先从一次清晰诊断或决策咨询开始", "Start with one clear diagnostic or decision consultation")}
+              {t("先从一次奇门遁甲决策咨询开始", "Start with one Qi Men Dun Jia advisory session")}
             </h2>
             <p className="max-w-xl text-base leading-8 text-white/75 md:text-lg">
               {t(
-                "奇门决策咨询 S$396 起，个人运势与状态诊断 S$396 起，企业战略健康诊断 S$3,996 起。填写姓名、WhatsApp 与当前问题，我们会通过 WhatsApp 与你确认预约。正式 WhatsApp：+65 8959 3499。",
-                "Qimen Decision Consultation starts from S$396. Personal Life-State Diagnostic starts from S$396. Enterprise Strategic Health Diagnostic starts from S$3,996. Leave your name, WhatsApp number and current question, and we will confirm your appointment via WhatsApp. Official WhatsApp: +65 8959 3499."
+                "如果你正在面对生意卡点、合作判断、投资扩张、企业风水、人事任用或人生重大选择，可以先提交姓名、WhatsApp 与当前问题。正式 WhatsApp：+65 8959 3499。",
+                "If you are facing business stagnation, partnership assessment, investment expansion, business Feng Shui, key people decisions or a major life choice, leave your name, WhatsApp number and current question. Official WhatsApp: +65 8959 3499."
               )}
             </p>
           </motion.div>
@@ -126,18 +126,16 @@ export default function LeadCaptureForm() {
               <select
                 name="service"
                 className="w-full border border-white/15 bg-[oklch(0.10_0.02_60)] px-4 py-3 text-white outline-none transition focus:border-[oklch(0.72_0.12_70)]"
-                defaultValue="Qimen Decision Consultation From S$396"
+                defaultValue="Business Qi Men Strategic Diagnosis From S$3996"
               >
-                <option value="Qimen Decision Consultation From S$396">{t("奇门决策咨询 S$396 起", "Qimen Decision Consultation From S$396")}</option>
-                <option value="Personal Luck and Life-State Diagnostic From S$396">{t("个人运势与状态诊断 S$396 起", "Personal Luck & Life-State Diagnostic From S$396")}</option>
-                <option value="Enterprise Strategic Health Diagnostic From S$3996">{t("企业战略健康诊断 S$3,996 起", "Enterprise Strategic Health Diagnostic From S$3,996")}</option>
-                <option value="Enterprise Decision Advisory">{t("企业决策顾问", "Enterprise Decision Advisory")}</option>
-                <option value="Life and Career Decision Clarity">{t("人生与事业决策咨询", "Life & Career Decision Clarity")}</option>
-                <option value="Relationship Decision Clarity">{t("情感关系决策咨询", "Relationship Decision Clarity")}</option>
-                <option value="Qimen Strategy Consultation">{t("启明遁甲 / Qimen Strategy", "Qimen Strategy Consultation")}</option>
-                <option value="Feng Shui Alignment">{t("风水布局 / Feng Shui Alignment", "Feng Shui Alignment")}</option>
-                <option value="Space Clearing Energy Reset">{t("空间净化 / Energy Reset", "Space Clearing · Energy Reset")}</option>
-                <option value="Other Consultation">{t("其他咨询", "Other Consultation")}</option>
+                <option value="Business Qi Men Strategic Diagnosis From S$3996">{t("企业奇门战略诊断 S$3,996 起", "Business Qi Men Strategic Diagnosis From S$3,996")}</option>
+                <option value="Qi Men Decision Consultation From S$396">{t("奇门决策咨询 S$396 起", "Qi Men Decision Consultation From S$396")}</option>
+                <option value="Deep Qi Men Strategy Advisory From S$980">{t("深度奇门战略顾问 S$980 起", "Deep Qi Men Strategy Advisory From S$980")}</option>
+                <option value="Business Feng Shui Alignment">{t("企业风水与空间布局", "Business Feng Shui Alignment")}</option>
+                <option value="Partnership and People Assessment">{t("合作与人事判断", "Partnership & People Assessment")}</option>
+                <option value="Annual Business Forecast and Strategy">{t("年度企业趋势与战略预判", "Annual Business Forecast & Strategy")}</option>
+                <option value="Founder Strategic Advisory">{t("企业主战略陪跑顾问", "Founder Strategic Advisory")}</option>
+                <option value="Personal Major Decision Advisory">{t("个人重大决策咨询", "Personal Major Decision Advisory")}</option>
               </select>
             </label>
 
@@ -147,7 +145,7 @@ export default function LeadCaptureForm() {
                 name="message"
                 rows={5}
                 className="w-full resize-none border border-white/15 bg-white/8 px-4 py-3 text-white outline-none transition focus:border-[oklch(0.72_0.12_70)]"
-                placeholder={t("请简单说明你当前面对的企业、事业、合作、情感关系、空间、状态或人生决策问题。", "Briefly describe the enterprise, career, partnership, relationship, space, state or life decision you are facing.")}
+                placeholder={t("请简单说明你当前面对的企业、合作、投资、人事、风水空间或重大决策问题。", "Briefly describe the business, partnership, investment, people, Feng Shui space or major decision you are facing.")}
               />
             </label>
 
