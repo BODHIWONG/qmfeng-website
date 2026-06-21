@@ -5,7 +5,7 @@ import Navbar from "@/components/navbar";
 import HeroSimple from "@/components/hero-simple";
 import TrustBar from "@/components/trust-bar";
 import ServiceCards from "@/components/service-cards";
-import FirstTimeConsultationSection from "@/components/first-time-consultation-section";
+import QimenDecisionConsultationSection from "@/components/qimen-decision-consultation-section";
 import BrandWorldviewSection from "@/components/brand-worldview-section";
 import DifferentiationSection from "@/components/differentiation-section";
 import QimenMasterSection from "@/components/qimen-master-section";
@@ -28,7 +28,7 @@ export default function Home() {
         <TrustBar />
         <BrandWorldviewSection />
         <ServiceCards />
-        <FirstTimeConsultationSection />
+        <QimenDecisionConsultationSection />
         <DifferentiationSection />
         <QimenMasterSection />
         <MasterIPCoreSection />
