@@ -6,6 +6,7 @@ import Footer from "@/components/footer";
 import Link from "next/link";
 import { ArrowRight, Calendar, Clock } from "lucide-react";
 import { insightPosts } from "@/lib/insights-data";
+import { qimenDiagnosticPosts } from "@/lib/qimen-diagnostic-posts";
 import { qimenCaseLibraryPosts } from "@/lib/qimen-case-library-posts";
 import { qimenSingaporeBilingualPosts } from "@/lib/qimen-singapore-bilingual-posts";
 import { qimenDunJiaFoundationPosts } from "@/lib/qimen-dun-jia-foundation-post";
@@ -17,6 +18,7 @@ import { qimenStrategyModernDecisionMakingPosts } from "@/lib/qimen-strategy-mod
 import { applyInsightPostOverrides } from "@/lib/insights-overrides";
 
 const allPosts = [
+  ...qimenDiagnosticPosts,
   ...qimenRelationshipSeoPosts,
   ...qimenSingaporeSeoPosts,
   ...qimenStrategyModernDecisionMakingPosts,
