@@ -17,12 +17,12 @@ const includedItems = [
 
 const boundaryItems = [
   {
-    zh: "基础奇门决策咨询 S$396 起，最终费用会根据问题复杂度、是否涉及企业决策、多人关系或后续顾问支持确认。",
-    en: "Qimen Decision Consultation starts from S$396. The final fee depends on the complexity of the issue, whether it involves business decisions, multiple parties or follow-up advisory support.",
+    zh: "基础奇门决策咨询 S$396 起，适用于个人方向、事业选择、关系判断与重要决策参考。",
+    en: "Qimen Decision Consultation starts from S$396, suitable for personal direction, career choices, relationship clarity and important decision support.",
   },
   {
-    zh: "不包含完整年度规划、企业长期陪跑、详细风水布局或正式书面报告。",
-    en: "This does not include a full annual plan, long-term business retainer, detailed Feng Shui layout or formal written report.",
+    zh: "复杂个案、企业决策或后续顾问支持，将根据实际需求另行评估。",
+    en: "Complex cases, business decisions or follow-up advisory support will be assessed according to the actual needs.",
   },
 ];
 
