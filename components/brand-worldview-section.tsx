@@ -8,34 +8,34 @@ export default function BrandWorldviewSection() {
 
   const pillars = [
     {
-      zh: "天时",
-      en: "Timing",
-      descZh: "判断什么时候该进、该守、该等、该调整，避免在错误时机消耗过高成本。",
-      descEn: "Know when to move, hold, wait or adjust before the cost becomes too high.",
-    },
-    {
-      zh: "地利",
+      zh: "空间",
       en: "Environment",
-      descZh: "结合企业空间、方位、办公室、门店与住宅格局，判断环境是否支持发展。",
-      descEn: "Assess business space, direction, office, shop and residence as strategic conditions.",
+      descZh: "空间不是背景，而是影响状态、判断与承载力的重要条件。",
+      descEn: "Space is not a backdrop. It shapes state, judgment and capacity.",
     },
     {
-      zh: "人和",
-      en: "People",
-      descZh: "看清管理层、员工、合伙人、供应链与关键关系中的助力、阻力与风险。",
-      descEn: "Read management, staff, partners, suppliers and key relationships before deeper commitment.",
+      zh: "能量",
+      en: "Energy",
+      descZh: "能量顺畅，人更容易稳定；能量受阻，决策容易混乱。",
+      descEn: "When energy is aligned, people become steadier. When blocked, decisions become scattered.",
     },
     {
-      zh: "修为",
-      en: "Inner Mastery",
-      descZh: "关注企业主的判断力、定力、情绪稳定性、承载力与关键压力下的决策状态。",
-      descEn: "Support the founder's judgment, steadiness, capacity and decision state under pressure.",
+      zh: "状态",
+      en: "State",
+      descZh: "真正的判断力，往往取决于一个人在压力下是否清明稳定。",
+      descEn: "Real judgment depends on whether a person remains clear and steady under pressure.",
     },
     {
-      zh: "成长",
-      en: "Growth",
-      descZh: "将企业主个人成长与企业下一阶段发展结合，让战略、组织与空间同步升级。",
-      descEn: "Connect founder growth with the company's next stage, structure and strategic direction.",
+      zh: "决策",
+      en: "Decision",
+      descZh: "关键选择不是靠冲动，而是看清时机、方向、人事与风险。",
+      descEn: "Major choices require clarity on timing, direction, people and risk.",
+    },
+    {
+      zh: "结果",
+      en: "Outcome",
+      descZh: "结果不是偶然，它通常来自长期环境、状态与决策的累积。",
+      descEn: "Outcomes are rarely accidental. They are shaped by accumulated environment, state and decisions.",
     },
   ];
 
@@ -44,24 +44,21 @@ export default function BrandWorldviewSection() {
       <div className="container">
         <div className="mx-auto max-w-5xl text-center">
           <p className="mb-5 text-lg font-bold uppercase tracking-[0.34em] text-[oklch(0.55_0.08_65)] md:text-xl">
-            {t("企业战略决策智慧", "Enterprise Strategic Decision Wisdom")}
+            {t("为什么会有启明遁甲", "Why Qimen Strategy Exists")}
           </p>
           <h2 className="text-4xl font-semibold leading-tight text-[oklch(0.18_0.02_70)] md:text-6xl">
-            {t("启明遁甲五维战略模型", "The Five Dimensions of Qimen Strategy")}
+            {t("很多问题，并不是能力不够", "The Problem Is Not Always Lack of Ability")}
           </h2>
-          <p className="mt-5 text-base font-semibold uppercase tracking-[0.18em] text-[oklch(0.55_0.08_65)] md:text-lg">
-            TIMING · ENVIRONMENT · PEOPLE · INNER MASTERY · GROWTH
-          </p>
           <p className="mx-auto mt-10 max-w-4xl text-lg leading-9 text-[oklch(0.32_0.02_70)] md:text-2xl">
             {t(
-              "启明遁甲以奇门遁甲为底层决策模型，结合天时、地利、人和、创始人内在修为与企业成长节奏，帮助企业主在关键行动前先看清全局。",
-              "Qimen Strategy integrates timing, environment, people dynamics, founder inner mastery and strategic growth to help business owners see the whole game before important action."
+              "很多人聪明、努力，也愿意付出，却始终被事业、关系、财富节奏或关键选择困住。启明遁甲看到的是更深的关系：人与环境、状态与时机之间失去了协调。",
+              "Many capable people work hard and make sincere effort, yet remain blocked in business, relationships, wealth rhythm or major choices. Qimen Strategy sees a deeper relationship: misalignment between people, environment, state and timing."
             )}
           </p>
           <p className="mx-auto mt-8 max-w-4xl text-base leading-8 text-[oklch(0.38_0.02_70)] md:text-lg">
             {t(
-              "真正的企业战略决策，不只是判断外部机会，也要看企业主是否具备承接下一阶段发展的判断力、定力与承载力。",
-              "True enterprise decision-making is not only about external opportunity. It also depends on whether the founder has the judgment, steadiness and capacity to carry the next stage."
+              "启明遁甲由此形成：以奇门遁甲看时势，以战略风水调环境，以能量调频稳状态，帮助客户在关键行动前重新看清局势与布局。",
+              "From this understanding, Qimen Strategy was formed: using Qi Men Dun Jia to read timing, strategic Feng Shui to align space, and energy alignment to support state before important action."
             )}
           </p>
         </div>
