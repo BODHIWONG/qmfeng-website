@@ -94,7 +94,7 @@ const articleLinks = [
   },
   {
     href: "/insights/first-time-relationship-clarity-reading-singapore-what-to-expect",
-    title: "First-Time Relationship Clarity Reading in Singapore｜What to Expect",
+    title: "Relationship Decision Clarity Reading in Singapore｜What to Expect",
   },
 ];
 
