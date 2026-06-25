@@ -23,7 +23,7 @@ export default function LeadCaptureForm() {
     const payload = {
       name: String(formData.get("name") || "").trim(),
       whatsapp: String(formData.get("whatsapp") || "").trim(),
-      service: String(formData.get("service") || "Business Qi Men Strategic Diagnosis From S$3996"),
+      service: String(formData.get("service") || "Enterprise Strategic Diagnostic From S$3996"),
       message: String(formData.get("message") || "").trim(),
       source: "Qimen Website Lead Form",
       website: String(formData.get("website") || "").trim(),
@@ -73,18 +73,18 @@ export default function LeadCaptureForm() {
             transition={{ duration: 0.6 }}
           >
             <p className="mb-4 text-xs font-bold uppercase tracking-[0.28em] text-[oklch(0.72_0.12_70)]">
-              {t("提交咨询", "Submit an Enquiry")}
+              {t("提交咨询", "Send an Enquiry")}
             </p>
             <h2
               className="mb-5 text-3xl font-bold leading-tight text-white sm:text-4xl md:text-5xl"
               style={{ fontFamily: "var(--font-cormorant), var(--font-noto-serif), serif" }}
             >
-              {t("先从一次奇门遁甲决策咨询开始", "Start with one Qi Men Dun Jia advisory session")}
+              {t("把你现在卡住的问题，先发给我们", "Tell us what is currently blocking you")}
             </h2>
             <p className="max-w-xl text-base leading-8 text-white/75 md:text-lg">
               {t(
-                "如果你正在面对生意卡点、合作判断、投资扩张、企业风水、人事任用或人生重大选择，可以先提交姓名、WhatsApp 与当前问题。正式 WhatsApp：+65 8959 3499。",
-                "If you are facing business stagnation, partnership assessment, investment expansion, business Feng Shui, key people decisions or a major life choice, leave your name, WhatsApp number and current question. Official WhatsApp: +65 8959 3499."
+                "不需要写得很复杂。简单说明你现在面对的是生意、合作、人事、风水空间，还是个人重大选择。我们会根据情况，通过 WhatsApp 回复你适合从哪一种咨询开始。正式 WhatsApp：+65 8959 3499。",
+                "You do not need to write a long explanation. Briefly tell us whether your issue is about business, partnership, people, Feng Shui space or a major personal decision. We will reply on WhatsApp and advise which consultation pathway is most suitable. Official WhatsApp: +65 8959 3499."
               )}
             </p>
           </motion.div>
@@ -122,20 +122,16 @@ export default function LeadCaptureForm() {
             </div>
 
             <label className="mt-4 block">
-              <span className="mb-2 block text-sm font-semibold text-white/80">{t("咨询项目", "Service")}</span>
+              <span className="mb-2 block text-sm font-semibold text-white/80">{t("你现在最接近哪一种情况？", "Which situation is closest to yours?")}</span>
               <select
                 name="service"
                 className="w-full border border-white/15 bg-[oklch(0.10_0.02_60)] px-4 py-3 text-white outline-none transition focus:border-[oklch(0.72_0.12_70)]"
-                defaultValue="Business Qi Men Strategic Diagnosis From S$3996"
+                defaultValue="Enterprise Strategic Diagnostic From S$3996"
               >
-                <option value="Business Qi Men Strategic Diagnosis From S$3996">{t("企业奇门战略诊断 S$3,996 起", "Business Qi Men Strategic Diagnosis From S$3,996")}</option>
-                <option value="Qi Men Decision Consultation From S$396">{t("奇门决策咨询 S$396 起", "Qi Men Decision Consultation From S$396")}</option>
-                <option value="Deep Qi Men Strategy Advisory From S$980">{t("深度奇门战略顾问 S$980 起", "Deep Qi Men Strategy Advisory From S$980")}</option>
-                <option value="Business Feng Shui Alignment">{t("企业风水与空间布局", "Business Feng Shui Alignment")}</option>
-                <option value="Partnership and People Assessment">{t("合作与人事判断", "Partnership & People Assessment")}</option>
-                <option value="Annual Business Forecast and Strategy">{t("年度企业趋势与战略预判", "Annual Business Forecast & Strategy")}</option>
-                <option value="Founder Strategic Advisory">{t("企业主战略陪跑顾问", "Founder Strategic Advisory")}</option>
-                <option value="Personal Major Decision Advisory">{t("个人重大决策咨询", "Personal Major Decision Advisory")}</option>
+                <option value="Enterprise Strategic Diagnostic From S$3996">{t("生意或企业卡住，需要企业战略健康诊断 S$3,996 起", "Business is stuck — Enterprise Strategic Diagnostic From S$3,996")}</option>
+                <option value="Personal Major Decision Advisory From S$396">{t("事业、关系、搬迁或人生选择，需要个人重大决策咨询 S$396 起", "Career, relationship, relocation or life choice — Personal Major Decision Advisory From S$396")}</option>
+                <option value="Feng Shui and Space Alignment">{t("办公室、商铺或住宅气场不稳，需要风水与空间能量调衡", "Office, shop or home feels unsupported — Feng Shui & Space Alignment")}</option>
+                <option value="Not Sure Need Assessment">{t("我不确定，请先帮我判断适合哪一种咨询", "Not sure — please advise which consultation fits")}</option>
               </select>
             </label>
 
@@ -145,7 +141,7 @@ export default function LeadCaptureForm() {
                 name="message"
                 rows={5}
                 className="w-full resize-none border border-white/15 bg-white/8 px-4 py-3 text-white outline-none transition focus:border-[oklch(0.72_0.12_70)]"
-                placeholder={t("请简单说明你当前面对的企业、合作、投资、人事、风水空间或重大决策问题。", "Briefly describe the business, partnership, investment, people, Feng Shui space or major decision you are facing.")}
+                placeholder={t("例如：最近生意卡住、合作对象不确定、准备投资/搬迁/签约、家里或办公室感觉不顺，或感情事业需要做决定。", "For example: business is stuck, partner is uncertain, preparing for investment/relocation/signing, home or office feels blocked, or a relationship/career decision needs clarity.")}
               />
             </label>
 
@@ -155,7 +151,7 @@ export default function LeadCaptureForm() {
               className="mt-6 inline-flex w-full items-center justify-center gap-3 bg-[oklch(0.72_0.12_70)] px-6 py-4 text-sm font-bold uppercase tracking-wider text-[oklch(0.06_0.02_60)] transition hover:scale-[1.01] disabled:cursor-not-allowed disabled:opacity-70"
             >
               {status === "submitting" ? <MessageCircle size={18} className="animate-pulse" /> : <Send size={18} />}
-              {status === "submitting" ? t("提交中...", "Submitting...") : t("提交咨询", "Submit Enquiry")}
+              {status === "submitting" ? t("提交中...", "Submitting...") : t("提交咨询，WhatsApp 回复", "Send Enquiry for WhatsApp Reply")}
             </button>
 
             {status === "success" && (
