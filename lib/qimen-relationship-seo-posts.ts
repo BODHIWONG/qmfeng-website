@@ -181,26 +181,26 @@ export const qimenRelationshipSeoPosts: InsightPost[] = [
   },
   {
     slug: "first-time-relationship-clarity-reading-singapore-what-to-expect",
-    title: "First-Time Relationship Clarity Reading in Singapore｜What to Expect",
+    title: "Relationship Decision Clarity Reading in Singapore｜What to Expect",
     excerpt:
-      "What first-time clients can expect from a Relationship Clarity Reading in Singapore, including how to prepare the question and what the reading can help clarify.",
+      "What clients can expect from a Relationship Decision Clarity consultation in Singapore, including how to prepare the question and what the reading can help clarify.",
     date: "2026-06-15",
     readTime: "7 min",
-    category: "First-Time Relationship Reading",
+    category: "Relationship Decision Clarity",
     keywords: [
-      "First-time relationship clarity reading Singapore",
+      "Relationship decision clarity Singapore",
       "Relationship Clarity Reading Singapore",
       "Qi Men relationship consultation Singapore",
       "Love reading what to expect",
       "Qimen Strategy Singapore"
     ],
     paragraphs: [
-      `For a first-time client, booking a Relationship Clarity Reading may feel personal. It is not easy to talk about someone you still care about, especially when the situation is unclear.`,
+      `For a new client, booking a Relationship Decision Clarity consultation may feel personal. It is not easy to talk about someone you still care about, especially when the situation is unclear.`,
       `At Qimen Strategy｜启明遁甲, the session is kept private, calm and focused. You do not need to tell a dramatic story. You only need to bring the main situation and the question you truly want to understand.`,
       `A good question may be: what is blocking this relationship now? Should I continue waiting? Is the other person still open to this connection? Why did the relationship change? Is it better to repair or let go?`,
       `During the reading, Qi Men Dun Jia is used to review the relationship structure. We look at the current state, the other person’s position, the blockage, the timing and the likely direction if things continue as they are.`,
       `The consultation is not designed to make you dependent on answers. It is designed to help you stop circling in the same thoughts. When the situation becomes clearer, your heart may still need time, but your next step becomes more grounded.`,
-      `First-time clients should understand that a Relationship Clarity Reading does not promise a fixed outcome. It does not force someone to return. It does not replace honest communication or personal responsibility.`,
+      `Clients should understand that a Relationship Decision Clarity consultation does not promise a fixed outcome. It does not force someone to return. It does not replace honest communication or personal responsibility.`,
       `What it can do is help you see whether the relationship still has movement, where the pressure is, what may be draining you, and what you should consider before making the next decision.`,
       `If you are new to this work, start with one clear question. One clear question is often enough to reveal the pattern that has been keeping you stuck.`,
       relationshipCta
