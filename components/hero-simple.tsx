@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, MessageCircle } from "lucide-react";
 
 const WA_LINK =
-  "https://wa.me/6589593499?text=Hello%20Qimen%20Strategy%2C%20I%20would%20like%20to%20consult%20about%20Qi%20Men%20Dun%20Jia%20Business%20Decision%20Advisory%20in%20Singapore.";
+  "https://wa.me/6589593499?text=Hello%20Qimen%20Strategy%2C%20I%20would%20like%20to%20consult%20about%20Qi%20Men%20Dun%20Jia%20Strategic%20Decision%20Advisory%20in%20Singapore.";
 
 const BG_IMAGE = "/master-home-hero.png";
 
@@ -14,14 +14,14 @@ export default function HeroSimple() {
       <div className="absolute inset-0">
         <img
           src={BG_IMAGE}
-          alt="Master Huang Qiming Qimen Strategy Singapore Qi Men Dun Jia Business Decision Advisory"
+          alt="Qimen Strategy Singapore Qi Men Dun Jia Strategic Decision Advisory by Huang Qiming"
           className="h-full w-full object-cover object-center opacity-82"
           loading="eager"
           fetchPriority="high"
         />
 
-        <div className="absolute inset-0 bg-gradient-to-r from-black/45 via-black/72 to-black/96" />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/92" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/74 to-black/96" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/24 via-transparent to-black/94" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_72%_38%,rgba(212,164,82,0.12),transparent_34%)]" />
 
         <div className="absolute right-[-12%] top-1/2 hidden h-[980px] w-[980px] -translate-y-1/2 rounded-full border border-[#d6ad63]/10 opacity-60 lg:block" />
@@ -44,7 +44,7 @@ export default function HeroSimple() {
               className="text-xs font-semibold uppercase tracking-[0.32em] text-[#d6ad63]"
               style={{ fontFamily: "var(--font-lato), var(--font-noto-sans), sans-serif" }}
             >
-              Singapore · Qi Men Dun Jia · Business Decision Advisory
+              Singapore · Qi Men Dun Jia · Strategic Decision Advisory
             </span>
             <span className="hidden h-px w-10 bg-[#c89a45] sm:block" />
           </motion.div>
@@ -56,7 +56,7 @@ export default function HeroSimple() {
             className="max-w-5xl text-4xl font-semibold uppercase leading-[0.98] tracking-[0.06em] text-[#f4dfb0] drop-shadow-[0_8px_28px_rgba(0,0,0,0.62)] sm:text-5xl md:text-6xl lg:text-7xl"
             style={{ fontFamily: "var(--font-cormorant), var(--font-noto-serif), serif" }}
           >
-            Singapore Qi Men Dun Jia Business Decision Advisory
+            Qimen Strategy
           </motion.h1>
 
           <motion.h2
@@ -66,27 +66,17 @@ export default function HeroSimple() {
             className="mt-5 text-2xl font-semibold tracking-[0.16em] text-[#e2bd6b] md:text-4xl"
             style={{ fontFamily: "var(--font-noto-serif), var(--font-cormorant), serif" }}
           >
-            新加坡奇门遁甲企业决策顾问
+            启明遁甲 · 新加坡奇门遁甲战略决策顾问
           </motion.h2>
 
           <motion.p
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.58, delay: 0.16 }}
-            className="mt-6 text-2xl font-semibold tracking-[0.18em] text-[#f1d38a] md:text-4xl"
+            className="mt-6 max-w-4xl text-2xl font-semibold leading-tight tracking-[0.08em] text-[#f1d38a] md:text-4xl"
             style={{ fontFamily: "var(--font-cormorant), var(--font-noto-serif), serif" }}
           >
-            启明大师黄启明 · 启明遁甲 Qimen Strategy
-          </motion.p>
-
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.58, delay: 0.18 }}
-            className="mt-5 max-w-4xl text-lg leading-8 text-white/86 md:text-2xl"
-            style={{ fontFamily: "var(--font-cormorant), var(--font-noto-serif), serif" }}
-          >
-            See the Whole Game Before You Decide · 关键决策前，先看清全局
+            真正的突破，不只是更加努力，而是在天时、地利、人和之间找到正确的布局。
           </motion.p>
 
           <motion.div
@@ -96,9 +86,9 @@ export default function HeroSimple() {
             className="mt-8 max-w-4xl border-l-2 border-[#d0a14a] bg-black/38 px-5 py-4 text-sm font-semibold leading-7 text-[#f1d38a] backdrop-blur-sm md:text-base"
             style={{ fontFamily: "var(--font-lato), var(--font-noto-sans), sans-serif" }}
           >
-            Business Qi Men Diagnosis · Investment Timing · Partnership & People · Business Feng Shui
+            Environment shapes energy · Energy shapes state · State shapes decisions · Decisions shape outcomes
             <br />
-            企业奇门诊断 · 投资时机 · 合作人事 · 企业风水布局
+            空间影响能量 · 能量影响状态 · 状态影响决策 · 决策塑造结果
           </motion.div>
 
           <motion.p
@@ -108,7 +98,7 @@ export default function HeroSimple() {
             className="mt-7 max-w-4xl text-base leading-8 text-white/82 md:text-lg"
             style={{ fontFamily: "var(--font-lato), var(--font-noto-sans), sans-serif" }}
           >
-            Led by Master Huang Qiming, Qimen Strategy is a Singapore-based Qi Men Dun Jia business decision advisory brand with 16 years of practical Qi Men Dun Jia advisory experience. Master Huang has been involved in the strategic decision-making of two businesses operating steadily for 18 years and has advised multiple companies on key business decisions.
+            Many capable people and businesses are not blocked by ability alone. They are often affected by misalignment between timing, environment, people dynamics and decision state. Qimen Strategy helps business owners, founders, executives and individuals see the whole game before major action.
           </motion.p>
 
           <motion.p
@@ -118,7 +108,7 @@ export default function HeroSimple() {
             className="mt-3 max-w-4xl text-sm leading-7 text-white/70 md:text-base"
             style={{ fontFamily: "var(--font-noto-sans), var(--font-lato), sans-serif" }}
           >
-            启明遁甲 Qimen Strategy 以奇门遁甲为核心决策方法，结合企业经营判断、风水空间布局、人事合作分析与重大决策陪跑，协助企业主、创始人、高管与个人在生意卡住、合作不明、投资扩张、任用调整、签约搬迁及重大人生选择前，看清时机、方向、人事关系与风险结构。
+            启明遁甲 Qimen Strategy 以奇门遁甲为核心判断方法，结合战略风水布局、空间能量调衡、人事合作分析与重大决策陪跑，协助客户在合作、投资、扩张、任用、搬迁、签约及人生重大选择前，看清时机、方向、人事关系与风险结构。
           </motion.p>
 
           <motion.div
@@ -131,7 +121,7 @@ export default function HeroSimple() {
             <span>Timing · 天时</span>
             <span>Environment · 地利</span>
             <span>People · 人和</span>
-            <span>Inner Mastery · 修为</span>
+            <span>State · 状态</span>
             <span>Growth · 成长</span>
           </motion.div>
 
@@ -149,7 +139,7 @@ export default function HeroSimple() {
               style={{ fontFamily: "var(--font-lato), sans-serif" }}
             >
               <MessageCircle size={18} />
-              Book Qi Men Consultation
+              Book Consultation
             </a>
 
             <a
