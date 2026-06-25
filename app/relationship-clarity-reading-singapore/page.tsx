@@ -57,7 +57,7 @@ const scenarios = [
 ];
 
 const boundaryRules = [
-  "One first-time session focuses on one core relationship decision theme.",
+  "One entry session focuses on one core relationship decision theme.",
   "The session provides decision reference; it does not guarantee reconciliation, marriage or a specific outcome.",
   "We do not provide emotional dependency, surveillance, manipulation or privacy-intrusive requests.",
   "Legal, medical and clinical psychological matters should be handled by qualified professionals.",
@@ -67,8 +67,8 @@ const boundaryRules = [
 
 const serviceLevels = [
   {
-    title: "First-Time Relationship Decision Clarity",
-    price: "S$168",
+    title: "Relationship Decision Clarity",
+    price: "S$396 起",
     detail: "45–60 minutes · one core relationship decision theme · no written report",
   },
   {
@@ -134,7 +134,7 @@ export default function RelationshipClarityReadingSingaporePage() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center bg-[#d6ad63] px-7 py-4 text-sm font-bold uppercase tracking-[0.16em] text-black transition hover:bg-[#f4dfb0]"
                 >
-                  Book First-Time Consultation · S$168
+                  Book Consultation · S$396 起
                 </a>
                 <a
                   href="#scope"
@@ -149,8 +149,8 @@ export default function RelationshipClarityReadingSingaporePage() {
           <section className="border-y border-[#d6ad63]/20 bg-[#070707] px-4 py-16 md:py-20">
             <div className="container mx-auto grid max-w-6xl gap-6 md:grid-cols-3">
               <div className="border border-[#d6ad63]/30 bg-black/40 p-7">
-                <p className="text-xs font-bold uppercase tracking-[0.24em] text-[#d6ad63]">First-Time Consultation</p>
-                <p className="mt-4 text-5xl font-bold text-[#f4dfb0]">S$168</p>
+                <p className="text-xs font-bold uppercase tracking-[0.24em] text-[#d6ad63]">Relationship Decision Clarity</p>
+                <p className="mt-4 text-5xl font-bold text-[#f4dfb0]">S$396 起</p>
                 <p className="mt-2 text-sm uppercase tracking-[0.16em] text-white/50">45–60 minutes · one core theme</p>
               </div>
               <div className="border border-[#d6ad63]/30 bg-black/40 p-7">
@@ -291,7 +291,7 @@ export default function RelationshipClarityReadingSingaporePage() {
                 See the situation clearly before you decide.
               </h2>
               <p className="mx-auto mt-6 max-w-3xl text-base leading-8 text-white/68 md:text-lg">
-                First-Time Relationship Decision Clarity: S$168 / 45–60 minutes. One core decision theme. Private consultation by appointment in Singapore.
+                Relationship Decision Clarity: From S$396 / 45–60 minutes. One core decision theme. Private consultation by appointment in Singapore.
               </p>
               <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
                 <a
