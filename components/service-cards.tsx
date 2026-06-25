@@ -103,7 +103,7 @@ export default function ServiceCards() {
             className="mb-5 text-3xl font-bold leading-tight md:text-5xl"
             style={{ fontFamily: "var(--font-cormorant), var(--font-noto-serif), serif", color: "oklch(0.15 0.02 60)" }}
           >
-            {t("先判断问题属于哪里，再决定如何布局", "First Identify the Real Imbalance, Then Decide the Right Alignment")}
+            {t("不是所有问题都要硬冲，先看清卡在哪里", "Do Not Push Blindly. First See Where the Block Is")}
           </h2>
 
           <p
@@ -111,8 +111,8 @@ export default function ServiceCards() {
             style={{ fontFamily: "var(--font-lato), var(--font-noto-sans), sans-serif", color: "oklch(0.42 0.02 60)" }}
           >
             {t(
-              "首页不再堆叠所有服务。启明遁甲将咨询入口压缩为三个核心方向：企业战略健康诊断、个人重大决策咨询、风水与空间能量调衡。年度预判、人事合作判断与长期陪跑，均可在企业诊断后进一步确认。",
-              "The homepage does not overload every service. Qimen Strategy is organised into three core pathways: enterprise diagnostic, personal major decision advisory, and Feng Shui & space alignment. Annual forecast, partnership review and long-term advisory can be confirmed after the diagnostic stage."
+              "有些客户是生意卡住，有些是合作关系不明，有些是家宅或办公室气场不稳，也有人是在感情、事业、搬迁或投资前犹豫不决。启明遁甲先帮助你看清问题属于企业、个人，还是空间环境，再决定下一步如何布局。",
+              "Some clients are stuck in business, some face unclear partnerships, some feel their home or office environment is not supporting them, and others hesitate before relationship, career, relocation or investment decisions. Qimen Strategy first helps you identify whether the issue belongs to business, personal decision-making or space environment before deciding the next alignment."
             )}
           </p>
         </motion.div>
