@@ -50,47 +50,36 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.qmfeng.com"),
   title: {
     default:
-      "Singapore Qi Men Dun Jia Strategic Decision Advisory｜启明遁甲 Qimen Strategy",
+      "Qimen Strategy Singapore｜Qi Men Dun Jia Strategic Decision Advisory",
     template: "%s | Qimen Strategy Singapore",
   },
   description:
-    "启明遁甲 Qimen Strategy is a Singapore-based Qi Men Dun Jia strategic decision advisory brand for business owners, founders, executives, investors and individuals, covering business strategy, investment timing, partnership assessment, Feng Shui alignment and major decision advisory.",
+    "Qimen Strategy Singapore provides Qi Men Dun Jia strategic decision advisory, Feng Shui alignment and space energy consulting for business owners, founders, professionals and major life decisions.",
   keywords: [
-    "Singapore Qi Men Dun Jia",
-    "Qi Men Dun Jia Singapore",
-    "Qimen Dunjia Singapore",
     "Qimen Strategy Singapore",
-    "新加坡奇门遁甲",
-    "奇门遁甲新加坡",
-    "启明遁甲",
-    "Singapore Qimen Strategy",
-    "Enterprise Strategic Decision Advisory Singapore",
-    "Business Decision Consultant Singapore",
-    "Investment Timing Analysis Singapore",
-    "Partnership Assessment Singapore",
-    "Founder Strategic Advisory Singapore",
+    "Qi Men Dun Jia Singapore",
+    "Singapore Qi Men Dun Jia",
+    "Qi Men decision advisory",
+    "Strategic Decision Advisory Singapore",
+    "Strategic Feng Shui Singapore",
     "Business Feng Shui Singapore",
-    "Office Feng Shui Singapore",
-    "Residential Feng Shui Singapore",
     "Feng Shui Alignment Singapore",
     "Huang Qiming Singapore",
+    "启明遁甲",
+    "新加坡奇门遁甲",
+    "奇门遁甲新加坡",
     "企业战略决策顾问",
-    "企业战略顾问",
-    "商业决策",
-    "投资判断",
-    "人事合作关系判断",
-    "企业主战略陪跑",
-    "住宅风水调理",
-    "办公室风水调理"
+    "企业风水布局",
+    "重大决策咨询"
   ],
   authors: [{ name: "Huang Qiming 黄启明" }],
   alternates: {
     canonical: "https://www.qmfeng.com",
   },
   openGraph: {
-    title: "Singapore Qi Men Dun Jia Strategic Decision Advisory｜启明遁甲 Qimen Strategy",
+    title: "Qimen Strategy Singapore｜Qi Men Dun Jia Strategic Decision Advisory",
     description:
-      "Qimen Strategy Singapore applies Qi Men Dun Jia, strategic decision analysis and Feng Shui alignment to support business owners, founders, executives and individuals before major decisions.",
+      "Environment shapes state, state shapes decisions, and decisions shape outcomes. Qimen Strategy helps clients review timing, environment, people dynamics and risk before major action.",
     url: "https://www.qmfeng.com",
     siteName: "Qimen Strategy Singapore",
     images: [
@@ -106,9 +95,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Singapore Qi Men Dun Jia Strategic Decision Advisory | Qimen Strategy",
+    title: "Qimen Strategy Singapore | Qi Men Dun Jia Advisory",
     description:
-      "Qimen Strategy helps business owners, founders and individuals see timing, direction, people dynamics and Feng Shui alignment before important decisions.",
+      "Qi Men Dun Jia strategic decision advisory, Feng Shui alignment and space energy consulting in Singapore.",
     images: [OG_IMAGE],
   },
   robots: {
