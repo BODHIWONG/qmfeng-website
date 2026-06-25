@@ -8,6 +8,7 @@ import BrandWorldviewSection from "@/components/brand-worldview-section";
 import ServiceCards from "@/components/service-cards";
 import DifferentiationSection from "@/components/differentiation-section";
 import QimenMasterSection from "@/components/qimen-master-section";
+import FounderPhilosophySection from "@/components/founder-philosophy-section";
 import CasesSection from "@/components/cases-section";
 import TestimonialsSection from "@/components/testimonials-section";
 import LeadCaptureForm from "@/components/lead-capture-form";
@@ -26,6 +27,7 @@ export default function Home() {
         <ServiceCards />
         <DifferentiationSection />
         <QimenMasterSection />
+        <FounderPhilosophySection />
         <CasesSection />
         <TestimonialsSection />
         <LeadCaptureForm />
