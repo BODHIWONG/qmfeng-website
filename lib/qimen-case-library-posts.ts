@@ -2,6 +2,37 @@ import type { InsightPost } from "./insights-data";
 
 export const qimenCaseLibraryPosts: InsightPost[] = [
   {
+    slug: "when-a-small-signal-should-not-be-ignored-qimen-strategy-singapore",
+    title: "When a Small Signal Should Not Be Ignored",
+    excerpt:
+      "A Singaporean lady came to Qimen Strategy with a personal wellbeing concern that she initially thought was minor. Through Qi Men Dun Jia, the chart showed a pattern of stagnation and downward accumulation. Qiming advised her not to dismiss the matter casually, but to respond responsibly and seek the right professional support.",
+    date: "2026-07-03",
+    readTime: "4 min",
+    category: "Qimen Strategy Case Study",
+    keywords: [
+      "Qimen Strategy Singapore",
+      "Qi Men Dun Jia Singapore",
+      "Personal Wellbeing",
+      "Strategic Decision Advisory",
+      "Qiming Huang",
+      "Singapore Consultation",
+      "Qimen Case Study",
+    ],
+    paragraphs: [
+      "A Singaporean lady recently came to Qimen Strategy with a personal wellbeing concern that she initially thought was minor.",
+      "At first, she believed it might simply be the result of daily activity and did not want to overthink it. However, when the concern continued, she felt uneasy and decided to seek further insight.",
+      "After reviewing the Qi Men Dun Jia chart, Qiming, Founder of Qimen Strategy, noticed a strong indication of stagnation, dampness and downward accumulation.",
+      "From the chart, this did not look like something that should be dismissed casually.",
+      "The important point was not to create fear, but to recognise that some signals deserve attention before they become bigger issues.",
+      "Instead of asking her to ignore it, Qiming advised her to respond responsibly and seek the right professional support.",
+      "Qi Men Dun Jia is not a replacement for professional assessment. Its role is to provide an additional decision-support lens when a person feels uncertain about what to do next.",
+      "Its value lies in helping people notice potential warning signs before they are ignored, so they can make timely and responsible decisions.",
+      "Some signals should not be dismissed lightly.",
+      "A small concern may look ordinary on the surface, but sometimes it is a reminder to pause, pay attention and take the next step carefully.",
+      "At Qimen Strategy, we apply Qi Men Dun Jia as a decision-support lens. Whether the matter concerns business, relationships, environment or personal wellbeing, the purpose is not to create fear, but to help clients see the bigger picture before they decide.",
+    ],
+  },
+  {
     slug: "qi-men-feng-shui-citrine-energy-resonance-case-study",
     title: "Case Study: When Qi Men Feng Shui Begins to Shift the Energy of a Space",
     excerpt:
