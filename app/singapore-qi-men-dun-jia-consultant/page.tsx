@@ -6,20 +6,22 @@ import Footer from "@/components/footer";
 import FloatingActions from "@/components/floating-actions";
 
 const WA_LINK =
-  "https://wa.me/6589593499?text=Hello%20Qimen%20Strategy%2C%20I%20would%20like%20to%20consult%20about%20Qi%20Men%20Dun%20Jia%20Strategic%20Decision%20Advisory%20in%20Singapore.";
+  "https://wa.me/6589593499?text=Hello%20Qimen%20Strategy%2C%20I%20would%20like%20to%20book%20a%20private%20Qi%20Men%20Dun%20Jia%20consultation%20in%20Singapore.";
 
 export const metadata: Metadata = {
   title:
-    "Singapore Qi Men Dun Jia Consultant｜新加坡奇门遁甲决策顾问｜启明遁甲 Qimen Strategy",
+    "Qi Men Dun Jia Consultation Singapore｜新加坡奇门遁甲咨询｜启明遁甲 Qimen Strategy",
   description:
-    "启明遁甲 Qimen Strategy is a Singapore-based Qi Men Dun Jia strategic decision advisory brand supporting business owners, founders, executives, investors and individuals before major decisions in business, investment, career, partnership and Feng Shui alignment.",
+    "启明遁甲 Qimen Strategy provides private Qi Men Dun Jia consultation in Singapore for business, career, relationship, partnership, investment timing and Feng Shui alignment decisions.",
   keywords: [
     "Singapore Qi Men Dun Jia consultant",
     "Qi Men Dun Jia Singapore",
+    "Qi Men Dun Jia consultation Singapore",
     "Qimen Dunjia Singapore",
     "Qimen Strategy Singapore",
     "新加坡奇门遁甲",
     "奇门遁甲新加坡",
+    "奇门遁甲咨询",
     "启明遁甲",
     "奇门遁甲决策顾问",
     "Business decision consultant Singapore",
@@ -30,15 +32,21 @@ export const metadata: Metadata = {
     canonical: "https://www.qmfeng.com/singapore-qi-men-dun-jia-consultant",
   },
   openGraph: {
-    title: "Singapore Qi Men Dun Jia Consultant｜启明遁甲 Qimen Strategy",
+    title: "Qi Men Dun Jia Consultation Singapore｜启明遁甲 Qimen Strategy",
     description:
-      "A Singapore-based Qi Men Dun Jia strategic decision advisory brand for business, investment, career, partnership and Feng Shui alignment decisions.",
+      "Private Qi Men Dun Jia consultation in Singapore for business, career, relationship, partnership, investment timing and Feng Shui alignment decisions.",
     url: "https://www.qmfeng.com/singapore-qi-men-dun-jia-consultant",
     type: "website",
     siteName: "Qimen Strategy Singapore",
     locale: "zh_SG",
   },
 };
+
+const trustPoints = [
+  ["16+ Years", "16+年", "Qi Men Dun Jia practice and decision advisory experience."],
+  ["Singapore Based", "新加坡本地", "Private consultation available in English and Chinese."],
+  ["Decision Focus", "决策导向", "Review timing, direction, people dynamics and risks before action."],
+];
 
 const applications = [
   {
@@ -140,17 +148,25 @@ export default function SingaporeQiMenDunJiaConsultantPage() {
                 Qimen Strategy Singapore｜启明遁甲
               </p>
               <h1 className="max-w-5xl text-4xl font-semibold uppercase leading-[0.98] tracking-[0.05em] text-[#f4dfb0] md:text-7xl">
-                Singapore Qi Men Dun Jia Strategic Decision Consultant
+                Private Qi Men Dun Jia Consultation in Singapore
               </h1>
               <h2 className="mt-5 text-3xl font-semibold tracking-[0.12em] text-[#e2bd6b] md:text-5xl">
-                新加坡奇门遁甲战略决策顾问
+                新加坡奇门遁甲咨询｜重大决策前看清局势
               </h2>
               <p className="mt-8 max-w-4xl text-lg leading-8 text-white/78 md:text-xl">
-                Qimen Strategy, also known as 启明遁甲, is a Singapore-based Qi Men Dun Jia strategic decision advisory brand led by Huang Qiming. We support business owners, founders, executives, investors and individuals before major decisions involving business strategy, investment timing, partnership, career direction, relationship clarity and Feng Shui alignment.
+                Qimen Strategy supports business owners, founders, executives, investors and individuals before major decisions involving business strategy, investment timing, partnership, career direction, relationship clarity and Feng Shui alignment.
               </p>
               <p className="mt-4 max-w-4xl text-base leading-8 text-white/72 md:text-lg">
-                启明遁甲 Qimen Strategy 是新加坡的奇门遁甲战略决策顾问品牌。我们将传统奇门遁甲的时空推演体系，与现代企业战略、投资判断、职业发展、人事布局、感情关系清晰咨询及住宅/办公室风水调理结合，帮助客户在重大选择前看清时机、方向、人事关系与风险结构。
+                启明遁甲 Qimen Strategy 将传统奇门遁甲的时空推演体系，与现代企业战略、投资判断、职业发展、人事布局、感情关系清晰咨询及住宅/办公室风水调理结合，帮助客户在重大选择前看清时机、方向、人事关系与风险结构。
               </p>
+              <div className="mt-8 grid max-w-4xl gap-3 md:grid-cols-3">
+                {trustPoints.map(([en, zh, body]) => (
+                  <div key={en} className="border border-[#d6ad63]/25 bg-black/35 p-4">
+                    <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#d6ad63]">{en} · {zh}</p>
+                    <p className="mt-2 text-sm leading-6 text-white/66">{body}</p>
+                  </div>
+                ))}
+              </div>
               <div className="mt-10 flex flex-col gap-4 sm:flex-row">
                 <a
                   href={WA_LINK}
@@ -158,13 +174,13 @@ export default function SingaporeQiMenDunJiaConsultantPage() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center bg-[#d6ad63] px-7 py-4 text-sm font-bold uppercase tracking-[0.16em] text-black transition hover:bg-[#f4dfb0]"
                 >
-                  WhatsApp +65 8959 3499
+                  Book Qi Men Consultation
                 </a>
                 <Link
-                  href="/qimen-strategy-business"
+                  href="/qi-men-dun-jia-course-singapore"
                   className="inline-flex items-center justify-center border border-[#d6ad63]/70 px-7 py-4 text-sm font-bold uppercase tracking-[0.16em] text-[#f4dfb0] transition hover:bg-[#d6ad63]/10"
                 >
-                  View Advisory Plans
+                  Learn Qi Men Dun Jia
                 </Link>
               </div>
             </div>
@@ -269,7 +285,7 @@ export default function SingaporeQiMenDunJiaConsultantPage() {
           <section className="border-t border-[#d6ad63]/20 bg-[#070707] px-4 py-20">
             <div className="container mx-auto max-w-5xl text-center">
               <p className="mb-5 text-xs font-bold uppercase tracking-[0.32em] text-[#d6ad63]">
-                Private Qimen Strategy Advisory
+                Private Qi Men Dun Jia Advisory
               </p>
               <h2 className="text-3xl font-semibold text-[#f4dfb0] md:text-5xl">
                 See the bigger picture before you decide.
