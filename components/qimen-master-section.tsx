@@ -14,9 +14,9 @@ import {
 } from "lucide-react";
 
 const gold = "oklch(0.72 0.12 70)";
-const MASTER_IMAGE = "/master-qiming-about.jpg";
+const FOUNDER_IMAGE = "/master-qiming-about.jpg";
 const WA_LINK =
-  "https://wa.me/6589593499?text=Hello%20Master%20Qiming%2C%20I%20would%20like%20to%20book%20a%20private%20Qi%20Men%20Dun%20Jia%20business%20decision%20advisory%20session.";
+  "https://wa.me/6589593499?text=Hello%20Qimen%20Strategy%2C%20I%20would%20like%20to%20book%20a%20private%20Qi%20Men%20Dun%20Jia%20business%20decision%20advisory%20session.";
 
 const qimenPoints = [
   {
@@ -61,8 +61,8 @@ const trustItems = [
     icon: ShieldCheck,
     zh: "多家企业战略决策顾问",
     en: "Strategic Decision Advisor to Multiple Companies",
-    descZh: "以私密预约制方式，为企业关键节点提供奇门遁甲战略判断与决策参考。",
-    descEn: "Private advisory for key business moments, applying Qi Men Dun Jia as strategic decision reference.",
+    descZh: "以预约制方式，为企业关键节点提供奇门遁甲战略判断与决策参考。",
+    descEn: "Appointment-based advisory for key business moments, applying Qi Men Dun Jia as strategic decision reference.",
   },
 ];
 
@@ -89,7 +89,7 @@ export default function QimenMasterSection() {
               className="mb-4 text-xs uppercase tracking-[0.28em]"
               style={{ fontFamily: "var(--font-lato), sans-serif", color: gold }}
             >
-              {t("黄启明大师 · 启明遁甲", "Master Huang Qiming · Qimen Strategy")}
+              {t("黄启明｜启明遁甲创始人", "Huang Qiming · Founder, Qimen Strategy")}
             </p>
 
             <h2
@@ -113,8 +113,8 @@ export default function QimenMasterSection() {
               }}
             >
               {t(
-                "启明大师黄启明以奇门遁甲为核心决策方法，结合真实企业经营经验，帮助企业主与个人在关键行动前看清时机、方向、人事关系与局势结构。",
-                "Master Huang Qiming uses Qi Men Dun Jia as the core decision method, combining real business operating experience to help business owners and individuals read timing, direction, people dynamics and situation structure before important moves."
+                "黄启明以奇门遁甲为核心决策方法，结合真实企业经营经验，帮助企业主与个人在关键行动前看清时机、方向、人事关系与局势结构。",
+                "Huang Qiming applies Qi Men Dun Jia as a strategic decision method, combining real business operating experience to help business owners and individuals read timing, direction, people dynamics and situation structure before important moves."
               )}
             </p>
 
@@ -143,12 +143,12 @@ export default function QimenMasterSection() {
                   color: "oklch(0.96 0.01 75)",
                 }}
               >
-                {t("关于黄启明大师", "About Master Huang Qiming")}
+                {t("关于黄启明", "About Huang Qiming")}
               </h3>
               <p className="text-sm leading-relaxed text-[oklch(0.74_0.025_70)] md:text-base">
                 {t(
-                  "黄启明大师拥有 16 年奇门遁甲企业决策顾问经验，长期参与两家已稳健运营 18 年企业的经营与决策，并为多家企业提供战略决策顾问支持。启明遁甲的核心，不是替客户决定，而是帮助客户看清局势、识别重点、建立更清醒的下一步判断。",
-                  "Master Huang Qiming brings 16 years of Qi Men Dun Jia business advisory experience. He has long been involved in the operation and decision-making of two businesses that have operated steadily for 18 years, and has advised multiple companies on strategic decisions. Qimen Strategy does not decide for clients; it helps clients see the situation, identify key points and form clearer next-step judgment."
+                  "黄启明拥有 16 年奇门遁甲企业决策顾问经验，长期参与两家已稳健运营 18 年企业的经营与决策，并为多家企业提供战略决策顾问支持。启明遁甲的核心，不是替客户决定，而是帮助客户看清局势、识别重点、建立更清醒的下一步判断。",
+                  "Huang Qiming brings 16 years of Qi Men Dun Jia business advisory experience. He has long been involved in the operation and decision-making of two businesses that have operated steadily for 18 years, and has advised multiple companies on strategic decisions. Qimen Strategy does not decide for clients; it helps clients see the situation, identify key points and form clearer next-step judgment."
                 )}
               </p>
             </div>
@@ -165,10 +165,10 @@ export default function QimenMasterSection() {
                 {t("预约私密奇门决策咨询", "Book Private Qi Men Advisory")}
               </a>
               <a
-                href="/qimen-strategy-business"
+                href="/singapore-qi-men-dun-jia-consultant"
                 className="inline-flex items-center justify-center gap-3 rounded-full border border-[oklch(0.72_0.12_70/0.45)] px-7 py-3 text-sm font-bold text-[oklch(0.88_0.08_70)] transition hover:bg-[oklch(0.72_0.12_70/0.10)]"
               >
-                {t("查看启明遁甲顾问方案", "View Qimen Strategy Programs")}
+                {t("查看奇门遁甲咨询", "View Qi Men Consultation")}
                 <ArrowRight size={17} />
               </a>
             </div>
@@ -183,8 +183,8 @@ export default function QimenMasterSection() {
           >
             <div className="relative mx-auto max-w-lg overflow-hidden rounded-[2rem] border border-[oklch(0.72_0.12_70/0.25)] bg-[oklch(0.08_0.018_60)] shadow-[0_30px_90px_rgba(0,0,0,0.45)]">
               <img
-                src={MASTER_IMAGE}
-                alt="Master Huang Qiming Qimen Strategy Singapore"
+                src={FOUNDER_IMAGE}
+                alt="Huang Qiming Founder of Qimen Strategy Singapore"
                 className="aspect-[4/5] w-full object-cover object-center"
               />
               <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 via-black/45 to-transparent p-6 md:p-7">
@@ -192,12 +192,12 @@ export default function QimenMasterSection() {
                   className="text-2xl font-semibold text-[oklch(0.98_0.01_75)]"
                   style={{ fontFamily: "var(--font-cormorant), var(--font-noto-serif), serif" }}
                 >
-                  {t("黄启明大师", "Master Huang Qiming")}
+                  {t("黄启明", "Huang Qiming")}
                 </p>
                 <p className="mt-2 text-sm font-semibold tracking-wide text-[oklch(0.78_0.10_70)]">
                   {t(
-                    "奇门遁甲企业决策顾问",
-                    "Qi Men Dun Jia Business Decision Advisor"
+                    "启明遁甲创始人｜奇门遁甲决策顾问",
+                    "Founder · Qi Men Dun Jia Decision Advisor"
                   )}
                 </p>
                 <p className="mt-2 text-xs uppercase tracking-[0.16em] text-white/70">
