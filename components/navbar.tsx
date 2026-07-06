@@ -11,13 +11,10 @@ const WA_LINK =
 
 const serviceLinks = [
   { href: "/", zh: "首页", en: "Home" },
-  { href: "/singapore-qi-men-dun-jia-consultant", zh: "奇门咨询", en: "Qi Men" },
-  { href: "/enterprise-strategic-advisory", zh: "企业决策", en: "Enterprise" },
+  { href: "/singapore-qi-men-dun-jia-consultant", zh: "奇门咨询", en: "Qi Men Consultation" },
+  { href: "/enterprise-strategic-advisory", zh: "企业顾问", en: "Enterprise Advisory" },
   { href: "/qi-men-dun-jia-course-singapore", zh: "奇门课程", en: "Course" },
-  { href: "/relationship-clarity-reading-singapore", zh: "关系决策", en: "Relationship" },
-  { href: "/qimen-strategy-business", zh: "启明遁甲", en: "Qimen Strategy" },
-  { href: "/insights", zh: "案例智库", en: "Insights" },
-  { href: "/founder", zh: "创始人", en: "Founder" },
+  { href: "/insights", zh: "案例", en: "Cases" },
 ];
 
 export default function Navbar() {
