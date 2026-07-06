@@ -29,10 +29,10 @@ const WA_LINK = [
 ].join("?");
 
 const courseHighlights = [
-  ["2 Days", "两天系统研修", "A focused foundation program for serious beginners."],
-  ["Foundation System", "基础体系", "Build the framework before learning techniques."],
-  ["Chart Reading", "排盘读局", "Learn chart structure, useful gods and reading sequence."],
-  ["Real Cases", "真实案例", "Apply Qi Men to business, career, relationship and timing decisions."],
+  ["First Intake", "首期招生中", "Founding intake registration is open. Confirm the next available class through WhatsApp."],
+  ["2 Days", "两天系统研修", "A focused foundation program for serious beginners and practical learners."],
+  ["Small Class", "小班教学", "Limited seats for better interaction, questions and case discussion."],
+  ["Early Bird", "早鸟 S$988 起", "Usual fee S$1,688. Early bird rate is available for founding intake seats."],
 ];
 
 const curriculum = [
@@ -99,9 +99,12 @@ const outcomes = [
 const courseFacts = [
   ["Program", "课程", "Qi Men Strategy Foundation Program｜启明遁甲研修班"],
   ["Format", "形式", "2-day intensive course｜两天系统研修"],
+  ["Level", "程度", "Beginner-friendly, structured and case-based｜适合零基础，也适合重新建立系统者"],
   ["Language", "语言", "Chinese teaching with English support when needed｜中文授课，可英文辅助"],
   ["Location", "地点", "Qimen Strategy, Bedok Central, Singapore｜启明遁甲新加坡门店"],
-  ["First Intake", "首期", "Founding intake registration is open｜首期创办班招生中"],
+  ["Next Intake", "下一期", "Founding intake is open. Confirm the available date through WhatsApp｜首期招生中，开课日期请 WhatsApp 确认"],
+  ["Seats", "人数", "Small class with limited seats｜小班教学，名额有限"],
+  ["Includes", "包含", "Course notes, real case practice and post-course Q&A support｜课程讲义、案例练习、课后问答支持"],
   ["Fee", "费用", "Early bird from S$988, usual S$1,688｜早鸟优惠 S$988 起，原价 S$1,688"],
 ];
 
@@ -120,13 +123,13 @@ export default function QiMenDunJiaCourseSingaporePage() {
                 Qimen Strategy Singapore · Foundation Course
               </p>
               <h1 className="max-w-5xl text-4xl font-semibold uppercase leading-[0.98] tracking-[0.04em] text-[#f4dfb0] md:text-7xl">
-                Qi Men Dun Jia Course
+                Qi Men Dun Jia Course Singapore
               </h1>
               <h2 className="mt-5 text-3xl font-semibold tracking-[0.16em] text-[#e2bd6b] md:text-5xl">
-                启明遁甲研修班
+                启明遁甲研修班｜奇门遁甲课程
               </h2>
               <p className="mt-6 max-w-4xl text-lg font-semibold uppercase tracking-[0.18em] text-[#d6ad63] md:text-2xl">
-                Learn the Structure. Read the Situation. Improve the Decision.
+                First Intake Now Open · Limited Seats · Early Bird From S$988
               </p>
               <p className="mt-8 max-w-3xl text-lg leading-8 text-white/78 md:text-xl">
                 A practical Qi Men Dun Jia foundation program designed for Singapore business owners, managers, entrepreneurs and serious learners who want to understand timing, direction, people dynamics and risk before important action.
@@ -134,6 +137,20 @@ export default function QiMenDunJiaCourseSingaporePage() {
               <p className="mt-4 max-w-3xl text-base leading-8 text-white/70">
                 本课程不是零散讲口诀，而是从基础框架、核心符号、排盘读局到真实案例应用，系统建立奇门遁甲的判断逻辑。学习重点不是迷信结果，而是训练看清局势、择时布局、识别风险与辅助决策的能力。
               </p>
+              <div className="mt-8 grid max-w-4xl gap-3 sm:grid-cols-3">
+                <div className="border border-[#d6ad63]/25 bg-black/30 p-4">
+                  <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#d6ad63]">Beginner Friendly</p>
+                  <p className="mt-2 text-sm text-white/70">适合零基础与重新建立系统者</p>
+                </div>
+                <div className="border border-[#d6ad63]/25 bg-black/30 p-4">
+                  <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#d6ad63]">Real Cases</p>
+                  <p className="mt-2 text-sm text-white/70">结合事业、关系、风水与决策案例</p>
+                </div>
+                <div className="border border-[#d6ad63]/25 bg-black/30 p-4">
+                  <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#d6ad63]">WhatsApp Reserve</p>
+                  <p className="mt-2 text-sm text-white/70">通过 WhatsApp 查询名额与日期</p>
+                </div>
+              </div>
               <div className="mt-10 flex flex-col gap-4 sm:flex-row">
                 <a
                   href={WA_LINK}
@@ -141,10 +158,10 @@ export default function QiMenDunJiaCourseSingaporePage() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Enquire Course
+                  WhatsApp To Reserve Seat
                 </a>
-                <Link href="/qimen-strategy-business" className="inline-flex items-center justify-center border border-[#d6ad63]/70 px-7 py-4 text-sm font-bold uppercase tracking-[0.16em] text-[#f4dfb0] transition hover:bg-[#d6ad63]/10">
-                  View Advisory Work
+                <Link href="/singapore-qi-men-dun-jia-consultant" className="inline-flex items-center justify-center border border-[#d6ad63]/70 px-7 py-4 text-sm font-bold uppercase tracking-[0.16em] text-[#f4dfb0] transition hover:bg-[#d6ad63]/10">
+                  View Qi Men Consultation
                 </Link>
               </div>
             </div>
@@ -256,7 +273,7 @@ export default function QiMenDunJiaCourseSingaporePage() {
                 Join the first Qi Men Dun Jia foundation intake by Qimen Strategy Singapore.
               </h2>
               <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-white/72">
-                首期名额有限。欢迎通过 WhatsApp 查询最新开课日期、课程安排与报名细节。
+                首期创办班招生中，小班名额有限。欢迎通过 WhatsApp 查询最新开课日期、早鸟名额与报名细节。
               </p>
               <a
                 href={WA_LINK}
