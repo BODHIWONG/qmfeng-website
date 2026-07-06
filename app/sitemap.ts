@@ -17,6 +17,7 @@ const baseUrl = "https://www.qmfeng.com";
 const corePages = [
   "/",
   "/singapore-qi-men-dun-jia-consultant",
+  "/qi-men-dun-jia-course-singapore",
   "/enterprise-strategic-advisory",
   "/enterprise-strategic-health-diagnostic",
   "/qimen-strategy-business",
@@ -48,7 +49,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${baseUrl}${path}`,
     lastModified: now,
     changeFrequency: path === "/" ? "weekly" : "monthly",
-    priority: path === "/" ? 1 : path.includes("enterprise") ? 0.9 : 0.8,
+    priority: path === "/" ? 1 : path.includes("enterprise") || path.includes("course") ? 0.9 : 0.8,
   })) satisfies MetadataRoute.Sitemap;
 
   const insightEntries = allPosts.map((post) => ({
