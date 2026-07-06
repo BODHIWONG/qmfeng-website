@@ -23,7 +23,7 @@ export default function LeadCaptureForm() {
     const payload = {
       name: String(formData.get("name") || "").trim(),
       whatsapp: String(formData.get("whatsapp") || "").trim(),
-      service: String(formData.get("service") || "Enterprise Strategic Diagnostic From S$3996"),
+      service: String(formData.get("service") || "Qi Men Dun Jia Consultation From S$396"),
       message: String(formData.get("message") || "").trim(),
       source: "Qimen Website Lead Form",
       website: String(formData.get("website") || "").trim(),
@@ -83,8 +83,8 @@ export default function LeadCaptureForm() {
             </h2>
             <p className="max-w-xl text-base leading-8 text-white/75 md:text-lg">
               {t(
-                "不需要写得很复杂。简单说明你现在面对的是生意、合作、人事、风水空间，还是个人重大选择。我们会根据情况，通过 WhatsApp 回复你适合从哪一种咨询开始。正式 WhatsApp：+65 8959 3499。",
-                "You do not need to write a long explanation. Briefly tell us whether your issue is about business, partnership, people, Feng Shui space or a major personal decision. We will reply on WhatsApp and advise which consultation pathway is most suitable. Official WhatsApp: +65 8959 3499."
+                "不需要写得很复杂。简单说明你现在面对的是奇门咨询、企业决策、风水空间、课程学习，还是个人重大选择。我们会根据情况，通过 WhatsApp 回复你适合从哪一种服务开始。正式 WhatsApp：+65 8959 3499。",
+                "You do not need to write a long explanation. Briefly tell us whether your issue is about Qi Men consultation, enterprise decision advisory, Feng Shui space, course learning or a major personal decision. We will reply on WhatsApp and advise which pathway fits. Official WhatsApp: +65 8959 3499."
               )}
             </p>
           </motion.div>
@@ -126,11 +126,12 @@ export default function LeadCaptureForm() {
               <select
                 name="service"
                 className="w-full border border-white/15 bg-[oklch(0.10_0.02_60)] px-4 py-3 text-white outline-none transition focus:border-[oklch(0.72_0.12_70)]"
-                defaultValue="Enterprise Strategic Diagnostic From S$3996"
+                defaultValue="Qi Men Dun Jia Consultation From S$396"
               >
+                <option value="Qi Men Dun Jia Consultation From S$396">{t("奇门遁甲咨询：事业、关系、合作、搬迁或重大选择 S$396 起", "Qi Men Dun Jia consultation — career, relationship, partnership, relocation or major decision From S$396")}</option>
                 <option value="Enterprise Strategic Diagnostic From S$3996">{t("生意或企业卡住，需要企业战略健康诊断 S$3,996 起", "Business is stuck — Enterprise Strategic Diagnostic From S$3,996")}</option>
-                <option value="Personal Major Decision Advisory From S$396">{t("事业、关系、搬迁或人生选择，需要个人重大决策咨询 S$396 起", "Career, relationship, relocation or life choice — Personal Major Decision Advisory From S$396")}</option>
                 <option value="Feng Shui and Space Alignment">{t("办公室、商铺或住宅气场不稳，需要风水与空间能量调衡", "Office, shop or home feels unsupported — Feng Shui & Space Alignment")}</option>
+                <option value="Qi Men Dun Jia Course From S$988">{t("我想报名或了解奇门遁甲课程 / 启明遁甲研修班 S$988 起", "I want to enquire about the Qi Men Dun Jia Course From S$988")}</option>
                 <option value="Not Sure Need Assessment">{t("我不确定，请先帮我判断适合哪一种咨询", "Not sure — please advise which consultation fits")}</option>
               </select>
             </label>
@@ -141,7 +142,7 @@ export default function LeadCaptureForm() {
                 name="message"
                 rows={5}
                 className="w-full resize-none border border-white/15 bg-white/8 px-4 py-3 text-white outline-none transition focus:border-[oklch(0.72_0.12_70)]"
-                placeholder={t("例如：最近生意卡住、合作对象不确定、准备投资/搬迁/签约、家里或办公室感觉不顺，或感情事业需要做决定。", "For example: business is stuck, partner is uncertain, preparing for investment/relocation/signing, home or office feels blocked, or a relationship/career decision needs clarity.")}
+                placeholder={t("例如：最近生意卡住、合作对象不确定、准备投资/搬迁/签约、家里或办公室感觉不顺，想学习奇门遁甲，或感情事业需要做决定。", "For example: business is stuck, partner is uncertain, preparing for investment/relocation/signing, home or office feels blocked, want to learn Qi Men Dun Jia, or a relationship/career decision needs clarity.")}
               />
             </label>
 
