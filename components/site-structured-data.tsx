@@ -10,6 +10,7 @@ export default function SiteStructuredData() {
       "新加坡奇门遁甲企业决策顾问",
       "Qi Men Dun Jia Singapore",
       "Qimen Dunjia Singapore",
+      "Qi Men Dun Jia Course Singapore",
       "Qiming Feng Shui Wisdom"
     ],
     legalName: "Qiming Feng Shui Wisdom Pte. Ltd.",
@@ -37,6 +38,8 @@ export default function SiteStructuredData() {
       "Qi Men Dun Jia",
       "Qimen Dunjia",
       "Qimen Strategy",
+      "Qi Men Dun Jia Course Singapore",
+      "Qi Men Dun Jia Foundation Course",
       "Qi Men Dun Jia Business Decision Advisory",
       "Strategic Decision Advisory",
       "Enterprise Decision Advisory",
@@ -51,6 +54,8 @@ export default function SiteStructuredData() {
     ],
     serviceType: [
       "Qimen Decision Consultation From S$396",
+      "Qi Men Dun Jia Foundation Course",
+      "Qi Men Dun Jia Course Singapore",
       "Enterprise Strategic Health Diagnostic From S$3,996",
       "Qi Men Dun Jia Consultation",
       "Qimen Strategy Advisory",
