@@ -26,8 +26,8 @@ const services: ServiceCard[] = [
   {
     id: 1,
     icon: Building2,
-    titleZh: "企业战略健康诊断",
-    titleEn: "Enterprise Strategic Diagnostic",
+    titleZh: "企业战略决策顾问",
+    titleEn: "Enterprise Decision Advisory",
     visualSubZh: "方向 · 人事 · 现金流 · 空间支持力",
     visualSubEn: "Direction · People · Cash Flow · Space Support",
     painZh:
@@ -45,20 +45,20 @@ const services: ServiceCard[] = [
   {
     id: 2,
     icon: Activity,
-    titleZh: "个人重大决策咨询",
-    titleEn: "Personal Major Decision Advisory",
+    titleZh: "奇门遁甲咨询",
+    titleEn: "Qi Men Dun Jia Consultation",
     visualSubZh: "事业 · 关系 · 搬迁 · 投资 · 家庭",
     visualSubEn: "Career · Relationship · Move · Investment · Family",
     painZh:
-      "适合事业、关系、财富节奏、搬迁、家庭选择或人生方向出现卡点的人。通过奇门遁甲看清当前阶段的阻力、风险信号与下一步选择。",
+      "适合事业、关系、财富节奏、搬迁、合作、家庭选择或人生方向出现卡点的人。通过奇门遁甲看清当前阶段的阻力、风险信号与下一步选择。",
     painEn:
-      "For clients facing key choices in career, relationships, wealth rhythm, relocation, family matters or life direction. Review the current resistance, risk signals and next-step choices through Qi Men Dun Jia.",
+      "For clients facing key choices in career, relationships, wealth rhythm, relocation, partnership, family matters or life direction. Review resistance, risk signals and next-step choices through Qi Men Dun Jia.",
     audienceZh: "核心价值：不是替你决定，而是帮助你在关键选择前看清局势、方向与代价。",
     audienceEn:
       "Core value: not deciding for you, but helping you see the situation, direction and cost before a key choice.",
     feeZh: "S$396 起",
     feeEn: "From S$396",
-    href: "/personal-life-state-diagnostic",
+    href: "/singapore-qi-men-dun-jia-consultant",
   },
   {
     id: 3,
@@ -81,20 +81,20 @@ const services: ServiceCard[] = [
   {
     id: 4,
     icon: BookOpen,
-    titleZh: "课程学习体系",
-    titleEn: "Qimen Strategy Courses",
-    visualSubZh: "奇门 · 数字 · 八字 · 風水",
-    visualSubEn: "Qimen · Number · Bazi · Feng Shui",
+    titleZh: "奇门遁甲课程",
+    titleEn: "Qi Men Dun Jia Course",
+    visualSubZh: "两天研修 · 排盘读局 · 真实案例",
+    visualSubEn: "2-Day Training · Chart Reading · Real Cases",
     painZh:
-      "适合希望系统学习东方智慧，并真正用在生活、家庭、事业与空间中的学员。课程涵盖奇门遁甲、数字能量、八字命理与風水布局，重点是听得懂、学得会、用得出。",
+      "适合希望系统学习奇门遁甲，并真正用在生活、家庭、事业与空间判断中的学员。课程从基础体系、核心符号、排盘读局到真实案例应用，重点是听得懂、学得会、用得出。",
     painEn:
-      "For learners who want practical Eastern wisdom that can be applied to life, family, career and space. Courses include Qi Men Dun Jia, number energy, Bazi and Feng Shui layout with clear, practical teaching.",
-    audienceZh: "核心价值：不是为了神神秘秘，而是为了在人生重要选择前，看清自己、看清局势、看清空间。",
+      "For learners who want structured Qi Men Dun Jia training that can be applied to life, family, career and space decisions. Learn the framework, symbols, chart reading and real case application.",
+    audienceZh: "核心价值：不是神秘化学习，而是建立看清局势、择时布局与辅助决策的能力。",
     audienceEn:
-      "Core value: not mystery for its own sake, but clearer self-understanding, situation reading and space awareness before important choices.",
-    feeZh: "课程意向开放中",
-    feeEn: "Course Enquiry Open",
-    href: "/courses",
+      "Core value: build the ability to read situations, assess timing and support better decisions without mystifying the practice.",
+    feeZh: "早鸟 S$988 起",
+    feeEn: "Early Bird From S$988",
+    href: "/qi-men-dun-jia-course-singapore",
   },
 ];
 
@@ -114,14 +114,14 @@ export default function ServiceCards() {
             className="mb-3 text-xs uppercase tracking-[0.25em]"
             style={{ fontFamily: "var(--font-lato), sans-serif", color: "oklch(0.60 0.08 65)" }}
           >
-            {t("四大核心入口", "Four Core Pathways")}
+            {t("四大核心入口", "Four Conversion Pathways")}
           </p>
 
           <h2
             className="mb-5 text-3xl font-bold leading-tight md:text-5xl"
             style={{ fontFamily: "var(--font-cormorant), var(--font-noto-serif), serif", color: "oklch(0.15 0.02 60)" }}
           >
-            {t("不是所有问题都要硬冲，先看清卡在哪里", "Do Not Push Blindly. First See Where the Block Is")}
+            {t("客户搜什么，就直接进入对应的咨询路径", "Choose the Pathway That Matches Your Search Intent")}
           </h2>
 
           <p
@@ -129,8 +129,8 @@ export default function ServiceCards() {
             style={{ fontFamily: "var(--font-lato), var(--font-noto-sans), sans-serif", color: "oklch(0.42 0.02 60)" }}
           >
             {t(
-              "有些客户是生意卡住，有些是合作关系不明，有些是家宅或办公室气场不稳，也有人是在感情、事业、搬迁或投资前犹豫不决。启明遁甲先帮助你看清问题属于企业、个人，还是空间环境；同时也提供课程学习体系，让学员把东方智慧学得明白、用得出来。",
-              "Some clients are stuck in business, some face unclear partnerships, some feel their home or office environment is not supporting them, and others hesitate before relationship, career, relocation or investment decisions. Qimen Strategy helps you identify the right pathway, and also offers a practical course system for learners who want to understand and apply Eastern wisdom."
+              "如果你正在找奇门遁甲咨询、企业战略决策、风水空间调衡或奇门遁甲课程，可以直接进入对应页面。这样预约前先看清服务范围、适合对象、费用方向与下一步流程。",
+              "If you are looking for Qi Men Dun Jia consultation, enterprise decision advisory, Feng Shui alignment or a Qi Men Dun Jia course, choose the matching pathway directly. Each page explains who it is for, what it covers, fee direction and the next step."
             )}
           </p>
         </motion.div>
