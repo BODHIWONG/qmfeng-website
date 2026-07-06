@@ -23,14 +23,14 @@ export default function Home() {
         <Navbar />
         <HeroSimple />
         <TrustBar />
-        <BrandWorldviewSection />
         <ServiceCards />
+        <LeadCaptureForm />
+        <BrandWorldviewSection />
         <DifferentiationSection />
         <QimenMasterSection />
         <FounderPhilosophySection />
         <CasesSection />
         <TestimonialsSection />
-        <LeadCaptureForm />
         <FinalCTA />
         <Footer />
         <FloatingActions />
