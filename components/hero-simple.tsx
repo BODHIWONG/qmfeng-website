@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, MessageCircle } from "lucide-react";
 
 const WA_LINK =
-  "https://wa.me/6589593499?text=Hello%20Qimen%20Strategy%2C%20I%20would%20like%20to%20consult%20about%20Qi%20Men%20Dun%20Jia%20Strategic%20Decision%20Advisory%20in%20Singapore.";
+  "https://wa.me/6589593499?text=Hello%20Qimen%20Strategy%2C%20I%20would%20like%20to%20book%20a%20private%20Qi%20Men%20Dun%20Jia%20consultation%20in%20Singapore.";
 
 const BG_IMAGE = "/master-home-hero.png";
 
@@ -14,7 +14,7 @@ export default function HeroSimple() {
       <div className="absolute inset-0">
         <img
           src={BG_IMAGE}
-          alt="Qimen Strategy Singapore Qi Men Dun Jia Strategic Decision Advisory by Huang Qiming"
+          alt="Qimen Strategy Singapore Qi Men Dun Jia Consultation by Huang Qiming"
           className="h-full w-full object-cover object-center opacity-82"
           loading="eager"
           fetchPriority="high"
@@ -44,7 +44,7 @@ export default function HeroSimple() {
               className="text-xs font-semibold uppercase tracking-[0.32em] text-[#d6ad63]"
               style={{ fontFamily: "var(--font-lato), var(--font-noto-sans), sans-serif" }}
             >
-              Singapore · Qi Men Dun Jia · Strategic Decision Advisory
+              Singapore · Qi Men Dun Jia Consultation · Qimen Strategy
             </span>
             <span className="hidden h-px w-10 bg-[#c89a45] sm:block" />
           </motion.div>
@@ -56,7 +56,7 @@ export default function HeroSimple() {
             className="max-w-5xl text-4xl font-semibold uppercase leading-[0.98] tracking-[0.06em] text-[#f4dfb0] drop-shadow-[0_8px_28px_rgba(0,0,0,0.62)] sm:text-5xl md:text-6xl lg:text-7xl"
             style={{ fontFamily: "var(--font-cormorant), var(--font-noto-serif), serif" }}
           >
-            Qimen Strategy
+            Qi Men Dun Jia Consultation in Singapore
           </motion.h1>
 
           <motion.h2
@@ -66,7 +66,7 @@ export default function HeroSimple() {
             className="mt-5 text-2xl font-semibold tracking-[0.16em] text-[#e2bd6b] md:text-4xl"
             style={{ fontFamily: "var(--font-noto-serif), var(--font-cormorant), serif" }}
           >
-            启明遁甲 · 新加坡奇门遁甲战略决策顾问
+            新加坡奇门遁甲咨询｜启明遁甲 Qimen Strategy
           </motion.h2>
 
           <motion.p
@@ -76,7 +76,7 @@ export default function HeroSimple() {
             className="mt-6 max-w-4xl text-2xl font-semibold leading-tight tracking-[0.08em] text-[#f1d38a] md:text-4xl"
             style={{ fontFamily: "var(--font-cormorant), var(--font-noto-serif), serif" }}
           >
-            真正的突破，不只是更加努力，而是在天时、地利、人和之间找到正确的布局。
+            Before you decide, review timing, direction, people and risk.
           </motion.p>
 
           <motion.div
@@ -86,9 +86,9 @@ export default function HeroSimple() {
             className="mt-8 max-w-4xl border-l-2 border-[#d0a14a] bg-black/38 px-5 py-4 text-sm font-semibold leading-7 text-[#f1d38a] backdrop-blur-sm md:text-base"
             style={{ fontFamily: "var(--font-lato), var(--font-noto-sans), sans-serif" }}
           >
-            Environment shapes energy · Energy shapes state · State shapes decisions · Decisions shape outcomes
+            Private advisory for business, career, relationship, Feng Shui and major life decisions
             <br />
-            空间影响能量 · 能量影响状态 · 状态影响决策 · 决策塑造结果
+            事业 · 合作 · 感情 · 风水 · 重大人生选择｜先看清局势，再决定下一步
           </motion.div>
 
           <motion.p
@@ -98,7 +98,7 @@ export default function HeroSimple() {
             className="mt-7 max-w-4xl text-base leading-8 text-white/82 md:text-lg"
             style={{ fontFamily: "var(--font-lato), var(--font-noto-sans), sans-serif" }}
           >
-            Many capable people and businesses are not blocked by ability alone. They are often affected by misalignment between timing, environment, people dynamics and decision state. Qimen Strategy helps business owners, founders, executives and individuals see the whole game before major action.
+            Qimen Strategy helps business owners, founders, executives and individuals gain clearer insight before important action. We apply Qi Men Dun Jia together with strategic Feng Shui, people assessment and practical decision advisory.
           </motion.p>
 
           <motion.p
@@ -108,7 +108,7 @@ export default function HeroSimple() {
             className="mt-3 max-w-4xl text-sm leading-7 text-white/70 md:text-base"
             style={{ fontFamily: "var(--font-noto-sans), var(--font-lato), sans-serif" }}
           >
-            启明遁甲 Qimen Strategy 以奇门遁甲为核心判断方法，结合战略风水布局、空间能量调衡、人事合作分析与重大决策陪跑，协助客户在合作、投资、扩张、任用、搬迁、签约及人生重大选择前，看清时机、方向、人事关系与风险结构。
+            启明遁甲以奇门遁甲为核心判断方法，结合战略风水布局、空间能量调衡、人事合作分析与重大决策陪跑，协助客户在投资、扩张、任用、搬迁、签约及关系选择前，看清时机、方向、人事关系与风险结构。
           </motion.p>
 
           <motion.div
@@ -118,11 +118,11 @@ export default function HeroSimple() {
             className="mt-9 grid max-w-5xl grid-cols-2 gap-4 border-y border-[#c89a45]/30 py-5 text-center text-sm font-semibold uppercase tracking-[0.14em] text-[#e6c785] md:grid-cols-5"
             style={{ fontFamily: "var(--font-lato), var(--font-noto-sans), sans-serif" }}
           >
-            <span>Timing · 天时</span>
-            <span>Environment · 地利</span>
-            <span>People · 人和</span>
-            <span>State · 状态</span>
-            <span>Growth · 成长</span>
+            <span>Business · 企业</span>
+            <span>Career · 事业</span>
+            <span>Relationship · 关系</span>
+            <span>Feng Shui · 风水</span>
+            <span>Course · 课程</span>
           </motion.div>
 
           <motion.div
@@ -139,15 +139,15 @@ export default function HeroSimple() {
               style={{ fontFamily: "var(--font-lato), sans-serif" }}
             >
               <MessageCircle size={18} />
-              Book Consultation
+              WhatsApp Private Consultation
             </a>
 
             <a
-              href="/enterprise-strategic-advisory"
+              href="#services"
               className="inline-flex items-center justify-center gap-3 border border-[#c89a45] px-7 py-4 text-sm font-bold uppercase tracking-[0.12em] text-[#f4dfb0] transition-colors duration-300 hover:bg-[#c89a45]/10"
               style={{ fontFamily: "var(--font-lato), sans-serif" }}
             >
-              Business Advisory Services
+              Choose Your Pathway
               <ArrowRight size={18} />
             </a>
           </motion.div>
