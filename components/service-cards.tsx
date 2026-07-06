@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { useLanguage } from "@/contexts/language-context";
-import { Activity, ArrowRight, Building2, Compass, type LucideIcon } from "lucide-react";
+import { Activity, ArrowRight, BookOpen, Building2, Compass, type LucideIcon } from "lucide-react";
 
 type ServiceCard = {
   id: number;
@@ -78,6 +78,24 @@ const services: ServiceCard[] = [
     feeEn: "By Appointment",
     href: "/enterprise-strategic-advisory",
   },
+  {
+    id: 4,
+    icon: BookOpen,
+    titleZh: "奇门遁甲系统课程",
+    titleEn: "Qi Men Dun Jia Course",
+    visualSubZh: "基础研修 · 排盘 · 读局 · 实战案例",
+    visualSubEn: "Foundation · Charting · Reading · Real Cases",
+    painZh:
+      "适合希望系统学习奇门遁甲的学员。从基础框架、核心符号、排盘读局到真实案例，建立清晰学习路径。",
+    painEn:
+      "For serious learners who want a structured Qi Men Dun Jia foundation, from framework and symbols to chart reading and real case application.",
+    audienceZh: "核心价值：把奇门遁甲学习转化为看清局势、择时布局与辅助决策的能力。",
+    audienceEn:
+      "Core value: turn Qi Men Dun Jia learning into the ability to read situations, review timing and support decisions.",
+    feeZh: "首期创办班招生中",
+    feeEn: "Founding Intake Open",
+    href: "/qi-men-dun-jia-course-singapore",
+  },
 ];
 
 export default function ServiceCards() {
@@ -96,7 +114,7 @@ export default function ServiceCards() {
             className="mb-3 text-xs uppercase tracking-[0.25em]"
             style={{ fontFamily: "var(--font-lato), sans-serif", color: "oklch(0.60 0.08 65)" }}
           >
-            {t("三大核心顾问入口", "Three Core Advisory Pathways")}
+            {t("四大核心入口", "Four Core Pathways")}
           </p>
 
           <h2
@@ -111,13 +129,13 @@ export default function ServiceCards() {
             style={{ fontFamily: "var(--font-lato), var(--font-noto-sans), sans-serif", color: "oklch(0.42 0.02 60)" }}
           >
             {t(
-              "有些客户是生意卡住，有些是合作关系不明，有些是家宅或办公室气场不稳，也有人是在感情、事业、搬迁或投资前犹豫不决。启明遁甲先帮助你看清问题属于企业、个人，还是空间环境，再决定下一步如何布局。",
-              "Some clients are stuck in business, some face unclear partnerships, some feel their home or office environment is not supporting them, and others hesitate before relationship, career, relocation or investment decisions. Qimen Strategy first helps you identify whether the issue belongs to business, personal decision-making or space environment before deciding the next alignment."
+              "有些客户是生意卡住，有些是合作关系不明，有些是家宅或办公室气场不稳，也有人是在感情、事业、搬迁或投资前犹豫不决。启明遁甲先帮助你看清问题属于企业、个人，还是空间环境；同时为希望系统学习奇门遁甲的学员提供课程入口。",
+              "Some clients are stuck in business, some face unclear partnerships, some feel their home or office environment is not supporting them, and others hesitate before relationship, career, relocation or investment decisions. Qimen Strategy helps you identify the right pathway, and now also offers a course pathway for serious Qi Men Dun Jia learners."
             )}
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 gap-6 lg:grid-cols-3 xl:gap-8">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4 xl:gap-7">
           {services.map((service, i) => {
             const Icon = service.icon;
             return (
