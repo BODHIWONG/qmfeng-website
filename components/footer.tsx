@@ -9,6 +9,7 @@ const WA_LINK = "https://wa.me/6589593499";
 const serviceLinks = [
   { href: "/enterprise-strategic-advisory", zh: "企业决策顾问", en: "Enterprise Advisory" },
   { href: "/qimen-strategy-business", zh: "启明遁甲", en: "Qimen Strategy" },
+  { href: "/courses", zh: "课程学习", en: "Courses" },
   { href: "/qi-men-dun-jia-course-singapore", zh: "奇门遁甲课程", en: "Qi Men Dun Jia Course" },
   { href: "/singapore-qi-men-dun-jia-consultant", zh: "新加坡奇门遁甲", en: "Qi Men Dun Jia Singapore" },
   { href: "/relationship-clarity-reading-singapore", zh: "关系决策", en: "Relationship Decisions" },
@@ -18,6 +19,7 @@ const serviceLinks = [
 
 const insightLinks = [
   { href: "/enterprise-strategic-advisory", zh: "企业战略决策顾问", en: "Enterprise Strategic Advisory" },
+  { href: "/courses", zh: "启明遁甲课程体系", en: "Qimen Strategy Courses" },
   { href: "/qi-men-dun-jia-course-singapore", zh: "奇门遁甲基础研修", en: "Qi Men Dun Jia Foundation Course" },
   { href: "/singapore-qi-men-dun-jia-consultant", zh: "奇门遁甲决策顾问", en: "Qi Men Dun Jia Consultant" },
   { href: "/insights/qimen-strategy-is-decision-intelligence-not-fatalism", zh: "决策情报方法论", en: "Decision Intelligence" },
