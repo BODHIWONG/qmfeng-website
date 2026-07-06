@@ -81,20 +81,20 @@ const services: ServiceCard[] = [
   {
     id: 4,
     icon: BookOpen,
-    titleZh: "奇门遁甲系统课程",
-    titleEn: "Qi Men Dun Jia Course",
-    visualSubZh: "基础研修 · 排盘 · 读局 · 实战案例",
-    visualSubEn: "Foundation · Charting · Reading · Real Cases",
+    titleZh: "课程学习体系",
+    titleEn: "Qimen Strategy Courses",
+    visualSubZh: "奇门 · 数字 · 八字 · 風水",
+    visualSubEn: "Qimen · Number · Bazi · Feng Shui",
     painZh:
-      "适合希望系统学习奇门遁甲的学员。从基础框架、核心符号、排盘读局到真实案例，建立清晰学习路径。",
+      "适合希望系统学习东方智慧，并真正用在生活、家庭、事业与空间中的学员。课程涵盖奇门遁甲、数字能量、八字命理与風水布局，重点是听得懂、学得会、用得出。",
     painEn:
-      "For serious learners who want a structured Qi Men Dun Jia foundation, from framework and symbols to chart reading and real case application.",
-    audienceZh: "核心价值：把奇门遁甲学习转化为看清局势、择时布局与辅助决策的能力。",
+      "For learners who want practical Eastern wisdom that can be applied to life, family, career and space. Courses include Qi Men Dun Jia, number energy, Bazi and Feng Shui layout with clear, practical teaching.",
+    audienceZh: "核心价值：不是为了神神秘秘，而是为了在人生重要选择前，看清自己、看清局势、看清空间。",
     audienceEn:
-      "Core value: turn Qi Men Dun Jia learning into the ability to read situations, review timing and support decisions.",
-    feeZh: "首期创办班招生中",
-    feeEn: "Founding Intake Open",
-    href: "/qi-men-dun-jia-course-singapore",
+      "Core value: not mystery for its own sake, but clearer self-understanding, situation reading and space awareness before important choices.",
+    feeZh: "课程意向开放中",
+    feeEn: "Course Enquiry Open",
+    href: "/courses",
   },
 ];
 
@@ -129,8 +129,8 @@ export default function ServiceCards() {
             style={{ fontFamily: "var(--font-lato), var(--font-noto-sans), sans-serif", color: "oklch(0.42 0.02 60)" }}
           >
             {t(
-              "有些客户是生意卡住，有些是合作关系不明，有些是家宅或办公室气场不稳，也有人是在感情、事业、搬迁或投资前犹豫不决。启明遁甲先帮助你看清问题属于企业、个人，还是空间环境；同时为希望系统学习奇门遁甲的学员提供课程入口。",
-              "Some clients are stuck in business, some face unclear partnerships, some feel their home or office environment is not supporting them, and others hesitate before relationship, career, relocation or investment decisions. Qimen Strategy helps you identify the right pathway, and now also offers a course pathway for serious Qi Men Dun Jia learners."
+              "有些客户是生意卡住，有些是合作关系不明，有些是家宅或办公室气场不稳，也有人是在感情、事业、搬迁或投资前犹豫不决。启明遁甲先帮助你看清问题属于企业、个人，还是空间环境；同时也提供课程学习体系，让学员把东方智慧学得明白、用得出来。",
+              "Some clients are stuck in business, some face unclear partnerships, some feel their home or office environment is not supporting them, and others hesitate before relationship, career, relocation or investment decisions. Qimen Strategy helps you identify the right pathway, and also offers a practical course system for learners who want to understand and apply Eastern wisdom."
             )}
           </p>
         </motion.div>
