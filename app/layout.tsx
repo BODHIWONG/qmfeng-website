@@ -8,6 +8,7 @@ import {
 } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import SiteStructuredData from "@/components/site-structured-data";
+import WhatsAppConversionTracker from "@/components/whatsapp-conversion-tracker";
 import "./globals.css";
 
 const googleAdsId = "AW" + "-" + "17926881970";
@@ -140,6 +141,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: googleAdsInit }}
         />
         <SiteStructuredData />
+        <WhatsAppConversionTracker />
         {children}
         {process.env.NODE_ENV === "production" && <Analytics />}
       </body>
