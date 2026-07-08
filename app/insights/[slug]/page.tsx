@@ -7,6 +7,7 @@ import { qimenSingaporeBilingualPosts, getQimenSingaporeBilingualPost } from "@/
 import { qimenDunJiaFoundationPosts, getQimenDunJiaFoundationPost } from "@/lib/qimen-dun-jia-foundation-post";
 import { qimenSingaporeSeoPosts, getQimenSingaporeSeoPost } from "@/lib/qimen-singapore-seo-posts";
 import { qimenRelationshipSeoPosts, getQimenRelationshipSeoPost } from "@/lib/qimen-relationship-seo-posts";
+import { qimenRelationshipCaseReflectionPosts, getQimenRelationshipCaseReflectionPost } from "@/lib/qimen-relationship-case-reflections";
 import { qimenStrategyDecisionIntelligencePosts, getQimenStrategyDecisionIntelligencePost } from "@/lib/qimen-strategy-decision-intelligence-post";
 import { qimenStrategyModernDecisionMakingPosts, getQimenStrategyModernDecisionMakingPost } from "@/lib/qimen-strategy-modern-decision-making-post";
 import { spaceEnergyBlogPosts, getSpaceEnergyBlogPost } from "@/lib/space-energy-blog-posts";
@@ -21,6 +22,7 @@ type InsightDetailProps = {
 };
 
 const allDynamicPosts = [
+  ...qimenRelationshipCaseReflectionPosts,
   ...qimenWuweiStrategyPosts,
   ...qimenDiagnosticPosts,
   ...qimenRelationshipSeoPosts,
@@ -38,6 +40,7 @@ const allDynamicPosts = [
 
 function findPost(slug: string) {
   return (
+    getQimenRelationshipCaseReflectionPost(slug) ??
     getQimenWuweiStrategyPost(slug) ??
     getQimenDiagnosticPost(slug) ??
     getQimenRelationshipSeoPost(slug) ??
