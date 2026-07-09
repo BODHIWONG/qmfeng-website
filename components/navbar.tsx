@@ -11,9 +11,9 @@ const WA_LINK =
 
 const serviceLinks = [
   { href: "/", zh: "首页", en: "Home" },
-  { href: "/singapore-qi-men-dun-jia-consultant", zh: "奇门咨询", en: "Qi Men Consultation" },
-  { href: "/enterprise-strategic-advisory", zh: "企业顾问", en: "Enterprise Advisory" },
-  { href: "/qi-men-dun-jia-course-singapore", zh: "奇门课程", en: "Course" },
+  { href: "/enterprise-strategic-advisory", zh: "企业决策", en: "Enterprise Advisory" },
+  { href: "/relationship-clarity-reading-singapore", zh: "关系决策", en: "Relationship Advisory" },
+  { href: "/singapore-qi-men-dun-jia-consultant", zh: "奇门风水与课程", en: "Qi Men Feng Shui & Course" },
   { href: "/insights", zh: "案例", en: "Cases" },
 ];
 
