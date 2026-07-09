@@ -26,75 +26,75 @@ const services: ServiceCard[] = [
   {
     id: 1,
     icon: Building2,
-    titleZh: "企业战略决策顾问",
-    titleEn: "Enterprise Decision Advisory",
-    visualSubZh: "方向 · 人事 · 现金流 · 空间支持力",
-    visualSubEn: "Direction · People · Cash Flow · Space Support",
+    titleZh: "婚姻关系判断",
+    titleEn: "Marriage Relationship Clarity",
+    visualSubZh: "婚姻压力 · 关系卡点 · 修复空间",
+    visualSubEn: "Marriage Stress · Relationship Blockage · Room to Repair",
     painZh:
-      "适合生意卡住、扩张犹豫、客户流动变慢、团队内耗或企业方向不清的企业主。先看清系统性失衡点，再决定扩张、收缩、调整或转型。",
+      "适合正在面对婚姻压力、长期冷淡、沟通失效或关系走不下去的女性。先看清关系是否还有修复空间、对方状态如何，以及真正卡住的问题在哪里。",
     painEn:
-      "For business owners facing stagnation, expansion hesitation, slower client flow, team friction or unclear direction. Identify the deeper imbalance before expansion, contraction, adjustment or transformation.",
-    audienceZh: "核心价值：在投入更多资金、时间与信任前，看清时机、方向、人事与环境是否支持下一步。",
+      "For women facing marriage stress, emotional distance, failed communication or a relationship that feels stuck. Clarify whether there is room to repair, the other person’s position and where the real blockage lies.",
+    audienceZh: "核心价值：在情绪最乱的时候，先看清关系局势，再决定沟通、等待、修复或转身。",
     audienceEn:
-      "Core value: before committing more capital, time and trust, clarify whether timing, direction, people and environment support the next step.",
-    feeZh: "S$3,996 起",
-    feeEn: "From S$3,996",
-    href: "/enterprise-strategic-health-diagnostic",
+      "Core value: when emotions are unsettled, understand the relationship situation before deciding whether to communicate, wait, repair or step away.",
+    feeZh: "S$396 起",
+    feeEn: "From S$396",
+    href: "/relationship-clarity-reading-singapore",
     recommended: true,
   },
   {
     id: 2,
     icon: Activity,
-    titleZh: "奇门遁甲咨询",
-    titleEn: "Qi Men Dun Jia Consultation",
-    visualSubZh: "事业 · 关系 · 搬迁 · 投资 · 家庭",
-    visualSubEn: "Career · Relationship · Move · Investment · Family",
+    titleZh: "第三者与信任危机",
+    titleEn: "Affair & Trust Issues",
+    visualSubZh: "婚外情 · 第三者 · 怀疑与不安",
+    visualSubEn: "Affair · Third Party · Doubt & Uncertainty",
     painZh:
-      "适合事业、关系、财富节奏、搬迁、合作、家庭选择或人生方向出现卡点的人。通过奇门遁甲看清当前阶段的阻力、风险信号与下一步选择。",
+      "适合面对婚外情、第三者介入、关系隐瞒、反复怀疑或信任破裂的客户。通过奇门遁甲看清关系中的真实阻力、隐藏状态与下一步处理方向。",
     painEn:
-      "For clients facing key choices in career, relationships, wealth rhythm, relocation, partnership, family matters or life direction. Review resistance, risk signals and next-step choices through Qi Men Dun Jia.",
-    audienceZh: "核心价值：不是替你决定，而是帮助你在关键选择前看清局势、方向与代价。",
+      "For clients facing affair concerns, third-party involvement, hidden relationship dynamics, repeated doubts or broken trust. Use Qi Men Dun Jia to review hidden patterns, real obstacles and the next direction.",
+    audienceZh: "核心价值：不是冲动追问结果，而是在关键时刻看清事实结构、时机与处理代价。",
     audienceEn:
-      "Core value: not deciding for you, but helping you see the situation, direction and cost before a key choice.",
+      "Core value: not reacting impulsively, but understanding the structure, timing and cost of action at a critical moment.",
     feeZh: "S$396 起",
     feeEn: "From S$396",
-    href: "/singapore-qi-men-dun-jia-consultant",
+    href: "/relationship-clarity-reading-singapore",
   },
   {
     id: 3,
     icon: Compass,
-    titleZh: "风水与空间能量调衡",
-    titleEn: "Feng Shui & Space Alignment",
-    visualSubZh: "办公室 · 商铺 · 住宅 · 决策环境",
-    visualSubEn: "Office · Shop · Residence · Decision Environment",
+    titleZh: "该继续还是放手",
+    titleEn: "Stay or Leave Decision",
+    visualSubZh: "继续 · 等待 · 沟通 · 放下",
+    visualSubEn: "Stay · Wait · Talk · Let Go",
     painZh:
-      "适合企业空间、商铺、办公室、住宅或企业主个人空间需要重新调整的人。重点不只是摆设，而是让环境、状态与行动节奏形成支持系统。",
+      "适合已经反复纠结、放不下又看不到方向的人。帮助你判断继续、等待、主动沟通或放手的时机、风险与后续走向。",
     painEn:
-      "For business spaces, shops, offices, residences or founder environments that need realignment. The focus is not decoration, but building a support system between environment, state and action rhythm.",
-    audienceZh: "核心价值：让空间支持稳定状态、清晰判断与长期发展。",
+      "For those repeatedly torn between holding on and letting go. Review the timing, risks and likely direction before choosing to stay, wait, communicate or move on.",
+    audienceZh: "核心价值：把反复消耗的情绪，转化为更清晰、更稳妥的关系判断。",
     audienceEn:
-      "Core value: make the environment support steadier state, clearer judgment and long-term growth.",
-    feeZh: "预约制顾问",
-    feeEn: "By Appointment",
-    href: "/enterprise-strategic-advisory",
+      "Core value: turn emotional exhaustion into clearer and steadier relationship judgment.",
+    feeZh: "S$396 起",
+    feeEn: "From S$396",
+    href: "/relationship-clarity-reading-singapore",
   },
   {
     id: 4,
     icon: BookOpen,
-    titleZh: "奇门遁甲课程",
-    titleEn: "Qi Men Dun Jia Course",
-    visualSubZh: "两天研修 · 排盘读局 · 真实案例",
-    visualSubEn: "2-Day Training · Chart Reading · Real Cases",
+    titleZh: "女性情感决策咨询",
+    titleEn: "Women’s Relationship Advisory",
+    visualSubZh: "私密咨询 · 情绪整理 · 方向判断",
+    visualSubEn: "Private Advisory · Emotional Clarity · Direction",
     painZh:
-      "适合希望系统学习奇门遁甲，并真正用在生活、家庭、事业与空间判断中的学员。课程从基础体系、核心符号、排盘读局到真实案例应用，重点是听得懂、学得会、用得出。",
+      "适合在感情中感到委屈、混乱、不安、反复内耗，或需要为未来关系做重要决定的女性。咨询重点是帮助你看清局势，而不是替你做决定。",
     painEn:
-      "For learners who want structured Qi Men Dun Jia training that can be applied to life, family, career and space decisions. Learn the framework, symbols, chart reading and real case application.",
-    audienceZh: "核心价值：不是神秘化学习，而是建立看清局势、择时布局与辅助决策的能力。",
+      "For women feeling hurt, confused, insecure or emotionally drained in a relationship, especially before an important relationship decision. The focus is to help you see clearly, not to decide for you.",
+    audienceZh: "核心价值：在关系压力之下，重新找回判断力、边界感与下一步方向。",
     audienceEn:
-      "Core value: build the ability to read situations, assess timing and support better decisions without mystifying the practice.",
-    feeZh: "早鸟 S$988 起",
-    feeEn: "Early Bird From S$988",
-    href: "/qi-men-dun-jia-course-singapore",
+      "Core value: regain judgment, boundaries and next-step direction under relationship pressure.",
+    feeZh: "私密预约制",
+    feeEn: "Private Appointment",
+    href: "/relationship-clarity-reading-singapore",
   },
 ];
 
@@ -114,14 +114,14 @@ export default function ServiceCards() {
             className="mb-3 text-xs uppercase tracking-[0.25em]"
             style={{ fontFamily: "var(--font-lato), sans-serif", color: "oklch(0.60 0.08 65)" }}
           >
-            {t("四大核心入口", "Four Conversion Pathways")}
+            {t("婚姻情感决策入口", "Relationship Advisory Focus")}
           </p>
 
           <h2
             className="mb-5 text-3xl font-bold leading-tight md:text-5xl"
             style={{ fontFamily: "var(--font-cormorant), var(--font-noto-serif), serif", color: "oklch(0.15 0.02 60)" }}
           >
-            {t("客户搜什么，就直接进入对应的咨询路径", "Choose the Pathway That Matches Your Search Intent")}
+            {t("感情走到十字路口，先看清局势，再做决定", "When Love Reaches a Crossroads, See Clearly Before You Decide")}
           </h2>
 
           <p
@@ -129,8 +129,8 @@ export default function ServiceCards() {
             style={{ fontFamily: "var(--font-lato), var(--font-noto-sans), sans-serif", color: "oklch(0.42 0.02 60)" }}
           >
             {t(
-              "如果你正在找奇门遁甲咨询、企业战略决策、风水空间调衡或奇门遁甲课程，可以直接进入对应页面。这样预约前先看清服务范围、适合对象、费用方向与下一步流程。",
-              "If you are looking for Qi Men Dun Jia consultation, enterprise decision advisory, Feng Shui alignment or a Qi Men Dun Jia course, choose the matching pathway directly. Each page explains who it is for, what it covers, fee direction and the next step."
+              "适合正在面对婚姻压力、感情困惑、第三者问题、信任危机，或不确定该继续、等待、沟通还是放手的女性客户。启明遁甲帮助你在情绪之外，看清关系中的时机、人事与下一步方向。",
+              "For women facing marriage stress, relationship confusion, affair concerns, trust issues, or the difficult question of whether to stay, wait, communicate or let go. Qimen Strategy helps you look beyond emotion and see timing, people dynamics and the next direction more clearly."
             )}
           </p>
         </motion.div>
@@ -153,7 +153,7 @@ export default function ServiceCards() {
               >
                 {service.recommended && (
                   <div className="absolute right-4 top-4 bg-[oklch(0.72_0.12_70)] px-3 py-1 text-[0.62rem] font-bold uppercase tracking-[0.16em] text-white">
-                    {t("企业优先", "Core")}
+                    {t("重点入口", "Featured")}
                   </div>
                 )}
 
