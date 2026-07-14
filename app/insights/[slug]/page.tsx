@@ -8,6 +8,7 @@ import { qimenDunJiaFoundationPosts, getQimenDunJiaFoundationPost } from "@/lib/
 import { qimenSingaporeSeoPosts, getQimenSingaporeSeoPost } from "@/lib/qimen-singapore-seo-posts";
 import { qimenRelationshipSeoPosts, getQimenRelationshipSeoPost } from "@/lib/qimen-relationship-seo-posts";
 import { qimenRelationshipCaseReflectionPosts, getQimenRelationshipCaseReflectionPost } from "@/lib/qimen-relationship-case-reflections";
+import { qimenEmotionalClarityPosts, getQimenEmotionalClarityPost } from "@/lib/qimen-emotional-clarity-posts";
 import { qimenStrategyDecisionIntelligencePosts, getQimenStrategyDecisionIntelligencePost } from "@/lib/qimen-strategy-decision-intelligence-post";
 import { qimenStrategyModernDecisionMakingPosts, getQimenStrategyModernDecisionMakingPost } from "@/lib/qimen-strategy-modern-decision-making-post";
 import { spaceEnergyBlogPosts, getSpaceEnergyBlogPost } from "@/lib/space-energy-blog-posts";
@@ -22,6 +23,7 @@ type InsightDetailProps = {
 };
 
 const allDynamicPosts = [
+  ...qimenEmotionalClarityPosts,
   ...qimenRelationshipCaseReflectionPosts,
   ...qimenWuweiStrategyPosts,
   ...qimenDiagnosticPosts,
@@ -40,6 +42,7 @@ const allDynamicPosts = [
 
 function findPost(slug: string) {
   return (
+    getQimenEmotionalClarityPost(slug) ??
     getQimenRelationshipCaseReflectionPost(slug) ??
     getQimenWuweiStrategyPost(slug) ??
     getQimenDiagnosticPost(slug) ??
@@ -94,7 +97,7 @@ export async function generateMetadata({ params }: InsightDetailProps): Promise<
   };
 }
 
-function renderParagraph(content: string, index: number) {
+function renderParagraph(content: string, index: number, category: string) {
   if (content.startsWith("## ")) {
     return (
       <h2
@@ -116,10 +119,15 @@ function renderParagraph(content: string, index: number) {
   }
 
   if (content.startsWith("📩 ")) {
+    const isRelationshipPost = category.toLowerCase().includes("relationship");
+    const whatsappText = isRelationshipPost
+      ? "Hello Qimen Strategy, I would like to book a private relationship consultation."
+      : "Hello Qimen Strategy, I would like to book a confidential Qi Men Dun Jia Strategic Decision Advisory consultation.";
+
     return (
       <a
         key={index}
-        href="https://wa.me/6589593499?text=Hello%20Qimen%20Strategy%2C%20I%20would%20like%20to%20book%20a%20private%20relationship%20consultation."
+        href={`https://wa.me/6589593499?text=${encodeURIComponent(whatsappText)}`}
         target="_blank"
         rel="noopener noreferrer"
         className="mt-8 inline-flex items-center justify-center border border-[oklch(0.60_0.08_65)] bg-[oklch(0.60_0.08_65)] px-6 py-3 text-sm font-bold uppercase tracking-[0.1em] text-[oklch(0.08_0.02_60)] transition-colors hover:bg-transparent hover:text-[oklch(0.72_0.12_70)]"
@@ -155,7 +163,7 @@ export default async function InsightDetail({ params }: InsightDetailProps) {
           ))}
         </div>
         <div className="space-y-5 text-[15px] leading-relaxed text-gray-300 md:text-base">
-          {post.paragraphs.map((paragraph, index) => renderParagraph(paragraph, index))}
+          {post.paragraphs.map((paragraph, index) => renderParagraph(paragraph, index, post.category))}
         </div>
       </div>
       <Footer />
