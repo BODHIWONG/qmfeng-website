@@ -13,6 +13,7 @@ import { qimenDunJiaFoundationPosts } from "@/lib/qimen-dun-jia-foundation-post"
 import { qimenSingaporeSeoPosts } from "@/lib/qimen-singapore-seo-posts";
 import { qimenRelationshipSeoPosts } from "@/lib/qimen-relationship-seo-posts";
 import { qimenRelationshipCaseReflectionPosts } from "@/lib/qimen-relationship-case-reflections";
+import { qimenEmotionalClarityPosts } from "@/lib/qimen-emotional-clarity-posts";
 import { qimenStrategyPositioningPosts } from "@/lib/qimen-strategy-positioning-post";
 import { qimenStrategyDecisionIntelligencePosts } from "@/lib/qimen-strategy-decision-intelligence-post";
 import { qimenStrategyModernDecisionMakingPosts } from "@/lib/qimen-strategy-modern-decision-making-post";
@@ -20,6 +21,7 @@ import { qimenWuweiStrategyPosts } from "@/lib/qimen-wuwei-strategy-post";
 import { applyInsightPostOverrides } from "@/lib/insights-overrides";
 
 const allPosts = [
+  ...qimenEmotionalClarityPosts,
   ...qimenRelationshipCaseReflectionPosts,
   ...qimenWuweiStrategyPosts,
   ...qimenDiagnosticPosts,
@@ -39,7 +41,11 @@ const allPosts = [
       post.category.toLowerCase().includes("relationship") ||
       post.keywords.some((keyword) => keyword.toLowerCase().includes("relationship clarity"));
 
-    if (isRelationshipClarity) return true;
+    const isEmotionalClarity =
+      post.category.toLowerCase().includes("emotional clarity") ||
+      post.keywords.some((keyword) => keyword.toLowerCase().includes("emotional clarity"));
+
+    if (isRelationshipClarity || isEmotionalClarity) return true;
 
     const text = `${post.title} ${post.excerpt} ${post.category} ${post.keywords.join(" ")}`.toLowerCase();
     const excluded = ["space clearing", "space energy", "sleep", "relationship", "emotional", "feng shui wealth"];
