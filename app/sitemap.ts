@@ -6,6 +6,8 @@ import { qimenSingaporeBilingualPosts } from "@/lib/qimen-singapore-bilingual-po
 import { qimenDunJiaFoundationPosts } from "@/lib/qimen-dun-jia-foundation-post";
 import { qimenSingaporeSeoPosts } from "@/lib/qimen-singapore-seo-posts";
 import { qimenRelationshipSeoPosts } from "@/lib/qimen-relationship-seo-posts";
+import { qimenRelationshipCaseReflectionPosts } from "@/lib/qimen-relationship-case-reflections";
+import { qimenEmotionalClarityPosts } from "@/lib/qimen-emotional-clarity-posts";
 import { qimenStrategyPositioningPosts } from "@/lib/qimen-strategy-positioning-post";
 import { qimenStrategyDecisionIntelligencePosts } from "@/lib/qimen-strategy-decision-intelligence-post";
 import { qimenStrategyModernDecisionMakingPosts } from "@/lib/qimen-strategy-modern-decision-making-post";
@@ -30,6 +32,8 @@ const corePages = [
 ];
 
 const allPosts = [
+  ...qimenEmotionalClarityPosts,
+  ...qimenRelationshipCaseReflectionPosts,
   ...qimenWuweiStrategyPosts,
   ...qimenDiagnosticPosts,
   ...qimenRelationshipSeoPosts,
