@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { insightPosts, getInsightPost } from "@/lib/insights-data";
 import { qimenDiagnosticPosts, getQimenDiagnosticPost } from "@/lib/qimen-diagnostic-posts";
@@ -9,6 +10,7 @@ import { qimenSingaporeSeoPosts, getQimenSingaporeSeoPost } from "@/lib/qimen-si
 import { qimenRelationshipSeoPosts, getQimenRelationshipSeoPost } from "@/lib/qimen-relationship-seo-posts";
 import { qimenRelationshipCaseReflectionPosts, getQimenRelationshipCaseReflectionPost } from "@/lib/qimen-relationship-case-reflections";
 import { qimenEmotionalClarityPosts, getQimenEmotionalClarityPost } from "@/lib/qimen-emotional-clarity-posts";
+import { qimenBusinessCaseStudyPosts, getQimenBusinessCaseStudyPost } from "@/lib/qimen-business-case-study-posts";
 import { qimenStrategyDecisionIntelligencePosts, getQimenStrategyDecisionIntelligencePost } from "@/lib/qimen-strategy-decision-intelligence-post";
 import { qimenStrategyModernDecisionMakingPosts, getQimenStrategyModernDecisionMakingPost } from "@/lib/qimen-strategy-modern-decision-making-post";
 import { spaceEnergyBlogPosts, getSpaceEnergyBlogPost } from "@/lib/space-energy-blog-posts";
@@ -22,7 +24,10 @@ type InsightDetailProps = {
   params: Promise<{ slug: string }>;
 };
 
+const businessCaseStudySlug = "business-sales-no-profit-qimen-strategy-singapore";
+
 const allDynamicPosts = [
+  ...qimenBusinessCaseStudyPosts,
   ...qimenEmotionalClarityPosts,
   ...qimenRelationshipCaseReflectionPosts,
   ...qimenWuweiStrategyPosts,
@@ -42,6 +47,7 @@ const allDynamicPosts = [
 
 function findPost(slug: string) {
   return (
+    getQimenBusinessCaseStudyPost(slug) ??
     getQimenEmotionalClarityPost(slug) ??
     getQimenRelationshipCaseReflectionPost(slug) ??
     getQimenWuweiStrategyPost(slug) ??
@@ -73,9 +79,13 @@ export async function generateMetadata({ params }: InsightDetailProps): Promise<
   }
 
   const url = `https://www.qmfeng.com/insights/${post.slug}`;
+  const metadataTitle =
+    post.slug === businessCaseStudySlug
+      ? "Business Has Sales but No Profit? | Qimen Strategy Singapore"
+      : `${post.title} | Qimen Strategy Singapore`;
 
   return {
-    title: `${post.title} | Qimen Strategy Singapore`,
+    title: metadataTitle,
     description: post.excerpt,
     keywords: post.keywords,
     alternates: { canonical: url },
@@ -109,6 +119,17 @@ function renderParagraph(content: string, index: number, category: string) {
     );
   }
 
+  if (content.startsWith("> ")) {
+    return (
+      <blockquote
+        key={index}
+        className="my-7 border-l-2 border-[oklch(0.60_0.08_65)] bg-[oklch(0.11_0.02_60)] px-5 py-4 text-lg font-semibold leading-relaxed text-[oklch(0.90_0.03_75)]"
+      >
+        {content.slice(2)}
+      </blockquote>
+    );
+  }
+
   if (content.startsWith("- ")) {
     return (
       <div key={index} className="flex items-start gap-3 pl-1">
@@ -118,11 +139,32 @@ function renderParagraph(content: string, index: number, category: string) {
     );
   }
 
+  if (content.startsWith("LINK:")) {
+    const [label, href] = content.slice(5).split("|");
+
+    if (!label || !href) return <p key={index}>{content}</p>;
+
+    return (
+      <Link
+        key={index}
+        href={href}
+        className="flex items-center justify-between gap-4 border border-[oklch(0.28_0.03_65)] bg-[oklch(0.11_0.02_60)] px-5 py-4 font-semibold text-[oklch(0.82_0.08_72)] transition-colors hover:border-[oklch(0.60_0.08_65)] hover:text-[oklch(0.96_0.01_75)]"
+      >
+        <span>{label}</span>
+        <span aria-hidden="true">→</span>
+      </Link>
+    );
+  }
+
   if (content.startsWith("📩 ")) {
-    const isRelationshipPost = category.toLowerCase().includes("relationship");
+    const categoryName = category.toLowerCase();
+    const isRelationshipPost = categoryName.includes("relationship");
+    const isBusinessPost = categoryName.includes("business");
     const whatsappText = isRelationshipPost
       ? "Hello Qimen Strategy, I would like to book a private relationship consultation."
-      : "Hello Qimen Strategy, I would like to book a confidential Qi Men Dun Jia Strategic Decision Advisory consultation.";
+      : isBusinessPost
+        ? "Hello Qimen Strategy, I would like to enquire about a private Qi Men Dun Jia business decision consultation in Singapore."
+        : "Hello Qimen Strategy, I would like to book a confidential Qi Men Dun Jia Strategic Decision Advisory consultation.";
 
     return (
       <a
@@ -146,8 +188,64 @@ export default async function InsightDetail({ params }: InsightDetailProps) {
 
   if (!post) return notFound();
 
+  const url = `https://www.qmfeng.com/insights/${post.slug}`;
+  const structuredData = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      headline: post.title,
+      description: post.excerpt,
+      datePublished: post.date,
+      dateModified: post.date,
+      mainEntityOfPage: url,
+      author: {
+        "@type": "Organization",
+        name: "Qimen Strategy Singapore",
+        url: "https://www.qmfeng.com",
+      },
+      publisher: {
+        "@type": "Organization",
+        name: "Qimen Strategy Singapore",
+        url: "https://www.qmfeng.com",
+      },
+      keywords: post.keywords.join(", "),
+      articleSection: post.category,
+      inLanguage: "en-SG",
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: "https://www.qmfeng.com",
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Insights",
+          item: "https://www.qmfeng.com/insights",
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: post.title,
+          item: url,
+        },
+      ],
+    },
+  ];
+
   return (
     <div className="min-h-screen bg-[oklch(0.08_0.02_60)] text-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(structuredData).replace(/</g, "\\u003c"),
+        }}
+      />
       <Navbar />
       <div className="mx-auto max-w-3xl px-6 pb-20 pt-32">
         <div className="mb-4 inline-block bg-[oklch(0.60_0.08_65)] px-3 py-1 text-xs font-bold uppercase tracking-[0.12em] text-[oklch(0.08_0.02_60)]">
