@@ -14,6 +14,7 @@ import { qimenSingaporeSeoPosts } from "@/lib/qimen-singapore-seo-posts";
 import { qimenRelationshipSeoPosts } from "@/lib/qimen-relationship-seo-posts";
 import { qimenRelationshipCaseReflectionPosts } from "@/lib/qimen-relationship-case-reflections";
 import { qimenEmotionalClarityPosts } from "@/lib/qimen-emotional-clarity-posts";
+import { qimenBusinessCaseStudyPosts } from "@/lib/qimen-business-case-study-posts";
 import { qimenStrategyPositioningPosts } from "@/lib/qimen-strategy-positioning-post";
 import { qimenStrategyDecisionIntelligencePosts } from "@/lib/qimen-strategy-decision-intelligence-post";
 import { qimenStrategyModernDecisionMakingPosts } from "@/lib/qimen-strategy-modern-decision-making-post";
@@ -21,6 +22,7 @@ import { qimenWuweiStrategyPosts } from "@/lib/qimen-wuwei-strategy-post";
 import { applyInsightPostOverrides } from "@/lib/insights-overrides";
 
 const allPosts = [
+  ...qimenBusinessCaseStudyPosts,
   ...qimenEmotionalClarityPosts,
   ...qimenRelationshipCaseReflectionPosts,
   ...qimenWuweiStrategyPosts,
@@ -71,7 +73,7 @@ function InsightsContent() {
           </h1>
 
           <p className="text-base leading-relaxed text-[oklch(0.72_0.02_70)] md:text-lg">
-            Modern Eastern strategic insights on timing, direction, human decisions, business clarity, environment and Qimen Strategy perspectives by Master Huang Qiming.
+            Modern Eastern strategic insights on timing, direction, human decisions, business clarity, environment and Qimen Strategy perspectives by Founder Huang Qiming.
           </p>
 
           <div className="mt-8 grid gap-3 text-xs font-bold uppercase tracking-[0.16em] text-[oklch(0.72_0.12_70)] sm:grid-cols-4">
