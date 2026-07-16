@@ -8,6 +8,7 @@ import { qimenSingaporeSeoPosts } from "@/lib/qimen-singapore-seo-posts";
 import { qimenRelationshipSeoPosts } from "@/lib/qimen-relationship-seo-posts";
 import { qimenRelationshipCaseReflectionPosts } from "@/lib/qimen-relationship-case-reflections";
 import { qimenEmotionalClarityPosts } from "@/lib/qimen-emotional-clarity-posts";
+import { qimenBusinessCaseStudyPosts } from "@/lib/qimen-business-case-study-posts";
 import { qimenStrategyPositioningPosts } from "@/lib/qimen-strategy-positioning-post";
 import { qimenStrategyDecisionIntelligencePosts } from "@/lib/qimen-strategy-decision-intelligence-post";
 import { qimenStrategyModernDecisionMakingPosts } from "@/lib/qimen-strategy-modern-decision-making-post";
@@ -32,6 +33,7 @@ const corePages = [
 ];
 
 const allPosts = [
+  ...qimenBusinessCaseStudyPosts,
   ...qimenEmotionalClarityPosts,
   ...qimenRelationshipCaseReflectionPosts,
   ...qimenWuweiStrategyPosts,
@@ -61,7 +63,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${baseUrl}/insights/${post.slug}`,
     lastModified: post.date ? new Date(post.date) : now,
     changeFrequency: "monthly",
-    priority: 0.65,
+    priority: post.category.toLowerCase().includes("business") ? 0.75 : 0.65,
   })) satisfies MetadataRoute.Sitemap;
 
   return [...pageEntries, ...insightEntries];
