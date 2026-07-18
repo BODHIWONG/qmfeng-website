@@ -5,12 +5,12 @@ import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 
 const WA_LINK =
-  "https://wa.me/6589593499?text=Hello%20Master%20Qiming%2C%20I%20would%20like%20to%20consult%20about%20Enterprise%20Strategic%20Decision%20Advisory.";
+  "https://wa.me/6589593499?text=Hello%20Qimen%20Strategy%2C%20I%20would%20like%20to%20consult%20about%20Enterprise%20Strategic%20Decision%20Advisory.";
 
 export const metadata: Metadata = {
   title: "Enterprise Strategic Decision Advisory｜QIMEN STRATEGY Singapore",
   description:
-    "QIMEN STRATEGY｜启明遁甲 provides Enterprise Strategic Decision Advisory for business owners, founders and key decision-makers in Singapore, covering timing, environment, people dynamics, founder inner mastery, strategic growth, annual strategic forecasting, Feng Shui alignment and major decision advisory.",
+    "QIMEN STRATEGY｜启明遁甲决策智库 provides Enterprise Strategic Decision Advisory for business owners, founders and key decision-makers in Singapore, covering timing, environment, people dynamics, founder inner mastery, strategic growth, annual strategic forecasting, Feng Shui alignment and major decision advisory.",
   keywords: [
     "Enterprise Strategic Decision Advisory Singapore",
     "Qimen Strategy Singapore",
@@ -20,14 +20,14 @@ export const metadata: Metadata = {
     "Annual Strategic Forecast",
     "Business Feng Shui Singapore",
     "People and Partnership Assessment",
-    "Master Huang Qiming",
-    "启明遁甲",
+    "Huang Qiming",
+    "启明遁甲决策智库",
     "企业战略决策顾问",
     "天时地利人和",
     "创始人内在修为",
     "企业成长陪跑",
     "企业风水布局",
-    "年度战略预判"
+    "年度战略预判",
   ],
   alternates: {
     canonical: "https://www.qmfeng.com/enterprise-strategic-advisory",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
       "An Eastern strategic decision advisory system for business owners and founders, integrating timing, environment, people dynamics, founder inner mastery and strategic growth before important decisions.",
     url: "https://www.qmfeng.com/enterprise-strategic-advisory",
     type: "website",
-    siteName: "Qimen Strategy Singapore",
+    siteName: "Qimen Strategy Singapore｜启明遁甲决策智库",
     locale: "zh_SG",
   },
 };
@@ -178,8 +178,8 @@ export default function EnterpriseStrategicAdvisoryPage() {
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_18%,rgba(214,173,99,0.22),transparent_34%)]" />
             <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(214,173,99,0.08)_1px,transparent_1px)] bg-[length:54px_54px] opacity-20" />
             <div className="container relative mx-auto max-w-6xl">
-              <p className="mb-5 text-xs font-bold uppercase tracking-[0.36em] text-[#d6ad63]">
-                QIMEN STRATEGY｜启明遁甲
+              <p className="mb-5 text-xs font-bold uppercase tracking-[0.24em] text-[#d6ad63]">
+                QIMEN STRATEGY｜启明遁甲决策智库
               </p>
               <h1 className="max-w-5xl text-4xl font-semibold uppercase leading-[0.98] tracking-[0.05em] text-[#f4dfb0] md:text-7xl">
                 Enterprise Strategic Decision Advisory
@@ -203,7 +203,7 @@ export default function EnterpriseStrategicAdvisoryPage() {
                 QIMEN STRATEGY is an Enterprise Strategic Decision Advisory system rooted in 16+ years of Qi Men decision practice. We support business owners, founders and key decision-makers through annual strategic forecasting, business and personal Feng Shui alignment, people and partnership assessment, and major decision advisory.
               </p>
               <p className="mt-4 max-w-4xl text-base leading-8 text-white/70">
-                启明遁甲以 16 年奇门决策实战经验为根基，结合年度战略预判、企业与个人风水布局、人事合作关系判断及重大决策陪跑，长期服务企业主、创始人与关键决策者。
+                启明遁甲决策智库以 16 年奇门决策实战经验为根基，结合年度战略预判、企业与个人风水布局、人事合作关系判断及重大决策陪跑，长期服务企业主、创始人与关键决策者。
               </p>
               <div className="mt-10 flex flex-col gap-4 sm:flex-row">
                 <a
