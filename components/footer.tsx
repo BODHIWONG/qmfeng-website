@@ -8,7 +8,7 @@ const WA_LINK = "https://wa.me/6589593499";
 
 const serviceLinks = [
   { href: "/enterprise-strategic-advisory", zh: "企业决策顾问", en: "Enterprise Advisory" },
-  { href: "/qimen-strategy-business", zh: "启明遁甲", en: "Qimen Strategy" },
+  { href: "/qimen-strategy-business", zh: "启明遁甲决策智库", en: "Qimen Strategy" },
   { href: "/courses", zh: "课程学习", en: "Courses" },
   { href: "/qi-men-dun-jia-course-singapore", zh: "奇门遁甲课程", en: "Qi Men Dun Jia Course" },
   { href: "/singapore-qi-men-dun-jia-consultant", zh: "新加坡奇门遁甲", en: "Qi Men Dun Jia Singapore" },
@@ -19,7 +19,7 @@ const serviceLinks = [
 
 const insightLinks = [
   { href: "/enterprise-strategic-advisory", zh: "企业战略决策顾问", en: "Enterprise Strategic Advisory" },
-  { href: "/courses", zh: "启明遁甲课程体系", en: "Qimen Strategy Courses" },
+  { href: "/courses", zh: "启明遁甲决策智库课程", en: "Qimen Strategy Courses" },
   { href: "/qi-men-dun-jia-course-singapore", zh: "奇门遁甲基础研修", en: "Qi Men Dun Jia Foundation Course" },
   { href: "/singapore-qi-men-dun-jia-consultant", zh: "奇门遁甲决策顾问", en: "Qi Men Dun Jia Consultant" },
   { href: "/insights/qimen-strategy-is-decision-intelligence-not-fatalism", zh: "决策情报方法论", en: "Decision Intelligence" },
@@ -81,14 +81,14 @@ export default function Footer() {
 
           <div>
             <p className="mb-4 text-[0.6rem] font-bold uppercase tracking-[0.2em] text-[#d6ad63]" style={{ fontFamily: "var(--font-lato), sans-serif" }}>
-              {t("预约决策咨询", "Book Qimen Strategy Advisory")}
+              {t("预约启明遁甲决策智库咨询", "Book Qimen Strategy Advisory")}
             </p>
             <div className="space-y-3 text-xs text-white/50" style={{ fontFamily: "var(--font-lato), var(--font-noto-sans), sans-serif" }}>
               <p>Blk 210 New Upper Changi Road #01-729<br />Singapore 460210</p>
               <p>{t("营业时间：每日 10:00 — 20:00", "Hours: Daily 10:00 — 20:00")}</p>
               <p>{t("正式联络电话 / WhatsApp：+65 8959 3499", "Official Phone / WhatsApp: +65 8959 3499")}</p>
               <a href={`${WA_LINK}?text=${encodeURIComponent("Hello Qimen Strategy, I would like to book a Qi Men Dun Jia business decision advisory session in Singapore.")}`} target="_blank" rel="noopener noreferrer" className="inline-block font-semibold text-[#d6ad63] transition-colors duration-300 hover:text-[#f4dfb0]">
-                {t("预约启明遁甲决策咨询", "Book Qimen Strategy Advisory")} →
+                {t("预约启明遁甲决策智库咨询", "Book Qimen Strategy Advisory")} →
               </a>
             </div>
           </div>
