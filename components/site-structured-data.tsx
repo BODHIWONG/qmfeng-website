@@ -3,8 +3,9 @@ export default function SiteStructuredData() {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     "@id": "https://www.qmfeng.com/#organization",
-    name: "启明遁甲 Qimen Strategy",
+    name: "启明遁甲决策智库 Qimen Strategy",
     alternateName: [
+      "启明遁甲",
       "Qimen Strategy Singapore",
       "Singapore Qi Men Dun Jia Business Decision Advisory",
       "新加坡奇门遁甲企业决策顾问",
@@ -30,11 +31,11 @@ export default function SiteStructuredData() {
     founder: {
       "@type": "Person",
       name: "Huang Qiming",
-      alternateName: ["Master Huang Qiming", "黄启明", "启明大师", "Qiming Huang"],
-      jobTitle: "Founder, Qimen Strategy | Qi Men Dun Jia Business Decision Advisor"
+      alternateName: ["黄启明", "Qiming Huang"],
+      jobTitle: "Founder & Strategic Decision Advisor, Qimen Strategy"
     },
     description:
-      "启明遁甲 Qimen Strategy is a Singapore-based Qi Men Dun Jia business decision advisory brand led by Master Huang Qiming, applying Qi Men Dun Jia, business judgment, Feng Shui alignment and people assessment for business owners, founders, executives, investors and individuals before major decisions.",
+      "启明遁甲决策智库（Qimen Strategy）是由黄启明创立、立足新加坡的奇门遁甲战略决策顾问机构，结合奇门遁甲、企业经营判断、风水空间调衡与人事合作分析，为企业主、创始人、专业人士与个人重大决策提供参考。",
     knowsAbout: [
       "Qi Men Dun Jia",
       "Qimen Dunjia",
@@ -100,7 +101,8 @@ export default function SiteStructuredData() {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "@id": "https://www.qmfeng.com/#website",
-    name: "Qimen Strategy Singapore｜启明遁甲",
+    name: "Qimen Strategy Singapore｜启明遁甲决策智库",
+    alternateName: "启明遁甲",
     url: "https://www.qmfeng.com",
     publisher: {
       "@id": "https://www.qmfeng.com/#organization"
