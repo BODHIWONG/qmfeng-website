@@ -111,7 +111,7 @@ export default function ServiceCards() {
             style={{ fontFamily: "var(--font-lato), var(--font-noto-sans), sans-serif", color: "oklch(0.42 0.02 60)" }}
           >
             {t(
-              "启明遁甲不是单一风水店，而是以奇门遁甲为核心方法，结合商业实战、关系判断与空间调衡，协助客户在关键选择前看清局势、时机、人事与下一步方向。",
+              "启明遁甲决策智库不是单一风水店，而是以奇门遁甲为核心方法，结合商业实战、关系判断与空间调衡，协助客户在关键选择前看清局势、时机、人事与下一步方向。",
               "Qimen Strategy is not a single-service Feng Shui shop. It uses Qi Men Dun Jia as the core method, combined with business experience, relationship judgment and space alignment, to help clients see timing, people dynamics and next steps before important decisions."
             )}
           </p>

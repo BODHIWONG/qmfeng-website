@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     "private Qimen Strategy session",
     "奇门决策",
     "单项奇门决策咨询",
-    "启明遁甲",
+    "启明遁甲决策智库",
     "黄启明 奇门决策",
   ],
   alternates: {

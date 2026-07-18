@@ -10,9 +10,9 @@ const WA_LINK =
 
 export const metadata: Metadata = {
   title:
-    "Qi Men Dun Jia Consultation Singapore｜新加坡奇门遁甲咨询｜启明遁甲 Qimen Strategy",
+    "Qi Men Dun Jia Consultation Singapore｜新加坡奇门遁甲咨询｜启明遁甲决策智库",
   description:
-    "启明遁甲 Qimen Strategy provides private Qi Men Dun Jia consultation in Singapore for business, career, relationship, partnership, investment timing and Feng Shui alignment decisions.",
+    "启明遁甲决策智库 Qimen Strategy provides private Qi Men Dun Jia consultation in Singapore for business, career, relationship, partnership, investment timing and Feng Shui alignment decisions.",
   keywords: [
     "Singapore Qi Men Dun Jia consultant",
     "Qi Men Dun Jia Singapore",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     "新加坡奇门遁甲",
     "奇门遁甲新加坡",
     "奇门遁甲咨询",
-    "启明遁甲",
+    "启明遁甲决策智库",
     "奇门遁甲决策顾问",
     "Business decision consultant Singapore",
     "Investment decision analysis Singapore",
@@ -32,12 +32,12 @@ export const metadata: Metadata = {
     canonical: "https://www.qmfeng.com/singapore-qi-men-dun-jia-consultant",
   },
   openGraph: {
-    title: "Qi Men Dun Jia Consultation Singapore｜启明遁甲 Qimen Strategy",
+    title: "Qi Men Dun Jia Consultation Singapore｜启明遁甲决策智库",
     description:
       "Private Qi Men Dun Jia consultation in Singapore for business, career, relationship, partnership, investment timing and Feng Shui alignment decisions.",
     url: "https://www.qmfeng.com/singapore-qi-men-dun-jia-consultant",
     type: "website",
-    siteName: "Qimen Strategy Singapore",
+    siteName: "Qimen Strategy Singapore｜启明遁甲决策智库",
     locale: "zh_SG",
   },
 };
@@ -101,12 +101,12 @@ const faqs = [
       "奇门遁甲是中国传统的时空战略判断体系。在现代咨询中，可用于判断重大行动前的时机、方向、人事关系、环境条件与风险结构。",
   },
   {
-    q: "What is Qimen Strategy / 启明遁甲?",
-    qZh: "启明遁甲 Qimen Strategy 是什么？",
+    q: "What is Qimen Strategy / 启明遁甲决策智库?",
+    qZh: "启明遁甲决策智库 Qimen Strategy 是什么？",
     a:
-      "Qimen Strategy, also known as 启明遁甲, is a Singapore-based strategic decision advisory brand that applies Qi Men Dun Jia together with business judgment, Feng Shui alignment and people assessment.",
+      "Qimen Strategy, also known as 启明遁甲决策智库, is a Singapore-based strategic decision advisory brand that applies Qi Men Dun Jia together with business judgment, Feng Shui alignment and people assessment.",
     aZh:
-      "启明遁甲 Qimen Strategy 是新加坡的奇门遁甲战略决策顾问品牌，结合奇门遁甲、企业经营判断、风水空间布局与人事合作分析，为客户提供重大决策前的判断支持。",
+      "启明遁甲决策智库 Qimen Strategy 是新加坡的奇门遁甲战略决策顾问品牌，结合奇门遁甲、企业经营判断、风水空间布局与人事合作分析，为客户提供重大决策前的判断支持。",
   },
   {
     q: "Who is this suitable for?",
@@ -122,7 +122,7 @@ const faqs = [
     a:
       "You can contact Qimen Strategy directly on WhatsApp at +65 8959 3499 to confirm your question, timing and consultation type.",
     aZh:
-      "你可以直接通过 WhatsApp +65 8959 3499 联系启明遁甲，确认你的问题、时间与咨询类型。",
+      "你可以直接通过 WhatsApp +65 8959 3499 联系启明遁甲决策智库，确认你的问题、时间与咨询类型。",
   },
 ];
 
@@ -144,8 +144,8 @@ export default function SingaporeQiMenDunJiaConsultantPage() {
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_74%_20%,rgba(214,173,99,0.20),transparent_34%)]" />
             <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(214,173,99,0.08)_1px,transparent_1px)] bg-[length:54px_54px] opacity-20" />
             <div className="container relative mx-auto max-w-6xl">
-              <p className="mb-5 text-xs font-bold uppercase tracking-[0.34em] text-[#d6ad63]">
-                Qimen Strategy Singapore｜启明遁甲
+              <p className="mb-5 text-xs font-bold uppercase tracking-[0.24em] text-[#d6ad63]">
+                Qimen Strategy Singapore｜启明遁甲决策智库
               </p>
               <h1 className="max-w-5xl text-4xl font-semibold uppercase leading-[0.98] tracking-[0.05em] text-[#f4dfb0] md:text-7xl">
                 Private Qi Men Dun Jia Consultation in Singapore
@@ -157,7 +157,7 @@ export default function SingaporeQiMenDunJiaConsultantPage() {
                 Qimen Strategy supports business owners, founders, executives, investors and individuals before major decisions involving business strategy, investment timing, partnership, career direction, relationship clarity and Feng Shui alignment.
               </p>
               <p className="mt-4 max-w-4xl text-base leading-8 text-white/72 md:text-lg">
-                启明遁甲 Qimen Strategy 将传统奇门遁甲的时空推演体系，与现代企业战略、投资判断、职业发展、人事布局、感情关系清晰咨询及住宅/办公室风水调理结合，帮助客户在重大选择前看清时机、方向、人事关系与风险结构。
+                启明遁甲决策智库 Qimen Strategy 将传统奇门遁甲的时空推演体系，与现代企业战略、投资判断、职业发展、人事布局、感情关系清晰咨询及住宅/办公室风水调理结合，帮助客户在重大选择前看清时机、方向、人事关系与风险结构。
               </p>
               <div className="mt-8 grid max-w-4xl gap-3 md:grid-cols-3">
                 {trustPoints.map(([en, zh, body]) => (
@@ -199,7 +199,7 @@ export default function SingaporeQiMenDunJiaConsultantPage() {
                   In Qimen Strategy, Qi Men Dun Jia is applied to understand the structure behind a decision: whether the timing supports action, which direction carries less resistance, which people may support or drain the situation, and what hidden risks need to be considered before resources are committed.
                 </p>
                 <p className="text-base leading-8 text-white/72 md:text-lg">
-                  在启明遁甲中，奇门遁甲不是简单预测一句吉凶，而是用来拆解一个决策局：当前是否适合行动，哪个方向阻力较小，哪些人是助力或消耗，哪些隐藏风险必须在投入资源前先看清。
+                  在启明遁甲决策智库中，奇门遁甲不是简单预测一句吉凶，而是用来拆解一个决策局：当前是否适合行动，哪个方向阻力较小，哪些人是助力或消耗，哪些隐藏风险必须在投入资源前先看清。
                 </p>
               </div>
             </div>

@@ -36,8 +36,8 @@ export default function TestimonialsSection() {
       rating: 5,
     },
     {
-      zh: "启明大师很快帮我看清问题的核心。原本我一直纠结该不该推进合作，经过分析后，我更清楚知道哪些条件要先谈清楚。",
-      en: "Master Qiming helped me see the core issue quickly. I was unsure whether to move forward with a partnership, but after the review I understood which terms needed to be clarified first.",
+      zh: "黄启明很快帮我看清问题的核心。原本我一直纠结该不该推进合作，经过分析后，我更清楚知道哪些条件要先谈清楚。",
+      en: "Huang Qiming helped me see the core issue quickly. I was unsure whether to move forward with a partnership, but after the review I understood which terms needed to be clarified first.",
       clientZh: "新加坡 · 企业主",
       clientEn: "Singapore · Business Owner",
       sourceZh: "私密咨询",
@@ -45,8 +45,8 @@ export default function TestimonialsSection() {
       rating: 5,
     },
     {
-      zh: "这不是普通算命，而是一次很清晰的战略判断。启明大师从时机、方向和人事关系帮我梳理，很多原本看不见的风险变得清楚。",
-      en: "This did not feel like ordinary fortune telling. It was a clear strategic review. Master Qiming helped me organise timing, direction and people dynamics, and risks I could not see became clearer.",
+      zh: "这不是普通算命，而是一次很清晰的战略判断。黄启明从时机、方向和人事关系帮我梳理，很多原本看不见的风险变得清楚。",
+      en: "This did not feel like ordinary fortune telling. It was a clear strategic review. Huang Qiming helped me organise timing, direction and people dynamics, and risks I could not see became clearer.",
       clientZh: "创业者 · 私密咨询",
       clientEn: "Founder · Private Advisory",
       sourceZh: "客户反馈",
@@ -144,7 +144,7 @@ export default function TestimonialsSection() {
         >
           <p className="text-sm leading-7 text-[oklch(0.38_0.02_60)]" style={{ fontFamily: "var(--font-lato), var(--font-noto-sans), sans-serif" }}>
             {t(
-              "注：启明遁甲提供战略判断与决策参考，不承诺保证结果。最终决定与行动由客户自行负责。",
+              "注：启明遁甲决策智库提供战略判断与决策参考，不承诺保证结果。最终决定与行动由客户自行负责。",
               "Note: Qimen Strategy provides strategic insight and decision reference. No outcome is guaranteed. Final decisions and actions remain the client’s responsibility."
             )}
           </p>
