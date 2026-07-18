@@ -7,9 +7,9 @@ import FloatingActions from "@/components/floating-actions";
 import QimenStrategyValueSection from "@/components/qimen-strategy-value-section";
 
 export const metadata: Metadata = {
-  title: "Qimen Strategy Advisory Singapore｜启明遁甲奇门决策顾问",
+  title: "Qimen Strategy Advisory Singapore｜启明遁甲决策智库",
   description:
-    "启明遁甲 Qimen Strategy 奇门决策顾问方案。由 Huang Qiming 创立，服务企业主、创始人与个人关键决策，涵盖时机、方向、人事与风险判断。",
+    "启明遁甲决策智库 Qimen Strategy 奇门决策顾问方案。由 Huang Qiming 创立，服务企业主、创始人与个人关键决策，涵盖时机、方向、人事与风险判断。",
   alternates: {
     canonical: "https://www.qmfeng.com/qimen-strategy-business",
   },
@@ -102,8 +102,8 @@ export default function QimenStrategyBusinessPage() {
               <h1 className="max-w-5xl text-4xl font-semibold uppercase leading-[0.98] tracking-[0.05em] text-[#f4dfb0] md:text-7xl">
                 Qimen Strategy Advisory
               </h1>
-              <h2 className="mt-5 text-3xl font-semibold tracking-[0.18em] text-[#e2bd6b] md:text-5xl">
-                启明遁甲 · 奇门决策顾问方案
+              <h2 className="mt-5 text-3xl font-semibold tracking-[0.12em] text-[#e2bd6b] md:text-5xl">
+                启明遁甲决策智库 · 奇门决策顾问方案
               </h2>
               <p className="mt-6 text-lg font-semibold uppercase tracking-[0.20em] text-[#d6ad63] md:text-2xl">
                 See Timing · Direction · People & Environment · Risk Before You Decide
@@ -112,7 +112,7 @@ export default function QimenStrategyBusinessPage() {
                 A private Qimen Strategy advisory approach for business owners and individuals facing critical decisions. Rooted in Qi Men Dun Jia, shaped into practical strategic judgment before action.
               </p>
               <p className="mt-4 max-w-3xl text-base leading-8 text-white/70">
-                启明遁甲以奇门决策咨询为核心，帮助企业主与个人在合作、投资、转型、任用、签约或人生方向选择前，看清时机、方向、人事环境与风险结构。基础奇门决策咨询 S$396 起，深度单项咨询与企业顾问方案根据复杂度和交付深度确认。
+                启明遁甲决策智库以奇门决策咨询为核心，帮助企业主与个人在合作、投资、转型、任用、签约或人生方向选择前，看清时机、方向、人事环境与风险结构。基础奇门决策咨询 S$396 起，深度单项咨询与企业顾问方案根据复杂度和交付深度确认。
               </p>
               <div className="mt-10 flex flex-col gap-4 sm:flex-row">
                 <a
