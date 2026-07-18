@@ -14,7 +14,7 @@ export default function HeroSimple() {
       <div className="absolute inset-0">
         <img
           src={BG_IMAGE}
-          alt="Qimen Strategy Singapore Qi Men Dun Jia Consultation by Huang Qiming"
+          alt="启明遁甲决策智库 Qimen Strategy Singapore consultation by Huang Qiming"
           className="h-full w-full object-cover object-center opacity-82"
           loading="eager"
           fetchPriority="high"
@@ -63,10 +63,10 @@ export default function HeroSimple() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.12 }}
-            className="mt-5 text-2xl font-semibold tracking-[0.16em] text-[#e2bd6b] md:text-4xl"
+            className="mt-5 text-2xl font-semibold tracking-[0.12em] text-[#e2bd6b] md:text-4xl"
             style={{ fontFamily: "var(--font-noto-serif), var(--font-cormorant), serif" }}
           >
-            新加坡奇门遁甲咨询｜启明遁甲 Qimen Strategy
+            新加坡奇门遁甲咨询｜启明遁甲决策智库 · Qimen Strategy
           </motion.h2>
 
           <motion.p
@@ -108,7 +108,7 @@ export default function HeroSimple() {
             className="mt-3 max-w-4xl text-sm leading-7 text-white/70 md:text-base"
             style={{ fontFamily: "var(--font-noto-sans), var(--font-lato), sans-serif" }}
           >
-            启明遁甲以奇门遁甲为核心判断方法，结合战略风水布局、空间能量调衡、人事合作分析与重大决策陪跑，协助客户在投资、扩张、任用、搬迁、签约及关系选择前，看清时机、方向、人事关系与风险结构。
+            启明遁甲决策智库以奇门遁甲为核心判断方法，结合战略风水布局、空间能量调衡、人事合作分析与重大决策陪跑，协助客户在投资、扩张、任用、搬迁、签约及关系选择前，看清时机、方向、人事关系与风险结构。
           </motion.p>
 
           <motion.div
