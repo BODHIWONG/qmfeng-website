@@ -44,7 +44,7 @@ export default function PopularConsultationSection() {
               <div>
                 <p className="text-sm leading-7 text-[oklch(0.35_0.025_60)] md:text-base md:leading-8">
                   {t(
-                    "这是一项私密的一对一奇门遁甲决策咨询，适合正在面对感情不确定、婚姻方向、复合、分开、关系消耗或重要情感选择的人士。启明遁甲帮助你在行动前看清关系局势、对方状态、时机与下一步方向。",
+                    "这是一项私密的一对一奇门遁甲决策咨询，适合正在面对感情不确定、婚姻方向、复合、分开、关系消耗或重要情感选择的人士。启明遁甲决策智库帮助你在行动前看清关系局势、对方状态、时机与下一步方向。",
                     "This private one-to-one Qi Men Dun Jia advisory is suitable for clients facing relationship uncertainty, marriage direction, reconciliation, separation, emotional exhaustion or an important relationship decision. Qimen Strategy helps you understand the relationship dynamics, the other person’s position, timing and next-step direction before you act."
                   )}
                 </p>
