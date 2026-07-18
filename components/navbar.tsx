@@ -49,15 +49,15 @@ export default function Navbar() {
         <Link href="/" className="flex items-center gap-4">
           <img
             src={LOGO_URL}
-            alt="Qimen Strategy Singapore Qi Men Dun Jia Logo"
+            alt="Qimen Strategy Singapore and 启明遁甲决策智库 logo"
             className="h-14 w-auto object-contain md:h-16"
           />
           <div className="hidden leading-tight sm:block">
             <div className={`text-base font-semibold tracking-wider md:text-lg ${brandTextClass}`}>
               QIMEN STRATEGY
             </div>
-            <div className="text-xs tracking-[0.28em] text-yellow-600 md:text-sm">
-              启明遁甲
+            <div className="mt-1 text-[0.68rem] tracking-[0.12em] text-yellow-600 md:text-xs">
+              启明遁甲决策智库
             </div>
           </div>
         </Link>

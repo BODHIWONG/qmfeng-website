@@ -44,20 +44,20 @@ export default function BrandWorldviewSection() {
       <div className="container">
         <div className="mx-auto max-w-5xl text-center">
           <p className="mb-5 text-lg font-bold uppercase tracking-[0.34em] text-[oklch(0.55_0.08_65)] md:text-xl">
-            {t("为什么会有启明遁甲", "Why Qimen Strategy Exists")}
+            {t("为什么建立启明遁甲决策智库", "Why Qimen Strategy Exists")}
           </p>
           <h2 className="text-4xl font-semibold leading-tight text-[oklch(0.18_0.02_70)] md:text-6xl">
             {t("很多问题，并不是能力不够", "The Problem Is Not Always Lack of Ability")}
           </h2>
           <p className="mx-auto mt-10 max-w-4xl text-lg leading-9 text-[oklch(0.32_0.02_70)] md:text-2xl">
             {t(
-              "很多人聪明、努力，也愿意付出，却始终被事业、关系、财富节奏或关键选择困住。启明遁甲看到的是更深的关系：人与环境、状态与时机之间失去了协调。",
+              "很多人聪明、努力，也愿意付出，却始终被事业、关系、财富节奏或关键选择困住。启明遁甲决策智库看到的是更深的关系：人与环境、状态与时机之间失去了协调。",
               "Many capable people work hard and make sincere effort, yet remain blocked in business, relationships, wealth rhythm or major choices. Qimen Strategy sees a deeper relationship: misalignment between people, environment, state and timing."
             )}
           </p>
           <p className="mx-auto mt-8 max-w-4xl text-base leading-8 text-[oklch(0.38_0.02_70)] md:text-lg">
             {t(
-              "启明遁甲由此形成：以奇门遁甲看时势，以战略风水调环境，以能量调频稳状态，帮助客户在关键行动前重新看清局势与布局。",
+              "启明遁甲决策智库由此形成：以奇门遁甲看时势，以战略风水调环境，以能量调频稳状态，帮助客户在关键行动前重新看清局势与布局。",
               "From this understanding, Qimen Strategy was formed: using Qi Men Dun Jia to read timing, strategic Feng Shui to align space, and energy alignment to support state before important action."
             )}
           </p>
