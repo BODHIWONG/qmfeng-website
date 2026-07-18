@@ -8,7 +8,7 @@ const WA_LINK = "https://wa.me/6589593499";
 
 const serviceLinks = [
   { href: "/enterprise-strategic-advisory", zh: "企业决策顾问", en: "Enterprise Advisory" },
-  { href: "/qimen-strategy-business", zh: "启明遁甲", en: "Qimen Strategy" },
+  { href: "/qimen-strategy-business", zh: "启明遁甲决策智库", en: "Qimen Strategy" },
   { href: "/courses", zh: "课程学习", en: "Courses" },
   { href: "/qi-men-dun-jia-course-singapore", zh: "奇门遁甲课程", en: "Qi Men Dun Jia Course" },
   { href: "/singapore-qi-men-dun-jia-consultant", zh: "新加坡奇门遁甲", en: "Qi Men Dun Jia Singapore" },
@@ -19,7 +19,7 @@ const serviceLinks = [
 
 const insightLinks = [
   { href: "/enterprise-strategic-advisory", zh: "企业战略决策顾问", en: "Enterprise Strategic Advisory" },
-  { href: "/courses", zh: "启明遁甲课程体系", en: "Qimen Strategy Courses" },
+  { href: "/courses", zh: "启明遁甲决策智库课程", en: "Qimen Strategy Courses" },
   { href: "/qi-men-dun-jia-course-singapore", zh: "奇门遁甲基础研修", en: "Qi Men Dun Jia Foundation Course" },
   { href: "/singapore-qi-men-dun-jia-consultant", zh: "奇门遁甲决策顾问", en: "Qi Men Dun Jia Consultant" },
   { href: "/insights/qimen-strategy-is-decision-intelligence-not-fatalism", zh: "决策情报方法论", en: "Decision Intelligence" },
@@ -36,19 +36,19 @@ export default function Footer() {
         <div className="mb-12 grid gap-10 md:grid-cols-4">
           <div>
             <div className="mb-5 flex items-center gap-3">
-              <img src={LOGO_URL} alt="Qimen Strategy Singapore Qi Men Dun Jia Logo" className="h-14 w-14 object-contain" />
+              <img src={LOGO_URL} alt="启明遁甲决策智库 Qimen Strategy Singapore Logo" className="h-14 w-14 object-contain" />
               <div>
                 <p className="text-lg font-bold uppercase tracking-[0.12em] text-white" style={{ fontFamily: "var(--font-lato), var(--font-noto-sans), sans-serif" }}>
                   Qimen Strategy
                 </p>
-                <p className="mt-1 text-[0.65rem] tracking-[0.25em] text-[#d6ad63]">启明遁甲</p>
+                <p className="mt-1 text-[0.62rem] tracking-[0.14em] text-[#d6ad63]">启明遁甲决策智库</p>
               </div>
             </div>
 
             <p className="text-xs leading-relaxed text-white/55" style={{ fontFamily: "var(--font-lato), var(--font-noto-sans), sans-serif" }}>
               {t(
-                "启明遁甲 Qimen Strategy 是新加坡奇门遁甲企业决策顾问品牌，由启明大师黄启明主理，结合 16 年奇门遁甲企业决策经验、两家企业 18 年稳健运营实战背书与多家企业战略决策顾问经验，服务企业主、创始人、高管与个人重大决策客户。",
-                "Qimen Strategy, also known as 启明遁甲, is a Singapore Qi Men Dun Jia business decision advisory brand led by Master Huang Qiming, combining 16 years of Qi Men Dun Jia business advisory experience, practical backing from two businesses operating steadily for 18 years, and strategic advisory work for multiple companies."
+                "启明遁甲决策智库 Qimen Strategy 是立足新加坡的奇门遁甲战略决策顾问品牌，由创始人黄启明主理，结合 16 年奇门遁甲企业决策经验、两家企业 18 年稳健运营实战背书与多家企业战略决策顾问经验，服务企业主、创始人、高管与个人重大决策客户。",
+                "Qimen Strategy is a Singapore-based Qi Men Dun Jia strategic decision advisory practice founded by Huang Qiming, combining 16 years of Qi Men Dun Jia business advisory experience, practical backing from two businesses operating steadily for 18 years, and strategic advisory work for multiple companies."
               )}
             </p>
           </div>
@@ -81,14 +81,14 @@ export default function Footer() {
 
           <div>
             <p className="mb-4 text-[0.6rem] font-bold uppercase tracking-[0.2em] text-[#d6ad63]" style={{ fontFamily: "var(--font-lato), sans-serif" }}>
-              {t("预约启明遁甲决策顾问", "Book Qimen Strategy Advisory")}
+              {t("预约启明遁甲决策智库咨询", "Book Qimen Strategy Advisory")}
             </p>
             <div className="space-y-3 text-xs text-white/50" style={{ fontFamily: "var(--font-lato), var(--font-noto-sans), sans-serif" }}>
               <p>Blk 210 New Upper Changi Road #01-729<br />Singapore 460210</p>
               <p>{t("营业时间：每日 10:00 — 20:00", "Hours: Daily 10:00 — 20:00")}</p>
               <p>{t("正式联络电话 / WhatsApp：+65 8959 3499", "Official Phone / WhatsApp: +65 8959 3499")}</p>
               <a href={`${WA_LINK}?text=${encodeURIComponent("Hello Qimen Strategy, I would like to book a Qi Men Dun Jia business decision advisory session in Singapore.")}`} target="_blank" rel="noopener noreferrer" className="inline-block font-semibold text-[#d6ad63] transition-colors duration-300 hover:text-[#f4dfb0]">
-                {t("预约启明遁甲决策顾问", "Book Qimen Strategy Advisory")} →
+                {t("预约启明遁甲决策智库咨询", "Book Qimen Strategy Advisory")} →
               </a>
             </div>
           </div>
@@ -102,7 +102,7 @@ export default function Footer() {
         </div>
         <div className="mb-6 h-px bg-gradient-to-r from-transparent via-[#c89a45]/25 to-transparent" />
         <div className="flex flex-col items-center justify-between gap-3 text-[0.65rem] text-white/35 md:flex-row" style={{ fontFamily: "var(--font-lato), sans-serif" }}>
-          <p>© {new Date().getFullYear()} Qimen Strategy · 启明遁甲 · Qiming Feng Shui Wisdom Pte. Ltd.</p>
+          <p>© {new Date().getFullYear()} Qimen Strategy · 启明遁甲决策智库 · Qiming Feng Shui Wisdom Pte. Ltd.</p>
           <p>{t("本网站内容仅供战略参考。最终判断与决定由客户自行作出。", "Content on this website is for strategic reference only. Final judgment and decisions remain the client’s own responsibility.")}</p>
         </div>
       </div>
