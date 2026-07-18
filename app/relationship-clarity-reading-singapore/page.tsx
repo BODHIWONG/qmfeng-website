@@ -22,7 +22,8 @@ export const metadata: Metadata = {
     "relationship decision consultation Singapore",
     "情感关系决策咨询",
     "关系清晰咨询",
-    "新加坡感情奇门遁甲"
+    "新加坡感情奇门遁甲",
+    "启明遁甲决策智库",
   ],
   alternates: {
     canonical: "https://www.qmfeng.com/relationship-clarity-reading-singapore",
@@ -33,7 +34,7 @@ export const metadata: Metadata = {
       "Relationship uncertainty? Gain clarity before your next move with Qimen Strategy. A private consultation for major relationship decisions in Singapore.",
     url: "https://www.qmfeng.com/relationship-clarity-reading-singapore",
     type: "website",
-    siteName: "Qimen Strategy Singapore",
+    siteName: "Qimen Strategy Singapore｜启明遁甲决策智库",
     locale: "en_SG",
   },
 };
@@ -122,7 +123,7 @@ export default function RelationshipClarityReadingSingaporePage() {
                 Relationship uncertainty? Gain clarity before your next move with Qimen Strategy.
               </p>
               <p className="mt-4 max-w-4xl text-base leading-8 text-white/70 md:text-lg">
-                启明遁甲 Qimen Strategy 以重大决策视角，帮助你看清关系局势、对方状态、关键阻碍与下一步选择。先看清局，再决定该靠近、等待、调整，还是放下。
+                启明遁甲决策智库 Qimen Strategy 以重大决策视角，帮助你看清关系局势、对方状态、关键阻碍与下一步选择。先看清局，再决定该靠近、等待、调整，还是放下。
               </p>
               <p className="mt-4 max-w-4xl text-base leading-8 text-white/62 md:text-lg">
                 This is a specialised advisory area within Qimen Strategy’s major decision framework. It is not emotional dependency, not therapy and not a promise of outcome — it is a private decision reference before an important relationship choice.
@@ -181,7 +182,7 @@ export default function RelationshipClarityReadingSingaporePage() {
                   A proper relationship decision consultation helps you step back, see the structure of the situation and decide your next move with more calmness and self-respect.
                 </p>
                 <p>
-                  Qimen Strategy｜启明遁甲 remains an enterprise and major life decision advisory brand. Relationship Decision Clarity is one specialised consultation area for clients facing important relationship choices.
+                  Qimen Strategy｜启明遁甲决策智库 remains an enterprise and major life decision advisory brand. Relationship Decision Clarity is one specialised consultation area for clients facing important relationship choices.
                 </p>
               </div>
             </div>
