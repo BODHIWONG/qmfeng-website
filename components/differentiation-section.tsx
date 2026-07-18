@@ -13,7 +13,7 @@ import {
   MessageCircle,
 } from "lucide-react";
 
-const WA_LINK = "https://wa.me/6589418791";
+const WA_LINK = "https://wa.me/6589593499";
 
 const benefits = [
   {
@@ -80,8 +80,8 @@ const useCases = [
 export default function DifferentiationSection() {
   const { t } = useLanguage();
   const ctaMessage = t(
-    "黄启明大师您好，我想预约一次启明遁甲关键决策分析。",
-    "Hi Master Huang, I would like to book a Qimen Strategy decision clarity session."
+    "您好，我想预约一次启明遁甲决策智库关键决策分析。",
+    "Hello Qimen Strategy, I would like to book a decision clarity session."
   );
 
   return (
@@ -95,10 +95,10 @@ export default function DifferentiationSection() {
             transition={{ duration: 0.7 }}
           >
             <p
-              className="mb-4 text-xs uppercase tracking-[0.25em]"
+              className="mb-4 text-xs uppercase tracking-[0.20em]"
               style={{ fontFamily: "var(--font-lato), sans-serif", color: "oklch(0.72 0.12 70)" }}
             >
-              {t("启明遁甲 · 关键行动前的决策清晰度", "Qimen Strategy · Strategic Clarity Before You Move")}
+              {t("启明遁甲决策智库 · 关键行动前的决策清晰度", "Qimen Strategy · Strategic Clarity Before You Move")}
             </p>
 
             <h2
@@ -122,7 +122,7 @@ export default function DifferentiationSection() {
               }}
             >
               {t(
-                "启明遁甲 Qimen Strategy 帮助企业主、创业者、高管与个人，在商业合作、投资扩张、团队人事与人生重大选择前，看清时机、方向、人事关系与隐藏风险。",
+                "启明遁甲决策智库 Qimen Strategy 帮助企业主、创业者、高管与个人，在商业合作、投资扩张、团队人事与人生重大选择前，看清时机、方向、人事关系与隐藏风险。",
                 "Qimen Strategy helps business owners, founders, executives and individuals read timing, direction, people dynamics and hidden risk before partnerships, expansion, team decisions and major life choices."
               )}
             </p>
@@ -141,8 +141,8 @@ export default function DifferentiationSection() {
           >
             <p>
               {t(
-                "黄启明大师以 16+ 年奇门遁甲、风水布局与实战咨询经验，帮助客户在关键行动前做出更清醒的判断。",
-                "With 16+ years of practical experience in Qi Men Dun Jia, Feng Shui alignment and strategic consultation, Master Huang Qiming helps clients make clearer decisions before important moves."
+                "黄启明以 16+ 年奇门遁甲、风水布局与实战咨询经验，帮助客户在关键行动前做出更清醒的判断。",
+                "With 16+ years of practical experience in Qi Men Dun Jia, Feng Shui alignment and strategic consultation, Huang Qiming helps clients make clearer decisions before important moves."
               )}
             </p>
             <p>
@@ -153,7 +153,7 @@ export default function DifferentiationSection() {
             </p>
             <p className="font-semibold text-[oklch(0.84_0.04_70)]">
               {t(
-                "启明遁甲的价值，不是给你一句模糊的安慰，而是在行动之前，帮助你看清：该进，还是该守；该谈，还是该停；该换人，还是该换方向；该继续投入，还是及时止损。",
+                "启明遁甲决策智库的价值，不是给你一句模糊的安慰，而是在行动之前，帮助你看清：该进，还是该守；该谈，还是该停；该换人，还是该换方向；该继续投入，还是及时止损。",
                 "The value of Qimen Strategy is not vague comfort. It helps you see whether to advance or hold, negotiate or stop, change people or direction, continue investing or cut losses in time."
               )}
             </p>
