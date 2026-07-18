@@ -50,7 +50,7 @@ export default function FounderPhilosophySection() {
             </p>
             <p>
               {t(
-                "启明遁甲始终秉持敬天、谦卑、清净与利他的信念。作为奇门解析者，我们相信，最重要的不是炫耀术法，而是在每一次咨询中保持清明、敬畏与正念。",
+                "启明遁甲决策智库始终秉持敬天、谦卑、清净与利他的信念。作为奇门解析者，我们相信，最重要的不是炫耀术法，而是在每一次咨询中保持清明、敬畏与正念。",
                 "Qimen Strategy is guided by respect, humility, clarity and service. As Qi Men interpreters, we believe the most important thing is not to display technique, but to remain clear, grounded and respectful in every consultation."
               )}
             </p>
