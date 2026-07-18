@@ -3,16 +3,17 @@ export default function SiteStructuredData() {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     "@id": "https://www.qmfeng.com/#organization",
-    name: "启明遁甲 Qimen Strategy",
+    name: "启明遁甲决策智库 Qimen Strategy",
     alternateName: [
       "Qimen Strategy Singapore",
+      "Qimen Strategy Decision Intelligence",
       "Singapore Qi Men Dun Jia Business Decision Advisory",
       "新加坡奇门遁甲企业决策顾问",
       "Qi Men Dun Jia Singapore",
       "Qimen Dunjia Singapore",
       "Qi Men Dun Jia Course Singapore",
       "Qimen Strategy Courses Singapore",
-      "Qiming Feng Shui Wisdom"
+      "Qiming Feng Shui Wisdom",
     ],
     legalName: "Qiming Feng Shui Wisdom Pte. Ltd.",
     url: "https://www.qmfeng.com",
@@ -24,17 +25,17 @@ export default function SiteStructuredData() {
       streetAddress: "Blk 210 New Upper Changi Road #01-729",
       addressLocality: "Singapore",
       postalCode: "460210",
-      addressCountry: "SG"
+      addressCountry: "SG",
     },
     areaServed: ["Singapore", "Malaysia"],
     founder: {
       "@type": "Person",
       name: "Huang Qiming",
-      alternateName: ["Master Huang Qiming", "黄启明", "启明大师", "Qiming Huang"],
-      jobTitle: "Founder, Qimen Strategy | Qi Men Dun Jia Business Decision Advisor"
+      alternateName: ["黄启明", "Qiming Huang"],
+      jobTitle: "Founder, Qimen Strategy | Qi Men Dun Jia Business Decision Advisor",
     },
     description:
-      "启明遁甲 Qimen Strategy is a Singapore-based Qi Men Dun Jia business decision advisory brand led by Master Huang Qiming, applying Qi Men Dun Jia, business judgment, Feng Shui alignment and people assessment for business owners, founders, executives, investors and individuals before major decisions.",
+      "启明遁甲决策智库 Qimen Strategy is a Singapore-based Qi Men Dun Jia strategic decision advisory practice founded by Huang Qiming, applying Qi Men Dun Jia, business judgment, Feng Shui alignment and people assessment for business owners, founders, executives, investors and individuals before major decisions.",
     knowsAbout: [
       "Qi Men Dun Jia",
       "Qimen Dunjia",
@@ -58,7 +59,7 @@ export default function SiteStructuredData() {
       "Life and Career Decision Clarity",
       "Office Feng Shui",
       "Residential Feng Shui",
-      "Feng Shui Alignment"
+      "Feng Shui Alignment",
     ],
     serviceType: [
       "Qimen Decision Consultation From S$396",
@@ -76,7 +77,7 @@ export default function SiteStructuredData() {
       "Investment Timing Analysis",
       "People and Partnership Assessment",
       "Office Feng Shui Consultation",
-      "Residential Feng Shui Consultation"
+      "Residential Feng Shui Consultation",
     ],
     openingHoursSpecification: [
       {
@@ -88,24 +89,24 @@ export default function SiteStructuredData() {
           "Thursday",
           "Friday",
           "Saturday",
-          "Sunday"
+          "Sunday",
         ],
         opens: "10:00",
-        closes: "20:00"
-      }
-    ]
+        closes: "20:00",
+      },
+    ],
   };
 
   const website = {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "@id": "https://www.qmfeng.com/#website",
-    name: "Qimen Strategy Singapore｜启明遁甲",
+    name: "Qimen Strategy Singapore｜启明遁甲决策智库",
     url: "https://www.qmfeng.com",
     publisher: {
-      "@id": "https://www.qmfeng.com/#organization"
+      "@id": "https://www.qmfeng.com/#organization",
     },
-    inLanguage: ["en-SG", "zh-SG"]
+    inLanguage: ["en-SG", "zh-SG"],
   };
 
   return (
