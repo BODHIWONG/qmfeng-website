@@ -86,10 +86,10 @@ export default function QimenMasterSection() {
             transition={{ duration: 0.7 }}
           >
             <p
-              className="mb-4 text-xs uppercase tracking-[0.28em]"
+              className="mb-4 text-xs uppercase tracking-[0.22em]"
               style={{ fontFamily: "var(--font-lato), sans-serif", color: gold }}
             >
-              {t("黄启明｜启明遁甲创始人", "Huang Qiming · Founder, Qimen Strategy")}
+              {t("黄启明｜启明遁甲决策智库创始人", "Huang Qiming · Founder, Qimen Strategy")}
             </p>
 
             <h2
@@ -147,7 +147,7 @@ export default function QimenMasterSection() {
               </h3>
               <p className="text-sm leading-relaxed text-[oklch(0.74_0.025_70)] md:text-base">
                 {t(
-                  "黄启明拥有 16 年奇门遁甲企业决策顾问经验，长期参与两家已稳健运营 18 年企业的经营与决策，并为多家企业提供战略决策顾问支持。启明遁甲的核心，不是替客户决定，而是帮助客户看清局势、识别重点、建立更清醒的下一步判断。",
+                  "黄启明拥有 16 年奇门遁甲企业决策顾问经验，长期参与两家已稳健运营 18 年企业的经营与决策，并为多家企业提供战略决策顾问支持。启明遁甲决策智库的核心，不是替客户决定，而是帮助客户看清局势、识别重点、建立更清醒的下一步判断。",
                   "Huang Qiming brings 16 years of Qi Men Dun Jia business advisory experience. He has long been involved in the operation and decision-making of two businesses that have operated steadily for 18 years, and has advised multiple companies on strategic decisions. Qimen Strategy does not decide for clients; it helps clients see the situation, identify key points and form clearer next-step judgment."
                 )}
               </p>
@@ -184,7 +184,7 @@ export default function QimenMasterSection() {
             <div className="relative mx-auto max-w-lg overflow-hidden rounded-[2rem] border border-[oklch(0.72_0.12_70/0.25)] bg-[oklch(0.08_0.018_60)] shadow-[0_30px_90px_rgba(0,0,0,0.45)]">
               <img
                 src={FOUNDER_IMAGE}
-                alt="Huang Qiming Founder of Qimen Strategy Singapore"
+                alt="Huang Qiming, Founder of 启明遁甲决策智库 Qimen Strategy Singapore"
                 className="aspect-[4/5] w-full object-cover object-center"
               />
               <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 via-black/45 to-transparent p-6 md:p-7">
@@ -196,7 +196,7 @@ export default function QimenMasterSection() {
                 </p>
                 <p className="mt-2 text-sm font-semibold tracking-wide text-[oklch(0.78_0.10_70)]">
                   {t(
-                    "启明遁甲创始人｜奇门遁甲决策顾问",
+                    "启明遁甲决策智库创始人｜奇门遁甲决策顾问",
                     "Founder · Qi Men Dun Jia Decision Advisor"
                   )}
                 </p>
