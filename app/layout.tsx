@@ -50,14 +50,14 @@ const OG_IMAGE =
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.qmfeng.com"),
   title: {
-    default:
-      "Qimen Strategy Singapore｜Qi Men Dun Jia Strategic Decision Advisory",
+    default: "Qimen Strategy Singapore｜启明遁甲决策智库",
     template: "%s | Qimen Strategy Singapore",
   },
   description:
-    "Qimen Strategy Singapore provides Qi Men Dun Jia strategic decision advisory, Feng Shui alignment and space energy consulting for business owners, founders, professionals and major life decisions.",
+    "启明遁甲决策智库 Qimen Strategy Singapore provides Qi Men Dun Jia strategic decision advisory, Feng Shui alignment and space energy consulting for business owners, founders, professionals and major life decisions.",
   keywords: [
     "Qimen Strategy Singapore",
+    "Qimen Strategy Decision Intelligence",
     "Qi Men Dun Jia Singapore",
     "Singapore Qi Men Dun Jia",
     "Qi Men decision advisory",
@@ -66,29 +66,29 @@ export const metadata: Metadata = {
     "Business Feng Shui Singapore",
     "Feng Shui Alignment Singapore",
     "Huang Qiming Singapore",
-    "启明遁甲",
+    "启明遁甲决策智库",
     "新加坡奇门遁甲",
     "奇门遁甲新加坡",
     "企业战略决策顾问",
     "企业风水布局",
-    "重大决策咨询"
+    "重大决策咨询",
   ],
   authors: [{ name: "Huang Qiming 黄启明" }],
   alternates: {
     canonical: "https://www.qmfeng.com",
   },
   openGraph: {
-    title: "Qimen Strategy Singapore｜Qi Men Dun Jia Strategic Decision Advisory",
+    title: "Qimen Strategy Singapore｜启明遁甲决策智库",
     description:
       "Environment shapes state, state shapes decisions, and decisions shape outcomes. Qimen Strategy helps clients review timing, environment, people dynamics and risk before major action.",
     url: "https://www.qmfeng.com",
-    siteName: "Qimen Strategy Singapore",
+    siteName: "Qimen Strategy Singapore｜启明遁甲决策智库",
     images: [
       {
         url: OG_IMAGE,
         width: 1200,
         height: 630,
-        alt: "Qimen Strategy Singapore Qi Men Dun Jia Strategic Decision Advisory by Huang Qiming",
+        alt: "启明遁甲决策智库 Qimen Strategy Singapore strategic decision advisory by Huang Qiming",
       },
     ],
     locale: "zh_SG",
@@ -96,7 +96,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Qimen Strategy Singapore | Qi Men Dun Jia Advisory",
+    title: "Qimen Strategy Singapore | 启明遁甲决策智库",
     description:
       "Qi Men Dun Jia strategic decision advisory, Feng Shui alignment and space energy consulting in Singapore.",
     images: [OG_IMAGE],
