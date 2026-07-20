@@ -72,7 +72,6 @@ export default function QiMenCoursePage() {
               <p className="text-xs font-bold uppercase tracking-[0.30em] text-[#d6ad63]">Qimen Strategy Academy · Singapore</p>
               <h1 className="mt-5 max-w-5xl text-4xl font-semibold uppercase leading-[0.98] tracking-[0.03em] text-[#f4dfb0] md:text-7xl">Qi Men Dun Jia Foundation Course</h1>
               <h2 className="mt-5 text-3xl font-semibold tracking-[0.14em] text-[#e2bd6b] md:text-5xl">奇门遁甲基础课程</h2>
-              <p className="mt-6 text-lg font-semibold text-[#d6ad63] md:text-2xl">Regular Saturday–Sunday Intakes · From 19 September 2026 · S$990</p>
               <p className="mt-8 max-w-4xl text-lg leading-8 text-white/76">A structured two-day small-group course for complete beginners. Learn the foundation of Qi Men Dun Jia through a clear framework, a repeatable reading sequence and practical examples.</p>
               <p className="mt-4 max-w-4xl leading-8 text-white/64">课程从基础框架、九宫结构、八门、九星与八神开始，逐步讲解取用神、宫位关系与读局顺序，并结合事业、合作、关系和重大决策案例。课程重视实际应用，也明确专业边界。</p>
               <div className="mt-8 grid max-w-5xl gap-3 sm:grid-cols-2 lg:grid-cols-4">
