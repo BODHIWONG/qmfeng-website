@@ -8,18 +8,17 @@ import FloatingActions from "@/components/floating-actions";
 export const metadata: Metadata = {
   title: "Qimen Strategy Courses Singapore｜启明遁甲课程体系",
   description:
-    "启明遁甲 Qimen Strategy 新加坡东方智慧实战课程体系，涵盖奇门遁甲、数字能量与手机号码、八字命理、風水布局课程。学习看清自己、局势、时机与空间，提升判断力与生活应用能力。",
+    "启明遁甲 Qimen Strategy 新加坡课程体系。奇门遁甲基础课程将于2026年9月19日至20日举行，适合零基础，小班教学，课程费用S$990。另设数字能量、八字命理与風水布局课程意向登记。",
   keywords: [
     "Qimen Strategy courses Singapore",
     "Qi Men Dun Jia course Singapore",
+    "Qi Men Dun Jia foundation course",
     "Number Energy course Singapore",
     "Bazi course Singapore",
     "Feng Shui course Singapore",
     "启明遁甲课程",
     "新加坡奇门遁甲课程",
-    "数字能量课程新加坡",
-    "八字命理课程新加坡",
-    "風水布局课程新加坡",
+    "奇门遁甲基础课程",
   ],
   alternates: {
     canonical: "https://www.qmfeng.com/courses",
@@ -33,17 +32,17 @@ const WA_LINK = [
 
 const courses = [
   {
-    title: "Qi Men Dun Jia Foundation Program",
-    zh: "奇门遁甲研修班",
-    tagline: "看懂局势，做对决策。",
+    title: "Qi Men Dun Jia Foundation Course",
+    zh: "奇门遁甲基础课程",
+    tagline: "从零开始，看懂奇门盘的基础结构与判断逻辑。",
     body:
-      "Learn how to read timing, direction, people dynamics, environment and risk before important action.",
+      "A structured two-day small-group course for complete beginners. Learn the basic framework, key symbols, chart-reading sequence and practical application of Qi Men Dun Jia.",
     bodyZh:
-      "很多时候，我们不是不努力，而是不知道什么时候该进、什么时候该守，谁可以合作，哪里有风险。奇门遁甲课程不是只教排盘，而是帮助学员学习如何从时机、方向、人事、环境与风险中看清一件事情的发展趋势。",
-    suitable: "企业主、创业者、管理者，以及正在面对事业、合作、投资、感情或人生重要选择的人。",
+      "课程从基础框架、九宫结构、八门、九星与八神开始，逐步讲解取用神、看宫位与读局势的顺序，并通过事业、合作、关系和重要决策案例帮助学员理解实际应用。",
+    suitable: "适合完全零基础，也适合过去零散接触过奇门、八字或風水，但希望重新建立清晰学习系统的人。",
     href: "/qi-men-dun-jia-course-singapore",
-    status: "主打课程 · First Intake Open",
-    cta: "了解奇门课程",
+    status: "19–20 September 2026 · S$990",
+    cta: "查看课程与报名",
     featured: true,
   },
   {
@@ -124,18 +123,19 @@ export default function CoursesPage() {
                 启明遁甲课程体系结合奇门遁甲、数字能量、八字命理与風水布局，从“人、事、时机、空间”四个角度，帮助学员建立更清楚的判断力与生活应用能力。我们不把课程做成神秘表演，而是把东方智慧讲得清楚、学得明白、用得出来。
               </p>
               <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-                <a
-                  href={WA_LINK}
+                <Link
+                  href="/course-registration"
                   className="inline-flex items-center justify-center bg-[#d6ad63] px-7 py-4 text-sm font-bold uppercase tracking-[0.16em] text-black transition hover:bg-[#f4dfb0]"
-                  target="_blank"
-                  rel="noopener noreferrer"
                 >
-                  Enquire Courses
-                </a>
+                  Register Current Intake
+                </Link>
                 <Link href="/qi-men-dun-jia-course-singapore" className="inline-flex items-center justify-center border border-[#d6ad63]/70 px-7 py-4 text-sm font-bold uppercase tracking-[0.16em] text-[#f4dfb0] transition hover:bg-[#d6ad63]/10">
-                  View Qimen Course
+                  View Course Details
                 </Link>
               </div>
+              <p className="mt-4 text-sm leading-6 text-white/55">
+                Current intake: 19–20 September 2026 · S$990 per participant
+              </p>
             </div>
           </section>
 
@@ -178,7 +178,7 @@ export default function CoursesPage() {
                         </div>
                         {course.featured && (
                           <span className="w-fit bg-[#d6ad63] px-3 py-1 text-[0.62rem] font-bold uppercase tracking-[0.14em] text-black">
-                            Core Course
+                            Current Intake
                           </span>
                         )}
                       </div>
@@ -240,21 +240,29 @@ export default function CoursesPage() {
 
           <section className="px-4 py-20 md:py-28">
             <div className="container mx-auto max-w-4xl border border-[#d6ad63]/40 bg-[#d6ad63]/10 p-8 text-center md:p-12">
-              <p className="text-xs font-bold uppercase tracking-[0.32em] text-[#d6ad63]">Course Enquiry</p>
+              <p className="text-xs font-bold uppercase tracking-[0.32em] text-[#d6ad63]">Current Course Registration</p>
               <h2 className="mt-5 text-3xl font-semibold leading-tight text-[#f4dfb0] md:text-5xl">
-                Choose the course that matches your current stage.
+                Qi Men Dun Jia Foundation Course · 19–20 September 2026
               </h2>
               <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-white/72">
-                你可以先告诉我们你想学习的方向：奇门遁甲、数字能量、八字命理或風水布局。我们会根据你的基础、目标与时间安排，建议更适合的课程路径。
+                两天小班精品课程，适合零基础。课程费用每位 S$990，付款核实后确认名额。
               </p>
-              <a
-                href={WA_LINK}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-8 inline-flex items-center justify-center bg-[#d6ad63] px-8 py-4 text-sm font-bold uppercase tracking-[0.16em] text-black transition hover:bg-[#f4dfb0]"
-              >
-                WhatsApp Course Enquiry
-              </a>
+              <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
+                <Link
+                  href="/course-registration"
+                  className="inline-flex items-center justify-center bg-[#d6ad63] px-8 py-4 text-sm font-bold uppercase tracking-[0.16em] text-black transition hover:bg-[#f4dfb0]"
+                >
+                  Register & PayNow
+                </Link>
+                <a
+                  href={WA_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center border border-[#d6ad63]/70 px-8 py-4 text-sm font-bold uppercase tracking-[0.16em] text-[#f4dfb0] transition hover:bg-[#d6ad63]/10"
+                >
+                  WhatsApp Course Enquiry
+                </a>
+              </div>
             </div>
           </section>
         </main>
