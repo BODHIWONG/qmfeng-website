@@ -144,7 +144,7 @@ function PageContent() {
           <h2 className="mt-3 text-3xl font-bold">{course.name}</h2><p className="mt-2 text-lg font-semibold text-[oklch(0.78_0.12_70)]">{course.zh}</p>
           <div className="mt-7 space-y-4 text-sm leading-7"><p><strong>Batch:</strong><br />{batch.label}</p><p><strong>Location:</strong><br />{LOCATION}</p>{course.fee && <p><strong>Fee:</strong><br /><span className="text-3xl text-[oklch(0.78_0.12_70)]">S${course.fee}</span> per participant</p>}</div>
           {course.fee && <div className="mt-7 border border-white/20 bg-white/5 p-5 text-center">
-            <p className="text-xs font-bold uppercase tracking-wider text-white/60">Scan to PayNow</p><img src="/paynow-uen-qr.png" alt="PayNow QR code" className="mx-auto mt-4 w-full max-w-[260px] bg-white p-2" />
+            <p className="text-xs font-bold uppercase tracking-wider text-white/60">Scan to PayNow</p><img src="/paynow-uen-qr.svg" alt="PayNow QR code" className="mx-auto mt-4 w-full max-w-[260px] bg-white p-2" />
             <p className="mt-4 text-sm font-semibold">{COMPANY}</p><div className="mt-2 flex items-center justify-center gap-3"><strong>UEN: {PAYNOW_UEN}</strong><button type="button" onClick={copyUen} className="inline-flex items-center gap-1 border border-white/25 px-2 py-1 text-xs">{copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}{copied ? "Copied" : "Copy"}</button></div>
             <p className="mt-3 text-xs text-white/55">Verify the company name in your banking app before payment.</p>
           </div>}
