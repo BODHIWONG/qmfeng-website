@@ -8,7 +8,7 @@ import FloatingActions from "@/components/floating-actions";
 export const metadata: Metadata = {
   title: "Qi Men Dun Jia Foundation Course Singapore｜奇门遁甲基础课程",
   description:
-    "启明遁甲 Qimen Strategy 新加坡两天奇门遁甲基础课程，2026年9月12日至13日，小班教学，适合零基础。课程费用 S$990，地点位于 Bedok Central。",
+    "启明遁甲 Qimen Strategy 新加坡两天奇门遁甲基础课程，2026年9月19日至20日，小班教学，适合零基础。课程费用 S$990，地点位于 Bedok Central。",
   keywords: [
     "Qi Men Dun Jia course Singapore",
     "Qi Men Dun Jia class Singapore",
@@ -29,7 +29,7 @@ const WA_LINK = [
 ].join("?");
 
 const courseHighlights = [
-  ["Next Intake", "12–13 September 2026", "Saturday and Sunday｜周六、周日"],
+  ["Next Intake", "19–20 September 2026", "Saturday and Sunday｜周六、周日"],
   ["Course Fee", "S$990 per participant", "课程费用每位 S$990"],
   ["Beginner Friendly", "适合零基础", "Step-by-step foundation learning with practical examples."],
   ["Small Group", "小班精品课程", "Limited places for focused teaching and in-class questions."],
@@ -99,7 +99,7 @@ const outcomes = [
 const courseFacts = [
   ["Program", "课程", "Qi Men Dun Jia Foundation Course｜奇门遁甲基础课程"],
   ["Instructor", "主讲", "Huang Qiming｜黄启明主讲"],
-  ["Date", "日期", "12–13 September 2026｜2026年9月12日至13日"],
+  ["Date", "日期", "19–20 September 2026｜2026年9月19日至20日"],
   ["Days", "上课日", "Saturday & Sunday｜周六、周日"],
   ["Format", "形式", "2-day small-group course｜两天小班精品课程"],
   ["Level", "程度", "Suitable for complete beginners｜适合零基础"],
@@ -130,7 +130,7 @@ export default function QiMenDunJiaCourseSingaporePage() {
                 奇门遁甲基础课程
               </h2>
               <p className="mt-6 max-w-4xl text-lg font-semibold tracking-[0.08em] text-[#d6ad63] md:text-2xl">
-                12–13 September 2026 · Saturday & Sunday · S$990
+                19–20 September 2026 · Saturday & Sunday · S$990
               </p>
               <p className="mt-8 max-w-3xl text-lg leading-8 text-white/78 md:text-xl">
                 A structured two-day small-group course for complete beginners who want to understand the foundation of Qi Men Dun Jia and its practical application.
@@ -272,7 +272,7 @@ export default function QiMenDunJiaCourseSingaporePage() {
             <div className="container mx-auto max-w-4xl border border-[#d6ad63]/40 bg-[#d6ad63]/10 p-8 text-center md:p-12">
               <p className="text-xs font-bold uppercase tracking-[0.32em] text-[#d6ad63]">Course Registration</p>
               <h2 className="mt-5 text-3xl font-semibold leading-tight text-[#f4dfb0] md:text-5xl">
-                Register for the 12–13 September 2026 intake.
+                Register for the 19–20 September 2026 intake.
               </h2>
               <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-white/72">
                 课程费用为每位 S$990。请通过通用报名页面填写学员资料，并使用公司 PayNow UEN 完成付款。付款核实后，我们将确认课程名额。
