@@ -6,25 +6,26 @@ import Link from "next/link";
 const LOGO_URL = "/logo-qimen-strategy.jpg";
 const WA_LINK = "https://wa.me/6589593499";
 
-const serviceLinks = [
-  { href: "/enterprise-strategic-advisory", zh: "企业决策顾问", en: "Enterprise Advisory" },
-  { href: "/qimen-strategy-business", zh: "启明遁甲决策智库", en: "Qimen Strategy" },
-  { href: "/courses", zh: "课程学习", en: "Courses" },
-  { href: "/qi-men-dun-jia-course-singapore", zh: "奇门遁甲课程", en: "Qi Men Dun Jia Course" },
-  { href: "/singapore-qi-men-dun-jia-consultant", zh: "新加坡奇门遁甲", en: "Qi Men Dun Jia Singapore" },
-  { href: "/relationship-clarity-reading-singapore", zh: "关系决策", en: "Relationship Decisions" },
-  { href: "/insights", zh: "案例智库", en: "Case Library" },
-  { href: "/founder", zh: "创始人", en: "Founder" },
+const advisoryLinks = [
+  { href: "/advisory", zh: "顾问服务总览", en: "Advisory Overview" },
+  { href: "/founder-business-advisory", zh: "创业老板事业陪跑", en: "Founder Business Advisory" },
+  { href: "/wealth-cycle-investment-decision", zh: "财富与投资决策辅助", en: "Wealth & Investment Support" },
+  { href: "/executive-career-transition", zh: "高管事业转型", en: "Executive Career Transition" },
+  { href: "/relationship-clarity-reading-singapore", zh: "情感与重大决策", en: "Relationship Decisions" },
 ];
 
-const insightLinks = [
-  { href: "/enterprise-strategic-advisory", zh: "企业战略决策顾问", en: "Enterprise Strategic Advisory" },
-  { href: "/courses", zh: "启明遁甲决策智库课程", en: "Qimen Strategy Courses" },
-  { href: "/qi-men-dun-jia-course-singapore", zh: "奇门遁甲基础研修", en: "Qi Men Dun Jia Foundation Course" },
-  { href: "/singapore-qi-men-dun-jia-consultant", zh: "奇门遁甲决策顾问", en: "Qi Men Dun Jia Consultant" },
-  { href: "/insights/qimen-strategy-is-decision-intelligence-not-fatalism", zh: "决策情报方法论", en: "Decision Intelligence" },
-  { href: "/relationship-clarity-reading-singapore", zh: "情感关系决策咨询", en: "Relationship Decision Clarity" },
-  { href: "/insights", zh: "战略洞察中心", en: "Strategic Insights" },
+const learningLinks = [
+  { href: "/qi-men-dun-jia-course-singapore", zh: "每周奇门基础课程", en: "Weekly Qi Men Course" },
+  { href: "/course-registration", zh: "课程报名与付款", en: "Course Registration" },
+  { href: "/courses", zh: "课程体系", en: "Course Pathways" },
+  { href: "/insights", zh: "案例与洞察", en: "Cases & Insights" },
+  { href: "/founder", zh: "关于黄启明", en: "About Huang Qiming" },
+];
+
+const legalLinks = [
+  { href: "/privacy", zh: "隐私政策", en: "Privacy Policy" },
+  { href: "/terms", zh: "服务条款与免责声明", en: "Terms & Disclaimer" },
+  { href: "/course-policy", zh: "课程转班与取消政策", en: "Course Policy" },
 ];
 
 export default function Footer() {
@@ -38,28 +39,23 @@ export default function Footer() {
             <div className="mb-5 flex items-center gap-3">
               <img src={LOGO_URL} alt="Qimen Strategy and 启明遁甲决策智库 logo" className="h-14 w-14 object-contain" />
               <div>
-                <p className="text-lg font-bold uppercase tracking-[0.12em] text-white" style={{ fontFamily: "var(--font-lato), var(--font-noto-sans), sans-serif" }}>
-                  Qimen Strategy
-                </p>
+                <p className="text-lg font-bold uppercase tracking-[0.12em] text-white">Qimen Strategy</p>
                 <p className="mt-1 text-[0.65rem] tracking-[0.12em] text-[#d6ad63]">启明遁甲决策智库</p>
               </div>
             </div>
-
-            <p className="text-xs leading-relaxed text-white/55" style={{ fontFamily: "var(--font-lato), var(--font-noto-sans), sans-serif" }}>
+            <p className="text-xs leading-relaxed text-white/55">
               {t(
-                "启明遁甲决策智库（Qimen Strategy）是由黄启明创立并主理、立足新加坡的奇门遁甲战略决策顾问机构，结合 16 年奇门遁甲企业决策经验、真实企业经营实践与多家企业顾问经验，服务企业主、创始人、高管与个人重大决策客户。",
-                "Qimen Strategy is a Singapore-based strategic decision advisory practice founded and led by Huang Qiming. It combines 16 years of Qi Men Dun Jia business advisory experience, practical business operating insight and strategic advisory work for multiple companies."
+                "启明遁甲决策智库立足新加坡，聚焦两大业务：为创业老板、高管与个人提供重大决策支持；每周开设奇门遁甲基础课程。由创始人黄启明主理。",
+                "Qimen Strategy is a Singapore-based practice focused on two core areas: strategic decision advisory for founders, executives and individuals, and weekly Qi Men Dun Jia foundation courses led by Founder Huang Qiming."
               )}
             </p>
           </div>
 
           <div>
-            <p className="mb-4 text-[0.6rem] font-bold uppercase tracking-[0.2em] text-[#d6ad63]" style={{ fontFamily: "var(--font-lato), sans-serif" }}>
-              {t("核心入口", "Core Pages")}
-            </p>
+            <p className="mb-4 text-[0.6rem] font-bold uppercase tracking-[0.2em] text-[#d6ad63]">{t("顾问服务", "Advisory")}</p>
             <div className="space-y-2.5">
-              {serviceLinks.map((link, index) => (
-                <Link key={`${link.href}-${index}`} href={link.href} className="block text-xs text-white/50 transition-colors duration-300 hover:text-[#d6ad63]" style={{ fontFamily: "var(--font-lato), var(--font-noto-sans), sans-serif" }}>
+              {advisoryLinks.map((link) => (
+                <Link key={link.href} href={link.href} className="block text-xs text-white/50 transition-colors hover:text-[#d6ad63]">
                   {t(link.zh, link.en)}
                 </Link>
               ))}
@@ -67,12 +63,10 @@ export default function Footer() {
           </div>
 
           <div>
-            <p className="mb-4 text-[0.6rem] font-bold uppercase tracking-[0.2em] text-[#d6ad63]" style={{ fontFamily: "var(--font-lato), sans-serif" }}>
-              {t("战略洞察", "Strategic Insights")}
-            </p>
+            <p className="mb-4 text-[0.6rem] font-bold uppercase tracking-[0.2em] text-[#d6ad63]">{t("课程与资源", "Learning & Resources")}</p>
             <div className="space-y-2.5">
-              {insightLinks.map((link) => (
-                <Link key={link.href} href={link.href} className="block text-xs text-white/50 transition-colors duration-300 hover:text-[#d6ad63]" style={{ fontFamily: "var(--font-lato), var(--font-noto-sans), sans-serif" }}>
+              {learningLinks.map((link) => (
+                <Link key={link.href} href={link.href} className="block text-xs text-white/50 transition-colors hover:text-[#d6ad63]">
                   {t(link.zh, link.en)}
                 </Link>
               ))}
@@ -80,30 +74,35 @@ export default function Footer() {
           </div>
 
           <div>
-            <p className="mb-4 text-[0.6rem] font-bold uppercase tracking-[0.2em] text-[#d6ad63]" style={{ fontFamily: "var(--font-lato), sans-serif" }}>
-              {t("预约启明遁甲决策智库咨询", "Book Qimen Strategy Advisory")}
-            </p>
-            <div className="space-y-3 text-xs text-white/50" style={{ fontFamily: "var(--font-lato), var(--font-noto-sans), sans-serif" }}>
+            <p className="mb-4 text-[0.6rem] font-bold uppercase tracking-[0.2em] text-[#d6ad63]">{t("联络与政策", "Contact & Policies")}</p>
+            <div className="space-y-3 text-xs text-white/50">
               <p>Blk 210 New Upper Changi Road #01-729<br />Singapore 460210</p>
               <p>{t("营业时间：每日 10:00 — 20:00", "Hours: Daily 10:00 — 20:00")}</p>
-              <p>{t("正式联络电话 / WhatsApp：+65 8959 3499", "Official Phone / WhatsApp: +65 8959 3499")}</p>
-              <a href={`${WA_LINK}?text=${encodeURIComponent("Hello Qimen Strategy, I would like to book a Qi Men Dun Jia business decision advisory session in Singapore.")}`} target="_blank" rel="noopener noreferrer" className="inline-block font-semibold text-[#d6ad63] transition-colors duration-300 hover:text-[#f4dfb0]">
-                {t("预约启明遁甲决策智库咨询", "Book Qimen Strategy Advisory")} →
+              <p>{t("WhatsApp：+65 8959 3499", "WhatsApp: +65 8959 3499")}</p>
+              <a
+                href={`${WA_LINK}?text=${encodeURIComponent("Hello Qimen Strategy, I would like to submit a private advisory enquiry.")}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                data-conversion="footer_private_enquiry"
+                className="inline-block font-semibold text-[#d6ad63] transition-colors hover:text-[#f4dfb0]"
+              >
+                {t("申请顾问咨询", "Apply for Advisory")} →
               </a>
+              <div className="space-y-2 pt-2">
+                {legalLinks.map((link) => (
+                  <Link key={link.href} href={link.href} className="block text-white/42 transition-colors hover:text-[#d6ad63]">
+                    {t(link.zh, link.en)}
+                  </Link>
+                ))}
+              </div>
             </div>
           </div>
         </div>
 
-        <div className="mb-8 h-px bg-gradient-to-r from-transparent via-[#c89a45]/40 to-transparent" />
-        <div className="mb-8 py-6 text-center">
-          <p className="text-sm italic leading-relaxed text-white/55" style={{ fontFamily: "var(--font-lato), var(--font-noto-sans), sans-serif" }}>
-            {t('"关键决策前，先看清全局。"', '"See the Whole Game Before You Decide."')}
-          </p>
-        </div>
         <div className="mb-6 h-px bg-gradient-to-r from-transparent via-[#c89a45]/25 to-transparent" />
-        <div className="flex flex-col items-center justify-between gap-3 text-[0.65rem] text-white/35 md:flex-row" style={{ fontFamily: "var(--font-lato), sans-serif" }}>
+        <div className="flex flex-col items-center justify-between gap-3 text-[0.65rem] text-white/35 md:flex-row">
           <p>© {new Date().getFullYear()} Qimen Strategy · 启明遁甲决策智库 · Qiming Feng Shui Wisdom Pte. Ltd.</p>
-          <p>{t("本网站内容仅供战略参考。最终判断与决定由客户自行作出。", "Content on this website is for strategic reference only. Final judgment and decisions remain the client’s own responsibility.")}</p>
+          <p>{t("顾问内容仅供决策参考；课程内容仅供学习。最终决定与行动由客户自行负责。", "Advisory content is for decision reference and course content is for learning. Final decisions and actions remain the client's responsibility.")}</p>
         </div>
       </div>
     </footer>
