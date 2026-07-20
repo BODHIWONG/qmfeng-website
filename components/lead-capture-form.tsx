@@ -131,7 +131,7 @@ export default function LeadCaptureForm() {
                 <option value="Qi Men Dun Jia Consultation From S$396">{t("奇门遁甲咨询：事业、关系、合作、搬迁或重大选择 S$396 起", "Qi Men Dun Jia consultation — career, relationship, partnership, relocation or major decision From S$396")}</option>
                 <option value="Enterprise Strategic Diagnostic From S$3996">{t("生意或企业卡住，需要企业战略健康诊断 S$3,996 起", "Business is stuck — Enterprise Strategic Diagnostic From S$3,996")}</option>
                 <option value="Feng Shui and Space Alignment">{t("办公室、商铺或住宅气场不稳，需要风水与空间能量调衡", "Office, shop or home feels unsupported — Feng Shui & Space Alignment")}</option>
-                <option value="Qi Men Dun Jia Course From S$988">{t("我想报名或了解奇门遁甲课程 / 启明遁甲研修班 S$988 起", "I want to enquire about the Qi Men Dun Jia Course From S$988")}</option>
+                <option value="Qi Men Dun Jia Foundation Course S$990">{t("我想报名或了解奇门遁甲基础课程 / 启明遁甲研修班 S$990", "I want to enquire about the Qi Men Dun Jia Foundation Course — S$990")}</option>
                 <option value="Not Sure Need Assessment">{t("我不确定，请先帮我判断适合哪一种咨询", "Not sure — please advise which consultation fits")}</option>
               </select>
             </label>
