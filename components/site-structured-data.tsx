@@ -7,9 +7,9 @@ export default function SiteStructuredData() {
     alternateName: [
       "启明遁甲",
       "Qimen Strategy Singapore",
-      "Qimen Strategy Founder Advisory",
       "Qimen Strategy Academy",
       "Qi Men Dun Jia Singapore",
+      "Qimen Strategy Founder Advisory",
       "Qiming Feng Shui Wisdom",
     ],
     legalName: "Qiming Feng Shui Wisdom Pte. Ltd.",
@@ -28,12 +28,16 @@ export default function SiteStructuredData() {
       "@type": "Person",
       name: "Huang Qiming",
       alternateName: ["黄启明", "Qiming Huang"],
-      jobTitle: "Founder & Strategic Decision Advisor, Qimen Strategy",
+      jobTitle: "Founder, Qi Men Instructor & Strategic Decision Advisor, Qimen Strategy",
       url: "https://www.qmfeng.com/founder",
     },
     description:
-      "Qimen Strategy is a Singapore-based strategic decision advisory practice and Qi Men Dun Jia academy founded by Huang Qiming. It supports founders, entrepreneurs, executives and individuals before major business, investment, career, relationship and life decisions, and provides structured weekly Qi Men Dun Jia courses.",
+      "Qimen Strategy is a Singapore-based Qi Men Dun Jia academy and strategic advisory practice founded by Huang Qiming. Weekly courses are the primary entry point, while founder advisory supports clients facing real business, investment, people, career, relationship and major life decisions.",
     knowsAbout: [
+      "Qi Men Dun Jia",
+      "Qi Men Dun Jia Foundation Course",
+      "Weekly Qi Men Dun Jia Course Singapore",
+      "Qi Men Dun Jia Education",
       "Founder Business Advisory",
       "Entrepreneur Strategic Advisory",
       "Business Decision Support",
@@ -44,12 +48,12 @@ export default function SiteStructuredData() {
       "Mentor and Strategic Network Planning",
       "Relationship Decision Clarity",
       "Major Life Decision Support",
-      "Qi Men Dun Jia",
-      "Qi Men Dun Jia Foundation Course",
       "Strategic Feng Shui",
       "People and Partnership Assessment",
     ],
     serviceType: [
+      "Qi Men Dun Jia Foundation Course",
+      "Weekly Qi Men Dun Jia Course Singapore",
       "Founder Business Advisory",
       "90-Day Founder Advisory Trial",
       "Annual Founder Advisory Retainer",
@@ -57,8 +61,6 @@ export default function SiteStructuredData() {
       "Executive Career Transition Advisory",
       "Major Personal Decision Consultation",
       "Relationship Decision Clarity",
-      "Qi Men Dun Jia Foundation Course",
-      "Weekly Qi Men Dun Jia Course Singapore",
     ],
     openingHoursSpecification: [
       {
@@ -78,7 +80,7 @@ export default function SiteStructuredData() {
     url: "https://www.qmfeng.com/courses",
     parentOrganization: { "@id": "https://www.qmfeng.com/#organization" },
     description:
-      "Structured Qi Men Dun Jia courses in Singapore, including a two-day foundation course with regular Saturday and Sunday intakes.",
+      "The primary entry pathway of Qimen Strategy, providing structured Qi Men Dun Jia courses in Singapore, including a two-day foundation course with regular Saturday and Sunday intakes.",
     address: { "@id": "https://www.qmfeng.com/#organization" },
   };
 
