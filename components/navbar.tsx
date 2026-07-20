@@ -6,8 +6,7 @@ import Link from "next/link";
 import { useLanguage } from "@/contexts/language-context";
 
 const LOGO_URL = "/logo-qimen-strategy.jpg";
-const WA_LINK =
-  "https://wa.me/6589593499?text=Hello%20Qimen%20Strategy%2C%20I%20would%20like%20to%20apply%20for%20a%20private%20strategic%20advisory%20consultation.";
+const COURSE_REGISTRATION_LINK = "/course-registration?course=qimen-foundation&batch=2026-09-19";
 
 const advisoryLinks = [
   {
@@ -48,7 +47,6 @@ const advisoryLinks = [
 ];
 
 const primaryLinks = [
-  { href: "/courses", zh: "奇门课程", en: "Courses" },
   { href: "/insights", zh: "案例与洞察", en: "Insights" },
   { href: "/founder", zh: "关于黄启明", en: "About" },
 ];
@@ -101,9 +99,13 @@ export default function Navbar() {
             {lang === "zh" ? "首页" : "Home"}
           </Link>
 
+          <Link href="/courses" className={`text-sm font-semibold transition-colors ${navTextClass}`}>
+            {lang === "zh" ? "奇门课程" : "Courses"}
+          </Link>
+
           <div className="group relative py-3">
             <button type="button" className={`inline-flex items-center gap-1 text-sm transition-colors ${navTextClass}`}>
-              {lang === "zh" ? "顾问服务" : "Advisory"}
+              {lang === "zh" ? "企业陪跑与顾问" : "Advisory"}
               <ChevronDown size={14} />
             </button>
             <div className="invisible absolute left-1/2 top-full w-[430px] -translate-x-1/2 border border-[#d6ad63]/30 bg-black/98 p-3 opacity-0 shadow-2xl transition-all duration-200 group-hover:visible group-hover:opacity-100">
@@ -143,14 +145,12 @@ export default function Navbar() {
             {lang === "zh" ? "EN" : "中文"}
           </button>
 
-          <a
-            href={WA_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href={COURSE_REGISTRATION_LINK}
             className="bg-yellow-600 px-5 py-2.5 text-sm font-semibold text-black transition-all hover:bg-yellow-500"
           >
-            {lang === "zh" ? "申请咨询" : "Apply"}
-          </a>
+            {lang === "zh" ? "课程报名" : "Register"}
+          </Link>
         </div>
 
         <div className="flex items-center gap-3 lg:hidden">
@@ -179,8 +179,14 @@ export default function Navbar() {
           <Link href="/" className="block border-b border-white/10 py-4 text-white/85" onClick={() => setIsOpen(false)}>
             {lang === "zh" ? "首页" : "Home"}
           </Link>
+          <Link href="/courses" className="block border-b border-white/10 py-4 font-semibold text-[#f4dfb0]" onClick={() => setIsOpen(false)}>
+            {lang === "zh" ? "奇门课程｜第一入口" : "Qi Men Courses"}
+          </Link>
+          <Link href={COURSE_REGISTRATION_LINK} className="block border-b border-white/10 py-4 text-[#d6ad63]" onClick={() => setIsOpen(false)}>
+            {lang === "zh" ? "选择班次并报名" : "Select Batch & Register"}
+          </Link>
           <p className="pt-5 text-[0.65rem] font-bold uppercase tracking-[0.2em] text-[#d6ad63]">
-            {lang === "zh" ? "顾问服务" : "Advisory"}
+            {lang === "zh" ? "企业陪跑与顾问" : "Advisory"}
           </p>
           {advisoryLinks.map((link) => (
             <Link
@@ -203,14 +209,13 @@ export default function Navbar() {
               {lang === "zh" ? link.zh : link.en}
             </Link>
           ))}
-          <a
-            href={WA_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href={COURSE_REGISTRATION_LINK}
             className="mt-5 block bg-[#d6ad63] px-5 py-3 text-center font-semibold text-black"
+            onClick={() => setIsOpen(false)}
           >
-            {lang === "zh" ? "申请咨询 · +65 8959 3499" : "Apply for Advisory · +65 8959 3499"}
-          </a>
+            {lang === "zh" ? "课程报名" : "Register for a Course"}
+          </Link>
         </div>
       )}
     </nav>
