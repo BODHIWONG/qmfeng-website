@@ -19,17 +19,20 @@ const baseUrl = "https://www.qmfeng.com";
 
 const corePages = [
   "/",
-  "/courses",
-  "/singapore-qi-men-dun-jia-consultant",
-  "/qi-men-dun-jia-course-singapore",
   "/enterprise-strategic-advisory",
-  "/enterprise-strategic-health-diagnostic",
-  "/qimen-strategy-business",
-  "/personal-life-state-diagnostic",
-  "/relationship-clarity-reading-singapore",
+  "/founder-wealth-investment-advisory",
+  "/executive-career-transition-advisory",
   "/decision",
+  "/relationship-clarity-reading-singapore",
+  "/courses",
+  "/qi-men-dun-jia-course-singapore",
+  "/course-registration",
+  "/singapore-qi-men-dun-jia-consultant",
   "/founder",
   "/insights",
+  "/privacy",
+  "/terms",
+  "/course-policy",
 ];
 
 const allPosts = [
@@ -52,17 +55,28 @@ const allPosts = [
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
 
-  const pageEntries = corePages.map((path) => ({
-    url: `${baseUrl}${path}`,
-    lastModified: now,
-    changeFrequency: path === "/" ? "weekly" : "monthly",
-    priority: path === "/" ? 1 : path === "/courses" || path.includes("enterprise") || path.includes("course") ? 0.9 : 0.8,
-  })) satisfies MetadataRoute.Sitemap;
+  const pageEntries = corePages.map((path) => {
+    const isCoreAdvisory = [
+      "/enterprise-strategic-advisory",
+      "/founder-wealth-investment-advisory",
+      "/executive-career-transition-advisory",
+      "/decision",
+    ].includes(path);
+    const isCourse = path.includes("course") || path === "/courses";
+    const isPolicy = ["/privacy", "/terms", "/course-policy"].includes(path);
+
+    return {
+      url: `${baseUrl}${path}`,
+      lastModified: now,
+      changeFrequency: path === "/" || path === "/courses" ? "weekly" : "monthly",
+      priority: path === "/" ? 1 : isCoreAdvisory || isCourse ? 0.9 : isPolicy ? 0.4 : 0.8,
+    };
+  }) satisfies MetadataRoute.Sitemap;
 
   const insightEntries = allPosts.map((post) => ({
     url: `${baseUrl}/insights/${post.slug}`,
     lastModified: post.date ? new Date(post.date) : now,
-    changeFrequency: "monthly",
+    changeFrequency: "monthly" as const,
     priority: post.category.toLowerCase().includes("business") ? 0.75 : 0.65,
   })) satisfies MetadataRoute.Sitemap;
 

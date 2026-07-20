@@ -1,11 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import {
-  Noto_Serif_SC,
-  Noto_Sans_SC,
-  Lato,
-  Cormorant_Garamond,
-} from "next/font/google";
+import { Cormorant_Garamond, Lato, Noto_Sans_SC, Noto_Serif_SC } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import SiteStructuredData from "@/components/site-structured-data";
 import WhatsAppConversionTracker from "@/components/whatsapp-conversion-tracker";
@@ -50,38 +45,35 @@ const OG_IMAGE =
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.qmfeng.com"),
   title: {
-    default:
-      "Qimen Strategy Singapore｜启明遁甲决策智库",
+    default: "Qimen Strategy Singapore｜Founder Advisory & Weekly Qi Men Courses",
     template: "%s | Qimen Strategy Singapore",
   },
   description:
-    "启明遁甲决策智库（Qimen Strategy）立足新加坡，为企业主、创始人、专业人士与个人重大决策提供奇门遁甲战略决策顾问、风水空间调衡与关系方向梳理。",
+    "启明遁甲决策智库立足新加坡，提供创业老板事业陪跑、财富周期与投资决策辅助、高管事业转型、个人重大决策支持，以及每周奇门遁甲课程。",
   keywords: [
     "Qimen Strategy Singapore",
-    "Qi Men Dun Jia Singapore",
-    "Singapore Qi Men Dun Jia",
-    "Qi Men decision advisory",
-    "Strategic Decision Advisory Singapore",
-    "Strategic Feng Shui Singapore",
-    "Business Feng Shui Singapore",
-    "Feng Shui Alignment Singapore",
-    "Huang Qiming Singapore",
+    "Founder business advisory Singapore",
+    "Entrepreneur strategic advisory Singapore",
+    "Investment decision support Singapore",
+    "Executive career transition Singapore",
+    "Major decision consultation Singapore",
+    "Qi Men Dun Jia course Singapore",
+    "Weekly Qi Men course Singapore",
+    "创业老板事业陪跑",
+    "企业主战略顾问",
+    "创业者财运周期",
+    "投资决策辅助",
+    "高管事业转型",
+    "个人重大决策",
+    "奇门遁甲课程新加坡",
     "启明遁甲决策智库",
-    "启明遁甲",
-    "新加坡奇门遁甲",
-    "奇门遁甲新加坡",
-    "企业战略决策顾问",
-    "企业风水布局",
-    "重大决策咨询"
   ],
   authors: [{ name: "Huang Qiming 黄启明" }],
-  alternates: {
-    canonical: "https://www.qmfeng.com",
-  },
+  alternates: { canonical: "https://www.qmfeng.com" },
   openGraph: {
-    title: "Qimen Strategy Singapore｜启明遁甲决策智库",
+    title: "Qimen Strategy Singapore｜Founder Advisory & Weekly Qi Men Courses",
     description:
-      "See the whole game before you decide. Qimen Strategy reviews timing, environment, people dynamics and risk before major action.",
+      "Strategic decision support for founders, executives and major life transitions, plus structured weekly Qi Men Dun Jia courses in Singapore.",
     url: "https://www.qmfeng.com",
     siteName: "Qimen Strategy｜启明遁甲决策智库",
     images: [
@@ -89,58 +81,36 @@ export const metadata: Metadata = {
         url: OG_IMAGE,
         width: 1200,
         height: 630,
-        alt: "Qimen Strategy Singapore and 启明遁甲决策智库 by Huang Qiming",
+        alt: "Qimen Strategy Singapore founder advisory and Qi Men Dun Jia courses by Huang Qiming",
       },
     ],
-    locale: "zh_SG",
+    locale: "en_SG",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Qimen Strategy Singapore | Strategic Decision Advisory",
+    title: "Qimen Strategy Singapore | Founder Advisory & Qi Men Courses",
     description:
-      "Qi Men Dun Jia strategic decision advisory, Feng Shui alignment and major decision consulting in Singapore.",
+      "Founder business advisory, investment decision support, executive transition and weekly Qi Men Dun Jia courses in Singapore.",
     images: [OG_IMAGE],
   },
-  robots: {
-    index: true,
-    follow: true,
-  },
+  robots: { index: true, follow: true },
   icons: {
     icon: [
-      {
-        url: "/icon-light-32x32.png",
-        media: "(prefers-color-scheme: light)",
-      },
-      {
-        url: "/icon-dark-32x32.png",
-        media: "(prefers-color-scheme: dark)",
-      },
-      {
-        url: "/icon.svg",
-        type: "image/svg+xml",
-      },
+      { url: "/icon-light-32x32.png", media: "(prefers-color-scheme: light)" },
+      { url: "/icon-dark-32x32.png", media: "(prefers-color-scheme: dark)" },
+      { url: "/icon.svg", type: "image/svg+xml" },
     ],
     apple: "/apple-icon.png",
   },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="zh-SG" className="bg-background">
-      <body
-        className={`${notoSerifSC.variable} ${notoSansSC.variable} ${lato.variable} ${cormorant.variable} font-sans antialiased`}
-      >
+    <html lang="en-SG" className="bg-background">
+      <body className={`${notoSerifSC.variable} ${notoSansSC.variable} ${lato.variable} ${cormorant.variable} font-sans antialiased`}>
         <Script async src={googleAdsLoader} strategy="afterInteractive" />
-        <Script
-          id="google-ads-init"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{ __html: googleAdsInit }}
-        />
+        <Script id="google-ads-init" strategy="afterInteractive" dangerouslySetInnerHTML={{ __html: googleAdsInit }} />
         <SiteStructuredData />
         <WhatsAppConversionTracker />
         {children}
