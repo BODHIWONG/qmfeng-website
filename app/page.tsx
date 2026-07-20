@@ -5,12 +5,10 @@ import Navbar from "@/components/navbar";
 import HeroSimple from "@/components/hero-simple";
 import TrustBar from "@/components/trust-bar";
 import ServiceCards from "@/components/service-cards";
-import BrandWorldviewSection from "@/components/brand-worldview-section";
-import DifferentiationSection from "@/components/differentiation-section";
 import QimenMasterSection from "@/components/qimen-master-section";
-import FounderPhilosophySection from "@/components/founder-philosophy-section";
-import CasesSection from "@/components/cases-section";
 import TestimonialsSection from "@/components/testimonials-section";
+import CasesSection from "@/components/cases-section";
+import DifferentiationSection from "@/components/differentiation-section";
 import LeadCaptureForm from "@/components/lead-capture-form";
 import FinalCTA from "@/components/final-cta";
 import Footer from "@/components/footer";
@@ -24,12 +22,10 @@ export default function Home() {
         <HeroSimple />
         <TrustBar />
         <ServiceCards />
-        <BrandWorldviewSection />
-        <DifferentiationSection />
         <QimenMasterSection />
-        <FounderPhilosophySection />
-        <CasesSection />
         <TestimonialsSection />
+        <CasesSection />
+        <DifferentiationSection />
         <LeadCaptureForm />
         <FinalCTA />
         <Footer />
