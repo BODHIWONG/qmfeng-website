@@ -90,36 +90,78 @@ export default function ServiceCards() {
           className="mx-auto mb-12 max-w-4xl text-center md:mb-16"
         >
           <p className="mb-3 text-xs font-bold uppercase tracking-[0.25em] text-[oklch(0.60_0.08_65)]">
-            {t("两大长期发展引擎", "Two Long-Term Growth Engines")}
+            {t("课程第一，企业陪跑第二", "Courses First, Advisory as the Advanced Pathway")}
           </p>
           <h2
             className="mb-5 text-3xl font-bold leading-tight md:text-5xl"
             style={{ fontFamily: "var(--font-cormorant), var(--font-noto-serif), serif", color: "oklch(0.15 0.02 60)" }}
           >
             {t(
-              "高价值决策顾问，与每周奇门课程",
-              "High-Value Strategic Advisory and Weekly Qi Men Courses"
+              "先建立系统认知，再进入真实经营与重大决策支持",
+              "Learn the System First, Then Apply It to Real Decisions"
             )}
           </h2>
           <p className="text-sm leading-7 text-[oklch(0.42_0.02_60)] md:text-base">
             {t(
-              "启明遁甲决策智库不以一次性判断为最终目标。顾问业务聚焦创业老板、高管与个人重大选择；课程业务则通过每周系统教学，帮助学员建立真正能够理解和应用奇门遁甲的基础能力。",
-              "Qimen Strategy is built around two clear pathways: long-term decision support for founders, executives and individuals, and structured weekly courses for learners who want to understand and apply Qi Men Dun Jia responsibly."
+              "每周奇门课程是启明遁甲决策智库的第一入口。学员先通过系统学习理解奇门框架、读局顺序与案例应用；当创业老板面对真实经营瓶颈、投资、人事或转型问题时，再进入企业陪跑与战略顾问服务。",
+              "Weekly Qi Men courses are the primary entry point into Qimen Strategy. Learners first build a structured understanding of the framework and its practical use. Founders facing real business bottlenecks, investment, people or transition decisions may then progress into strategic advisory."
             )}
           </p>
         </motion.div>
 
-        <div className="mb-14 flex items-end justify-between gap-6 border-b border-[oklch(0.84_0.025_70)] pb-5">
+        <motion.div
+          initial={{ opacity: 0, y: 28 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="overflow-hidden border border-[oklch(0.66_0.09_70)] bg-[oklch(0.12_0.02_60)] text-white shadow-[0_22px_70px_rgba(0,0,0,0.14)]"
+        >
+          <div className="grid md:grid-cols-[0.72fr_1.28fr]">
+            <div className="flex min-h-[300px] items-center justify-center border-b border-white/10 bg-[radial-gradient(circle_at_center,rgba(214,173,99,0.22),transparent_58%)] p-10 md:border-b-0 md:border-r">
+              <div className="text-center">
+                <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full border border-[#d6ad63]/60 text-[#e2bd6b]">
+                  <BookOpen size={34} />
+                </div>
+                <p className="mt-6 text-xs font-bold uppercase tracking-[0.24em] text-[#d6ad63]">Qimen Strategy Academy</p>
+                <p className="mt-3 text-3xl font-semibold text-[#f4dfb0]">每周奇门课程</p>
+                <span className="mt-5 inline-block bg-[#d6ad63] px-3 py-1 text-[0.65rem] font-bold uppercase tracking-[0.16em] text-black">
+                  {t("第一业务入口", "Primary Entry")}
+                </span>
+              </div>
+            </div>
+            <div className="p-8 md:p-12">
+              <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#d6ad63]">Regular Saturday–Sunday Intakes</p>
+              <h3 className="mt-4 text-3xl font-semibold leading-tight text-[#f4dfb0] md:text-5xl">
+                {t("从零基础开始，建立清晰、系统、可应用的奇门判断框架。", "Build a Clear and Practical Qi Men Foundation from the Beginning.")}
+              </h3>
+              <p className="mt-6 max-w-3xl text-sm leading-8 text-white/68 md:text-base">
+                {t(
+                  "两天小班教学，涵盖奇门基础框架、九宫、八门、九星、八神、取用神、宫位关系、读局顺序与真实案例。课程不仅是教学产品，也是客户了解启明遁甲方法、专业边界与工作方式的主要入口。",
+                  "The two-day small-group course covers the core framework, Nine Palaces, Eight Doors, Nine Stars, Eight Deities, useful-god selection, palace relationships, chart-reading sequence and practical cases. It is also the main way for clients to understand Qimen Strategy's method, professional boundaries and approach."
+                )}
+              </p>
+              <div className="mt-7 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
+                <Link href="/qi-men-dun-jia-course-singapore" className="inline-flex items-center justify-center bg-[#d6ad63] px-6 py-3.5 text-sm font-bold uppercase tracking-[0.13em] text-black hover:bg-[#f4dfb0]">
+                  {t("查看课程详情", "View Course Details")}
+                </Link>
+                <Link href="/course-registration?course=qimen-foundation&batch=2026-09-19" className="inline-flex items-center justify-center border border-[#d6ad63]/70 px-6 py-3.5 text-sm font-bold uppercase tracking-[0.13em] text-[#f4dfb0] hover:bg-[#d6ad63]/10">
+                  {t("选择班次并报名", "Select Batch & Register")}
+                </Link>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+
+        <div className="mb-14 mt-16 flex items-end justify-between gap-6 border-b border-[oklch(0.84_0.025_70)] pb-5">
           <div>
             <p className="text-xs font-bold uppercase tracking-[0.22em] text-[oklch(0.60_0.08_65)]">
               Qimen Strategy Advisory
             </p>
             <h3 className="mt-2 text-2xl font-bold text-[oklch(0.16_0.02_60)] md:text-4xl">
-              {t("决策顾问服务", "Strategic Advisory Pathways")}
+              {t("企业陪跑与重大决策支持", "Founder Advisory & Major Decision Support")}
             </h3>
           </div>
           <p className="hidden max-w-md text-right text-sm leading-6 text-[oklch(0.46_0.02_60)] md:block">
-            {t("从一次重大判断，到阶段性复盘与长期陪跑。", "From one critical decision to ongoing review and retainer support.")}
+            {t("课程建立认知，顾问服务解决真实经营与重大决策问题。", "Courses build understanding; advisory addresses real business and high-stakes decisions.")}
           </p>
         </div>
 
@@ -141,7 +183,7 @@ export default function ServiceCards() {
               >
                 {service.featured && (
                   <div className="absolute right-5 top-5 bg-[oklch(0.72_0.12_70)] px-3 py-1 text-[0.62rem] font-bold uppercase tracking-[0.16em] text-white">
-                    {t("核心业务", "Core Advisory")}
+                    {t("第二增长引擎", "Advanced Pathway")}
                   </div>
                 )}
                 <div className="flex h-12 w-12 items-center justify-center border border-[oklch(0.70_0.10_70)] text-[oklch(0.60_0.08_65)]">
@@ -170,45 +212,6 @@ export default function ServiceCards() {
             );
           })}
         </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 28 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mt-16 overflow-hidden border border-[oklch(0.66_0.09_70)] bg-[oklch(0.12_0.02_60)] text-white shadow-[0_22px_70px_rgba(0,0,0,0.14)]"
-        >
-          <div className="grid md:grid-cols-[0.72fr_1.28fr]">
-            <div className="flex min-h-[280px] items-center justify-center border-b border-white/10 bg-[radial-gradient(circle_at_center,rgba(214,173,99,0.22),transparent_58%)] p-10 md:border-b-0 md:border-r">
-              <div className="text-center">
-                <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full border border-[#d6ad63]/60 text-[#e2bd6b]">
-                  <BookOpen size={34} />
-                </div>
-                <p className="mt-6 text-xs font-bold uppercase tracking-[0.24em] text-[#d6ad63]">Qimen Strategy Academy</p>
-                <p className="mt-3 text-3xl font-semibold text-[#f4dfb0]">每周奇门课程</p>
-              </div>
-            </div>
-            <div className="p-8 md:p-12">
-              <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#d6ad63]">Weekly Saturday–Sunday Intakes</p>
-              <h3 className="mt-4 text-3xl font-semibold leading-tight text-[#f4dfb0] md:text-5xl">
-                {t("从零基础开始，建立系统而负责任的奇门判断能力。", "Build a clear and responsible Qi Men foundation from the beginning.")}
-              </h3>
-              <p className="mt-6 max-w-3xl text-sm leading-8 text-white/68 md:text-base">
-                {t(
-                  "奇门遁甲基础课程自2026年9月19日起，原则上每周六、周日开班。两天小班教学，涵盖基础框架、九宫、八门、九星、八神、读局顺序与真实案例应用。",
-                  "The two-day Qi Men Dun Jia Foundation Course runs on selected Saturdays and Sundays from 19 September 2026, covering the core framework, Nine Palaces, Eight Doors, Nine Stars, Eight Deities, chart-reading sequence and practical cases."
-                )}
-              </p>
-              <div className="mt-7 flex flex-col gap-4 sm:flex-row">
-                <Link href="/courses" className="inline-flex items-center justify-center bg-[#d6ad63] px-6 py-3.5 text-sm font-bold uppercase tracking-[0.13em] text-black hover:bg-[#f4dfb0]">
-                  {t("查看课程体系", "View Courses")}
-                </Link>
-                <Link href="/course-registration?course=qimen-foundation&batch=2026-09-19" className="inline-flex items-center justify-center border border-[#d6ad63]/70 px-6 py-3.5 text-sm font-bold uppercase tracking-[0.13em] text-[#f4dfb0] hover:bg-[#d6ad63]/10">
-                  {t("选择班次并报名", "Select Batch & Register")}
-                </Link>
-              </div>
-            </div>
-          </div>
-        </motion.div>
       </div>
     </section>
   );
