@@ -4,9 +4,8 @@ import { LanguageProvider } from "@/contexts/language-context";
 import Navbar from "@/components/navbar";
 import HeroSimple from "@/components/hero-simple";
 import TrustBar from "@/components/trust-bar";
-import BrandWorldviewSection from "@/components/brand-worldview-section";
 import ServiceCards from "@/components/service-cards";
-import PopularConsultationSection from "@/components/popular-consultation-section";
+import BrandWorldviewSection from "@/components/brand-worldview-section";
 import DifferentiationSection from "@/components/differentiation-section";
 import QimenMasterSection from "@/components/qimen-master-section";
 import FounderPhilosophySection from "@/components/founder-philosophy-section";
@@ -25,14 +24,13 @@ export default function Home() {
         <HeroSimple />
         <TrustBar />
         <ServiceCards />
-        <PopularConsultationSection />
-        <LeadCaptureForm />
         <BrandWorldviewSection />
         <DifferentiationSection />
         <QimenMasterSection />
         <FounderPhilosophySection />
         <CasesSection />
         <TestimonialsSection />
+        <LeadCaptureForm />
         <FinalCTA />
         <Footer />
         <FloatingActions />
