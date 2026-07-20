@@ -12,6 +12,33 @@ function isWhatsAppLink(href: string) {
   );
 }
 
+function inferServiceType(link: HTMLAnchorElement) {
+  if (link.dataset.conversion) return link.dataset.conversion;
+
+  const path = window.location.pathname;
+  const href = decodeURIComponent(link.href).toLowerCase();
+
+  if (path.includes("enterprise-strategic-advisory") || href.includes("founder business advisory")) {
+    return "founder_business_advisory";
+  }
+  if (path.includes("founder-wealth-investment-advisory") || href.includes("wealth") || href.includes("investment")) {
+    return "wealth_investment_decision";
+  }
+  if (path.includes("executive-career-transition-advisory") || href.includes("executive career")) {
+    return "executive_career_transition";
+  }
+  if (path.includes("relationship-clarity") || href.includes("relationship")) {
+    return "relationship_decision_advisory";
+  }
+  if (path.includes("course") || href.includes("course")) {
+    return "course_enquiry";
+  }
+  if (path === "/" || path.includes("decision")) {
+    return "general_strategic_advisory";
+  }
+  return "general_whatsapp_enquiry";
+}
+
 declare global {
   interface Window {
     gtag?: (...args: unknown[]) => void;
@@ -26,6 +53,16 @@ export default function WhatsAppConversionTracker() {
 
       if (!link || !isWhatsAppLink(link.href)) return;
 
+      const serviceType = inferServiceType(link);
+
+      if (typeof window.gtag === "function") {
+        window.gtag("event", "whatsapp_click", {
+          service_type: serviceType,
+          page_path: window.location.pathname,
+          link_url: link.href,
+        });
+      }
+
       const fireConversion = (callback?: () => void) => {
         if (typeof window.gtag !== "function") {
           callback?.();
@@ -35,7 +72,8 @@ export default function WhatsAppConversionTracker() {
         window.gtag("event", "conversion", {
           send_to: WHATSAPP_CONVERSION_SEND_TO,
           event_category: "contact",
-          event_label: link.href,
+          event_label: serviceType,
+          page_path: window.location.pathname,
           event_callback: callback,
           event_timeout: 1000,
         });
