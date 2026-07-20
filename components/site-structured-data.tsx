@@ -7,94 +7,79 @@ export default function SiteStructuredData() {
     alternateName: [
       "启明遁甲",
       "Qimen Strategy Singapore",
-      "Singapore Qi Men Dun Jia Business Decision Advisory",
-      "新加坡奇门遁甲企业决策顾问",
+      "Qimen Strategy Founder Advisory",
+      "Qimen Strategy Academy",
       "Qi Men Dun Jia Singapore",
-      "Qimen Dunjia Singapore",
-      "Qi Men Dun Jia Course Singapore",
-      "Qimen Strategy Courses Singapore",
-      "Qiming Feng Shui Wisdom"
+      "Qiming Feng Shui Wisdom",
     ],
     legalName: "Qiming Feng Shui Wisdom Pte. Ltd.",
     url: "https://www.qmfeng.com",
     logo: "https://www.qmfeng.com/logo-qimen-strategy.jpg",
     telephone: "+65 8959 3499",
-    priceRange: "From S$396",
     address: {
       "@type": "PostalAddress",
       streetAddress: "Blk 210 New Upper Changi Road #01-729",
       addressLocality: "Singapore",
       postalCode: "460210",
-      addressCountry: "SG"
+      addressCountry: "SG",
     },
-    areaServed: ["Singapore", "Malaysia"],
+    areaServed: ["Singapore", "Malaysia", "Online"],
     founder: {
       "@type": "Person",
       name: "Huang Qiming",
       alternateName: ["黄启明", "Qiming Huang"],
-      jobTitle: "Founder & Strategic Decision Advisor, Qimen Strategy"
+      jobTitle: "Founder & Strategic Decision Advisor, Qimen Strategy",
+      url: "https://www.qmfeng.com/founder",
     },
     description:
-      "启明遁甲决策智库（Qimen Strategy）是由黄启明创立、立足新加坡的奇门遁甲战略决策顾问机构，结合奇门遁甲、企业经营判断、风水空间调衡与人事合作分析，为企业主、创始人、专业人士与个人重大决策提供参考。",
+      "Qimen Strategy is a Singapore-based strategic decision advisory practice and Qi Men Dun Jia academy founded by Huang Qiming. It supports founders, entrepreneurs, executives and individuals before major business, investment, career, relationship and life decisions, and provides structured weekly Qi Men Dun Jia courses.",
     knowsAbout: [
+      "Founder Business Advisory",
+      "Entrepreneur Strategic Advisory",
+      "Business Decision Support",
+      "Founder Wealth Cycle Review",
+      "Investment Decision Support",
+      "Partnership Risk Assessment",
+      "Executive Career Transition",
+      "Mentor and Strategic Network Planning",
+      "Relationship Decision Clarity",
+      "Major Life Decision Support",
       "Qi Men Dun Jia",
-      "Qimen Dunjia",
-      "Qimen Strategy",
-      "Qimen Strategy Courses Singapore",
-      "Qi Men Dun Jia Course Singapore",
       "Qi Men Dun Jia Foundation Course",
-      "Number Energy Course Singapore",
-      "Phone Number Selection Course",
-      "Bazi Course Singapore",
-      "Bazi Life Structure",
-      "Feng Shui Course Singapore",
-      "Feng Shui Layout Course",
-      "Qi Men Dun Jia Business Decision Advisory",
-      "Strategic Decision Advisory",
-      "Enterprise Decision Advisory",
-      "Enterprise Strategic Health Diagnostic",
-      "Business Strategy",
-      "Investment Timing",
-      "Partnership Assessment",
-      "Life and Career Decision Clarity",
-      "Office Feng Shui",
-      "Residential Feng Shui",
-      "Feng Shui Alignment"
+      "Strategic Feng Shui",
+      "People and Partnership Assessment",
     ],
     serviceType: [
-      "Qimen Decision Consultation From S$396",
-      "Qimen Strategy Courses",
+      "Founder Business Advisory",
+      "90-Day Founder Advisory Trial",
+      "Annual Founder Advisory Retainer",
+      "Wealth Cycle and Investment Decision Advisory",
+      "Executive Career Transition Advisory",
+      "Major Personal Decision Consultation",
+      "Relationship Decision Clarity",
       "Qi Men Dun Jia Foundation Course",
-      "Qi Men Dun Jia Course Singapore",
-      "Number Energy and Phone Number Selection Course",
-      "Bazi Life Structure Foundation Course",
-      "Feng Shui Layout and Space Alignment Course",
-      "Enterprise Strategic Health Diagnostic From S$3,996",
-      "Qi Men Dun Jia Consultation",
-      "Qimen Strategy Advisory",
-      "Enterprise Strategic Decision Advisory",
-      "Business Decision Consulting",
-      "Investment Timing Analysis",
-      "People and Partnership Assessment",
-      "Office Feng Shui Consultation",
-      "Residential Feng Shui Consultation"
+      "Weekly Qi Men Dun Jia Course Singapore",
     ],
     openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",
-        dayOfWeek: [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday",
-          "Saturday",
-          "Sunday"
-        ],
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
         opens: "10:00",
-        closes: "20:00"
-      }
-    ]
+        closes: "20:00",
+      },
+    ],
+  };
+
+  const academy = {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "@id": "https://www.qmfeng.com/#academy",
+    name: "Qimen Strategy Academy｜启明遁甲研修",
+    url: "https://www.qmfeng.com/courses",
+    parentOrganization: { "@id": "https://www.qmfeng.com/#organization" },
+    description:
+      "Structured Qi Men Dun Jia courses in Singapore, including a two-day foundation course with regular Saturday and Sunday intakes.",
+    address: { "@id": "https://www.qmfeng.com/#organization" },
   };
 
   const website = {
@@ -102,24 +87,21 @@ export default function SiteStructuredData() {
     "@type": "WebSite",
     "@id": "https://www.qmfeng.com/#website",
     name: "Qimen Strategy Singapore｜启明遁甲决策智库",
-    alternateName: "启明遁甲",
+    alternateName: ["启明遁甲", "Qimen Strategy Academy"],
     url: "https://www.qmfeng.com",
-    publisher: {
-      "@id": "https://www.qmfeng.com/#organization"
-    },
-    inLanguage: ["en-SG", "zh-SG"]
+    publisher: { "@id": "https://www.qmfeng.com/#organization" },
+    inLanguage: ["en-SG", "zh-SG"],
   };
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(organization) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(website) }}
-      />
+      {[organization, academy, website].map((schema) => (
+        <script
+          key={schema["@id"]}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema).replace(/</g, "\\u003c") }}
+        />
+      ))}
     </>
   );
 }
