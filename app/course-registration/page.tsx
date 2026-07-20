@@ -8,6 +8,7 @@ import {
   Copy,
   CreditCard,
   Loader2,
+  MapPin,
   MessageCircle,
   Users,
 } from "lucide-react";
@@ -18,6 +19,9 @@ import FloatingActions from "@/components/floating-actions";
 
 const WHATSAPP_NUMBER = "6589593499";
 const COURSE_FEE = 990;
+const CURRENT_INTAKE = "19–20 September 2026";
+const COURSE_DAYS = "Saturday & Sunday";
+const COURSE_LOCATION = "Blk 210 New Upper Changi Road #01-729, Singapore 460210";
 const COMPANY_NAME = "QIMING FENG SHUI WISDOM PTE. LTD.";
 const PAYNOW_UEN = "202313112R";
 
@@ -40,9 +44,9 @@ const initialForm: CourseRegistrationForm = {
   email: "",
   participantCount: 1,
   participantNames: "",
-  courseDate: "",
-  paymentStatus: "Payment completed",
-  amountPaid: "990",
+  courseDate: CURRENT_INTAKE,
+  paymentStatus: "I will pay shortly",
+  amountPaid: "",
   paymentReference: "",
   notes: "",
 };
@@ -69,7 +73,9 @@ function buildWhatsAppMessage(form: CourseRegistrationForm, registrationId: stri
     `Registration Reference: ${registrationId}`,
     `Registrant Name: ${form.registrantName}`,
     `WhatsApp / Phone: ${form.phone}`,
-    `Course Date / Batch: ${form.courseDate}`,
+    `Course Date: ${form.courseDate}`,
+    `Course Days: ${COURSE_DAYS}`,
+    `Location: ${COURSE_LOCATION}`,
     `Number of Participants: ${form.participantCount}`,
     "Participant Name(s):",
     form.participantNames,
@@ -78,11 +84,11 @@ function buildWhatsAppMessage(form: CourseRegistrationForm, registrationId: stri
     `Expected Total: S$${expectedTotal.toLocaleString("en-SG")}`,
     `Payment Status: ${form.paymentStatus}`,
     `Amount Paid: ${form.amountPaid ? `S$${form.amountPaid}` : "-"}`,
-    `Payment Reference: ${form.paymentReference || "-"}`,
+    `PayNow Reference: ${form.paymentReference || "-"}`,
     form.notes ? `Notes: ${form.notes}` : "",
     "",
-    "PayNow UEN: 202313112R",
-    "QIMING FENG SHUI WISDOM PTE. LTD.",
+    `PayNow UEN: ${PAYNOW_UEN}`,
+    COMPANY_NAME,
     "",
     "Sent from: qmfeng.com/course-registration",
   ]
@@ -100,15 +106,7 @@ function CourseRegistrationPageContent() {
   const expectedTotal = useMemo(() => form.participantCount * COURSE_FEE, [form.participantCount]);
 
   function updateField<K extends keyof CourseRegistrationForm>(field: K, value: CourseRegistrationForm[K]) {
-    setForm((current) => {
-      const updated = { ...current, [field]: value };
-
-      if (field === "participantCount") {
-        updated.amountPaid = String(Number(value) * COURSE_FEE);
-      }
-
-      return updated;
-    });
+    setForm((current) => ({ ...current, [field]: value }));
   }
 
   async function copyPayNow() {
@@ -173,7 +171,7 @@ function CourseRegistrationPageContent() {
                   Thank You for Registering
                 </h1>
                 <p className="mx-auto mb-7 max-w-2xl text-base leading-8 text-[oklch(0.42_0.02_60)]">
-                  Your course registration has been recorded. Please complete PayNow payment if you have not done so, then send the payment screenshot through WhatsApp for seat confirmation.
+                  Your registration has been recorded. Complete the PayNow payment, then send the payment screenshot through WhatsApp for seat confirmation.
                 </p>
 
                 <div className="mb-7 border border-[oklch(0.88_0.018_70)] bg-[oklch(0.98_0.01_75)] p-6 text-left">
@@ -185,6 +183,14 @@ function CourseRegistrationPageContent() {
                     <div>
                       <p className="text-xs font-bold uppercase tracking-[0.15em] text-[oklch(0.50_0.04_65)]">Course Total</p>
                       <p className="mt-2 text-2xl font-bold text-[oklch(0.60_0.08_65)]">S${expectedTotal.toLocaleString("en-SG")}</p>
+                    </div>
+                    <div>
+                      <p className="text-xs font-bold uppercase tracking-[0.15em] text-[oklch(0.50_0.04_65)]">Course Date</p>
+                      <p className="mt-2 font-semibold text-[oklch(0.18_0.02_60)]">{CURRENT_INTAKE}</p>
+                    </div>
+                    <div>
+                      <p className="text-xs font-bold uppercase tracking-[0.15em] text-[oklch(0.50_0.04_65)]">Course Days</p>
+                      <p className="mt-2 font-semibold text-[oklch(0.18_0.02_60)]">{COURSE_DAYS}</p>
                     </div>
                     <div className="md:col-span-2">
                       <p className="text-xs font-bold uppercase tracking-[0.15em] text-[oklch(0.50_0.04_65)]">PayNow</p>
@@ -231,7 +237,10 @@ function CourseRegistrationPageContent() {
                 Qi Men Dun Jia Foundation Course
               </h1>
               <p className="mx-auto max-w-3xl text-base leading-8 text-[oklch(0.42_0.02_60)] md:text-lg">
-                Complete the form below to register your course place. The fee is S$990 per participant and payment is made by PayNow to the company UEN shown below.
+                19–20 September 2026 · Saturday & Sunday · S$990 per participant
+              </p>
+              <p className="mx-auto mt-3 max-w-3xl text-sm leading-7 text-[oklch(0.48_0.02_60)] md:text-base">
+                Suitable for complete beginners. Complete the registration form and make payment by PayNow to confirm your place.
               </p>
             </div>
           </div>
@@ -241,12 +250,21 @@ function CourseRegistrationPageContent() {
           <div className="container">
             <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[0.92fr_1.08fr]">
               <aside className="border border-[oklch(0.88_0.018_70)] bg-black p-8 text-white md:p-10">
-                <p className="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-[oklch(0.72_0.12_70)]">Course Payment Details</p>
-                <h2 className="mb-6 text-3xl font-bold leading-tight md:text-4xl" style={{ fontFamily: "var(--font-cormorant), var(--font-noto-serif), serif" }}>
-                  Register and pay securely by PayNow.
+                <p className="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-[oklch(0.72_0.12_70)]">Course & Payment Details</p>
+                <h2 className="mb-7 text-3xl font-bold leading-tight md:text-4xl" style={{ fontFamily: "var(--font-cormorant), var(--font-noto-serif), serif" }}>
+                  Register for the current intake.
                 </h2>
 
                 <div className="space-y-6">
+                  <div className="flex gap-4">
+                    <CalendarDays className="mt-1 h-5 w-5 shrink-0 text-[oklch(0.72_0.12_70)]" />
+                    <div>
+                      <p className="text-xs font-bold uppercase tracking-[0.14em] text-white/55">Course Date</p>
+                      <p className="mt-2 text-xl font-bold text-[oklch(0.78_0.12_70)]">{CURRENT_INTAKE}</p>
+                      <p className="mt-1 text-sm text-white/70">{COURSE_DAYS}｜周六、周日</p>
+                    </div>
+                  </div>
+
                   <div className="flex gap-4">
                     <CreditCard className="mt-1 h-5 w-5 shrink-0 text-[oklch(0.72_0.12_70)]" />
                     <div>
@@ -257,19 +275,20 @@ function CourseRegistrationPageContent() {
                   </div>
 
                   <div className="flex gap-4">
-                    <Users className="mt-1 h-5 w-5 shrink-0 text-[oklch(0.72_0.12_70)]" />
+                    <MapPin className="mt-1 h-5 w-5 shrink-0 text-[oklch(0.72_0.12_70)]" />
                     <div>
-                      <p className="text-xs font-bold uppercase tracking-[0.14em] text-white/55">PayNow Company</p>
-                      <p className="mt-2 text-sm font-semibold leading-6 text-white">{COMPANY_NAME}</p>
+                      <p className="text-xs font-bold uppercase tracking-[0.14em] text-white/55">Location</p>
+                      <p className="mt-2 text-sm font-semibold leading-6 text-white">{COURSE_LOCATION}</p>
                     </div>
                   </div>
 
                   <div className="flex gap-4">
-                    <CalendarDays className="mt-1 h-5 w-5 shrink-0 text-[oklch(0.72_0.12_70)]" />
+                    <Users className="mt-1 h-5 w-5 shrink-0 text-[oklch(0.72_0.12_70)]" />
                     <div>
-                      <p className="text-xs font-bold uppercase tracking-[0.14em] text-white/55">PayNow UEN</p>
+                      <p className="text-xs font-bold uppercase tracking-[0.14em] text-white/55">PayNow Company</p>
+                      <p className="mt-2 text-sm font-semibold leading-6 text-white">{COMPANY_NAME}</p>
                       <div className="mt-2 flex flex-wrap items-center gap-3">
-                        <p className="text-2xl font-bold text-[oklch(0.78_0.12_70)]">{PAYNOW_UEN}</p>
+                        <p className="text-2xl font-bold text-[oklch(0.78_0.12_70)]">UEN: {PAYNOW_UEN}</p>
                         <button onClick={copyPayNow} type="button" className="inline-flex items-center gap-2 border border-white/20 px-3 py-2 text-xs font-bold uppercase tracking-[0.12em] text-white transition hover:bg-white/10">
                           {copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
                           {copied ? "Copied" : "Copy"}
@@ -280,7 +299,7 @@ function CourseRegistrationPageContent() {
                 </div>
 
                 <div className="mt-8 border border-white/15 bg-white/5 p-5 text-sm leading-7 text-white/75">
-                  Use the registrant’s full name as the PayNow reference. After submitting this form, send the payment screenshot through WhatsApp. Course places are confirmed after payment is verified.
+                  Use the registrant’s full name as the PayNow reference. After submitting, send the payment screenshot through WhatsApp. Places are confirmed after payment verification.
                 </div>
               </aside>
 
@@ -308,16 +327,18 @@ function CourseRegistrationPageContent() {
                     <input type="email" value={form.email} onChange={(event) => updateField("email", event.target.value)} className="w-full border border-[oklch(0.84_0.018_70)] bg-white px-4 py-3 text-sm outline-none transition focus:border-[oklch(0.60_0.08_65)]" placeholder="Optional" />
                   </label>
 
+                  <div className="block">
+                    <span className="mb-2 block text-xs font-bold uppercase tracking-[0.14em] text-[oklch(0.35_0.02_60)]">Course Date</span>
+                    <div className="border border-[oklch(0.84_0.018_70)] bg-[oklch(0.98_0.01_75)] px-4 py-3 text-sm font-semibold text-[oklch(0.25_0.02_60)]">
+                      {CURRENT_INTAKE}
+                    </div>
+                  </div>
+
                   <label className="block">
                     <span className="mb-2 block text-xs font-bold uppercase tracking-[0.14em] text-[oklch(0.35_0.02_60)]">Number of Participants *</span>
                     <select value={form.participantCount} onChange={(event) => updateField("participantCount", Number(event.target.value))} className="w-full border border-[oklch(0.84_0.018_70)] bg-white px-4 py-3 text-sm outline-none transition focus:border-[oklch(0.60_0.08_65)]">
                       {[1, 2, 3, 4, 5, 6].map((count) => <option key={count} value={count}>{count}</option>)}
                     </select>
-                  </label>
-
-                  <label className="block">
-                    <span className="mb-2 block text-xs font-bold uppercase tracking-[0.14em] text-[oklch(0.35_0.02_60)]">Course Date / Batch *</span>
-                    <input required value={form.courseDate} onChange={(event) => updateField("courseDate", event.target.value)} className="w-full border border-[oklch(0.84_0.018_70)] bg-white px-4 py-3 text-sm outline-none transition focus:border-[oklch(0.60_0.08_65)]" placeholder="e.g. 12–13 September 2026" />
                   </label>
 
                   <label className="block md:col-span-2">
@@ -328,14 +349,14 @@ function CourseRegistrationPageContent() {
                   <label className="block">
                     <span className="mb-2 block text-xs font-bold uppercase tracking-[0.14em] text-[oklch(0.35_0.02_60)]">Payment Status *</span>
                     <select value={form.paymentStatus} onChange={(event) => updateField("paymentStatus", event.target.value)} className="w-full border border-[oklch(0.84_0.018_70)] bg-white px-4 py-3 text-sm outline-none transition focus:border-[oklch(0.60_0.08_65)]">
-                      <option>Payment completed</option>
                       <option>I will pay shortly</option>
+                      <option>Payment completed</option>
                     </select>
                   </label>
 
                   <label className="block">
                     <span className="mb-2 block text-xs font-bold uppercase tracking-[0.14em] text-[oklch(0.35_0.02_60)]">Amount Paid (S$)</span>
-                    <input inputMode="decimal" value={form.amountPaid} onChange={(event) => updateField("amountPaid", event.target.value)} className="w-full border border-[oklch(0.84_0.018_70)] bg-white px-4 py-3 text-sm outline-none transition focus:border-[oklch(0.60_0.08_65)]" placeholder={String(expectedTotal)} />
+                    <input inputMode="decimal" value={form.amountPaid} onChange={(event) => updateField("amountPaid", event.target.value)} className="w-full border border-[oklch(0.84_0.018_70)] bg-white px-4 py-3 text-sm outline-none transition focus:border-[oklch(0.60_0.08_65)]" placeholder="Leave blank if not paid yet" />
                   </label>
 
                   <label className="block md:col-span-2">
@@ -374,7 +395,7 @@ function CourseRegistrationPageContent() {
                   )}
                 </button>
                 <p className="mt-4 text-xs leading-6 text-[oklch(0.48_0.02_60)]">
-                  By submitting, you confirm that the information provided is accurate. Course places are confirmed only after payment has been received and verified.
+                  By submitting, you confirm that the information provided is accurate. Places are confirmed only after payment has been received and verified.
                 </p>
               </form>
             </div>
