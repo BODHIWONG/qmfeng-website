@@ -1,100 +1,67 @@
 export default function SiteStructuredData() {
   const organization = {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
+    "@type": ["ProfessionalService", "EducationalOrganization"],
     "@id": "https://www.qmfeng.com/#organization",
     name: "启明遁甲决策智库 Qimen Strategy",
     alternateName: [
       "启明遁甲",
       "Qimen Strategy Singapore",
-      "Singapore Qi Men Dun Jia Business Decision Advisory",
-      "新加坡奇门遁甲企业决策顾问",
-      "Qi Men Dun Jia Singapore",
-      "Qimen Dunjia Singapore",
+      "Qimen Strategy Advisory",
+      "Qimen Strategy Academy",
       "Qi Men Dun Jia Course Singapore",
-      "Qimen Strategy Courses Singapore",
-      "Qiming Feng Shui Wisdom"
+      "Qiming Feng Shui Wisdom",
     ],
     legalName: "Qiming Feng Shui Wisdom Pte. Ltd.",
     url: "https://www.qmfeng.com",
     logo: "https://www.qmfeng.com/logo-qimen-strategy.jpg",
     telephone: "+65 8959 3499",
-    priceRange: "From S$396",
     address: {
       "@type": "PostalAddress",
       streetAddress: "Blk 210 New Upper Changi Road #01-729",
       addressLocality: "Singapore",
       postalCode: "460210",
-      addressCountry: "SG"
+      addressCountry: "SG",
     },
     areaServed: ["Singapore", "Malaysia"],
     founder: {
       "@type": "Person",
       name: "Huang Qiming",
       alternateName: ["黄启明", "Qiming Huang"],
-      jobTitle: "Founder & Strategic Decision Advisor, Qimen Strategy"
+      jobTitle: "Founder & Strategic Decision Advisor, Qimen Strategy",
     },
     description:
-      "启明遁甲决策智库（Qimen Strategy）是由黄启明创立、立足新加坡的奇门遁甲战略决策顾问机构，结合奇门遁甲、企业经营判断、风水空间调衡与人事合作分析，为企业主、创始人、专业人士与个人重大决策提供参考。",
+      "Qimen Strategy is a Singapore-based strategic decision advisory and education practice serving founders, executives and individuals before major decisions, while offering weekly Qi Men Dun Jia foundation courses.",
     knowsAbout: [
       "Qi Men Dun Jia",
-      "Qimen Dunjia",
-      "Qimen Strategy",
-      "Qimen Strategy Courses Singapore",
-      "Qi Men Dun Jia Course Singapore",
-      "Qi Men Dun Jia Foundation Course",
-      "Number Energy Course Singapore",
-      "Phone Number Selection Course",
-      "Bazi Course Singapore",
-      "Bazi Life Structure",
-      "Feng Shui Course Singapore",
-      "Feng Shui Layout Course",
-      "Qi Men Dun Jia Business Decision Advisory",
       "Strategic Decision Advisory",
-      "Enterprise Decision Advisory",
-      "Enterprise Strategic Health Diagnostic",
-      "Business Strategy",
-      "Investment Timing",
-      "Partnership Assessment",
-      "Life and Career Decision Clarity",
-      "Office Feng Shui",
-      "Residential Feng Shui",
-      "Feng Shui Alignment"
+      "Founder Business Advisory",
+      "Business Bottleneck Diagnosis",
+      "Investment Decision Support",
+      "Executive Career Transition",
+      "People and Partnership Assessment",
+      "Relationship Decision Clarity",
+      "Qi Men Dun Jia Education",
+      "Qi Men Dun Jia Foundation Course",
+      "Feng Shui Alignment",
     ],
     serviceType: [
-      "Qimen Decision Consultation From S$396",
-      "Qimen Strategy Courses",
-      "Qi Men Dun Jia Foundation Course",
-      "Qi Men Dun Jia Course Singapore",
-      "Number Energy and Phone Number Selection Course",
-      "Bazi Life Structure Foundation Course",
-      "Feng Shui Layout and Space Alignment Course",
-      "Enterprise Strategic Health Diagnostic From S$3,996",
-      "Qi Men Dun Jia Consultation",
-      "Qimen Strategy Advisory",
-      "Enterprise Strategic Decision Advisory",
-      "Business Decision Consulting",
-      "Investment Timing Analysis",
-      "People and Partnership Assessment",
-      "Office Feng Shui Consultation",
-      "Residential Feng Shui Consultation"
+      "Founder Business Advisory",
+      "90-Day Founder Strategic Support",
+      "Wealth Cycle and Investment Decision Support",
+      "Executive Career Transition Advisory",
+      "Relationship and Major Life Decision Support",
+      "Single Qimen Decision Consultation",
+      "Weekly Qi Men Dun Jia Foundation Course",
     ],
     openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",
-        dayOfWeek: [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday",
-          "Saturday",
-          "Sunday"
-        ],
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
         opens: "10:00",
-        closes: "20:00"
-      }
-    ]
+        closes: "20:00",
+      },
+    ],
   };
 
   const website = {
@@ -104,22 +71,14 @@ export default function SiteStructuredData() {
     name: "Qimen Strategy Singapore｜启明遁甲决策智库",
     alternateName: "启明遁甲",
     url: "https://www.qmfeng.com",
-    publisher: {
-      "@id": "https://www.qmfeng.com/#organization"
-    },
-    inLanguage: ["en-SG", "zh-SG"]
+    publisher: { "@id": "https://www.qmfeng.com/#organization" },
+    inLanguage: ["en-SG", "zh-SG"],
   };
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(organization) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(website) }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organization).replace(/</g, "\\u003c") }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(website).replace(/</g, "\\u003c") }} />
     </>
   );
 }
