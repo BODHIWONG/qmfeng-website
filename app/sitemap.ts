@@ -26,7 +26,6 @@ const corePages = [
   "/relationship-clarity-reading-singapore",
   "/courses",
   "/qi-men-dun-jia-course-singapore",
-  "/course-registration",
   "/singapore-qi-men-dun-jia-consultant",
   "/founder",
   "/insights",
@@ -64,11 +63,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ].includes(path);
     const isCourse = path.includes("course") || path === "/courses";
     const isPolicy = ["/privacy", "/terms", "/course-policy"].includes(path);
+    const isFrequentlyUpdated = path === "/" || path === "/courses" || path === "/qi-men-dun-jia-course-singapore";
 
     return {
       url: `${baseUrl}${path}`,
       lastModified: now,
-      changeFrequency: path === "/" || path === "/courses" ? "weekly" : "monthly",
+      changeFrequency: isFrequentlyUpdated ? "weekly" : isPolicy ? "yearly" : "monthly",
       priority: path === "/" ? 1 : isCoreAdvisory || isCourse ? 0.9 : isPolicy ? 0.4 : 0.8,
     };
   }) satisfies MetadataRoute.Sitemap;
