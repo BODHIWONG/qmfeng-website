@@ -30,11 +30,51 @@ type DeliveryResult = {
   detail?: string;
 };
 
+type CourseMode = "weekly" | "interest" | "application";
+
 const CATALOG = {
-  "qimen-foundation": { name: "Qi Men Dun Jia Foundation Course", zh: "奇门遁甲基础课程", fee: 990 },
-  "number-energy": { name: "Number Energy & Phone Number Selection Course", zh: "数字能量与手机号码课程", fee: null },
-  "bazi-foundation": { name: "Bazi Life Structure Foundation Course", zh: "八字命理基础课程", fee: null },
-  "feng-shui-layout": { name: "Feng Shui Layout & Space Alignment Course", zh: "風水布局实战课程", fee: null },
+  "qimen-foundation": {
+    name: "Qi Men Dun Jia Foundation Course",
+    zh: "奇门遁甲基础课程",
+    fee: 990,
+    mode: "weekly" as CourseMode,
+  },
+  "qimen-intermediate": {
+    name: "Qi Men Dun Jia Intermediate Course",
+    zh: "奇门遁甲中级课程",
+    fee: null,
+    mode: "interest" as CourseMode,
+  },
+  "qimen-advanced": {
+    name: "Qi Men Dun Jia Advanced Course",
+    zh: "奇门遁甲高级课程",
+    fee: null,
+    mode: "interest" as CourseMode,
+  },
+  "qimen-disciple": {
+    name: "Qi Men Dun Jia Disciple Programme",
+    zh: "奇门遁甲弟子班",
+    fee: null,
+    mode: "application" as CourseMode,
+  },
+  "number-energy": {
+    name: "Number Energy & Phone Number Selection Course",
+    zh: "数字能量与手机号码课程",
+    fee: null,
+    mode: "interest" as CourseMode,
+  },
+  "bazi-foundation": {
+    name: "Bazi Life Structure Foundation Course",
+    zh: "八字命理基础课程",
+    fee: null,
+    mode: "interest" as CourseMode,
+  },
+  "feng-shui-layout": {
+    name: "Feng Shui Layout & Space Alignment Course",
+    zh: "風水布局实战课程",
+    fee: null,
+    mode: "interest" as CourseMode,
+  },
 } as const;
 
 function clean(value: unknown, max = 2000) {
@@ -66,7 +106,8 @@ function message(record: Record<string, unknown>) {
     `Registration ID: ${record.registrationId}`,
     `Received: ${record.receivedAt}`,
     `Course: ${record.courseName} / ${record.courseNameZh}`,
-    `Batch: ${record.courseBatch}`,
+    `Registration Mode: ${record.registrationMode}`,
+    `Batch / Status: ${record.courseBatch}`,
     `Registrant: ${record.registrantName}`,
     `WhatsApp: ${record.phone}`,
     `Email: ${record.email || "-"}`,
@@ -78,21 +119,38 @@ function message(record: Record<string, unknown>) {
     `Amount Paid: ${record.amountPaid || "-"}`,
     `PayNow Reference: ${record.paymentReference || "-"}`,
     `Policy Accepted: ${record.acceptedPolicy ? "Yes" : "No"}`,
-    `Notes: ${record.notes || "-"}`,
+    `Learning Background / Notes: ${record.notes || "-"}`,
     `Page: ${record.pageUrl || "-"}`,
   ].join("\n");
 }
 
 function emailHtml(record: Record<string, unknown>, internal: boolean) {
-  const title = internal ? "New Course Registration" : "Course Registration Received";
+  const isApplication = record.registrationMode === "application";
+  const isInterest = record.registrationMode === "interest";
+  const title = internal
+    ? isApplication
+      ? "New Disciple Programme Application"
+      : isInterest
+        ? "New Course Interest Registration"
+        : "New Course Registration"
+    : isApplication
+      ? "Disciple Programme Application Received"
+      : isInterest
+        ? "Course Interest Registration Received"
+        : "Course Registration Received";
   const intro = internal
-    ? "A new course registration has been submitted through qmfeng.com."
-    : "Thank you for submitting your course registration. Your place is not confirmed until payment has been verified and written confirmation has been issued.";
+    ? "A new course submission has been received through qmfeng.com."
+    : isApplication
+      ? "Thank you for submitting your interest in the Qi Men Dun Jia Disciple Programme. Admission is subject to assessment and written confirmation."
+      : isInterest
+        ? "Thank you for registering your interest. Dates, fees and admission are not confirmed until Qimen Strategy Academy contacts you in writing."
+        : "Thank you for submitting your course registration. Your place is not confirmed until payment has been verified and written confirmation has been issued.";
 
   const rows = [
     ["Reference", record.registrationId],
     ["Course", `${record.courseName} / ${record.courseNameZh}`],
-    ["Batch", record.courseBatch],
+    ["Registration Mode", record.registrationMode],
+    ["Batch / Status", record.courseBatch],
     ["Registrant", record.registrantName],
     ["WhatsApp", record.phone],
     ["Email", record.email || "-"],
@@ -102,6 +160,7 @@ function emailHtml(record: Record<string, unknown>, internal: boolean) {
     ["Payment Status", record.paymentStatus || "-"],
     ["Amount Paid", record.amountPaid || "-"],
     ["PayNow Reference", record.paymentReference || "-"],
+    ["Learning Background / Notes", record.notes || "-"],
   ];
 
   return `<!doctype html>
@@ -153,6 +212,7 @@ async function lead(url: string, record: Record<string, unknown>) {
   endpoint.searchParams.set("registration_id", String(record.registrationId || ""));
   endpoint.searchParams.set("course_id", String(record.courseId || ""));
   endpoint.searchParams.set("batch_id", String(record.batchId || ""));
+  endpoint.searchParams.set("registration_mode", String(record.registrationMode || ""));
   endpoint.searchParams.set("policy_accepted", record.acceptedPolicy ? "yes" : "no");
   endpoint.searchParams.set("notification_email", process.env.COURSE_ADMIN_EMAIL || "info@qmfeng.com");
   endpoint.searchParams.set("payload", JSON.stringify(record));
@@ -206,6 +266,7 @@ export async function POST(request: NextRequest) {
       courseId,
       courseName: course.name,
       courseNameZh: course.zh,
+      registrationMode: course.mode,
       batchId: clean(body.batchId, 100),
       courseBatch: clean(body.courseBatch, 300),
       courseBatchStatus: clean(body.courseBatchStatus, 50),
@@ -216,10 +277,10 @@ export async function POST(request: NextRequest) {
       email: clean(body.email, 200),
       participantCount,
       participantNames: clean(body.participantNames, 1000),
-      paymentStatus: clean(body.paymentStatus, 100),
-      amountPaid: clean(body.amountPaid, 100),
-      paymentReference: clean(body.paymentReference, 200),
-      notes: clean(body.notes, 1000),
+      paymentStatus: course.mode === "weekly" ? clean(body.paymentStatus, 100) : "Not applicable",
+      amountPaid: course.mode === "weekly" ? clean(body.amountPaid, 100) : "",
+      paymentReference: course.mode === "weekly" ? clean(body.paymentReference, 200) : "",
+      notes: clean(body.notes, 1500),
       acceptedPolicy: true,
       companyName: "QIMING FENG SHUI WISDOM PTE. LTD.",
       payNowUen: "202313112R",
@@ -229,9 +290,16 @@ export async function POST(request: NextRequest) {
       utm: cleanRecord(body.utm),
     };
 
-    if (!record.registrantName || !record.phone || !record.participantNames || !record.courseBatch) {
+    if (!record.registrantName || !record.phone || !record.email || !record.participantNames || !record.courseBatch) {
       return NextResponse.json(
-        { ok: false, error: "Name, WhatsApp, participant name(s), course and batch are required." },
+        { ok: false, error: "Name, WhatsApp, email, participant name(s), course and registration type are required." },
+        { status: 400 }
+      );
+    }
+
+    if (course.mode !== "weekly" && !record.notes) {
+      return NextResponse.json(
+        { ok: false, error: "Please share your current learning background and goals for this course level." },
         { status: 400 }
       );
     }
@@ -276,19 +344,28 @@ export async function POST(request: NextRequest) {
     }
 
     const adminEmail = process.env.COURSE_ADMIN_EMAIL || "info@qmfeng.com";
+    const subjectPrefix = course.mode === "application"
+      ? "New Disciple Programme Application"
+      : course.mode === "interest"
+        ? "New Course Interest Registration"
+        : "New Course Registration";
+    const registrantSubjectPrefix = course.mode === "application"
+      ? "Disciple Programme Application Received"
+      : course.mode === "interest"
+        ? "Course Interest Registration Received"
+        : "Course Registration Received";
+
     const adminDelivery = await sendResendEmail({
       to: adminEmail,
-      subject: `New Course Registration ${record.registrationId}`,
+      subject: `${subjectPrefix} ${record.registrationId}`,
       html: emailHtml(record, true),
     });
 
-    const registrantDelivery = record.email
-      ? await sendResendEmail({
-          to: record.email,
-          subject: `Course Registration Received — ${record.registrationId}`,
-          html: emailHtml(record, false),
-        })
-      : { ok: false, detail: "email_not_provided" };
+    const registrantDelivery = await sendResendEmail({
+      to: record.email,
+      subject: `${registrantSubjectPrefix} — ${record.registrationId}`,
+      html: emailHtml(record, false),
+    });
 
     console.info("[QimenCourseRegistrationStored]", {
       registrationId: record.registrationId,
@@ -296,6 +373,7 @@ export async function POST(request: NextRequest) {
       adminEmail: adminDelivery,
       registrantEmail: registrantDelivery,
       courseId,
+      registrationMode: course.mode,
       batchId: record.batchId,
     });
 

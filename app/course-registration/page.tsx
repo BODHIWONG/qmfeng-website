@@ -22,14 +22,18 @@ const QIMEN_SOLD_OUT_BATCHES = [
   "2026-09-12",
 ];
 
-type BatchStatus = "available" | "full" | "interest";
+type BatchStatus = "available" | "full" | "interest" | "application";
+type RegistrationMode = "weekly" | "interest" | "application";
 type Course = {
   id: string;
   name: string;
   zh: string;
   fee: number | null;
+  group: "qimen" | "other";
+  registrationMode: RegistrationMode;
   availableFrom?: string;
   soldOutBatches?: string[];
+  prerequisite?: string;
 };
 type Batch = { id: string; label: string; status: BatchStatus };
 type FormState = {
@@ -47,6 +51,13 @@ type FormState = {
   website: string;
   acceptedPolicy: boolean;
 };
+type SubmissionResult = {
+  registrationId: string;
+  notifications?: {
+    adminEmail?: { ok?: boolean };
+    registrantEmail?: { ok?: boolean };
+  };
+};
 
 const COURSES: Course[] = [
   {
@@ -54,12 +65,63 @@ const COURSES: Course[] = [
     name: "Qi Men Dun Jia Foundation Course",
     zh: "奇门遁甲基础课程",
     fee: 990,
+    group: "qimen",
+    registrationMode: "weekly",
     availableFrom: "2026-09-19",
     soldOutBatches: QIMEN_SOLD_OUT_BATCHES,
+    prerequisite: "No prior Qi Men knowledge required｜无需奇门基础",
   },
-  { id: "number-energy", name: "Number Energy & Phone Number Selection Course", zh: "数字能量与手机号码课程", fee: null },
-  { id: "bazi-foundation", name: "Bazi Life Structure Foundation Course", zh: "八字命理基础课程", fee: null },
-  { id: "feng-shui-layout", name: "Feng Shui Layout & Space Alignment Course", zh: "風水布局实战课程", fee: null },
+  {
+    id: "qimen-intermediate",
+    name: "Qi Men Dun Jia Intermediate Course",
+    zh: "奇门遁甲中级课程",
+    fee: null,
+    group: "qimen",
+    registrationMode: "interest",
+    prerequisite: "Foundation Course completion or equivalent knowledge, subject to review｜须完成基础课程或具备同等基础",
+  },
+  {
+    id: "qimen-advanced",
+    name: "Qi Men Dun Jia Advanced Course",
+    zh: "奇门遁甲高级课程",
+    fee: null,
+    group: "qimen",
+    registrationMode: "interest",
+    prerequisite: "Intermediate Course completion or equivalent capability, subject to review｜须完成中级课程或具备同等能力",
+  },
+  {
+    id: "qimen-disciple",
+    name: "Qi Men Dun Jia Disciple Programme",
+    zh: "奇门遁甲弟子班",
+    fee: null,
+    group: "qimen",
+    registrationMode: "application",
+    prerequisite: "Application and assessment only. Admission is not automatic｜须提交申请并经过评估，非公开直接录取",
+  },
+  {
+    id: "number-energy",
+    name: "Number Energy & Phone Number Selection Course",
+    zh: "数字能量与手机号码课程",
+    fee: null,
+    group: "other",
+    registrationMode: "interest",
+  },
+  {
+    id: "bazi-foundation",
+    name: "Bazi Life Structure Foundation Course",
+    zh: "八字命理基础课程",
+    fee: null,
+    group: "other",
+    registrationMode: "interest",
+  },
+  {
+    id: "feng-shui-layout",
+    name: "Feng Shui Layout & Space Alignment Course",
+    zh: "風水布局实战课程",
+    fee: null,
+    group: "other",
+    registrationMode: "interest",
+  },
 ];
 
 const INITIAL: FormState = {
@@ -121,12 +183,22 @@ function formatBatchLabel(iso: string) {
   return `${fromDay}–${toText} (Saturday & Sunday)`;
 }
 
-function weeklyBatches(course: Course): Batch[] {
-  if (!course.availableFrom) {
+function courseBatches(course: Course): Batch[] {
+  if (course.registrationMode === "application") {
+    return [
+      {
+        id: "application-interest",
+        label: "Application of Interest — Admission by assessment / 弟子班意向申请 — 录取须经评估",
+        status: "application",
+      },
+    ];
+  }
+
+  if (course.registrationMode === "interest" || !course.availableFrom) {
     return [
       {
         id: "interest-list",
-        label: "Interest Registration — Date to be confirmed",
+        label: "Interest Registration — Date and fee to be confirmed / 意向登记 — 日期与费用待公布",
         status: "interest",
       },
     ];
@@ -167,7 +239,7 @@ function collectUtm() {
 function PageContent() {
   const [form, setForm] = useState<FormState>(INITIAL);
   const [requestedBatch, setRequestedBatch] = useState("");
-  const [registrationId, setRegistrationId] = useState("");
+  const [submission, setSubmission] = useState<SubmissionResult | null>(null);
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState("");
   const [copied, setCopied] = useState(false);
@@ -176,7 +248,7 @@ function PageContent() {
     () => COURSES.find((item) => item.id === form.courseId) || COURSES[0],
     [form.courseId]
   );
-  const batches = useMemo(() => weeklyBatches(course), [course]);
+  const batches = useMemo(() => courseBatches(course), [course]);
   const availableBatches = useMemo(
     () => batches.filter((item) => item.status !== "full"),
     [batches]
@@ -186,6 +258,8 @@ function PageContent() {
     [availableBatches, batches, form.batchId]
   );
   const total = course.fee ? course.fee * form.participantCount : null;
+  const isPaidCourse = typeof course.fee === "number";
+  const isInterestOnly = course.registrationMode !== "weekly";
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
@@ -268,11 +342,11 @@ function PageContent() {
           utm: collectUtm(),
         }),
       });
-      const result = await response.json();
+      const result = (await response.json()) as SubmissionResult & { ok?: boolean; error?: string };
       if (!response.ok || !result?.ok || !result?.registrationId) {
         throw new Error(result?.error || "Unable to submit the registration.");
       }
-      setRegistrationId(result.registrationId);
+      setSubmission(result);
       window.scrollTo({ top: 0, behavior: "smooth" });
     } catch (submissionError) {
       setError(
@@ -285,27 +359,30 @@ function PageContent() {
     }
   }
 
+  const registrationId = submission?.registrationId || "";
   const whatsappMessage = [
-    "Hello, I have submitted a Qimen Strategy course registration.",
+    "Hello, I have submitted a Qimen Strategy Academy course registration.",
     `Registration Reference: ${registrationId}`,
     `Course: ${course.name} / ${course.zh}`,
-    `Batch: ${selectedBatch?.label || "-"}`,
+    `Batch / Status: ${selectedBatch?.label || "-"}`,
     `Registrant: ${form.registrantName}`,
     `WhatsApp: ${form.phone}`,
+    `Email: ${form.email}`,
     `Participants: ${form.participantCount}`,
     `Participant Names: ${form.participantNames}`,
     course.fee ? `Fee: S$${course.fee} per participant` : "Fee: To be confirmed",
     total ? `Total: S$${total}` : "",
-    `Payment Status: ${form.paymentStatus}`,
-    `Amount Paid: ${form.amountPaid || "-"}`,
-    `PayNow Reference: ${form.paymentReference || "-"}`,
+    isPaidCourse ? `Payment Status: ${form.paymentStatus}` : "",
+    isPaidCourse ? `Amount Paid: ${form.amountPaid || "-"}` : "",
+    isPaidCourse ? `PayNow Reference: ${form.paymentReference || "-"}` : "",
     `Location: ${LOCATION}`,
   ]
     .filter(Boolean)
     .join("\n");
   const waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(whatsappMessage)}`;
 
-  if (registrationId) {
+  if (submission) {
+    const registrantEmailSent = submission.notifications?.registrantEmail?.ok === true;
     return (
       <div className="min-h-screen bg-[oklch(0.97_0.012_75)]">
         <Navbar />
@@ -317,12 +394,19 @@ function PageContent() {
                 <p className="text-xs font-bold uppercase tracking-[0.2em] text-[oklch(0.60_0.08_65)]">
                   Registration Recorded · 报名资料已记录
                 </p>
-                <h1 className="mt-3 text-4xl font-bold">Thank You for Registering</h1>
+                <h1 className="mt-3 text-4xl font-bold">
+                  {isInterestOnly ? "Interest Registration Received" : "Thank You for Registering"}
+                </h1>
                 <div className="my-7 border bg-[oklch(0.98_0.01_75)] p-5 text-left text-sm leading-7">
                   <p><strong>Reference:</strong> {registrationId}</p>
-                  <p><strong>Course:</strong> {course.name}</p>
-                  <p><strong>Batch:</strong> {selectedBatch?.label}</p>
+                  <p><strong>Course:</strong> {course.name} / {course.zh}</p>
+                  <p><strong>Batch / Status:</strong> {selectedBatch?.label}</p>
                   {total && <p><strong>Total:</strong> S${total.toLocaleString("en-SG")}</p>}
+                </div>
+                <div className={`mb-6 border p-4 text-sm leading-6 ${registrantEmailSent ? "border-emerald-200 bg-emerald-50 text-emerald-800" : "border-amber-200 bg-amber-50 text-amber-800"}`}>
+                  {registrantEmailSent
+                    ? `A confirmation email has been sent to ${form.email}.`
+                    : "Your registration was recorded. Please use the WhatsApp button below so our team can confirm receipt directly."}
                 </div>
                 <a
                   href={waUrl}
@@ -334,7 +418,9 @@ function PageContent() {
                   Send Details on WhatsApp
                 </a>
                 <p className="mt-4 text-xs leading-6 text-black/55">
-                  A paid place is confirmed only after payment verification and written acknowledgement.
+                  {isInterestOnly
+                    ? "Interest registration does not guarantee admission, a course date or a confirmed fee."
+                    : "A paid place is confirmed only after payment verification and written acknowledgement."}
                 </p>
               </div>
             </div>
@@ -348,6 +434,8 @@ function PageContent() {
 
   const soldOutBatches = batches.filter((item) => item.status === "full");
   const openBatches = batches.filter((item) => item.status !== "full");
+  const qimenCourses = COURSES.filter((item) => item.group === "qimen");
+  const otherCourses = COURSES.filter((item) => item.group === "other");
 
   return (
     <div className="min-h-screen bg-[oklch(0.97_0.012_75)]">
@@ -358,9 +446,9 @@ function PageContent() {
             <p className="text-xs font-bold uppercase tracking-[0.25em] text-[oklch(0.60_0.08_65)]">
               Qimen Strategy Academy · 启明遁甲研修
             </p>
-            <h1 className="mt-4 text-4xl font-bold md:text-6xl">Course Registration & PayNow</h1>
+            <h1 className="mt-4 text-4xl font-bold md:text-6xl">Course Registration & Interest Application</h1>
             <p className="mx-auto mt-5 max-w-3xl leading-8 text-black/65">
-              Earlier August and September weekend batches are displayed as full. The next available Qi Men foundation batch is 19–20 September 2026.
+              Choose from Foundation, Intermediate, Advanced or the application-based Disciple Programme. Only the Foundation Course is currently open for weekly batch selection and PayNow registration.
             </p>
           </div>
         </section>
@@ -373,17 +461,20 @@ function PageContent() {
                 <h2 className="mt-3 text-3xl font-bold">{course.name}</h2>
                 <p className="mt-2 text-lg font-semibold text-[oklch(0.78_0.12_70)]">{course.zh}</p>
                 <div className="mt-7 space-y-4 text-sm leading-7">
-                  <p><strong>Batch:</strong><br />{selectedBatch?.label}</p>
+                  <p><strong>Registration:</strong><br />{selectedBatch?.label}</p>
+                  {course.prerequisite && <p><strong>Entry Requirement:</strong><br />{course.prerequisite}</p>}
                   <p><strong>Location:</strong><br />{LOCATION}</p>
-                  {course.fee && (
+                  {course.fee ? (
                     <p>
                       <strong>Fee:</strong><br />
                       <span className="text-3xl text-[oklch(0.78_0.12_70)]">S${course.fee}</span> per participant
                     </p>
+                  ) : (
+                    <p><strong>Fee:</strong><br />To be confirmed after course details and eligibility are finalised.</p>
                   )}
                 </div>
 
-                {course.fee && (
+                {isPaidCourse && (
                   <div className="mt-7 border border-white/20 bg-white/5 p-5 text-center">
                     <p className="text-xs font-bold uppercase tracking-wider text-white/60">Scan to PayNow</p>
                     <img
@@ -408,7 +499,11 @@ function PageContent() {
                 )}
 
                 <div className="mt-7 border-t border-white/15 pt-5 text-xs leading-6 text-white/55">
-                  <p>Registration is subject to availability and written confirmation.</p>
+                  <p>
+                    {isInterestOnly
+                      ? "Interest registration is subject to eligibility review and does not guarantee admission."
+                      : "Registration is subject to availability and written confirmation."}
+                  </p>
                   <Link href="/course-policy" className="mt-2 inline-block text-[#d6ad63] underline underline-offset-4">
                     Read Course Registration Policy
                   </Link>
@@ -430,14 +525,21 @@ function PageContent() {
                   <label className="md:col-span-2">
                     <span className={labelClass}>Course Name *</span>
                     <select className={inputClass} value={form.courseId} onChange={(event) => changeCourse(event.target.value)}>
-                      {COURSES.map((item) => (
-                        <option key={item.id} value={item.id}>{item.name}｜{item.zh}</option>
-                      ))}
+                      <optgroup label="Qi Men Dun Jia Course Pathway / 奇门遁甲课程体系">
+                        {qimenCourses.map((item) => (
+                          <option key={item.id} value={item.id}>{item.name}｜{item.zh}</option>
+                        ))}
+                      </optgroup>
+                      <optgroup label="Other Future Modules / 其他未来课程">
+                        {otherCourses.map((item) => (
+                          <option key={item.id} value={item.id}>{item.name}｜{item.zh}</option>
+                        ))}
+                      </optgroup>
                     </select>
                   </label>
 
                   <label className="md:col-span-2">
-                    <span className={labelClass}>Course Batch *</span>
+                    <span className={labelClass}>{isInterestOnly ? "Registration Type *" : "Course Batch *"}</span>
                     <select
                       required
                       className={inputClass}
@@ -451,15 +553,20 @@ function PageContent() {
                           ))}
                         </optgroup>
                       )}
-                      <optgroup label={course.availableFrom ? "Available batches / 可报名班次" : "Interest registration"}>
+                      <optgroup label={isInterestOnly ? "Interest / Application" : "Available batches / 可报名班次"}>
                         {openBatches.map((item) => (
                           <option key={item.id} value={item.id}>{item.label}</option>
                         ))}
                       </optgroup>
                     </select>
-                    {course.availableFrom && (
+                    {course.registrationMode === "weekly" && (
                       <small className="mt-2 block leading-6 text-black/50">
                         August 8–9, 15–16, 22–23, 29–30 and September 5–6, 12–13 are full. Available weekly batches continue automatically from 19–20 September 2026.
+                      </small>
+                    )}
+                    {isInterestOnly && (
+                      <small className="mt-2 block leading-6 text-black/50">
+                        Dates, fees and admission are not yet confirmed. We will contact you after reviewing your current learning level and course interest.
                       </small>
                     )}
                   </label>
@@ -473,8 +580,8 @@ function PageContent() {
                     <input required className={inputClass} value={form.phone} onChange={(event) => update("phone", event.target.value)} placeholder="+65 ..." />
                   </label>
                   <label className="md:col-span-2">
-                    <span className={labelClass}>Email</span>
-                    <input type="email" className={inputClass} value={form.email} onChange={(event) => update("email", event.target.value)} />
+                    <span className={labelClass}>Email *</span>
+                    <input required type="email" className={inputClass} value={form.email} onChange={(event) => update("email", event.target.value)} placeholder="A confirmation will be sent to this email" />
                   </label>
                   <label>
                     <span className={labelClass}>Number of Participants *</span>
@@ -483,7 +590,7 @@ function PageContent() {
                     </select>
                   </label>
                   <div>
-                    <span className={labelClass}>Estimated Total</span>
+                    <span className={labelClass}>{isPaidCourse ? "Estimated Total" : "Course Fee"}</span>
                     <div className={`${inputClass} bg-[oklch(0.98_0.01_75)] font-semibold`}>
                       {total ? `S$${total.toLocaleString("en-SG")}` : "To be confirmed"}
                     </div>
@@ -493,7 +600,7 @@ function PageContent() {
                     <textarea required rows={4} className={inputClass} value={form.participantNames} onChange={(event) => update("participantNames", event.target.value)} placeholder="One participant name per line" />
                   </label>
 
-                  {course.fee && (
+                  {isPaidCourse && (
                     <>
                       <label>
                         <span className={labelClass}>Payment Status *</span>
@@ -514,8 +621,15 @@ function PageContent() {
                   )}
 
                   <label className="md:col-span-2">
-                    <span className={labelClass}>Notes</span>
-                    <textarea rows={3} className={inputClass} value={form.notes} onChange={(event) => update("notes", event.target.value)} placeholder="Learning goals, language needs or special arrangements" />
+                    <span className={labelClass}>{isInterestOnly ? "Current Learning Background & Goals *" : "Notes"}</span>
+                    <textarea
+                      required={isInterestOnly}
+                      rows={4}
+                      className={inputClass}
+                      value={form.notes}
+                      onChange={(event) => update("notes", event.target.value)}
+                      placeholder={isInterestOnly ? "Please share courses completed, current Qi Men experience and why you are applying for this level." : "Learning goals, language needs or special arrangements"}
+                    />
                   </label>
                 </div>
 
@@ -540,11 +654,11 @@ function PageContent() {
                   {submitting ? (
                     <><Loader2 className="h-4 w-4 animate-spin" />Submitting</>
                   ) : (
-                    <><CheckCircle2 className="h-4 w-4" />Submit Course Registration</>
+                    <><CheckCircle2 className="h-4 w-4" />{isInterestOnly ? "Submit Interest Registration" : "Submit Course Registration"}</>
                   )}
                 </button>
                 <p className="mt-4 text-xs leading-6 text-black/50">
-                  Registration is recorded in our backend. A paid place is confirmed only after payment verification and written acknowledgement.
+                  Your submission is recorded in our backend and a confirmation email will be attempted. Admission and paid places require written confirmation from Qimen Strategy Academy.
                 </p>
               </form>
             </div>
