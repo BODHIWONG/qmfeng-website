@@ -6,17 +6,18 @@ import Footer from "@/components/footer";
 import FloatingActions from "@/components/floating-actions";
 
 export const metadata: Metadata = {
-  title: "Qi Men Dun Jia Courses Singapore｜Foundation, Intermediate, Advanced & Disciple",
+  title: "Practical Qi Men Dun Jia Course Singapore｜Case-Based Weekend Training",
   description:
-    "Qimen Strategy Academy Singapore offers a four-level Qi Men Dun Jia pathway: Foundation, Intermediate, Advanced and an application-based Disciple Programme. Foundation weekend classes are now open at S$990.",
+    "Qimen Strategy Academy Singapore offers practice-led Qi Men Dun Jia training through frameworks, instructor demonstrations, guided chart exercises, real cases and classroom correction. Foundation weekend classes are S$990.",
   keywords: [
-    "Qi Men Dun Jia course Singapore",
-    "Qi Men Dun Jia class Singapore",
-    "Qimen Dunjia foundation course",
+    "practical Qi Men Dun Jia course Singapore",
+    "Qi Men Dun Jia case study course",
+    "Qi Men Dun Jia weekend class Singapore",
+    "Qi Men chart reading training",
     "Qi Men intermediate course",
     "Qi Men advanced course",
-    "Qi Men disciple programme",
-    "奇门遁甲课程新加坡",
+    "奇门遁甲实战课程新加坡",
+    "奇门遁甲案例教学",
     "奇门遁甲基础课程",
     "奇门遁甲中级课程",
     "奇门遁甲高级课程",
@@ -27,42 +28,50 @@ export const metadata: Metadata = {
 
 const REGISTRATION_LINK = "/course-registration?course=qimen-foundation&batch=2026-09-19";
 const WA_LINK =
-  "https://wa.me/6589593499?text=Hi%2C%20I%27m%20interested%20in%20the%20Qi%20Men%20Dun%20Jia%20course%20pathway.%20May%20I%20know%20which%20level%20is%20suitable%20for%20me%3F";
+  "https://wa.me/6589593499?text=Hi%2C%20I%27m%20interested%20in%20the%20practice-led%20Qi%20Men%20Dun%20Jia%20course.%20May%20I%20know%20which%20level%20is%20suitable%20for%20me%3F";
 
 const curriculum = [
-  ["01", "Qimen Framework", "奇门遁甲基础框架", "Understand the overall structure, modern decision-support value and responsible application boundaries."],
-  ["02", "Core Foundation System", "核心基础系统", "Learn Heavenly Stems, Earthly Branches, time structure and the Nine Palaces."],
-  ["03", "Eight Doors, Nine Stars & Eight Deities", "八门、九星与八神", "Understand the major symbols in a Qi Men chart and their practical meanings."],
-  ["04", "Chart Reading Sequence", "排盘结构与读局顺序", "Learn useful-god selection, palace relationships and a repeatable reading sequence."],
-  ["05", "Practical Case Learning", "真实案例实战学习", "Apply the framework to career, business, partnership, relationships and major decisions."],
-  ["06", "Responsible Application", "负责任的应用边界", "Use Qi Men as supplementary decision support rather than fatalism, certainty or a replacement for regulated advice."],
+  ["01", "Question Framing", "问题定义与分析目标", "Clarify what is actually being asked, define the decision context and avoid vague or unfocused chart reading."],
+  ["02", "Core Chart Structure", "排盘结构与九宫框架", "Learn the time structure, Heavenly Stems, Earthly Branches and Nine Palaces as the working map for analysis."],
+  ["03", "Doors, Stars & Deities", "八门、九星与八神", "Understand the symbols in context rather than memorising isolated meanings."],
+  ["04", "Useful-God Selection", "取用神与宫位关系", "Select relevant reference points, assess palace relationships and identify the evidence that supports a judgement."],
+  ["05", "Reading Sequence", "建立稳定读局顺序", "Follow a repeatable process from the question to evidence, conflicts, conclusion and practical next steps."],
+  ["06", "Guided Case Practice", "真实案例实盘练习", "Apply the framework to career, business, partnership, relationships, timing and major decisions under classroom guidance."],
+];
+
+const practiceCycle = [
+  ["01", "Explain", "讲解", "The instructor explains the framework, decision logic and common mistakes."],
+  ["02", "Demonstrate", "示范", "A complete chart is analysed step by step, including why certain evidence is used or rejected."],
+  ["03", "Practise", "练习", "Students work through a chart independently or in a guided small-group exercise."],
+  ["04", "Correct", "纠偏", "The class reviews missed evidence, weak assumptions and contradictions in the reasoning."],
+  ["05", "Debrief", "复盘", "Students summarise the method and convert the analysis into realistic priorities and actions."],
 ];
 
 const pathway = [
   {
     level: "01",
     title: "Foundation Course",
-    zh: "基础课程",
+    zh: "基础实战课程",
     status: "Now Enrolling · S$990",
-    body: "Build the complete core framework and a reliable chart-reading sequence from the beginning.",
+    body: "Build the framework and complete introductory chart-reading exercises through guided cases.",
     href: "/course-registration?course=qimen-foundation&batch=2026-09-19",
     cta: "Select Batch",
   },
   {
     level: "02",
     title: "Intermediate Course",
-    zh: "中级课程",
+    zh: "中级实战课程",
     status: "Interest Registration",
-    body: "Deepen useful-god selection, multi-palace analysis, timing and interpretation through structured cases.",
+    body: "Strengthen useful-god selection, multi-palace analysis, timing and interpretation through repeated case drills.",
     href: "/course-registration?course=qimen-intermediate",
     cta: "Register Interest",
   },
   {
     level: "03",
     title: "Advanced Course",
-    zh: "高级课程",
+    zh: "高级实战课程",
     status: "Interest Registration",
-    body: "Work with complex charts, competing indicators, business cases and supervised analytical practice.",
+    body: "Analyse complex charts, compare scenarios and defend conclusions in supervised business and major-decision cases.",
     href: "/course-registration?course=qimen-advanced",
     cta: "Register Interest",
   },
@@ -71,7 +80,7 @@ const pathway = [
     title: "Disciple Programme",
     zh: "弟子班",
     status: "Application-Based",
-    body: "A selective long-term mentorship pathway focused on disciplined practice, ethics and deeper transmission.",
+    body: "A selective long-term mentorship pathway based on disciplined case submission, correction, ethics and applied practice.",
     href: "/course-registration?course=qimen-disciple",
     cta: "Submit Application",
   },
@@ -79,30 +88,30 @@ const pathway = [
 
 const suitableFor = [
   "完全没有接触过奇门遁甲，希望从基础开始系统学习的人",
-  "过去零散学习过奇门、八字或風水，但缺少清晰框架的人",
-  "企业主、创业者、管理者及希望提升判断力的人士",
-  "对东方战略智慧与传统文化有系统学习兴趣者",
+  "过去零散学习过相关内容，但不会独立完成读局与判断的人",
+  "企业主、创业者、管理者及希望提升分析与决策能力的人士",
+  "重视案例、练习和课堂纠偏，而不是只想背诵理论的人",
 ];
 
 const facts = [
-  ["Course", "课程", "Qi Men Dun Jia Foundation Course｜奇门遁甲基础课程"],
+  ["Course", "课程", "Qi Men Dun Jia Foundation Practical Course｜奇门遁甲基础实战课程"],
   ["Instructor", "主讲", "Huang Qiming｜黄启明主讲"],
   ["Schedule", "开班安排", "Regular weekend intakes from 19 September 2026｜自2026年9月19日起安排常规周末班"],
   ["Days", "上课日", "Saturday & Sunday｜周六、周日"],
-  ["Format", "形式", "Two-day small-group course｜两天小班精品课程"],
-  ["Level", "程度", "Suitable for complete beginners｜适合零基础"],
+  ["Format", "形式", "Two-day small-group practical training｜两天小班实战训练"],
+  ["Method", "教学方式", "Framework, demonstration, practice, correction and debrief｜讲解、示范、练习、纠偏与复盘"],
   ["Language", "语言", "Chinese teaching with English support｜中文授课，可英文辅助"],
   ["Fee", "费用", "S$990 per participant｜每位S$990"],
   ["Location", "地点", "Blk 210 New Upper Changi Road #01-729, Singapore 460210"],
 ];
 
 const expectations = [
-  ["Included", "课程包含", "Two days of in-person teaching, structured foundation content, guided case explanation and class Q&A."],
-  ["Not Included", "课程不包含", "Professional certification, guaranteed mastery, unlimited after-class consultation or permission to reproduce and teach the materials."],
-  ["Progression", "进阶规则", "Intermediate and Advanced admission may require completion of the previous level or an assessment of equivalent knowledge."],
+  ["Practice Included", "实战内容", "Guided chart exercises, instructor demonstrations, case discussion, classroom correction and Q&A are included within the two-day programme."],
+  ["Learning Outcome", "学习成果", "The course aims to help students follow a basic analytical sequence. It does not guarantee mastery after one weekend."],
+  ["Progression", "进阶规则", "Intermediate and Advanced admission may require completion of the previous level or an assessment of equivalent practical ability."],
   ["Disciple Programme", "弟子班", "Admission is by application and assessment only. Participation does not automatically grant certification, teaching rights or commercial-use permission."],
-  ["Class Conduct", "课堂规范", "Participant privacy and confidential case material must be respected. Recording and redistribution require written permission."],
-  ["Place Confirmation", "名额确认", "A place is confirmed only after payment verification and written acknowledgement from Qimen Strategy Academy."],
+  ["Case Confidentiality", "案例保密", "Participant privacy and confidential case material must be respected. Recording and redistribution require written permission."],
+  ["Professional Boundaries", "专业边界", "Qi Men is taught as supplementary decision support and does not replace regulated financial, legal, medical or psychological advice."],
 ];
 
 export default function QiMenCoursePage() {
@@ -115,16 +124,16 @@ export default function QiMenCoursePage() {
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_78%_18%,rgba(214,173,99,0.24),transparent_34%),linear-gradient(135deg,rgba(244,223,176,0.08),transparent_42%)]" />
             <div className="container relative mx-auto max-w-6xl">
               <p className="text-xs font-bold uppercase tracking-[0.30em] text-[#d6ad63]">Qimen Strategy Academy · Singapore</p>
-              <h1 className="mt-5 max-w-5xl text-4xl font-semibold uppercase leading-[0.98] tracking-[0.03em] text-[#f4dfb0] md:text-7xl">Qi Men Dun Jia Course Pathway</h1>
-              <h2 className="mt-5 text-3xl font-semibold tracking-[0.14em] text-[#e2bd6b] md:text-5xl">基础 · 中级 · 高级 · 弟子班</h2>
-              <p className="mt-8 max-w-4xl text-lg leading-8 text-white/76">Begin with a structured foundation course, then progress into deeper chart analysis, complex case practice and selective long-term mentorship.</p>
-              <p className="mt-4 max-w-4xl leading-8 text-white/64">基础课程面向零基础学员；中级与高级课程要求相应学习基础；弟子班为申请制长期研修，不属于公开直接报名课程。</p>
+              <h1 className="mt-5 max-w-5xl text-4xl font-semibold uppercase leading-[0.98] tracking-[0.03em] text-[#f4dfb0] md:text-7xl">Practical Qi Men Dun Jia Training</h1>
+              <h2 className="mt-5 text-3xl font-semibold tracking-[0.10em] text-[#e2bd6b] md:text-5xl">以实战为导向的奇门遁甲课程</h2>
+              <p className="mt-8 max-w-4xl text-lg leading-8 text-white/76">Learn the framework, watch complete chart demonstrations, practise on cases and receive correction. The objective is to develop a usable analytical process—not simply memorise terminology.</p>
+              <p className="mt-4 max-w-4xl leading-8 text-white/64">课程围绕真实问题展开，从问题定义、取用神、宫位关系、证据分析到结论表达，让学员逐步掌握可以实际运用的读局方法。</p>
               <div className="mt-8 grid max-w-5xl gap-3 sm:grid-cols-2 lg:grid-cols-4">
                 {[
-                  ["Foundation", "基础课程"],
-                  ["Intermediate", "中级课程"],
-                  ["Advanced", "高级课程"],
-                  ["Disciple Programme", "弟子班"],
+                  ["Real Cases", "真实案例"],
+                  ["Guided Practice", "课堂实盘练习"],
+                  ["Correction", "老师纠偏"],
+                  ["Clear Method", "可复用分析流程"],
                 ].map(([en, zh]) => (
                   <div key={en} className="border border-[#d6ad63]/25 bg-black/30 p-4">
                     <p className="text-xs font-bold uppercase tracking-[0.14em] text-[#d6ad63]">{en}</p>
@@ -143,9 +152,9 @@ export default function QiMenCoursePage() {
           <section className="border-y border-[#d6ad63]/20 bg-[#070707] px-4 py-12">
             <div className="container mx-auto grid max-w-6xl gap-4 md:grid-cols-4">
               {[
-                ["Current Intake", "Foundation Course", "Weekly Saturday–Sunday batches"],
+                ["Current Intake", "Foundation Practical Course", "Weekly Saturday–Sunday batches"],
                 ["Foundation Fee", "S$990 / person", "PayNow registration available"],
-                ["Teaching", "Small Group", "Structured learning and questions"],
+                ["Teaching", "Small Group", "Practice, questions and correction"],
                 ["Instructor", "Huang Qiming", "黄启明主讲"],
               ].map(([title, value, body]) => (
                 <article key={title} className="border border-[#d6ad63]/25 bg-white/[0.035] p-6">
@@ -159,8 +168,8 @@ export default function QiMenCoursePage() {
 
           <section className="px-4 py-20 md:py-28">
             <div className="container mx-auto max-w-6xl">
-              <p className="text-xs font-bold uppercase tracking-[0.3em] text-[#d6ad63]">Foundation Curriculum</p>
-              <h2 className="mt-4 max-w-4xl text-3xl font-semibold text-[#f4dfb0] md:text-5xl">Start with the foundation. Learn through practical examples.</h2>
+              <p className="text-xs font-bold uppercase tracking-[0.3em] text-[#d6ad63]">Foundation Practical Curriculum</p>
+              <h2 className="mt-4 max-w-4xl text-3xl font-semibold text-[#f4dfb0] md:text-5xl">Learn the structure, then use it on actual questions.</h2>
               <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
                 {curriculum.map(([no, title, zh, body]) => (
                   <article key={no} className="border border-[#d6ad63]/25 bg-white/[0.035] p-7">
@@ -176,11 +185,29 @@ export default function QiMenCoursePage() {
 
           <section className="border-y border-[#d6ad63]/20 bg-[#070707] px-4 py-20 md:py-28">
             <div className="container mx-auto max-w-6xl">
+              <p className="text-xs font-bold uppercase tracking-[0.3em] text-[#d6ad63]">How Each Topic Is Taught</p>
+              <h2 className="mt-4 max-w-4xl text-3xl font-semibold text-[#f4dfb0] md:text-5xl">讲解、示范、练习、纠偏、复盘</h2>
+              <p className="mt-5 max-w-4xl leading-8 text-white/62">每一个核心知识点尽量完成一个教学闭环，避免“听懂了但不会用”。</p>
+              <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-5">
+                {practiceCycle.map(([no, title, zh, body]) => (
+                  <article key={no} className="border border-[#d6ad63]/25 bg-black p-6">
+                    <p className="text-sm font-bold text-[#d6ad63]">{no}</p>
+                    <h3 className="mt-3 text-xl font-semibold text-[#f4dfb0]">{title}</h3>
+                    <p className="mt-2 font-semibold text-[#d6ad63]">{zh}</p>
+                    <p className="mt-4 text-sm leading-7 text-white/62">{body}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section className="px-4 py-20 md:py-28">
+            <div className="container mx-auto max-w-6xl">
               <p className="text-xs font-bold uppercase tracking-[0.3em] text-[#d6ad63]">Course Progression</p>
-              <h2 className="mt-4 max-w-4xl text-3xl font-semibold text-[#f4dfb0] md:text-5xl">Four levels, with clear entry requirements.</h2>
+              <h2 className="mt-4 max-w-4xl text-3xl font-semibold text-[#f4dfb0] md:text-5xl">Four levels, progressing by practical ability.</h2>
               <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
                 {pathway.map((item) => (
-                  <article key={item.level} className="flex h-full flex-col border border-[#d6ad63]/25 bg-black p-6">
+                  <article key={item.level} className="flex h-full flex-col border border-[#d6ad63]/25 bg-white/[0.035] p-6">
                     <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#d6ad63]">Level {item.level}</p>
                     <h3 className="mt-4 text-2xl font-semibold text-[#f4dfb0]">{item.title}</h3>
                     <p className="mt-2 text-lg font-semibold text-[#d6ad63]">{item.zh}</p>
@@ -193,16 +220,16 @@ export default function QiMenCoursePage() {
             </div>
           </section>
 
-          <section className="px-4 py-20 md:py-28">
+          <section className="border-y border-[#d6ad63]/20 bg-[#070707] px-4 py-20 md:py-28">
             <div className="container mx-auto grid max-w-6xl gap-10 lg:grid-cols-2">
               <div>
                 <p className="text-xs font-bold uppercase tracking-[0.3em] text-[#d6ad63]">Who Foundation Is For</p>
                 <h2 className="mt-4 text-3xl font-semibold text-[#f4dfb0] md:text-5xl">No prior Qi Men knowledge is required.</h2>
-                <p className="mt-6 leading-8 text-white/68">适合完全零基础，也适合过去接触过相关内容、但希望重新建立清晰学习系统的人。</p>
+                <p className="mt-6 leading-8 text-white/68">适合零基础，也适合过去听过课程、但面对真实盘局仍然不知道从哪里开始分析的人。</p>
               </div>
               <div className="space-y-4">
                 {suitableFor.map((item, index) => (
-                  <div key={item} className="flex gap-4 border border-[#d6ad63]/20 bg-[#070707] p-5">
+                  <div key={item} className="flex gap-4 border border-[#d6ad63]/20 bg-black p-5">
                     <span className="text-sm font-bold text-[#d6ad63]">{String(index + 1).padStart(2, "0")}</span>
                     <p className="leading-7 text-white/75">{item}</p>
                   </div>
@@ -211,11 +238,11 @@ export default function QiMenCoursePage() {
             </div>
           </section>
 
-          <section className="border-y border-[#d6ad63]/20 bg-[#070707] px-4 py-20">
+          <section className="px-4 py-20">
             <div className="container mx-auto max-w-6xl grid gap-6 lg:grid-cols-2">
-              <div className="border border-[#d6ad63]/30 bg-black p-8 md:p-10">
+              <div className="border border-[#d6ad63]/30 bg-[#070707] p-8 md:p-10">
                 <p className="text-xs font-bold uppercase tracking-[0.28em] text-[#d6ad63]">Foundation Course Details</p>
-                <h2 className="mt-3 text-3xl font-semibold text-[#f4dfb0]">基础课程资料</h2>
+                <h2 className="mt-3 text-3xl font-semibold text-[#f4dfb0]">基础实战课程资料</h2>
                 <div className="mt-8 grid gap-5 sm:grid-cols-2">
                   {facts.map(([en, zh, value]) => (
                     <div key={en} className="border-b border-[#d6ad63]/15 pb-4">
@@ -225,7 +252,7 @@ export default function QiMenCoursePage() {
                   ))}
                 </div>
               </div>
-              <div className="border border-[#d6ad63]/30 bg-black p-8 md:p-10">
+              <div className="border border-[#d6ad63]/30 bg-[#070707] p-8 md:p-10">
                 <p className="text-xs font-bold uppercase tracking-[0.28em] text-[#d6ad63]">Expectations & Boundaries</p>
                 <h2 className="mt-3 text-3xl font-semibold text-[#f4dfb0]">课程范围与规范</h2>
                 <div className="mt-8 space-y-5">
@@ -241,11 +268,11 @@ export default function QiMenCoursePage() {
             </div>
           </section>
 
-          <section className="px-4 py-24">
+          <section className="px-4 pb-24">
             <div className="container mx-auto max-w-4xl border border-[#d6ad63]/40 bg-[#d6ad63]/10 p-8 text-center md:p-12">
               <p className="text-xs font-bold uppercase tracking-[0.3em] text-[#d6ad63]">Course Registration</p>
-              <h2 className="mt-5 text-3xl font-semibold text-[#f4dfb0] md:text-5xl">Select Foundation, or register interest in a later level.</h2>
-              <p className="mx-auto mt-6 max-w-2xl leading-8 text-white/70">基础课程可直接选择周末班次；中级、高级和弟子班可提交意向资料，我们将根据学习背景、资格与未来开班安排联系申请者。</p>
+              <h2 className="mt-5 text-3xl font-semibold text-[#f4dfb0] md:text-5xl">Start with Foundation practical training.</h2>
+              <p className="mx-auto mt-6 max-w-2xl leading-8 text-white/70">基础课程可直接选择周末班次；中级、高级和弟子班可提交意向资料，我们将根据学习背景、实际能力与未来开班安排联系申请者。</p>
               <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
                 <Link href={REGISTRATION_LINK} className="inline-flex items-center justify-center bg-[#d6ad63] px-8 py-4 text-sm font-bold uppercase tracking-[0.14em] text-black hover:bg-[#f4dfb0]">Foundation Registration</Link>
                 <Link href="/courses" className="inline-flex items-center justify-center border border-[#d6ad63]/70 px-8 py-4 text-sm font-bold uppercase tracking-[0.14em] text-[#f4dfb0] hover:bg-[#d6ad63]/10">View All Levels</Link>
