@@ -6,25 +6,77 @@ import Footer from "@/components/footer";
 import FloatingActions from "@/components/floating-actions";
 
 export const metadata: Metadata = {
-  title: "Qimen Strategy Academy Singapore｜Weekly Qi Men Dun Jia Courses",
+  title: "Qimen Strategy Academy Singapore｜Foundation to Disciple Qi Men Courses",
   description:
-    "Qimen Strategy Academy provides structured Qi Men Dun Jia courses in Singapore. The two-day foundation course offers regular Saturday–Sunday intakes from 19 September 2026 at S$990 per participant.",
+    "Qimen Strategy Academy provides a structured four-level Qi Men Dun Jia learning pathway in Singapore: Foundation, Intermediate, Advanced and the application-based Disciple Programme.",
   keywords: [
     "Qimen Strategy Academy Singapore",
     "Qi Men Dun Jia course Singapore",
-    "Weekly Qi Men course Singapore",
-    "Qi Men foundation class Singapore",
+    "Qi Men intermediate course Singapore",
+    "Qi Men advanced course Singapore",
+    "Qi Men disciple programme",
     "奇门遁甲课程新加坡",
+    "奇门遁甲中级课程",
+    "奇门遁甲高级课程",
+    "奇门遁甲弟子班",
     "启明遁甲研修",
   ],
   alternates: { canonical: "https://www.qmfeng.com/courses" },
 };
 
 const WA_LINK =
-  "https://wa.me/6589593499?text=Hello%20Qimen%20Strategy%20Academy%2C%20I%20would%20like%20to%20enquire%20about%20your%20courses%20in%20Singapore.";
-const REGISTER_LINK = "/course-registration?course=qimen-foundation&batch=2026-09-19";
+  "https://wa.me/6589593499?text=Hello%20Qimen%20Strategy%20Academy%2C%20I%20would%20like%20to%20enquire%20about%20the%20Qi%20Men%20Dun%20Jia%20course%20pathway%20in%20Singapore.";
+const FOUNDATION_REGISTER_LINK = "/course-registration?course=qimen-foundation&batch=2026-09-19";
 
-const upcoming = [
+const qimenLevels = [
+  {
+    level: "01",
+    title: "Qi Men Dun Jia Foundation Course",
+    zh: "奇门遁甲基础课程",
+    status: "Now Enrolling · S$990",
+    audience: "Complete beginners",
+    focus: "Core framework, Nine Palaces, Eight Doors, Nine Stars, Eight Deities, useful-god selection, palace relationships and a repeatable chart-reading sequence.",
+    prerequisite: "No prior Qi Men knowledge required.",
+    href: FOUNDATION_REGISTER_LINK,
+    cta: "Select Batch & Register",
+    featured: true,
+  },
+  {
+    level: "02",
+    title: "Qi Men Dun Jia Intermediate Course",
+    zh: "奇门遁甲中级课程",
+    status: "Interest Registration",
+    audience: "Foundation graduates or equivalent",
+    focus: "Deeper useful-god selection, multi-palace analysis, timing, interactions between symbols and structured interpretation through practical cases.",
+    prerequisite: "Foundation Course completion or equivalent knowledge, subject to review.",
+    href: "/course-registration?course=qimen-intermediate",
+    cta: "Register Interest",
+  },
+  {
+    level: "03",
+    title: "Qi Men Dun Jia Advanced Course",
+    zh: "奇门遁甲高级课程",
+    status: "Interest Registration",
+    audience: "Intermediate-level learners",
+    focus: "Complex chart synthesis, business and major-decision cases, competing indicators, scenario comparison and supervised analytical practice.",
+    prerequisite: "Intermediate Course completion or equivalent capability, subject to review.",
+    href: "/course-registration?course=qimen-advanced",
+    cta: "Register Interest",
+  },
+  {
+    level: "04",
+    title: "Qi Men Dun Jia Disciple Programme",
+    zh: "奇门遁甲弟子班",
+    status: "Application-Based",
+    audience: "Selected advanced learners",
+    focus: "Long-term mentorship, disciplined case review, professional ethics, applied practice and deeper transmission within the Qimen Strategy method.",
+    prerequisite: "By application and assessment only. Admission is not automatic.",
+    href: "/course-registration?course=qimen-disciple",
+    cta: "Submit Interest Application",
+  },
+];
+
+const otherModules = [
   ["Number Energy & Phone Number Selection", "数字能量与手机号码", "Interest registration"],
   ["Bazi Life Structure Foundation", "八字命理基础", "Interest registration"],
   ["Feng Shui Layout & Space Alignment", "風水布局实战", "Interest registration"],
@@ -41,18 +93,18 @@ export default function CoursesPage() {
             <div className="container relative mx-auto max-w-6xl">
               <p className="text-xs font-bold uppercase tracking-[0.30em] text-[#d6ad63]">Qimen Strategy Academy · Singapore</p>
               <h1 className="mt-5 max-w-5xl text-4xl font-semibold uppercase leading-[0.98] tracking-[0.04em] text-[#f4dfb0] md:text-7xl">
-                Structured Qi Men Dun Jia Courses
+                A Complete Qi Men Dun Jia Learning Pathway
               </h1>
-              <h2 className="mt-5 text-3xl font-semibold tracking-[0.12em] text-[#e2bd6b] md:text-5xl">启明遁甲研修体系</h2>
+              <h2 className="mt-5 text-3xl font-semibold tracking-[0.12em] text-[#e2bd6b] md:text-5xl">基础 · 中级 · 高级 · 弟子班</h2>
               <p className="mt-8 max-w-4xl text-lg leading-8 text-white/74">
-                Learn the framework clearly, practise through real cases and understand the responsible boundaries of application. The academy pathway is for learners—not a substitute for professional financial, legal, medical or psychological advice.
+                Start with a clear foundation, progress through deeper chart analysis and move into supervised advanced practice. The Disciple Programme is a selective long-term mentorship pathway rather than an open-enrolment class.
               </p>
               <p className="mt-4 max-w-4xl leading-8 text-white/62">
-                课程强调从零基础建立系统：先理解结构，再学习读局顺序，最后通过真实案例训练判断。奇门遁甲基础课程自2026年9月19日起安排常规周末班次。
+                启明遁甲研修体系分为四个阶段：基础课程建立完整框架，中级课程强化读局与多宫分析，高级课程训练复杂案例与综合判断，弟子班则面向经过筛选、愿意长期学习与实践的进阶学员。
               </p>
               <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-                <Link href={REGISTER_LINK} className="inline-flex items-center justify-center bg-[#d6ad63] px-7 py-4 text-sm font-bold uppercase tracking-[0.14em] text-black hover:bg-[#f4dfb0]">
-                  Select Batch & Register
+                <Link href={FOUNDATION_REGISTER_LINK} className="inline-flex items-center justify-center bg-[#d6ad63] px-7 py-4 text-sm font-bold uppercase tracking-[0.14em] text-black hover:bg-[#f4dfb0]">
+                  Foundation Course Registration
                 </Link>
                 <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center border border-[#d6ad63]/70 px-7 py-4 text-sm font-bold uppercase tracking-[0.14em] text-[#f4dfb0] hover:bg-[#d6ad63]/10">
                   WhatsApp Course Enquiry
@@ -62,13 +114,49 @@ export default function CoursesPage() {
           </section>
 
           <section className="border-y border-[#d6ad63]/20 bg-[#070707] px-4 py-20 md:py-28">
+            <div className="container mx-auto max-w-6xl">
+              <p className="text-xs font-bold uppercase tracking-[0.28em] text-[#d6ad63]">Four-Level Progression</p>
+              <h2 className="mt-4 max-w-4xl text-3xl font-semibold text-[#f4dfb0] md:text-5xl">Choose the level that matches your current foundation.</h2>
+              <p className="mt-5 max-w-4xl leading-8 text-white/62">
+                Later levels are not shortcuts. Intermediate, Advanced and Disciple-level admission may require prior course completion or an assessment of equivalent knowledge.
+              </p>
+
+              <div className="mt-12 grid gap-6 lg:grid-cols-2">
+                {qimenLevels.map((course) => (
+                  <article
+                    key={course.level}
+                    className={`flex h-full flex-col border p-7 md:p-9 ${course.featured ? "border-[#d6ad63] bg-[#d6ad63]/10" : "border-[#d6ad63]/25 bg-white/[0.035]"}`}
+                  >
+                    <div className="flex items-start justify-between gap-5">
+                      <div>
+                        <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#d6ad63]">Level {course.level} · {course.status}</p>
+                        <h3 className="mt-4 text-3xl font-semibold leading-tight text-[#f4dfb0]">{course.title}</h3>
+                        <p className="mt-2 text-xl font-semibold text-[#d6ad63]">{course.zh}</p>
+                      </div>
+                      <span className="border border-[#d6ad63]/45 px-3 py-2 text-sm font-bold text-[#d6ad63]">{course.level}</span>
+                    </div>
+                    <div className="mt-7 space-y-4 text-sm leading-7 text-white/66">
+                      <p><strong className="text-[#f4dfb0]">Suitable for:</strong> {course.audience}</p>
+                      <p><strong className="text-[#f4dfb0]">Learning focus:</strong> {course.focus}</p>
+                      <p><strong className="text-[#f4dfb0]">Entry requirement:</strong> {course.prerequisite}</p>
+                    </div>
+                    <Link href={course.href} className="mt-8 inline-flex w-full items-center justify-center border border-[#d6ad63]/70 px-6 py-4 text-sm font-bold uppercase tracking-[0.13em] text-[#f4dfb0] transition hover:bg-[#d6ad63] hover:text-black">
+                      {course.cta}
+                    </Link>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section className="px-4 py-20 md:py-28">
             <div className="container mx-auto grid max-w-6xl gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
               <div>
-                <p className="text-xs font-bold uppercase tracking-[0.28em] text-[#d6ad63]">Flagship Weekly Course</p>
+                <p className="text-xs font-bold uppercase tracking-[0.28em] text-[#d6ad63]">Current Weekly Intake</p>
                 <h2 className="mt-4 text-3xl font-semibold leading-tight text-[#f4dfb0] md:text-5xl">Qi Men Dun Jia Foundation Course</h2>
                 <p className="mt-3 text-2xl font-semibold text-[#d6ad63]">奇门遁甲基础课程</p>
                 <p className="mt-6 text-base leading-8 text-white/68">
-                  A two-day small-group programme for complete beginners. Learn the core framework, Nine Palaces, Eight Doors, Nine Stars, Eight Deities, useful-god selection, palace relationships, chart-reading sequence and practical case application.
+                  The Foundation Course is the only level currently open for regular weekly batch selection and PayNow registration. Later levels accept interest registration while dates, fees and prerequisites are being finalised.
                 </p>
               </div>
               <div className="grid gap-4 sm:grid-cols-2">
@@ -89,42 +177,31 @@ export default function CoursesPage() {
             </div>
           </section>
 
-          <section className="px-4 py-20 md:py-28">
+          <section className="border-y border-[#d6ad63]/20 bg-[#070707] px-4 py-20">
             <div className="container mx-auto max-w-6xl">
-              <p className="text-xs font-bold uppercase tracking-[0.28em] text-[#d6ad63]">Learning Pathways</p>
-              <h2 className="mt-4 max-w-4xl text-3xl font-semibold text-[#f4dfb0] md:text-5xl">
-                Begin with Qi Men foundation. Register interest for future modules.
-              </h2>
-              <div className="mt-12 grid gap-6 md:grid-cols-2">
-                <Link href="/qi-men-dun-jia-course-singapore" className="border border-[#d6ad63] bg-[#d6ad63]/10 p-8 transition hover:bg-[#d6ad63]/15">
-                  <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#d6ad63]">Now Enrolling · S$990</p>
-                  <h3 className="mt-4 text-3xl font-semibold text-[#f4dfb0]">Qi Men Dun Jia Foundation Course</h3>
-                  <p className="mt-2 text-xl font-semibold text-[#d6ad63]">奇门遁甲基础课程</p>
-                  <p className="mt-6 text-sm leading-7 text-white/66">Regular Saturday–Sunday batches with a dedicated registration and PayNow page.</p>
-                  <p className="mt-8 text-xs font-bold uppercase tracking-[0.14em] text-[#f4dfb0]">View Course Details →</p>
-                </Link>
-                <div className="space-y-4">
-                  {upcoming.map(([title, zh, status]) => (
-                    <a key={title} href={WA_LINK} target="_blank" rel="noopener noreferrer" className="block border border-[#d6ad63]/20 bg-white/[0.035] p-6 transition hover:border-[#d6ad63]/60">
-                      <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#d6ad63]">{status}</p>
-                      <h3 className="mt-3 text-xl font-semibold text-[#f4dfb0]">{title}</h3>
-                      <p className="mt-2 text-[#d6ad63]">{zh}</p>
-                    </a>
-                  ))}
-                </div>
+              <p className="text-xs font-bold uppercase tracking-[0.28em] text-[#d6ad63]">Other Future Modules</p>
+              <h2 className="mt-4 text-3xl font-semibold text-[#f4dfb0] md:text-5xl">Additional learning modules under development.</h2>
+              <div className="mt-10 grid gap-5 md:grid-cols-3">
+                {otherModules.map(([title, zh, status]) => (
+                  <a key={title} href={WA_LINK} target="_blank" rel="noopener noreferrer" className="block border border-[#d6ad63]/20 bg-white/[0.035] p-6 transition hover:border-[#d6ad63]/60">
+                    <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#d6ad63]">{status}</p>
+                    <h3 className="mt-3 text-xl font-semibold text-[#f4dfb0]">{title}</h3>
+                    <p className="mt-2 text-[#d6ad63]">{zh}</p>
+                  </a>
+                ))}
               </div>
             </div>
           </section>
 
-          <section className="px-4 pb-24">
+          <section className="px-4 py-24">
             <div className="container mx-auto max-w-5xl border border-[#d6ad63]/40 bg-[#d6ad63]/10 p-8 text-center md:p-12">
-              <p className="text-xs font-bold uppercase tracking-[0.28em] text-[#d6ad63]">Registration & Policy</p>
-              <h2 className="mt-5 text-3xl font-semibold text-[#f4dfb0] md:text-5xl">Choose a batch only after reviewing the course policy.</h2>
+              <p className="text-xs font-bold uppercase tracking-[0.28em] text-[#d6ad63]">Registration & Entry Review</p>
+              <h2 className="mt-5 text-3xl font-semibold text-[#f4dfb0] md:text-5xl">Foundation is open enrolment. Later levels require appropriate preparation.</h2>
               <p className="mx-auto mt-6 max-w-3xl leading-8 text-white/68">
-                A place is confirmed after payment verification and written acknowledgement. Transfer, cancellation, recording and course-material rules are stated in the Course Registration Policy.
+                Interest registration does not guarantee admission, a specific date or a confirmed fee. The Disciple Programme is application-based and does not automatically grant certification, teaching rights or permission to reproduce course materials.
               </p>
               <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
-                <Link href={REGISTER_LINK} className="inline-flex items-center justify-center bg-[#d6ad63] px-8 py-4 text-sm font-bold uppercase tracking-[0.14em] text-black hover:bg-[#f4dfb0]">Select Batch & Register</Link>
+                <Link href={FOUNDATION_REGISTER_LINK} className="inline-flex items-center justify-center bg-[#d6ad63] px-8 py-4 text-sm font-bold uppercase tracking-[0.14em] text-black hover:bg-[#f4dfb0]">Select Foundation Batch</Link>
                 <Link href="/course-policy" className="inline-flex items-center justify-center border border-[#d6ad63]/70 px-8 py-4 text-sm font-bold uppercase tracking-[0.14em] text-[#f4dfb0] hover:bg-[#d6ad63]/10">Read Course Policy</Link>
               </div>
             </div>
