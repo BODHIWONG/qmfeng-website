@@ -1,5 +1,5 @@
-import { redirect } from "next/navigation";
+import { permanentRedirect } from "next/navigation";
 
 export default function QimenStrategyBusinessPage() {
-  redirect("/enterprise-strategic-advisory");
+  permanentRedirect("/enterprise-strategic-advisory");
 }

@@ -8,14 +8,14 @@ const overrides: Record<string, InsightOverride> = {
     excerpt:
       "A modern introduction to Qimen Strategy as an Eastern decision framework for understanding timing, direction, people, environment and strategic clarity before major decisions.",
     category: "Qimen Strategy",
-    keywords: ["Qimen Strategy", "Strategic Insight", "Timing and Direction", "Human Decisions", "Master Huang Qiming"],
+    keywords: ["Qimen Strategy", "Strategic Insight", "Timing and Direction", "Human Decisions", "Huang Qiming"],
   },
   "qi-men-dun-jia-not-fortune-telling-zh-en": {
     title: "Why Seeing the Bigger Picture Changes Everything",
     excerpt:
       "A modern Qimen Strategy perspective on why important decisions require clarity in timing, direction, environment and the full situation before taking action.",
     category: "Strategic Clarity",
-    keywords: ["Qimen Strategy", "Strategic Clarity", "Timing", "Decision Making", "Master Huang Qiming"],
+    keywords: ["Qimen Strategy", "Strategic Clarity", "Timing", "Decision Making", "Huang Qiming"],
   },
   "how-qi-men-dun-jia-helps-business-owners-make-better-decisions": {
     title: "Understanding Business Decisions Through Qimen Strategy",
@@ -50,7 +50,7 @@ const overrides: Record<string, InsightOverride> = {
     excerpt:
       "A grounded introduction to Qimen Strategy Singapore as a modern Eastern decision framework for career, business, property, relationship and life clarity.",
     category: "Qimen Strategy Singapore",
-    keywords: ["Qimen Strategy Singapore", "Strategic Clarity", "Decision Making", "Master Huang Qiming", "Singapore"],
+    keywords: ["Qimen Strategy Singapore", "Strategic Clarity", "Decision Making", "Huang Qiming", "Singapore"],
   },
   "qi-men-dun-jia-business-decisions-singapore": {
     title: "Qimen Strategy Singapore for Business Decisions",
@@ -71,7 +71,7 @@ const overrides: Record<string, InsightOverride> = {
     excerpt:
       "The key moments when Qimen Strategy can help before major decisions, career changes, business moves, property choices or important relationship turning points.",
     category: "Consultation Guide",
-    keywords: ["Qimen Strategy", "Decision Guidance", "Strategic Clarity", "Timing", "Master Huang Qiming"],
+    keywords: ["Qimen Strategy", "Decision Guidance", "Strategic Clarity", "Timing", "Huang Qiming"],
   },
   "qi-men-dun-jia-bto-condo-property-singapore": {
     title: "Why Property Decisions Need Timing, Environment and Clarity",
@@ -92,7 +92,7 @@ const overrides: Record<string, InsightOverride> = {
     excerpt:
       "A bilingual Qimen Strategy guide explaining when career, wealth, property, relationship and business decisions need clearer timing, direction and perspective.",
     category: "Strategic Clarity",
-    keywords: ["Qimen Strategy", "Strategic Clarity", "Decision Making", "Timing and Direction", "Master Huang Qiming"],
+    keywords: ["Qimen Strategy", "Strategic Clarity", "Decision Making", "Timing and Direction", "Huang Qiming"],
   },
   "qi-men-dun-jia-singapore-business-timing-risk-zh-en": {
     title: "How Business Owners Read Timing, Risk and Strategic Direction",
@@ -113,23 +113,44 @@ const overrides: Record<string, InsightOverride> = {
     excerpt:
       "A bilingual Qimen Strategy and space energy article on why certain homes or offices feel heavy, draining or difficult to settle in.",
     category: "Space Energy",
-    keywords: ["Space Energy", "Qimen Strategy", "Environmental Alignment", "Energy Reset", "Master Huang Qiming"],
+    keywords: ["Space Energy", "Qimen Strategy", "Environmental Alignment", "Energy Reset", "Huang Qiming"],
   },
   "how-master-huang-qiming-uses-qi-men-dun-jia-in-real-consultations": {
-    title: "How Master Huang Qiming Uses Qimen Strategy in Real Consultations",
+    title: "How Huang Qiming Uses Qimen Strategy in Real Consultations",
     excerpt:
-      "A closer look at Master Huang Qiming’s practical consultation style and how Qimen Strategy is applied to real business, property, career and life situations.",
-    category: "Master Huang Qiming",
-    keywords: ["Master Huang Qiming", "Qimen Strategy", "Strategic Consultation", "Decision Making", "Singapore"],
+      "A closer look at Huang Qiming’s practical consultation style and how Qimen Strategy is applied to real business, property, career and life situations.",
+    category: "Huang Qiming",
+    keywords: ["Huang Qiming", "Qimen Strategy", "Strategic Consultation", "Decision Making", "Singapore"],
   },
 };
 
+const LEGAL_NAME_TOKEN = "__QIMING_FENG_SHUI_WISDOM_PTE_LTD__";
+
+function normaliseBrandText(value: string) {
+  return value
+    .replace(/QIMING FENG SHUI WISDOM PTE\. LTD\./gi, LEGAL_NAME_TOKEN)
+    .replace(/启明大师黄启明/g, "黄启明")
+    .replace(/黄启明大师/g, "黄启明")
+    .replace(/Master Huang Qiming/gi, "Huang Qiming")
+    .replace(/Master Qiming/gi, "Huang Qiming")
+    .replace(/启明大师/g, "黄启明")
+    .replace(/QiMing Feng Shui/gi, "Qimen Strategy")
+    .replace(/Qiming Feng Shui/gi, "Qimen Strategy")
+    .replace(/奇明風水/g, "启明遁甲决策智库")
+    .replace(/奇明风水/g, "启明遁甲决策智库")
+    .replace(new RegExp(LEGAL_NAME_TOKEN, "g"), "QIMING FENG SHUI WISDOM PTE. LTD.");
+}
+
 export function applyInsightPostOverrides(post: InsightPost): InsightPost {
   const override = overrides[post.slug];
-  if (!override) return post;
+  const merged = override ? { ...post, ...override } : post;
 
   return {
-    ...post,
-    ...override,
+    ...merged,
+    title: normaliseBrandText(merged.title),
+    excerpt: normaliseBrandText(merged.excerpt),
+    category: normaliseBrandText(merged.category),
+    keywords: merged.keywords.map(normaliseBrandText),
+    paragraphs: merged.paragraphs.map(normaliseBrandText),
   };
 }

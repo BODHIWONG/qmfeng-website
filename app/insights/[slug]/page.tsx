@@ -17,6 +17,7 @@ import { spaceEnergyBlogPosts, getSpaceEnergyBlogPost } from "@/lib/space-energy
 import { executiveWellnessPosts, getExecutiveWellnessPost } from "@/lib/executive-wellness-posts";
 import { qimenStrategyPositioningPosts, getQimenStrategyPositioningPost } from "@/lib/qimen-strategy-positioning-post";
 import { qimenWuweiStrategyPosts, getQimenWuweiStrategyPost } from "@/lib/qimen-wuwei-strategy-post";
+import { applyInsightPostOverrides } from "@/lib/insights-overrides";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 
@@ -43,10 +44,10 @@ const allDynamicPosts = [
   ...spaceEnergyBlogPosts,
   ...qimenSingaporeBilingualPosts,
   ...insightPosts,
-];
+].map((post) => applyInsightPostOverrides(post));
 
 function findPost(slug: string) {
-  return (
+  const post =
     getQimenBusinessCaseStudyPost(slug) ??
     getQimenEmotionalClarityPost(slug) ??
     getQimenRelationshipCaseReflectionPost(slug) ??
@@ -62,8 +63,9 @@ function findPost(slug: string) {
     getQimenDunJiaFoundationPost(slug) ??
     getSpaceEnergyBlogPost(slug) ??
     getQimenSingaporeBilingualPost(slug) ??
-    getInsightPost(slug)
-  );
+    getInsightPost(slug);
+
+  return post ? applyInsightPostOverrides(post) : undefined;
 }
 
 export function generateStaticParams() {

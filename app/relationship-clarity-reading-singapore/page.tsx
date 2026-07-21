@@ -70,17 +70,17 @@ const serviceLevels = [
   {
     title: "Relationship Decision Clarity",
     price: "S$396 起",
-    detail: "45–60 minutes · one core relationship decision theme · no written report",
+    detail: "45–60 minutes · one core relationship decision theme · final fee confirmed by scope",
   },
   {
-    title: "Deep Relationship & Life Decision Session",
-    price: "S$688",
-    detail: "For complex relationship, marriage, family, career and life-direction issues",
+    title: "Complex Relationship Decision",
+    price: "Scope-Based",
+    detail: "For marriage, family, multiple parties or issues that overlap with career, property or major life direction",
   },
   {
-    title: "Personal Direction & Energy Advisory",
-    price: "S$980+",
-    detail: "For broader life direction, home energy, career state and relationship structure review",
+    title: "Ongoing or Enterprise Context",
+    price: "By Application",
+    detail: "For situations requiring broader strategic review, repeated decision support or confidential ongoing advisory",
   },
 ];
 
@@ -235,7 +235,7 @@ export default function RelationshipClarityReadingSingaporePage() {
                   Clear boundaries create a safer, more focused consultation.
                 </h2>
                 <p className="mt-6 text-base leading-8 text-white/70 md:text-lg">
-                  The purpose is to provide a private decision reference, not to create emotional dependence or promise a predetermined result.
+                  The purpose is to provide a private decision reference, not to create emotional dependence or replace qualified legal, medical or psychological care.
                 </p>
               </div>
               <div className="grid gap-5 md:grid-cols-2">
