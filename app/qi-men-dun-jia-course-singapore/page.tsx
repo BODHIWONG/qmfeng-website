@@ -23,7 +23,7 @@ export const metadata: Metadata = {
 
 const REGISTRATION_LINK = "/course-registration?course=qimen-foundation&batch=2026-09-19";
 const WA_LINK =
-  "https://wa.me/6589593499?text=Hello%20Qimen%20Strategy%20Academy%2C%20I%20would%20like%20to%20enquire%20about%20the%20Qi%20Men%20Dun%20Jia%20Foundation%20Course.";
+  "https://wa.me/6589593499?text=Hi%2C%20I%27m%20interested%20in%20learning%20Qi%20Men%20Dun%20Jia.%20May%20I%20know%20which%20courses%20are%20currently%20available%20and%20the%20upcoming%20class%20dates%3F";
 
 const curriculum = [
   ["01", "Qimen Framework", "奇门遁甲基础框架", "Understand the overall structure, modern decision-support value and responsible application boundaries."],
@@ -89,7 +89,7 @@ export default function QiMenCoursePage() {
               </div>
               <div className="mt-10 flex flex-col gap-4 sm:flex-row">
                 <Link href={REGISTRATION_LINK} className="inline-flex items-center justify-center bg-[#d6ad63] px-7 py-4 text-sm font-bold uppercase tracking-[0.14em] text-black hover:bg-[#f4dfb0]">Select Batch & Register</Link>
-                <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center border border-[#d6ad63]/70 px-7 py-4 text-sm font-bold uppercase tracking-[0.14em] text-[#f4dfb0] hover:bg-[#d6ad63]/10">WhatsApp Course Enquiry</a>
+                <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center border border-[#d6ad63]/70 px-7 py-4 text-sm font-bold uppercase tracking-[0.14em] text-[#f4dfb0] hover:bg-[#d6ad63]/10">Enquire About Qi Men Courses</a>
               </div>
               <p className="mt-4 text-sm text-white/52">Review the Course Registration Policy before payment. Places are confirmed after payment verification.</p>
             </div>
