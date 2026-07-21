@@ -31,12 +31,13 @@ function FounderContent() {
       name: "Huang Qiming 黄启明",
       alternateName: ["Qiming Huang", "黄启明"],
       description:
-        "Founder and Chief Strategic Advisor of Qimen Strategy Singapore. Huang Qiming has 16 years of practical Qi Men Dun Jia business advisory experience, has been involved in the strategic decision-making of two businesses operating steadily for 18 years, and has advised multiple companies on key strategic decisions.",
-      jobTitle: "Founder & Chief Strategic Advisor, Qimen Strategy",
+        "Founder and Strategic Decision Advisor of Qimen Strategy Singapore. Huang Qiming has 16 years of practical Qi Men Dun Jia business advisory experience, has been involved in the strategic decision-making of two businesses operating steadily for 18 years, and has advised multiple companies on key strategic decisions.",
+      jobTitle: "Founder & Strategic Decision Advisor, Qimen Strategy",
       worksFor: {
         "@type": "Organization",
-        name: "启明遁甲决策智库 Qimen Strategy",
-        alternateName: ["启明遁甲", "Qimen Strategy Singapore", "Qi Men Dun Jia Singapore", "Qiming Feng Shui Wisdom Pte. Ltd."],
+        name: "Qimen Strategy｜启明遁甲决策智库",
+        alternateName: ["启明遁甲", "Qimen Strategy Singapore", "Qi Men Dun Jia Singapore"],
+        legalName: "QIMING FENG SHUI WISDOM PTE. LTD.",
         url: "https://www.qmfeng.com",
       },
       knowsAbout,
