@@ -2,6 +2,9 @@ import { NextRequest, NextResponse } from "next/server";
 
 export const runtime = "nodejs";
 
+const DEFAULT_COURSE_FROM = "Qimen Strategy <registration@qmfeng.com>";
+const DEFAULT_REPLY_TO = "info@qmfeng.com";
+
 type Payload = {
   registrantName?: string;
   phone?: string;
@@ -28,6 +31,14 @@ type DeliveryResult = {
   destination: string;
   ok: boolean;
   detail?: string;
+};
+
+type EmailDeliveryResult = {
+  ok: boolean;
+  detail: string;
+  id?: string;
+  from?: string;
+  status?: number;
 };
 
 type CourseMode = "weekly" | "interest" | "application";
@@ -214,36 +225,135 @@ async function lead(url: string, record: Record<string, unknown>) {
   endpoint.searchParams.set("batch_id", String(record.batchId || ""));
   endpoint.searchParams.set("registration_mode", String(record.registrationMode || ""));
   endpoint.searchParams.set("policy_accepted", record.acceptedPolicy ? "yes" : "no");
-  endpoint.searchParams.set("notification_email", process.env.COURSE_ADMIN_EMAIL || "info@qmfeng.com");
+  endpoint.searchParams.set("notification_email", clean(process.env.COURSE_ADMIN_EMAIL, 300) || DEFAULT_REPLY_TO);
   endpoint.searchParams.set("payload", JSON.stringify(record));
   const response = await fetch(endpoint.toString(), { method: "GET", cache: "no-store" });
   if (!response.ok) throw new Error(`Lead webhook returned ${response.status}`);
   return "lead_webhook";
 }
 
-async function sendResendEmail(args: { to: string; subject: string; html: string }) {
-  const apiKey = process.env.RESEND_API_KEY;
-  const from = process.env.COURSE_EMAIL_FROM;
-  if (!apiKey || !from) {
-    return { ok: false, detail: "not_configured" };
+function emailAddressFromSender(sender: string) {
+  const angleMatch = sender.match(/<([^<>]+)>/);
+  return clean(angleMatch?.[1] || sender, 300).toLowerCase();
+}
+
+function isValidEmail(value: string) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+}
+
+async function attemptResend(args: {
+  apiKey: string;
+  from: string;
+  to: string;
+  subject: string;
+  html: string;
+  replyTo: string;
+}): Promise<EmailDeliveryResult> {
+  try {
+    const response = await fetch("https://api.resend.com/emails", {
+      method: "POST",
+      headers: {
+        authorization: `Bearer ${args.apiKey}`,
+        "content-type": "application/json",
+      },
+      body: JSON.stringify({
+        from: args.from,
+        to: [args.to],
+        subject: args.subject,
+        html: args.html,
+        reply_to: args.replyTo,
+      }),
+      cache: "no-store",
+    });
+
+    const raw = await response.text().catch(() => "");
+    let parsed: { id?: string; message?: string; name?: string } = {};
+    try {
+      parsed = raw ? JSON.parse(raw) : {};
+    } catch {
+      parsed = {};
+    }
+
+    if (!response.ok) {
+      console.error("[QimenCourseEmailResendRejected]", {
+        status: response.status,
+        from: args.from,
+        toDomain: args.to.split("@")[1] || "unknown",
+        response: raw.slice(0, 500),
+      });
+      return {
+        ok: false,
+        detail: `resend_${response.status}`,
+        status: response.status,
+        from: args.from,
+      };
+    }
+
+    return {
+      ok: true,
+      detail: "sent",
+      id: parsed.id,
+      status: response.status,
+      from: args.from,
+    };
+  } catch (error) {
+    console.error("[QimenCourseEmailNetworkError]", {
+      from: args.from,
+      toDomain: args.to.split("@")[1] || "unknown",
+      error: error instanceof Error ? error.message : "unknown_error",
+    });
+    return {
+      ok: false,
+      detail: "resend_network_error",
+      from: args.from,
+    };
+  }
+}
+
+async function sendResendEmail(args: { to: string; subject: string; html: string }): Promise<EmailDeliveryResult> {
+  const apiKey = clean(process.env.RESEND_API_KEY, 500);
+  if (!apiKey) {
+    console.error("[QimenCourseEmailConfigurationError]", { missing: "RESEND_API_KEY" });
+    return { ok: false, detail: "missing_resend_api_key" };
   }
 
-  const response = await fetch("https://api.resend.com/emails", {
-    method: "POST",
-    headers: {
-      authorization: `Bearer ${apiKey}`,
-      "content-type": "application/json",
-    },
-    body: JSON.stringify({ from, to: [args.to], subject: args.subject, html: args.html }),
-    cache: "no-store",
-  });
-
-  if (!response.ok) {
-    const detail = await response.text().catch(() => "");
-    return { ok: false, detail: `resend_${response.status}:${detail.slice(0, 240)}` };
+  const to = clean(args.to, 300).toLowerCase();
+  if (!isValidEmail(to)) {
+    return { ok: false, detail: "invalid_recipient_email" };
   }
 
-  return { ok: true, detail: "sent" };
+  const configuredFrom = clean(process.env.COURSE_EMAIL_FROM, 300);
+  const senderCandidates = Array.from(
+    new Set([configuredFrom, DEFAULT_COURSE_FROM].filter((value) => value && isValidEmail(emailAddressFromSender(value))))
+  );
+  const replyToCandidate = clean(process.env.COURSE_REPLY_TO, 300) || DEFAULT_REPLY_TO;
+  const replyTo = isValidEmail(replyToCandidate) ? replyToCandidate : DEFAULT_REPLY_TO;
+
+  if (!configuredFrom) {
+    console.warn("[QimenCourseEmailConfigurationFallback]", {
+      missing: "COURSE_EMAIL_FROM",
+      fallback: DEFAULT_COURSE_FROM,
+    });
+  }
+
+  let lastResult: EmailDeliveryResult = { ok: false, detail: "no_valid_sender" };
+  for (const from of senderCandidates) {
+    const result = await attemptResend({
+      apiKey,
+      from,
+      to,
+      subject: args.subject,
+      html: args.html,
+      replyTo,
+    });
+    if (result.ok) return result;
+    lastResult = result;
+
+    // Retry with the verified-domain fallback only when the configured sender is rejected.
+    if (result.status && ![403, 422].includes(result.status)) break;
+  }
+
+  return lastResult;
 }
 
 export async function POST(request: NextRequest) {
@@ -274,7 +384,7 @@ export async function POST(request: NextRequest) {
       expectedTotal: course.fee ? course.fee * participantCount : null,
       registrantName: clean(body.registrantName, 200),
       phone: clean(body.phone, 100),
-      email: clean(body.email, 200),
+      email: clean(body.email, 300).toLowerCase(),
       participantCount,
       participantNames: clean(body.participantNames, 1000),
       paymentStatus: course.mode === "weekly" ? clean(body.paymentStatus, 100) : "Not applicable",
@@ -295,6 +405,10 @@ export async function POST(request: NextRequest) {
         { ok: false, error: "Name, WhatsApp, email, participant name(s), course and registration type are required." },
         { status: 400 }
       );
+    }
+
+    if (!isValidEmail(record.email)) {
+      return NextResponse.json({ ok: false, error: "Please enter a valid email address." }, { status: 400 });
     }
 
     if (course.mode !== "weekly" && !record.notes) {
@@ -343,7 +457,15 @@ export async function POST(request: NextRequest) {
       throw new Error("All registration storage destinations failed.");
     }
 
-    const adminEmail = process.env.COURSE_ADMIN_EMAIL || "info@qmfeng.com";
+    const configuredAdminEmail = clean(process.env.COURSE_ADMIN_EMAIL, 300).toLowerCase();
+    const adminEmail = isValidEmail(configuredAdminEmail) ? configuredAdminEmail : DEFAULT_REPLY_TO;
+    if (!configuredAdminEmail || adminEmail !== configuredAdminEmail) {
+      console.warn("[QimenCourseAdminEmailFallback]", {
+        configured: Boolean(configuredAdminEmail),
+        fallback: DEFAULT_REPLY_TO,
+      });
+    }
+
     const subjectPrefix = course.mode === "application"
       ? "New Disciple Programme Application"
       : course.mode === "interest"
@@ -355,23 +477,32 @@ export async function POST(request: NextRequest) {
         ? "Course Interest Registration Received"
         : "Course Registration Received";
 
-    const adminDelivery = await sendResendEmail({
-      to: adminEmail,
-      subject: `${subjectPrefix} ${record.registrationId}`,
-      html: emailHtml(record, true),
-    });
+    const [adminDelivery, registrantDelivery] = await Promise.all([
+      sendResendEmail({
+        to: adminEmail,
+        subject: `${subjectPrefix} ${record.registrationId}`,
+        html: emailHtml(record, true),
+      }),
+      sendResendEmail({
+        to: record.email,
+        subject: `${registrantSubjectPrefix} — ${record.registrationId}`,
+        html: emailHtml(record, false),
+      }),
+    ]);
 
-    const registrantDelivery = await sendResendEmail({
-      to: record.email,
-      subject: `${registrantSubjectPrefix} — ${record.registrationId}`,
-      html: emailHtml(record, false),
-    });
+    const emailDeliveryOk = adminDelivery.ok && registrantDelivery.ok;
 
     console.info("[QimenCourseRegistrationStored]", {
       registrationId: record.registrationId,
       storageDeliveries,
+      emailConfiguration: {
+        resendApiKeyConfigured: Boolean(clean(process.env.RESEND_API_KEY, 500)),
+        courseEmailFromConfigured: Boolean(clean(process.env.COURSE_EMAIL_FROM, 300)),
+        courseAdminEmailConfigured: Boolean(configuredAdminEmail),
+      },
       adminEmail: adminDelivery,
       registrantEmail: registrantDelivery,
+      emailDeliveryOk,
       courseId,
       registrationMode: course.mode,
       batchId: record.batchId,
@@ -382,6 +513,7 @@ export async function POST(request: NextRequest) {
       registrationId: record.registrationId,
       receivedAt: record.receivedAt,
       storageDeliveries,
+      emailDeliveryOk,
       notifications: {
         adminEmail: adminDelivery,
         registrantEmail: registrantDelivery,
