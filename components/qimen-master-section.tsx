@@ -45,24 +45,24 @@ const qimenPoints = [
 const trustItems = [
   {
     icon: Brain,
-    zh: "16 年奇门遁甲企业决策经验",
-    en: "16 Years of Qi Men Dun Jia Business Advisory",
-    descZh: "长期服务企业主与个人关键决策，聚焦时机、方向、人事与行动判断。",
-    descEn: "Serving business owners and individuals facing important decisions, with focus on timing, direction, people and action clarity.",
+    zh: "16 年奇门遁甲实战与企业决策经验",
+    en: "16 Years of Practical Qi Men Dun Jia & Business Advisory",
+    descZh: "长期服务企业主与个人关键决策，并将实战经验整理为系统化课程。",
+    descEn: "Supporting business owners and individuals at critical decisions, while developing structured practical courses from real experience.",
   },
   {
     icon: Building2,
     zh: "两家企业 18 年稳健运营实战背书",
     en: "Two Businesses Operating Steadily for 18 Years",
-    descZh: "长期参与真实企业经营与决策，更理解企业主面对的现金流、合作、人事与扩张压力。",
+    descZh: "长期参与真实企业经营与决策，更理解现金流、合作、人事与扩张压力。",
     descEn: "Long-term involvement in real business operations and decision-making, with understanding of cash flow, partnership, people and expansion pressure.",
   },
   {
     icon: ShieldCheck,
-    zh: "多家企业战略决策顾问",
-    en: "Strategic Decision Advisor to Multiple Companies",
-    descZh: "以预约制方式，为企业关键节点提供奇门遁甲战略判断与决策参考。",
-    descEn: "Appointment-based advisory for key business moments, applying Qi Men Dun Jia as strategic decision reference.",
+    zh: "企业顾问与奇门实战教学双路径",
+    en: "Strategic Advisory & Practical Qi Men Teaching",
+    descZh: "一方面服务企业关键决策，另一方面通过系统课程、案例与练习培养学员。",
+    descEn: "Supporting key business decisions while developing learners through structured courses, cases and practical exercises.",
   },
 ];
 
@@ -89,7 +89,7 @@ export default function QimenMasterSection() {
               className="mb-4 text-xs uppercase tracking-[0.28em]"
               style={{ fontFamily: "var(--font-lato), sans-serif", color: gold }}
             >
-              {t("黄启明｜启明遁甲决策智库创始人", "Huang Qiming · Founder, Qimen Strategy")}
+              {t("启明老师｜启明遁甲决策智库创始人", "Mr.Qiming · Founder, Qimen Strategy")}
             </p>
 
             <h2
@@ -100,8 +100,8 @@ export default function QimenMasterSection() {
               }}
             >
               {t(
-                "16 年奇门遁甲企业决策经验，服务真实商业判断",
-                "16 Years of Qi Men Dun Jia Business Advisory for Real Business Decisions"
+                "16 年奇门遁甲实战经验，连接企业决策与系统教学",
+                "16 Years of Practical Qi Men Dun Jia Across Business Advisory and Teaching"
               )}
             </h2>
 
@@ -113,8 +113,8 @@ export default function QimenMasterSection() {
               }}
             >
               {t(
-                "黄启明以奇门遁甲为核心决策方法，结合真实企业经营经验，帮助企业主与个人在关键行动前看清时机、方向、人事关系与局势结构。",
-                "Huang Qiming applies Qi Men Dun Jia as a strategic decision method, combining real business operating experience to help business owners and individuals read timing, direction, people dynamics and situation structure before important moves."
+                "启明老师以奇门遁甲为核心决策方法，结合真实企业经营经验，帮助企业主与个人在关键行动前看清时机、方向、人事关系与局势结构；同时将多年实战经验整理为以系统框架、案例分析和实际练习为核心的奇门遁甲实战课程。",
+                "Mr.Qiming applies Qi Men Dun Jia as a strategic decision method, combining real business operating experience to help business owners and individuals read timing, direction, people dynamics and situation structure before important moves. He also develops practical Qi Men Dun Jia courses centred on structured frameworks, case analysis and guided exercises."
               )}
             </p>
 
@@ -143,12 +143,12 @@ export default function QimenMasterSection() {
                   color: "oklch(0.96 0.01 75)",
                 }}
               >
-                {t("关于黄启明", "About Huang Qiming")}
+                {t("关于启明老师", "About Mr.Qiming")}
               </h3>
               <p className="text-sm leading-relaxed text-[oklch(0.74_0.025_70)] md:text-base">
                 {t(
-                  "黄启明拥有 16 年奇门遁甲企业决策顾问经验，长期参与两家已稳健运营 18 年企业的经营与决策，并为多家企业提供战略决策顾问支持。启明遁甲决策智库的核心，不是替客户决定，而是帮助客户看清局势、识别重点、建立更清醒的下一步判断。",
-                  "Huang Qiming brings 16 years of Qi Men Dun Jia business advisory experience. He has long been involved in the operation and decision-making of two businesses that have operated steadily for 18 years, and has advised multiple companies on strategic decisions. Qimen Strategy does not decide for clients; it helps clients see the situation, identify key points and form clearer next-step judgment."
+                  "启明老师拥有 16 年奇门遁甲实战与企业决策经验，长期参与两家已稳健运营 18 年企业的经营与决策，并为多家企业提供战略决策顾问支持。如今，他同时主讲奇门遁甲实战课程，通过系统框架、案例拆解、练习与复盘，帮助学员逐步建立基础读局和实际应用能力。",
+                  "Mr.Qiming brings 16 years of practical Qi Men Dun Jia and business advisory experience. He has long been involved in the operation and decision-making of two businesses that have operated steadily for 18 years, and has advised multiple companies on strategic decisions. He also teaches practical Qi Men Dun Jia courses through structured frameworks, case breakdowns, guided exercises and review."
                 )}
               </p>
             </div>
@@ -165,10 +165,10 @@ export default function QimenMasterSection() {
                 {t("预约私密奇门决策咨询", "Book Private Qi Men Advisory")}
               </a>
               <a
-                href="/singapore-qi-men-dun-jia-consultant"
+                href="/qi-men-dun-jia-course-singapore"
                 className="inline-flex items-center justify-center gap-3 rounded-full border border-[oklch(0.72_0.12_70/0.45)] px-7 py-3 text-sm font-bold text-[oklch(0.88_0.08_70)] transition hover:bg-[oklch(0.72_0.12_70/0.10)]"
               >
-                {t("查看奇门遁甲咨询", "View Qi Men Consultation")}
+                {t("查看奇门遁甲实战课程", "View Practical Qi Men Courses")}
                 <ArrowRight size={17} />
               </a>
             </div>
@@ -184,7 +184,7 @@ export default function QimenMasterSection() {
             <div className="relative mx-auto max-w-lg overflow-hidden rounded-[2rem] border border-[oklch(0.72_0.12_70/0.25)] bg-[oklch(0.08_0.018_60)] shadow-[0_30px_90px_rgba(0,0,0,0.45)]">
               <img
                 src={FOUNDER_IMAGE}
-                alt="Huang Qiming Founder of Qimen Strategy Singapore"
+                alt={t("启明老师｜启明遁甲决策智库创始人", "Mr.Qiming, Founder of Qimen Strategy")}
                 className="aspect-[4/5] w-full object-cover object-center"
               />
               <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 via-black/45 to-transparent p-6 md:p-7">
@@ -192,16 +192,16 @@ export default function QimenMasterSection() {
                   className="text-2xl font-semibold text-[oklch(0.98_0.01_75)]"
                   style={{ fontFamily: "var(--font-cormorant), var(--font-noto-serif), serif" }}
                 >
-                  {t("黄启明", "Huang Qiming")}
+                  {t("启明老师", "Mr.Qiming")}
                 </p>
                 <p className="mt-2 text-sm font-semibold tracking-wide text-[oklch(0.78_0.10_70)]">
                   {t(
-                    "启明遁甲决策智库创始人｜奇门遁甲决策顾问",
-                    "Founder · Qi Men Dun Jia Decision Advisor"
+                    "启明遁甲决策智库创始人｜奇门遁甲实战课程主讲｜企业决策顾问",
+                    "Founder · Practical Qi Men Dun Jia Instructor · Business Decision Advisor"
                   )}
                 </p>
                 <p className="mt-2 text-xs uppercase tracking-[0.16em] text-white/70">
-                  {t("16 年企业奇门决策经验", "16 Years of Business Qi Men Advisory")}
+                  {t("16 年奇门遁甲实战经验", "16 Years of Practical Qi Men Dun Jia")}
                 </p>
               </div>
             </div>
