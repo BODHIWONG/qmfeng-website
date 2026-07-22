@@ -11,6 +11,7 @@ import { qimenRelationshipSeoPosts, getQimenRelationshipSeoPost } from "@/lib/qi
 import { qimenRelationshipCaseReflectionPosts, getQimenRelationshipCaseReflectionPost } from "@/lib/qimen-relationship-case-reflections";
 import { qimenEmotionalClarityPosts, getQimenEmotionalClarityPost } from "@/lib/qimen-emotional-clarity-posts";
 import { qimenBusinessCaseStudyPosts, getQimenBusinessCaseStudyPost } from "@/lib/qimen-business-case-study-posts";
+import { zouShimingBusinessDecisionPosts, getZouShimingBusinessDecisionPost } from "@/lib/zou-shiming-business-decision-post";
 import { qimenStrategyDecisionIntelligencePosts, getQimenStrategyDecisionIntelligencePost } from "@/lib/qimen-strategy-decision-intelligence-post";
 import { qimenStrategyModernDecisionMakingPosts, getQimenStrategyModernDecisionMakingPost } from "@/lib/qimen-strategy-modern-decision-making-post";
 import { spaceEnergyBlogPosts, getSpaceEnergyBlogPost } from "@/lib/space-energy-blog-posts";
@@ -28,6 +29,7 @@ type InsightDetailProps = {
 const businessCaseStudySlug = "business-sales-no-profit-qimen-strategy-singapore";
 
 const allDynamicPosts = [
+  ...zouShimingBusinessDecisionPosts,
   ...qimenBusinessCaseStudyPosts,
   ...qimenEmotionalClarityPosts,
   ...qimenRelationshipCaseReflectionPosts,
@@ -48,6 +50,7 @@ const allDynamicPosts = [
 
 function findPost(slug: string) {
   const post =
+    getZouShimingBusinessDecisionPost(slug) ??
     getQimenBusinessCaseStudyPost(slug) ??
     getQimenEmotionalClarityPost(slug) ??
     getQimenRelationshipCaseReflectionPost(slug) ??
