@@ -6,8 +6,8 @@ import { useLanguage } from "@/contexts/language-context";
 const stats = [
   { valueZh: "16+年", valueEn: "16+ Years", labelZh: "奇门遁甲实战经验", labelEn: "Qi Men Dun Jia Practice" },
   { valueZh: "18年", valueEn: "18 Years", labelZh: "企业经营与管理经验", labelEn: "Business Operations Experience" },
-  { valueZh: "私密制", valueEn: "Private", labelZh: "企业主与高管顾问", labelEn: "Founder & Executive Advisory" },
   { valueZh: "每周", valueEn: "Weekly", labelZh: "周末奇门课程", labelEn: "Weekend Qi Men Courses" },
+  { valueZh: "私密制", valueEn: "Private", labelZh: "企业与个人咨询", labelEn: "Business & Personal Advisory" },
 ];
 
 export default function TrustBar() {

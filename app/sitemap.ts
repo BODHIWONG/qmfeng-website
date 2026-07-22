@@ -23,6 +23,7 @@ const corePages = [
   "/enterprise-strategic-advisory",
   "/founder-wealth-investment-advisory",
   "/executive-career-transition-advisory",
+  "/personal-advisory",
   "/decision",
   "/relationship-clarity-reading-singapore",
   "/courses",
@@ -61,6 +62,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       "/enterprise-strategic-advisory",
       "/founder-wealth-investment-advisory",
       "/executive-career-transition-advisory",
+      "/personal-advisory",
       "/decision",
     ].includes(path);
     const isCourse = path.includes("course") || path === "/courses";
