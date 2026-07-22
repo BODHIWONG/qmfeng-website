@@ -82,7 +82,7 @@ const pillars: Pillar[] = [
 ];
 
 export default function ServiceCards() {
-  const { t } = useLanguage();
+  const { lang, t } = useLanguage();
 
   return (
     <section id="services" className="bg-[oklch(0.97_0.012_75)] py-16 md:py-24">
@@ -116,6 +116,7 @@ export default function ServiceCards() {
         <div className="grid gap-6 lg:grid-cols-3">
           {pillars.map((pillar, index) => {
             const Icon = pillar.icon;
+            const features = lang === "zh" ? pillar.featuresZh : pillar.featuresEn;
             return (
               <motion.article
                 key={pillar.number}
@@ -144,7 +145,7 @@ export default function ServiceCards() {
                 <p className="mt-5 text-sm leading-7 text-white/65">{t(pillar.bodyZh, pillar.bodyEn)}</p>
 
                 <div className="mt-6 space-y-3 border-t border-white/10 pt-6">
-                  {(t(pillar.featuresZh, pillar.featuresEn) as string[]).map((feature) => (
+                  {features.map((feature) => (
                     <p key={feature} className="flex items-start gap-3 text-sm leading-6 text-white/72">
                       <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#d6ad63]" />
                       {feature}
