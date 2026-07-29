@@ -5,6 +5,52 @@ const relationshipCta =
 
 export const qimenRelationshipCaseReflectionPosts: InsightPost[] = [
   {
+    slug: "qimen-dun-jia-singapore-career-relationship-decision-case-study",
+    title: "Qi Men Dun Jia Singapore: Career & Relationship Decision Case Study",
+    excerpt:
+      "Facing career pressure and relationship uncertainty at the same time? This anonymised Singapore case study shows how Qi Men Dun Jia can support clearer decisions on timing, risk and next steps.",
+    date: "2026-07-30",
+    readTime: "7 min",
+    category: "Relationship Decision Clarity",
+    keywords: [
+      "Qi Men Dun Jia Singapore",
+      "Relationship consultation Singapore",
+      "Relationship clarity Singapore",
+      "Career decision Singapore",
+      "Strategic decision advisory Singapore",
+      "Qimen Strategy Singapore"
+    ],
+    paragraphs: [
+      `When career pressure and relationship uncertainty arrive at the same time, the hardest question is often not “What will happen?” It is “What should I do next?”`,
+      `This anonymised case is based on a private Qimen Strategy consultation in Singapore. To protect client confidentiality, the client’s name, age, birth details, exact chart time and other identifying information are not published. Some non-essential details have also been generalised.`,
+      `## Two Important Decisions at the Same Time`,
+      `The client was facing pressure in two major areas of life. At work, the environment felt increasingly demanding and unclear, raising the question of whether to stay, prepare for a move, or leave. In her relationship, she wanted greater clarity while the other person appeared less ready to provide a definite direction.`,
+      `The useful questions were therefore practical: What is actually happening now? Where is the pressure coming from? What should be prioritised? Is this a time to act, wait, or prepare?`,
+      `## Career: Does Pressure Mean It Is Time to Leave?`,
+      `The Qi Men Dun Jia analysis reflected genuine career pressure, unclear information and a situation in which the client did not currently have full control. But it also indicated that the present position could still contain useful value.`,
+      `The strategic recommendation was not to resign simply because the situation felt uncomfortable. Instead, the client was encouraged to stabilise first, verify information, document achievements and identify the experience, relationships and professional resources that could become future career capital.`,
+      `A difficult job and a wrong job are not always the same thing. Sometimes the better move is to extract the value, prepare properly and make the next decision from a stronger position.`,
+      `## Relationship: Should You Keep Waiting or Move On?`,
+      `The relationship showed attachment, but also tension and uncertainty. One side wanted clarity while the other appeared less ready to translate the relationship into a clear commitment.`,
+      `At this stage, repeatedly pushing for an immediate answer could create more resistance without producing genuine clarity. The recommendation was to reduce pressure, observe behaviour over time and assess whether words were being supported by consistent actions.`,
+      `The more useful question was not only “Does this person still have feelings for me?” but “Should I continue investing my time and emotions in a relationship that remains uncertain?”`,
+      `In relationship decisions, clarity does not always come from asking more questions. Sometimes it comes from seeing what happens when you stop chasing the answer.`,
+      `## Qi Men Dun Jia as Decision Support`,
+      `Qi Men Dun Jia is an ancient Chinese system traditionally used to examine timing, people, environment and action. At Qimen Strategy, we apply it as an additional perspective for modern decision-making rather than as a guarantee of future outcomes.`,
+      `For career and relationship matters, the purpose is to examine the structure of the situation, possible risks and opportunities, timing, and the decision in front of the client.`,
+      `Sometimes the better strategy is to act. Sometimes it is to wait. Sometimes it is to prepare quietly until the conditions become clearer.`,
+      `## Facing a Career or Relationship Decision in Singapore?`,
+      `If you are at a crossroads in your career, relationship, business or personal direction, a private consultation can help you step back from the immediate emotion and examine the wider situation before deciding your next move.`,
+      `Qimen Strategy provides Qi Men Dun Jia Strategic Decision Advisory in Singapore, including relationship and marriage decisions, career transitions, business decisions, partnerships and other major life choices.`,
+      `LINK:Explore Relationship & Marriage Advisory|/relationship-clarity-reading-singapore`,
+      `LINK:Explore Major Personal Decision Advisory|/decision`,
+      `See the Whole Game Before You Decide.`,
+      `## Important Note`,
+      `This case is shared for educational and informational purposes with identifying details removed. Qi Men Dun Jia does not replace communication, relationship counselling, legal, financial, medical, mental health or employment advice. No outcome is guaranteed.`,
+      `📩 Book a private consultation.`
+    ],
+  },
+  {
     slug: "does-he-still-love-you-relationship-clarity-singapore",
     title: "Does He Still Love You? Stop Guessing. Start Seeing the Whole Picture.",
     excerpt:
