@@ -48,16 +48,16 @@ const pillars: Pillar[] = [
   {
     number: "02",
     icon: BriefcaseBusiness,
-    eyebrowZh: "企业主高价值顾问",
-    eyebrowEn: "Founder Strategic Advisory",
+    eyebrowZh: "企业主与关键经营决策",
+    eyebrowEn: "Founder & Business Decision Advisory",
     titleZh: "企业战略陪跑",
     titleEn: "Business Strategic Advisory",
     bodyZh:
-      "为创业老板、企业主与高管提供经营瓶颈诊断、战略重点排序、重大决策判断与阶段性持续复盘。",
+      "面向创业老板、企业主与高管，聚焦经营瓶颈、战略重点、合作人事与重大经营选择，并通过阶段复盘持续校准方向。",
     bodyEn:
-      "Strategic support for founders, business owners and executives facing bottlenecks, major decisions, people issues and transition pressure.",
-    featuresZh: ["经营瓶颈与战略诊断", "投资、合作与人事判断", "90天试行与年度陪跑"],
-    featuresEn: ["Business Diagnosis", "Investment, People & Partnership", "90-Day & Annual Advisory"],
+      "Strategic advisory for founders, business owners and executives navigating business bottlenecks, priorities, partnerships, people issues and major operating decisions.",
+    featuresZh: ["经营瓶颈与战略重点", "投资、合作与人事判断", "90天试行与长期陪跑"],
+    featuresEn: ["Bottlenecks & Strategic Priorities", "Investment, People & Partnership", "90-Day & Ongoing Advisory"],
     href: "/enterprise-strategic-advisory",
     ctaZh: "了解企业陪跑",
     ctaEn: "Explore Business Advisory",
@@ -65,19 +65,19 @@ const pillars: Pillar[] = [
   {
     number: "03",
     icon: UserRound,
-    eyebrowZh: "个人重大决策与生活优化",
-    eyebrowEn: "Personal Decision & Life Advisory",
-    titleZh: "个人咨询服务",
-    titleEn: "Personal Advisory Services",
+    eyebrowZh: "感情 · 事业 · 人生关键选择",
+    eyebrowEn: "Relationship, Career & Life Decisions",
+    titleZh: "个人重大决策咨询",
+    titleEn: "Personal Decision Advisory",
     bodyZh:
-      "面向正在经历重要人生选择、关系变化、行动安排或居住环境调整的个人客户，提供私密、清晰、按需匹配的咨询支持。",
+      "面向正在经历感情关系、事业方向或人生关键选择的个人客户，帮助梳理局势、时机、风险与下一步，让决定建立在更清晰的判断上。",
     bodyEn:
-      "Private advisory for individuals facing important life choices, relationship changes, action planning or residential environment concerns.",
-    featuresZh: ["感情婚姻与人生选择", "择日与手机号码选择", "居家风水与空间净化"],
-    featuresEn: ["Relationship & Life Decisions", "Date & Mobile Number Selection", "Home Feng Shui & Space Clearing"],
+      "Private advisory for relationship, career and major life decisions, helping clients examine the situation, timing, risks and practical next steps before deciding.",
+    featuresZh: ["感情与婚姻关系", "事业、工作与方向选择", "人生重大决策与行动时机"],
+    featuresEn: ["Relationship & Marriage Decisions", "Career, Work & Direction", "Major Life Decisions & Timing"],
     href: "/personal-advisory",
-    ctaZh: "查看个人咨询",
-    ctaEn: "Explore Personal Advisory",
+    ctaZh: "查看个人决策咨询",
+    ctaEn: "Explore Personal Decision Advisory",
   },
 ];
 
@@ -101,14 +101,14 @@ export default function ServiceCards() {
             style={{ fontFamily: "var(--font-cormorant), var(--font-noto-serif), serif", color: "oklch(0.15 0.02 60)" }}
           >
             {t(
-              "奇门课程、企业陪跑与个人咨询，共同构成启明遁甲当前的服务体系",
-              "Education, Business Advisory and Personal Consultation in One Integrated Qimen Strategy System"
+              "奇门课程、企业战略陪跑与个人重大决策咨询",
+              "Qi Men Education, Business Strategic Advisory and Personal Decision Advisory"
             )}
           </h2>
           <p className="text-sm leading-7 text-[oklch(0.42_0.02_60)] md:text-base">
             {t(
-              "三类服务面向不同阶段与不同需求，但都围绕同一个核心：在重要行动前，看清时机、方向、人事、环境与风险，再作出更清晰的选择。",
-              "Each pathway serves a different need, but all share one purpose: to clarify timing, direction, people dynamics, environment and risk before important action."
+              "三条路径服务不同需求，但核心一致：在重要行动前看清局势、时机、方向、人事与风险，再作出更清晰的选择。",
+              "Three pathways serve different needs, with one shared purpose: to clarify the situation, timing, direction, people dynamics and risk before important action."
             )}
           </p>
         </motion.div>
@@ -178,8 +178,8 @@ export default function ServiceCards() {
 
         <div className="mt-10 border-l-2 border-[#d6ad63] bg-white px-6 py-5 text-sm leading-7 text-[oklch(0.38_0.02_60)] shadow-sm">
           {t(
-            "不确定适合哪一类服务？可先说明你的身份、当前问题与希望作出决定的时间，我们会协助你匹配课程、企业顾问或个人咨询路径。",
-            "Not sure which pathway fits? Share your role, current situation and decision timeline, and we will help match you with the appropriate course, business advisory or personal consultation pathway."
+            "不确定适合哪一条路径？说明你目前最需要解决的问题，我们会协助你匹配课程、企业顾问或个人重大决策咨询。八字、风水、择日等专项服务可在个人咨询页面进一步了解。",
+            "Not sure which pathway fits? Tell us the main issue you need to address and we will help match you with the appropriate course, business advisory or personal decision consultation. Bazi, Feng Shui, date selection and other specialist services remain available within Personal Advisory."
           )}
         </div>
       </div>
