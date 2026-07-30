@@ -18,6 +18,7 @@ import { spaceEnergyBlogPosts, getSpaceEnergyBlogPost } from "@/lib/space-energy
 import { executiveWellnessPosts, getExecutiveWellnessPost } from "@/lib/executive-wellness-posts";
 import { qimenStrategyPositioningPosts, getQimenStrategyPositioningPost } from "@/lib/qimen-strategy-positioning-post";
 import { qimenWuweiStrategyPosts, getQimenWuweiStrategyPost } from "@/lib/qimen-wuwei-strategy-post";
+import { qimenLifeCrossroadsDecisionAdvisoryPosts, getQimenLifeCrossroadsDecisionAdvisoryPost } from "@/lib/qimen-life-crossroads-decision-advisory-post";
 import { applyInsightPostOverrides } from "@/lib/insights-overrides";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
@@ -29,6 +30,7 @@ type InsightDetailProps = {
 const businessCaseStudySlug = "business-sales-no-profit-qimen-strategy-singapore";
 
 const allDynamicPosts = [
+  ...qimenLifeCrossroadsDecisionAdvisoryPosts,
   ...zouShimingBusinessDecisionPosts,
   ...qimenBusinessCaseStudyPosts,
   ...qimenEmotionalClarityPosts,
@@ -50,6 +52,7 @@ const allDynamicPosts = [
 
 function findPost(slug: string) {
   const post =
+    getQimenLifeCrossroadsDecisionAdvisoryPost(slug) ??
     getZouShimingBusinessDecisionPost(slug) ??
     getQimenBusinessCaseStudyPost(slug) ??
     getQimenEmotionalClarityPost(slug) ??
