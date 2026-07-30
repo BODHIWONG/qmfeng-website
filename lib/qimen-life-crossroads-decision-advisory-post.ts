@@ -5,7 +5,7 @@ export const qimenLifeCrossroadsDecisionAdvisoryPosts: InsightPost[] = [
     slug: "feeling-stuck-life-crossroads-qimen-decision-advisory-singapore",
     title: "Feeling Stuck? See the Bigger Picture Before Your Next Move",
     excerpt:
-      "Career, business, relationships or family decisions can become overwhelming when everything happens at once. Qimen Strategy Singapore helps you step back, see the situation more clearly and make a more considered next move.",
+      "Career, business, family or major life decisions can become overwhelming when everything happens at once. Qimen Strategy Singapore helps you step back, see the situation more clearly and make a more considered next move.",
     date: "2026-07-30",
     readTime: "6 min",
     category: "Personal Decision Advisory",
@@ -16,7 +16,7 @@ export const qimenLifeCrossroadsDecisionAdvisoryPosts: InsightPost[] = [
       "Life Transition Singapore",
       "Career Direction Singapore",
       "Business Decision Singapore",
-      "Relationship Decision Singapore",
+      "Personal Life Decisions Singapore",
       "Major Life Decisions",
       "Strategic Decision Advisory",
       "启明遁甲",
