@@ -20,9 +20,11 @@ import { qimenStrategyPositioningPosts } from "@/lib/qimen-strategy-positioning-
 import { qimenStrategyDecisionIntelligencePosts } from "@/lib/qimen-strategy-decision-intelligence-post";
 import { qimenStrategyModernDecisionMakingPosts } from "@/lib/qimen-strategy-modern-decision-making-post";
 import { qimenWuweiStrategyPosts } from "@/lib/qimen-wuwei-strategy-post";
+import { qimenLifeCrossroadsDecisionAdvisoryPosts } from "@/lib/qimen-life-crossroads-decision-advisory-post";
 import { applyInsightPostOverrides } from "@/lib/insights-overrides";
 
 const allPosts = [
+  ...qimenLifeCrossroadsDecisionAdvisoryPosts,
   ...zouShimingBusinessDecisionPosts,
   ...qimenBusinessCaseStudyPosts,
   ...qimenEmotionalClarityPosts,
