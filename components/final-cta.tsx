@@ -22,7 +22,7 @@ export default function FinalCTA() {
             viewport={{ once: true }}
             className="mb-5 text-xs font-bold uppercase tracking-[0.24em] text-[oklch(0.72_0.12_70)]"
           >
-            Qi Men Courses · Business Advisory · Personal Advisory
+            Personal Advisory · Business Advisory · Qi Men Courses
           </motion.p>
           <motion.h2
             initial={{ opacity: 0, y: 28 }}
@@ -40,8 +40,8 @@ export default function FinalCTA() {
             className="mx-auto mt-6 max-w-4xl text-base leading-8 text-white/70 md:text-lg"
           >
             {t(
-              "希望系统学习，可进入奇门课程；正在处理经营瓶颈、投资、人事或转型问题，可申请企业陪跑；面对感情婚姻、个人重大决策、择日、手机号码、居家风水或空间净化需求，可查看个人咨询服务。",
-              "Choose practical Qi Men education for structured learning, business advisory for high-stakes commercial decisions, or personal advisory for relationships, important life decisions, date selection, mobile number selection, residential Feng Shui and space clearing."
+              "面对感情婚姻、事业方向、个人重大决策、择日、手机号码、居家风水或空间净化，可先查看个人咨询；正在处理经营瓶颈、投资、人事或转型问题，可了解企业顾问；希望系统学习奇门遁甲，可进入课程体系。",
+              "Start with personal advisory for relationships, career and important life decisions; business advisory for high-stakes commercial decisions; or practical Qi Men education for structured learning."
             )}
           </motion.p>
           <motion.div
@@ -51,11 +51,11 @@ export default function FinalCTA() {
             className="mt-10 grid gap-4 md:grid-cols-3"
           >
             <Link
-              href="/courses"
+              href="/personal-advisory"
               className="inline-flex items-center justify-center gap-3 border-2 border-[oklch(0.72_0.12_70)] bg-[oklch(0.72_0.12_70)] px-7 py-5 text-sm font-bold uppercase tracking-[0.11em] text-[oklch(0.06_0.02_60)] transition hover:scale-[1.02]"
             >
-              <BookOpen size={20} />
-              {t("奇门课程", "Qi Men Courses")}
+              <UserRound size={20} />
+              {t("个人咨询", "Personal Advisory")}
               <ArrowRight size={18} />
             </Link>
             <Link
@@ -63,14 +63,14 @@ export default function FinalCTA() {
               className="inline-flex items-center justify-center gap-3 border-2 border-[oklch(0.72_0.12_70)] px-7 py-5 text-sm font-bold uppercase tracking-[0.11em] text-[oklch(0.72_0.12_70)] transition hover:bg-[oklch(0.72_0.12_70)] hover:text-[oklch(0.06_0.02_60)]"
             >
               <BriefcaseBusiness size={20} />
-              {t("企业陪跑", "Business Advisory")}
+              {t("企业顾问", "Business Advisory")}
             </Link>
             <Link
-              href="/personal-advisory"
+              href="/courses"
               className="inline-flex items-center justify-center gap-3 border-2 border-[oklch(0.72_0.12_70)] px-7 py-5 text-sm font-bold uppercase tracking-[0.11em] text-[oklch(0.72_0.12_70)] transition hover:bg-[oklch(0.72_0.12_70)] hover:text-[oklch(0.06_0.02_60)]"
             >
-              <UserRound size={20} />
-              {t("个人咨询", "Personal Advisory")}
+              <BookOpen size={20} />
+              {t("奇门课程", "Qi Men Courses")}
             </Link>
           </motion.div>
           <p className="mt-7 text-sm font-semibold text-[oklch(0.72_0.12_70)]">WhatsApp: +65 8959 3499 · Bedok, Singapore</p>
