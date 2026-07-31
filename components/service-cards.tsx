@@ -27,6 +27,40 @@ type Pillar = {
 const pillars: Pillar[] = [
   {
     number: "01",
+    icon: UserRound,
+    eyebrowZh: "感情 · 事业 · 人生关键选择",
+    eyebrowEn: "Relationship, Career & Life Decisions",
+    titleZh: "个人重大决策咨询",
+    titleEn: "Personal Decision Advisory",
+    bodyZh:
+      "面向正在经历感情关系、事业方向或人生关键选择的个人客户，帮助梳理局势、时机、风险与下一步，让决定建立在更清晰的判断上。",
+    bodyEn:
+      "Private advisory for relationship, career and major life decisions, helping clients examine the situation, timing, risks and practical next steps before deciding.",
+    featuresZh: ["感情与婚姻关系", "事业、工作与方向选择", "人生重大决策与行动时机"],
+    featuresEn: ["Relationship & Marriage Decisions", "Career, Work & Direction", "Major Life Decisions & Timing"],
+    href: "/personal-advisory",
+    ctaZh: "查看个人决策咨询",
+    ctaEn: "Explore Personal Decision Advisory",
+  },
+  {
+    number: "02",
+    icon: BriefcaseBusiness,
+    eyebrowZh: "企业主与关键经营决策",
+    eyebrowEn: "Founder & Business Decision Advisory",
+    titleZh: "企业战略顾问",
+    titleEn: "Business Strategic Advisory",
+    bodyZh:
+      "面向创业老板、企业主与高管，聚焦经营瓶颈、战略重点、合作人事与重大经营选择，并通过阶段复盘持续校准方向。",
+    bodyEn:
+      "Strategic advisory for founders, business owners and executives navigating business bottlenecks, priorities, partnerships, people issues and major operating decisions.",
+    featuresZh: ["经营瓶颈与战略重点", "投资、合作与人事判断", "90天试行与长期陪跑"],
+    featuresEn: ["Bottlenecks & Strategic Priorities", "Investment, People & Partnership", "90-Day & Ongoing Advisory"],
+    href: "/enterprise-strategic-advisory",
+    ctaZh: "了解企业顾问",
+    ctaEn: "Explore Business Advisory",
+  },
+  {
+    number: "03",
     icon: BookOpen,
     eyebrowZh: "奇门遁甲实战教学",
     eyebrowEn: "Practical Qi Men Education",
@@ -44,40 +78,6 @@ const pillars: Pillar[] = [
     secondaryHref: "/course-registration?course=qimen-foundation&batch=2026-09-19",
     secondaryCtaZh: "选择班次并报名",
     secondaryCtaEn: "Select Batch & Register",
-  },
-  {
-    number: "02",
-    icon: BriefcaseBusiness,
-    eyebrowZh: "企业主与关键经营决策",
-    eyebrowEn: "Founder & Business Decision Advisory",
-    titleZh: "企业战略陪跑",
-    titleEn: "Business Strategic Advisory",
-    bodyZh:
-      "面向创业老板、企业主与高管，聚焦经营瓶颈、战略重点、合作人事与重大经营选择，并通过阶段复盘持续校准方向。",
-    bodyEn:
-      "Strategic advisory for founders, business owners and executives navigating business bottlenecks, priorities, partnerships, people issues and major operating decisions.",
-    featuresZh: ["经营瓶颈与战略重点", "投资、合作与人事判断", "90天试行与长期陪跑"],
-    featuresEn: ["Bottlenecks & Strategic Priorities", "Investment, People & Partnership", "90-Day & Ongoing Advisory"],
-    href: "/enterprise-strategic-advisory",
-    ctaZh: "了解企业陪跑",
-    ctaEn: "Explore Business Advisory",
-  },
-  {
-    number: "03",
-    icon: UserRound,
-    eyebrowZh: "感情 · 事业 · 人生关键选择",
-    eyebrowEn: "Relationship, Career & Life Decisions",
-    titleZh: "个人重大决策咨询",
-    titleEn: "Personal Decision Advisory",
-    bodyZh:
-      "面向正在经历感情关系、事业方向或人生关键选择的个人客户，帮助梳理局势、时机、风险与下一步，让决定建立在更清晰的判断上。",
-    bodyEn:
-      "Private advisory for relationship, career and major life decisions, helping clients examine the situation, timing, risks and practical next steps before deciding.",
-    featuresZh: ["感情与婚姻关系", "事业、工作与方向选择", "人生重大决策与行动时机"],
-    featuresEn: ["Relationship & Marriage Decisions", "Career, Work & Direction", "Major Life Decisions & Timing"],
-    href: "/personal-advisory",
-    ctaZh: "查看个人决策咨询",
-    ctaEn: "Explore Personal Decision Advisory",
   },
 ];
 
@@ -101,8 +101,8 @@ export default function ServiceCards() {
             style={{ fontFamily: "var(--font-cormorant), var(--font-noto-serif), serif", color: "oklch(0.15 0.02 60)" }}
           >
             {t(
-              "奇门课程、企业战略陪跑与个人重大决策咨询",
-              "Qi Men Education, Business Strategic Advisory and Personal Decision Advisory"
+              "个人重大决策咨询、企业战略顾问与奇门课程",
+              "Personal Decision Advisory, Business Strategic Advisory and Qi Men Education"
             )}
           </h2>
           <p className="text-sm leading-7 text-[oklch(0.42_0.02_60)] md:text-base">
@@ -178,8 +178,8 @@ export default function ServiceCards() {
 
         <div className="mt-10 border-l-2 border-[#d6ad63] bg-white px-6 py-5 text-sm leading-7 text-[oklch(0.38_0.02_60)] shadow-sm">
           {t(
-            "不确定适合哪一条路径？说明你目前最需要解决的问题，我们会协助你匹配课程、企业顾问或个人重大决策咨询。八字、风水、择日等专项服务可在个人咨询页面进一步了解。",
-            "Not sure which pathway fits? Tell us the main issue you need to address and we will help match you with the appropriate course, business advisory or personal decision consultation. Bazi, Feng Shui, date selection and other specialist services remain available within Personal Advisory."
+            "不确定适合哪一条路径？说明你目前最需要解决的问题，我们会协助你匹配个人重大决策咨询、企业顾问或奇门课程。八字、风水、择日等专项服务可在个人咨询页面进一步了解。",
+            "Not sure which pathway fits? Tell us the main issue you need to address and we will help match you with personal decision advisory, business advisory or a Qi Men course. Bazi, Feng Shui, date selection and other specialist services remain available within Personal Advisory."
           )}
         </div>
       </div>
