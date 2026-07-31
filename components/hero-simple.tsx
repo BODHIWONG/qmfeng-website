@@ -7,10 +7,10 @@ import Link from "next/link";
 const BG_IMAGE = "/master-home-hero.png";
 
 const searchIntents = [
-  { en: "Qi Men Dun Jia", zh: "奇门遁甲" },
-  { en: "Bazi & Feng Shui", zh: "八字命理 · 风水" },
   { en: "Relationship & Career", zh: "感情 · 事业" },
   { en: "Business Decisions", zh: "企业经营 · 重大决策" },
+  { en: "Qi Men Dun Jia", zh: "奇门遁甲" },
+  { en: "Bazi & Feng Shui", zh: "八字命理 · 风水" },
 ];
 
 export default function HeroSimple() {
@@ -53,7 +53,7 @@ export default function HeroSimple() {
             className="max-w-5xl text-4xl font-semibold leading-[1.02] tracking-[0.02em] text-[#f4dfb0] drop-shadow-[0_8px_28px_rgba(0,0,0,0.62)] sm:text-5xl md:text-6xl lg:text-7xl"
             style={{ fontFamily: "var(--font-cormorant), var(--font-noto-serif), serif" }}
           >
-            Qi Men Dun Jia Consultation, Courses & Strategic Advisory in Singapore
+            Personal & Business Advisory with Qi Men Dun Jia in Singapore
           </motion.h1>
 
           <motion.h2
@@ -63,7 +63,7 @@ export default function HeroSimple() {
             className="mt-6 max-w-4xl text-2xl font-semibold leading-tight tracking-[0.06em] text-[#e2bd6b] md:text-4xl"
             style={{ fontFamily: "var(--font-noto-serif), var(--font-cormorant), serif" }}
           >
-            奇门遁甲咨询 · 实战课程 · 八字风水 · 企业与个人重大决策
+            个人重大决策 · 企业战略顾问 · 奇门遁甲实战课程
           </motion.h2>
 
           <motion.p
@@ -122,18 +122,19 @@ export default function HeroSimple() {
               <ArrowRight size={17} />
             </a>
             <Link
-              href="/courses"
-              className="inline-flex items-center justify-center gap-3 border border-[#c89a45] px-7 py-4 text-sm font-bold uppercase tracking-[0.12em] text-[#f4dfb0] transition-colors duration-300 hover:bg-[#c89a45]/10"
-            >
-              <BookOpen size={18} />
-              Explore Qi Men Courses
-            </Link>
-            <Link
               href="/enterprise-strategic-advisory"
-              className="inline-flex items-center justify-center gap-3 px-2 py-4 text-sm font-bold uppercase tracking-[0.12em] text-white/76 transition-colors duration-300 hover:text-[#f4dfb0]"
+              className="inline-flex items-center justify-center gap-3 border border-[#c89a45] px-7 py-4 text-sm font-bold uppercase tracking-[0.12em] text-[#f4dfb0] transition-colors duration-300 hover:bg-[#c89a45]/10"
             >
               <BriefcaseBusiness size={18} />
               Business Advisory
+              <ArrowRight size={16} />
+            </Link>
+            <Link
+              href="/courses"
+              className="inline-flex items-center justify-center gap-3 px-2 py-4 text-sm font-bold uppercase tracking-[0.12em] text-white/76 transition-colors duration-300 hover:text-[#f4dfb0]"
+            >
+              <BookOpen size={18} />
+              Explore Qi Men Courses
               <ArrowRight size={16} />
             </Link>
           </motion.div>

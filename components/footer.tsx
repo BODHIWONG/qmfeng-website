@@ -52,17 +52,17 @@ export default function Footer() {
             </div>
             <p className="max-w-md text-xs leading-7 text-white/55">
               {t(
-                "启明遁甲决策智库立足新加坡，以奇门遁甲实战课程、企业战略陪跑与个人咨询服务为三大核心业务，为学习者、企业主、专业人士与个人客户提供清晰、专业、按需匹配的支持。",
-                "Qimen Strategy is a Singapore-based practice built around three core pillars: practical Qi Men Dun Jia education, business strategic advisory and private personal consultation."
+                "启明遁甲决策智库立足新加坡，以个人重大决策咨询、企业战略顾问与奇门遁甲实战课程为三大核心业务，为个人客户、企业主、专业人士与学习者提供清晰、专业、按需匹配的支持。",
+                "Qimen Strategy is a Singapore-based practice built around three core pillars: personal decision advisory, business strategic advisory and practical Qi Men Dun Jia education."
               )}
             </p>
             <p className="mt-5 text-sm font-semibold italic text-[#d6ad63]">See the Bigger Picture Before You Decide.</p>
           </div>
 
           <div>
-            <p className="mb-4 text-[0.6rem] font-bold uppercase tracking-[0.2em] text-[#d6ad63]">{t("奇门课程", "Qi Men Courses")}</p>
+            <p className="mb-4 text-[0.6rem] font-bold uppercase tracking-[0.2em] text-[#d6ad63]">{t("个人咨询", "Personal Advisory")}</p>
             <div className="space-y-2.5">
-              {academyLinks.map((link) => (
+              {personalLinks.map((link) => (
                 <Link key={link.href} href={link.href} className="block text-xs leading-5 text-white/50 transition-colors hover:text-[#d6ad63]">
                   {t(link.zh, link.en)}
                 </Link>
@@ -71,7 +71,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <p className="mb-4 text-[0.6rem] font-bold uppercase tracking-[0.2em] text-[#d6ad63]">{t("企业陪跑", "Business Advisory")}</p>
+            <p className="mb-4 text-[0.6rem] font-bold uppercase tracking-[0.2em] text-[#d6ad63]">{t("企业顾问", "Business Advisory")}</p>
             <div className="space-y-2.5">
               {businessLinks.map((link) => (
                 <Link key={link.href} href={link.href} className="block text-xs leading-5 text-white/50 transition-colors hover:text-[#d6ad63]">
@@ -82,9 +82,9 @@ export default function Footer() {
           </div>
 
           <div>
-            <p className="mb-4 text-[0.6rem] font-bold uppercase tracking-[0.2em] text-[#d6ad63]">{t("个人咨询", "Personal Advisory")}</p>
+            <p className="mb-4 text-[0.6rem] font-bold uppercase tracking-[0.2em] text-[#d6ad63]">{t("奇门课程", "Qi Men Courses")}</p>
             <div className="space-y-2.5">
-              {personalLinks.map((link) => (
+              {academyLinks.map((link) => (
                 <Link key={link.href} href={link.href} className="block text-xs leading-5 text-white/50 transition-colors hover:text-[#d6ad63]">
                   {t(link.zh, link.en)}
                 </Link>
@@ -111,15 +111,15 @@ export default function Footer() {
             <p>Official WhatsApp: +65 8959 3499 · Hours: Daily 10:00–20:00</p>
           </div>
           <div className="flex flex-col gap-3 md:items-end">
-            <Link href={COURSE_REGISTRATION_LINK} className="inline-flex justify-center bg-[#d6ad63] px-6 py-3 text-sm font-bold uppercase tracking-[0.12em] text-black hover:bg-[#f4dfb0]">
-              {t("课程报名", "Register for a Course")}
+            <Link href="/personal-advisory" className="inline-flex justify-center bg-[#d6ad63] px-6 py-3 text-sm font-bold uppercase tracking-[0.12em] text-black hover:bg-[#f4dfb0]">
+              {t("预约个人咨询", "Book Personal Consultation")}
             </Link>
             <div className="flex flex-wrap gap-x-5 gap-y-2 text-xs font-semibold">
               <Link href="/enterprise-strategic-advisory" className="text-white/48 transition hover:text-[#d6ad63]">
-                {t("了解企业陪跑 →", "Business Advisory →")}
+                {t("了解企业顾问 →", "Business Advisory →")}
               </Link>
-              <Link href="/personal-advisory" className="text-white/48 transition hover:text-[#d6ad63]">
-                {t("查看个人咨询 →", "Personal Advisory →")}
+              <Link href="/courses" className="text-white/48 transition hover:text-[#d6ad63]">
+                {t("查看奇门课程 →", "Qi Men Courses →")}
               </Link>
             </div>
           </div>

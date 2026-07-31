@@ -45,11 +45,11 @@ const OG_IMAGE =
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.qmfeng.com"),
   title: {
-    default: "Qimen Strategy Singapore｜Qi Men Courses, Business & Personal Advisory",
+    default: "Qimen Strategy Singapore｜Personal, Business Advisory & Qi Men Courses",
     template: "%s | Qimen Strategy Singapore",
   },
   description:
-    "启明遁甲决策智库立足新加坡，提供奇门遁甲实战课程、企业战略陪跑与个人咨询服务，涵盖企业重大决策、感情婚姻、择日、手机号码、居家风水与空间净化。",
+    "启明遁甲决策智库立足新加坡，提供个人重大决策咨询、企业战略顾问与奇门遁甲实战课程，涵盖感情婚姻、事业方向、企业重大决策、择日、手机号码、居家风水与空间净化。",
   keywords: [
     "Qi Men Dun Jia course Singapore",
     "Practical Qi Men course Singapore",
@@ -80,9 +80,9 @@ export const metadata: Metadata = {
   authors: [{ name: "Huang Qiming 黄启明" }],
   alternates: { canonical: "https://www.qmfeng.com" },
   openGraph: {
-    title: "Qimen Strategy Singapore｜Qi Men Courses, Business & Personal Advisory",
+    title: "Qimen Strategy Singapore｜Personal, Business Advisory & Qi Men Courses",
     description:
-      "Practical Qi Men Dun Jia education, strategic advisory for business owners, and private personal consultation in Singapore.",
+      "Private personal decision advisory, strategic advisory for business owners, and practical Qi Men Dun Jia education in Singapore.",
     url: "https://www.qmfeng.com",
     siteName: "Qimen Strategy｜启明遁甲决策智库",
     images: [
@@ -90,7 +90,7 @@ export const metadata: Metadata = {
         url: OG_IMAGE,
         width: 1200,
         height: 630,
-        alt: "Qimen Strategy Singapore: Qi Men courses, business strategic advisory and personal advisory",
+        alt: "Qimen Strategy Singapore: personal advisory, business strategic advisory and Qi Men courses",
       },
     ],
     locale: "en_SG",
@@ -98,9 +98,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Qimen Strategy Singapore | Qi Men Courses, Business & Personal Advisory",
+    title: "Qimen Strategy Singapore | Personal, Business Advisory & Qi Men Courses",
     description:
-      "Three core pathways in Singapore: practical Qi Men education, business strategic advisory and private personal consultation.",
+      "Three core pathways in Singapore: personal decision advisory, business strategic advisory and practical Qi Men education.",
     images: [OG_IMAGE],
   },
   robots: { index: true, follow: true },

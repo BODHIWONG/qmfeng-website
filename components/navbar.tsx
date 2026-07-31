@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useLanguage } from "@/contexts/language-context";
 
 const LOGO_URL = "/logo-qimen-strategy.jpg";
+const CONSULTATION_LINK = "/personal-advisory";
 const COURSE_REGISTRATION_LINK = "/course-registration?course=qimen-foundation&batch=2026-09-19";
 
 const businessLinks = [
@@ -130,27 +131,8 @@ export default function Navbar() {
             {lang === "zh" ? "首页" : "Home"}
           </Link>
 
-          <Link href="/courses" className={`text-[0.78rem] font-semibold transition-colors ${navTextClass}`}>
-            {lang === "zh" ? "奇门课程" : "Qi Men Courses"}
-          </Link>
-
           <div className="group relative py-3">
-            <button type="button" className={`inline-flex items-center gap-1 text-[0.78rem] transition-colors ${navTextClass}`}>
-              {lang === "zh" ? "企业陪跑" : "Business Advisory"}
-              <ChevronDown size={14} />
-            </button>
-            <div className="invisible absolute left-1/2 top-full w-[390px] -translate-x-1/2 border border-[#d6ad63]/30 bg-black/98 p-3 opacity-0 shadow-2xl transition-all duration-200 group-hover:visible group-hover:opacity-100">
-              {businessLinks.map((link) => (
-                <Link key={link.href} href={link.href} className="block border-b border-white/8 px-4 py-3 last:border-b-0 hover:bg-[#d6ad63]/10">
-                  <p className="text-sm font-semibold text-[#f4dfb0]">{lang === "zh" ? link.zh : link.en}</p>
-                  <p className="mt-1 text-xs leading-5 text-white/48">{lang === "zh" ? link.descZh : link.descEn}</p>
-                </Link>
-              ))}
-            </div>
-          </div>
-
-          <div className="group relative py-3">
-            <button type="button" className={`inline-flex items-center gap-1 text-[0.78rem] transition-colors ${navTextClass}`}>
+            <button type="button" className={`inline-flex items-center gap-1 text-[0.78rem] font-semibold transition-colors ${navTextClass}`}>
               {lang === "zh" ? "个人咨询" : "Personal Advisory"}
               <ChevronDown size={14} />
             </button>
@@ -163,6 +145,25 @@ export default function Navbar() {
               ))}
             </div>
           </div>
+
+          <div className="group relative py-3">
+            <button type="button" className={`inline-flex items-center gap-1 text-[0.78rem] transition-colors ${navTextClass}`}>
+              {lang === "zh" ? "企业顾问" : "Business Advisory"}
+              <ChevronDown size={14} />
+            </button>
+            <div className="invisible absolute left-1/2 top-full w-[390px] -translate-x-1/2 border border-[#d6ad63]/30 bg-black/98 p-3 opacity-0 shadow-2xl transition-all duration-200 group-hover:visible group-hover:opacity-100">
+              {businessLinks.map((link) => (
+                <Link key={link.href} href={link.href} className="block border-b border-white/8 px-4 py-3 last:border-b-0 hover:bg-[#d6ad63]/10">
+                  <p className="text-sm font-semibold text-[#f4dfb0]">{lang === "zh" ? link.zh : link.en}</p>
+                  <p className="mt-1 text-xs leading-5 text-white/48">{lang === "zh" ? link.descZh : link.descEn}</p>
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          <Link href="/courses" className={`text-[0.78rem] transition-colors ${navTextClass}`}>
+            {lang === "zh" ? "奇门课程" : "Qi Men Courses"}
+          </Link>
 
           {primaryLinks.map((link) => (
             <Link key={link.href} href={link.href} className={`text-[0.78rem] transition-colors ${navTextClass}`}>
@@ -183,8 +184,8 @@ export default function Navbar() {
             {lang === "zh" ? "EN" : "中文"}
           </button>
 
-          <Link href={COURSE_REGISTRATION_LINK} className="bg-yellow-600 px-4 py-2.5 text-[0.78rem] font-semibold text-black transition-all hover:bg-yellow-500">
-            {lang === "zh" ? "课程报名" : "Register"}
+          <Link href={CONSULTATION_LINK} className="bg-yellow-600 px-4 py-2.5 text-[0.78rem] font-semibold text-black transition-all hover:bg-yellow-500">
+            {lang === "zh" ? "预约咨询" : "Book Consultation"}
           </Link>
         </div>
 
@@ -210,22 +211,6 @@ export default function Navbar() {
           <Link href="/" className="block border-b border-white/10 py-4 text-white/85" onClick={() => setIsOpen(false)}>
             {lang === "zh" ? "首页" : "Home"}
           </Link>
-          <Link href="/courses" className="block border-b border-white/10 py-4 font-semibold text-[#f4dfb0]" onClick={() => setIsOpen(false)}>
-            {lang === "zh" ? "奇门课程" : "Qi Men Courses"}
-          </Link>
-          <Link href={COURSE_REGISTRATION_LINK} className="block border-b border-white/10 py-4 text-[#d6ad63]" onClick={() => setIsOpen(false)}>
-            {lang === "zh" ? "选择班次并报名" : "Select Batch & Register"}
-          </Link>
-
-          <p className="pt-5 text-[0.65rem] font-bold uppercase tracking-[0.2em] text-[#d6ad63]">
-            {lang === "zh" ? "企业陪跑" : "Business Advisory"}
-          </p>
-          {businessLinks.map((link) => (
-            <Link key={link.href} href={link.href} className="block border-b border-white/8 py-3" onClick={() => setIsOpen(false)}>
-              <p className="text-sm font-semibold text-white/85">{lang === "zh" ? link.zh : link.en}</p>
-              <p className="mt-1 text-xs text-white/45">{lang === "zh" ? link.descZh : link.descEn}</p>
-            </Link>
-          ))}
 
           <p className="pt-5 text-[0.65rem] font-bold uppercase tracking-[0.2em] text-[#d6ad63]">
             {lang === "zh" ? "个人咨询" : "Personal Advisory"}
@@ -237,13 +222,30 @@ export default function Navbar() {
             </Link>
           ))}
 
+          <p className="pt-5 text-[0.65rem] font-bold uppercase tracking-[0.2em] text-[#d6ad63]">
+            {lang === "zh" ? "企业顾问" : "Business Advisory"}
+          </p>
+          {businessLinks.map((link) => (
+            <Link key={link.href} href={link.href} className="block border-b border-white/8 py-3" onClick={() => setIsOpen(false)}>
+              <p className="text-sm font-semibold text-white/85">{lang === "zh" ? link.zh : link.en}</p>
+              <p className="mt-1 text-xs text-white/45">{lang === "zh" ? link.descZh : link.descEn}</p>
+            </Link>
+          ))}
+
+          <Link href="/courses" className="block border-b border-white/10 py-4 font-semibold text-[#f4dfb0]" onClick={() => setIsOpen(false)}>
+            {lang === "zh" ? "奇门课程" : "Qi Men Courses"}
+          </Link>
+          <Link href={COURSE_REGISTRATION_LINK} className="block border-b border-white/10 py-4 text-[#d6ad63]" onClick={() => setIsOpen(false)}>
+            {lang === "zh" ? "选择班次并报名" : "Select Batch & Register"}
+          </Link>
+
           {primaryLinks.map((link) => (
             <Link key={link.href} href={link.href} className="block border-b border-white/8 py-4 text-white/82" onClick={() => setIsOpen(false)}>
               {lang === "zh" ? link.zh : link.en}
             </Link>
           ))}
-          <Link href={COURSE_REGISTRATION_LINK} className="mt-5 block bg-[#d6ad63] px-5 py-3 text-center font-semibold text-black" onClick={() => setIsOpen(false)}>
-            {lang === "zh" ? "课程报名" : "Register for a Course"}
+          <Link href={CONSULTATION_LINK} className="mt-5 block bg-[#d6ad63] px-5 py-3 text-center font-semibold text-black" onClick={() => setIsOpen(false)}>
+            {lang === "zh" ? "预约咨询" : "Book Consultation"}
           </Link>
         </div>
       )}
