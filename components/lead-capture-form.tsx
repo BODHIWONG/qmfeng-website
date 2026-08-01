@@ -93,14 +93,14 @@ export default function LeadCaptureForm() {
             </h2>
             <p className="max-w-xl text-base leading-8 text-white/72 md:text-lg">
               {t(
-                "此表格用于个人咨询与企业顾问的初步沟通。请简要说明你的身份、当前情况、正在考虑的事项与时间安排。课程报名请直接进入课程报名页面。",
-                "This form is for initial personal-advisory and business-advisory enquiries. Briefly share your role, current situation, the matter under consideration and relevant timing. Course learners should use the dedicated registration page."
+                "此表格用于个人咨询与企业顾问的初步沟通。请简要说明你的身份、当前情况与正在考虑的事项。课程报名请直接进入课程报名页面。",
+                "This form is for initial personal-advisory and business-advisory enquiries. Briefly share your role, current situation and the matter under consideration. Course learners should use the dedicated registration page."
               )}
             </p>
             <div className="mt-7 space-y-3 border-l-2 border-[#d6ad63] pl-5 text-sm leading-7 text-white/62">
-              <p>{t("企业主：请填写行业、团队规模与当前经营卡点。", "Founders: include industry, team size and the current business bottleneck.")}</p>
-              <p>{t("高管：请填写当前职位、正在考虑的选项与时间安排。", "Executives: include your current role, options under consideration and timing.")}</p>
-              <p>{t("个人：请说明目前的情况，以及希望进一步了解或判断的事项。", "Individuals: describe the current situation and the matter you would like to understand or assess.")}</p>
+              <p>{t("企业主：请填写行业、团队规模与当前经营情况。", "Founders: include industry, team size and the current business situation.")}</p>
+              <p>{t("高管：请填写当前职位与正在考虑的事项。", "Executives: include your current role and the matter under consideration.")}</p>
+              <p>{t("个人：请简要说明目前的情况。", "Individuals: briefly describe the current situation.")}</p>
             </div>
             <Link href="/course-registration?course=qimen-foundation&batch=2026-09-19" className="mt-7 inline-flex border border-[#d6ad63]/60 px-5 py-3 text-sm font-semibold text-[#f4dfb0] hover:bg-[#d6ad63]/10">
               {t("奇门课程报名 →", "Qi Men Course Registration →")}
@@ -160,8 +160,9 @@ export default function LeadCaptureForm() {
               <span className="mb-2 block text-sm font-semibold text-white/80">{t("咨询服务 *", "Consultation pathway *")}</span>
               <select name="service" required className={selectClass} defaultValue="">
                 <option value="" disabled>{t("请选择", "Select")}</option>
-                <option value="Bazi Analysis">{t("八字命理分析", "Bazi Analysis")}</option>
-                <option value="Qi Men Dun Jia Consultation">{t("奇门遁甲咨询", "Qi Men Dun Jia Consultation")}</option>
+                <option value="Bazi Analysis S$168">{t("八字命理分析 · S$168", "Bazi Analysis · S$168")}</option>
+                <option value="Qi Men Dun Jia Consultation S$396">{t("奇门遁甲咨询 · S$396", "Qi Men Dun Jia Consultation · S$396")}</option>
+                <option value="Major Decision Consultation S$1,696">{t("重大决策咨询 · S$1,696", "Major Decision Consultation · S$1,696")}</option>
                 <option value="Relationship and Marriage Advisory">{t("感情与婚姻咨询", "Relationship & Marriage Advisory")}</option>
                 <option value="Business Strategic Advisory">{t("企业战略顾问", "Business Strategic Advisory")}</option>
                 <option value="Wealth Cycle and Investment Decisions">{t("财富周期与投资决策", "Wealth Cycle & Investment Decisions")}</option>
@@ -195,15 +196,15 @@ export default function LeadCaptureForm() {
             </div>
 
             <label className="mt-4 block">
-              <span className="mb-2 block text-sm font-semibold text-white/80">{t("当前情况与咨询需要 *", "Current situation and enquiry *")}</span>
+              <span className="mb-2 block text-sm font-semibold text-white/80">{t("当前情况 *", "Current situation *")}</span>
               <textarea
                 name="message"
                 required
                 rows={6}
                 className={`${inputClass} resize-none`}
                 placeholder={t(
-                  "请说明目前的处境、相关背景、正在考虑的事项，以及希望进一步了解或判断的内容。",
-                  "Describe the current situation, relevant background, the matter under consideration and what you would like to understand or assess."
+                  "请简要说明目前的情况，以及希望进一步了解或判断的事项。",
+                  "Briefly describe the current situation and what you would like to understand or assess."
                 )}
               />
             </label>
@@ -227,7 +228,7 @@ export default function LeadCaptureForm() {
             {status === "success" && (
               <div className="mt-4 flex items-start gap-3 border border-emerald-400/30 bg-emerald-400/10 p-4 text-sm leading-6 text-emerald-100">
                 <CheckCircle2 size={18} className="mt-0.5 flex-shrink-0" />
-                {t("谢谢。我们已收到你的申请，会通过 WhatsApp 进行初步适配沟通。", "Thank you. We have received your enquiry and will contact you on WhatsApp for an initial fit review.")}
+                {t("谢谢。我们已收到你的申请，会通过 WhatsApp 进行初步沟通。", "Thank you. We have received your enquiry and will contact you on WhatsApp.")}
               </div>
             )}
 
