@@ -38,20 +38,35 @@ type PersonalService = {
 
 const services: PersonalService[] = [
   {
+    id: "bazi-analysis",
+    icon: UserRound,
+    titleZh: "八字命理分析",
+    titleEn: "Bazi Analysis",
+    focusZh: "S$168｜新客户入门分析",
+    focusEn: "S$168 · Entry Analysis for New Clients",
+    bodyZh:
+      "八字命理分析是启明遁甲为新客户设置的入门咨询窗口。具体分析内容、所需出生资料与适用范围，将在预约前先行确认。",
+    bodyEn:
+      "Bazi Analysis is Qimen Strategy’s entry consultation window for new clients. The analysis scope, required birth information and suitability are confirmed before booking.",
+    examplesZh: ["适合第一次了解个人命理分析的客户", "预约前确认出生资料与分析范围", "独立于 S$396 奇门遁甲咨询"],
+    examplesEn: ["Suitable for clients new to personal Bazi analysis", "Birth information and scope confirmed before booking", "Separate from the S$396 Qi Men Dun Jia consultation"],
+    waText: "Hello Qimen Strategy, I would like to enquire about the S$168 Bazi Analysis.",
+  },
+  {
     id: "major-decisions",
     icon: Compass,
-    titleZh: "个人重大决策咨询",
-    titleEn: "Personal Strategic Decision Advisory",
-    focusZh: "事业 · 合作 · 投资 · 买房搬迁 · 人生方向",
-    focusEn: "Career · Partnership · Investment · Property · Life Direction",
+    titleZh: "奇门遁甲咨询",
+    titleEn: "Qi Men Dun Jia Consultation",
+    focusZh: "S$396｜事业 · 合作 · 投资 · 买房搬迁 · 人生方向",
+    focusEn: "S$396 · Career · Partnership · Investment · Property · Life Direction",
     bodyZh:
-      "当多个选择彼此牵连、风险难以判断时，以一个核心问题为中心，协助你看清时机、方向、人事关系、潜在风险与下一步行动。",
+      "根据客户当前面对的实际问题起盘，结合具体奇门盘面与现实背景，综合分析时机、方向、人事关系、潜在风险与下一步行动。分析内容以盘面实际呈现为依据，不按问题数量机械切割。",
     bodyEn:
-      "A focused review for important choices where timing, people, risk and direction are difficult to assess clearly.",
-    examplesZh: ["事业去留与职业转型", "合作、投资与重要签约", "买房、搬迁与多方案比较"],
-    examplesEn: ["Career and transition", "Partnership, investment and signing", "Property, relocation and option comparison"],
+      "A consultation based on the Qi Men chart cast for the client’s current situation, integrating timing, direction, people dynamics, risk and practical next steps. The analysis follows what the chart presents rather than mechanically counting questions.",
+    examplesZh: ["事业去留与职业转型", "合作、投资与重要签约", "买房、搬迁与人生重要选择"],
+    examplesEn: ["Career and transition", "Partnership, investment and signing", "Property, relocation and major life choices"],
     href: "/decision",
-    waText: "Hello Qimen Strategy, I would like to enquire about a personal strategic decision consultation.",
+    waText: "Hello Qimen Strategy, I would like to enquire about the S$396 Qi Men Dun Jia consultation.",
   },
   {
     id: "relationship-marriage",
@@ -133,7 +148,7 @@ export default function PersonalAdvisoryContent() {
           <div className="container relative mx-auto max-w-6xl">
             <div className="max-w-4xl">
               <p className="text-xs font-bold uppercase tracking-[0.28em] text-[#d6ad63]">
-                {t("第三大核心业务支柱｜个人咨询", "Third Core Pillar｜Personal Advisory")}
+                {t("核心业务｜个人咨询", "Core Service｜Personal Advisory")}
               </p>
               <h1
                 className="mt-6 text-4xl font-semibold leading-tight text-[#f4dfb0] md:text-6xl"
@@ -143,8 +158,8 @@ export default function PersonalAdvisoryContent() {
               </h1>
               <p className="mt-7 max-w-3xl text-base leading-8 text-white/72 md:text-lg">
                 {t(
-                  "启明遁甲决策智库为个人客户提供感情婚姻、重大决策、择日、吉祥手机号码、居家风水布局与空间能量净化服务。所有服务以实际问题与现实条件为基础，帮助你在重要行动前看清局势、边界与下一步方向。",
-                  "Qimen Strategy provides private personal advisory for relationships and marriage, major decisions, auspicious date selection, mobile number selection, residential Feng Shui and space clearing. Each service is grounded in the client’s actual situation and practical constraints."
+                  "启明遁甲决策智库为个人客户提供八字命理分析、奇门遁甲咨询、感情婚姻、择日、吉祥手机号码、居家风水布局与空间能量净化服务。所有服务以实际问题与现实条件为基础，帮助你选择适合的分析入口。",
+                  "Qimen Strategy provides Bazi Analysis, Qi Men Dun Jia consultation, relationship and marriage advisory, auspicious date selection, mobile number selection, residential Feng Shui and space clearing. Each service is grounded in the client’s actual situation and practical needs."
                 )}
               </p>
 
