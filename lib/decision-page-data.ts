@@ -1,0 +1,145 @@
+import type { ServicePageContent } from "@/components/service-detail-template";
+
+export const decisionPageContent: ServicePageContent = {
+  badgeZh: "奇门遁甲咨询",
+  badgeEn: "Qi Men Dun Jia Consultation",
+  pageTitleZh: "奇门遁甲咨询",
+  pageTitleEn: "Qi Men Dun Jia Consultation",
+  heroTitleZh: "面对重要选择，先从具体奇门盘面看清局势、时机与方向",
+  heroTitleEn:
+    "Before an important decision, examine the situation, timing and direction through the Qi Men chart",
+  heroSubtitleZh:
+    "根据客户当前面对的实际问题起盘，结合具体盘面结构与现实背景，对时机、方向、人事、风险及相关因素进行综合分析。咨询不按问题数量机械切割，重点以盘面实际呈现为依据。",
+  heroSubtitleEn:
+    "The consultation is based on the Qi Men chart cast for the client’s current situation. The chart and real-world context are reviewed together to examine timing, direction, people dynamics, risk and related factors. The analysis is guided by what the chart actually presents, rather than by mechanically counting questions.",
+  trustPointsZh: ["结合具体盘面", "私密一对一咨询", "综合判断与行动参考", "S$396"],
+  trustPointsEn: ["Chart-Specific Analysis", "Private 1-to-1 Consultation", "Integrated Decision Insight", "S$396"],
+  priceZh: "S$396｜奇门遁甲咨询",
+  priceEn: "S$396 · Qi Men Dun Jia Consultation",
+  symptomsTitleZh: "哪些情况适合进行奇门遁甲咨询？",
+  symptomsTitleEn: "When is a Qi Men Dun Jia consultation appropriate?",
+  symptomsZh: [
+    "事业去留、转型或新的发展方向。",
+    "合作、签约、投资或重要商业行动。",
+    "关键人员、团队关系或合作对象判断。",
+    "感情、婚姻或家庭中的重要选择。",
+    "搬迁、买房或其他人生重大决定。",
+    "希望在行动前判断当前局势与时机。",
+  ],
+  symptomsEn: [
+    "Career direction, transition or whether to stay or move.",
+    "Partnerships, contracts, investments or important business actions.",
+    "Key people, team dynamics or potential collaborators.",
+    "Important relationship, marriage or family decisions.",
+    "Relocation, property or other major life choices.",
+    "Understanding the current situation and timing before acting.",
+  ],
+  suitableTitleZh: "适合对象",
+  suitableTitleEn: "Who This Is For",
+  suitableZh: [
+    "正面对重要选择、但局势尚未看清的人。",
+    "需要判断时机、方向、人事与潜在风险的人。",
+    "企业主、创业者、管理者与专业人士。",
+    "希望在行动前获得更完整判断参考的个人客户。",
+  ],
+  suitableEn: [
+    "People facing an important choice while the situation remains unclear.",
+    "Clients who need to assess timing, direction, people dynamics and risk.",
+    "Business owners, founders, managers and professionals.",
+    "Individuals seeking a more complete decision reference before acting.",
+  ],
+  approachTitleZh: "奇门遁甲咨询如何进行？",
+  approachTitleEn: "How the Qi Men Dun Jia consultation works",
+  approachIntroZh:
+    "咨询先了解客户的现实背景与当前问题，再根据当时所起的奇门盘进行具体分析。一个盘面可能同时呈现多个相互关联的因素，因此不会用“一个问题”或“多个问题”机械划分分析内容。",
+  approachIntroEn:
+    "The consultation begins with the client’s real-world context and current concern, followed by analysis of the Qi Men chart cast for that situation. Because one chart may reveal several connected factors, the consultation is not mechanically divided into a single-question or multiple-question format.",
+  steps: [
+    {
+      titleZh: "了解背景",
+      titleEn: "Understand the Context",
+      descZh: "先确认当前问题、相关背景与准备作出的决定。",
+      descEn: "Clarify the current concern, relevant background and decision being considered.",
+    },
+    {
+      titleZh: "起盘分析",
+      titleEn: "Cast and Read the Chart",
+      descZh: "根据咨询当下情况起盘，分析盘面结构与关键信息。",
+      descEn: "Cast the chart for the current situation and examine its structure and key signals.",
+    },
+    {
+      titleZh: "综合判断",
+      titleEn: "Integrated Assessment",
+      descZh: "结合现实背景，判断时机、方向、人事、阻力、机会与风险。",
+      descEn: "Review timing, direction, people, resistance, opportunity and risk in context.",
+    },
+    {
+      titleZh: "行动参考",
+      titleEn: "Practical Direction",
+      descZh: "整理盘面所支持的重点、注意事项与下一步行动方向。",
+      descEn: "Summarise the priorities, cautions and practical next-step direction supported by the chart.",
+    },
+  ],
+  casesTitleZh: "常见咨询方向",
+  casesTitleEn: "Common Advisory Directions",
+  cases: [
+    {
+      titleZh: "事业与商业决策",
+      titleEn: "Career & Business Decisions",
+      bodyZh: "判断事业去留、合作、投资、团队与经营行动中的局势和时机。",
+      bodyEn: "Review the situation and timing around career, partnerships, investment, teams and business action.",
+    },
+    {
+      titleZh: "关系与人生选择",
+      titleEn: "Relationship & Life Choices",
+      bodyZh: "看清感情、婚姻、家庭或人生方向中的互动、阻力与发展趋势。",
+      bodyEn: "Clarify dynamics, resistance and direction in relationship, marriage, family or life choices.",
+    },
+    {
+      titleZh: "行动时机与方向",
+      titleEn: "Timing & Direction",
+      bodyZh: "判断当前更适合推进、调整、等待、守成或转向。",
+      bodyEn: "Assess whether the present situation supports moving, adjusting, waiting, holding or redirecting.",
+    },
+  ],
+  faqTitleZh: "常见问题",
+  faqTitleEn: "FAQ",
+  faqs: [
+    {
+      qZh: "奇门遁甲咨询费用是多少？",
+      qEn: "What is the consultation fee?",
+      aZh: "奇门遁甲咨询费用为 S$396。预约前会先确认客户当前问题、相关背景、咨询方式与所需资料。",
+      aEn: "The Qi Men Dun Jia consultation fee is S$396. Before booking, the current concern, relevant context, consultation format and required information will be confirmed.",
+    },
+    {
+      qZh: "咨询是否限制只能问一个问题？",
+      qEn: "Is the consultation restricted to only one question?",
+      aZh: "咨询根据具体奇门盘面和客户实际情况展开。盘面可能同时呈现多个相互关联的因素，因此不会按照问题数量机械切割分析内容。",
+      aEn: "The consultation follows the specific Qi Men chart and the client’s actual situation. A chart may present several connected factors, so the analysis is not mechanically divided by the number of questions.",
+    },
+    {
+      qZh: "需要提供什么资料？",
+      qEn: "What information should I provide?",
+      aZh: "请先简要说明当前问题、相关背景、正在考虑的选择及希望作出决定的时间。确认后再安排咨询。",
+      aEn: "Please briefly share the current concern, relevant background, options under consideration and the decision timeline. The appointment is arranged after this is confirmed.",
+    },
+    {
+      qZh: "可以线上咨询或在 Bedok 面谈吗？",
+      qEn: "Is the consultation available online or in person at Bedok?",
+      aZh: "可以。奇门遁甲咨询可安排线上进行，也可预约在新加坡 Bedok 面谈。",
+      aEn: "Yes. The consultation can be conducted online or by appointment in Bedok, Singapore.",
+    },
+    {
+      qZh: "咨询是否保证结果？",
+      qEn: "Are results guaranteed?",
+      aZh: "不保证特定结果。启明遁甲提供盘面分析、风险提示与行动参考，最终决定与执行仍由客户自行负责。",
+      aEn: "No specific outcome is guaranteed. Qimen Strategy provides chart analysis, risk awareness and practical decision reference; final decisions and actions remain the client’s responsibility.",
+    },
+  ],
+  ctaTitleZh: "重要决定之前，先让具体盘面提供更清晰的判断参考",
+  ctaTitleEn: "Before an important decision, use the actual chart to gain a clearer decision reference",
+  ctaBodyZh: "奇门遁甲咨询费用为 S$396，并根据客户当前问题、具体盘面与现实情况进行分析。",
+  ctaBodyEn: "The Qi Men Dun Jia consultation fee is S$396, with analysis based on the client’s current concern, the specific chart and the real-world situation.",
+  waTextZh: "你好，启明遁甲决策智库 Qimen Strategy，我想预约 S$396 奇门遁甲咨询。我的情况是：",
+  waTextEn: "Hello Qimen Strategy, I would like to book the S$396 Qi Men Dun Jia consultation. My current situation is:",
+};
