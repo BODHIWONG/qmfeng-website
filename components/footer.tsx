@@ -5,6 +5,8 @@ import { useLanguage } from "@/contexts/language-context";
 
 const LOGO_URL = "/logo-qimen-strategy.jpg";
 const COURSE_REGISTRATION_LINK = "/course-registration?course=qimen-foundation&batch=2026-09-19";
+const CONSULTATION_WHATSAPP =
+  "https://wa.me/6589593499?text=Hi%20Qimen%20Strategy%2C%20I%27d%20like%20to%20ask%20about%20a%20consultation.%20My%20current%20situation%20is%3A";
 
 const academyLinks = [
   { href: "/courses", zh: "课程体系", en: "Course Pathways" },
@@ -14,14 +16,15 @@ const academyLinks = [
 ];
 
 const businessLinks = [
-  { href: "/enterprise-strategic-advisory", zh: "创业老板事业陪跑", en: "Founder Business Advisory" },
+  { href: "/enterprise-strategic-advisory", zh: "企业战略顾问与长期陪跑", en: "Business Strategic Advisory" },
   { href: "/founder-wealth-investment-advisory", zh: "财富周期与投资决策", en: "Wealth & Investment Decisions" },
   { href: "/executive-career-transition-advisory", zh: "高管事业转型", en: "Executive Career Transition" },
 ];
 
 const personalLinks = [
   { href: "/personal-advisory", zh: "个人咨询总览", en: "Personal Advisory Overview" },
-  { href: "/decision", zh: "个人重大决策", en: "Major Personal Decisions" },
+  { href: "/personal-advisory#bazi-analysis", zh: "八字命理分析 · S$168", en: "Bazi Analysis · S$168" },
+  { href: "/decision", zh: "奇门遁甲咨询 · S$396", en: "Qi Men Consultation · S$396" },
   { href: "/relationship-clarity-reading-singapore", zh: "感情与婚姻咨询", en: "Relationship & Marriage Advisory" },
   { href: "/personal-advisory#date-selection", zh: "择日服务", en: "Auspicious Date Selection" },
   { href: "/personal-advisory#mobile-number", zh: "吉祥手机号码选择", en: "Mobile Number Selection" },
@@ -29,7 +32,7 @@ const personalLinks = [
 ];
 
 const companyLinks = [
-  { href: "/founder", zh: "关于启明老师", en: "About Mr.Qiming" },
+  { href: "/founder", zh: "关于创始人", en: "About the Founder" },
   { href: "/insights", zh: "案例与洞察", en: "Cases & Insights" },
   { href: "/privacy", zh: "隐私政策", en: "Privacy Policy" },
   { href: "/terms", zh: "服务条款", en: "Terms of Service" },
@@ -56,7 +59,7 @@ export default function Footer() {
                 "Qimen Strategy is a Singapore-based practice built around three core pillars: personal decision advisory, business strategic advisory and practical Qi Men Dun Jia education."
               )}
             </p>
-            <p className="mt-5 text-sm font-semibold italic text-[#d6ad63]">See the Bigger Picture Before You Decide.</p>
+            <p className="mt-5 text-sm font-semibold italic text-[#d6ad63]">See the Whole Game Before You Decide.</p>
           </div>
 
           <div>
@@ -111,9 +114,14 @@ export default function Footer() {
             <p>Official WhatsApp: +65 8959 3499 · Hours: Daily 10:00–20:00</p>
           </div>
           <div className="flex flex-col gap-3 md:items-end">
-            <Link href="/personal-advisory" className="inline-flex justify-center bg-[#d6ad63] px-6 py-3 text-sm font-bold uppercase tracking-[0.12em] text-black hover:bg-[#f4dfb0]">
-              {t("预约个人咨询", "Book Personal Consultation")}
-            </Link>
+            <a
+              href={CONSULTATION_WHATSAPP}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex justify-center bg-[#d6ad63] px-6 py-3 text-sm font-bold uppercase tracking-[0.12em] text-black hover:bg-[#f4dfb0]"
+            >
+              {t("WhatsApp咨询", "WhatsApp Consultation")}
+            </a>
             <div className="flex flex-wrap gap-x-5 gap-y-2 text-xs font-semibold">
               <Link href="/enterprise-strategic-advisory" className="text-white/48 transition hover:text-[#d6ad63]">
                 {t("了解企业顾问 →", "Business Advisory →")}

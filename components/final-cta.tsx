@@ -1,9 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, BookOpen, BriefcaseBusiness, UserRound } from "lucide-react";
+import { ArrowRight, BookOpen, BriefcaseBusiness, MessageCircle } from "lucide-react";
 import Link from "next/link";
 import { useLanguage } from "@/contexts/language-context";
+
+const CONSULTATION_WHATSAPP =
+  "https://wa.me/6589593499?text=Hi%20Qimen%20Strategy%2C%20I%27d%20like%20to%20ask%20about%20a%20consultation.%20My%20current%20situation%20is%3A";
 
 export default function FinalCTA() {
   const { t } = useLanguage();
@@ -31,7 +34,7 @@ export default function FinalCTA() {
             className="text-3xl font-bold leading-tight text-white sm:text-4xl md:text-6xl"
             style={{ fontFamily: "var(--font-cormorant), var(--font-noto-serif), serif" }}
           >
-            {t("选择最符合你当前需要的服务路径", "Choose the Pathway That Matches Your Current Need")}
+            {t("不确定适合哪一种服务？先说明你正在面对的问题", "Not Sure Which Service Fits? Start With the Situation You Are Facing")}
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 18 }}
@@ -40,8 +43,8 @@ export default function FinalCTA() {
             className="mx-auto mt-6 max-w-4xl text-base leading-8 text-white/70 md:text-lg"
           >
             {t(
-              "面对感情婚姻、事业方向、个人重大决策、择日、手机号码、居家风水或空间净化，可先查看个人咨询；正在处理经营瓶颈、投资、人事或转型问题，可了解企业顾问；希望系统学习奇门遁甲，可进入课程体系。",
-              "Start with personal advisory for relationships, career and important life decisions; business advisory for high-stakes commercial decisions; or practical Qi Men education for structured learning."
+              "通过 WhatsApp 简要说明当前情况，我们会先协助判断更适合八字命理分析、奇门遁甲咨询、企业战略顾问，还是奇门课程。",
+              "Briefly share your current situation on WhatsApp. We will first help identify whether Bazi Analysis, a Qi Men Dun Jia consultation, Business Strategic Advisory or a Qi Men course is the appropriate pathway."
             )}
           </motion.p>
           <motion.div
@@ -50,14 +53,16 @@ export default function FinalCTA() {
             viewport={{ once: true }}
             className="mt-10 grid gap-4 md:grid-cols-3"
           >
-            <Link
-              href="/personal-advisory"
+            <a
+              href={CONSULTATION_WHATSAPP}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-3 border-2 border-[oklch(0.72_0.12_70)] bg-[oklch(0.72_0.12_70)] px-7 py-5 text-sm font-bold uppercase tracking-[0.11em] text-[oklch(0.06_0.02_60)] transition hover:scale-[1.02]"
             >
-              <UserRound size={20} />
-              {t("个人咨询", "Personal Advisory")}
+              <MessageCircle size={20} />
+              {t("WhatsApp咨询", "WhatsApp Consultation")}
               <ArrowRight size={18} />
-            </Link>
+            </a>
             <Link
               href="/enterprise-strategic-advisory"
               className="inline-flex items-center justify-center gap-3 border-2 border-[oklch(0.72_0.12_70)] px-7 py-5 text-sm font-bold uppercase tracking-[0.11em] text-[oklch(0.72_0.12_70)] transition hover:bg-[oklch(0.72_0.12_70)] hover:text-[oklch(0.06_0.02_60)]"

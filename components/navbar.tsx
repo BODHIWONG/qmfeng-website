@@ -6,16 +6,17 @@ import Link from "next/link";
 import { useLanguage } from "@/contexts/language-context";
 
 const LOGO_URL = "/logo-qimen-strategy.jpg";
-const CONSULTATION_LINK = "/personal-advisory";
+const CONSULTATION_WHATSAPP =
+  "https://wa.me/6589593499?text=Hi%20Qimen%20Strategy%2C%20I%27d%20like%20to%20ask%20about%20a%20consultation.%20My%20current%20situation%20is%3A";
 const COURSE_REGISTRATION_LINK = "/course-registration?course=qimen-foundation&batch=2026-09-19";
 
 const businessLinks = [
   {
     href: "/enterprise-strategic-advisory",
-    zh: "创业老板事业陪跑",
-    en: "Founder Business Advisory",
-    descZh: "经营瓶颈、战略重点与长期陪跑",
-    descEn: "Business bottlenecks, priorities and retainer support",
+    zh: "企业战略顾问与长期陪跑",
+    en: "Business Strategic Advisory",
+    descZh: "经营瓶颈、战略重点与长期决策支持",
+    descEn: "Business bottlenecks, priorities and ongoing decision support",
   },
   {
     href: "/founder-wealth-investment-advisory",
@@ -38,15 +39,22 @@ const personalLinks = [
     href: "/personal-advisory",
     zh: "个人咨询总览",
     en: "Personal Advisory Overview",
-    descZh: "个人重大决策与生活优化服务",
-    descEn: "Important life decisions and personal services",
+    descZh: "查看个人服务与适合的咨询入口",
+    descEn: "Compare personal services and consultation pathways",
+  },
+  {
+    href: "/personal-advisory#bazi-analysis",
+    zh: "八字命理分析",
+    en: "Bazi Analysis",
+    descZh: "S$168 · 新客户入门分析",
+    descEn: "S$168 · Entry analysis for new clients",
   },
   {
     href: "/decision",
-    zh: "个人重大决策",
-    en: "Major Personal Decisions",
-    descZh: "事业、合作、人生方向与关键选择",
-    descEn: "Career, partnership and major life choices",
+    zh: "奇门遁甲咨询",
+    en: "Qi Men Dun Jia Consultation",
+    descZh: "S$396 · 根据具体盘面综合分析",
+    descEn: "S$396 · Chart-specific integrated analysis",
   },
   {
     href: "/relationship-clarity-reading-singapore",
@@ -80,7 +88,7 @@ const personalLinks = [
 
 const primaryLinks = [
   { href: "/insights", zh: "案例与洞察", en: "Insights" },
-  { href: "/founder", zh: "关于启明老师", en: "About Mr.Qiming" },
+  { href: "/founder", zh: "关于创始人", en: "About the Founder" },
 ];
 
 export default function Navbar() {
@@ -136,7 +144,7 @@ export default function Navbar() {
               {lang === "zh" ? "个人咨询" : "Personal Advisory"}
               <ChevronDown size={14} />
             </button>
-            <div className="invisible absolute left-1/2 top-full w-[410px] -translate-x-1/2 border border-[#d6ad63]/30 bg-black/98 p-3 opacity-0 shadow-2xl transition-all duration-200 group-hover:visible group-hover:opacity-100">
+            <div className="invisible absolute left-1/2 top-full w-[430px] -translate-x-1/2 border border-[#d6ad63]/30 bg-black/98 p-3 opacity-0 shadow-2xl transition-all duration-200 group-hover:visible group-hover:opacity-100">
               {personalLinks.map((link) => (
                 <Link key={link.href} href={link.href} className="block border-b border-white/8 px-4 py-3 last:border-b-0 hover:bg-[#d6ad63]/10">
                   <p className="text-sm font-semibold text-[#f4dfb0]">{lang === "zh" ? link.zh : link.en}</p>
@@ -151,7 +159,7 @@ export default function Navbar() {
               {lang === "zh" ? "企业顾问" : "Business Advisory"}
               <ChevronDown size={14} />
             </button>
-            <div className="invisible absolute left-1/2 top-full w-[390px] -translate-x-1/2 border border-[#d6ad63]/30 bg-black/98 p-3 opacity-0 shadow-2xl transition-all duration-200 group-hover:visible group-hover:opacity-100">
+            <div className="invisible absolute left-1/2 top-full w-[410px] -translate-x-1/2 border border-[#d6ad63]/30 bg-black/98 p-3 opacity-0 shadow-2xl transition-all duration-200 group-hover:visible group-hover:opacity-100">
               {businessLinks.map((link) => (
                 <Link key={link.href} href={link.href} className="block border-b border-white/8 px-4 py-3 last:border-b-0 hover:bg-[#d6ad63]/10">
                   <p className="text-sm font-semibold text-[#f4dfb0]">{lang === "zh" ? link.zh : link.en}</p>
@@ -184,9 +192,14 @@ export default function Navbar() {
             {lang === "zh" ? "EN" : "中文"}
           </button>
 
-          <Link href={CONSULTATION_LINK} className="bg-yellow-600 px-4 py-2.5 text-[0.78rem] font-semibold text-black transition-all hover:bg-yellow-500">
-            {lang === "zh" ? "预约咨询" : "Book Consultation"}
-          </Link>
+          <a
+            href={CONSULTATION_WHATSAPP}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-yellow-600 px-4 py-2.5 text-[0.78rem] font-semibold text-black transition-all hover:bg-yellow-500"
+          >
+            {lang === "zh" ? "WhatsApp咨询" : "WhatsApp Consultation"}
+          </a>
         </div>
 
         <div className="flex items-center gap-3 xl:hidden">
@@ -244,9 +257,15 @@ export default function Navbar() {
               {lang === "zh" ? link.zh : link.en}
             </Link>
           ))}
-          <Link href={CONSULTATION_LINK} className="mt-5 block bg-[#d6ad63] px-5 py-3 text-center font-semibold text-black" onClick={() => setIsOpen(false)}>
-            {lang === "zh" ? "预约咨询" : "Book Consultation"}
-          </Link>
+          <a
+            href={CONSULTATION_WHATSAPP}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-5 block bg-[#d6ad63] px-5 py-3 text-center font-semibold text-black"
+            onClick={() => setIsOpen(false)}
+          >
+            {lang === "zh" ? "WhatsApp咨询" : "WhatsApp Consultation"}
+          </a>
         </div>
       )}
     </nav>
