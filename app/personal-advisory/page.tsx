@@ -3,15 +3,16 @@ import { LanguageProvider } from "@/contexts/language-context";
 import PersonalAdvisoryContent from "@/components/personal-advisory-content";
 
 export const metadata: Metadata = {
-  title: "Personal Advisory Singapore｜Bazi, Qi Men & Feng Shui",
+  title: "Personal Advisory Singapore｜Bazi, Qi Men & Major Decisions",
   description:
-    "Private personal advisory in Singapore by Qimen Strategy, including S$168 Bazi Analysis, S$396 Qi Men Dun Jia consultation, relationship and marriage advisory, date selection, mobile number selection, residential Feng Shui and space clearing.",
+    "Private personal advisory in Singapore by Qimen Strategy, including S$168 Bazi Analysis, S$396 Qi Men Dun Jia consultation, S$1,696 Major Decision Consultation, relationship and marriage advisory, date selection, mobile number selection, residential Feng Shui and space clearing.",
   keywords: [
     "Personal advisory Singapore",
     "Bazi analysis Singapore",
     "Bazi consultation Singapore",
     "Qi Men Dun Jia consultation Singapore",
     "Qimen consultation Singapore",
+    "Major Decision Consultation Singapore",
     "Relationship marriage consultation Singapore",
     "Auspicious date selection Singapore",
     "Mobile number selection Singapore",
@@ -19,13 +20,13 @@ export const metadata: Metadata = {
     "Space clearing Singapore",
     "八字命理分析新加坡",
     "奇门遁甲咨询新加坡",
+    "重大决策咨询新加坡",
     "个人咨询新加坡",
     "感情婚姻咨询",
     "择日服务",
     "吉祥手机号码选择",
     "居家风水布局",
     "空间能量净化",
-    "启明老师",
     "Qimen Strategy",
   ],
   alternates: {
@@ -34,7 +35,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Personal Advisory Singapore | Qimen Strategy",
     description:
-      "S$168 Bazi Analysis, S$396 Qi Men Dun Jia consultation, relationship and marriage advisory, date selection, mobile number selection, residential Feng Shui and space clearing in Singapore.",
+      "S$168 Bazi Analysis, S$396 Qi Men Dun Jia consultation, S$1,696 Major Decision Consultation and other private personal advisory services in Singapore.",
     url: "https://www.qmfeng.com/personal-advisory",
     type: "website",
   },
@@ -51,13 +52,14 @@ const structuredData = {
   areaServed: ["Singapore", "Malaysia", "Online"],
   url: "https://www.qmfeng.com/personal-advisory",
   description:
-    "Private personal advisory including Bazi Analysis, Qi Men Dun Jia consultation, relationship and marriage advisory, date selection, mobile number selection, residential Feng Shui and space clearing.",
+    "Private personal advisory including Bazi Analysis, Qi Men Dun Jia consultation, Major Decision Consultation, relationship and marriage advisory, date selection, mobile number selection, residential Feng Shui and space clearing.",
   hasOfferCatalog: {
     "@type": "OfferCatalog",
     name: "Personal Advisory Services",
     itemListElement: [
       "Bazi Analysis",
       "Qi Men Dun Jia Consultation",
+      "Major Decision Consultation",
       "Relationship and Marriage Advisory",
       "Auspicious Date Selection",
       "Mobile Number Selection",
