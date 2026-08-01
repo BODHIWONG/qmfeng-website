@@ -28,16 +28,16 @@ const pillars: Pillar[] = [
   {
     number: "01",
     icon: UserRound,
-    eyebrowZh: "八字 · 奇门 · 感情 · 事业",
-    eyebrowEn: "Bazi, Qi Men, Relationship & Career",
+    eyebrowZh: "八字 · 奇门 · 重大决策 · 感情",
+    eyebrowEn: "Bazi, Qi Men, Major Decisions & Relationships",
     titleZh: "个人咨询服务",
     titleEn: "Personal Advisory",
     bodyZh:
-      "面向个人客户提供八字命理分析、奇门遁甲咨询、感情婚姻及其他生活优化服务，并根据客户的实际情况匹配适合的咨询入口。",
+      "面向个人客户提供八字命理分析、奇门遁甲咨询、重大决策咨询、感情婚姻及其他生活优化服务。先说明情况，再由顾问协助匹配。",
     bodyEn:
-      "Personal advisory including Bazi Analysis, Qi Men Dun Jia consultation, relationship and marriage advisory, and other life-optimisation services matched to the client’s actual situation.",
-    featuresZh: ["八字命理分析", "奇门遁甲咨询", "感情婚姻与人生重要选择"],
-    featuresEn: ["Bazi Analysis", "Qi Men Dun Jia Consultation", "Relationship, Marriage & Important Life Choices"],
+      "Personal advisory including Bazi Analysis, Qi Men Dun Jia consultation, Major Decision Consultation, relationship and marriage advisory, and other life-optimisation services. Share the situation first and the consultant will help match the service.",
+    featuresZh: ["八字命理分析", "奇门遁甲咨询", "重大决策咨询", "感情婚姻与人生选择"],
+    featuresEn: ["Bazi Analysis", "Qi Men Dun Jia Consultation", "Major Decision Consultation", "Relationship, Marriage & Life Choices"],
     href: "/personal-advisory",
     ctaZh: "查看个人咨询",
     ctaEn: "Explore Personal Advisory",
@@ -107,8 +107,8 @@ export default function ServiceCards() {
           </h2>
           <p className="text-sm leading-7 text-[oklch(0.42_0.02_60)] md:text-base">
             {t(
-              "三条路径服务不同需求。先根据客户的实际情况确认适合的服务，再进入相应的咨询、顾问或课程路径。",
-              "The three pathways serve different needs. The appropriate consultation, advisory or course pathway is matched to the client’s actual situation."
+              "三条路径服务不同需求。请先选择大方向，具体服务由顾问进一步说明。",
+              "The three pathways serve different needs. Choose the general direction first and the consultant will explain the suitable service."
             )}
           </p>
         </motion.div>
