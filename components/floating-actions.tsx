@@ -8,7 +8,7 @@ import {
   MessageCircle,
   X,
   Sparkles,
-  Home,
+  UserRound,
   Briefcase,
   GraduationCap,
 } from "lucide-react";
@@ -17,28 +17,28 @@ const WA_LINK = "https://wa.me/6589593499";
 
 const quickLinks = [
   {
-    icon: Sparkles,
-    labelZh: "预约奇门决策咨询",
-    labelEn: "Book Qimen Consultation",
-    message: "Hi Qimen Strategy, I'd like to book a consultation.",
+    icon: UserRound,
+    labelZh: "八字命理分析 · S$168",
+    labelEn: "Bazi Analysis · S$168",
+    message: "Hi Qimen Strategy, I'd like to enquire about the S$168 Bazi Analysis.",
   },
   {
-    icon: Home,
-    labelZh: "获取住宅风水建议",
-    labelEn: "Home Assessment",
-    message: "Hi Qimen Strategy, I need a home Feng Shui assessment.",
+    icon: Sparkles,
+    labelZh: "奇门遁甲咨询 · S$396",
+    labelEn: "Qi Men Consultation · S$396",
+    message: "Hi Qimen Strategy, I'd like to enquire about the S$396 Qi Men Dun Jia consultation. My current situation is:",
   },
   {
     icon: Briefcase,
-    labelZh: "商业空间优化咨询",
-    labelEn: "Business Optimisation",
-    message: "Hi Qimen Strategy, I need to optimise my business space.",
+    labelZh: "企业战略顾问",
+    labelEn: "Business Strategic Advisory",
+    message: "Hi Qimen Strategy, I'd like to enquire about Business Strategic Advisory. My current business challenge is:",
   },
   {
     icon: GraduationCap,
     labelZh: "了解奇门课程",
-    labelEn: "Courses & Training",
-    message: "Hi Qimen Strategy, could you share details about your courses?",
+    labelEn: "Qi Men Courses",
+    message: "Hi Qimen Strategy, could you share details about your Qi Men courses?",
   },
 ];
 
