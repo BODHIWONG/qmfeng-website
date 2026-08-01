@@ -9,9 +9,9 @@ export const decisionPageContent: ServicePageContent = {
   heroTitleEn:
     "Before an important decision, examine the situation, timing and direction through the Qi Men chart",
   heroSubtitleZh:
-    "根据客户当前面对的实际问题起盘，结合具体盘面结构与现实背景，对时机、方向、人事、风险及相关因素进行综合分析。咨询不按问题数量机械切割，重点以盘面实际呈现为依据。",
+    "根据客户当前面对的实际情况起盘，结合具体盘面结构与现实背景，对时机、方向、人事、风险及相关因素进行综合分析。",
   heroSubtitleEn:
-    "The consultation is based on the Qi Men chart cast for the client’s current situation. The chart and real-world context are reviewed together to examine timing, direction, people dynamics, risk and related factors. The analysis is guided by what the chart actually presents, rather than by mechanically counting questions.",
+    "The consultation is based on the Qi Men chart cast for the client’s current situation. The chart and real-world context are reviewed together to examine timing, direction, people dynamics, risk and related factors.",
   trustPointsZh: ["结合具体盘面", "私密一对一咨询", "综合判断与行动参考", "S$396"],
   trustPointsEn: ["Chart-Specific Analysis", "Private 1-to-1 Consultation", "Integrated Decision Insight", "S$396"],
   priceZh: "S$396｜奇门遁甲咨询",
@@ -51,15 +51,15 @@ export const decisionPageContent: ServicePageContent = {
   approachTitleZh: "奇门遁甲咨询如何进行？",
   approachTitleEn: "How the Qi Men Dun Jia consultation works",
   approachIntroZh:
-    "咨询先了解客户的现实背景与当前问题，再根据当时所起的奇门盘进行具体分析。一个盘面可能同时呈现多个相互关联的因素，因此不会用“一个问题”或“多个问题”机械划分分析内容。",
+    "咨询先了解客户的现实背景、当前情况与需要判断的事项，再根据当时所起的奇门盘进行具体分析。分析重点以盘面实际呈现及客户现实处境为依据。",
   approachIntroEn:
-    "The consultation begins with the client’s real-world context and current concern, followed by analysis of the Qi Men chart cast for that situation. Because one chart may reveal several connected factors, the consultation is not mechanically divided into a single-question or multiple-question format.",
+    "The consultation begins with the client’s real-world context, current situation and the matter requiring assessment, followed by analysis of the Qi Men chart cast for that situation. The focus is guided by the chart and the client’s actual circumstances.",
   steps: [
     {
       titleZh: "了解背景",
       titleEn: "Understand the Context",
-      descZh: "先确认当前问题、相关背景与准备作出的决定。",
-      descEn: "Clarify the current concern, relevant background and decision being considered.",
+      descZh: "先确认当前情况、相关背景与准备作出的决定。",
+      descEn: "Clarify the current situation, relevant background and decision being considered.",
     },
     {
       titleZh: "起盘分析",
@@ -108,20 +108,20 @@ export const decisionPageContent: ServicePageContent = {
     {
       qZh: "奇门遁甲咨询费用是多少？",
       qEn: "What is the consultation fee?",
-      aZh: "奇门遁甲咨询费用为 S$396。预约前会先确认客户当前问题、相关背景、咨询方式与所需资料。",
-      aEn: "The Qi Men Dun Jia consultation fee is S$396. Before booking, the current concern, relevant context, consultation format and required information will be confirmed.",
+      aZh: "奇门遁甲咨询费用为 S$396。预约前会先确认客户当前情况、相关背景、咨询方式与所需资料。",
+      aEn: "The Qi Men Dun Jia consultation fee is S$396. Before booking, the current situation, relevant context, consultation format and required information will be confirmed.",
     },
     {
-      qZh: "咨询是否限制只能问一个问题？",
-      qEn: "Is the consultation restricted to only one question?",
-      aZh: "咨询根据具体奇门盘面和客户实际情况展开。盘面可能同时呈现多个相互关联的因素，因此不会按照问题数量机械切割分析内容。",
-      aEn: "The consultation follows the specific Qi Men chart and the client’s actual situation. A chart may present several connected factors, so the analysis is not mechanically divided by the number of questions.",
+      qZh: "咨询如何确定分析重点？",
+      qEn: "How is the focus of the consultation determined?",
+      aZh: "分析重点根据客户当前需要判断的事项、现实背景与具体奇门盘面共同确定，并以盘面实际呈现的信息进行综合判断。",
+      aEn: "The focus is determined by the matter requiring assessment, the client’s real-world context and the specific Qi Men chart, with an integrated review of what the chart presents.",
     },
     {
       qZh: "需要提供什么资料？",
       qEn: "What information should I provide?",
-      aZh: "请先简要说明当前问题、相关背景、正在考虑的选择及希望作出决定的时间。确认后再安排咨询。",
-      aEn: "Please briefly share the current concern, relevant background, options under consideration and the decision timeline. The appointment is arranged after this is confirmed.",
+      aZh: "请先简要说明当前情况、相关背景、正在考虑的事项及时间安排。确认后再安排咨询。",
+      aEn: "Please briefly share the current situation, relevant background, the matter under consideration and relevant timing. The appointment is arranged after this is confirmed.",
     },
     {
       qZh: "可以线上咨询或在 Bedok 面谈吗？",
@@ -138,8 +138,8 @@ export const decisionPageContent: ServicePageContent = {
   ],
   ctaTitleZh: "重要决定之前，先让具体盘面提供更清晰的判断参考",
   ctaTitleEn: "Before an important decision, use the actual chart to gain a clearer decision reference",
-  ctaBodyZh: "奇门遁甲咨询费用为 S$396，并根据客户当前问题、具体盘面与现实情况进行分析。",
-  ctaBodyEn: "The Qi Men Dun Jia consultation fee is S$396, with analysis based on the client’s current concern, the specific chart and the real-world situation.",
+  ctaBodyZh: "奇门遁甲咨询费用为 S$396，并根据客户当前情况、具体盘面与现实背景进行分析。",
+  ctaBodyEn: "The Qi Men Dun Jia consultation fee is S$396, with analysis based on the client’s current situation, the specific chart and real-world context.",
   waTextZh: "你好，启明遁甲决策智库 Qimen Strategy，我想预约 S$396 奇门遁甲咨询。我的情况是：",
   waTextEn: "Hello Qimen Strategy, I would like to book the S$396 Qi Men Dun Jia consultation. My current situation is:",
 };
