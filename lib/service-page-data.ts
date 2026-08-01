@@ -187,3 +187,6 @@ export const spaceClearingPageContent: ServicePageContent = {
   waTextZh: "你好，启明遁甲决策智库 Qimen Strategy，我想咨询空间与环境调和。",
   waTextEn: "Hello Qimen Strategy, I would like to consult about space and environment alignment.",
 };
+
+// Compatibility export: keep one canonical Qi Men data source while preserving existing imports.
+export { decisionPageContent } from "@/lib/decision-page-data";
