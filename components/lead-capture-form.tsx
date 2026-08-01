@@ -86,21 +86,21 @@ export default function LeadCaptureForm() {
         <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[0.82fr_1.18fr] lg:items-start">
           <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
             <p className="mb-4 text-xs font-bold uppercase tracking-[0.28em] text-[oklch(0.72_0.12_70)]">
-              {t("顾问申请", "Advisory Application")}
+              {t("咨询申请", "Consultation Enquiry")}
             </p>
             <h2 className="mb-5 text-3xl font-bold leading-tight text-white sm:text-4xl md:text-5xl" style={{ fontFamily: "var(--font-cormorant), var(--font-noto-serif), serif" }}>
-              {t("先说明你的真实处境，我们再判断适合哪一种支持。", "Share the real situation first. We will assess which advisory pathway fits.")}
+              {t("先说明你的真实处境，再匹配适合的咨询入口。", "Share the real situation first, then match the appropriate consultation pathway.")}
             </h2>
             <p className="max-w-xl text-base leading-8 text-white/72 md:text-lg">
               {t(
-                "此表格主要用于创业老板、高管与个人重大决策咨询的初步筛选。请简要说明你的身份、行业、当前最想解决的问题与决策时间。课程报名请直接进入课程报名页面。",
-                "This form is for founders, executives and individuals applying for strategic decision support. Briefly share your role, industry, most important issue and decision deadline. Course learners should use the dedicated course registration page."
+                "此表格用于个人咨询与企业顾问的初步沟通。请简要说明你的身份、当前情况与正在考虑的事项。课程报名请直接进入课程报名页面。",
+                "This form is for initial personal-advisory and business-advisory enquiries. Briefly share your role, current situation and the matter under consideration. Course learners should use the dedicated registration page."
               )}
             </p>
             <div className="mt-7 space-y-3 border-l-2 border-[#d6ad63] pl-5 text-sm leading-7 text-white/62">
-              <p>{t("企业主：请填写行业、团队规模与当前经营卡点。", "Founders: include industry, team size and the current business bottleneck.")}</p>
-              <p>{t("高管：请填写当前职位、考虑中的选项与决定期限。", "Executives: include current role, available options and decision deadline.")}</p>
-              <p>{t("个人：请围绕一个最重要的决定说明背景。", "Individuals: focus the application on one most important decision.")}</p>
+              <p>{t("企业主：请填写行业、团队规模与当前经营情况。", "Founders: include industry, team size and the current business situation.")}</p>
+              <p>{t("高管：请填写当前职位与正在考虑的事项。", "Executives: include your current role and the matter under consideration.")}</p>
+              <p>{t("个人：请简要说明目前的情况。", "Individuals: briefly describe the current situation.")}</p>
             </div>
             <Link href="/course-registration?course=qimen-foundation&batch=2026-09-19" className="mt-7 inline-flex border border-[#d6ad63]/60 px-5 py-3 text-sm font-semibold text-[#f4dfb0] hover:bg-[#d6ad63]/10">
               {t("奇门课程报名 →", "Qi Men Course Registration →")}
@@ -136,7 +136,7 @@ export default function LeadCaptureForm() {
                   <option value="" disabled>{t("请选择", "Select")}</option>
                   <option value="Founder / Business Owner">{t("创业者 / 企业主", "Founder / Business Owner")}</option>
                   <option value="Senior Executive / Professional">{t("高管 / 专业人士", "Senior Executive / Professional")}</option>
-                  <option value="Individual Major Decision">{t("个人重大决策", "Individual Major Decision")}</option>
+                  <option value="Individual / Personal Advisory">{t("个人咨询客户", "Individual / Personal Advisory")}</option>
                 </select>
               </label>
               <label className="block">
@@ -157,27 +157,29 @@ export default function LeadCaptureForm() {
             </div>
 
             <label className="mt-4 block">
-              <span className="mb-2 block text-sm font-semibold text-white/80">{t("申请的服务 *", "Advisory pathway *")}</span>
+              <span className="mb-2 block text-sm font-semibold text-white/80">{t("咨询服务 *", "Consultation pathway *")}</span>
               <select name="service" required className={selectClass} defaultValue="">
                 <option value="" disabled>{t("请选择", "Select")}</option>
-                <option value="Founder Business Advisory">{t("创业老板事业陪跑", "Founder Business Advisory")}</option>
-                <option value="Wealth Cycle & Investment Decision Advisory">{t("财富周期与投资决策辅助", "Wealth Cycle & Investment Decision Advisory")}</option>
-                <option value="Executive Career Transition Advisory">{t("高管事业转型与关键关系规划", "Executive Career Transition Advisory")}</option>
-                <option value="Relationship Decision Clarity">{t("情感关系决策", "Relationship Decision Clarity")}</option>
-                <option value="Major Personal Decision Consultation">{t("个人重大决策咨询", "Major Personal Decision Consultation")}</option>
+                <option value="Bazi Analysis S$168">{t("八字命理分析 · S$168", "Bazi Analysis · S$168")}</option>
+                <option value="Qi Men Dun Jia Consultation S$396">{t("奇门遁甲咨询 · S$396", "Qi Men Dun Jia Consultation · S$396")}</option>
+                <option value="Major Decision Consultation S$1,696">{t("重大决策咨询 · S$1,696", "Major Decision Consultation · S$1,696")}</option>
+                <option value="Relationship and Marriage Advisory">{t("感情与婚姻咨询", "Relationship & Marriage Advisory")}</option>
+                <option value="Business Strategic Advisory">{t("企业战略顾问", "Business Strategic Advisory")}</option>
+                <option value="Wealth Cycle and Investment Decisions">{t("财富周期与投资决策", "Wealth Cycle & Investment Decisions")}</option>
+                <option value="Executive Career Transition">{t("高管事业转型", "Executive Career Transition")}</option>
                 <option value="Not Sure Need Assessment">{t("不确定，请先评估", "Not sure — please assess")}</option>
               </select>
             </label>
 
             <div className="mt-4 grid gap-4 sm:grid-cols-3">
               <label className="block">
-                <span className="mb-2 block text-sm font-semibold text-white/80">{t("决定期限", "Decision deadline")}</span>
+                <span className="mb-2 block text-sm font-semibold text-white/80">{t("时间安排", "Relevant timing")}</span>
                 <input name="deadline" className={inputClass} placeholder={t("例如：两周内", "e.g. within 2 weeks")} />
               </label>
               <label className="block">
                 <span className="mb-2 block text-sm font-semibold text-white/80">{t("支持方式", "Support type")}</span>
                 <select name="supportType" className={selectClass} defaultValue="Not sure">
-                  <option value="Single Session">{t("单次判断", "Single session")}</option>
+                  <option value="Consultation / Advisory Session">{t("咨询 / 顾问会谈", "Consultation / Advisory session")}</option>
                   <option value="90-Day Trial">{t("90天试行计划", "90-day trial")}</option>
                   <option value="Long-Term Retainer">{t("长期陪跑", "Long-term retainer")}</option>
                   <option value="Not sure">{t("不确定", "Not sure")}</option>
@@ -194,15 +196,15 @@ export default function LeadCaptureForm() {
             </div>
 
             <label className="mt-4 block">
-              <span className="mb-2 block text-sm font-semibold text-white/80">{t("当前最想解决的问题 *", "Most important issue *")}</span>
+              <span className="mb-2 block text-sm font-semibold text-white/80">{t("当前情况 *", "Current situation *")}</span>
               <textarea
                 name="message"
                 required
                 rows={6}
                 className={`${inputClass} resize-none`}
                 placeholder={t(
-                  "请说明目前的处境、你正在考虑的选项、最担心的风险，以及你希望在什么时候作出决定。",
-                  "Describe the current situation, options you are considering, the main risk you want to avoid and when a decision is required."
+                  "请简要说明目前的情况，以及希望进一步了解或判断的事项。",
+                  "Briefly describe the current situation and what you would like to understand or assess."
                 )}
               />
             </label>
@@ -220,13 +222,13 @@ export default function LeadCaptureForm() {
 
             <button type="submit" disabled={status === "submitting"} className="mt-6 inline-flex w-full items-center justify-center gap-3 bg-[oklch(0.72_0.12_70)] px-6 py-4 text-sm font-bold uppercase tracking-wider text-[oklch(0.06_0.02_60)] transition hover:scale-[1.01] disabled:cursor-not-allowed disabled:opacity-70">
               {status === "submitting" ? <MessageCircle size={18} className="animate-pulse" /> : <Send size={18} />}
-              {status === "submitting" ? t("提交中...", "Submitting...") : t("提交顾问申请", "Submit Advisory Application")}
+              {status === "submitting" ? t("提交中...", "Submitting...") : t("提交咨询申请", "Submit Consultation Enquiry")}
             </button>
 
             {status === "success" && (
               <div className="mt-4 flex items-start gap-3 border border-emerald-400/30 bg-emerald-400/10 p-4 text-sm leading-6 text-emerald-100">
                 <CheckCircle2 size={18} className="mt-0.5 flex-shrink-0" />
-                {t("谢谢。我们已收到你的申请，会通过 WhatsApp 进行初步适配沟通。", "Thank you. We have received your application and will contact you on WhatsApp for an initial fit review.")}
+                {t("谢谢。我们已收到你的申请，会通过 WhatsApp 进行初步沟通。", "Thank you. We have received your enquiry and will contact you on WhatsApp.")}
               </div>
             )}
 

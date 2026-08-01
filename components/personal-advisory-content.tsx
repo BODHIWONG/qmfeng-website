@@ -44,43 +44,50 @@ const services: PersonalService[] = [
     titleEn: "Bazi Analysis",
     focusZh: "S$168｜新客户入门分析",
     focusEn: "S$168 · Entry Analysis for New Clients",
-    bodyZh:
-      "八字命理分析是启明遁甲为新客户设置的入门咨询窗口。具体分析内容、所需出生资料与适用范围，将在预约前先行确认。",
-    bodyEn:
-      "Bazi Analysis is Qimen Strategy’s entry consultation window for new clients. The analysis scope, required birth information and suitability are confirmed before booking.",
-    examplesZh: ["适合第一次了解个人命理分析的客户", "预约前确认出生资料与分析范围", "独立于 S$396 奇门遁甲咨询"],
-    examplesEn: ["Suitable for clients new to personal Bazi analysis", "Birth information and scope confirmed before booking", "Separate from the S$396 Qi Men Dun Jia consultation"],
+    bodyZh: "适合希望先了解个人命理与人生方向的新客户。预约前，顾问会说明所需资料与服务内容。",
+    bodyEn: "An entry service for new clients who want to understand their personal Bazi and life direction. Required information and service details are explained before booking.",
+    examplesZh: ["个人命理与人生方向", "新客户入门咨询", "预约前确认资料"],
+    examplesEn: ["Personal Bazi and life direction", "Entry consultation for new clients", "Information confirmed before booking"],
     waText: "Hello Qimen Strategy, I would like to enquire about the S$168 Bazi Analysis.",
   },
   {
-    id: "major-decisions",
+    id: "qimen-consultation",
     icon: Compass,
     titleZh: "奇门遁甲咨询",
     titleEn: "Qi Men Dun Jia Consultation",
-    focusZh: "S$396｜事业 · 合作 · 投资 · 买房搬迁 · 人生方向",
-    focusEn: "S$396 · Career · Partnership · Investment · Property · Life Direction",
-    bodyZh:
-      "根据客户当前面对的实际问题起盘，结合具体奇门盘面与现实背景，综合分析时机、方向、人事关系、潜在风险与下一步行动。分析内容以盘面实际呈现为依据，不按问题数量机械切割。",
-    bodyEn:
-      "A consultation based on the Qi Men chart cast for the client’s current situation, integrating timing, direction, people dynamics, risk and practical next steps. The analysis follows what the chart presents rather than mechanically counting questions.",
-    examplesZh: ["事业去留与职业转型", "合作、投资与重要签约", "买房、搬迁与人生重要选择"],
-    examplesEn: ["Career and transition", "Partnership, investment and signing", "Property, relocation and major life choices"],
+    focusZh: "S$396｜看清当前局势与方向",
+    focusEn: "S$396 · Clarity on the Current Situation and Direction",
+    bodyZh: "适用于事业、工作、合作、感情与人生方向等问题。顾问会结合客户情况与奇门盘面进行分析。",
+    bodyEn: "Suitable for career, work, partnership, relationship and life-direction concerns. The consultant reviews the client’s situation together with the Qi Men chart.",
+    examplesZh: ["事业与工作方向", "合作与行动时机", "感情与人生选择"],
+    examplesEn: ["Career and work direction", "Partnerships and timing", "Relationship and life choices"],
     href: "/decision",
     waText: "Hello Qimen Strategy, I would like to enquire about the S$396 Qi Men Dun Jia consultation.",
+  },
+  {
+    id: "major-decision-consultation",
+    icon: Sparkles,
+    titleZh: "重大决策咨询",
+    titleEn: "Major Decision Consultation",
+    focusZh: "S$1,696｜重大选择与深度分析",
+    focusEn: "S$1,696 · Major Choices and In-Depth Analysis",
+    bodyZh: "适用于影响较大、需要更深入判断的重要决策。请先通过 WhatsApp 说明情况，顾问会协助确认是否适合。",
+    bodyEn: "For high-impact decisions that require deeper assessment. Briefly share the situation through WhatsApp and the consultant will confirm whether this service is suitable.",
+    examplesZh: ["重大事业与投资决定", "买房、搬迁及重要人生选择", "需要更深入分析的复杂情况"],
+    examplesEn: ["Major business and investment decisions", "Property, relocation and important life choices", "Complex situations requiring deeper analysis"],
+    waText: "Hello Qimen Strategy, I would like to enquire about the S$1,696 Major Decision Consultation. My situation is:",
   },
   {
     id: "relationship-marriage",
     icon: HeartHandshake,
     titleZh: "感情与婚姻咨询",
     titleEn: "Relationship & Marriage Advisory",
-    focusZh: "关系局势 · 婚姻选择 · 边界 · 修复与去留",
-    focusEn: "Relationship Dynamics · Marriage · Boundaries · Repair or Exit",
-    bodyZh:
-      "帮助客户从关系现状、双方互动、时机与个人状态出发，看清真正的问题、可调整的空间以及更适合的下一步方向。",
-    bodyEn:
-      "Private relationship advisory to clarify dynamics, boundaries, timing and the realistic next direction.",
-    examplesZh: ["感情是否值得继续", "婚姻关系与重大选择", "关系修复、放下与重新开始"],
-    examplesEn: ["Whether to continue", "Marriage and major choices", "Repair, release or restart"],
+    focusZh: "关系局势 · 婚姻选择 · 修复与去留",
+    focusEn: "Relationship Dynamics · Marriage · Repair or Exit",
+    bodyZh: "帮助客户看清关系现状、双方互动与下一步方向。具体咨询方式由顾问根据实际情况说明。",
+    bodyEn: "Private advisory to clarify relationship dynamics and the next direction. The consultant explains the suitable format based on the actual situation.",
+    examplesZh: ["感情关系困扰", "婚姻与重要选择", "修复、放下与重新开始"],
+    examplesEn: ["Relationship concerns", "Marriage and important choices", "Repair, release or restart"],
     href: "/relationship-clarity-reading-singapore",
     waText: "Hello Qimen Strategy, I would like to enquire about a private relationship or marriage consultation.",
   },
@@ -89,14 +96,12 @@ const services: PersonalService[] = [
     icon: CalendarDays,
     titleZh: "择日服务",
     titleEn: "Auspicious Date Selection",
-    focusZh: "结婚 · 开业 · 搬家 · 动工 · 签约 · 重要活动",
-    focusEn: "Marriage · Opening · Moving · Renovation · Signing · Key Events",
-    bodyZh:
-      "结合事项性质、参与人资料、现实安排与可执行时间范围，筛选更适合的重要行动日期，并说明使用重点与注意事项。",
-    bodyEn:
-      "Date selection based on the event, people involved, practical constraints and the available action window.",
-    examplesZh: ["结婚、注册与婚礼", "开业、搬家与动工", "签约、发布与重要活动"],
-    examplesEn: ["Marriage and registration", "Opening, moving and renovation", "Signing, launch and important events"],
+    focusZh: "结婚 · 开业 · 搬家 · 动工 · 签约",
+    focusEn: "Marriage · Opening · Moving · Renovation · Signing",
+    bodyZh: "为结婚、开业、搬家、动工、签约及重要活动选择合适日期。预约前由顾问确认所需资料。",
+    bodyEn: "Date selection for marriage, openings, moving, renovation, signing and important events. Required information is confirmed before booking.",
+    examplesZh: ["结婚与注册", "开业、搬家与动工", "签约与重要活动"],
+    examplesEn: ["Marriage and registration", "Opening, moving and renovation", "Signing and important events"],
     waText: "Hello Qimen Strategy, I would like to enquire about auspicious date selection.",
   },
   {
@@ -104,13 +109,11 @@ const services: PersonalService[] = [
     icon: Smartphone,
     titleZh: "吉祥手机号码选择",
     titleEn: "Mobile Number Selection",
-    focusZh: "个人需求 · 使用方向 · 数字组合 · 长期适配",
-    focusEn: "Personal Needs · Usage · Number Pattern · Long-Term Fit",
-    bodyZh:
-      "根据个人资料、使用目的与现实可选号码，筛选更适合长期使用的手机号码。服务重点是匹配与取舍，而不是夸大号码能够保证结果。",
-    bodyEn:
-      "Personalised mobile number selection based on the user, intended purpose and realistically available options, without exaggerated guarantees.",
-    examplesZh: ["个人长期使用号码", "事业与商务沟通号码", "现有号码比较与筛选"],
+    focusZh: "个人需求 · 使用方向 · 号码筛选",
+    focusEn: "Personal Needs · Usage · Number Selection",
+    bodyZh: "根据个人资料、使用目的与现实可选号码进行筛选。具体流程由顾问在预约前说明。",
+    bodyEn: "Selection based on personal information, intended use and realistically available numbers. The process is explained before booking.",
+    examplesZh: ["个人长期使用", "事业与商务沟通", "现有号码比较"],
     examplesEn: ["Long-term personal use", "Business communication", "Comparison of available numbers"],
     waText: "Hello Qimen Strategy, I would like to enquire about mobile number selection.",
   },
@@ -119,14 +122,12 @@ const services: PersonalService[] = [
     icon: Home,
     titleZh: "居家风水与空间能量净化",
     titleEn: "Residential Feng Shui & Space Clearing",
-    focusZh: "住宅布局 · 睡眠 · 工作区域 · 空间动线 · 新居净化",
-    focusEn: "Home Layout · Sleep · Work Area · Flow · Space Clearing",
-    bodyZh:
-      "结合住宅实际格局、居住者需求与空间状态，提供居家布局建议；如空间长期压抑、睡眠不稳或搬迁装修后需要调整，也可评估空间净化服务。",
-    bodyEn:
-      "Residential layout and space review for sleep, work areas, movement and overall support, with space clearing assessed where appropriate.",
-    examplesZh: ["卧室、书桌与工作区域", "财位、动线与家庭关系", "新居、装修后与长期压抑空间"],
-    examplesEn: ["Bedroom and work areas", "Flow, focus and family use", "New homes, post-renovation or heavy spaces"],
+    focusZh: "住宅布局 · 睡眠 · 工作区域 · 空间调整",
+    focusEn: "Home Layout · Sleep · Work Area · Space Alignment",
+    bodyZh: "适用于住宅布局、睡眠环境、工作区域与空间状态的评估。上门服务将根据物业情况另行确认。",
+    bodyEn: "For residential layout, sleep environment, work areas and space-condition review. On-site services are assessed separately according to the property.",
+    examplesZh: ["卧室与工作区域", "住宅布局与动线", "新居与空间净化"],
+    examplesEn: ["Bedroom and work areas", "Residential layout and flow", "New homes and space clearing"],
     waText: "Hello Qimen Strategy, I would like to enquire about residential Feng Shui or space clearing.",
   },
 ];
@@ -154,12 +155,12 @@ export default function PersonalAdvisoryContent() {
                 className="mt-6 text-4xl font-semibold leading-tight text-[#f4dfb0] md:text-6xl"
                 style={{ fontFamily: "var(--font-cormorant), var(--font-noto-serif), serif" }}
               >
-                {t("个人重大决策与生活优化咨询", "Personal Advisory for Important Life Decisions")}
+                {t("个人咨询与重大决策支持", "Personal Advisory & Major Decision Support")}
               </h1>
               <p className="mt-7 max-w-3xl text-base leading-8 text-white/72 md:text-lg">
                 {t(
-                  "启明遁甲决策智库为个人客户提供八字命理分析、奇门遁甲咨询、感情婚姻、择日、吉祥手机号码、居家风水布局与空间能量净化服务。所有服务以实际问题与现实条件为基础，帮助你选择适合的分析入口。",
-                  "Qimen Strategy provides Bazi Analysis, Qi Men Dun Jia consultation, relationship and marriage advisory, auspicious date selection, mobile number selection, residential Feng Shui and space clearing. Each service is grounded in the client’s actual situation and practical needs."
+                  "启明遁甲为个人客户提供八字命理分析、奇门遁甲咨询、重大决策咨询、感情婚姻、择日、手机号码选择、居家风水与空间净化服务。请先说明情况，顾问会协助匹配适合的服务。",
+                  "Qimen Strategy provides Bazi Analysis, Qi Men Dun Jia consultation, Major Decision Consultation, relationship and marriage advisory, date selection, mobile number selection, residential Feng Shui and space clearing. Share the situation first and the consultant will help match the appropriate service."
                 )}
               </p>
 
@@ -171,13 +172,13 @@ export default function PersonalAdvisoryContent() {
 
               <div className="mt-9 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
                 <a
-                  href={whatsappLink("Hello Qimen Strategy, I would like to enquire about a personal advisory service.")}
+                  href={whatsappLink("Hello Qimen Strategy, I would like to enquire about a personal advisory service. My situation is:")}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-3 bg-[#d6ad63] px-7 py-4 text-sm font-bold uppercase tracking-[0.12em] text-black hover:bg-[#f4dfb0]"
                 >
                   <MessageCircle size={18} />
-                  {t("说明你的咨询需求", "Share Your Enquiry")}
+                  {t("WhatsApp咨询", "WhatsApp Consultation")}
                 </a>
                 <a
                   href="#personal-services"
@@ -198,7 +199,7 @@ export default function PersonalAdvisoryContent() {
                 {t("个人咨询服务范围", "Personal Advisory Services")}
               </p>
               <h2 className="mt-4 text-3xl font-bold leading-tight md:text-5xl" style={{ fontFamily: "var(--font-cormorant), var(--font-noto-serif), serif" }}>
-                {t("根据问题性质，选择最适合的咨询入口", "Choose the Service That Matches the Actual Issue")}
+                {t("先了解服务，再由顾问协助匹配", "Understand the Services, Then Let the Consultant Help Match")}
               </h2>
             </div>
 
@@ -225,7 +226,7 @@ export default function PersonalAdvisoryContent() {
                     <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                       {service.href && (
                         <Link href={service.href} className="inline-flex items-center justify-center gap-2 border border-[oklch(0.60_0.08_65)] px-5 py-3 text-sm font-bold text-[oklch(0.38_0.04_65)] hover:bg-[oklch(0.60_0.08_65)] hover:text-white">
-                          {t("查看详细介绍", "View Details")}
+                          {t("查看介绍", "View Details")}
                           <ArrowRight size={15} />
                         </Link>
                       )}
@@ -268,8 +269,8 @@ export default function PersonalAdvisoryContent() {
               <h2 className="mt-5 text-2xl font-semibold text-[#f4dfb0]">{t("预约前准备", "Before Booking")}</h2>
               <p className="mt-4 text-sm leading-7 text-white/62">
                 {t(
-                  "请先简要说明你需要解决的问题、相关背景、希望作出决定的时间；涉及住宅空间时，请准备地址、户型、面积、平面图或现场照片。",
-                  "Briefly share the issue, relevant background and decision timeline. For residential matters, prepare the address, property type, size, floor plan or relevant photos."
+                  "请先通过 WhatsApp 简要说明目前的情况。顾问会进一步说明适合的服务、咨询方式与所需资料。",
+                  "Briefly share the current situation through WhatsApp. The consultant will explain the suitable service, consultation format and required information."
                 )}
               </p>
             </div>
@@ -280,17 +281,17 @@ export default function PersonalAdvisoryContent() {
           <div className="container mx-auto max-w-4xl">
             <Sparkles className="mx-auto text-[#d6ad63]" size={28} />
             <h2 className="mt-6 text-3xl font-semibold text-[#f4dfb0] md:text-5xl" style={{ fontFamily: "var(--font-cormorant), var(--font-noto-serif), serif" }}>
-              {t("先说明你的真实需要，再匹配适合的服务", "Share the Real Need First, Then Match the Right Service")}
+              {t("先说明情况，再匹配适合的服务", "Share the Situation First, Then Match the Right Service")}
             </h2>
             <p className="mx-auto mt-5 max-w-2xl text-base leading-8 text-white/65">
               {t(
-                "你不需要先判断自己属于哪一种服务。通过WhatsApp简要说明情况，我们会先确认问题范围、咨询方式与所需资料。",
-                "You do not need to identify the service category yourself. Share the situation by WhatsApp and we will first confirm the scope, format and information required."
+                "不确定适合哪一种咨询，也可以直接联系我们。顾问会根据实际情况进一步说明。",
+                "You may contact us directly even if you are unsure which service fits. The consultant will explain the next step based on the actual situation."
               )}
             </p>
-            <a href={whatsappLink("Hello Qimen Strategy, I would like to enquire about a personal advisory service. My main concern is:")} target="_blank" rel="noopener noreferrer" className="mt-8 inline-flex items-center justify-center gap-3 bg-[#d6ad63] px-8 py-4 text-sm font-bold uppercase tracking-[0.12em] text-black hover:bg-[#f4dfb0]">
-              <UserRound size={18} />
-              {t("联系启明老师", "Contact Mr.Qiming")}
+            <a href={whatsappLink("Hello Qimen Strategy, I would like to enquire about a personal advisory service. My situation is:")} target="_blank" rel="noopener noreferrer" className="mt-8 inline-flex items-center justify-center gap-3 bg-[#d6ad63] px-8 py-4 text-sm font-bold uppercase tracking-[0.12em] text-black hover:bg-[#f4dfb0]">
+              <MessageCircle size={18} />
+              {t("WhatsApp咨询", "WhatsApp Consultation")}
             </a>
           </div>
         </section>

@@ -6,7 +6,7 @@ import { decisionPageContent } from "@/lib/decision-page-data";
 export const metadata: Metadata = {
   title: "Qi Men Dun Jia Consultation Singapore｜S$396",
   description:
-    "Private S$396 Qi Men Dun Jia consultation in Singapore. Analysis is based on the specific Qi Men chart and the client’s actual situation, covering timing, direction, people dynamics, risk and practical next steps.",
+    "Private S$396 Qi Men Dun Jia consultation in Singapore for career, work, partnership, relationship and life-direction concerns. Available online or in person at Bedok.",
   keywords: [
     "Qi Men Dun Jia consultation Singapore",
     "Qimen consultation Singapore",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Qi Men Dun Jia Consultation Singapore | Qimen Strategy",
     description:
-      "A private S$396 consultation based on the specific Qi Men chart and the client’s real situation, with integrated analysis of timing, direction, people and risk.",
+      "Private S$396 Qi Men Dun Jia consultation, available online or in person at Bedok, Singapore.",
     url: "https://www.qmfeng.com/decision",
     type: "website",
   },
