@@ -28,19 +28,19 @@ const pillars: Pillar[] = [
   {
     number: "01",
     icon: UserRound,
-    eyebrowZh: "感情 · 事业 · 人生关键选择",
-    eyebrowEn: "Relationship, Career & Life Decisions",
-    titleZh: "个人重大决策咨询",
-    titleEn: "Personal Decision Advisory",
+    eyebrowZh: "八字 · 奇门 · 感情 · 事业",
+    eyebrowEn: "Bazi, Qi Men, Relationship & Career",
+    titleZh: "个人咨询服务",
+    titleEn: "Personal Advisory",
     bodyZh:
-      "面向正在经历感情关系、事业方向或人生关键选择的个人客户，帮助梳理局势、时机、风险与下一步，让决定建立在更清晰的判断上。",
+      "面向个人客户提供八字命理分析、奇门遁甲咨询、感情婚姻及其他生活优化服务，并根据客户的实际情况匹配适合的咨询入口。",
     bodyEn:
-      "Private advisory for relationship, career and major life decisions, helping clients examine the situation, timing, risks and practical next steps before deciding.",
-    featuresZh: ["感情与婚姻关系", "事业、工作与方向选择", "人生重大决策与行动时机"],
-    featuresEn: ["Relationship & Marriage Decisions", "Career, Work & Direction", "Major Life Decisions & Timing"],
+      "Personal advisory including Bazi Analysis, Qi Men Dun Jia consultation, relationship and marriage advisory, and other life-optimisation services matched to the client’s actual situation.",
+    featuresZh: ["八字命理分析", "奇门遁甲咨询", "感情婚姻与人生重要选择"],
+    featuresEn: ["Bazi Analysis", "Qi Men Dun Jia Consultation", "Relationship, Marriage & Important Life Choices"],
     href: "/personal-advisory",
-    ctaZh: "查看个人决策咨询",
-    ctaEn: "Explore Personal Decision Advisory",
+    ctaZh: "查看个人咨询",
+    ctaEn: "Explore Personal Advisory",
   },
   {
     number: "02",
@@ -101,14 +101,14 @@ export default function ServiceCards() {
             style={{ fontFamily: "var(--font-cormorant), var(--font-noto-serif), serif", color: "oklch(0.15 0.02 60)" }}
           >
             {t(
-              "个人重大决策咨询、企业战略顾问与奇门课程",
-              "Personal Decision Advisory, Business Strategic Advisory and Qi Men Education"
+              "个人咨询、企业战略顾问与奇门课程",
+              "Personal Advisory, Business Strategic Advisory and Qi Men Education"
             )}
           </h2>
           <p className="text-sm leading-7 text-[oklch(0.42_0.02_60)] md:text-base">
             {t(
-              "三条路径服务不同需求，但核心一致：在重要行动前看清局势、时机、方向、人事与风险，再作出更清晰的选择。",
-              "Three pathways serve different needs, with one shared purpose: to clarify the situation, timing, direction, people dynamics and risk before important action."
+              "三条路径服务不同需求。先根据客户的实际情况确认适合的服务，再进入相应的咨询、顾问或课程路径。",
+              "The three pathways serve different needs. The appropriate consultation, advisory or course pathway is matched to the client’s actual situation."
             )}
           </p>
         </motion.div>
@@ -178,8 +178,8 @@ export default function ServiceCards() {
 
         <div className="mt-10 border-l-2 border-[#d6ad63] bg-white px-6 py-5 text-sm leading-7 text-[oklch(0.38_0.02_60)] shadow-sm">
           {t(
-            "不确定适合哪一条路径？说明你目前最需要解决的问题，我们会协助你匹配个人重大决策咨询、企业顾问或奇门课程。八字、风水、择日等专项服务可在个人咨询页面进一步了解。",
-            "Not sure which pathway fits? Tell us the main issue you need to address and we will help match you with personal decision advisory, business advisory or a Qi Men course. Bazi, Feng Shui, date selection and other specialist services remain available within Personal Advisory."
+            "不确定适合哪一条路径？请先说明目前的情况，我们会协助匹配个人咨询、企业顾问或奇门课程。",
+            "Not sure which pathway fits? Share the current situation and we will help match you with Personal Advisory, Business Advisory or a Qi Men course."
           )}
         </div>
       </div>
