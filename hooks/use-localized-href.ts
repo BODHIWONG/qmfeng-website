@@ -8,6 +8,7 @@ const LOCALIZED_PATHS = new Set([
   "/decision",
   "/relationship-clarity-reading-singapore",
   "/enterprise-strategic-advisory",
+  "/commercial-feng-shui",
   "/courses",
   "/insights",
   "/founder",
