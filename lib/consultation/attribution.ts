@@ -1,6 +1,8 @@
 import { LEAD_SOURCES, type ConsultationAttribution, type LeadSource } from "@/lib/consultation/types";
 
 const SEARCH_HOSTS = ["google.", "bing.com", "search.yahoo.", "duckduckgo.com", "baidu.com"];
+const ATTRIBUTION_STORAGE_KEY = "qimen-attribution-v1";
+const PRIVILEGED_SOURCE_OVERRIDES = new Set<LeadSource>(["Walk-in", "Existing Client"]);
 
 function lower(value: string) {
   return value.trim().toLowerCase();
@@ -16,14 +18,16 @@ function hostFromUrl(value: string) {
 
 function exactSupportedSource(value: string): LeadSource | null {
   const normalised = lower(value).replace(/[_-]+/g, " ");
-  return (
-    LEAD_SOURCES.find((source) => lower(source) === normalised) ||
-    null
-  );
+  return LEAD_SOURCES.find((source) => lower(source) === normalised) || null;
+}
+
+function safePublicSourceOverride(value: string) {
+  const source = exactSupportedSource(value);
+  return source && !PRIVILEGED_SOURCE_OVERRIDES.has(source) ? source : null;
 }
 
 export function deriveLeadSource(attribution: ConsultationAttribution): LeadSource {
-  const override = exactSupportedSource(attribution.sourceOverride);
+  const override = safePublicSourceOverride(attribution.sourceOverride);
   if (override) return override;
 
   const source = lower(attribution.utmSource);
@@ -47,26 +51,52 @@ export function deriveLeadSource(attribution: ConsultationAttribution): LeadSour
   return "Website";
 }
 
-export function collectBrowserAttribution(): ConsultationAttribution {
-  if (typeof window === "undefined") {
-    return {
-      pageUrl: "",
-      pagePath: "",
-      referrer: "",
-      utmSource: "",
-      utmMedium: "",
-      utmCampaign: "",
-      utmTerm: "",
-      utmContent: "",
-      gclid: "",
-      gbraid: "",
-      wbraid: "",
-      sourceOverride: "",
-    };
+function emptyAttribution(): ConsultationAttribution {
+  return {
+    pageUrl: "",
+    pagePath: "",
+    referrer: "",
+    utmSource: "",
+    utmMedium: "",
+    utmCampaign: "",
+    utmTerm: "",
+    utmContent: "",
+    gclid: "",
+    gbraid: "",
+    wbraid: "",
+    sourceOverride: "",
+  };
+}
+
+function readStoredAttribution() {
+  try {
+    const stored = window.localStorage.getItem(ATTRIBUTION_STORAGE_KEY);
+    if (!stored) return null;
+    const parsed = JSON.parse(stored) as { first?: ConsultationAttribution; latest?: ConsultationAttribution };
+    return parsed && typeof parsed === "object" ? parsed : null;
+  } catch {
+    return null;
   }
+}
+
+function hasCampaignSignal(attribution: ConsultationAttribution) {
+  return Boolean(
+    attribution.utmSource ||
+      attribution.utmMedium ||
+      attribution.utmCampaign ||
+      attribution.gclid ||
+      attribution.gbraid ||
+      attribution.wbraid ||
+      attribution.sourceOverride ||
+      attribution.referrer
+  );
+}
+
+export function collectBrowserAttribution(): ConsultationAttribution {
+  if (typeof window === "undefined") return emptyAttribution();
 
   const params = new URLSearchParams(window.location.search);
-  return {
+  const current: ConsultationAttribution = {
     pageUrl: window.location.href,
     pagePath: window.location.pathname,
     referrer: document.referrer,
@@ -79,5 +109,26 @@ export function collectBrowserAttribution(): ConsultationAttribution {
     gbraid: params.get("gbraid") || "",
     wbraid: params.get("wbraid") || "",
     sourceOverride: params.get("lead_source") || "",
+  };
+
+  const stored = readStoredAttribution();
+  const first = stored?.first || (hasCampaignSignal(current) ? current : null);
+  const latest = hasCampaignSignal(current) ? current : stored?.latest || current;
+
+  try {
+    window.localStorage.setItem(
+      ATTRIBUTION_STORAGE_KEY,
+      JSON.stringify({ first: first || current, latest })
+    );
+  } catch {
+    // Attribution storage is best-effort; form submission must continue if storage is blocked.
+  }
+
+  const sourceAttribution = first || latest;
+  return {
+    ...sourceAttribution,
+    pageUrl: current.pageUrl,
+    pagePath: current.pagePath,
+    sourceOverride: safePublicSourceOverride(sourceAttribution.sourceOverride) || "",
   };
 }
