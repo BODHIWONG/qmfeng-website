@@ -40,55 +40,59 @@ export default function ContactSuccessTracker() {
     try {
       if (sessionStorage.getItem(onceKey)) return;
     } catch {
-      // Continue without the session guard when browser storage is unavailable.
+      // Analytics storage is best-effort and must not affect submission success.
     }
 
     const consultationType = stored.consultationType || "Unknown";
     const startedAt = Date.now();
-
-    const sendConversion = () => {
-      if (typeof window.gtag !== "function") {
-        if (Date.now() - startedAt < GTAG_WAIT_MS) return false;
-        return true;
-      }
-
-      window.gtag("event", "generate_lead", {
-        consultation_type: consultationType,
-        page_path: window.location.pathname,
-        lead_reference: reference,
-      });
-
-      const conversionTarget = process.env.NEXT_PUBLIC_GOOGLE_ADS_CONTACT_CONVERSION_SEND_TO;
-      if (conversionTarget) {
-        window.gtag("event", "conversion", {
-          send_to: conversionTarget,
-          transaction_id: reference,
-          event_category: "contact",
-          event_label: consultationType,
-        });
-      }
-
-      return true;
-    };
 
     const finish = () => {
       try {
         sessionStorage.setItem(onceKey, "1");
         sessionStorage.removeItem("qimen-contact-success");
       } catch {
-        // Analytics must never break the confirmed submission experience.
+        // Analytics storage is best-effort.
       }
     };
 
-    if (sendConversion()) {
+    const sendConversion = () => {
+      if (typeof window.gtag !== "function") return false;
+
+      try {
+        window.gtag("event", "generate_lead", {
+          consultation_type: consultationType,
+          page_path: window.location.pathname,
+          lead_reference: reference,
+        });
+
+        const conversionTarget = process.env.NEXT_PUBLIC_GOOGLE_ADS_CONTACT_CONVERSION_SEND_TO;
+        if (conversionTarget) {
+          window.gtag("event", "conversion", {
+            send_to: conversionTarget,
+            transaction_id: reference,
+            event_category: "contact",
+            event_label: consultationType,
+          });
+        }
+      } catch {
+        return false;
+      }
+
       finish();
-      return;
-    }
+      return true;
+    };
+
+    if (sendConversion()) return;
 
     const timer = window.setInterval(() => {
       if (sendConversion()) {
         window.clearInterval(timer);
-        finish();
+        return;
+      }
+
+      if (Date.now() - startedAt >= GTAG_WAIT_MS) {
+        window.clearInterval(timer);
+        // Keep the pending marker so a later refresh can retry analytics.
       }
     }, GTAG_RETRY_MS);
 
