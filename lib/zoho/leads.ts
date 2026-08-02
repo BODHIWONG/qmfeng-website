@@ -55,6 +55,19 @@ function parseJsonRecord(value: string | undefined): Record<string, unknown> {
   }
 }
 
+function parseTriggerList(value: string | undefined) {
+  if (!value?.trim()) return undefined;
+  try {
+    const parsed = JSON.parse(value);
+    if (!Array.isArray(parsed) || !parsed.every((item) => typeof item === "string")) {
+      throw new Error("invalid");
+    }
+    return parsed.map((item) => item.trim()).filter(Boolean);
+  } catch {
+    throw new Error("ZOHO_INVALID_TRIGGER_CONFIGURATION");
+  }
+}
+
 function getFieldMap(): FieldMap {
   const configured = parseJsonRecord(process.env.ZOHO_CRM_FIELD_MAP_JSON);
   return {
@@ -152,14 +165,16 @@ function buildRecord(args: {
   existing?: ZohoRecord | null;
 }) {
   const { submission, fields, source, reference, existing } = args;
-  const staticFields = parseJsonRecord(process.env.ZOHO_CRM_STATIC_FIELDS_JSON);
-  const record: Record<string, unknown> = { ...staticFields };
+  const isInsert = !existing;
+  const record: Record<string, unknown> = isInsert
+    ? { ...parseJsonRecord(process.env.ZOHO_CRM_STATIC_FIELDS_JSON) }
+    : {};
 
-  if (fields.name) record[fields.name] = submission.name;
-  if (fields.phone) record[fields.phone] = submission.phone;
-  if (fields.email && submission.email) record[fields.email] = submission.email;
+  if (isInsert && fields.name) record[fields.name] = submission.name;
+  if (isInsert && fields.phone) record[fields.phone] = submission.phone;
+  if (isInsert && fields.email) record[fields.email] = submission.email;
+  if (isInsert && fields.leadSource) record[fields.leadSource] = mapLeadSource(source);
   if (fields.consultationType) record[fields.consultationType] = submission.consultationType;
-  if (fields.leadSource) record[fields.leadSource] = mapLeadSource(source);
   if (fields.submissionId) record[fields.submissionId] = reference;
   if (fields.pageUrl) record[fields.pageUrl] = submission.attribution.pageUrl || submission.attribution.pagePath;
   if (fields.message) {
@@ -172,9 +187,16 @@ function buildRecord(args: {
   }
 
   const layoutId = process.env.ZOHO_CRM_LAYOUT_ID?.trim();
-  if (layoutId) record.Layout = { id: layoutId };
+  if (isInsert && layoutId) record.Layout = { id: layoutId };
 
   return record;
+}
+
+function writeBody(record: Record<string, unknown>) {
+  const body: Record<string, unknown> = { data: [record] };
+  const trigger = parseTriggerList(process.env.ZOHO_CRM_TRIGGERS_JSON);
+  if (trigger) body.trigger = trigger;
+  return body;
 }
 
 function readWriteResult(payload: ZohoWriteResponse | null) {
@@ -202,15 +224,15 @@ export async function submitConsultationToZoho(
       `${config.moduleApiName}/${existing.id}`,
       {
         method: "PUT",
-        body: JSON.stringify({ data: [record] }),
+        body: JSON.stringify(writeBody(record)),
       }
     );
     const result = readWriteResult(response.data);
     return { recordId: result.details!.id!, action: "update", leadSource: source };
   }
 
+  const body = writeBody(record);
   const assignmentRuleId = process.env.ZOHO_CRM_ASSIGNMENT_RULE_ID?.trim();
-  const body: Record<string, unknown> = { data: [record] };
   if (assignmentRuleId) body.lar_id = assignmentRuleId;
 
   const response = await zohoCrmRequest<ZohoWriteResponse>(config.moduleApiName, {
