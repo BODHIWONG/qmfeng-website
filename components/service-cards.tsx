@@ -48,13 +48,16 @@ const pillars: Pillar[] = [
     eyebrowEn: "Founder & Business Decision Advisory",
     titleZh: "企业战略顾问",
     titleEn: "Business Strategic Advisory",
-    bodyZh: "面向创业老板、企业主与高管，聚焦经营瓶颈、战略重点、合作人事与重大经营选择，并通过阶段复盘持续校准方向。",
-    bodyEn: "Strategic advisory for founders, business owners and executives navigating business bottlenecks, priorities, partnerships, people issues and major operating decisions.",
-    featuresZh: ["经营瓶颈与战略重点", "投资、合作与人事判断", "90天试行与长期陪跑"],
-    featuresEn: ["Bottlenecks & Strategic Priorities", "Investment, People & Partnership", "90-Day & Ongoing Advisory"],
+    bodyZh: "面向创业老板、企业主与高管，聚焦经营瓶颈、战略重点、合作人事、商业风水与重大经营选择，并通过阶段复盘持续校准方向。",
+    bodyEn: "Strategic advisory for founders, business owners and executives navigating business bottlenecks, priorities, partnerships, people issues, commercial Feng Shui and major operating decisions.",
+    featuresZh: ["经营瓶颈与战略重点", "投资、合作与人事判断", "商业风水与Office空间", "90天试行与长期陪跑"],
+    featuresEn: ["Bottlenecks & Strategic Priorities", "Investment, People & Partnership", "Commercial Feng Shui & Office Space", "90-Day & Ongoing Advisory"],
     href: "/enterprise-strategic-advisory",
     ctaZh: "了解企业顾问",
     ctaEn: "Explore Business Advisory",
+    secondaryHref: "/commercial-feng-shui",
+    secondaryCtaZh: "了解商业风水",
+    secondaryCtaEn: "Explore Commercial Feng Shui",
   },
   {
     number: "03",
@@ -121,7 +124,7 @@ export default function ServiceCards() {
         </div>
 
         <div className="mt-10 border-l-2 border-[#d6ad63] bg-white px-6 py-5 text-sm leading-7 text-[oklch(0.38_0.02_60)] shadow-sm">
-          {t("不确定适合哪一条路径？请先说明目前的情况，我们会协助匹配个人咨询、企业顾问或奇门课程。", "Not sure which pathway fits? Share the current situation and we will help match you with Personal Advisory, Business Advisory or a Qi Men course.")}
+          {t("不确定适合哪一条路径？请先说明目前的情况，我们会协助匹配个人咨询、企业顾问、商业风水或奇门课程。", "Not sure which pathway fits? Share the current situation and we will help match you with Personal Advisory, Business Advisory, Commercial Feng Shui or a Qi Men course.")}
         </div>
       </div>
     </section>

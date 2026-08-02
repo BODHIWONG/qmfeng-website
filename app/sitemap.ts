@@ -26,6 +26,7 @@ const localizedRoutes = [
   "/decision",
   "/relationship-clarity-reading-singapore",
   "/enterprise-strategic-advisory",
+  "/commercial-feng-shui",
   "/courses",
   "/insights",
   "/founder",
@@ -38,6 +39,7 @@ const localizedPages = ["en", "zh"].flatMap((locale) =>
 const legacyAndSupportingPages = [
   "/",
   "/enterprise-strategic-advisory",
+  "/commercial-feng-shui",
   "/founder-wealth-investment-advisory",
   "/executive-career-transition-advisory",
   "/personal-advisory",
@@ -85,6 +87,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const isHomepage = path === "/en" || path === "/zh";
     const isCoreAdvisory = [
       "/enterprise-strategic-advisory",
+      "/commercial-feng-shui",
       "/personal-advisory",
       "/decision",
       "/relationship-clarity-reading-singapore",

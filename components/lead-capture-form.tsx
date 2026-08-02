@@ -93,13 +93,13 @@ export default function LeadCaptureForm() {
             </h2>
             <p className="max-w-xl text-base leading-8 text-white/72 md:text-lg">
               {t(
-                "此表格用于个人咨询与企业顾问的初步沟通。请简要说明你的身份、当前情况与正在考虑的事项。课程报名请直接进入课程报名页面。",
-                "This form is for initial personal-advisory and business-advisory enquiries. Briefly share your role, current situation and the matter under consideration. Course learners should use the dedicated registration page."
+                "此表格用于个人咨询、企业顾问与商业风水的初步沟通。请简要说明你的身份、当前情况与正在考虑的事项。课程报名请直接进入课程报名页面。",
+                "This form is for initial personal-advisory, business-advisory and Commercial Feng Shui enquiries. Briefly share your role, current situation and the matter under consideration. Course learners should use the dedicated registration page."
               )}
             </p>
             <div className="mt-7 space-y-3 border-l-2 border-[#d6ad63] pl-5 text-sm leading-7 text-white/62">
               <p>{t("企业主：请填写行业、团队规模与当前经营情况。", "Founders: include industry, team size and the current business situation.")}</p>
-              <p>{t("高管：请填写当前职位与正在考虑的事项。", "Executives: include your current role and the matter under consideration.")}</p>
+              <p>{t("商业风水：请在情况说明中填写物业类型、面积、地点及希望改善的问题。", "Commercial Feng Shui: include property type, approximate size, location and the main concern in the situation field.")}</p>
               <p>{t("个人：请简要说明目前的情况。", "Individuals: briefly describe the current situation.")}</p>
             </div>
             <Link href="/course-registration?course=qimen-foundation&batch=2026-09-19" className="mt-7 inline-flex border border-[#d6ad63]/60 px-5 py-3 text-sm font-semibold text-[#f4dfb0] hover:bg-[#d6ad63]/10">
@@ -165,6 +165,7 @@ export default function LeadCaptureForm() {
                 <option value="Major Decision Consultation S$1,696">{t("重大决策咨询 · S$1,696", "Major Decision Consultation · S$1,696")}</option>
                 <option value="Relationship and Marriage Advisory">{t("感情与婚姻咨询", "Relationship & Marriage Advisory")}</option>
                 <option value="Business Strategic Advisory">{t("企业战略顾问", "Business Strategic Advisory")}</option>
+                <option value="Commercial Feng Shui and Office Feng Shui">{t("商业风水｜办公室风水", "Commercial Feng Shui & Office Feng Shui")}</option>
                 <option value="Wealth Cycle and Investment Decisions">{t("财富周期与投资决策", "Wealth Cycle & Investment Decisions")}</option>
                 <option value="Executive Career Transition">{t("高管事业转型", "Executive Career Transition")}</option>
                 <option value="Not Sure Need Assessment">{t("不确定，请先评估", "Not sure — please assess")}</option>
@@ -203,8 +204,8 @@ export default function LeadCaptureForm() {
                 rows={6}
                 className={`${inputClass} resize-none`}
                 placeholder={t(
-                  "请简要说明目前的情况，以及希望进一步了解或判断的事项。",
-                  "Briefly describe the current situation and what you would like to understand or assess."
+                  "请简要说明目前的情况，以及希望进一步了解或判断的事项。商业风水请填写物业类型、面积、地点与主要问题。",
+                  "Briefly describe the current situation and what you would like to understand or assess. For Commercial Feng Shui, include property type, size, location and the main concern."
                 )}
               />
             </label>

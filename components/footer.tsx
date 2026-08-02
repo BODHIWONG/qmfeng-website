@@ -18,6 +18,7 @@ const academyLinks = [
 
 const businessLinks = [
   { href: "/enterprise-strategic-advisory", zh: "企业战略顾问与长期陪跑", en: "Business Strategic Advisory" },
+  { href: "/commercial-feng-shui", zh: "商业风水｜办公室风水", en: "Commercial Feng Shui" },
   { href: "/founder-wealth-investment-advisory", zh: "财富周期与投资决策", en: "Wealth & Investment Decisions" },
   { href: "/executive-career-transition-advisory", zh: "高管事业转型", en: "Executive Career Transition" },
 ];
@@ -124,6 +125,9 @@ export default function Footer() {
             <div className="flex flex-wrap gap-x-5 gap-y-2 text-xs font-semibold">
               <Link href={localizeHref("/enterprise-strategic-advisory")} className="text-white/48 transition hover:text-[#d6ad63]">
                 {t("了解企业顾问 →", "Business Advisory →")}
+              </Link>
+              <Link href={localizeHref("/commercial-feng-shui")} className="text-white/48 transition hover:text-[#d6ad63]">
+                {t("了解商业风水 →", "Commercial Feng Shui →")}
               </Link>
               <Link href={localizeHref("/courses")} className="text-white/48 transition hover:text-[#d6ad63]">
                 {t("查看奇门课程 →", "Qi Men Courses →")}
