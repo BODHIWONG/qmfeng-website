@@ -19,7 +19,22 @@ import { applyInsightPostOverrides } from "@/lib/insights-overrides";
 
 const baseUrl = "https://www.qmfeng.com";
 
-const corePages = [
+const coreRoutes = [
+  "",
+  "/personal-advisory",
+  "/decision",
+  "/relationship-clarity-reading-singapore",
+  "/enterprise-strategic-advisory",
+  "/courses",
+  "/insights",
+  "/founder",
+];
+
+const localizedCorePages = ["en", "zh"].flatMap((locale) =>
+  coreRoutes.map((path) => `/${locale}${path}`)
+);
+
+const legacyAndSupportingPages = [
   "/",
   "/enterprise-strategic-advisory",
   "/founder-wealth-investment-advisory",
@@ -36,6 +51,8 @@ const corePages = [
   "/terms",
   "/course-policy",
 ];
+
+const corePages = [...localizedCorePages, ...legacyAndSupportingPages];
 
 const allPosts = [
   ...qimenLifeCrossroadsDecisionAdvisoryPosts,
@@ -54,28 +71,40 @@ const allPosts = [
   ...qimenDunJiaFoundationPosts,
   ...qimenSingaporeBilingualPosts,
   ...insightPosts,
-].map((post) => applyInsightPostOverrides(post));
+]
+  .map((post) => applyInsightPostOverrides(post))
+  .filter((post, index, posts) => posts.findIndex((item) => item.slug === post.slug) === index);
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
 
   const pageEntries = corePages.map((path) => {
+    const isLocalized = path.startsWith("/en") || path.startsWith("/zh");
     const isCoreAdvisory = [
-      "/enterprise-strategic-advisory",
-      "/founder-wealth-investment-advisory",
-      "/executive-career-transition-advisory",
       "/personal-advisory",
       "/decision",
-    ].includes(path);
-    const isCourse = path.includes("course") || path === "/courses";
+      "/relationship-clarity-reading-singapore",
+      "/enterprise-strategic-advisory",
+    ].some((route) => path.endsWith(route));
+    const isCourse = path.includes("course") || path.endsWith("/courses");
     const isPolicy = ["/privacy", "/terms", "/course-policy"].includes(path);
-    const isFrequentlyUpdated = path === "/" || path === "/courses" || path === "/qi-men-dun-jia-course-singapore";
+    const isFrequentlyUpdated = path === "/" || path.endsWith("/courses") || path.endsWith("/insights");
 
     return {
       url: `${baseUrl}${path}`,
       lastModified: now,
       changeFrequency: isFrequentlyUpdated ? "weekly" : isPolicy ? "yearly" : "monthly",
-      priority: path === "/" ? 1 : isCoreAdvisory || isCourse ? 0.9 : isPolicy ? 0.4 : 0.8,
+      priority: isLocalized && (path === "/en" || path === "/zh")
+        ? 1
+        : isLocalized && (isCoreAdvisory || isCourse)
+          ? 0.9
+          : path === "/"
+            ? 0.7
+            : isCoreAdvisory || isCourse
+              ? 0.75
+              : isPolicy
+                ? 0.4
+                : 0.7,
     };
   }) satisfies MetadataRoute.Sitemap;
 
@@ -83,7 +112,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${baseUrl}/insights/${post.slug}`,
     lastModified: post.date ? new Date(post.date) : now,
     changeFrequency: "monthly" as const,
-    priority: post.category.toLowerCase().includes("business") ? 0.75 : 0.65,
+    priority: post.category.toLowerCase().includes("business") ? 0.7 : 0.6,
   })) satisfies MetadataRoute.Sitemap;
 
   return [...pageEntries, ...insightEntries];
