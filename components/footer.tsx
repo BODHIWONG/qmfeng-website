@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useLanguage } from "@/contexts/language-context";
+import { useLocalizedHref } from "@/hooks/use-localized-href";
 
 const LOGO_URL = "/logo-qimen-strategy.jpg";
 const COURSE_REGISTRATION_LINK = "/course-registration?course=qimen-foundation&batch=2026-09-19";
@@ -40,6 +41,7 @@ const companyLinks = [
 
 export default function Footer() {
   const { t } = useLanguage();
+  const localizeHref = useLocalizedHref();
 
   return (
     <footer className="border-t border-[#c89a45]/20 bg-black">
@@ -55,18 +57,20 @@ export default function Footer() {
             </div>
             <p className="max-w-md text-xs leading-7 text-white/55">
               {t(
-                "启明遁甲决策智库立足新加坡，以个人重大决策咨询、企业战略顾问与奇门遁甲实战课程为三大核心业务，为个人客户、企业主、专业人士与学习者提供清晰、专业、按需匹配的支持。",
-                "Qimen Strategy is a Singapore-based practice built around three core pillars: personal decision advisory, business strategic advisory and practical Qi Men Dun Jia education."
+                "启明遁甲立足新加坡，以个人咨询、企业战略顾问与奇门遁甲实战课程为三大核心业务，为个人客户、企业主、专业人士与学习者提供清晰、专业、按需匹配的支持。",
+                "Qimen Strategy is a Singapore-based practice built around three core pillars: personal advisory, business strategic advisory and practical Qi Men Dun Jia education."
               )}
             </p>
-            <p className="mt-5 text-sm font-semibold italic text-[#d6ad63]">See the Whole Game Before You Decide.</p>
+            <p className="mt-5 text-sm font-semibold italic text-[#d6ad63]">
+              {t("决定之前，先看清全局。", "See the Whole Game Before You Decide.")}
+            </p>
           </div>
 
           <div>
             <p className="mb-4 text-[0.6rem] font-bold uppercase tracking-[0.2em] text-[#d6ad63]">{t("个人咨询", "Personal Advisory")}</p>
             <div className="space-y-2.5">
               {personalLinks.map((link) => (
-                <Link key={link.href} href={link.href} className="block text-xs leading-5 text-white/50 transition-colors hover:text-[#d6ad63]">
+                <Link key={link.href} href={localizeHref(link.href)} className="block text-xs leading-5 text-white/50 transition-colors hover:text-[#d6ad63]">
                   {t(link.zh, link.en)}
                 </Link>
               ))}
@@ -77,7 +81,7 @@ export default function Footer() {
             <p className="mb-4 text-[0.6rem] font-bold uppercase tracking-[0.2em] text-[#d6ad63]">{t("企业顾问", "Business Advisory")}</p>
             <div className="space-y-2.5">
               {businessLinks.map((link) => (
-                <Link key={link.href} href={link.href} className="block text-xs leading-5 text-white/50 transition-colors hover:text-[#d6ad63]">
+                <Link key={link.href} href={localizeHref(link.href)} className="block text-xs leading-5 text-white/50 transition-colors hover:text-[#d6ad63]">
                   {t(link.zh, link.en)}
                 </Link>
               ))}
@@ -88,7 +92,7 @@ export default function Footer() {
             <p className="mb-4 text-[0.6rem] font-bold uppercase tracking-[0.2em] text-[#d6ad63]">{t("奇门课程", "Qi Men Courses")}</p>
             <div className="space-y-2.5">
               {academyLinks.map((link) => (
-                <Link key={link.href} href={link.href} className="block text-xs leading-5 text-white/50 transition-colors hover:text-[#d6ad63]">
+                <Link key={link.href} href={localizeHref(link.href)} className="block text-xs leading-5 text-white/50 transition-colors hover:text-[#d6ad63]">
                   {t(link.zh, link.en)}
                 </Link>
               ))}
@@ -99,7 +103,7 @@ export default function Footer() {
             <p className="mb-4 text-[0.6rem] font-bold uppercase tracking-[0.2em] text-[#d6ad63]">{t("公司与政策", "Company & Policies")}</p>
             <div className="space-y-2.5">
               {companyLinks.map((link) => (
-                <Link key={link.href} href={link.href} className="block text-xs leading-5 text-white/50 transition-colors hover:text-[#d6ad63]">
+                <Link key={link.href} href={localizeHref(link.href)} className="block text-xs leading-5 text-white/50 transition-colors hover:text-[#d6ad63]">
                   {t(link.zh, link.en)}
                 </Link>
               ))}
@@ -114,19 +118,14 @@ export default function Footer() {
             <p>Official WhatsApp: +65 8959 3499 · Hours: Daily 10:00–20:00</p>
           </div>
           <div className="flex flex-col gap-3 md:items-end">
-            <a
-              href={CONSULTATION_WHATSAPP}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex justify-center bg-[#d6ad63] px-6 py-3 text-sm font-bold uppercase tracking-[0.12em] text-black hover:bg-[#f4dfb0]"
-            >
+            <a href={CONSULTATION_WHATSAPP} target="_blank" rel="noopener noreferrer" className="inline-flex justify-center bg-[#d6ad63] px-6 py-3 text-sm font-bold uppercase tracking-[0.12em] text-black hover:bg-[#f4dfb0]">
               {t("WhatsApp咨询", "WhatsApp Consultation")}
             </a>
             <div className="flex flex-wrap gap-x-5 gap-y-2 text-xs font-semibold">
-              <Link href="/enterprise-strategic-advisory" className="text-white/48 transition hover:text-[#d6ad63]">
+              <Link href={localizeHref("/enterprise-strategic-advisory")} className="text-white/48 transition hover:text-[#d6ad63]">
                 {t("了解企业顾问 →", "Business Advisory →")}
               </Link>
-              <Link href="/courses" className="text-white/48 transition hover:text-[#d6ad63]">
+              <Link href={localizeHref("/courses")} className="text-white/48 transition hover:text-[#d6ad63]">
                 {t("查看奇门课程 →", "Qi Men Courses →")}
               </Link>
             </div>
