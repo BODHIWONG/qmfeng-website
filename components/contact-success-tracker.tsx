@@ -14,12 +14,13 @@ type StoredSuccess = {
   recordedAt?: number;
 };
 
+const SUCCESS_SESSION_MAX_AGE_MS = 30 * 60 * 1000;
+
 export default function ContactSuccessTracker() {
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const reference = params.get("ref") || "";
-    const onceKey = reference ? `qimen-contact-conversion:${reference}` : "qimen-contact-conversion:unknown";
-    if (sessionStorage.getItem(onceKey)) return;
+    if (!reference) return;
 
     let stored: StoredSuccess = {};
     try {
@@ -28,6 +29,14 @@ export default function ContactSuccessTracker() {
       stored = {};
     }
 
+    const recordedAt = typeof stored.recordedAt === "number" ? stored.recordedAt : 0;
+    const isRecent = recordedAt > 0 && Date.now() - recordedAt <= SUCCESS_SESSION_MAX_AGE_MS;
+    const isMatchingSubmission = Boolean(stored.reference && stored.reference === reference && isRecent);
+    if (!isMatchingSubmission) return;
+
+    const onceKey = `qimen-contact-conversion:${reference}`;
+    if (sessionStorage.getItem(onceKey)) return;
+
     const consultationType = stored.consultationType || "Unknown";
     if (typeof window.gtag === "function") {
       window.gtag("event", "generate_lead", {
@@ -35,7 +44,7 @@ export default function ContactSuccessTracker() {
         value: 1,
         consultation_type: consultationType,
         page_path: window.location.pathname,
-        lead_reference: reference || stored.reference || "unknown",
+        lead_reference: reference,
       });
 
       const conversionTarget = process.env.NEXT_PUBLIC_GOOGLE_ADS_CONTACT_CONVERSION_SEND_TO;
@@ -44,7 +53,7 @@ export default function ContactSuccessTracker() {
           send_to: conversionTarget,
           currency: "SGD",
           value: 1,
-          transaction_id: reference || stored.reference || "",
+          transaction_id: reference,
           event_category: "contact",
           event_label: consultationType,
         });
