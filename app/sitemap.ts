@@ -30,6 +30,7 @@ const localizedRoutes = [
   "/courses",
   "/insights",
   "/founder",
+  "/contact",
 ];
 
 const localizedPages = ["en", "zh"].flatMap((locale) =>
@@ -50,6 +51,7 @@ const legacyAndSupportingPages = [
   "/singapore-qi-men-dun-jia-consultant",
   "/founder",
   "/insights",
+  "/contact",
   "/privacy",
   "/terms",
   "/course-policy",
@@ -91,6 +93,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       "/personal-advisory",
       "/decision",
       "/relationship-clarity-reading-singapore",
+      "/contact",
     ].some((route) => path.endsWith(route));
     const isCourse = path.includes("course") || path.endsWith("/courses");
     const isPolicy = ["/privacy", "/terms", "/course-policy"].includes(path);
