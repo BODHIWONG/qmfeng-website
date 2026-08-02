@@ -1,6 +1,6 @@
 "use client";
 
-import React, { createContext, useCallback, useContext, useEffect, useState } from "react";
+import React, { createContext, useCallback, useContext, useMemo, useState } from "react";
 
 export type Language = "zh" | "en";
 
@@ -12,31 +12,6 @@ interface LanguageContextType {
 
 const LanguageContext = createContext<LanguageContextType | null>(null);
 
-function RootLanguageProvider({
-  children,
-  initialLang,
-}: {
-  children: React.ReactNode;
-  initialLang: Language;
-}) {
-  const [lang, setLang] = useState<Language>(initialLang);
-
-  useEffect(() => {
-    document.documentElement.lang = lang === "zh" ? "zh-SG" : "en-SG";
-  }, [lang]);
-
-  const t = useCallback(
-    (zh: string, en: string) => (lang === "zh" ? zh : en),
-    [lang]
-  );
-
-  return (
-    <LanguageContext.Provider value={{ lang, setLang, t }}>
-      {children}
-    </LanguageContext.Provider>
-  );
-}
-
 export function LanguageProvider({
   children,
   initialLang = "en",
@@ -45,15 +20,22 @@ export function LanguageProvider({
   initialLang?: Language;
 }) {
   const parentContext = useContext(LanguageContext);
+  const [localLang, setLocalLang] = useState<Language>(initialLang);
 
-  if (parentContext) {
-    return <>{children}</>;
-  }
+  const localTranslate = useCallback(
+    (zh: string, en: string) => (localLang === "zh" ? zh : en),
+    [localLang]
+  );
+
+  const localValue = useMemo<LanguageContextType>(
+    () => ({ lang: localLang, setLang: setLocalLang, t: localTranslate }),
+    [localLang, localTranslate]
+  );
 
   return (
-    <RootLanguageProvider initialLang={initialLang}>
+    <LanguageContext.Provider value={parentContext ?? localValue}>
       {children}
-    </RootLanguageProvider>
+    </LanguageContext.Provider>
   );
 }
 
