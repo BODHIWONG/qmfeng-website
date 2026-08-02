@@ -1,15 +1,15 @@
 name: Export PR44 Source
 
 on:
-  push:
-    branches:
-      - temp/export-pr44-source-6a62cee
+  pull_request:
+    branches: [main]
 
 permissions:
   contents: read
 
 jobs:
   export:
+    if: github.head_ref == 'temp/export-pr44-source-6a62cee'
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
