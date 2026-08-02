@@ -19,6 +19,7 @@ export function LanguageProvider({
   children: React.ReactNode;
   initialLang?: Language;
 }) {
+  const parentContext = useContext(LanguageContext);
   const [lang, setLang] = useState<Language>(initialLang);
 
   useEffect(() => {
@@ -26,13 +27,19 @@ export function LanguageProvider({
   }, [initialLang]);
 
   useEffect(() => {
-    document.documentElement.lang = lang === "zh" ? "zh-SG" : "en-SG";
-  }, [lang]);
+    if (!parentContext) {
+      document.documentElement.lang = lang === "zh" ? "zh-SG" : "en-SG";
+    }
+  }, [lang, parentContext]);
 
   const t = useCallback(
     (zh: string, en: string) => (lang === "zh" ? zh : en),
     [lang]
   );
+
+  if (parentContext) {
+    return <>{children}</>;
+  }
 
   return (
     <LanguageContext.Provider value={{ lang, setLang, t }}>
