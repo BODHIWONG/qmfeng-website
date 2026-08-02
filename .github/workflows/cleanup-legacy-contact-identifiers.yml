@@ -1,0 +1,68 @@
+name: Clean Legacy Contact Identifiers
+
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  cleanup:
+    if: github.head_ref == 'fix/release-blockers-zoho-contact'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout working branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+
+      - name: Replace exact legacy identifiers
+        shell: bash
+        run: |
+          python <<'PY'
+          from pathlib import Path
+
+          roots = [Path("app"), Path("components"), Path("lib")]
+          replacements = {
+              "6589418791": "6589593499",
+              "Master Qiming": "Huang Qiming",
+              "Master%20Qiming": "Huang%20Qiming",
+          }
+          changed = []
+
+          for root in roots:
+              for path in root.rglob("*"):
+                  if not path.is_file() or path.suffix not in {".ts", ".tsx", ".js", ".jsx", ".json", ".md"}:
+                      continue
+                  text = path.read_text()
+                  updated = text
+                  for old, new in replacements.items():
+                      updated = updated.replace(old, new)
+                  if updated != text:
+                      path.write_text(updated)
+                      changed.append(str(path))
+
+          if not changed:
+              raise SystemExit("No legacy identifiers were found to replace.")
+
+          print("Updated files:")
+          print("\n".join(changed))
+          PY
+
+          if grep -R --line-number --exclude-dir=.git -E '6589418791|Master Qiming|Master%20Qiming|qimenAppointmentLeadId|qimenAppointmentMessage|qimenAppointmentWhatsAppUrl' app components lib; then
+            echo "Legacy contact identifiers remain."
+            exit 1
+          fi
+
+      - name: Commit cleanup
+        shell: bash
+        run: |
+          rm .github/workflows/cleanup-legacy-contact-identifiers.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add app components lib .github/workflows/cleanup-legacy-contact-identifiers.yml
+          git commit -m "Remove legacy contact identifiers"
+          git push
