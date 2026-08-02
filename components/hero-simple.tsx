@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, BookOpen, BriefcaseBusiness, MessageCircle } from "lucide-react";
+import { ArrowRight, MessageCircle } from "lucide-react";
 import Link from "next/link";
 
 const BG_IMAGE = "/master-home-hero.png";
@@ -13,13 +13,16 @@ const searchIntents = [
   { en: "Bazi & Feng Shui", zh: "八字命理 · 风水" },
 ];
 
+const CONSULTATION_WHATSAPP =
+  "https://wa.me/6589593499?text=Hi%20Qimen%20Strategy%2C%20I%27d%20like%20to%20arrange%20a%20private%20consultation.%20My%20current%20situation%20is%3A";
+
 export default function HeroSimple() {
   return (
     <section className="relative min-h-screen overflow-hidden bg-black text-white">
       <div className="absolute inset-0">
         <img
           src={BG_IMAGE}
-          alt="Huang Qiming, Qi Men Dun Jia consultant and strategic decision advisor in Singapore"
+          alt="Huang Qiming, Founder of Qimen Strategy in Singapore"
           className="h-full w-full object-cover object-center opacity-80"
           loading="eager"
           fetchPriority="high"
@@ -53,7 +56,7 @@ export default function HeroSimple() {
             className="max-w-5xl text-4xl font-semibold leading-[1.02] tracking-[0.02em] text-[#f4dfb0] drop-shadow-[0_8px_28px_rgba(0,0,0,0.62)] sm:text-5xl md:text-6xl lg:text-7xl"
             style={{ fontFamily: "var(--font-cormorant), var(--font-noto-serif), serif" }}
           >
-            Personal & Business Advisory with Qi Men Dun Jia in Singapore
+            Personal & Business Decision Advisory with Qi Men Dun Jia in Singapore
           </motion.h1>
 
           <motion.h2
@@ -63,7 +66,7 @@ export default function HeroSimple() {
             className="mt-6 max-w-4xl text-2xl font-semibold leading-tight tracking-[0.06em] text-[#e2bd6b] md:text-4xl"
             style={{ fontFamily: "var(--font-noto-serif), var(--font-cormorant), serif" }}
           >
-            个人重大决策 · 企业战略顾问 · 奇门遁甲实战课程
+            个人咨询 · 企业战略顾问 · 奇门遁甲实战课程
           </motion.h2>
 
           <motion.p
@@ -83,10 +86,10 @@ export default function HeroSimple() {
             className="mt-8 max-w-4xl border-l-2 border-[#d0a14a] bg-black/42 px-5 py-5 text-sm leading-7 text-white/84 backdrop-blur-sm md:text-base md:leading-8"
           >
             <p>
-              For relationship, career, business and important life decisions, Qimen Strategy helps you examine timing, people, direction, environment and risk before you act.
+              For career, relationship, business and other important decisions, gain a clearer view of the situation before taking the next step.
             </p>
             <p className="mt-3 text-white/70">
-              面对感情、事业、生意与人生重要选择，先看清局势、时机、方向与风险，再做决定。新加坡 Bedok 可面谈，也提供线上咨询。
+              面对事业、感情、生意与人生重要选择，先看清局势，再决定下一步。可预约新加坡 Bedok 面谈或线上咨询。
             </p>
           </motion.div>
 
@@ -109,32 +112,23 @@ export default function HeroSimple() {
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="mt-8 flex flex-col gap-4 sm:flex-row sm:flex-wrap"
+            className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center"
           >
             <a
-              href="https://wa.me/6589593499?text=Hi%20Qimen%20Strategy%2C%20I%27d%20like%20to%20ask%20about%20a%20consultation."
+              href={CONSULTATION_WHATSAPP}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-3 bg-[#d0a14a] px-7 py-4 text-sm font-bold uppercase tracking-[0.12em] text-black shadow-[0_18px_46px_rgba(198,139,48,0.24)] transition-all duration-300 hover:scale-[1.02] hover:bg-[#e2bd6b]"
             >
               <MessageCircle size={18} />
-              WhatsApp Consultation
+              WhatsApp for a Private Consultation
               <ArrowRight size={17} />
             </a>
             <Link
-              href="/enterprise-strategic-advisory"
-              className="inline-flex items-center justify-center gap-3 border border-[#c89a45] px-7 py-4 text-sm font-bold uppercase tracking-[0.12em] text-[#f4dfb0] transition-colors duration-300 hover:bg-[#c89a45]/10"
+              href="#services"
+              className="inline-flex items-center gap-2 px-2 py-3 text-sm font-semibold text-white/72 transition-colors hover:text-[#f4dfb0]"
             >
-              <BriefcaseBusiness size={18} />
-              Business Advisory
-              <ArrowRight size={16} />
-            </Link>
-            <Link
-              href="/courses"
-              className="inline-flex items-center justify-center gap-3 px-2 py-4 text-sm font-bold uppercase tracking-[0.12em] text-white/76 transition-colors duration-300 hover:text-[#f4dfb0]"
-            >
-              <BookOpen size={18} />
-              Explore Qi Men Courses
+              Explore Our Advisory Services
               <ArrowRight size={16} />
             </Link>
           </motion.div>
