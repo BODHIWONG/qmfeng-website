@@ -30,6 +30,8 @@ function cleanAttribution(value: unknown): ConsultationAttribution {
     pageUrl: cleanText(record.pageUrl, LIMITS.attribution),
     pagePath: cleanText(record.pagePath, 300),
     referrer: cleanText(record.referrer, LIMITS.attribution),
+    firstLandingPage: cleanText(record.firstLandingPage, LIMITS.attribution),
+    firstReferrer: cleanText(record.firstReferrer, LIMITS.attribution),
     utmSource: cleanText(record.utmSource, 150),
     utmMedium: cleanText(record.utmMedium, 150),
     utmCampaign: cleanText(record.utmCampaign, 250),
