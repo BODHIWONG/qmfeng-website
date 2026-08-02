@@ -32,6 +32,8 @@ export type ConsultationAttribution = {
   pageUrl: string;
   pagePath: string;
   referrer: string;
+  firstLandingPage: string;
+  firstReferrer: string;
   utmSource: string;
   utmMedium: string;
   utmCampaign: string;
