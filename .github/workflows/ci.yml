@@ -22,18 +22,30 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10.4.1
+          run_install: false
+
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
-
-      - name: Enable pnpm
-        run: |
-          corepack enable
-          corepack prepare pnpm@10.4.1 --activate
+          node-version: 22
+          cache: pnpm
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
+
+      - name: Verify legacy appointment cleanup
+        run: |
+          test ! -e app/api/appointment/route.ts
+          test ! -e app/appointment/page.tsx
+          test ! -e app/appointment/thank-you/page.tsx
+          if grep -R --line-number --exclude-dir=.git -E '6589418791|Master Qiming|qimenAppointmentLeadId|qimenAppointmentMessage|qimenAppointmentWhatsAppUrl' app components lib; then
+            echo "Legacy appointment code is still present."
+            exit 1
+          fi
 
       - name: TypeScript validation
         run: pnpm typecheck
