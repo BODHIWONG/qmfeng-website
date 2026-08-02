@@ -20,6 +20,7 @@ import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import FloatingActions from "@/components/floating-actions";
 import { useLanguage } from "@/contexts/language-context";
+import { useLocalizedHref } from "@/hooks/use-localized-href";
 
 type PersonalService = {
   id: string;
@@ -71,7 +72,7 @@ const services: PersonalService[] = [
     titleEn: "Major Decision Consultation",
     focusZh: "S$1,696｜重大选择与深度分析",
     focusEn: "S$1,696 · Major Choices and In-Depth Analysis",
-    bodyZh: "适用于影响较大、需要更深入判断的重要决策。请先通过 WhatsApp 说明情况，顾问会协助确认是否适合。",
+    bodyZh: "适用于影响较大、需要更深入判断的重要决策。请先通过WhatsApp说明情况，顾问会协助确认是否适合。",
     bodyEn: "For high-impact decisions that require deeper assessment. Briefly share the situation through WhatsApp and the consultant will confirm whether this service is suitable.",
     examplesZh: ["重大事业与投资决定", "买房、搬迁及重要人生选择", "需要更深入分析的复杂情况"],
     examplesEn: ["Major business and investment decisions", "Property, relocation and important life choices", "Complex situations requiring deeper analysis"],
@@ -138,54 +139,34 @@ function whatsappLink(text: string) {
 
 export default function PersonalAdvisoryContent() {
   const { lang, t } = useLanguage();
+  const localizeHref = useLocalizedHref();
 
   return (
     <div className="min-h-screen bg-[oklch(0.07_0.02_60)] text-white">
       <Navbar />
-
       <main>
         <section className="relative overflow-hidden border-b border-[#d6ad63]/20 px-4 pb-20 pt-36 md:pb-28 md:pt-44">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(214,173,99,0.16),transparent_34%)]" />
           <div className="container relative mx-auto max-w-6xl">
             <div className="max-w-4xl">
-              <p className="text-xs font-bold uppercase tracking-[0.28em] text-[#d6ad63]">
-                {t("核心业务｜个人咨询", "Core Service｜Personal Advisory")}
-              </p>
-              <h1
-                className="mt-6 text-4xl font-semibold leading-tight text-[#f4dfb0] md:text-6xl"
-                style={{ fontFamily: "var(--font-cormorant), var(--font-noto-serif), serif" }}
-              >
+              <p className="text-xs font-bold uppercase tracking-[0.28em] text-[#d6ad63]">{t("核心业务｜个人咨询", "Core Service｜Personal Advisory")}</p>
+              <h1 className="mt-6 text-4xl font-semibold leading-tight text-[#f4dfb0] md:text-6xl" style={{ fontFamily: "var(--font-cormorant), var(--font-noto-serif), serif" }}>
                 {t("个人咨询与重大决策支持", "Personal Advisory & Major Decision Support")}
               </h1>
               <p className="mt-7 max-w-3xl text-base leading-8 text-white/72 md:text-lg">
-                {t(
-                  "启明遁甲为个人客户提供八字命理分析、奇门遁甲咨询、重大决策咨询、感情婚姻、择日、手机号码选择、居家风水与空间净化服务。请先说明情况，顾问会协助匹配适合的服务。",
-                  "Qimen Strategy provides Bazi Analysis, Qi Men Dun Jia consultation, Major Decision Consultation, relationship and marriage advisory, date selection, mobile number selection, residential Feng Shui and space clearing. Share the situation first and the consultant will help match the appropriate service."
-                )}
+                {t("启明遁甲为个人客户提供八字命理分析、奇门遁甲咨询、重大决策咨询、感情婚姻、择日、手机号码选择、居家风水与空间净化服务。请先说明情况，顾问会协助匹配适合的服务。", "Qimen Strategy provides Bazi Analysis, Qi Men Dun Jia consultation, Major Decision Consultation, relationship and marriage advisory, date selection, mobile number selection, residential Feng Shui and space clearing. Share the situation first and the consultant will help match the appropriate service.")}
               </p>
-
               <div className="mt-8 flex flex-wrap gap-3 text-xs font-semibold uppercase tracking-[0.12em] text-[#e2bd6b]">
-                <span className="border border-[#d6ad63]/35 px-4 py-2">Private & By Appointment</span>
-                <span className="border border-[#d6ad63]/35 px-4 py-2">Online or Bedok</span>
-                <span className="border border-[#d6ad63]/35 px-4 py-2">On-Site by Assessment</span>
+                <span className="border border-[#d6ad63]/35 px-4 py-2">{t("私密预约制", "Private & By Appointment")}</span>
+                <span className="border border-[#d6ad63]/35 px-4 py-2">{t("线上或Bedok面谈", "Online or Bedok")}</span>
+                <span className="border border-[#d6ad63]/35 px-4 py-2">{t("上门服务另行评估", "On-Site by Assessment")}</span>
               </div>
-
               <div className="mt-9 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
-                <a
-                  href={whatsappLink("Hello Qimen Strategy, I would like to enquire about a personal advisory service. My situation is:")}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-3 bg-[#d6ad63] px-7 py-4 text-sm font-bold uppercase tracking-[0.12em] text-black hover:bg-[#f4dfb0]"
-                >
-                  <MessageCircle size={18} />
-                  {t("WhatsApp咨询", "WhatsApp Consultation")}
+                <a href={whatsappLink("Hello Qimen Strategy, I would like to enquire about a personal advisory service. My situation is:")} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-3 bg-[#d6ad63] px-7 py-4 text-sm font-bold uppercase tracking-[0.12em] text-black hover:bg-[#f4dfb0]">
+                  <MessageCircle size={18} />{t("WhatsApp咨询", "WhatsApp Consultation")}
                 </a>
-                <a
-                  href="#personal-services"
-                  className="inline-flex items-center justify-center gap-3 border border-[#d6ad63]/70 px-7 py-4 text-sm font-bold uppercase tracking-[0.12em] text-[#f4dfb0] hover:bg-[#d6ad63]/10"
-                >
-                  {t("查看服务项目", "View Services")}
-                  <ArrowRight size={17} />
+                <a href="#personal-services" className="inline-flex items-center justify-center gap-3 border border-[#d6ad63]/70 px-7 py-4 text-sm font-bold uppercase tracking-[0.12em] text-[#f4dfb0] hover:bg-[#d6ad63]/10">
+                  {t("查看服务项目", "View Services")}<ArrowRight size={17} />
                 </a>
               </div>
             </div>
@@ -195,45 +176,27 @@ export default function PersonalAdvisoryContent() {
         <section id="personal-services" className="bg-[oklch(0.96_0.012_75)] px-4 py-20 text-[oklch(0.16_0.02_60)] md:py-28">
           <div className="container mx-auto max-w-6xl">
             <div className="mb-12 max-w-4xl">
-              <p className="text-xs font-bold uppercase tracking-[0.24em] text-[oklch(0.60_0.08_65)]">
-                {t("个人咨询服务范围", "Personal Advisory Services")}
-              </p>
+              <p className="text-xs font-bold uppercase tracking-[0.24em] text-[oklch(0.60_0.08_65)]">{t("个人咨询服务范围", "Personal Advisory Services")}</p>
               <h2 className="mt-4 text-3xl font-bold leading-tight md:text-5xl" style={{ fontFamily: "var(--font-cormorant), var(--font-noto-serif), serif" }}>
                 {t("先了解服务，再由顾问协助匹配", "Understand the Services, Then Let the Consultant Help Match")}
               </h2>
             </div>
-
             <div className="grid gap-6 lg:grid-cols-2">
               {services.map((service) => {
                 const Icon = service.icon;
                 const examples = lang === "zh" ? service.examplesZh : service.examplesEn;
                 return (
                   <article key={service.id} id={service.id} className="scroll-mt-28 border border-[oklch(0.82_0.035_70)] bg-white p-7 shadow-sm md:p-8">
-                    <div className="flex h-13 w-13 items-center justify-center border border-[oklch(0.65_0.09_70)] text-[oklch(0.58_0.08_65)]">
-                      <Icon size={23} />
-                    </div>
+                    <div className="flex h-13 w-13 items-center justify-center border border-[oklch(0.65_0.09_70)] text-[oklch(0.58_0.08_65)]"><Icon size={23} /></div>
                     <p className="mt-6 text-xs font-bold uppercase tracking-[0.18em] text-[oklch(0.58_0.08_65)]">{t(service.titleZh, service.titleEn)}</p>
                     <h3 className="mt-2 text-2xl font-bold leading-tight">{t(service.focusZh, service.focusEn)}</h3>
                     <p className="mt-5 text-sm leading-7 text-[oklch(0.38_0.02_60)]">{t(service.bodyZh, service.bodyEn)}</p>
                     <div className="mt-6 space-y-2 border-t border-[oklch(0.88_0.018_70)] pt-5">
-                      {examples.map((example) => (
-                        <p key={example} className="flex items-start gap-3 text-sm leading-6 text-[oklch(0.42_0.02_60)]">
-                          <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[oklch(0.60_0.08_65)]" />
-                          {example}
-                        </p>
-                      ))}
+                      {examples.map((example) => <p key={example} className="flex items-start gap-3 text-sm leading-6 text-[oklch(0.42_0.02_60)]"><span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[oklch(0.60_0.08_65)]" />{example}</p>)}
                     </div>
                     <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-                      {service.href && (
-                        <Link href={service.href} className="inline-flex items-center justify-center gap-2 border border-[oklch(0.60_0.08_65)] px-5 py-3 text-sm font-bold text-[oklch(0.38_0.04_65)] hover:bg-[oklch(0.60_0.08_65)] hover:text-white">
-                          {t("查看介绍", "View Details")}
-                          <ArrowRight size={15} />
-                        </Link>
-                      )}
-                      <a href={whatsappLink(service.waText)} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-[oklch(0.60_0.08_65)] px-5 py-3 text-sm font-bold text-white hover:opacity-90">
-                        <MessageCircle size={16} />
-                        {t("WhatsApp咨询", "Enquire on WhatsApp")}
-                      </a>
+                      {service.href && <Link href={localizeHref(service.href)} className="inline-flex items-center justify-center gap-2 border border-[oklch(0.60_0.08_65)] px-5 py-3 text-sm font-bold text-[oklch(0.38_0.04_65)] hover:bg-[oklch(0.60_0.08_65)] hover:text-white">{t("查看介绍", "View Details")}<ArrowRight size={15} /></Link>}
+                      <a href={whatsappLink(service.waText)} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-[oklch(0.60_0.08_65)] px-5 py-3 text-sm font-bold text-white hover:opacity-90"><MessageCircle size={16} />{t("WhatsApp咨询", "Enquire on WhatsApp")}</a>
                     </div>
                   </article>
                 );
@@ -244,59 +207,21 @@ export default function PersonalAdvisoryContent() {
 
         <section className="px-4 py-20 md:py-28">
           <div className="container mx-auto grid max-w-6xl gap-8 lg:grid-cols-3">
-            <div className="border border-[#d6ad63]/22 bg-white/[0.035] p-7">
-              <ShieldCheck className="text-[#d6ad63]" size={24} />
-              <h2 className="mt-5 text-2xl font-semibold text-[#f4dfb0]">{t("专业边界", "Professional Boundaries")}</h2>
-              <p className="mt-4 text-sm leading-7 text-white/62">
-                {t(
-                  "咨询提供判断、风险提示与行动参考，不保证特定财务、关系、健康或其他结果，也不替代法律、金融、医疗、心理等专业意见。",
-                  "Advisory provides insight, risk awareness and action reference. It does not guarantee financial, relationship, health or other outcomes and does not replace regulated professional advice."
-                )}
-              </p>
-            </div>
-            <div className="border border-[#d6ad63]/22 bg-white/[0.035] p-7">
-              <Video className="text-[#d6ad63]" size={24} />
-              <h2 className="mt-5 text-2xl font-semibold text-[#f4dfb0]">{t("线上与面谈", "Online & In Person")}</h2>
-              <p className="mt-4 text-sm leading-7 text-white/62">
-                {t(
-                  "多数个人咨询可线上进行，也可预约在Bedok面谈。居家风水及空间服务如需上门，将根据物业类型、面积与地点另行评估。",
-                  "Most personal consultations are available online or in person at Bedok. On-site residential and space services are assessed according to property type, size and location."
-                )}
-              </p>
-            </div>
-            <div className="border border-[#d6ad63]/22 bg-white/[0.035] p-7">
-              <MapPin className="text-[#d6ad63]" size={24} />
-              <h2 className="mt-5 text-2xl font-semibold text-[#f4dfb0]">{t("预约前准备", "Before Booking")}</h2>
-              <p className="mt-4 text-sm leading-7 text-white/62">
-                {t(
-                  "请先通过 WhatsApp 简要说明目前的情况。顾问会进一步说明适合的服务、咨询方式与所需资料。",
-                  "Briefly share the current situation through WhatsApp. The consultant will explain the suitable service, consultation format and required information."
-                )}
-              </p>
-            </div>
+            <div className="border border-[#d6ad63]/22 bg-white/[0.035] p-7"><ShieldCheck className="text-[#d6ad63]" size={24} /><h2 className="mt-5 text-2xl font-semibold text-[#f4dfb0]">{t("专业边界", "Professional Boundaries")}</h2><p className="mt-4 text-sm leading-7 text-white/62">{t("咨询提供判断、风险提示与行动参考，不保证特定财务、关系、健康或其他结果，也不替代法律、金融、医疗、心理等专业意见。", "Advisory provides insight, risk awareness and action reference. It does not guarantee financial, relationship, health or other outcomes and does not replace regulated professional advice.")}</p></div>
+            <div className="border border-[#d6ad63]/22 bg-white/[0.035] p-7"><Video className="text-[#d6ad63]" size={24} /><h2 className="mt-5 text-2xl font-semibold text-[#f4dfb0]">{t("线上与面谈", "Online & In Person")}</h2><p className="mt-4 text-sm leading-7 text-white/62">{t("多数个人咨询可线上进行，也可预约在Bedok面谈。居家风水及空间服务如需上门，将根据物业类型、面积与地点另行评估。", "Most personal consultations are available online or in person at Bedok. On-site residential and space services are assessed according to property type, size and location.")}</p></div>
+            <div className="border border-[#d6ad63]/22 bg-white/[0.035] p-7"><MapPin className="text-[#d6ad63]" size={24} /><h2 className="mt-5 text-2xl font-semibold text-[#f4dfb0]">{t("预约前准备", "Before Booking")}</h2><p className="mt-4 text-sm leading-7 text-white/62">{t("请先通过WhatsApp简要说明目前的情况。顾问会进一步说明适合的服务、咨询方式与所需资料。", "Briefly share the current situation through WhatsApp. The consultant will explain the suitable service, consultation format and required information.")}</p></div>
           </div>
         </section>
 
         <section className="border-t border-[#d6ad63]/20 bg-black px-4 py-20 text-center md:py-24">
           <div className="container mx-auto max-w-4xl">
             <Sparkles className="mx-auto text-[#d6ad63]" size={28} />
-            <h2 className="mt-6 text-3xl font-semibold text-[#f4dfb0] md:text-5xl" style={{ fontFamily: "var(--font-cormorant), var(--font-noto-serif), serif" }}>
-              {t("先说明情况，再匹配适合的服务", "Share the Situation First, Then Match the Right Service")}
-            </h2>
-            <p className="mx-auto mt-5 max-w-2xl text-base leading-8 text-white/65">
-              {t(
-                "不确定适合哪一种咨询，也可以直接联系我们。顾问会根据实际情况进一步说明。",
-                "You may contact us directly even if you are unsure which service fits. The consultant will explain the next step based on the actual situation."
-              )}
-            </p>
-            <a href={whatsappLink("Hello Qimen Strategy, I would like to enquire about a personal advisory service. My situation is:")} target="_blank" rel="noopener noreferrer" className="mt-8 inline-flex items-center justify-center gap-3 bg-[#d6ad63] px-8 py-4 text-sm font-bold uppercase tracking-[0.12em] text-black hover:bg-[#f4dfb0]">
-              <MessageCircle size={18} />
-              {t("WhatsApp咨询", "WhatsApp Consultation")}
-            </a>
+            <h2 className="mt-6 text-3xl font-semibold text-[#f4dfb0] md:text-5xl" style={{ fontFamily: "var(--font-cormorant), var(--font-noto-serif), serif" }}>{t("先说明情况，再匹配适合的服务", "Share the Situation First, Then Match the Right Service")}</h2>
+            <p className="mx-auto mt-5 max-w-2xl text-base leading-8 text-white/65">{t("不确定适合哪一种咨询，也可以直接联系我们。顾问会根据实际情况进一步说明。", "You may contact us directly even if you are unsure which service fits. The consultant will explain the next step based on the actual situation.")}</p>
+            <a href={whatsappLink("Hello Qimen Strategy, I would like to enquire about a personal advisory service. My situation is:")} target="_blank" rel="noopener noreferrer" className="mt-8 inline-flex items-center justify-center gap-3 bg-[#d6ad63] px-8 py-4 text-sm font-bold uppercase tracking-[0.12em] text-black hover:bg-[#f4dfb0]"><MessageCircle size={18} />{t("WhatsApp咨询", "WhatsApp Consultation")}</a>
           </div>
         </section>
       </main>
-
       <Footer />
       <FloatingActions />
     </div>
