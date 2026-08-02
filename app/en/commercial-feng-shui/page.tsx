@@ -3,9 +3,9 @@ import CommercialFengShuiPage from "@/app/commercial-feng-shui/page";
 import { FixedLanguageProvider } from "@/contexts/language-context";
 
 export const metadata: Metadata = {
-  title: "Commercial Feng Shui Singapore｜Office Feng Shui Advisory",
+  title: "Commercial Feng Shui Singapore｜Office, Factory & Corporate Building",
   description:
-    "Office-focused Commercial Feng Shui advisory in Singapore for entrances, leadership positions, workstations, meeting areas, team flow and client experience.",
+    "Commercial Feng Shui for offices, factories, warehouses, industrial facilities, corporate buildings and headquarters in Singapore.",
   alternates: {
     canonical: "https://www.qmfeng.com/en/commercial-feng-shui",
     languages: {
