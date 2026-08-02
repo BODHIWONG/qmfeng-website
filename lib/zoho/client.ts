@@ -1,3 +1,5 @@
+import "server-only";
+
 type ZohoAccessToken = {
   accessToken: string;
   apiDomain: string;
@@ -27,19 +29,27 @@ type ZohoGlobalCache = typeof globalThis & {
 
 const globalCache = globalThis as ZohoGlobalCache;
 const REQUEST_TIMEOUT_MS = 8_000;
-const MAX_READ_RETRIES = 2;
+const MAX_GET_RETRIES = 2;
 
 function cleanEnv(value: string | undefined) {
   return value?.trim() || "";
+}
+
+function httpsBaseUrl(value: string, fallback: string) {
+  const endpoint = new URL(value || fallback);
+  if (endpoint.protocol !== "https:") throw new Error("ZOHO_INVALID_ENDPOINT");
+  return endpoint.origin;
 }
 
 function delay(ms: number) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-function retryDelay(response: Response, attempt: number) {
-  const retryAfter = Number(response.headers.get("retry-after") || 0);
-  return retryAfter > 0 ? Math.min(retryAfter * 1000, 8_000) : Math.min(400 * 2 ** attempt, 2_000);
+function retryDelay(response: Response, retryNumber: number) {
+  const retryAfterSeconds = Number(response.headers.get("retry-after") || 0);
+  return retryAfterSeconds > 0
+    ? Math.min(retryAfterSeconds * 1000, 8_000)
+    : Math.min(400 * 2 ** retryNumber, 2_000);
 }
 
 export function getZohoRuntimeConfig(): ZohoRuntimeConfig | null {
@@ -51,7 +61,7 @@ export function getZohoRuntimeConfig(): ZohoRuntimeConfig | null {
   if (!clientId || !clientSecret || !refreshToken || !moduleApiName) return null;
 
   return {
-    accountsUrl: cleanEnv(process.env.ZOHO_ACCOUNTS_URL) || "https://accounts.zoho.com",
+    accountsUrl: httpsBaseUrl(cleanEnv(process.env.ZOHO_ACCOUNTS_URL), "https://accounts.zoho.com"),
     clientId,
     clientSecret,
     refreshToken,
@@ -92,7 +102,10 @@ async function refreshAccessToken(config: ZohoRuntimeConfig): Promise<ZohoAccess
 
   const token: ZohoAccessToken = {
     accessToken: payload.access_token,
-    apiDomain: payload.api_domain || cleanEnv(process.env.ZOHO_API_DOMAIN) || "https://www.zohoapis.com",
+    apiDomain: httpsBaseUrl(
+      payload.api_domain || cleanEnv(process.env.ZOHO_API_DOMAIN),
+      "https://www.zohoapis.com"
+    ),
     expiresAt: Date.now() + Math.max((payload.expires_in || 3600) - 300, 60) * 1000,
   };
   globalCache.__qimenZohoAccessToken = token;
@@ -121,13 +134,15 @@ export async function zohoCrmRequest<T>(
   if (!config) throw new Error("ZOHO_NOT_CONFIGURED");
 
   const method = (init.method || "GET").toUpperCase();
-  const mayRetryTransient = method === "GET" || method === "HEAD";
+  const mayRetryTransient = method === "GET";
+  let refreshedAfter401 = false;
+  let getRetryCount = 0;
   let forceRefresh = false;
 
-  for (let attempt = 0; attempt <= MAX_READ_RETRIES; attempt += 1) {
+  while (true) {
     const token = await getAccessToken(config, forceRefresh);
     forceRefresh = false;
-    const endpoint = new URL(`/crm/${config.apiVersion}/${path.replace(/^\//, "")}`, token.apiDomain);
+    const endpoint = new URL(`/crm/${config.apiVersion}/${path.replace(/^\/+/, "")}`, token.apiDomain);
     const response = await fetch(endpoint, {
       ...init,
       headers: {
@@ -139,17 +154,20 @@ export async function zohoCrmRequest<T>(
       signal: AbortSignal.timeout(REQUEST_TIMEOUT_MS),
     });
 
-    if (response.status === 401 && attempt === 0) {
+    if (response.status === 401 && !refreshedAfter401) {
+      refreshedAfter401 = true;
       forceRefresh = true;
       continue;
     }
 
     if (
       mayRetryTransient &&
-      attempt < MAX_READ_RETRIES &&
+      getRetryCount < MAX_GET_RETRIES &&
       (response.status === 429 || response.status >= 500)
     ) {
-      await delay(retryDelay(response, attempt));
+      const waitMs = retryDelay(response, getRetryCount);
+      getRetryCount += 1;
+      await delay(waitMs);
       continue;
     }
 
@@ -167,6 +185,4 @@ export async function zohoCrmRequest<T>(
 
     return { status: response.status, data };
   }
-
-  throw new Error("ZOHO_CRM_REQUEST_FAILED:RETRY_EXHAUSTED");
 }
