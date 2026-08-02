@@ -16,6 +16,7 @@ import { qimenStrategyModernDecisionMakingPosts } from "@/lib/qimen-strategy-mod
 import { qimenWuweiStrategyPosts } from "@/lib/qimen-wuwei-strategy-post";
 import { qimenLifeCrossroadsDecisionAdvisoryPosts } from "@/lib/qimen-life-crossroads-decision-advisory-post";
 import { applyInsightPostOverrides } from "@/lib/insights-overrides";
+import { isRedirectedInsightSlug } from "@/lib/redirected-insight-slugs";
 
 const baseUrl = "https://www.qmfeng.com";
 
@@ -54,7 +55,10 @@ const allPosts = [
   ...qimenDunJiaFoundationPosts,
   ...qimenSingaporeBilingualPosts,
   ...insightPosts,
-].map((post) => applyInsightPostOverrides(post));
+]
+  .map((post) => applyInsightPostOverrides(post))
+  .filter((post) => !isRedirectedInsightSlug(post.slug))
+  .filter((post, index, posts) => posts.findIndex((item) => item.slug === post.slug) === index);
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
@@ -66,10 +70,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       "/executive-career-transition-advisory",
       "/personal-advisory",
       "/decision",
+      "/relationship-clarity-reading-singapore",
     ].includes(path);
     const isCourse = path.includes("course") || path === "/courses";
     const isPolicy = ["/privacy", "/terms", "/course-policy"].includes(path);
-    const isFrequentlyUpdated = path === "/" || path === "/courses" || path === "/qi-men-dun-jia-course-singapore";
+    const isFrequentlyUpdated = path === "/" || path === "/courses" || path === "/insights";
 
     return {
       url: `${baseUrl}${path}`,
