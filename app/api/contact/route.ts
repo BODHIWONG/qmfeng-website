@@ -77,6 +77,17 @@ function idempotencyKey(submission: ConsultationSubmission, ip: string) {
     .digest("hex")}`;
 }
 
+function httpsWebhookUrl(value: string) {
+  let endpoint: URL;
+  try {
+    endpoint = new URL(value);
+  } catch {
+    throw new Error("LEAD_DESTINATION_INVALID");
+  }
+  if (endpoint.protocol !== "https:") throw new Error("LEAD_DESTINATION_INVALID");
+  return endpoint;
+}
+
 async function submitToLegacyWebhook(submission: ConsultationSubmission, reference: string) {
   const target = process.env.QIMEN_LEADS_WEBHOOK_URL?.trim() || process.env.APPOINTMENT_WEBHOOK_URL?.trim();
   if (!target) throw new Error("LEAD_DESTINATION_NOT_CONFIGURED");
@@ -93,6 +104,8 @@ async function submitToLegacyWebhook(submission: ConsultationSubmission, referen
     source,
     pageUrl: submission.attribution.pageUrl || submission.attribution.pagePath,
     referrer: submission.attribution.referrer,
+    firstLandingPage: submission.attribution.firstLandingPage,
+    firstReferrer: submission.attribution.firstReferrer,
     utm: {
       source: submission.attribution.utmSource,
       medium: submission.attribution.utmMedium,
@@ -110,7 +123,7 @@ async function submitToLegacyWebhook(submission: ConsultationSubmission, referen
     submittedAt: new Date().toISOString(),
   };
 
-  const response = await fetch(target, {
+  const response = await fetch(httpsWebhookUrl(target), {
     method: "POST",
     headers: { "content-type": "application/json" },
     body: JSON.stringify(payload),
@@ -132,6 +145,7 @@ async function processSubmission(
       destination: "zoho_crm",
       action: result.action,
       leadSource: result.leadSource,
+      identityConflict: result.identityConflict,
     });
     return { ok: true, reference, duplicate: result.action === "update" };
   }
