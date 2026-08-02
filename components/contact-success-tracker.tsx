@@ -15,6 +15,8 @@ type StoredSuccess = {
 };
 
 const SUCCESS_SESSION_MAX_AGE_MS = 30 * 60 * 1000;
+const GTAG_WAIT_MS = 5_000;
+const GTAG_RETRY_MS = 250;
 
 export default function ContactSuccessTracker() {
   useEffect(() => {
@@ -35,13 +37,22 @@ export default function ContactSuccessTracker() {
     if (!isMatchingSubmission) return;
 
     const onceKey = `qimen-contact-conversion:${reference}`;
-    if (sessionStorage.getItem(onceKey)) return;
+    try {
+      if (sessionStorage.getItem(onceKey)) return;
+    } catch {
+      // Continue without the session guard when browser storage is unavailable.
+    }
 
     const consultationType = stored.consultationType || "Unknown";
-    if (typeof window.gtag === "function") {
+    const startedAt = Date.now();
+
+    const sendConversion = () => {
+      if (typeof window.gtag !== "function") {
+        if (Date.now() - startedAt < GTAG_WAIT_MS) return false;
+        return true;
+      }
+
       window.gtag("event", "generate_lead", {
-        currency: "SGD",
-        value: 1,
         consultation_type: consultationType,
         page_path: window.location.pathname,
         lead_reference: reference,
@@ -51,17 +62,37 @@ export default function ContactSuccessTracker() {
       if (conversionTarget) {
         window.gtag("event", "conversion", {
           send_to: conversionTarget,
-          currency: "SGD",
-          value: 1,
           transaction_id: reference,
           event_category: "contact",
           event_label: consultationType,
         });
       }
+
+      return true;
+    };
+
+    const finish = () => {
+      try {
+        sessionStorage.setItem(onceKey, "1");
+        sessionStorage.removeItem("qimen-contact-success");
+      } catch {
+        // Analytics must never break the confirmed submission experience.
+      }
+    };
+
+    if (sendConversion()) {
+      finish();
+      return;
     }
 
-    sessionStorage.setItem(onceKey, "1");
-    sessionStorage.removeItem("qimen-contact-success");
+    const timer = window.setInterval(() => {
+      if (sendConversion()) {
+        window.clearInterval(timer);
+        finish();
+      }
+    }, GTAG_RETRY_MS);
+
+    return () => window.clearInterval(timer);
   }, []);
 
   return null;
