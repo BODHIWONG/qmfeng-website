@@ -45,6 +45,7 @@ jobs:
             echo "Legacy appointment code is still present."
             exit 1
           fi
+          echo "Legacy appointment implementation and identifiers are absent."
 
       - name: TypeScript validation
         run: pnpm typecheck
