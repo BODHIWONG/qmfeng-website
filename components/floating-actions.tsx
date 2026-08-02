@@ -10,6 +10,7 @@ import {
   Sparkles,
   UserRound,
   Briefcase,
+  Building2,
   GraduationCap,
 } from "lucide-react";
 
@@ -33,6 +34,12 @@ const quickLinks = [
     labelZh: "企业战略顾问",
     labelEn: "Business Strategic Advisory",
     message: "Hi Qimen Strategy, I'd like to enquire about Business Strategic Advisory. My current business challenge is:",
+  },
+  {
+    icon: Building2,
+    labelZh: "商业风水｜办公室风水",
+    labelEn: "Commercial Feng Shui",
+    message: "Hi Qimen Strategy, I'd like to enquire about Commercial Feng Shui and Office Feng Shui. My property type, approximate size and location are:",
   },
   {
     icon: GraduationCap,
