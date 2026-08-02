@@ -1,8 +1,8 @@
 "use client";
 
-import React, { createContext, useContext, useState, useCallback } from "react";
+import React, { createContext, useCallback, useContext, useState } from "react";
 
-type Language = "zh" | "en";
+export type Language = "zh" | "en";
 
 interface LanguageContextType {
   lang: Language;
@@ -10,22 +10,47 @@ interface LanguageContextType {
   t: (zh: string, en: string) => string;
 }
 
-const LanguageContext = createContext<LanguageContextType>({
-  lang: "zh",
-  setLang: () => {},
-  t: (zh) => zh,
-});
+const LanguageContext = createContext<LanguageContextType | null>(null);
 
-export function LanguageProvider({ children }: { children: React.ReactNode }) {
+function StatefulLanguageProvider({ children }: { children: React.ReactNode }) {
   const [lang, setLang] = useState<Language>("zh");
-  
+
   const t = useCallback(
     (zh: string, en: string) => (lang === "zh" ? zh : en),
     [lang]
   );
-  
+
   return (
     <LanguageContext.Provider value={{ lang, setLang, t }}>
+      {children}
+    </LanguageContext.Provider>
+  );
+}
+
+export function LanguageProvider({ children }: { children: React.ReactNode }) {
+  const parentContext = useContext(LanguageContext);
+
+  if (parentContext) {
+    return <>{children}</>;
+  }
+
+  return <StatefulLanguageProvider>{children}</StatefulLanguageProvider>;
+}
+
+export function FixedLanguageProvider({
+  children,
+  lang,
+}: {
+  children: React.ReactNode;
+  lang: Language;
+}) {
+  const t = useCallback(
+    (zh: string, en: string) => (lang === "zh" ? zh : en),
+    [lang]
+  );
+
+  return (
+    <LanguageContext.Provider value={{ lang, setLang: () => {}, t }}>
       {children}
     </LanguageContext.Provider>
   );
