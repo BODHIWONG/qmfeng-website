@@ -3,7 +3,7 @@
 import { FormEvent, useEffect, useRef, useState } from "react";
 import { AlertCircle, Loader2, Send } from "lucide-react";
 import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { useLanguage } from "@/contexts/language-context";
 import { collectBrowserAttribution } from "@/lib/consultation/attribution";
 import {
@@ -69,7 +69,6 @@ export default function ConsultationForm({
 }: ConsultationFormProps) {
   const { t } = useLanguage();
   const pathname = usePathname();
-  const router = useRouter();
   const idempotencyKey = useRef("");
   const [form, setForm] = useState<FormState>({
     name: "",
@@ -83,6 +82,7 @@ export default function ConsultationForm({
   const [fieldErrors, setFieldErrors] = useState<FieldErrors>({});
   const [formError, setFormError] = useState("");
   const [submitting, setSubmitting] = useState(false);
+  const [confirmedReference, setConfirmedReference] = useState("");
 
   useEffect(() => {
     idempotencyKey.current = makeIdempotencyKey();
@@ -119,62 +119,100 @@ export default function ConsultationForm({
   }
 
   async function submit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    setFormError("");
-    setFieldErrors({});
+  event.preventDefault();
+  setFormError("");
+  setFieldErrors({});
 
-    const payload = {
-      ...form,
-      idempotencyKey: idempotencyKey.current || makeIdempotencyKey(),
-      attribution: collectBrowserAttribution(),
-    };
-    const validation = validateConsultationSubmission(payload);
-    if (!validation.success) {
-      setFieldErrors(translatedFieldErrors(validation.fieldErrors));
-      setFormError(t("请检查标示的项目。", "Please check the highlighted fields."));
-      return;
-    }
-
-    setSubmitting(true);
-    try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "content-type": "application/json" },
-        body: JSON.stringify(payload),
-      });
-      const result = (await response.json().catch(() => null)) as ConsultationSubmissionResponse | null;
-
-      if (!response.ok || !result?.ok || !result.reference) {
-        if (result?.fieldErrors) setFieldErrors(translatedFieldErrors(result.fieldErrors));
-        throw new Error(result?.error || "SUBMISSION_FAILED");
-      }
-
-      sessionStorage.setItem(
-        "qimen-contact-success",
-        JSON.stringify({
-          reference: result.reference,
-          consultationType: form.consultationType,
-          recordedAt: Date.now(),
-        })
-      );
-
-      const locale = pathname.startsWith("/zh") ? "zh" : pathname.startsWith("/en") ? "en" : "";
-      const successPath = locale ? `/${locale}/contact-success` : "/contact-success";
-      router.push(`${successPath}?ref=${encodeURIComponent(result.reference)}`);
-    } catch {
-      setFormError(
-        t(
-          "目前无法提交。你的资料仍保留在表格中，请稍后再试，或直接通过WhatsApp联系我们。",
-          "We could not submit your enquiry at this moment. Your information remains in the form. Please try again or contact us directly on WhatsApp."
-        )
-      );
-    } finally {
-      setSubmitting(false);
-    }
+  const payload = {
+    ...form,
+    idempotencyKey: idempotencyKey.current || makeIdempotencyKey(),
+    attribution: collectBrowserAttribution(),
+  };
+  const validation = validateConsultationSubmission(payload);
+  if (validation.success === false) {
+    setFieldErrors(translatedFieldErrors(validation.fieldErrors));
+    setFormError(t("请检查标示的项目。", "Please check the highlighted fields."));
+    return;
   }
 
+  setSubmitting(true);
+  let reference = "";
+
+  try {
+    const response = await fetch("/api/contact", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify(payload),
+    });
+    const result = (await response.json().catch(() => null)) as ConsultationSubmissionResponse | null;
+
+    if (!response.ok || !result?.ok || !result.reference) {
+      if (result?.fieldErrors) setFieldErrors(translatedFieldErrors(result.fieldErrors));
+      throw new Error("SUBMISSION_FAILED");
+    }
+
+    reference = result.reference;
+  } catch {
+    setFormError(
+      t(
+        "目前无法提交。你的资料仍保留在表格中，请稍后再试，或直接通过WhatsApp联系我们。",
+        "We could not submit your enquiry at this moment. Your information remains in the form. Please try again or contact us directly on WhatsApp."
+      )
+    );
+    setSubmitting(false);
+    return;
+  }
+
+  setConfirmedReference(reference);
+
+  try {
+    sessionStorage.setItem(
+      "qimen-contact-success",
+      JSON.stringify({
+        reference,
+        consultationType: form.consultationType,
+        recordedAt: Date.now(),
+      })
+    );
+  } catch {
+    // A confirmed submission must remain successful if browser storage is unavailable.
+  }
+
+  const locale = pathname.startsWith("/zh") ? "zh" : pathname.startsWith("/en") ? "en" : "";
+  const successPath = locale ? `/${locale}/contact-success` : "/contact-success";
+  const successUrl = `${successPath}?ref=${encodeURIComponent(reference)}`;
+
+  try {
+    window.location.assign(successUrl);
+  } catch {
+    setSubmitting(false);
+  }
+}
+
+  if (confirmedReference) {
   return (
-    <form
+    <div role="status" className={`border border-[#d6ad63]/35 bg-[#0d0b09] p-6 text-white shadow-2xl md:p-8 ${className}`}>
+      <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#d6ad63]">
+        {t("咨询申请已收到", "Enquiry Received")}
+      </p>
+      <h2 className="mt-4 text-3xl font-semibold text-[#f4dfb0]">
+        {t("谢谢，我们已经收到你的咨询。", "Thank you. We have received your enquiry.")}
+      </h2>
+      <p className="mt-4 text-sm leading-7 text-white/65">
+        {t(
+          "即使浏览器未能跳转，你的提交仍然有效。我们会在一个工作日内联系你。",
+          "Even if the browser could not redirect, your submission is confirmed. We will contact you within one business day."
+        )}
+      </p>
+      <p className="mt-5 text-sm font-semibold text-[#d6ad63]">
+        {t("参考编号", "Reference")}: {confirmedReference}
+      </p>
+    </div>
+  );
+}
+
+return (
+  <form
       onSubmit={submit}
       noValidate
       className={`border border-[#d6ad63]/35 bg-[#0d0b09] p-6 shadow-2xl md:p-8 ${className}`}
