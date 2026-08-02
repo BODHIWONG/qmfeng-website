@@ -22,6 +22,7 @@ import { qimenStrategyModernDecisionMakingPosts } from "@/lib/qimen-strategy-mod
 import { qimenWuweiStrategyPosts } from "@/lib/qimen-wuwei-strategy-post";
 import { qimenLifeCrossroadsDecisionAdvisoryPosts } from "@/lib/qimen-life-crossroads-decision-advisory-post";
 import { applyInsightPostOverrides } from "@/lib/insights-overrides";
+import { isRedirectedInsightSlug } from "@/lib/redirected-insight-slugs";
 
 const contentHubs = [
   {
@@ -70,6 +71,7 @@ const allPosts = [
   ...insightPosts,
 ]
   .map((post) => applyInsightPostOverrides(post))
+  .filter((post) => !isRedirectedInsightSlug(post.slug))
   .filter((post) => {
     const isRelationshipClarity =
       post.category.toLowerCase().includes("relationship") ||
