@@ -2,128 +2,137 @@
 
 ## Scope
 
-This integration applies to website consultation enquiries only. The existing course registration, PayNow and course-email workflow remains separate.
+This integration applies to website consultation enquiries submitted through `POST /api/contact`. Course registration remains a separate workflow. No membership-system work is included.
 
-The website does not create a new CRM pipeline or module. It writes to the existing Zoho CRM module configured through `ZOHO_CRM_MODULE_API_NAME` and uses existing field API names, layouts, ownership rules, workflow automation and lead assignment rules.
+The confirmed CRM module is the standard `Leads` module:
 
-## Server-Side Architecture
+```env
+ZOHO_CRM_MODULE_API_NAME=Leads
+```
 
-1. The browser submits the minimum enquiry fields to `POST /api/contact`.
-2. The Next.js route validates and sanitises the payload, applies a honeypot, short-term rate limiting and idempotency protection.
-3. First-touch campaign attribution is retained across internal navigation and submitted with the current form page.
-4. Lead source is derived from UTM parameters, Google click identifiers, referrer information or a supported public source value.
-5. The server searches the configured Zoho module before creating or updating a record.
-6. Zoho OAuth credentials and tokens remain server-side environment variables.
-7. When Zoho is not configured, the current consultation webhook remains available only as a temporary HTTPS POST fallback.
+The application does not create a custom module, pipeline, custom field, owner or workflow.
 
-## Zoho OAuth Setup
+## Standard Field Mapping
 
-Create or use a server-based Zoho OAuth client for the existing CRM organisation and data centre.
+The supported standard defaults are:
 
-The runtime integration requires permission to:
+- `name` → `Last_Name`
+- `phone` → `Phone`
+- `email` → `Email`
+- `message` → `Description`
+- `leadSource` → `Lead_Source`
 
-- read records in the configured existing module;
-- create records in that module;
-- update records in that module;
-- securely search CRM records using `ZohoSearch.securesearch.READ`.
+Custom mappings for consultation type, submission ID and page URL remain blank until their real Zoho API names are confirmed.
 
-Use the narrowest module-specific scopes available. Do not place the client secret or refresh token in browser-visible variables.
+New Leads may optionally receive a default Company value through Vercel configuration:
 
-Configure:
+```env
+ZOHO_CRM_STATIC_FIELDS_JSON={"Company":"Website Enquiry"}
+```
 
-- `ZOHO_ACCOUNTS_URL`
-- `ZOHO_API_DOMAIN`
-- `ZOHO_CLIENT_ID`
-- `ZOHO_CLIENT_SECRET`
-- `ZOHO_REFRESH_TOKEN`
-- `ZOHO_CRM_API_VERSION`
+This is not hard-coded. Static fields are applied only to newly created Leads and never overwrite Company on existing records.
 
-The Accounts and API domains must match the organisation's Zoho data centre. The access token is refreshed and cached by the server and is never sent to the browser.
+## Required Preview Environment Variables
 
-## Existing CRM Module and Field Mapping
+Add these to the Vercel **Preview** environment, not GitHub:
 
-Before enabling Zoho in production, confirm the existing module and field API names in Zoho CRM.
+```env
+ZOHO_ACCOUNTS_URL=https://accounts.zoho.com
+ZOHO_API_DOMAIN=https://www.zohoapis.com
+ZOHO_CLIENT_ID=
+ZOHO_CLIENT_SECRET=
+ZOHO_REFRESH_TOKEN=
+ZOHO_CRM_API_VERSION=v8
+ZOHO_CRM_MODULE_API_NAME=Leads
+ZOHO_CRM_FIELD_MAP_JSON={"name":"Last_Name","phone":"Phone","email":"Email","message":"Description","leadSource":"Lead_Source","consultationType":"","submissionId":"","pageUrl":""}
+ZOHO_CRM_LEAD_SOURCE_MAP_JSON={"Google Ads":"Google Ads","Organic Search":"Organic Search","Website":"Website","Facebook":"Facebook","Instagram":"Instagram","TikTok":"TikTok","LinkedIn":"LinkedIn","Referral":"Referral","Walk-in":"Walk-in","Existing Client":"Existing Client","Other":"Other"}
+ZOHO_CRM_STATIC_FIELDS_JSON={}
+```
 
-Configure:
+Optional Preview variables:
 
-- `ZOHO_CRM_MODULE_API_NAME`
-- `ZOHO_CRM_FIELD_MAP_JSON`
-- `ZOHO_CRM_STATIC_FIELDS_JSON`
+```env
+ZOHO_CRM_LAYOUT_ID=
+ZOHO_CRM_ASSIGNMENT_RULE_ID=
+ZOHO_CRM_TRIGGERS_JSON=
+NEXT_PUBLIC_GOOGLE_ADS_CONTACT_CONVERSION_SEND_TO=
+QIMEN_LEADS_WEBHOOK_URL=
+APPOINTMENT_WEBHOOK_URL=
+```
 
-The standard field-map keys used by the website are:
+`QIMEN_LEADS_WEBHOOK_URL` and `APPOINTMENT_WEBHOOK_URL` are temporary fallbacks only. A configured fallback must use HTTPS and accept JSON POST requests.
 
-- `name`
-- `phone`
-- `email`
-- `message`
-- `leadSource`
-- `consultationType`
-- `submissionId`
-- `pageUrl`
+## OAuth Scopes
 
-Only `name`, `phone`, `email` and `message` have standard defaults. Optional custom fields are omitted when their mapping is blank.
+Use a server-based Zoho OAuth client with the narrowest required scopes:
 
-If the existing module has mandatory fields that are not appropriate to collect from a first enquiry, provide safe existing CRM defaults through `ZOHO_CRM_STATIC_FIELDS_JSON`. Confirm those defaults with the CRM owner before production use. Static defaults, layout, name, phone, email and original lead source are applied only when a new record is created.
+```text
+ZohoCRM.modules.leads.READ
+ZohoCRM.modules.leads.CREATE
+ZohoCRM.modules.leads.UPDATE
+ZohoSearch.securesearch.READ
+```
 
-## Lead Source
+The OAuth user must also have permission to read, create and update Leads in the target CRM organisation. Accounts and API domains must match the organisation's Zoho data centre.
 
-The website supports:
+Never add the client secret or refresh token to `NEXT_PUBLIC_*`, source code, GitHub Actions variables, PR descriptions or repository files.
 
-- Google Ads
-- Organic Search
-- Website
-- Facebook
-- Instagram
-- TikTok
-- LinkedIn
-- Referral
-- Walk-in
-- Existing Client
-- Other
+## Request and Credential Security
 
-Configure `ZOHO_CRM_LEAD_SOURCE_MAP_JSON` so each website value maps to the exact existing Zoho picklist value. Public website parameters cannot assign the privileged `Walk-in` or `Existing Client` values; those should be confirmed by CRM staff or a future signed internal link.
+- Zoho credentials are imported through server-only modules.
+- OAuth and CRM requests use an eight-second timeout.
+- A 401 response causes one access-token refresh.
+- Only safe GET searches retry on 429 or transient 5xx responses.
+- POST and PUT writes are not automatically replayed on transient failures.
+- Consultation and course fallback webhooks use HTTPS JSON POST only.
+- Customer names, phone numbers, email addresses and messages are not written to application logs or URL query strings.
+- Browser-facing responses never contain Zoho record IDs.
 
-Google click identifiers and UTM parameters are retained across internal navigation so a user who lands on a service page and later submits on `/contact` does not automatically lose Google Ads attribution.
+## Duplicate Policy
 
-## Ownership, Workflow and Assignment
+The integration uses a conservative identity policy:
 
-The integration does not hard-code an owner and does not create a duplicate pipeline.
+1. If email and phone resolve to the same Lead, append the new enquiry to that Lead.
+2. If only one identifier matches and the other submitted identifier conflicts with a non-empty CRM value, do not update that Lead.
+3. If email and phone resolve to different Leads, do not auto-merge.
+4. Ambiguous matches create a separate Lead whose Description states that manual identity review is required.
+5. Existing name, phone, email, Company and original Lead Source are not overwritten.
 
-To use an existing lead assignment rule, configure `ZOHO_CRM_ASSIGNMENT_RULE_ID`.
-To use a specific existing layout, configure `ZOHO_CRM_LAYOUT_ID`.
+This approach prioritises confidentiality over automatic merging. It can still create duplicates. CRM staff must manually review conflict-marked Leads.
 
-Zoho automation triggers are not hard-coded. Leave `ZOHO_CRM_TRIGGERS_JSON` unset to use the current Zoho API default behaviour, or configure a reviewed JSON array such as `["workflow"]` only after confirming the intended automation with the CRM owner.
+## Attribution
 
-## Duplicate Handling
+The browser stores first-touch attribution on initial page load and carries it through internal navigation. The submitted record includes:
 
-The website prevents rapid duplicate browser submissions through an idempotency key and an in-flight request guard. This protection is instance-local and is not a substitute for a Zoho unique/external-ID field or durable cross-instance idempotency.
+- UTM source, medium, campaign, term and content;
+- `gclid`, `gbraid` and `wbraid`;
+- first referrer;
+- first landing page;
+- current submission page and referrer.
 
-Before production use, define the CRM identity policy for conflicting phone and email matches. Shared phone numbers, shared inboxes and recycled numbers must not cause confidential enquiry text to be appended to the wrong person. The preferred future design is an append-only Zoho Note or Enquiry record with a unique website submission reference.
+Public URL parameters cannot assign `Walk-in` or `Existing Client`.
 
-## Request Resilience
+Attribution storage is best-effort. Browsers that block local storage may not preserve attribution across multiple pages.
 
-Zoho OAuth and CRM calls use strict request timeouts. Expired access tokens are refreshed once after a 401 response. Read-only searches use limited retry and backoff for temporary 429 and server errors. Write requests are not automatically replayed after ambiguous transient failures because doing so could create duplicate CRM records.
+## Preview Test Procedure
 
-## Production Rollout
+1. Configure Preview environment variables without placing secrets in GitHub.
+2. Deploy PR #44 to a Vercel Preview.
+3. Submit a labelled new Lead using a unique email and phone.
+4. Confirm standard fields, optional Company default, Lead Source and Description.
+5. Repeat with the same email and phone and confirm the same Lead is updated.
+6. Test matching email with a conflicting phone and confirm a separate manual-review Lead.
+7. Test matching phone with a conflicting email and confirm a separate manual-review Lead.
+8. Test email and phone that resolve to different Leads and confirm no auto-merge.
+9. Test a Google Ads-style landing URL and confirm first-touch attribution survives navigation to Contact.
+10. Verify success-page analytics with browser developer tools and Google Tag Assistant.
 
-1. Confirm the existing Zoho module, mandatory fields and field API names.
-2. Confirm exact lead-source picklist values.
-3. Confirm the existing layout and assignment rule IDs, when applicable.
-4. Confirm whether explicit automation triggers are required.
-5. Create the OAuth refresh token with module scopes and `ZohoSearch.securesearch.READ`.
-6. Add all secrets to Vercel Preview server-side environment variables.
-7. Add `NEXT_PUBLIC_GOOGLE_ADS_CONTACT_CONVERSION_SEND_TO` only after the form conversion action exists in Google Ads.
-8. Deploy to Preview and submit clearly labelled test enquiries.
-9. Verify create, duplicate behavior, assignment, workflow execution, owner, layout and field values.
-10. Test conflicting phone/email records and repeat enquiries before Production.
-11. Promote the same reviewed environment mapping to Production.
-12. Remove the webhook fallback only after Zoho delivery has been stable and monitored.
+## Known Limitations
 
-## Security Notes
-
-- Never commit real OAuth credentials or tokens.
-- Never prefix Zoho secrets with `NEXT_PUBLIC_`.
-- Do not log names, phone numbers, email addresses or messages.
-- Do not transmit personal or payment information in URL query strings.
-- Rotate the refresh token if it is exposed.
-- Keep Preview and Production credentials separate where possible.
+- No real Zoho create/update test is performed by CI.
+- Zoho search indexing can be delayed.
+- Rate limiting and short-term idempotency are instance-local.
+- Conflict handling may create duplicate Leads for manual review.
+- No custom-field API names are assumed.
+- Google Ads conversion delivery requires a real Preview and Tag Assistant verification.
+- The fallback webhook remains temporary and should be removed after stable native Zoho operation.
