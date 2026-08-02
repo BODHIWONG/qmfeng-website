@@ -132,7 +132,7 @@ function normaliseBrandText(value: string) {
     .replace(/启明大师黄启明/g, "黄启明")
     .replace(/黄启明大师/g, "黄启明")
     .replace(/Master Huang Qiming/gi, "Huang Qiming")
-    .replace(/Master Qiming/gi, "Huang Qiming")
+    .replace(/Huang Qiming/gi, "Huang Qiming")
     .replace(/启明大师/g, "黄启明")
     .replace(/QiMing Feng Shui/gi, "Qimen Strategy")
     .replace(/Qiming Feng Shui/gi, "Qimen Strategy")

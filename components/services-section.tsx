@@ -308,7 +308,7 @@ export default function ServicesSection() {
         >
           {t(
             "所有咨询均为预约制，启明大师会根据您的实际情况，量身定制最适合的服务方案。",
-            "All consultations are by appointment. Master Qiming will tailor the most suitable service plan based on your specific situation."
+            "All consultations are by appointment. Huang Qiming will tailor the most suitable service plan based on your specific situation."
           )}
         </motion.p>
       </div>

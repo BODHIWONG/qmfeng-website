@@ -52,11 +52,11 @@ const qiMenDunJiaSingaporeContent = {
     "People who want clearer direction, timing, and risk awareness at an important stage."
   ],
   approachTitleZh: "启明大师如何运用奇门遁甲？",
-  approachTitleEn: "How does Master Qiming use Qi Men Dun Jia?",
+  approachTitleEn: "How does Huang Qiming use Qi Men Dun Jia?",
   approachIntroZh:
     "奇门遁甲不是一句简单的吉凶判断，而是一套关于时间、空间、方向、人物关系与行动节奏的综合分析方法。启明大师会结合你的现实问题、所在空间、决策节点与个人命理，判断当下应进、应守、应避，还是应该重新布局。",
   approachIntroEn:
-    "Qi Men Dun Jia is not a simple yes-or-no prediction. It is a structured method for reading timing, direction, spatial influence, people dynamics, and action rhythm. Master Qiming combines your real situation, space, decision point, and destiny pattern to assess whether to move forward, hold, avoid, or realign.",
+    "Qi Men Dun Jia is not a simple yes-or-no prediction. It is a structured method for reading timing, direction, spatial influence, people dynamics, and action rhythm. Huang Qiming combines your real situation, space, decision point, and destiny pattern to assess whether to move forward, hold, avoid, or realign.",
   steps: [
     {
       titleZh: "奇门时机判断",
@@ -90,7 +90,7 @@ const qiMenDunJiaSingaporeContent = {
       qZh: "奇门遁甲和风水有什么不同？",
       qEn: "What is the difference between Qi Men Dun Jia and Feng Shui?",
       aZh: "奇门遁甲更偏向时机、方向、决策与局势判断；风水更偏向空间格局、气场与环境影响。启明大师通常会结合两者一起看。",
-      aEn: "Qi Men Dun Jia focuses more on timing, direction, decisions, and situational analysis, while Feng Shui focuses more on spatial layout, energy flow, and environmental influence. Master Qiming often combines both."
+      aEn: "Qi Men Dun Jia focuses more on timing, direction, decisions, and situational analysis, while Feng Shui focuses more on spatial layout, energy flow, and environmental influence. Huang Qiming often combines both."
     },
     {
       qZh: "奇门遁甲可以看事业和财运吗？",
@@ -124,7 +124,7 @@ const qiMenDunJiaSingaporeContent = {
   ctaBodyEn:
     "Many problems are not caused by a lack of effort, but by misalignment in direction, timing, space, and energy. Before taking action, Qi Men Dun Jia and Feng Shui assessment can help reveal the key points and reduce unnecessary loss.",
   waTextZh: "你好启明大师，我想咨询新加坡奇门遁甲。",
-  waTextEn: "Hello Master Qiming, I would like to consult about Qi Men Dun Jia in Singapore."
+  waTextEn: "Hello Huang Qiming, I would like to consult about Qi Men Dun Jia in Singapore."
 };
 
 export const metadata: Metadata = {

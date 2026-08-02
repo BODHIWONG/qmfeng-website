@@ -7,7 +7,7 @@ import Footer from "@/components/footer";
 import { ArrowLeft, Calendar, Clock, User, Moon, Zap } from "lucide-react";
 import Link from "next/link";
 
-const WA_LINK = "https://wa.me/6589418791?text=Hi%20Master%20Huang%2C%20I%20read%20your%20article%20on%20Sleep%20and%20Energy%20Fields%20and%20would%20like%20to%20book%20a%20consultation.";
+const WA_LINK = "https://wa.me/6589593499?text=Hi%20Master%20Huang%2C%20I%20read%20your%20article%20on%20Sleep%20and%20Energy%20Fields%20and%20would%20like%20to%20book%20a%20consultation.";
 
 export default function SleepEnergyFieldArticle() {
   return (

@@ -6,7 +6,7 @@ import Footer from "@/components/footer";
 import FloatingActions from "@/components/floating-actions";
 
 const WA_LINK =
-  "https://wa.me/6589418791?text=Hello%20Qimen%20Strategy%2C%20I%20would%20like%20to%20book%20a%20business%20decision%20advisory%20session%20in%20Singapore.";
+  "https://wa.me/6589593499?text=Hello%20Qimen%20Strategy%2C%20I%20would%20like%20to%20book%20a%20business%20decision%20advisory%20session%20in%20Singapore.";
 
 export const metadata: Metadata = {
   title: "Business Decision Consultant Singapore｜Qimen Strategy｜企业战略决策顾问",
