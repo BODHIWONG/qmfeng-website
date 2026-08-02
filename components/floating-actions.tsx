@@ -37,9 +37,9 @@ const quickLinks = [
   },
   {
     icon: Building2,
-    labelZh: "商业风水｜办公室风水",
+    labelZh: "商业风水｜办公室·工厂·办公大楼",
     labelEn: "Commercial Feng Shui",
-    message: "Hi Qimen Strategy, I'd like to enquire about Commercial Feng Shui and Office Feng Shui. My property type, approximate size and location are:",
+    message: "Hi Qimen Strategy, I'd like to enquire about Commercial Feng Shui. Property type: Office / Factory / Warehouse / Corporate Building. Approximate size or floors: ____. Location: ____. Industry: ____. My main concern is: ____. ",
   },
   {
     icon: GraduationCap,

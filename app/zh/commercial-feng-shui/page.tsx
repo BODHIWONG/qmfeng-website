@@ -3,9 +3,9 @@ import CommercialFengShuiPage from "@/app/commercial-feng-shui/page";
 import { FixedLanguageProvider } from "@/contexts/language-context";
 
 export const metadata: Metadata = {
-  title: "新加坡商业风水｜办公室风水布局与企业空间咨询",
+  title: "新加坡商业风水｜办公室、工厂与企业办公大楼风水",
   description:
-    "新加坡商业风水与办公室风水咨询，重点评估入口、老板办公室、员工工位、会议区、团队动线与客户接待空间。",
+    "新加坡商业风水服务，覆盖办公室、工厂、厂房、仓库、工业空间、企业办公大楼与总部，重点结合管理、团队、生产物流、客户接待与企业空间布局。",
   alternates: {
     canonical: "https://www.qmfeng.com/zh/commercial-feng-shui",
     languages: {

@@ -3,26 +3,33 @@ import { LanguageProvider } from "@/contexts/language-context";
 import CommercialFengShuiContent from "@/components/commercial-feng-shui-content";
 
 export const metadata: Metadata = {
-  title: "Commercial Feng Shui Singapore｜Office Feng Shui Advisory",
+  title: "Commercial Feng Shui Singapore｜Office, Factory & Corporate Building",
   description:
-    "Commercial Feng Shui and Office Feng Shui advisory in Singapore, focused on office entrance, leadership position, workstations, meeting areas, team flow and client experience.",
+    "Commercial Feng Shui in Singapore for offices, factories, industrial facilities, warehouses, corporate buildings and headquarters. Reviews leadership positions, team flow, production, logistics, client areas and business-space alignment.",
   keywords: [
     "Commercial Feng Shui Singapore",
     "Office Feng Shui Singapore",
+    "Factory Feng Shui Singapore",
+    "Industrial Feng Shui Singapore",
+    "Warehouse Feng Shui Singapore",
+    "Corporate Building Feng Shui Singapore",
+    "Headquarters Feng Shui Singapore",
     "Business Feng Shui Singapore",
-    "Office layout Feng Shui",
     "商业风水新加坡",
     "办公室风水新加坡",
-    "企业风水布局",
+    "工厂风水新加坡",
+    "厂房风水",
+    "企业办公大楼风水",
+    "企业总部风水",
     "启明遁甲商业风水",
   ],
   alternates: {
     canonical: "https://www.qmfeng.com/commercial-feng-shui",
   },
   openGraph: {
-    title: "Commercial Feng Shui Singapore | Office Feng Shui Advisory",
+    title: "Commercial Feng Shui Singapore | Office, Factory & Corporate Building",
     description:
-      "Office-focused Commercial Feng Shui for business owners, leadership teams and commercial spaces in Singapore.",
+      "Commercial Feng Shui for offices, factories, industrial facilities, corporate buildings and headquarters in Singapore.",
     url: "https://www.qmfeng.com/commercial-feng-shui",
     type: "website",
   },
@@ -31,8 +38,8 @@ export const metadata: Metadata = {
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "Commercial Feng Shui and Office Feng Shui Advisory",
-  alternateName: "商业风水与办公室风水咨询",
+  name: "Commercial Feng Shui Advisory",
+  alternateName: "商业风水咨询",
   provider: {
     "@id": "https://www.qmfeng.com/#organization",
   },
@@ -41,10 +48,14 @@ const serviceSchema = {
   serviceType: [
     "Commercial Feng Shui",
     "Office Feng Shui",
+    "Factory and Industrial Feng Shui",
+    "Warehouse Feng Shui",
+    "Corporate Building Feng Shui",
+    "Headquarters Feng Shui",
     "Business Space Alignment",
   ],
   description:
-    "Commercial Feng Shui advisory focused on office layout, leadership positions, workstations, meeting areas, client flow and business-space alignment.",
+    "Commercial Feng Shui advisory for offices, factories, warehouses, industrial facilities, corporate buildings and headquarters, focused on management, team flow, production, logistics, client experience and practical business-space alignment.",
 };
 
 export default function CommercialFengShuiPage() {
