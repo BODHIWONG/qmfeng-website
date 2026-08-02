@@ -1,0 +1,31 @@
+name: Export PR44 Source
+
+on:
+  push:
+    branches:
+      - temp/export-pr44-source-6a62cee
+
+permissions:
+  contents: read
+
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout exact PR source commit
+        uses: actions/checkout@v4
+        with:
+          ref: 6a62cee2edbde40227d77a4b6cb30c34bef93fec
+
+      - name: Package source
+        run: |
+          zip -r qmfeng-website-pr44-6a62cee.zip . -x '.git/*'
+
+      - name: Upload source archive
+        uses: actions/upload-artifact@v4
+        with:
+          name: qmfeng-website-pr44-6a62cee
+          path: qmfeng-website-pr44-6a62cee.zip
+          retention-days: 1
+          if-no-files-found: error
