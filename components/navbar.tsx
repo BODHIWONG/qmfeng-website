@@ -7,8 +7,6 @@ import { usePathname, useRouter } from "next/navigation";
 import { useLanguage } from "@/contexts/language-context";
 
 const LOGO_URL = "/logo-qimen-strategy.jpg";
-const CONSULTATION_WHATSAPP =
-  "https://wa.me/6589593499?text=Hi%20Qimen%20Strategy%2C%20I%27d%20like%20to%20ask%20about%20a%20consultation.%20My%20current%20situation%20is%3A";
 const COURSE_REGISTRATION_LINK = "/course-registration?course=qimen-foundation&batch=2026-09-19";
 
 const LOCALIZED_PATHS = new Set([
@@ -21,6 +19,8 @@ const LOCALIZED_PATHS = new Set([
   "/courses",
   "/insights",
   "/founder",
+  "/contact",
+  "/contact-success",
 ]);
 
 const businessLinks = [
@@ -241,14 +241,12 @@ export default function Navbar() {
             {lang === "zh" ? "EN" : "中文"}
           </button>
 
-          <a
-            href={CONSULTATION_WHATSAPP}
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href={localizeHref("/contact")}
             className="bg-yellow-600 px-4 py-2.5 text-[0.78rem] font-semibold text-black transition-all hover:bg-yellow-500"
           >
-            {lang === "zh" ? "WhatsApp咨询" : "WhatsApp Consultation"}
-          </a>
+            {lang === "zh" ? "提交咨询" : "Submit Enquiry"}
+          </Link>
         </div>
 
         <div className="flex items-center gap-3 xl:hidden">
@@ -306,15 +304,13 @@ export default function Navbar() {
               {lang === "zh" ? link.zh : link.en}
             </Link>
           ))}
-          <a
-            href={CONSULTATION_WHATSAPP}
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href={localizeHref("/contact")}
             className="mt-5 block bg-[#d6ad63] px-5 py-3 text-center font-semibold text-black"
             onClick={() => setIsOpen(false)}
           >
-            {lang === "zh" ? "WhatsApp咨询" : "WhatsApp Consultation"}
-          </a>
+            {lang === "zh" ? "提交咨询" : "Submit Enquiry"}
+          </Link>
         </div>
       )}
     </nav>

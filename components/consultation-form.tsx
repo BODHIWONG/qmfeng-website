@@ -1,148 +1,348 @@
 "use client";
 
+import { FormEvent, useEffect, useRef, useState } from "react";
+import { AlertCircle, Loader2, Send } from "lucide-react";
+import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
 import { useLanguage } from "@/contexts/language-context";
+import { collectBrowserAttribution } from "@/lib/consultation/attribution";
+import {
+  CONSULTATION_TYPES,
+  type ConsultationSubmissionResponse,
+  type ConsultationType,
+} from "@/lib/consultation/types";
+import { validateConsultationSubmission } from "@/lib/consultation/validation";
 
-const FORM_ENDPOINT = "https://formsubmit.co/info@qmfeng.com";
-const THANK_YOU_URL = "https://www.qmfeng.com/thank-you";
-const WA_LINK = "https://wa.me/6589418791";
+type FieldName = "name" | "phone" | "email" | "consultationType" | "message" | "consent";
+type FieldErrors = Partial<Record<FieldName, string>>;
 
-const consultationTypes = [
-  { zh: "事业财富", en: "Career & Wealth" },
-  { zh: "情感疗愈", en: "Relationship Healing" },
-  { zh: "战略决策", en: "Strategic Decision" },
-  { zh: "空间能量净化", en: "Space Energy Purification" },
-  { zh: "八字命理", en: "Bazi Analysis" },
-  { zh: "其他", en: "Others" },
-];
+type FormState = {
+  name: string;
+  phone: string;
+  email: string;
+  consultationType: ConsultationType | "";
+  message: string;
+  consent: boolean;
+  website: string;
+};
 
-export default function ConsultationForm() {
-  const { lang, t } = useLanguage();
+type ConsultationFormProps = {
+  defaultConsultationType?: ConsultationType;
+  className?: string;
+};
+
+const TYPE_LABELS: Record<ConsultationType, { zh: string; en: string }> = {
+  "Business Advisory": { zh: "企业战略顾问", en: "Business Advisory" },
+  "Personal Decision": { zh: "个人重大决策", en: "Personal Decision" },
+  Relationship: { zh: "感情与婚姻", en: "Relationship" },
+  Career: { zh: "事业与职业", en: "Career" },
+  "Qi Men Dun Jia": { zh: "奇门遁甲咨询", en: "Qi Men Dun Jia" },
+  Bazi: { zh: "八字命理分析", en: "Bazi" },
+  "Feng Shui": { zh: "风水咨询", en: "Feng Shui" },
+  Course: { zh: "课程咨询", en: "Course" },
+  Other: { zh: "其他", en: "Other" },
+};
+
+const QUERY_TYPE_MAP: Record<string, ConsultationType> = {
+  business: "Business Advisory",
+  "business-advisory": "Business Advisory",
+  personal: "Personal Decision",
+  "personal-decision": "Personal Decision",
+  relationship: "Relationship",
+  career: "Career",
+  qimen: "Qi Men Dun Jia",
+  "qi-men-dun-jia": "Qi Men Dun Jia",
+  bazi: "Bazi",
+  "feng-shui": "Feng Shui",
+  course: "Course",
+  other: "Other",
+};
+
+function makeIdempotencyKey() {
+  if (typeof globalThis.crypto?.randomUUID === "function") return globalThis.crypto.randomUUID();
+  return `${Date.now()}-${Math.random().toString(36).slice(2)}`;
+}
+
+export default function ConsultationForm({
+  defaultConsultationType,
+  className = "",
+}: ConsultationFormProps) {
+  const { t } = useLanguage();
+  const pathname = usePathname();
+  const router = useRouter();
+  const idempotencyKey = useRef("");
+  const [form, setForm] = useState<FormState>({
+    name: "",
+    phone: "",
+    email: "",
+    consultationType: defaultConsultationType || "",
+    message: "",
+    consent: false,
+    website: "",
+  });
+  const [fieldErrors, setFieldErrors] = useState<FieldErrors>({});
+  const [formError, setFormError] = useState("");
+  const [submitting, setSubmitting] = useState(false);
+
+  useEffect(() => {
+    idempotencyKey.current = makeIdempotencyKey();
+    const params = new URLSearchParams(window.location.search);
+    const requested = (params.get("type") || params.get("consultation") || "").trim();
+    const exact = CONSULTATION_TYPES.find((item) => item.toLowerCase() === requested.toLowerCase());
+    const mapped = QUERY_TYPE_MAP[requested.toLowerCase()];
+    const selected = exact || mapped;
+    if (selected) setForm((current) => ({ ...current, consultationType: selected }));
+  }, []);
+
+  const inputClass =
+    "w-full border bg-white/8 px-4 py-3.5 text-white outline-none transition placeholder:text-white/30 focus:border-[#d6ad63]";
+  const borderClass = (field: FieldName) =>
+    fieldErrors[field] ? "border-red-400/70" : "border-white/15";
+
+  function update<K extends keyof FormState>(key: K, value: FormState[K]) {
+    setForm((current) => ({ ...current, [key]: value }));
+    if (key in fieldErrors) {
+      setFieldErrors((current) => ({ ...current, [key]: undefined }));
+    }
+    if (formError) setFormError("");
+  }
+
+  function translatedFieldErrors(errors: FieldErrors): FieldErrors {
+    const translated: FieldErrors = {};
+    if (errors.name) translated.name = t("请填写姓名。", "Please enter your name.");
+    if (errors.phone) translated.phone = t("请输入有效的电话号码，并包括国家代码。", "Please enter a valid phone number, including the country code.");
+    if (errors.email) translated.email = t("请输入有效的电邮地址。", "Please enter a valid email address.");
+    if (errors.consultationType) translated.consultationType = t("请选择咨询类型。", "Please select a consultation type.");
+    if (errors.message) translated.message = t("请简要说明你的情况，至少填写10个字。", "Please provide a little more detail about your enquiry.");
+    if (errors.consent) translated.consent = t("请确认个人资料使用同意。", "Please confirm the privacy consent.");
+    return translated;
+  }
+
+  async function submit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    setFormError("");
+    setFieldErrors({});
+
+    const payload = {
+      ...form,
+      idempotencyKey: idempotencyKey.current || makeIdempotencyKey(),
+      attribution: collectBrowserAttribution(),
+    };
+    const validation = validateConsultationSubmission(payload);
+    if (!validation.success) {
+      setFieldErrors(translatedFieldErrors(validation.fieldErrors));
+      setFormError(t("请检查标示的项目。", "Please check the highlighted fields."));
+      return;
+    }
+
+    setSubmitting(true);
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      const result = (await response.json().catch(() => null)) as ConsultationSubmissionResponse | null;
+
+      if (!response.ok || !result?.ok || !result.reference) {
+        if (result?.fieldErrors) setFieldErrors(translatedFieldErrors(result.fieldErrors));
+        throw new Error(result?.error || "SUBMISSION_FAILED");
+      }
+
+      sessionStorage.setItem(
+        "qimen-contact-success",
+        JSON.stringify({
+          reference: result.reference,
+          consultationType: form.consultationType,
+          recordedAt: Date.now(),
+        })
+      );
+
+      const locale = pathname.startsWith("/zh") ? "zh" : pathname.startsWith("/en") ? "en" : "";
+      const successPath = locale ? `/${locale}/contact-success` : "/contact-success";
+      router.push(`${successPath}?ref=${encodeURIComponent(result.reference)}`);
+    } catch {
+      setFormError(
+        t(
+          "目前无法提交。你的资料仍保留在表格中，请稍后再试，或直接通过WhatsApp联系我们。",
+          "We could not submit your enquiry at this moment. Your information remains in the form. Please try again or contact us directly on WhatsApp."
+        )
+      );
+    } finally {
+      setSubmitting(false);
+    }
+  }
 
   return (
-    <section className="border border-[oklch(0.24_0.025_60)] bg-[oklch(0.12_0.018_60)] p-6 md:p-8">
-      <div className="mb-6 max-w-2xl">
-        <p
-          className="mb-3 text-[0.62rem] font-bold uppercase tracking-[0.24em] text-[oklch(0.62_0.09_68)]"
-          style={{ fontFamily: "var(--font-lato), sans-serif" }}
-        >
-          {t("轻量预约", "Quick Consultation Request")}
-        </p>
+    <form
+      onSubmit={submit}
+      noValidate
+      className={`border border-[#d6ad63]/35 bg-[#0d0b09] p-6 shadow-2xl md:p-8 ${className}`}
+    >
+      <input
+        name="website"
+        value={form.website}
+        onChange={(event) => update("website", event.target.value)}
+        type="text"
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+        className="hidden"
+      />
 
-        <h2
-          className="mb-3 text-2xl font-bold leading-tight text-[oklch(0.95_0.01_75)] md:text-3xl"
-          style={{ fontFamily: "var(--font-cormorant), var(--font-noto-serif), serif" }}
-        >
-          {t("先留下问题，我们协助判断", "Leave Your Question for Initial Review")}
-        </h2>
+      <div className="grid gap-5 sm:grid-cols-2">
+        <label className="block">
+          <span className="mb-2 block text-sm font-semibold text-white/82">{t("姓名 *", "Name *")}</span>
+          <input
+            name="name"
+            value={form.name}
+            onChange={(event) => update("name", event.target.value)}
+            autoComplete="name"
+            maxLength={120}
+            aria-invalid={Boolean(fieldErrors.name)}
+            aria-describedby={fieldErrors.name ? "contact-name-error" : undefined}
+            className={`${inputClass} ${borderClass("name")}`}
+            placeholder={t("你的姓名", "Your name")}
+          />
+          {fieldErrors.name && <p id="contact-name-error" className="mt-2 text-xs text-red-200">{fieldErrors.name}</p>}
+        </label>
 
-        <p
-          className="text-sm leading-7 text-[oklch(0.66_0.018_70)]"
-          style={{ fontFamily: "var(--font-lato), var(--font-noto-sans), sans-serif" }}
-        >
-          {t(
-            "不方便马上 WhatsApp 的客户，可以先提交姓名、联系方式与咨询方向。我们会根据您的问题，协助判断适合哪一种咨询。",
-            "If you are not ready to message on WhatsApp immediately, leave your name, contact and consultation direction. We will review the situation and advise the suitable consultation path."
-          )}
-        </p>
+        <label className="block">
+          <span className="mb-2 block text-sm font-semibold text-white/82">{t("电话 / WhatsApp *", "Phone / WhatsApp *")}</span>
+          <input
+            name="phone"
+            type="tel"
+            value={form.phone}
+            onChange={(event) => update("phone", event.target.value)}
+            autoComplete="tel"
+            inputMode="tel"
+            maxLength={40}
+            aria-invalid={Boolean(fieldErrors.phone)}
+            aria-describedby={fieldErrors.phone ? "contact-phone-error" : undefined}
+            className={`${inputClass} ${borderClass("phone")}`}
+            placeholder={t("例如：+65 8959 3499", "e.g. +65 8959 3499")}
+          />
+          {fieldErrors.phone && <p id="contact-phone-error" className="mt-2 text-xs text-red-200">{fieldErrors.phone}</p>}
+        </label>
       </div>
 
-      <form action={FORM_ENDPOINT} method="POST" className="grid gap-4 md:grid-cols-2">
-        <input type="hidden" name="_subject" value="New consultation lead from qmfeng.com" />
-        <input type="hidden" name="_captcha" value="false" />
-        <input type="hidden" name="_template" value="table" />
-        <input type="hidden" name="_next" value={THANK_YOU_URL} />
-        <input type="text" name="_honey" className="hidden" tabIndex={-1} autoComplete="off" />
+      <label className="mt-5 block">
+        <span className="mb-2 block text-sm font-semibold text-white/82">Email *</span>
+        <input
+          name="email"
+          type="email"
+          value={form.email}
+          onChange={(event) => update("email", event.target.value)}
+          autoComplete="email"
+          inputMode="email"
+          maxLength={254}
+          aria-invalid={Boolean(fieldErrors.email)}
+          aria-describedby={fieldErrors.email ? "contact-email-error" : undefined}
+          className={`${inputClass} ${borderClass("email")}`}
+          placeholder="name@example.com"
+        />
+        {fieldErrors.email && <p id="contact-email-error" className="mt-2 text-xs text-red-200">{fieldErrors.email}</p>}
+      </label>
 
-        <label className="block">
-          <span className="mb-2 block text-xs font-semibold uppercase tracking-[0.14em] text-[oklch(0.55_0.02_70)]">
-            {t("姓名", "Name")}
-          </span>
-          <input
-            required
-            name="name"
-            className="w-full border border-[oklch(0.25_0.02_60)] bg-black/25 px-4 py-3 text-sm text-white outline-none transition-colors placeholder:text-[oklch(0.38_0.015_70)] focus:border-[oklch(0.62_0.09_68)]"
-            placeholder={t("请输入姓名", "Your name")}
-          />
-        </label>
-
-        <label className="block">
-          <span className="mb-2 block text-xs font-semibold uppercase tracking-[0.14em] text-[oklch(0.55_0.02_70)]">
-            {t("WhatsApp / 电话", "WhatsApp / Phone")}
-          </span>
-          <input
-            required
-            name="contact"
-            className="w-full border border-[oklch(0.25_0.02_60)] bg-black/25 px-4 py-3 text-sm text-white outline-none transition-colors placeholder:text-[oklch(0.38_0.015_70)] focus:border-[oklch(0.62_0.09_68)]"
-            placeholder={t("例如 +65 9123 4567", "e.g. +65 9123 4567")}
-          />
-        </label>
-
-        <label className="block">
-          <span className="mb-2 block text-xs font-semibold uppercase tracking-[0.14em] text-[oklch(0.55_0.02_70)]">
-            {t("咨询方向", "Consultation Type")}
-          </span>
-          <select
-            required
-            name="consultation_type"
-            defaultValue=""
-            className="w-full border border-[oklch(0.25_0.02_60)] bg-black/25 px-4 py-3 text-sm text-white outline-none transition-colors focus:border-[oklch(0.62_0.09_68)]"
-          >
-            <option value="" disabled>
-              {t("请选择方向", "Select a direction")}
+      <label className="mt-5 block">
+        <span className="mb-2 block text-sm font-semibold text-white/82">{t("咨询类型 *", "Consultation Type *")}</span>
+        <select
+          name="consultationType"
+          value={form.consultationType}
+          onChange={(event) => update("consultationType", event.target.value as ConsultationType | "")}
+          aria-invalid={Boolean(fieldErrors.consultationType)}
+          aria-describedby={fieldErrors.consultationType ? "contact-type-error" : undefined}
+          className={`${inputClass} ${borderClass("consultationType")} bg-[#11100e]`}
+        >
+          <option value="">{t("请选择", "Select")}</option>
+          {CONSULTATION_TYPES.map((type) => (
+            <option key={type} value={type}>
+              {t(TYPE_LABELS[type].zh, TYPE_LABELS[type].en)}
             </option>
-            {consultationTypes.map((item) => (
-              <option key={item.en} value={item.en} className="bg-[oklch(0.12_0.018_60)]">
-                {lang === "zh" ? item.zh : item.en}
-              </option>
-            ))}
-          </select>
-        </label>
+          ))}
+        </select>
+        {fieldErrors.consultationType && <p id="contact-type-error" className="mt-2 text-xs text-red-200">{fieldErrors.consultationType}</p>}
+      </label>
 
-        <label className="block">
-          <span className="mb-2 block text-xs font-semibold uppercase tracking-[0.14em] text-[oklch(0.55_0.02_70)]">
-            {t("方便联系时间", "Preferred Contact Time")}
-          </span>
-          <input
-            name="preferred_contact_time"
-            className="w-full border border-[oklch(0.25_0.02_60)] bg-black/25 px-4 py-3 text-sm text-white outline-none transition-colors placeholder:text-[oklch(0.38_0.015_70)] focus:border-[oklch(0.62_0.09_68)]"
-            placeholder={t("例如 今天晚上 / 明天下午", "e.g. Tonight / Tomorrow afternoon")}
-          />
-        </label>
-
-        <label className="block md:col-span-2">
-          <span className="mb-2 block text-xs font-semibold uppercase tracking-[0.14em] text-[oklch(0.55_0.02_70)]">
-            {t("简单描述", "Brief Situation")}
-          </span>
-          <textarea
-            required
-            name="brief_situation"
-            rows={4}
-            className="w-full resize-none border border-[oklch(0.25_0.02_60)] bg-black/25 px-4 py-3 text-sm text-white outline-none transition-colors placeholder:text-[oklch(0.38_0.015_70)] focus:border-[oklch(0.62_0.09_68)]"
-            placeholder={t("简单写下目前最困扰您的问题", "Briefly describe the main issue you are facing")}
-          />
-        </label>
-
-        <div className="flex flex-col gap-3 md:col-span-2 md:flex-row md:items-center">
-          <button
-            type="submit"
-            className="inline-flex justify-center bg-[oklch(0.72_0.12_70)] px-6 py-3 text-xs font-bold uppercase tracking-[0.16em] text-[oklch(0.08_0.02_60)] transition-opacity hover:opacity-90"
-            style={{ fontFamily: "var(--font-lato), sans-serif" }}
-          >
-            {t("提交初步咨询", "Submit Consultation Request")}
-          </button>
-
-          <a
-            href={`${WA_LINK}?text=${encodeURIComponent(
-              t("你好启明大师，我想先判断我的问题方向。", "Hello Master Qiming, I would like to identify which consultation path fits my situation.")
-            )}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-xs font-semibold text-[oklch(0.62_0.09_68)] underline-offset-4 hover:underline"
-          >
-            {t("也可以直接 WhatsApp 咨询", "Or message directly on WhatsApp")}
-          </a>
+      <label className="mt-5 block">
+        <span className="mb-2 block text-sm font-semibold text-white/82">{t("简要说明 *", "Message *")}</span>
+        <textarea
+          name="message"
+          value={form.message}
+          onChange={(event) => update("message", event.target.value)}
+          rows={6}
+          maxLength={3000}
+          aria-invalid={Boolean(fieldErrors.message)}
+          aria-describedby={fieldErrors.message ? "contact-message-error" : undefined}
+          className={`${inputClass} ${borderClass("message")} resize-y`}
+          placeholder={t(
+            "请简要说明目前的情况，以及希望进一步了解的事项。首次咨询不需要填写出生资料。",
+            "Briefly describe your current situation and what you would like to understand. Birth details are not required for the first enquiry."
+          )}
+        />
+        <div className="mt-2 flex justify-between gap-4 text-xs text-white/38">
+          <span>{t("首次咨询只收集必要资料。", "Only essential information is collected at this stage.")}</span>
+          <span>{form.message.length}/3000</span>
         </div>
-      </form>
-    </section>
+        {fieldErrors.message && <p id="contact-message-error" className="mt-2 text-xs text-red-200">{fieldErrors.message}</p>}
+      </label>
+
+      <label className="mt-5 flex items-start gap-3 text-sm leading-6 text-white/62">
+        <input
+          name="consent"
+          type="checkbox"
+          checked={form.consent}
+          onChange={(event) => update("consent", event.target.checked)}
+          className="mt-1 h-4 w-4 shrink-0 accent-[#d6ad63]"
+          aria-invalid={Boolean(fieldErrors.consent)}
+        />
+        <span>
+          {t(
+            "我同意启明遁甲为处理本次咨询而收集和使用以上资料，并已阅读",
+            "I consent to Qimen Strategy collecting and using the above information to process this enquiry, and I have read the"
+          )}{" "}
+          <Link href="/privacy" className="text-[#d6ad63] underline underline-offset-4">
+            {t("隐私政策", "Privacy Policy")}
+          </Link>
+          。
+        </span>
+      </label>
+      {fieldErrors.consent && <p className="mt-2 text-xs text-red-200">{fieldErrors.consent}</p>}
+
+      {form.consultationType === "Course" && (
+        <p className="mt-5 border-l-2 border-[#d6ad63] pl-4 text-sm leading-6 text-white/58">
+          {t("需要直接选择课程班次和报名？", "Ready to select a course batch and register?")}{" "}
+          <Link href="/course-registration" className="font-semibold text-[#d6ad63] underline underline-offset-4">
+            {t("进入课程报名页面", "Go to Course Registration")}
+          </Link>
+        </p>
+      )}
+
+      {formError && (
+        <div role="alert" className="mt-5 flex items-start gap-3 border border-red-400/35 bg-red-400/10 p-4 text-sm leading-6 text-red-100">
+          <AlertCircle size={18} className="mt-0.5 shrink-0" />
+          <div>
+            <p>{formError}</p>
+            <a
+              href="https://wa.me/6589593499?text=Hello%20Qimen%20Strategy%2C%20I%20am%20unable%20to%20submit%20the%20website%20enquiry%20form.%20My%20enquiry%20is%3A"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-2 inline-block font-semibold text-[#f4dfb0] underline underline-offset-4"
+            >
+              {t("改用WhatsApp联系", "Contact us on WhatsApp")}
+            </a>
+          </div>
+        </div>
+      )}
+
+      <button
+        type="submit"
+        disabled={submitting}
+        className="mt-6 inline-flex w-full items-center justify-center gap-3 bg-[#d6ad63] px-6 py-4 text-sm font-bold uppercase tracking-[0.12em] text-black transition hover:bg-[#f4dfb0] disabled:cursor-not-allowed disabled:opacity-65"
+      >
+        {submitting ? <Loader2 size={18} className="animate-spin" /> : <Send size={18} />}
+        {submitting ? t("正在安全提交…", "Submitting securely…") : t("提交咨询", "Submit Enquiry")}
+      </button>
+    </form>
   );
 }

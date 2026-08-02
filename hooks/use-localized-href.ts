@@ -12,6 +12,8 @@ const LOCALIZED_PATHS = new Set([
   "/courses",
   "/insights",
   "/founder",
+  "/contact",
+  "/contact-success",
 ]);
 
 export function useLocalizedHref() {
