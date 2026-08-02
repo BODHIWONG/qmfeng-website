@@ -26,9 +26,20 @@ type ZohoGlobalCache = typeof globalThis & {
 };
 
 const globalCache = globalThis as ZohoGlobalCache;
+const REQUEST_TIMEOUT_MS = 8_000;
+const MAX_READ_RETRIES = 2;
 
 function cleanEnv(value: string | undefined) {
   return value?.trim() || "";
+}
+
+function delay(ms: number) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+function retryDelay(response: Response, attempt: number) {
+  const retryAfter = Number(response.headers.get("retry-after") || 0);
+  return retryAfter > 0 ? Math.min(retryAfter * 1000, 8_000) : Math.min(400 * 2 ** attempt, 2_000);
 }
 
 export function getZohoRuntimeConfig(): ZohoRuntimeConfig | null {
@@ -53,6 +64,10 @@ export function isZohoConfigured() {
   return getZohoRuntimeConfig() !== null;
 }
 
+function clearCachedToken() {
+  globalCache.__qimenZohoAccessToken = undefined;
+}
+
 async function refreshAccessToken(config: ZohoRuntimeConfig): Promise<ZohoAccessToken> {
   const endpoint = new URL("/oauth/v2/token", config.accountsUrl);
   const body = new URLSearchParams({
@@ -67,6 +82,7 @@ async function refreshAccessToken(config: ZohoRuntimeConfig): Promise<ZohoAccess
     headers: { "content-type": "application/x-www-form-urlencoded" },
     body,
     cache: "no-store",
+    signal: AbortSignal.timeout(REQUEST_TIMEOUT_MS),
   });
   const payload = (await response.json().catch(() => ({}))) as ZohoTokenResponse;
 
@@ -83,7 +99,8 @@ async function refreshAccessToken(config: ZohoRuntimeConfig): Promise<ZohoAccess
   return token;
 }
 
-async function getAccessToken(config: ZohoRuntimeConfig) {
+async function getAccessToken(config: ZohoRuntimeConfig, forceRefresh = false) {
+  if (forceRefresh) clearCachedToken();
   const cached = globalCache.__qimenZohoAccessToken;
   if (cached && cached.expiresAt > Date.now()) return cached;
 
@@ -103,29 +120,53 @@ export async function zohoCrmRequest<T>(
   const config = getZohoRuntimeConfig();
   if (!config) throw new Error("ZOHO_NOT_CONFIGURED");
 
-  const token = await getAccessToken(config);
-  const endpoint = new URL(`/crm/${config.apiVersion}/${path.replace(/^\//, "")}`, token.apiDomain);
-  const response = await fetch(endpoint, {
-    ...init,
-    headers: {
-      authorization: `Zoho-oauthtoken ${token.accessToken}`,
-      "content-type": "application/json",
-      ...(init.headers || {}),
-    },
-    cache: "no-store",
-  });
+  const method = (init.method || "GET").toUpperCase();
+  const mayRetryTransient = method === "GET" || method === "HEAD";
+  let forceRefresh = false;
 
-  const data = response.status === 204
-    ? null
-    : ((await response.json().catch(() => null)) as T | null);
+  for (let attempt = 0; attempt <= MAX_READ_RETRIES; attempt += 1) {
+    const token = await getAccessToken(config, forceRefresh);
+    forceRefresh = false;
+    const endpoint = new URL(`/crm/${config.apiVersion}/${path.replace(/^\//, "")}`, token.apiDomain);
+    const response = await fetch(endpoint, {
+      ...init,
+      headers: {
+        authorization: `Zoho-oauthtoken ${token.accessToken}`,
+        "content-type": "application/json",
+        ...(init.headers || {}),
+      },
+      cache: "no-store",
+      signal: AbortSignal.timeout(REQUEST_TIMEOUT_MS),
+    });
 
-  if (!response.ok && response.status !== 204) {
-    const code =
-      data && typeof data === "object" && "code" in data
-        ? String((data as { code?: unknown }).code || "UNKNOWN")
-        : "UNKNOWN";
-    throw new Error(`ZOHO_CRM_REQUEST_FAILED:${response.status}:${code}`);
+    if (response.status === 401 && attempt === 0) {
+      forceRefresh = true;
+      continue;
+    }
+
+    if (
+      mayRetryTransient &&
+      attempt < MAX_READ_RETRIES &&
+      (response.status === 429 || response.status >= 500)
+    ) {
+      await delay(retryDelay(response, attempt));
+      continue;
+    }
+
+    const data = response.status === 204
+      ? null
+      : ((await response.json().catch(() => null)) as T | null);
+
+    if (!response.ok && response.status !== 204) {
+      const code =
+        data && typeof data === "object" && "code" in data
+          ? String((data as { code?: unknown }).code || "UNKNOWN")
+          : "UNKNOWN";
+      throw new Error(`ZOHO_CRM_REQUEST_FAILED:${response.status}:${code}`);
+    }
+
+    return { status: response.status, data };
   }
 
-  return { status: response.status, data };
+  throw new Error("ZOHO_CRM_REQUEST_FAILED:RETRY_EXHAUSTED");
 }
