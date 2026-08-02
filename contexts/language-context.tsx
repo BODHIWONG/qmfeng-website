@@ -8,9 +8,17 @@ interface LanguageContextType {
   lang: Language;
   setLang: (lang: Language) => void;
   t: (zh: string, en: string) => string;
+  isDefaultContext?: boolean;
 }
 
-const LanguageContext = createContext<LanguageContextType | null>(null);
+const defaultContext: LanguageContextType = {
+  lang: "zh",
+  setLang: () => {},
+  t: (zh) => zh,
+  isDefaultContext: true,
+};
+
+const LanguageContext = createContext<LanguageContextType>(defaultContext);
 
 function StatefulLanguageProvider({ children }: { children: React.ReactNode }) {
   const [lang, setLang] = useState<Language>("zh");
@@ -30,7 +38,7 @@ function StatefulLanguageProvider({ children }: { children: React.ReactNode }) {
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
   const parentContext = useContext(LanguageContext);
 
-  if (parentContext) {
+  if (!parentContext.isDefaultContext) {
     return <>{children}</>;
   }
 
@@ -57,9 +65,5 @@ export function FixedLanguageProvider({
 }
 
 export function useLanguage() {
-  const context = useContext(LanguageContext);
-  if (!context) {
-    throw new Error("useLanguage must be used within a LanguageProvider");
-  }
-  return context;
+  return useContext(LanguageContext);
 }
