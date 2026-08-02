@@ -17,6 +17,7 @@ const LOCALIZED_PATHS = new Set([
   "/decision",
   "/relationship-clarity-reading-singapore",
   "/enterprise-strategic-advisory",
+  "/commercial-feng-shui",
   "/courses",
   "/insights",
   "/founder",
@@ -29,6 +30,13 @@ const businessLinks = [
     en: "Business Strategic Advisory",
     descZh: "经营瓶颈、战略重点与长期决策支持",
     descEn: "Business bottlenecks, priorities and ongoing decision support",
+  },
+  {
+    href: "/commercial-feng-shui",
+    zh: "商业风水｜办公室风水",
+    en: "Commercial Feng Shui",
+    descZh: "Office布局、管理者位置、团队协作与客户动线",
+    descEn: "Office layout, leadership position, team collaboration and client flow",
   },
   {
     href: "/founder-wealth-investment-advisory",
@@ -200,7 +208,7 @@ export default function Navbar() {
               {lang === "zh" ? "企业顾问" : "Business Advisory"}
               <ChevronDown size={14} />
             </button>
-            <div className="invisible absolute left-1/2 top-full w-[410px] -translate-x-1/2 border border-[#d6ad63]/30 bg-black/98 p-3 opacity-0 shadow-2xl transition-all duration-200 group-hover:visible group-hover:opacity-100">
+            <div className="invisible absolute left-1/2 top-full w-[430px] -translate-x-1/2 border border-[#d6ad63]/30 bg-black/98 p-3 opacity-0 shadow-2xl transition-all duration-200 group-hover:visible group-hover:opacity-100">
               {businessLinks.map((link) => (
                 <Link key={link.href} href={localizeHref(link.href)} className="block border-b border-white/8 px-4 py-3 last:border-b-0 hover:bg-[#d6ad63]/10">
                   <p className="text-sm font-semibold text-[#f4dfb0]">{lang === "zh" ? link.zh : link.en}</p>
