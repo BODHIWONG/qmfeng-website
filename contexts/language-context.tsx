@@ -1,29 +1,33 @@
 "use client";
 
-import React, { createContext, useContext, useState, useCallback } from "react";
+import React, { createContext, useCallback, useContext, useState } from "react";
 
-type Language = "zh" | "en";
+export type Language = "zh" | "en";
 
 interface LanguageContextType {
   lang: Language;
   setLang: (lang: Language) => void;
   t: (zh: string, en: string) => string;
+  isDefaultContext?: boolean;
 }
 
-const LanguageContext = createContext<LanguageContextType>({
+const defaultContext: LanguageContextType = {
   lang: "zh",
   setLang: () => {},
   t: (zh) => zh,
-});
+  isDefaultContext: true,
+};
 
-export function LanguageProvider({ children }: { children: React.ReactNode }) {
+const LanguageContext = createContext<LanguageContextType>(defaultContext);
+
+function StatefulLanguageProvider({ children }: { children: React.ReactNode }) {
   const [lang, setLang] = useState<Language>("zh");
-  
+
   const t = useCallback(
     (zh: string, en: string) => (lang === "zh" ? zh : en),
     [lang]
   );
-  
+
   return (
     <LanguageContext.Provider value={{ lang, setLang, t }}>
       {children}
@@ -31,10 +35,35 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
   );
 }
 
-export function useLanguage() {
-  const context = useContext(LanguageContext);
-  if (!context) {
-    throw new Error("useLanguage must be used within a LanguageProvider");
+export function LanguageProvider({ children }: { children: React.ReactNode }) {
+  const parentContext = useContext(LanguageContext);
+
+  if (!parentContext.isDefaultContext) {
+    return <>{children}</>;
   }
-  return context;
+
+  return <StatefulLanguageProvider>{children}</StatefulLanguageProvider>;
+}
+
+export function FixedLanguageProvider({
+  children,
+  lang,
+}: {
+  children: React.ReactNode;
+  lang: Language;
+}) {
+  const t = useCallback(
+    (zh: string, en: string) => (lang === "zh" ? zh : en),
+    [lang]
+  );
+
+  return (
+    <LanguageContext.Provider value={{ lang, setLang: () => {}, t }}>
+      {children}
+    </LanguageContext.Provider>
+  );
+}
+
+export function useLanguage() {
+  return useContext(LanguageContext);
 }

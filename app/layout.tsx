@@ -65,12 +65,19 @@ export const metadata: Metadata = {
     "启明遁甲",
   ],
   authors: [{ name: "Huang Qiming" }],
-  alternates: { canonical: "https://www.qmfeng.com" },
+  alternates: {
+    canonical: "https://www.qmfeng.com/en",
+    languages: {
+      "en-SG": "https://www.qmfeng.com/en",
+      "zh-SG": "https://www.qmfeng.com/zh",
+      "x-default": "https://www.qmfeng.com/en",
+    },
+  },
   openGraph: {
     title: "Qimen Strategy Singapore｜Personal & Business Decision Advisory",
     description:
       "Personal advisory, business strategic advisory and practical Qi Men Dun Jia education in Singapore.",
-    url: "https://www.qmfeng.com",
+    url: "https://www.qmfeng.com/en",
     siteName: "Qimen Strategy｜启明遁甲",
     images: [
       {

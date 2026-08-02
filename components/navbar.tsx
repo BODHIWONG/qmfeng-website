@@ -3,12 +3,24 @@
 import { useEffect, useState } from "react";
 import { ChevronDown, Menu, X } from "lucide-react";
 import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
 import { useLanguage } from "@/contexts/language-context";
 
 const LOGO_URL = "/logo-qimen-strategy.jpg";
 const CONSULTATION_WHATSAPP =
   "https://wa.me/6589593499?text=Hi%20Qimen%20Strategy%2C%20I%27d%20like%20to%20ask%20about%20a%20consultation.%20My%20current%20situation%20is%3A";
 const COURSE_REGISTRATION_LINK = "/course-registration?course=qimen-foundation&batch=2026-09-19";
+
+const LOCALIZED_PATHS = new Set([
+  "/",
+  "/personal-advisory",
+  "/decision",
+  "/relationship-clarity-reading-singapore",
+  "/enterprise-strategic-advisory",
+  "/courses",
+  "/insights",
+  "/founder",
+]);
 
 const businessLinks = [
   {
@@ -53,15 +65,15 @@ const personalLinks = [
     href: "/decision",
     zh: "奇门遁甲咨询",
     en: "Qi Men Dun Jia Consultation",
-    descZh: "S$396 · 根据具体盘面综合分析",
-    descEn: "S$396 · Chart-specific integrated analysis",
+    descZh: "S$396 · 看清当前局势与方向",
+    descEn: "S$396 · Clarity on the current situation and direction",
   },
   {
     href: "/relationship-clarity-reading-singapore",
     zh: "感情与婚姻咨询",
     en: "Relationship & Marriage Advisory",
-    descZh: "关系局势、边界与下一步方向",
-    descEn: "Relationship dynamics, boundaries and next steps",
+    descZh: "关系局势与下一步方向",
+    descEn: "Relationship situation and next-step direction",
   },
   {
     href: "/personal-advisory#date-selection",
@@ -81,7 +93,7 @@ const personalLinks = [
     href: "/personal-advisory#home-feng-shui",
     zh: "居家风水与空间净化",
     en: "Home Feng Shui & Space Clearing",
-    descZh: "住宅布局、睡眠环境与空间能量调整",
+    descZh: "住宅布局、睡眠环境与空间调整",
     descEn: "Residential layout, sleep environment and space clearing",
   },
 ];
@@ -91,10 +103,20 @@ const primaryLinks = [
   { href: "/founder", zh: "关于创始人", en: "About the Founder" },
 ];
 
+function stripLocale(pathname: string) {
+  const stripped = pathname.replace(/^\/(en|zh)(?=\/|$)/, "");
+  return stripped || "/";
+}
+
 export default function Navbar() {
   const { lang, setLang } = useLanguage();
+  const pathname = usePathname();
+  const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+
+  const routeLocale = pathname.startsWith("/zh") ? "zh" : pathname.startsWith("/en") ? "en" : null;
+  const currentBasePath = stripLocale(pathname);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 10);
@@ -102,7 +124,26 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const toggleLanguage = () => setLang(lang === "zh" ? "en" : "zh");
+  const localizeHref = (href: string) => {
+    if (!routeLocale || !href.startsWith("/") || href.startsWith("/course-registration")) return href;
+    const [pathPart, hashPart] = href.split("#");
+    if (!LOCALIZED_PATHS.has(pathPart || "/")) return href;
+    const localizedPath = pathPart === "/" ? `/${routeLocale}` : `/${routeLocale}${pathPart}`;
+    return hashPart ? `${localizedPath}#${hashPart}` : localizedPath;
+  };
+
+  const homeHref = routeLocale ? `/${routeLocale}` : "/";
+
+  const toggleLanguage = () => {
+    const nextLang = lang === "zh" ? "en" : "zh";
+    if (LOCALIZED_PATHS.has(currentBasePath)) {
+      const nextPath = currentBasePath === "/" ? `/${nextLang}` : `/${nextLang}${currentBasePath}`;
+      router.push(nextPath);
+      return;
+    }
+    setLang(nextLang);
+  };
+
   const navTextClass = scrolled
     ? "text-white/82 hover:text-yellow-400"
     : "text-[#2a2118]/78 hover:text-[#a8753f]";
@@ -118,10 +159,10 @@ export default function Navbar() {
       }`}
     >
       <div className="container flex items-center justify-between py-3 md:py-4">
-        <Link href="/" className="flex items-center gap-3">
+        <Link href={homeHref} className="flex items-center gap-3">
           <img
             src={LOGO_URL}
-            alt="启明遁甲决策智库 Qimen Strategy Singapore logo"
+            alt="Qimen Strategy Singapore logo"
             className="h-12 w-auto object-contain md:h-14"
           />
           <div className="hidden leading-tight sm:block">
@@ -135,7 +176,7 @@ export default function Navbar() {
         </Link>
 
         <div className="hidden items-center gap-2 xl:flex 2xl:gap-4">
-          <Link href="/" className={`text-[0.78rem] transition-colors ${navTextClass}`}>
+          <Link href={homeHref} className={`text-[0.78rem] transition-colors ${navTextClass}`}>
             {lang === "zh" ? "首页" : "Home"}
           </Link>
 
@@ -146,7 +187,7 @@ export default function Navbar() {
             </button>
             <div className="invisible absolute left-1/2 top-full w-[430px] -translate-x-1/2 border border-[#d6ad63]/30 bg-black/98 p-3 opacity-0 shadow-2xl transition-all duration-200 group-hover:visible group-hover:opacity-100">
               {personalLinks.map((link) => (
-                <Link key={link.href} href={link.href} className="block border-b border-white/8 px-4 py-3 last:border-b-0 hover:bg-[#d6ad63]/10">
+                <Link key={link.href} href={localizeHref(link.href)} className="block border-b border-white/8 px-4 py-3 last:border-b-0 hover:bg-[#d6ad63]/10">
                   <p className="text-sm font-semibold text-[#f4dfb0]">{lang === "zh" ? link.zh : link.en}</p>
                   <p className="mt-1 text-xs leading-5 text-white/48">{lang === "zh" ? link.descZh : link.descEn}</p>
                 </Link>
@@ -161,7 +202,7 @@ export default function Navbar() {
             </button>
             <div className="invisible absolute left-1/2 top-full w-[410px] -translate-x-1/2 border border-[#d6ad63]/30 bg-black/98 p-3 opacity-0 shadow-2xl transition-all duration-200 group-hover:visible group-hover:opacity-100">
               {businessLinks.map((link) => (
-                <Link key={link.href} href={link.href} className="block border-b border-white/8 px-4 py-3 last:border-b-0 hover:bg-[#d6ad63]/10">
+                <Link key={link.href} href={localizeHref(link.href)} className="block border-b border-white/8 px-4 py-3 last:border-b-0 hover:bg-[#d6ad63]/10">
                   <p className="text-sm font-semibold text-[#f4dfb0]">{lang === "zh" ? link.zh : link.en}</p>
                   <p className="mt-1 text-xs leading-5 text-white/48">{lang === "zh" ? link.descZh : link.descEn}</p>
                 </Link>
@@ -169,12 +210,12 @@ export default function Navbar() {
             </div>
           </div>
 
-          <Link href="/courses" className={`text-[0.78rem] transition-colors ${navTextClass}`}>
+          <Link href={localizeHref("/courses")} className={`text-[0.78rem] transition-colors ${navTextClass}`}>
             {lang === "zh" ? "奇门课程" : "Qi Men Courses"}
           </Link>
 
           {primaryLinks.map((link) => (
-            <Link key={link.href} href={link.href} className={`text-[0.78rem] transition-colors ${navTextClass}`}>
+            <Link key={link.href} href={localizeHref(link.href)} className={`text-[0.78rem] transition-colors ${navTextClass}`}>
               {lang === "zh" ? link.zh : link.en}
             </Link>
           ))}
@@ -221,7 +262,7 @@ export default function Navbar() {
 
       {isOpen && (
         <div className="max-h-[calc(100vh-72px)] overflow-y-auto bg-black px-6 pb-7 xl:hidden">
-          <Link href="/" className="block border-b border-white/10 py-4 text-white/85" onClick={() => setIsOpen(false)}>
+          <Link href={homeHref} className="block border-b border-white/10 py-4 text-white/85" onClick={() => setIsOpen(false)}>
             {lang === "zh" ? "首页" : "Home"}
           </Link>
 
@@ -229,7 +270,7 @@ export default function Navbar() {
             {lang === "zh" ? "个人咨询" : "Personal Advisory"}
           </p>
           {personalLinks.map((link) => (
-            <Link key={link.href} href={link.href} className="block border-b border-white/8 py-3" onClick={() => setIsOpen(false)}>
+            <Link key={link.href} href={localizeHref(link.href)} className="block border-b border-white/8 py-3" onClick={() => setIsOpen(false)}>
               <p className="text-sm font-semibold text-white/85">{lang === "zh" ? link.zh : link.en}</p>
               <p className="mt-1 text-xs text-white/45">{lang === "zh" ? link.descZh : link.descEn}</p>
             </Link>
@@ -239,13 +280,13 @@ export default function Navbar() {
             {lang === "zh" ? "企业顾问" : "Business Advisory"}
           </p>
           {businessLinks.map((link) => (
-            <Link key={link.href} href={link.href} className="block border-b border-white/8 py-3" onClick={() => setIsOpen(false)}>
+            <Link key={link.href} href={localizeHref(link.href)} className="block border-b border-white/8 py-3" onClick={() => setIsOpen(false)}>
               <p className="text-sm font-semibold text-white/85">{lang === "zh" ? link.zh : link.en}</p>
               <p className="mt-1 text-xs text-white/45">{lang === "zh" ? link.descZh : link.descEn}</p>
             </Link>
           ))}
 
-          <Link href="/courses" className="block border-b border-white/10 py-4 font-semibold text-[#f4dfb0]" onClick={() => setIsOpen(false)}>
+          <Link href={localizeHref("/courses")} className="block border-b border-white/10 py-4 font-semibold text-[#f4dfb0]" onClick={() => setIsOpen(false)}>
             {lang === "zh" ? "奇门课程" : "Qi Men Courses"}
           </Link>
           <Link href={COURSE_REGISTRATION_LINK} className="block border-b border-white/10 py-4 text-[#d6ad63]" onClick={() => setIsOpen(false)}>
@@ -253,7 +294,7 @@ export default function Navbar() {
           </Link>
 
           {primaryLinks.map((link) => (
-            <Link key={link.href} href={link.href} className="block border-b border-white/8 py-4 text-white/82" onClick={() => setIsOpen(false)}>
+            <Link key={link.href} href={localizeHref(link.href)} className="block border-b border-white/8 py-4 text-white/82" onClick={() => setIsOpen(false)}>
               {lang === "zh" ? link.zh : link.en}
             </Link>
           ))}
