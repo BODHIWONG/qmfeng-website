@@ -1,8 +1,13 @@
 import { LEAD_SOURCES, type ConsultationAttribution, type LeadSource } from "@/lib/consultation/types";
 
 const SEARCH_HOSTS = ["google.", "bing.com", "search.yahoo.", "duckduckgo.com", "baidu.com"];
-const ATTRIBUTION_STORAGE_KEY = "qimen-attribution-v1";
+const ATTRIBUTION_STORAGE_KEY = "qimen-attribution-v2";
 const PRIVILEGED_SOURCE_OVERRIDES = new Set<LeadSource>(["Walk-in", "Existing Client"]);
+
+type StoredAttribution = {
+  first: ConsultationAttribution;
+  latest: ConsultationAttribution;
+};
 
 function lower(value: string) {
   return value.trim().toLowerCase();
@@ -32,7 +37,7 @@ export function deriveLeadSource(attribution: ConsultationAttribution): LeadSour
 
   const source = lower(attribution.utmSource);
   const medium = lower(attribution.utmMedium);
-  const referrerHost = hostFromUrl(attribution.referrer);
+  const referrerHost = hostFromUrl(attribution.firstReferrer || attribution.referrer);
   const hasGoogleClickId = Boolean(attribution.gclid || attribution.gbraid || attribution.wbraid);
   const isPaidMedium = ["cpc", "ppc", "paid", "paidsearch", "display", "remarketing"].some((item) =>
     medium.includes(item)
@@ -56,6 +61,8 @@ function emptyAttribution(): ConsultationAttribution {
     pageUrl: "",
     pagePath: "",
     referrer: "",
+    firstLandingPage: "",
+    firstReferrer: "",
     utmSource: "",
     utmMedium: "",
     utmCampaign: "",
@@ -68,12 +75,34 @@ function emptyAttribution(): ConsultationAttribution {
   };
 }
 
-function readStoredAttribution() {
+function currentAttribution(): ConsultationAttribution {
+  if (typeof window === "undefined") return emptyAttribution();
+
+  const params = new URLSearchParams(window.location.search);
+  return {
+    pageUrl: window.location.href,
+    pagePath: window.location.pathname,
+    referrer: document.referrer,
+    firstLandingPage: "",
+    firstReferrer: "",
+    utmSource: params.get("utm_source") || "",
+    utmMedium: params.get("utm_medium") || "",
+    utmCampaign: params.get("utm_campaign") || "",
+    utmTerm: params.get("utm_term") || "",
+    utmContent: params.get("utm_content") || "",
+    gclid: params.get("gclid") || "",
+    gbraid: params.get("gbraid") || "",
+    wbraid: params.get("wbraid") || "",
+    sourceOverride: safePublicSourceOverride(params.get("lead_source") || "") || "",
+  };
+}
+
+function readStoredAttribution(): StoredAttribution | null {
   try {
     const stored = window.localStorage.getItem(ATTRIBUTION_STORAGE_KEY);
     if (!stored) return null;
-    const parsed = JSON.parse(stored) as { first?: ConsultationAttribution; latest?: ConsultationAttribution };
-    return parsed && typeof parsed === "object" ? parsed : null;
+    const parsed = JSON.parse(stored) as Partial<StoredAttribution>;
+    return parsed.first && parsed.latest ? { first: parsed.first, latest: parsed.latest } : null;
   } catch {
     return null;
   }
@@ -84,6 +113,8 @@ function hasCampaignSignal(attribution: ConsultationAttribution) {
     attribution.utmSource ||
       attribution.utmMedium ||
       attribution.utmCampaign ||
+      attribution.utmTerm ||
+      attribution.utmContent ||
       attribution.gclid ||
       attribution.gbraid ||
       attribution.wbraid ||
@@ -92,43 +123,47 @@ function hasCampaignSignal(attribution: ConsultationAttribution) {
   );
 }
 
+export function persistBrowserAttribution(): StoredAttribution {
+  const current = currentAttribution();
+  if (typeof window === "undefined") return { first: current, latest: current };
+
+  const stored = readStoredAttribution();
+  const first = stored?.first || {
+    ...current,
+    firstLandingPage: current.pageUrl,
+    firstReferrer: current.referrer,
+  };
+  const latest = hasCampaignSignal(current)
+    ? {
+        ...current,
+        firstLandingPage: first.firstLandingPage || first.pageUrl,
+        firstReferrer: first.firstReferrer || first.referrer,
+      }
+    : stored?.latest || first;
+
+  try {
+    window.localStorage.setItem(ATTRIBUTION_STORAGE_KEY, JSON.stringify({ first, latest }));
+  } catch {
+    // Attribution storage is best-effort and must not block page use or form submission.
+  }
+
+  return { first, latest };
+}
+
 export function collectBrowserAttribution(): ConsultationAttribution {
   if (typeof window === "undefined") return emptyAttribution();
 
-  const params = new URLSearchParams(window.location.search);
-  const current: ConsultationAttribution = {
-    pageUrl: window.location.href,
-    pagePath: window.location.pathname,
-    referrer: document.referrer,
-    utmSource: params.get("utm_source") || "",
-    utmMedium: params.get("utm_medium") || "",
-    utmCampaign: params.get("utm_campaign") || "",
-    utmTerm: params.get("utm_term") || "",
-    utmContent: params.get("utm_content") || "",
-    gclid: params.get("gclid") || "",
-    gbraid: params.get("gbraid") || "",
-    wbraid: params.get("wbraid") || "",
-    sourceOverride: params.get("lead_source") || "",
-  };
+  const current = currentAttribution();
+  const { first, latest } = persistBrowserAttribution();
+  const campaign = hasCampaignSignal(first) ? first : latest;
 
-  const stored = readStoredAttribution();
-  const first = stored?.first || (hasCampaignSignal(current) ? current : null);
-  const latest = hasCampaignSignal(current) ? current : stored?.latest || current;
-
-  try {
-    window.localStorage.setItem(
-      ATTRIBUTION_STORAGE_KEY,
-      JSON.stringify({ first: first || current, latest })
-    );
-  } catch {
-    // Attribution storage is best-effort; form submission must continue if storage is blocked.
-  }
-
-  const sourceAttribution = first || latest;
   return {
-    ...sourceAttribution,
+    ...campaign,
     pageUrl: current.pageUrl,
     pagePath: current.pagePath,
-    sourceOverride: safePublicSourceOverride(sourceAttribution.sourceOverride) || "",
+    referrer: current.referrer,
+    firstLandingPage: first.firstLandingPage || first.pageUrl,
+    firstReferrer: first.firstReferrer || first.referrer,
+    sourceOverride: safePublicSourceOverride(campaign.sourceOverride) || "",
   };
 }
