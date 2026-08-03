@@ -112,8 +112,7 @@ export default function ConsultationForm({
     if (errors.name) translated.name = t("请填写姓名。", "Please enter your name.");
     if (errors.phone) translated.phone = t("请输入有效的电话号码，并包括国家代码。", "Please enter a valid phone number, including the country code.");
     if (errors.email) translated.email = t("请输入有效的电邮地址。", "Please enter a valid email address.");
-    if (errors.consultationType) translated.consultationType = t("请选择咨询类型。", "Please select a consultation type.");
-    if (errors.message) translated.message = t("请简要说明你的情况，至少填写10个字。", "Please provide a little more detail about your enquiry.");
+    if (errors.consultationType) translated.consultationType = t("请选择有效的咨询类型。", "Please select a valid consultation type.");
     if (errors.consent) translated.consent = t("请确认个人资料使用同意。", "Please confirm the privacy consent.");
     return translated;
   }
@@ -283,7 +282,7 @@ return (
       </label>
 
       <label className="mt-5 block">
-        <span className="mb-2 block text-sm font-semibold text-white/82">{t("咨询类型 *", "Consultation Type *")}</span>
+        <span className="mb-2 block text-sm font-semibold text-white/82">{t("咨询类型（选填）", "Consultation Type (optional)")}</span>
         <select
           name="consultationType"
           value={form.consultationType}
@@ -292,7 +291,7 @@ return (
           aria-describedby={fieldErrors.consultationType ? "contact-type-error" : undefined}
           className={`${inputClass} ${borderClass("consultationType")} bg-[#11100e]`}
         >
-          <option value="">{t("请选择", "Select")}</option>
+          <option value="">{t("暂不选择", "No selection")}</option>
           {CONSULTATION_TYPES.map((type) => (
             <option key={type} value={type}>
               {t(TYPE_LABELS[type].zh, TYPE_LABELS[type].en)}
@@ -303,13 +302,12 @@ return (
       </label>
 
       <label className="mt-5 block">
-        <span className="mb-2 block text-sm font-semibold text-white/82">{t("简要说明 *", "Message *")}</span>
+        <span className="mb-2 block text-sm font-semibold text-white/82">{t("简要说明（选填）", "Message (optional)")}</span>
         <textarea
           name="message"
           value={form.message}
           onChange={(event) => update("message", event.target.value)}
           rows={6}
-          maxLength={3000}
           aria-invalid={Boolean(fieldErrors.message)}
           aria-describedby={fieldErrors.message ? "contact-message-error" : undefined}
           className={`${inputClass} ${borderClass("message")} resize-y`}
@@ -318,10 +316,9 @@ return (
             "Briefly describe your current situation and what you would like to understand. Birth details are not required for the first enquiry."
           )}
         />
-        <div className="mt-2 flex justify-between gap-4 text-xs text-white/38">
-          <span>{t("首次咨询只收集必要资料。", "Only essential information is collected at this stage.")}</span>
-          <span>{form.message.length}/3000</span>
-        </div>
+        <p className="mt-2 text-xs text-white/38">
+          {t("此项为选填；首次咨询只收集必要资料。", "Optional; only essential information is collected at this stage.")}
+        </p>
         {fieldErrors.message && <p id="contact-message-error" className="mt-2 text-xs text-red-200">{fieldErrors.message}</p>}
       </label>
 
