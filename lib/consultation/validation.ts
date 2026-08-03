@@ -12,7 +12,6 @@ const LIMITS = {
   name: 120,
   phone: 40,
   email: 254,
-  message: 3000,
   attribution: 500,
   idempotencyKey: 100,
 } as const;
@@ -70,7 +69,7 @@ export function validateConsultationSubmission(input: unknown): ConsultationVali
   const phone = cleanText(record.phone, LIMITS.phone);
   const email = cleanText(record.email, LIMITS.email).toLowerCase();
   const consultationType = cleanText(record.consultationType, 80);
-  const message = cleanText(record.message, LIMITS.message);
+  const message = typeof record.message === "string" ? record.message.trim() : "";
   const consent = record.consent === true;
   const website = cleanText(record.website, 300);
   const idempotencyKey = cleanText(record.idempotencyKey, LIMITS.idempotencyKey);
@@ -90,8 +89,9 @@ export function validateConsultationSubmission(input: unknown): ConsultationVali
     fieldErrors.phone = "Please enter a valid phone number, including the country code.";
   }
   if (!email || !EMAIL_PATTERN.test(email)) fieldErrors.email = "Please enter a valid email address.";
-  if (!isConsultationType(consultationType)) fieldErrors.consultationType = "Please select a consultation type.";
-  if (message.length < 10) fieldErrors.message = "Please provide a little more detail about your enquiry.";
+  if (consultationType && !isConsultationType(consultationType)) {
+    fieldErrors.consultationType = "Please select a valid consultation type.";
+  }
   if (!consent) fieldErrors.consent = "Please confirm the privacy consent.";
 
   if (Object.keys(fieldErrors).length > 0) return { success: false, fieldErrors };
@@ -102,7 +102,7 @@ export function validateConsultationSubmission(input: unknown): ConsultationVali
       name,
       phone: normalizedPhone,
       email,
-      consultationType: consultationType as ConsultationType,
+      consultationType: consultationType as ConsultationType | "",
       message,
       consent,
       website,
