@@ -49,7 +49,7 @@ export type ConsultationSubmission = {
   name: string;
   phone: string;
   email: string;
-  consultationType: ConsultationType;
+  consultationType: ConsultationType | "";
   message: string;
   consent: boolean;
   website: string;
