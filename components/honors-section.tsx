@@ -33,14 +33,14 @@ export default function HonorsSection() {
       titleZh: "与新加坡总理黄循财合影",
       titleEn: "With Singapore Prime Minister Lawrence Wong",
       descZh: "启明大师受邀出席重要社区活动，与新加坡总理黄循财先生亲切交流，彰显大师在本地社区的影响力与认可度。",
-      descEn: "Master Qiming was invited to attend important community events, having cordial exchanges with Singapore Prime Minister Lawrence Wong, demonstrating his influence and recognition in the local community.",
+      descEn: "Huang Qiming was invited to attend important community events, having cordial exchanges with Singapore Prime Minister Lawrence Wong, demonstrating his influence and recognition in the local community.",
     },
     {
       img: CHARITY_CALLIGRAPHY,
       titleZh: "「善济天下」慈善荣誉",
       titleEn: "\"Benevolence for All\" Charity Honor",
       descZh: "新加坡知名慈善家亲手赠送「善济天下」字画予启明大师，表彰其在公益慈善领域的杰出贡献与善行义举。",
-      descEn: "A renowned Singapore philanthropist personally presented this calligraphy 'Benevolence for All Under Heaven' to honor Master Qiming's outstanding contributions to charity and community welfare.",
+      descEn: "A renowned Singapore philanthropist personally presented this calligraphy 'Benevolence for All Under Heaven' to honor Huang Qiming's outstanding contributions to charity and community welfare.",
     },
     {
       img: THANKS_PHOTO,
@@ -55,7 +55,7 @@ export default function HonorsSection() {
       titleZh: "清华大学专业认证",
       titleEn: "Tsinghua University Certification",
       descZh: "启明大师于2022年完成清华大学社会科学学院专业课程培训，获颁学习证书，印证其学术功底与专业素养。",
-      descEn: "Master Qiming completed professional training at Tsinghua University's School of Social Sciences in 2022, receiving certification that validates his academic foundation and professional expertise.",
+      descEn: "Huang Qiming completed professional training at Tsinghua University's School of Social Sciences in 2022, receiving certification that validates his academic foundation and professional expertise.",
     },
     {
       img: WORK_PHOTO,
@@ -105,7 +105,7 @@ export default function HonorsSection() {
           >
             {t(
               "十六年来，启明大师不仅服务个人与企业，更积极参与社区公益，获得各界认可。",
-              "Over 16 years, Master Qiming has not only served individuals and businesses, but also actively participated in community welfare, earning recognition from all sectors."
+              "Over 16 years, Huang Qiming has not only served individuals and businesses, but also actively participated in community welfare, earning recognition from all sectors."
             )}
           </p>
         </motion.div>

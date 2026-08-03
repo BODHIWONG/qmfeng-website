@@ -1,3 +1,5 @@
+import "server-only";
+
 import type { ConsultationSubmission, LeadSource } from "@/lib/consultation/types";
 import { deriveLeadSource } from "@/lib/consultation/attribution";
 import { normalizePhone } from "@/lib/consultation/validation";
@@ -26,10 +28,16 @@ type ZohoWriteResponse = {
   }>;
 };
 
+type IdentityResolution = {
+  existing: ZohoRecord | null;
+  conflict: boolean;
+};
+
 export type ZohoLeadResult = {
   recordId: string;
   action: "insert" | "update";
   leadSource: LeadSource;
+  identityConflict: boolean;
 };
 
 const DEFAULT_FIELD_MAP: FieldMap = {
@@ -102,59 +110,116 @@ function description(args: {
   source: LeadSource;
   reference: string;
   existing?: string;
+  identityConflict: boolean;
 }) {
-  const { submission, source, reference, existing } = args;
+  const { submission, source, reference, existing, identityConflict } = args;
   const attribution = submission.attribution;
   const block = [
     `Website enquiry reference: ${reference}`,
     `Received: ${new Date().toISOString()}`,
     `Consultation type: ${submission.consultationType}`,
     `Lead source: ${source}`,
+    identityConflict
+      ? "CRM identity review: Manual review required because email and phone did not resolve to one unambiguous CRM record."
+      : "",
     `Message: ${submission.message}`,
-    `Page: ${attribution.pageUrl || attribution.pagePath || "qmfeng.com"}`,
-    `Referrer: ${attribution.referrer || "-"}`,
+    `Current page: ${attribution.pageUrl || attribution.pagePath || "qmfeng.com"}`,
+    `Current referrer: ${attribution.referrer || "-"}`,
+    `First landing page: ${attribution.firstLandingPage || "-"}`,
+    `First referrer: ${attribution.firstReferrer || "-"}`,
     `UTM source: ${attribution.utmSource || "-"}`,
     `UTM medium: ${attribution.utmMedium || "-"}`,
     `UTM campaign: ${attribution.utmCampaign || "-"}`,
     `UTM term: ${attribution.utmTerm || "-"}`,
     `UTM content: ${attribution.utmContent || "-"}`,
-    `Google click ID present: ${Boolean(attribution.gclid || attribution.gbraid || attribution.wbraid) ? "yes" : "no"}`,
-  ].join("\n");
+    `GCLID: ${attribution.gclid || "-"}`,
+    `GBRAID: ${attribution.gbraid || "-"}`,
+    `WBRAID: ${attribution.wbraid || "-"}`,
+  ].filter(Boolean).join("\n");
 
   return existing ? `${existing.trim()}\n\n--- New website enquiry ---\n${block}`.slice(-32000) : block;
 }
 
-function exactRecordMatch(records: ZohoRecord[], submission: ConsultationSubmission, fields: FieldMap) {
-  const wantedEmail = submission.email.toLowerCase();
-  const wantedPhone = normalizePhone(submission.phone);
-
-  return records.find((record) => {
-    const recordEmail = fields.email ? text(record[fields.email]).toLowerCase() : "";
-    const recordPhone = fields.phone ? normalizePhone(text(record[fields.phone])) : "";
-    return Boolean((wantedEmail && recordEmail === wantedEmail) || (wantedPhone && recordPhone === wantedPhone));
-  });
+function uniqueRecords(records: ZohoRecord[]) {
+  const byId = new Map<string, ZohoRecord>();
+  for (const record of records) {
+    if (record.id) byId.set(record.id, record);
+  }
+  return [...byId.values()];
 }
 
-async function searchExistingRecord(submission: ConsultationSubmission, fields: FieldMap) {
+function exactMatches(
+  records: ZohoRecord[],
+  kind: "email" | "phone",
+  value: string,
+  fields: FieldMap
+) {
+  const wantedEmail = value.toLowerCase();
+  const wantedPhone = normalizePhone(value);
+
+  return uniqueRecords(records.filter((record) => {
+    if (kind === "email") {
+      return Boolean(fields.email && text(record[fields.email]).toLowerCase() === wantedEmail);
+    }
+    return Boolean(fields.phone && normalizePhone(text(record[fields.phone])) === wantedPhone);
+  }));
+}
+
+async function searchExactRecords(
+  kind: "email" | "phone",
+  value: string,
+  fields: FieldMap
+) {
   const config = getZohoRuntimeConfig();
   if (!config) throw new Error("ZOHO_NOT_CONFIGURED");
 
-  const searches: Array<["email" | "phone", string]> = [];
-  if (submission.email) searches.push(["email", submission.email]);
-  if (submission.phone) searches.push(["phone", submission.phone]);
+  const query = new URLSearchParams({ [kind]: value, per_page: "20" });
+  const response = await zohoCrmRequest<ZohoSearchResponse>(
+    `${config.moduleApiName}/search?${query.toString()}`,
+    { method: "GET" }
+  );
+  return exactMatches(response.data?.data || [], kind, value, fields);
+}
 
-  for (const [key, value] of searches) {
-    const query = new URLSearchParams({ [key]: value, per_page: "20" });
-    const response = await zohoCrmRequest<ZohoSearchResponse>(
-      `${config.moduleApiName}/search?${query.toString()}`,
-      { method: "GET" }
-    );
-    const records = response.data?.data || [];
-    const exact = exactRecordMatch(records, submission, fields);
-    if (exact?.id) return exact;
+async function resolveIdentity(
+  submission: ConsultationSubmission,
+  fields: FieldMap
+): Promise<IdentityResolution> {
+  const [emailMatches, phoneMatches] = await Promise.all([
+    searchExactRecords("email", submission.email, fields),
+    searchExactRecords("phone", submission.phone, fields),
+  ]);
+
+  if (emailMatches.length > 1 || phoneMatches.length > 1) {
+    return { existing: null, conflict: true };
   }
 
-  return null;
+  const emailRecord = emailMatches[0] || null;
+  const phoneRecord = phoneMatches[0] || null;
+
+  if (emailRecord && phoneRecord) {
+    return emailRecord.id === phoneRecord.id
+      ? { existing: emailRecord, conflict: false }
+      : { existing: null, conflict: true };
+  }
+
+  if (emailRecord) {
+    const existingPhone = fields.phone ? normalizePhone(text(emailRecord[fields.phone])) : "";
+    const submittedPhone = normalizePhone(submission.phone);
+    return existingPhone && existingPhone !== submittedPhone
+      ? { existing: null, conflict: true }
+      : { existing: emailRecord, conflict: false };
+  }
+
+  if (phoneRecord) {
+    const existingEmail = fields.email ? text(phoneRecord[fields.email]).toLowerCase() : "";
+    const submittedEmail = submission.email.toLowerCase();
+    return existingEmail && existingEmail !== submittedEmail
+      ? { existing: null, conflict: true }
+      : { existing: phoneRecord, conflict: false };
+  }
+
+  return { existing: null, conflict: false };
 }
 
 function buildRecord(args: {
@@ -163,8 +228,9 @@ function buildRecord(args: {
   source: LeadSource;
   reference: string;
   existing?: ZohoRecord | null;
+  identityConflict: boolean;
 }) {
-  const { submission, fields, source, reference, existing } = args;
+  const { submission, fields, source, reference, existing, identityConflict } = args;
   const isInsert = !existing;
   const record: Record<string, unknown> = isInsert
     ? { ...parseJsonRecord(process.env.ZOHO_CRM_STATIC_FIELDS_JSON) }
@@ -183,6 +249,7 @@ function buildRecord(args: {
       source,
       reference,
       existing: existing ? text(existing[fields.message]) : "",
+      identityConflict,
     });
   }
 
@@ -216,19 +283,31 @@ export async function submitConsultationToZoho(
 
   const fields = getFieldMap();
   const source = deriveLeadSource(submission.attribution);
-  const existing = await searchExistingRecord(submission, fields);
-  const record = buildRecord({ submission, fields, source, reference, existing });
+  const identity = await resolveIdentity(submission, fields);
+  const record = buildRecord({
+    submission,
+    fields,
+    source,
+    reference,
+    existing: identity.existing,
+    identityConflict: identity.conflict,
+  });
 
-  if (existing?.id) {
+  if (identity.existing?.id) {
     const response = await zohoCrmRequest<ZohoWriteResponse>(
-      `${config.moduleApiName}/${existing.id}`,
+      `${config.moduleApiName}/${identity.existing.id}`,
       {
         method: "PUT",
         body: JSON.stringify(writeBody(record)),
       }
     );
     const result = readWriteResult(response.data);
-    return { recordId: result.details!.id!, action: "update", leadSource: source };
+    return {
+      recordId: result.details!.id!,
+      action: "update",
+      leadSource: source,
+      identityConflict: false,
+    };
   }
 
   const body = writeBody(record);
@@ -240,5 +319,10 @@ export async function submitConsultationToZoho(
     body: JSON.stringify(body),
   });
   const result = readWriteResult(response.data);
-  return { recordId: result.details!.id!, action: "insert", leadSource: source };
+  return {
+    recordId: result.details!.id!,
+    action: "insert",
+    leadSource: source,
+    identityConflict: identity.conflict,
+  };
 }

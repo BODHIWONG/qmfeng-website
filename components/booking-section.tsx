@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { useLanguage } from "@/contexts/language-context";
 import { Calendar, Clock, MapPin, MessageCircle } from "lucide-react";
 
-const WA_LINK = "https://wa.me/6589418791?text=Hello%20Master%20Huang%2C%20I%27d%20like%20to%20book%20a%20consultation.";
+const WA_LINK = "https://wa.me/6589593499?text=Hello%20Master%20Huang%2C%20I%27d%20like%20to%20book%20a%20consultation.";
 
 const timeSlots = [
   { time: "10:00 AM", available: true },

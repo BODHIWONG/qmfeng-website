@@ -32,6 +32,8 @@ export type ConsultationAttribution = {
   pageUrl: string;
   pagePath: string;
   referrer: string;
+  firstLandingPage: string;
+  firstReferrer: string;
   utmSource: string;
   utmMedium: string;
   utmCampaign: string;
@@ -47,7 +49,7 @@ export type ConsultationSubmission = {
   name: string;
   phone: string;
   email: string;
-  consultationType: ConsultationType;
+  consultationType: ConsultationType | "";
   message: string;
   consent: boolean;
   website: string;

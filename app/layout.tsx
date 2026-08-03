@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import { Cormorant_Garamond, Lato, Noto_Sans_SC, Noto_Serif_SC } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
+import AttributionTracker from "@/components/attribution-tracker";
 import SiteStructuredData from "@/components/site-structured-data";
 import WhatsAppConversionTracker from "@/components/whatsapp-conversion-tracker";
 import "./globals.css";
@@ -115,6 +116,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <Script async src={googleAdsLoader} strategy="afterInteractive" />
         <Script id="google-ads-init" strategy="afterInteractive" dangerouslySetInnerHTML={{ __html: googleAdsInit }} />
         <SiteStructuredData />
+        <AttributionTracker />
         <WhatsAppConversionTracker />
         {children}
         {process.env.NODE_ENV === "production" && <Analytics />}

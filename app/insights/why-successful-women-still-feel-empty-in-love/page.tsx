@@ -7,7 +7,7 @@ import { ArrowLeft, Calendar, Clock, User } from "lucide-react";
 import Link from "next/link";
 
 const WA_LINK =
-  "https://wa.me/6589418791?text=Hi%20Master%20Qiming%2C%20I%20read%20your%20article%20about%20why%20successful%20women%20still%20feel%20empty%20in%20love.%20I%20would%20like%20to%20book%20a%20consultation.";
+  "https://wa.me/6589593499?text=Hi%20Huang%20Qiming%2C%20I%20read%20your%20article%20about%20why%20successful%20women%20still%20feel%20empty%20in%20love.%20I%20would%20like%20to%20book%20a%20consultation.";
 
 export default function RelationshipHealingArticle() {
   return (

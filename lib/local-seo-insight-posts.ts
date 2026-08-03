@@ -151,7 +151,7 @@ export const localSeoInsightPosts: InsightPost[] = [
       "A closer look at how Master Huang Qiming of Qiming Feng Shui applies Qi Men Dun Jia, Feng Shui, Bazi and space energy reading in real Singapore consultations.",
     date: "2026-04-27",
     readTime: "7 min",
-    category: "Master Qiming",
+    category: "Huang Qiming",
     keywords: ["Master Huang Qiming", "Qiming Feng Shui", "Qi Men Dun Jia Singapore", "Singapore Feng Shui", "Space Energy Purification Singapore"],
     paragraphs: [
       "A real consultation is different from reading a short online answer. When a client comes to Master Huang Qiming, the surface question may be simple: should I move, should I invest, why is my sleep bad, why is my business stuck, or why does this relationship keep hurting? But behind that question, there is usually a deeper structure.",

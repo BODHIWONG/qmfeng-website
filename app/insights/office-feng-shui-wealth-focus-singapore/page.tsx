@@ -8,7 +8,7 @@ import { ArrowLeft, Calendar, Clock, User } from "lucide-react";
 import Link from "next/link";
 
 const WA_LINK =
-  "https://wa.me/6589418791?text=Hello%20Master%20Qiming%2C%20I%20read%20your%20article%20about%20office%20Feng%20Shui%20and%20wealth.%20I%20would%20like%20to%20book%20a%20consultation.";
+  "https://wa.me/6589593499?text=Hello%20Huang%20Qiming%2C%20I%20read%20your%20article%20about%20office%20Feng%20Shui%20and%20wealth.%20I%20would%20like%20to%20book%20a%20consultation.";
 
 export const metadata: Metadata = {
   title: "Beyond Hard Work: How Office Feng Shui Can Influence Wealth, Focus, and Business Momentum",
@@ -226,7 +226,7 @@ export default function OfficeFengShuiArticle() {
               </p>
 
               <p>
-                As a Singapore-based consultant, Master Qiming works with these
+                As a Singapore-based consultant, Huang Qiming works with these
                 local conditions in mind. A solution that works in a large
                 landed office environment may not apply at all in a compact city
                 workspace.

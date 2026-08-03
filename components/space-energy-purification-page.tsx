@@ -18,7 +18,7 @@ import {
 } from "lucide-react";
 
 const WA_LINK =
-  "https://wa.me/6589418791?text=Hello%20Master%20Qiming%2C%20I%20would%20like%20to%20consult%20about%20space%20energy%20purification.";
+  "https://wa.me/6589593499?text=Hello%20Huang%20Qiming%2C%20I%20would%20like%20to%20consult%20about%20space%20energy%20purification.";
 
 const corePoints = [
   {
@@ -75,7 +75,7 @@ const cases = [
     bodyZh:
       "一位六十多岁的女士长期感觉身体紧绷，夜间休息也不安稳。启明大师判断其居住空间后，为她进行空间能量净化与气场调和。客户第二天早上专程前来表达感谢，反馈当晚休息明显变好，整个人感觉轻松了许多。",
     bodyEn:
-      "A lady in her sixties had long felt physical tension and unstable rest at night. After Master Qiming assessed her living space and performed space energy purification and field harmonisation, she returned the next morning to express gratitude. She shared that her rest had improved and that she felt noticeably lighter and more relaxed.",
+      "A lady in her sixties had long felt physical tension and unstable rest at night. After Huang Qiming assessed her living space and performed space energy purification and field harmonisation, she returned the next morning to express gratitude. She shared that her rest had improved and that she felt noticeably lighter and more relaxed.",
   },
   {
     titleZh: "实录二｜家中压迫感与恐惧感减轻",
@@ -91,7 +91,7 @@ const cases = [
     bodyZh:
       "曾有一位女士因多年前的意外，长期感觉身心状态沉重，精神面貌也逐渐下降。启明大师根据她的个人状态与居住空间气场进行净化调整后，客户反馈整个人感觉更轻松，站立与行动状态更自然，脸色与精神状态也变得更好。",
     bodyEn:
-      "A client who had experienced an accident years earlier felt long-term heaviness and lowered vitality. After Master Qiming adjusted the space according to her personal condition and the home’s energy field, she reported feeling lighter, more natural in movement and visibly more refreshed in spirit.",
+      "A client who had experienced an accident years earlier felt long-term heaviness and lowered vitality. After Huang Qiming adjusted the space according to her personal condition and the home’s energy field, she reported feeling lighter, more natural in movement and visibly more refreshed in spirit.",
   },
 ];
 
@@ -262,7 +262,7 @@ export default function SpaceEnergyPurificationPage() {
             <div className="mx-auto max-w-6xl">
               <div className="mb-10 max-w-3xl">
                 <p className="mb-4 text-xs font-semibold uppercase tracking-[0.24em] text-[oklch(0.60_0.08_65)]">
-                  {t("启明大师空间净化实录", "Master Qiming Space Purification Records")}
+                  {t("启明大师空间净化实录", "Huang Qiming Space Purification Records")}
                 </p>
                 <h2
                   className="mb-5 text-3xl font-bold leading-tight md:text-5xl"
