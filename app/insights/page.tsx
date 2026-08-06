@@ -22,7 +22,6 @@ import { qimenStrategyModernDecisionMakingPosts } from "@/lib/qimen-strategy-mod
 import { qimenWuweiStrategyPosts } from "@/lib/qimen-wuwei-strategy-post";
 import { qimenLifeCrossroadsDecisionAdvisoryPosts } from "@/lib/qimen-life-crossroads-decision-advisory-post";
 import { applyInsightPostOverrides } from "@/lib/insights-overrides";
-import { isRedirectedInsightSlug } from "@/lib/redirected-insight-slugs";
 import { useLocalizedHref } from "@/hooks/use-localized-href";
 
 const contentHubs = [
@@ -52,7 +51,6 @@ const allPosts = [
   ...insightPosts,
 ]
   .map((post) => applyInsightPostOverrides(post))
-  .filter((post) => !isRedirectedInsightSlug(post.slug))
   .filter((post, index, posts) => posts.findIndex((item) => item.slug === post.slug) === index);
 
 function InsightsContent() {
