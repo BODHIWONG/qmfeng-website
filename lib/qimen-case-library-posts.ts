@@ -2,6 +2,42 @@ import type { InsightPost } from "./insights-data";
 
 export const qimenCaseLibraryPosts: InsightPost[] = [
   {
+    slug: "career-stagnation-finding-direction-qimen-strategy-singapore",
+    title: "After Two Years of Career Stagnation, She Finally Saw a Way Forward",
+    excerpt:
+      "A real Qi Men Dun Jia career consultation in Singapore: after more than two years without a clear professional direction, a BNI member gained clarity on suitable industries, the direction of her next transition, and the timing of potential opportunities.",
+    date: "2026-08-15",
+    readTime: "4 min",
+    category: "Career Decision Case Study",
+    keywords: [
+      "Qi Men Dun Jia Career Consultation Singapore",
+      "Career Direction Singapore",
+      "Career Transition Advisory",
+      "Qimen Strategy Singapore",
+      "Strategic Decision Advisory",
+      "Qiming Huang",
+      "BNI Singapore",
+      "Career Clarity",
+    ],
+    paragraphs: [
+      "A fellow BNI member recently came to Qimen Strategy carrying the weight of more than two difficult years.",
+      "Her career had reached a standstill. She had continued trying, thinking and searching, yet she still could not identify a direction that felt both realistic and meaningful. The longer the uncertainty continued, the more exhausted and discouraged she became.",
+      "When she arrived for the consultation, the strain was visible on her face. Her real question was not simply whether her career would improve. She needed to understand where to turn, what kind of work deserved her attention, and when a genuine opening might begin to appear.",
+      "## Looking Beyond a Simple Prediction",
+      "Qiming Huang, Founder of Qimen Strategy, used Qi Men Dun Jia to examine the structure of her present situation: the source of the stagnation, the professional environments more aligned with her strengths, the industries worth exploring, and the timing of possible transition windows.",
+      "The purpose was not to give her a vague promise that everything would become better. It was to translate the reading into a clearer decision framework: which directions were less suitable, where her energy would be better invested, and when she should prepare to act rather than remain passive.",
+      "As the analysis unfolded, the confusion that had accumulated over two years began to take shape. She could finally see that the problem was not simply a lack of ability or effort. Part of the difficulty came from continuing to search within directions that no longer matched the next stage of her life.",
+      "## From Uncertainty to a Practical Next Step",
+      "By the end of the session, her expression had changed. The circumstances had not disappeared, but the uncertainty was no longer shapeless. She had a direction to investigate, a period to prepare for, and practical next steps to take.",
+      "She felt relieved because she could finally see a way forward.",
+      "> Sometimes hope does not begin when every problem is solved. It begins when the next step becomes clear.",
+      "This is one of the most meaningful roles of Qi Men Dun Jia. It is not about surrendering to fate, and it does not replace research, professional judgement or action. Used responsibly, it offers an additional time-and-situation lens for people facing complex choices.",
+      "When someone feels lost, clarity can restore movement. When a person has been stuck for a long time, recognising the right direction and timing can bring back confidence, purpose and hope.",
+      "At Qimen Strategy, our work is to help clients see the bigger picture before they decide—so that uncertainty can become direction, and direction can become deliberate action.",
+      "📩 Book a Confidential Career & Strategic Decision Consultation",
+    ],
+  },
+  {
     slug: "when-a-small-signal-should-not-be-ignored-qimen-strategy-singapore",
     title: "When a Small Signal Should Not Be Ignored",
     excerpt:
