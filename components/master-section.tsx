@@ -92,7 +92,7 @@ export default function MasterSection() {
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-12 h-px bg-[oklch(0.60_0.08_65)]" />
                 <span className="text-[0.6rem] tracking-[0.25em] uppercase text-[oklch(0.60_0.08_65)] font-semibold" style={{ fontFamily: "var(--font-lato), sans-serif" }}>
-                  {t("关于启明大师", "About Master Qiming")}
+                  {t("关于启明大师", "About Huang Qiming")}
                 </span>
               </div>
               <h2

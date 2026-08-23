@@ -4,7 +4,7 @@ const signatureZh =
   "奇明風水由黄启明大师主理，专注空间能量净化、奇门遁甲、风水布局、八字命理与生命场域调和。启明大师通过「启明空间能量调和系统」，帮助客户净化居家与办公空间，恢复清明、安定与支持力。";
 
 const signatureEn =
-  "QiMing Feng Shui is led by Master Huang Qiming in Singapore, specialising in Space Energy Purification, Qi Men Dun Jia, Feng Shui layout, Bazi and life-field harmonisation. Through the Qiming Space Energy Alignment System, Master Qiming helps clients restore clarity, steadiness and supportive energy in homes, offices and personal life.";
+  "QiMing Feng Shui is led by Master Huang Qiming in Singapore, specialising in Space Energy Purification, Qi Men Dun Jia, Feng Shui layout, Bazi and life-field harmonisation. Through the Qiming Space Energy Alignment System, Huang Qiming helps clients restore clarity, steadiness and supportive energy in homes, offices and personal life.";
 
 export const spaceEnergyBlogPosts: InsightPost[] = [
   {
@@ -54,7 +54,7 @@ export const spaceEnergyBlogPosts: InsightPost[] = [
       "When this continues, the issue may not only be the mattress, light, noise or stress. The space itself may be draining the person. From a Feng Shui and energy perspective, the bedroom is not just another room. It is where energy restores, emotions settle, and the mind regains clarity.",
       "If the bedroom field is unstable or heavy, a person may sleep for hours but still feel unrested. In space energy purification, Master Huang Qiming observes whether the bed position is affected, whether the bedroom gathers or leaks energy, whether door and window flow disturbs rest, whether the space feels heavy, whether the occupant’s state conflicts with the space, and whether timing and direction support long-term rest.",
       "This is the heart of the Qiming Space Energy Alignment System: not only reading the physical environment, but the relationship between space and person.",
-      "One client had long felt that her space was oppressive and that her rest at night was unstable. After Master Qiming assessed her home and conducted space energy purification, she returned the next morning to express gratitude. She shared that her rest had improved and that she felt much lighter and more relaxed.",
+      "One client had long felt that her space was oppressive and that her rest at night was unstable. After Huang Qiming assessed her home and conducted space energy purification, she returned the next morning to express gratitude. She shared that her rest had improved and that she felt much lighter and more relaxed.",
       "This shows that sleep and spatial energy are often deeply connected. When the space settles, sleep can settle. When the space keeps draining, the person may wake up even more tired.",
       signatureZh,
       signatureEn
@@ -105,7 +105,7 @@ export const spaceEnergyBlogPosts: InsightPost[] = [
       "English｜Sometimes emotional heaviness is not simply a weak personality. It may not only be stress. When a person stays for too long in a heavy, chaotic or oppressive space, emotions can gradually be affected.",
       "In some places, people become irritated. In some rooms, they feel low. In some homes, arguments happen easily. In some offices, energy feels blocked. Space affects people. This is not merely a mystical slogan, but a long-observed pattern.",
       "Master Huang Qiming believes that space absorbs human emotion and can also influence it. A space filled with long-term conflict, fear, stress or pressure may form a field. People repeatedly entering that field may be affected internally.",
-      "This is why space energy purification is not only about Feng Shui. It is also connected to emotions, sleep and relationships. Within the Qiming Space Energy Alignment System, Master Qiming observes where the space feels heaviest, whether emotional issues concentrate in certain rooms, whether conflict relates to layout and movement flow, whether the occupants are being drained by the space, and whether purification should come before layout adjustment.",
+      "This is why space energy purification is not only about Feng Shui. It is also connected to emotions, sleep and relationships. Within the Qiming Space Energy Alignment System, Huang Qiming observes where the space feels heaviest, whether emotional issues concentrate in certain rooms, whether conflict relates to layout and movement flow, whether the occupants are being drained by the space, and whether purification should come before layout adjustment.",
       "After space purification, many clients do not first speak about wealth. They say: the home feels lighter, my heart feels less tense, I am not as afraid at night, and I finally slept peacefully. These responses matter because the first value of purification is often emotional settling.",
       "The purpose of Feng Shui is not to create fear. True Feng Shui helps people live with steadiness, clarity and strength.",
       signatureZh,

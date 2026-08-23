@@ -12,7 +12,7 @@ export const spaceClearingPremiumPageContent: ServicePageContent = {
   heroSubtitleEn:
     "One of QiMing Feng Shui’s most distinctive core capabilities. With 16+ years of practice in Qi Men Dun Jia, Feng Shui, Bazi and energy cultivation, Master Huang Qiming helps clients purify the field of a space, restore inner steadiness, and return to a clearer, calmer and more empowered state of life.",
   trustPointsZh: ["启明大师核心天赋", "16+年修行与实证", "空间场域净化", "睡眠 · 情绪 · 状态调和", "$288 起"],
-  trustPointsEn: ["Master Qiming’s Core Gift", "16+ Years Practice", "Space Field Purification", "Sleep · Emotion · State Alignment", "From $288"],
+  trustPointsEn: ["Huang Qiming’s Core Gift", "16+ Years Practice", "Space Field Purification", "Sleep · Emotion · State Alignment", "From $288"],
   priceZh: "$288 起",
   priceEn: "From $288",
   symptomsTitleZh: "什么样的空间，可能需要净化与调和？",
@@ -56,11 +56,11 @@ export const spaceClearingPremiumPageContent: ServicePageContent = {
     "People who are sensitive to space energy and intuitively feel the environment needs adjustment."
   ],
   approachTitleZh: "启明大师如何进行空间能量净化？",
-  approachTitleEn: "How does Master Qiming approach space energy purification?",
+  approachTitleEn: "How does Huang Qiming approach space energy purification?",
   approachIntroZh:
     "真正的空间能量净化，不是简单摆放物品，也不是制造神秘感。启明大师会综合奇门遁甲、风水格局、八字命理、时间方位与现场感知，判断空间与人的关系，找出让人沉重、压抑、不安或耗损的关键点。",
   approachIntroEn:
-    "True space energy purification is not merely placing objects or creating mystery. Master Qiming combines Qi Men Dun Jia, Feng Shui structure, Bazi, timing, direction and on-site perception to understand the relationship between the space and its occupants, identifying the points that create heaviness, pressure, unease or energy drain.",
+    "True space energy purification is not merely placing objects or creating mystery. Huang Qiming combines Qi Men Dun Jia, Feng Shui structure, Bazi, timing, direction and on-site perception to understand the relationship between the space and its occupants, identifying the points that create heaviness, pressure, unease or energy drain.",
   steps: [
     {
       titleZh: "空间场域诊断",
@@ -96,7 +96,7 @@ export const spaceClearingPremiumPageContent: ServicePageContent = {
       bodyZh:
         "一位六十多岁的女士长期感觉身体沉重、腰部不适，夜间睡眠也不安稳。启明大师判断其居住空间后，为她进行空间能量净化与气场调和。客户第二天专程前来表达感谢，反馈当晚休息明显变好，身体紧绷感减轻，整个人感觉轻松了许多。",
       bodyEn:
-        "A lady in her sixties had long felt bodily heaviness and discomfort, with unstable sleep at night. After Master Qiming assessed her living space and performed space energy purification and field alignment, she returned the next morning to express gratitude, sharing that her rest was noticeably better and her body felt more relaxed."
+        "A lady in her sixties had long felt bodily heaviness and discomfort, with unstable sleep at night. After Huang Qiming assessed her living space and performed space energy purification and field alignment, she returned the next morning to express gratitude, sharing that her rest was noticeably better and her body felt more relaxed."
     },
     {
       titleZh: "家中恐惧感与睡眠问题的改善反馈",
@@ -112,7 +112,7 @@ export const spaceClearingPremiumPageContent: ServicePageContent = {
       bodyZh:
         "一位女士多年前在海外旅行时发生意外，之后长期感觉身体紧绷、精神面貌下降。启明大师根据她的个人状态与空间气场进行净化调整后，客户反馈身体紧绷感明显减轻，站立时感觉更自然，精神面貌也更好，整个人像重新恢复了轻松感。",
       bodyEn:
-        "A woman experienced an accident during overseas travel years ago and later felt long-term physical tension and declining vitality. After Master Qiming aligned her personal state with the space field, she shared that her body felt less tense, standing felt more natural, and her overall energy and appearance improved."
+        "A woman experienced an accident during overseas travel years ago and later felt long-term physical tension and declining vitality. After Huang Qiming aligned her personal state with the space field, she shared that her body felt less tense, standing felt more natural, and her overall energy and appearance improved."
     }
   ],
   faqTitleZh: "常见问题",
@@ -154,7 +154,7 @@ export const spaceClearingPremiumPageContent: ServicePageContent = {
   ctaBodyZh:
     "如果你长期感觉家中压抑、睡眠不稳、情绪不安，或事业与生活状态在某个空间中持续下滑，也许不是你不够努力，而是你所处的空间正在持续消耗你。启明大师通过奇门遁甲、风水布局、八字命理与空间能量净化，帮助你重新判断空间问题，恢复环境的清明、安定与支持力。",
   ctaBodyEn:
-    "If your home feels oppressive, your sleep is unstable, your emotions feel unsettled, or your life and work state keeps declining in a particular space, the issue may not be a lack of effort. The space itself may be draining you. Master Qiming combines Qi Men Dun Jia, Feng Shui, Bazi and space energy purification to assess the issue and restore clarity, steadiness and support to the environment.",
+    "If your home feels oppressive, your sleep is unstable, your emotions feel unsettled, or your life and work state keeps declining in a particular space, the issue may not be a lack of effort. The space itself may be draining you. Huang Qiming combines Qi Men Dun Jia, Feng Shui, Bazi and space energy purification to assess the issue and restore clarity, steadiness and support to the environment.",
   waTextZh: "你好启明大师，我想咨询空间能量净化与空间场域调和。",
-  waTextEn: "Hello Master Qiming, I would like to consult about space energy purification and space field alignment."
+  waTextEn: "Hello Huang Qiming, I would like to consult about space energy purification and space field alignment."
 };

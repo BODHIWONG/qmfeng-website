@@ -1,8 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  typescript: {
-    ignoreBuildErrors: true,
-  },
   images: {
     unoptimized: true,
   },
@@ -23,11 +20,23 @@ const nextConfig = {
       ["qi-men-dun-jia-ancient-strategic-wisdom-qiming-feng-shui", "/insights/what-is-qi-men-dun-jia-singapore"],
     ];
 
-    return insightRedirects.map(([slug, destination]) => ({
-      source: `/insights/${slug}`,
-      destination,
-      permanent: true,
-    }));
+    return [
+      {
+        source: "/appointment",
+        destination: "/contact",
+        permanent: true,
+      },
+      {
+        source: "/appointment/thank-you",
+        destination: "/contact-success",
+        permanent: true,
+      },
+      ...insightRedirects.map(([slug, destination]) => ({
+        source: `/insights/${slug}`,
+        destination,
+        permanent: true,
+      })),
+    ];
   },
 };
 

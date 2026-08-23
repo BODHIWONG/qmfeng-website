@@ -54,7 +54,7 @@ export default function InsightsHomeCTA() {
               </p>
 
               <p className="text-sm leading-7 text-[oklch(0.76_0.02_70)]">
-                These articles help you understand whether your issue is mainly about timing, space, personal pattern, relationship energy or business risk — before booking a deeper consultation with Master Qiming.
+                These articles help you understand whether your issue is mainly about timing, space, personal pattern, relationship energy or business risk — before booking a deeper consultation with Huang Qiming.
               </p>
             </div>
           </div>

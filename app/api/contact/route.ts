@@ -16,6 +16,7 @@ const MAX_BODY_BYTES = 24_000;
 const RATE_LIMIT_WINDOW_MS = 10 * 60 * 1000;
 const RATE_LIMIT_MAX = 5;
 const IDEMPOTENCY_TTL_MS = 10 * 60 * 1000;
+const EXTERNAL_REQUEST_TIMEOUT_MS = 8_000;
 
 type CachedResponse = {
   expiresAt: number;
@@ -76,13 +77,23 @@ function idempotencyKey(submission: ConsultationSubmission, ip: string) {
     .digest("hex")}`;
 }
 
+function httpsWebhookUrl(value: string) {
+  let endpoint: URL;
+  try {
+    endpoint = new URL(value);
+  } catch {
+    throw new Error("LEAD_DESTINATION_INVALID");
+  }
+  if (endpoint.protocol !== "https:") throw new Error("LEAD_DESTINATION_INVALID");
+  return endpoint;
+}
+
 async function submitToLegacyWebhook(submission: ConsultationSubmission, reference: string) {
   const target = process.env.QIMEN_LEADS_WEBHOOK_URL?.trim() || process.env.APPOINTMENT_WEBHOOK_URL?.trim();
   if (!target) throw new Error("LEAD_DESTINATION_NOT_CONFIGURED");
 
   const source = deriveLeadSource(submission.attribution);
-  const endpoint = new URL(target);
-  const fields: Record<string, string> = {
+  const payload = {
     name: submission.name,
     whatsapp: submission.phone,
     phone: submission.phone,
@@ -93,20 +104,33 @@ async function submitToLegacyWebhook(submission: ConsultationSubmission, referen
     source,
     pageUrl: submission.attribution.pageUrl || submission.attribution.pagePath,
     referrer: submission.attribution.referrer,
-    utm_source: submission.attribution.utmSource,
-    utm_medium: submission.attribution.utmMedium,
-    utm_campaign: submission.attribution.utmCampaign,
-    gclid: submission.attribution.gclid,
+    firstLandingPage: submission.attribution.firstLandingPage,
+    firstReferrer: submission.attribution.firstReferrer,
+    utm: {
+      source: submission.attribution.utmSource,
+      medium: submission.attribution.utmMedium,
+      campaign: submission.attribution.utmCampaign,
+      term: submission.attribution.utmTerm,
+      content: submission.attribution.utmContent,
+    },
+    clickIds: {
+      gclid: submission.attribution.gclid,
+      gbraid: submission.attribution.gbraid,
+      wbraid: submission.attribution.wbraid,
+    },
     reference,
-    consent: "yes",
+    consent: true,
     submittedAt: new Date().toISOString(),
   };
 
-  Object.entries(fields).forEach(([key, value]) => {
-    if (value) endpoint.searchParams.set(key, value);
+  const response = await fetch(httpsWebhookUrl(target), {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify(payload),
+    cache: "no-store",
+    signal: AbortSignal.timeout(EXTERNAL_REQUEST_TIMEOUT_MS),
   });
 
-  const response = await fetch(endpoint.toString(), { method: "GET", cache: "no-store" });
   if (!response.ok) throw new Error(`LEAD_WEBHOOK_FAILED:${response.status}`);
 }
 
@@ -121,6 +145,7 @@ async function processSubmission(
       destination: "zoho_crm",
       action: result.action,
       leadSource: result.leadSource,
+      identityConflict: result.identityConflict,
     });
     return { ok: true, reference, duplicate: result.action === "update" };
   }
@@ -144,7 +169,21 @@ export async function POST(request: NextRequest) {
     );
   }
 
-  const raw = await request.json().catch(() => null);
+  const rawText = await request.text();
+  if (Buffer.byteLength(rawText, "utf8") > MAX_BODY_BYTES) {
+    return NextResponse.json<ConsultationSubmissionResponse>(
+      { ok: false, error: "The enquiry is too large. Please shorten the message and try again." },
+      { status: 413 }
+    );
+  }
+
+  let raw: unknown;
+  try {
+    raw = JSON.parse(rawText);
+  } catch {
+    raw = null;
+  }
+
   if (!raw || typeof raw !== "object" || Array.isArray(raw)) {
     return NextResponse.json<ConsultationSubmissionResponse>(
       { ok: false, error: "Please check the form and try again." },
@@ -154,11 +193,11 @@ export async function POST(request: NextRequest) {
 
   const rawRecord = raw as Record<string, unknown>;
   if (typeof rawRecord.website === "string" && rawRecord.website.trim()) {
-    return NextResponse.json<ConsultationSubmissionResponse>({ ok: true, reference: referenceId() });
+    return NextResponse.json<ConsultationSubmissionResponse>({ ok: true });
   }
 
   const validation = validateConsultationSubmission(raw);
-  if (!validation.success) {
+  if (validation.success === false) {
     return NextResponse.json<ConsultationSubmissionResponse>(
       {
         ok: false,

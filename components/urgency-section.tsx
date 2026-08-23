@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { useLanguage } from "@/contexts/language-context";
 import { Clock, Zap, ArrowRight } from "lucide-react";
 
-const WA_LINK = "https://wa.me/6589418791?text=Hello%20Master%20Huang%2C%20I%27d%20like%20to%20book%20a%20consultation.";
+const WA_LINK = "https://wa.me/6589593499?text=Hello%20Master%20Huang%2C%20I%27d%20like%20to%20book%20a%20consultation.";
 
 export default function UrgencySection() {
   const { t } = useLanguage();

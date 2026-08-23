@@ -199,7 +199,7 @@ export default function ProductsSection() {
             </h3>
             <p className="text-sm leading-relaxed mb-6" style={{ fontFamily: "var(--font-lato), var(--font-noto-sans), sans-serif", color: "oklch(0.75 0.03 70)" }}>
               {t("奇明风水专属财神像，手持「奇明风水」卷轴，招财进宝，事业亨通。经启明大师开光加持，是镇宅旺财的首选神器。",
-                 "Exclusive Qiming Feng Shui God of Wealth statue holding the \"Qiming Feng Shui\" scroll. Blessed by Master Qiming for prosperity, success, and home protection.")}
+                 "Exclusive Qiming Feng Shui God of Wealth statue holding the \"Qiming Feng Shui\" scroll. Blessed by Huang Qiming for prosperity, success, and home protection.")}
             </p>
             <div className="mb-6 border-l border-[oklch(0.60_0.08_65)] pl-4">
               <p className="text-[0.58rem] font-bold uppercase tracking-[0.18em] text-[oklch(0.55_0.04_70)]" style={{ fontFamily: "var(--font-lato), sans-serif" }}>
@@ -343,7 +343,7 @@ export default function ProductsSection() {
         <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ delay: 0.4, duration: 0.7 }}
           className="mt-8 text-center text-xs text-[oklch(0.55_0.02_65)] max-w-xl mx-auto" style={{ fontFamily: "var(--font-lato), var(--font-noto-sans), sans-serif" }}>
           {t("* 价格根据材质、成色、尺寸、五行需求与空间用途而定。所有能量器物均经启明大师根据命理与风水需求进行个性化推荐，非标准化销售。",
-             "* Prices depend on material, grade, size, elemental needs and spatial purpose. All auspicious catalysts are personally recommended by Master Qiming based on individual destiny and Feng Shui needs — not standardized retail.")}
+             "* Prices depend on material, grade, size, elemental needs and spatial purpose. All auspicious catalysts are personally recommended by Huang Qiming based on individual destiny and Feng Shui needs — not standardized retail.")}
         </motion.p>
       </div>
     </section>

@@ -4,6 +4,13 @@ export const runtime = "nodejs";
 
 const DEFAULT_COURSE_FROM = "Qimen Strategy <registration@qmfeng.com>";
 const DEFAULT_REPLY_TO = "info@qmfeng.com";
+const EXTERNAL_REQUEST_TIMEOUT_MS = 8_000;
+
+function httpsWebhookUrl(value: string) {
+  const endpoint = new URL(value);
+  if (endpoint.protocol !== "https:") throw new Error("Webhook URL must use HTTPS.");
+  return endpoint;
+}
 
 type Payload = {
   registrantName?: string;
@@ -202,32 +209,29 @@ function emailHtml(record: Record<string, unknown>, internal: boolean) {
 }
 
 async function dedicated(url: string, record: Record<string, unknown>) {
-  const response = await fetch(url, {
+  const response = await fetch(httpsWebhookUrl(url), {
     method: "POST",
     headers: { "content-type": "application/json" },
     body: JSON.stringify(record),
     cache: "no-store",
+    signal: AbortSignal.timeout(EXTERNAL_REQUEST_TIMEOUT_MS),
   });
   if (!response.ok) throw new Error(`Course webhook returned ${response.status}`);
   return "course_webhook";
 }
 
 async function lead(url: string, record: Record<string, unknown>) {
-  const endpoint = new URL(url);
-  endpoint.searchParams.set("name", String(record.registrantName || ""));
-  endpoint.searchParams.set("whatsapp", String(record.phone || ""));
-  endpoint.searchParams.set("email", String(record.email || ""));
-  endpoint.searchParams.set("service", `${record.courseName} | ${record.courseBatch}`);
-  endpoint.searchParams.set("message", message(record));
-  endpoint.searchParams.set("source", "Qimen Course Registration");
-  endpoint.searchParams.set("registration_id", String(record.registrationId || ""));
-  endpoint.searchParams.set("course_id", String(record.courseId || ""));
-  endpoint.searchParams.set("batch_id", String(record.batchId || ""));
-  endpoint.searchParams.set("registration_mode", String(record.registrationMode || ""));
-  endpoint.searchParams.set("policy_accepted", record.acceptedPolicy ? "yes" : "no");
-  endpoint.searchParams.set("notification_email", clean(process.env.COURSE_ADMIN_EMAIL, 300) || DEFAULT_REPLY_TO);
-  endpoint.searchParams.set("payload", JSON.stringify(record));
-  const response = await fetch(endpoint.toString(), { method: "GET", cache: "no-store" });
+  const response = await fetch(httpsWebhookUrl(url), {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify({
+      ...record,
+      source: "Qimen Course Registration",
+      notificationEmail: clean(process.env.COURSE_ADMIN_EMAIL, 300) || DEFAULT_REPLY_TO,
+    }),
+    cache: "no-store",
+    signal: AbortSignal.timeout(EXTERNAL_REQUEST_TIMEOUT_MS),
+  });
   if (!response.ok) throw new Error(`Lead webhook returned ${response.status}`);
   return "lead_webhook";
 }

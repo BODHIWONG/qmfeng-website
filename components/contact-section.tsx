@@ -106,7 +106,7 @@ export default function ContactSection() {
               <p className="text-sm leading-relaxed" style={{ fontFamily: "var(--font-lato), var(--font-noto-sans), sans-serif", color: "oklch(0.60 0.03 65)" }}>
                 {t(
                   "不同于线上咨询，我们在新加坡Bedok拥有实体工作室。亲临其中，您可以感受到真实的能量流动，看到铜师傅艺术品的精妙工艺，与大师进行深度的面对面沟通。这是我们与众不同的承诺。",
-                  "Unlike online-only services, we maintain a physical studio in Bedok, Singapore. Visit in person to experience real energy flow, see Tongshifu's exquisite craftsmanship, and engage in meaningful face-to-face consultation with Master Qiming."
+                  "Unlike online-only services, we maintain a physical studio in Bedok, Singapore. Visit in person to experience real energy flow, see Tongshifu's exquisite craftsmanship, and engage in meaningful face-to-face consultation with Huang Qiming."
                 )}
               </p>
             </motion.div>
@@ -208,7 +208,7 @@ export default function ContactSection() {
           <p className="text-xs leading-relaxed italic text-center max-w-2xl mx-auto" style={{ fontFamily: "var(--font-lato), var(--font-noto-sans), sans-serif", color: "oklch(0.45 0.02 60)" }}>
             {t(
               "启明大师坚持「互利共赢」原则：以真才实学服务社会，拒绝恐吓式营销与过度承诺。咨询结果仅供参考，最终决策权在您。",
-              "Master Qiming upholds the principle of mutual benefit: serving society with genuine expertise, refusing fear-based marketing and over-promising. Consultation results are for reference only; final decision-making authority rests with you."
+              "Huang Qiming upholds the principle of mutual benefit: serving society with genuine expertise, refusing fear-based marketing and over-promising. Consultation results are for reference only; final decision-making authority rests with you."
             )}
           </p>
         </motion.div>
