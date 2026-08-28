@@ -22,30 +22,26 @@ const baseUrl = "https://www.qmfeng.com";
 
 const localizedRoutes = [
   "",
-  "/personal-advisory",
-  "/decision",
-  "/relationship-clarity-reading-singapore",
   "/enterprise-strategic-advisory",
-  "/commercial-feng-shui",
-  "/courses",
+  "/chairman-founder-advisory",
+  "/family-business-succession",
+  "/personal-advisory",
   "/insights",
   "/founder",
   "/contact",
 ];
 
-const localizedPages = ["en", "zh"].flatMap((locale) =>
-  localizedRoutes.map((path) => `/${locale}${path}`)
-);
+const localizedPages = ["en", "zh"].flatMap((locale) => localizedRoutes.map((path) => `/${locale}${path}`));
 
 const legacyAndSupportingPages = [
   "/",
   "/enterprise-strategic-advisory",
-  "/commercial-feng-shui",
-  "/founder-wealth-investment-advisory",
-  "/executive-career-transition-advisory",
+  "/chairman-founder-advisory",
+  "/family-business-succession",
   "/personal-advisory",
   "/decision",
   "/relationship-clarity-reading-singapore",
+  "/commercial-feng-shui",
   "/courses",
   "/qi-men-dun-jia-course-singapore",
   "/singapore-qi-men-dun-jia-consultant",
@@ -83,27 +79,26 @@ const allPosts = [
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
+  const priorityAdvisory = [
+    "/enterprise-strategic-advisory",
+    "/chairman-founder-advisory",
+    "/family-business-succession",
+    "/personal-advisory",
+    "/contact",
+  ];
 
   const pageEntries = corePages.map((path) => {
     const isLocalized = path.startsWith("/en") || path.startsWith("/zh");
     const isHomepage = path === "/en" || path === "/zh";
-    const isCoreAdvisory = [
-      "/enterprise-strategic-advisory",
-      "/commercial-feng-shui",
-      "/personal-advisory",
-      "/decision",
-      "/relationship-clarity-reading-singapore",
-      "/contact",
-    ].some((route) => path.endsWith(route));
-    const isCourse = path.includes("course") || path.endsWith("/courses");
+    const isPriorityAdvisory = priorityAdvisory.some((route) => path.endsWith(route));
     const isPolicy = ["/privacy", "/terms", "/course-policy"].includes(path);
-    const isFrequentlyUpdated = isHomepage || path.endsWith("/courses") || path.endsWith("/insights");
+    const isFrequentlyUpdated = isHomepage || path.endsWith("/insights");
 
     const entry: MetadataRoute.Sitemap[number] = {
       url: `${baseUrl}${path}`,
       lastModified: now,
       changeFrequency: isFrequentlyUpdated ? "weekly" : isPolicy ? "yearly" : "monthly",
-      priority: isHomepage ? 1 : isLocalized && (isCoreAdvisory || isCourse) ? 0.9 : path === "/" ? 0.7 : isCoreAdvisory || isCourse ? 0.75 : isPolicy ? 0.4 : 0.7,
+      priority: isHomepage ? 1 : isLocalized && isPriorityAdvisory ? 0.9 : path === "/" ? 0.7 : isPriorityAdvisory ? 0.78 : isPolicy ? 0.4 : 0.55,
     };
 
     const localeMatch = path.match(/^\/(en|zh)(.*)$/);
@@ -124,7 +119,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${baseUrl}/insights/${post.slug}`,
     lastModified: post.date ? new Date(post.date) : now,
     changeFrequency: "monthly" as const,
-    priority: post.category.toLowerCase().includes("business") ? 0.7 : 0.6,
+    priority: post.category.toLowerCase().includes("business") ? 0.7 : 0.55,
   })) satisfies MetadataRoute.Sitemap;
 
   return [...pageEntries, ...insightEntries];
