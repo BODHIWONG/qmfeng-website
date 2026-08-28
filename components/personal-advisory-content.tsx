@@ -78,8 +78,16 @@ export default function PersonalAdvisoryContent() {
                 </article>
               ))}
             </div>
-            <div className="mt-12 border-l-2 border-[#b88943] bg-white px-6 py-5 text-sm leading-7 text-[#5d4d3c]">
-              {t("S$168 八字入门服务已从官网咨询体系中取消。企业、董事长与家族企业需求不采用公开价目表，请申请私密咨询后按项目范围评估。", "The former S$168 entry Bazi service has been removed from the consultation structure. Enterprise, Chairman and Family Business engagements are scoped privately rather than listed on a public rate card.")}
+
+            <div className="mt-12 grid gap-5 border-t border-[#d8c6aa] pt-8 md:grid-cols-2">
+              <div className="bg-white px-6 py-5 text-sm leading-7 text-[#5d4d3c]">
+                <p className="font-semibold text-[#7f5a28]">{t("个人决策咨询", "Decision Consultation")}</p>
+                <p className="mt-2">{t("三档服务按决策复杂度与影响程度匹配，而不是简单按咨询时长区分。", "The three consultation levels are matched to decision complexity and impact, rather than simply to session length.")}</p>
+              </div>
+              <div className="bg-[#17130f] px-6 py-5 text-sm leading-7 text-white/68">
+                <p className="font-semibold text-[#d6ad63]">{t("企业与家族企业顾问", "Enterprise & Family Business Advisory")}</p>
+                <p className="mt-2">{t("企业、董事长与家族企业项目根据实际决策范围、复杂度与合作深度进行私密评估。", "Enterprise, Chairman and Family Business engagements are scoped privately according to the decision context, complexity and depth of engagement.")}</p>
+              </div>
             </div>
           </div>
         </section>
