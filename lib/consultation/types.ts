@@ -1,5 +1,7 @@
 export const CONSULTATION_TYPES = [
   "Business Advisory",
+  "Chairman & Founder Advisory",
+  "Family Business & Succession",
   "Personal Decision",
   "Relationship",
   "Career",
