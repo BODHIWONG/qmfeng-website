@@ -3,9 +3,9 @@ import HomePage from "@/app/page";
 import { FixedLanguageProvider } from "@/contexts/language-context";
 
 export const metadata: Metadata = {
-  title: "启明遁甲新加坡｜个人咨询、企业战略顾问与奇门课程",
+  title: "启明遁甲 Qimen Strategy Singapore | 战略决策顾问",
   description:
-    "启明遁甲立足新加坡，提供个人咨询、企业战略顾问与奇门遁甲实战课程，可预约Bedok面谈或线上咨询。",
+    "为企业主、领导者与家族企业提供战略决策顾问服务，融合现实商业经验与奇门决策分析，聚焦战略、人事、时机与传承。",
   alternates: {
     canonical: "https://www.qmfeng.com/zh",
     languages: {
