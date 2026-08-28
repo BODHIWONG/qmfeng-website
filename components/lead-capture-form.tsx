@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Link from "next/link";
 import ConsultationForm from "@/components/consultation-form";
 import { useLanguage } from "@/contexts/language-context";
 
@@ -23,34 +22,28 @@ export default function LeadCaptureForm() {
             transition={{ duration: 0.6 }}
           >
             <p className="mb-4 text-xs font-bold uppercase tracking-[0.28em] text-[oklch(0.72_0.12_70)]">
-              {t("咨询申请", "Consultation Enquiry")}
+              {t("私密沟通", "Private Conversation")}
             </p>
             <h2
               className="mb-5 text-3xl font-bold leading-tight text-white sm:text-4xl md:text-5xl"
               style={{ fontFamily: "var(--font-cormorant), var(--font-noto-serif), serif" }}
             >
               {t(
-                "先说明你的真实处境，再匹配适合的咨询入口。",
-                "Share the real situation first, then match the appropriate consultation pathway."
+                "先说明你正在面对的决定，再判断最适合的顾问方式。",
+                "Start with the decision. Then determine the right advisory pathway."
               )}
             </h2>
             <p className="max-w-xl text-base leading-8 text-white/72 md:text-lg">
               {t(
-                "首次咨询只需要姓名、联系方式、咨询类型和简要说明。出生资料或其他敏感信息，会在确认预约后按实际需要另行收集。",
-                "The first enquiry only requires your name, contact details, consultation type and a brief message. Birth details or other sensitive information are requested only after booking confirmation when genuinely required."
+                "首次沟通只需要姓名、联系方式、咨询方向和简要情况。我们会先了解决策背景、涉及人员与时间节点，再判断适合单次决策咨询、企业专项顾问，或长期顾问关系。",
+                "The first conversation only requires your contact details and a brief description of the situation. We first understand the decision context, people involved and timing, then determine whether a focused decision consultation, enterprise engagement or ongoing advisory relationship is appropriate."
               )}
             </p>
             <div className="mt-7 space-y-3 border-l-2 border-[#d6ad63] pl-5 text-sm leading-7 text-white/62">
-              <p>{t("提交后，我们会在一个工作日内联系你。", "We will contact you within one business day after submission.")}</p>
-              <p>{t("紧急事项可以直接通过WhatsApp联系。", "For urgent enquiries, contact us directly on WhatsApp.")}</p>
-              <p>{t("课程正式报名仍使用独立课程报名页面。", "Formal course registration remains on the dedicated course registration page.")}</p>
+              <p>{t("企业、董事长与家族企业需求均按实际范围私密评估。", "Enterprise, Chairman and Family Business engagements are scoped privately.")}</p>
+              <p>{t("个人决策咨询采用 S$398 / S$698 / S$998 三档。", "Decision Consultation is available at S$398 / S$698 / S$998.")}</p>
+              <p>{t("如事项紧急，可直接通过 WhatsApp 联系。", "For urgent matters, you may contact us directly on WhatsApp.")}</p>
             </div>
-            <Link
-              href="/course-registration?course=qimen-foundation&batch=2026-09-19"
-              className="mt-7 inline-flex border border-[#d6ad63]/60 px-5 py-3 text-sm font-semibold text-[#f4dfb0] hover:bg-[#d6ad63]/10"
-            >
-              {t("奇门课程报名 →", "Qi Men Course Registration →")}
-            </Link>
           </motion.div>
 
           <motion.div
