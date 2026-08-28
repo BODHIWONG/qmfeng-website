@@ -5,37 +5,34 @@ import { useLanguage } from "@/contexts/language-context";
 import { useLocalizedHref } from "@/hooks/use-localized-href";
 
 const LOGO_URL = "/logo-qimen-strategy.jpg";
-const COURSE_REGISTRATION_LINK = "/course-registration?course=qimen-foundation&batch=2026-09-19";
 const CONSULTATION_WHATSAPP =
   "https://wa.me/6589593499?text=Hi%20Qimen%20Strategy%2C%20I%27d%20like%20to%20ask%20about%20a%20consultation.%20My%20current%20situation%20is%3A";
 
-const academyLinks = [
-  { href: "/courses", zh: "课程体系", en: "Course Pathways" },
-  { href: "/qi-men-dun-jia-course-singapore", zh: "奇门遁甲基础课程", en: "Qi Men Foundation Course" },
-  { href: COURSE_REGISTRATION_LINK, zh: "选择班次并报名", en: "Select Batch & Register" },
-  { href: "/course-policy", zh: "课程报名政策", en: "Course Registration Policy" },
+const decisionLinks = [
+  { href: "/decision-consultation", zh: "决策咨询 · S$398 / S$698 / S$998", en: "Decision Consultation · S$398 / S$698 / S$998" },
+  { href: "/personal-advisory", zh: "个人重大决策", en: "Individual Major Decisions" },
+  { href: "/relationship-clarity-reading-singapore", zh: "关系与婚姻决策", en: "Relationship & Marriage Decisions" },
+  { href: "/executive-career-transition-advisory", zh: "事业与高管转型", en: "Career & Executive Transition" },
 ];
 
-const businessLinks = [
-  { href: "/enterprise-strategic-advisory", zh: "企业战略顾问与长期陪跑", en: "Business Strategic Advisory" },
-  { href: "/commercial-feng-shui", zh: "商业风水｜办公室风水", en: "Commercial Feng Shui" },
+const advisoryLinks = [
+  { href: "/enterprise-strategic-advisory", zh: "企业战略顾问与长期陪跑", en: "Enterprise Strategic Advisory" },
+  { href: "/chairman-founder-advisory", zh: "董事长与创始人顾问", en: "Chairman & Founder Advisory" },
+  { href: "/family-business-succession", zh: "家族企业与二代传承", en: "Family Business & Succession" },
   { href: "/founder-wealth-investment-advisory", zh: "财富周期与投资决策", en: "Wealth & Investment Decisions" },
-  { href: "/executive-career-transition-advisory", zh: "高管事业转型", en: "Executive Career Transition" },
 ];
 
-const personalLinks = [
-  { href: "/personal-advisory", zh: "个人咨询总览", en: "Personal Advisory Overview" },
-  { href: "/personal-advisory#bazi-analysis", zh: "八字命理分析 · S$168", en: "Bazi Analysis · S$168" },
-  { href: "/decision", zh: "奇门遁甲咨询 · S$396", en: "Qi Men Consultation · S$396" },
-  { href: "/relationship-clarity-reading-singapore", zh: "感情与婚姻咨询", en: "Relationship & Marriage Advisory" },
-  { href: "/personal-advisory#date-selection", zh: "择日服务", en: "Auspicious Date Selection" },
-  { href: "/personal-advisory#mobile-number", zh: "吉祥手机号码选择", en: "Mobile Number Selection" },
-  { href: "/personal-advisory#home-feng-shui", zh: "居家风水与空间净化", en: "Home Feng Shui & Space Clearing" },
+const methodologyLinks = [
+  { href: "/enterprise-strategic-advisory#methodology", zh: "Reality × Qimen", en: "Reality × Qimen" },
+  { href: "/enterprise-strategic-advisory#methodology", zh: "靶心理论 · Target Theory", en: "Target Theory · 靶心理论" },
+  { href: "/enterprise-strategic-advisory#methodology", zh: "陀螺理论 · Gyroscope Theory", en: "Gyroscope Theory · 陀螺理论" },
+  { href: "/commercial-feng-shui", zh: "战略环境与风水（专业能力）", en: "Strategic Environment & Feng Shui (Capability)" },
 ];
 
 const companyLinks = [
   { href: "/founder", zh: "关于创始人", en: "About the Founder" },
   { href: "/insights", zh: "案例与洞察", en: "Cases & Insights" },
+  { href: "/courses", zh: "奇门教育", en: "Qimen Education" },
   { href: "/privacy", zh: "隐私政策", en: "Privacy Policy" },
   { href: "/terms", zh: "服务条款", en: "Terms of Service" },
 ];
@@ -43,6 +40,16 @@ const companyLinks = [
 export default function Footer() {
   const { t } = useLanguage();
   const localizeHref = useLocalizedHref();
+
+  const renderLinks = (links: typeof decisionLinks) => (
+    <div className="space-y-2.5">
+      {links.map((link) => (
+        <Link key={`${link.href}-${link.zh}`} href={localizeHref(link.href)} className="block text-xs leading-5 text-white/50 transition-colors hover:text-[#d6ad63]">
+          {t(link.zh, link.en)}
+        </Link>
+      ))}
+    </div>
+  );
 
   return (
     <footer className="border-t border-[#c89a45]/20 bg-black">
@@ -58,57 +65,33 @@ export default function Footer() {
             </div>
             <p className="max-w-md text-xs leading-7 text-white/55">
               {t(
-                "启明遁甲立足新加坡，以个人咨询、企业战略顾问与奇门遁甲实战课程为三大核心业务，为个人客户、企业主、专业人士与学习者提供清晰、专业、按需匹配的支持。",
-                "Qimen Strategy is a Singapore-based practice built around three core pillars: personal advisory, business strategic advisory and practical Qi Men Dun Jia education."
+                "启明遁甲立足新加坡，为企业主、领导者与家族企业提供战略决策顾问服务。我们融合现实商业经验与奇门决策分析，从方向、人事、时机、传承与执行等维度，为重大决策提供更完整的视角。",
+                "Qimen Strategy is a Singapore-based strategic decision advisory practice for business owners, leaders and family enterprises, combining practical business experience with Qimen-based decision analysis."
               )}
             </p>
             <p className="mt-5 text-sm font-semibold italic text-[#d6ad63]">
-              {t("决定之前，先看清全局。", "See the Whole Game Before You Decide.")}
+              {t("重大决策之前，先看全局。", "See the Whole Game Before You Decide.")}
             </p>
           </div>
 
           <div>
-            <p className="mb-4 text-[0.6rem] font-bold uppercase tracking-[0.2em] text-[#d6ad63]">{t("个人咨询", "Personal Advisory")}</p>
-            <div className="space-y-2.5">
-              {personalLinks.map((link) => (
-                <Link key={link.href} href={localizeHref(link.href)} className="block text-xs leading-5 text-white/50 transition-colors hover:text-[#d6ad63]">
-                  {t(link.zh, link.en)}
-                </Link>
-              ))}
-            </div>
+            <p className="mb-4 text-[0.6rem] font-bold uppercase tracking-[0.2em] text-[#d6ad63]">{t("决策咨询", "Decision Advisory")}</p>
+            {renderLinks(decisionLinks)}
           </div>
 
           <div>
-            <p className="mb-4 text-[0.6rem] font-bold uppercase tracking-[0.2em] text-[#d6ad63]">{t("企业顾问", "Business Advisory")}</p>
-            <div className="space-y-2.5">
-              {businessLinks.map((link) => (
-                <Link key={link.href} href={localizeHref(link.href)} className="block text-xs leading-5 text-white/50 transition-colors hover:text-[#d6ad63]">
-                  {t(link.zh, link.en)}
-                </Link>
-              ))}
-            </div>
+            <p className="mb-4 text-[0.6rem] font-bold uppercase tracking-[0.2em] text-[#d6ad63]">{t("企业与家族顾问", "Enterprise & Family Advisory")}</p>
+            {renderLinks(advisoryLinks)}
           </div>
 
           <div>
-            <p className="mb-4 text-[0.6rem] font-bold uppercase tracking-[0.2em] text-[#d6ad63]">{t("奇门课程", "Qi Men Courses")}</p>
-            <div className="space-y-2.5">
-              {academyLinks.map((link) => (
-                <Link key={link.href} href={localizeHref(link.href)} className="block text-xs leading-5 text-white/50 transition-colors hover:text-[#d6ad63]">
-                  {t(link.zh, link.en)}
-                </Link>
-              ))}
-            </div>
+            <p className="mb-4 text-[0.6rem] font-bold uppercase tracking-[0.2em] text-[#d6ad63]">{t("方法论与能力", "Methodology & Capabilities")}</p>
+            {renderLinks(methodologyLinks)}
           </div>
 
           <div>
-            <p className="mb-4 text-[0.6rem] font-bold uppercase tracking-[0.2em] text-[#d6ad63]">{t("公司与政策", "Company & Policies")}</p>
-            <div className="space-y-2.5">
-              {companyLinks.map((link) => (
-                <Link key={link.href} href={localizeHref(link.href)} className="block text-xs leading-5 text-white/50 transition-colors hover:text-[#d6ad63]">
-                  {t(link.zh, link.en)}
-                </Link>
-              ))}
-            </div>
+            <p className="mb-4 text-[0.6rem] font-bold uppercase tracking-[0.2em] text-[#d6ad63]">{t("公司与洞察", "Company & Insights")}</p>
+            {renderLinks(companyLinks)}
           </div>
         </div>
 
@@ -120,17 +103,17 @@ export default function Footer() {
           </div>
           <div className="flex flex-col gap-3 md:items-end">
             <a href={CONSULTATION_WHATSAPP} target="_blank" rel="noopener noreferrer" className="inline-flex justify-center bg-[#d6ad63] px-6 py-3 text-sm font-bold uppercase tracking-[0.12em] text-black hover:bg-[#f4dfb0]">
-              {t("WhatsApp咨询", "WhatsApp Consultation")}
+              {t("申请私密咨询", "Request a Private Consultation")}
             </a>
             <div className="flex flex-wrap gap-x-5 gap-y-2 text-xs font-semibold">
               <Link href={localizeHref("/enterprise-strategic-advisory")} className="text-white/48 transition hover:text-[#d6ad63]">
-                {t("了解企业顾问 →", "Business Advisory →")}
+                {t("企业战略顾问 →", "Enterprise Advisory →")}
               </Link>
-              <Link href={localizeHref("/commercial-feng-shui")} className="text-white/48 transition hover:text-[#d6ad63]">
-                {t("了解商业风水 →", "Commercial Feng Shui →")}
+              <Link href={localizeHref("/family-business-succession")} className="text-white/48 transition hover:text-[#d6ad63]">
+                {t("家族企业与传承 →", "Family Business & Succession →")}
               </Link>
-              <Link href={localizeHref("/courses")} className="text-white/48 transition hover:text-[#d6ad63]">
-                {t("查看奇门课程 →", "Qi Men Courses →")}
+              <Link href={localizeHref("/decision-consultation")} className="text-white/48 transition hover:text-[#d6ad63]">
+                {t("决策咨询 →", "Decision Consultation →")}
               </Link>
             </div>
           </div>
@@ -140,8 +123,8 @@ export default function Footer() {
           <p>© {new Date().getFullYear()} Qimen Strategy · 启明遁甲决策智库 · Qiming Feng Shui Wisdom Pte. Ltd.</p>
           <p className="max-w-2xl md:text-right">
             {t(
-              "课程用于学习与能力建设；企业及个人咨询提供判断与行动参考，不保证特定结果，也不替代金融、法律、医疗、心理或其他受监管的专业意见。",
-              "Courses are for learning and capability building. Business and personal advisory provides decision support, does not guarantee specific outcomes and does not replace regulated financial, legal, medical, psychological or other professional advice."
+              "战略与个人咨询提供决策支持，不保证特定结果，也不替代金融、法律、医疗、心理或其他受监管的专业意见。风水仅在与商业空间、办公环境或重要空间决策相关时，作为辅助专业能力纳入分析。",
+              "Strategic and individual advisory provides decision support, does not guarantee specific outcomes and does not replace regulated professional advice. Feng Shui is incorporated only where relevant as a supporting capability for business premises, workplace environments or significant spatial decisions."
             )}
           </p>
         </div>
