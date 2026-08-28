@@ -46,7 +46,7 @@ export default function EnterpriseAdvisoryContent() {
               {t("我们的目标不是替管理层多做一个分析，而是先找到真正的决策靶心，再判断组织是否围绕同一战略轴心稳定推进。", "The aim is not to add one more layer of analysis. It is to identify the true decision bullseye, then assess whether the organisation can move around one coherent strategic axis.")}
             </div>
             <Link href={localizeHref("/contact")} className="mt-9 inline-flex items-center gap-3 bg-[#d6ad63] px-7 py-4 text-sm font-bold uppercase tracking-[0.1em] text-black">
-              {t("申请私密咨询", "Request a Private Consultation")}<ArrowRight size={17} />
+              {t("预约私密沟通", "Request a Private Conversation")}<ArrowRight size={17} />
             </Link>
           </div>
         </section>
@@ -88,21 +88,25 @@ export default function EnterpriseAdvisoryContent() {
         <MethodologySignature />
 
         <section className="bg-[#f6f0e7] px-4 py-20 text-[#241b14] md:py-24">
-          <div className="container mx-auto max-w-6xl grid gap-10 lg:grid-cols-2">
+          <div className="container mx-auto max-w-6xl grid gap-10 lg:grid-cols-2 lg:items-start">
             <div>
-              <p className="text-xs font-bold uppercase tracking-[0.24em] text-[#956b32]">{t("战略环境与风水", "Strategic Environment & Feng Shui")}</p>
-              <h2 className="mt-4 text-3xl font-bold leading-tight md:text-4xl">{t("风水保留为能力，不再作为品牌主分类。", "Feng Shui Remains a Capability, Not a Core Category.")}</h2>
+              <p className="text-xs font-bold uppercase tracking-[0.24em] text-[#956b32]">{t("战略环境", "Strategic Environment")}</p>
+              <h2 className="mt-4 text-3xl font-bold leading-tight md:text-4xl">{t("战略环境，也是决策的一部分。", "The Strategic Environment Is Part of the Decision.")}</h2>
             </div>
-            <p className="text-base leading-8 text-[#5e4c39]">{t("当企业决定涉及办公室搬迁、总部、商业场所或重要空间选择时，必要情况下可把风水与环境因素纳入更广泛的战略判断。它不替代经营、财务或专业技术分析。", "Where a business decision involves office relocation, headquarters, commercial premises or important spatial choices, Feng Shui and environmental considerations may be incorporated where relevant as part of the broader strategic review. They do not replace operational, financial or specialist analysis.")}</p>
+            <div>
+              <p className="text-base leading-8 text-[#5e4c39]">{t("当企业涉及办公室搬迁、总部选址、商业场所或重要空间决策时，可在必要情况下将环境与风水因素纳入更完整的战略判断。它不替代经营、财务或专业技术分析，而是作为决策中的补充视角。", "When a decision involves office relocation, headquarters, commercial premises or another important spatial choice, environmental and Feng Shui considerations may be incorporated where relevant into the broader strategic review. They do not replace operational, financial or specialist analysis; they provide an additional perspective within the decision process.")}</p>
+              <p className="mt-5 text-sm font-semibold leading-7 text-[#8a632f]">{t("空间不是独立产品逻辑，而是在真正影响经营与决策时被纳入分析。", "Environment is considered when it materially affects the business decision, not as a separate product logic.")}</p>
+            </div>
           </div>
         </section>
 
         <section className="px-4 py-20 md:py-24">
           <div className="container mx-auto max-w-5xl text-center">
             <p className="text-xs font-bold uppercase tracking-[0.24em] text-[#d6ad63]">Annual Strategic Advisory</p>
-            <h2 className="mt-4 text-3xl font-semibold text-[#f4dfb0] md:text-4xl">{t("重大决定不只发生一次。", "Major Decisions Rarely Happen Only Once.")}</h2>
-            <p className="mx-auto mt-5 max-w-3xl text-base leading-8 text-white/65">{t("对于持续面对重大经营选择的企业主，可建立年度或长期顾问关系。合作根据问题复杂度、频率与范围定制，不公开固定企业价目表。长期顾问的核心，不是重复起盘，而是围绕战略轴心持续校准关键变量。", "For business owners facing recurring high-stakes decisions, annual or ongoing advisory relationships can be structured according to complexity, frequency and scope rather than a public fixed rate card. The value of ongoing advisory is not repeated chart-reading, but continuous calibration of critical variables around the strategic axis.")}</p>
-            <Link href={localizeHref("/contact")} className="mt-8 inline-flex items-center gap-3 bg-[#d6ad63] px-7 py-4 text-sm font-bold text-black">{t("申请私密咨询", "Request a Private Consultation")}<ArrowRight size={17} /></Link>
+            <h2 className="mt-4 text-3xl font-semibold text-[#f4dfb0] md:text-4xl">{t("重大决策，不只发生一次。", "Major Decisions Rarely Happen Only Once.")}</h2>
+            <p className="mx-auto mt-5 max-w-3xl text-base leading-8 text-white/65">{t("对持续面对战略、投资、合作、关键人员与组织变化的企业主，我们提供长期战略决策顾问关系。长期顾问的价值，不在于重复分析同一个问题，而是在企业不断变化的过程中，持续识别新的决策靶心，并围绕战略轴心校准人、资源、时机与执行。", "For business owners facing recurring decisions across strategy, investment, partnerships, key people and organisational change, we provide ongoing strategic decision advisory. The value is not repeatedly analysing the same question, but continually identifying the next decision bullseye and calibrating people, resources, timing and execution around the strategic axis as the business evolves.")}</p>
+            <p className="mx-auto mt-5 max-w-3xl text-sm font-semibold leading-7 text-white/48">{t("因为环境会变，变量会变，但企业需要保持方向。合作范围根据决策复杂度、频率与实际需要私密制定。", "Conditions change and variables change, but the enterprise still needs direction. Engagement scope is structured privately according to the complexity, frequency and nature of the decisions involved.")}</p>
+            <Link href={localizeHref("/contact")} className="mt-8 inline-flex items-center gap-3 bg-[#d6ad63] px-7 py-4 text-sm font-bold text-black">{t("预约私密沟通", "Request a Private Conversation")}<ArrowRight size={17} /></Link>
             <p className="mt-6 text-xs font-bold uppercase tracking-[0.18em] text-white/40">We advise. You decide.</p>
           </div>
         </section>
