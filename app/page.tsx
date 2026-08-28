@@ -5,6 +5,7 @@ import Navbar from "@/components/navbar";
 import HeroSimple from "@/components/hero-simple";
 import ServiceCards from "@/components/service-cards";
 import RealityQimenSection from "@/components/reality-qimen-section";
+import DecisionModelsSection from "@/components/decision-models-section";
 import CasesSection from "@/components/cases-section";
 import LeadCaptureForm from "@/components/lead-capture-form";
 import FinalCTA from "@/components/final-cta";
@@ -18,6 +19,7 @@ export default function Home() {
         <HeroSimple />
         <ServiceCards />
         <RealityQimenSection />
+        <DecisionModelsSection />
         <CasesSection />
         <LeadCaptureForm />
         <FinalCTA />
