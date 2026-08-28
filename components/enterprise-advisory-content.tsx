@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
+import MethodologySignature from "@/components/methodology-signature";
 import { useLanguage } from "@/contexts/language-context";
 import { useLocalizedHref } from "@/hooks/use-localized-href";
 
@@ -41,6 +42,9 @@ export default function EnterpriseAdvisoryContent() {
             <p className="mt-7 max-w-4xl text-base leading-8 text-white/70 md:text-lg">
               {t("启明遁甲为企业主、创始人与领导者提供战略决策支持，将现实商业判断与奇门决策分析结合，用于审视方向、合作、人事、投资、时机与重大经营转折。", "Qimen Strategy supports founders, business owners and leaders by combining practical business judgement with Qimen-based decision analysis across direction, partnerships, people, investment, timing and major business turning points.")}
             </p>
+            <div className="mt-8 max-w-3xl border-l-2 border-[#d6ad63] bg-white/[0.025] px-5 py-4 text-sm leading-7 text-white/62">
+              {t("我们的目标不是替管理层多做一个分析，而是先找到真正的决策靶心，再判断组织是否围绕同一战略轴心稳定推进。", "The aim is not to add one more layer of analysis. It is to identify the true decision bullseye, then assess whether the organisation can move around one coherent strategic axis.")}
+            </div>
             <Link href={localizeHref("/contact")} className="mt-9 inline-flex items-center gap-3 bg-[#d6ad63] px-7 py-4 text-sm font-bold uppercase tracking-[0.1em] text-black">
               {t("申请私密咨询", "Request a Private Consultation")}<ArrowRight size={17} />
             </Link>
@@ -81,6 +85,8 @@ export default function EnterpriseAdvisoryContent() {
           </div>
         </section>
 
+        <MethodologySignature />
+
         <section className="bg-[#f6f0e7] px-4 py-20 text-[#241b14] md:py-24">
           <div className="container mx-auto max-w-6xl grid gap-10 lg:grid-cols-2">
             <div>
@@ -95,7 +101,7 @@ export default function EnterpriseAdvisoryContent() {
           <div className="container mx-auto max-w-5xl text-center">
             <p className="text-xs font-bold uppercase tracking-[0.24em] text-[#d6ad63]">Annual Strategic Advisory</p>
             <h2 className="mt-4 text-3xl font-semibold text-[#f4dfb0] md:text-4xl">{t("重大决定不只发生一次。", "Major Decisions Rarely Happen Only Once.")}</h2>
-            <p className="mx-auto mt-5 max-w-3xl text-base leading-8 text-white/65">{t("对于持续面对重大经营选择的企业主，可建立年度或长期顾问关系。合作根据问题复杂度、频率与范围定制，不公开固定企业价目表。", "For business owners facing recurring high-stakes decisions, annual or ongoing advisory relationships can be structured according to complexity, frequency and scope rather than a public fixed rate card.")}</p>
+            <p className="mx-auto mt-5 max-w-3xl text-base leading-8 text-white/65">{t("对于持续面对重大经营选择的企业主，可建立年度或长期顾问关系。合作根据问题复杂度、频率与范围定制，不公开固定企业价目表。长期顾问的核心，不是重复起盘，而是围绕战略轴心持续校准关键变量。", "For business owners facing recurring high-stakes decisions, annual or ongoing advisory relationships can be structured according to complexity, frequency and scope rather than a public fixed rate card. The value of ongoing advisory is not repeated chart-reading, but continuous calibration of critical variables around the strategic axis.")}</p>
             <Link href={localizeHref("/contact")} className="mt-8 inline-flex items-center gap-3 bg-[#d6ad63] px-7 py-4 text-sm font-bold text-black">{t("申请私密咨询", "Request a Private Consultation")}<ArrowRight size={17} /></Link>
             <p className="mt-6 text-xs font-bold uppercase tracking-[0.18em] text-white/40">We advise. You decide.</p>
           </div>
