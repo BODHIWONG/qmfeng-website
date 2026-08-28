@@ -3,9 +3,9 @@ import HomePage from "@/app/page";
 import { FixedLanguageProvider } from "@/contexts/language-context";
 
 export const metadata: Metadata = {
-  title: "Qimen Strategy Singapore｜Personal & Business Decision Advisory",
+  title: "Qimen Strategy Singapore | Strategic Decision Advisory",
   description:
-    "Personal advisory, business strategic advisory and practical Qi Men Dun Jia courses in Singapore. Private consultations are available in Bedok or online.",
+    "Strategic decision advisory for business owners, leaders and family enterprises, combining practical business experience with Qimen-based decision analysis.",
   alternates: {
     canonical: "https://www.qmfeng.com/en",
     languages: {
