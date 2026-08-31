@@ -33,18 +33,14 @@ const localizedRoutes = [
 
 const localizedPages = ["en", "zh"].flatMap((locale) => localizedRoutes.map((path) => `/${locale}${path}`));
 
-const legacyAndSupportingPages = [
+const supportingPages = [
   "/",
   "/enterprise-strategic-advisory",
   "/chairman-founder-advisory",
   "/family-business-succession",
   "/personal-advisory",
-  "/decision",
-  "/relationship-clarity-reading-singapore",
-  "/commercial-feng-shui",
   "/courses",
   "/qi-men-dun-jia-course-singapore",
-  "/singapore-qi-men-dun-jia-consultant",
   "/founder",
   "/insights",
   "/contact",
@@ -53,7 +49,7 @@ const legacyAndSupportingPages = [
   "/course-policy",
 ];
 
-const corePages = [...localizedPages, ...legacyAndSupportingPages];
+const corePages = [...localizedPages, ...supportingPages];
 
 const allPosts = [
   ...qimenLifeCrossroadsDecisionAdvisoryPosts,
@@ -92,13 +88,26 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const isHomepage = path === "/en" || path === "/zh";
     const isPriorityAdvisory = priorityAdvisory.some((route) => path.endsWith(route));
     const isPolicy = ["/privacy", "/terms", "/course-policy"].includes(path);
+    const isEducation = ["/courses", "/qi-men-dun-jia-course-singapore"].includes(path);
     const isFrequentlyUpdated = isHomepage || path.endsWith("/insights");
 
     const entry: MetadataRoute.Sitemap[number] = {
       url: `${baseUrl}${path}`,
       lastModified: now,
       changeFrequency: isFrequentlyUpdated ? "weekly" : isPolicy ? "yearly" : "monthly",
-      priority: isHomepage ? 1 : isLocalized && isPriorityAdvisory ? 0.9 : path === "/" ? 0.7 : isPriorityAdvisory ? 0.78 : isPolicy ? 0.4 : 0.55,
+      priority: isHomepage
+        ? 1
+        : isLocalized && isPriorityAdvisory
+          ? 0.9
+          : path === "/"
+            ? 0.7
+            : isPriorityAdvisory
+              ? 0.78
+              : isEducation
+                ? 0.35
+                : isPolicy
+                  ? 0.4
+                  : 0.55,
     };
 
     const localeMatch = path.match(/^\/(en|zh)(.*)$/);
