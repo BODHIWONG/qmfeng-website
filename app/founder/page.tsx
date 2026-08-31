@@ -6,16 +6,16 @@ import FloatingActions from "@/components/floating-actions";
 import FounderProfileContent from "@/components/founder-profile-content";
 
 export const metadata: Metadata = {
-  title: "Huang Qiming｜Founder of Qimen Strategy Singapore",
+  title: "Huang Qiming｜Founder & Strategic Decision Advisor, Qimen Strategy",
   description:
-    "Huang Qiming is the Founder of Qimen Strategy in Singapore, with 16+ years of practical Qi Men Dun Jia experience and 18 years of business operations and management experience.",
+    "Huang Qiming is the Founder and Strategic Decision Advisor of Qimen Strategy in Singapore, combining 18 years of business operations and management experience with 16+ years of practical Qi Men Dun Jia experience.",
   alternates: {
     canonical: "https://www.qmfeng.com/founder",
   },
   openGraph: {
-    title: "Huang Qiming | Founder of Qimen Strategy",
+    title: "Huang Qiming | Founder & Strategic Decision Advisor, Qimen Strategy",
     description:
-      "Founder, business strategic advisor and practical Qi Men Dun Jia instructor in Singapore.",
+      "Founder of Qimen Strategy in Singapore, providing strategic decision advisory grounded in business experience and Qimen-based decision analysis.",
     url: "https://www.qmfeng.com/founder",
     type: "profile",
   },
@@ -27,10 +27,10 @@ const personSchema = {
   mainEntity: {
     "@type": "Person",
     name: "Huang Qiming",
-    alternateName: ["黄启明", "启明老师"],
-    jobTitle: "Founder of Qimen Strategy and Business Strategic Advisor",
+    alternateName: ["黄启明"],
+    jobTitle: "Founder & Strategic Decision Advisor, Qimen Strategy",
     description:
-      "Founder of Qimen Strategy in Singapore with more than 16 years of practical Qi Men Dun Jia experience and 18 years of business operations and management experience.",
+      "Founder and Strategic Decision Advisor of Qimen Strategy in Singapore, with 18 years of business operations and management experience and more than 16 years of practical Qi Men Dun Jia experience.",
     worksFor: {
       "@id": "https://www.qmfeng.com/#organization",
     },
