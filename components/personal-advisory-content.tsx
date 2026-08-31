@@ -5,7 +5,6 @@ import { ArrowRight, CheckCircle2 } from "lucide-react";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import { useLanguage } from "@/contexts/language-context";
-import { useLocalizedHref } from "@/hooks/use-localized-href";
 
 const tiers = [
   {
@@ -40,7 +39,6 @@ const tiers = [
 
 export default function PersonalAdvisoryContent() {
   const { t } = useLanguage();
-  const localizeHref = useLocalizedHref();
 
   return (
     <div className="min-h-screen bg-[#0e0c0a] text-white">
@@ -72,8 +70,19 @@ export default function PersonalAdvisoryContent() {
                       <p key={item} className="mb-3 flex items-start gap-2 text-sm"><CheckCircle2 size={16} className="mt-0.5 shrink-0 text-[#b88943]" />{item}</p>
                     ))}
                   </div>
-                  <Link href={localizeHref("/contact")} className={`mt-auto inline-flex items-center justify-between px-5 py-4 text-sm font-bold ${tier.featured ? "bg-[#d6ad63] text-black" : "border border-[#9c7238] text-[#7f5a28]"}`}>
-                    {t("预约咨询", "Book Consultation")}<ArrowRight size={16} />
+                  <Link
+                    href={`https://wa.me/6589593499?text=${encodeURIComponent(
+                      t(
+                        `您好，我想了解${tier.nameZh}（${tier.price}）。我正在面对一个重要决定，希望先说明情况。`,
+                        `Hello, I would like to enquire about the ${tier.nameEn} (${tier.price}). I am facing an important decision and would like to briefly explain my situation.`
+                      )
+                    )}`}
+                    data-conversion="personal_decision_consultation"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`mt-auto inline-flex items-center justify-between px-5 py-4 text-sm font-bold ${tier.featured ? "bg-[#d6ad63] text-black" : "border border-[#9c7238] text-[#7f5a28]"}`}
+                  >
+                    {t("WhatsApp 预约咨询", "Enquire on WhatsApp")}<ArrowRight size={16} />
                   </Link>
                 </article>
               ))}
