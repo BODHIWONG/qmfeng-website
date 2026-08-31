@@ -3,8 +3,9 @@ import FounderPage from "@/app/founder/page";
 import { FixedLanguageProvider } from "@/contexts/language-context";
 
 export const metadata: Metadata = {
-  title: "Huang Qiming｜Founder of Qimen Strategy",
-  description: "Huang Qiming is the Founder of Qimen Strategy, with 16+ years of practical Qi Men experience and 18 years of business operations experience.",
+  title: "Huang Qiming｜Founder & Strategic Decision Advisor, Qimen Strategy",
+  description:
+    "Huang Qiming is the Founder and Strategic Decision Advisor of Qimen Strategy in Singapore, combining 18 years of business operations and management experience with 16+ years of practical Qi Men Dun Jia experience.",
   alternates: {
     canonical: "https://www.qmfeng.com/en/founder",
     languages: {
