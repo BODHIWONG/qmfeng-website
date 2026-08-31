@@ -27,6 +27,9 @@ function inferServiceType(link: HTMLAnchorElement) {
   if (path.includes("executive-career-transition-advisory") || href.includes("executive career")) {
     return "executive_career_transition";
   }
+  if (path.includes("personal-advisory") || path.includes("personal-life-state-diagnostic")) {
+    return "personal_decision_consultation";
+  }
   if (path.includes("relationship-clarity") || href.includes("relationship")) {
     return "relationship_decision_advisory";
   }
