@@ -19,15 +19,15 @@ const WA_LINK = "https://wa.me/6589593499";
 const quickLinks = [
   {
     icon: UserRound,
-    labelZh: "八字命理分析 · S$168",
-    labelEn: "Bazi Analysis · S$168",
-    message: "Hi Qimen Strategy, I'd like to enquire about the S$168 Bazi Analysis.",
+    labelZh: "聚焦决策咨询 · S$398",
+    labelEn: "Focused Decision Consultation · S$398",
+    message: "Hi Qimen Strategy, I'd like to enquire about the S$398 focused decision consultation. My current situation is:",
   },
   {
     icon: Sparkles,
-    labelZh: "奇门遁甲咨询 · S$396",
-    labelEn: "Qi Men Consultation · S$396",
-    message: "Hi Qimen Strategy, I'd like to enquire about the S$396 Qi Men Dun Jia consultation. My current situation is:",
+    labelZh: "深度决策咨询 · S$698",
+    labelEn: "In-Depth Decision Consultation · S$698",
+    message: "Hi Qimen Strategy, I'd like to enquire about the S$698 in-depth decision consultation. My current situation is:",
   },
   {
     icon: Briefcase,

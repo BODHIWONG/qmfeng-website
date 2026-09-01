@@ -3,8 +3,8 @@ import PersonalAdvisoryPage from "@/app/personal-advisory/page";
 import { FixedLanguageProvider } from "@/contexts/language-context";
 
 export const metadata: Metadata = {
-  title: "新加坡个人咨询｜八字、奇门遁甲与重大决策",
-  description: "启明遁甲个人咨询包括S$168八字命理分析、S$396奇门遁甲咨询及S$1,696重大决策咨询。",
+  title: "新加坡个人决策咨询｜事业、关系与重大选择",
+  description: "启明遁甲个人决策咨询提供S$398聚焦咨询、S$698深度咨询及S$998重大决策咨询。",
   alternates: {
     canonical: "https://www.qmfeng.com/zh/personal-advisory",
     languages: {

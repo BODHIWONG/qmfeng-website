@@ -28,7 +28,7 @@ import { useLocalizedHref } from "@/hooks/use-localized-href";
 const contentHubs = [
   { titleEn: "Qi Men Dun Jia Consultation Singapore", titleZh: "新加坡奇门遁甲咨询", descriptionEn: "Consultation pathway, suitability and what to do before booking.", descriptionZh: "了解咨询入口、适合情况与预约前准备。", href: "/decision" },
   { titleEn: "Relationship Decision & Emotional Clarity", titleZh: "感情决策与关系清晰", descriptionEn: "Private advisory for relationship, marriage and next-step decisions.", descriptionZh: "感情、婚姻与下一步选择的私密咨询。", href: "/relationship-clarity-reading-singapore" },
-  { titleEn: "Career & Personal Decision Advisory", titleZh: "事业与个人决策咨询", descriptionEn: "Bazi, Qi Men and major decision support for personal direction.", descriptionZh: "八字、奇门与重大决策支持。", href: "/personal-advisory" },
+  { titleEn: "Career & Personal Decision Advisory", titleZh: "事业与个人决策咨询", descriptionEn: "Decision consultation for career, relationship and major life choices.", descriptionZh: "面向事业、关系与人生重大选择的决策咨询。", href: "/personal-advisory" },
   { titleEn: "Business Decision Advisory for Founders", titleZh: "企业主商业决策顾问", descriptionEn: "Strategic decision support for business owners and executives.", descriptionZh: "面向企业主与高管的战略决策支持。", href: "/enterprise-strategic-advisory" },
   { titleEn: "Qi Men Dun Jia Courses Singapore", titleZh: "新加坡奇门遁甲课程", descriptionEn: "Practical learning pathways from foundation to advanced study.", descriptionZh: "从基础到高阶的奇门遁甲实战学习路径。", href: "/courses" },
 ];
