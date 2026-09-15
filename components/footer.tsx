@@ -5,7 +5,7 @@ import { useLanguage } from "@/contexts/language-context";
 import { useLocalizedHref } from "@/hooks/use-localized-href";
 
 const CONSULTATION_WHATSAPP =
-  "https://wa.me/6589593499?text=Hi%20Qimen%20Strategy%2C%20I%27d%20like%20to%20arrange%20a%20private%20conversation.%20My%20current%20situation%20is%3A";
+  "https://wa.me/6589909257?text=Hi%20Qimen%20Strategy%2C%20I%27d%20like%20to%20arrange%20a%20private%20conversation.%20My%20current%20situation%20is%3A";
 
 const advisoryLinks = [
   { href: "/enterprise-strategic-advisory", zh: "企业战略顾问", en: "Enterprise Strategic Advisory" },
@@ -100,7 +100,7 @@ export default function Footer() {
           <div className="text-xs leading-6 text-white/45">
             <p className="font-semibold text-[#d6ad63]">QIMING FENG SHUI WISDOM PTE. LTD.</p>
             <p className="mt-2">Blk 210 New Upper Changi Road #01-729, Singapore 460210</p>
-            <p>Singapore · In Person · Online · WhatsApp +65 8959 3499</p>
+            <p>Singapore · In Person · Online · WhatsApp +65 8990 9257</p>
           </div>
           <div className="flex flex-col gap-3 md:items-end">
             <Link href={localizeHref("/contact")} className="inline-flex justify-center bg-[#d6ad63] px-6 py-3 text-sm font-bold uppercase tracking-[0.1em] text-black hover:bg-[#f4dfb0]">
