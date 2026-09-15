@@ -8,7 +8,7 @@ This repository is the current official production website codebase for **Qimen 
 - Public Brand: Qimen Strategy｜启明遁甲决策智库
 - Legal Entity: Qiming Feng Shui Wisdom Pte. Ltd.
 - Founder / Strategic Decision Advisor: Huang Qiming｜黄启明
-- Official Phone / WhatsApp: +65 8959 3499
+- Official Phone / WhatsApp: +65 8990 9257
 - Brand Tagline: See the Whole Game Before You Decide.
 
 ## Current Business Architecture
@@ -42,7 +42,8 @@ This repository should be treated as the main website repository for future upda
 - Use **Qimen Strategy｜启明遁甲决策智库** as the public brand.
 - Keep **Qiming Feng Shui Wisdom Pte. Ltd.** as the legal company name where legal identification is required.
 - Use **Huang Qiming｜黄启明** and professional titles such as Founder or Strategic Decision Advisor; do not use “Master” as the default public title.
-- Keep the official WhatsApp number as **+65 8959 3499**.
+- Keep the official phone / WhatsApp number as **+65 8990 9257**.
+- Use **6589909257** for WhatsApp links.
 - Keep the brand tagline as **See the Whole Game Before You Decide.**
 - Keep advisory and course conversion paths separate.
 - Keep course pricing, dates and policies consistent across every page.
