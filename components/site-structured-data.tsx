@@ -12,7 +12,7 @@ export default function SiteStructuredData() {
     ],
     legalName: "QIMING FENG SHUI WISDOM PTE. LTD.",
     url: "https://www.qmfeng.com",
-    telephone: "+65 8959 3499",
+    telephone: "+65 8990 9257",
     address: {
       "@type": "PostalAddress",
       streetAddress: "Blk 210 New Upper Changi Road #01-729",
