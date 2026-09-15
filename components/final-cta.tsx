@@ -7,7 +7,7 @@ import { useLanguage } from "@/contexts/language-context";
 import { useLocalizedHref } from "@/hooks/use-localized-href";
 
 const CONSULTATION_WHATSAPP =
-  "https://wa.me/6589593499?text=Hi%20Qimen%20Strategy%2C%20I%27d%20like%20to%20arrange%20a%20private%20consultation.%20My%20current%20situation%20is%3A";
+  "https://wa.me/6589909257?text=Hi%20Qimen%20Strategy%2C%20I%27d%20like%20to%20arrange%20a%20private%20consultation.%20My%20current%20situation%20is%3A";
 
 export default function FinalCTA() {
   const { t } = useLanguage();
@@ -38,7 +38,7 @@ export default function FinalCTA() {
               <UserRound size={20} />{t("个人决策咨询", "Decision Consultation")}
             </Link>
           </motion.div>
-          <p className="mt-7 text-sm font-semibold text-[oklch(0.72_0.12_70)]">WhatsApp: +65 8959 3499 · Bedok, Singapore</p>
+          <p className="mt-7 text-sm font-semibold text-[oklch(0.72_0.12_70)]">WhatsApp: +65 8990 9257 · Bedok, Singapore</p>
         </div>
       </div>
     </section>
