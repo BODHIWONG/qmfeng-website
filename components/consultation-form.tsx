@@ -35,7 +35,7 @@ const TYPE_LABELS: Partial<Record<ConsultationType, { zh: string; en: string }>>
   "Business Advisory": { zh: "企业战略顾问", en: "Enterprise Strategic Advisory" },
   "Chairman & Founder Advisory": { zh: "董事长与创始人顾问", en: "Chairman & Founder Advisory" },
   "Family Business & Succession": { zh: "家族企业与传承", en: "Family Business & Succession" },
-  "Personal Decision": { zh: "决策咨询 S$398 / S$698 / S$998", en: "Decision Consultation S$398 / S$698 / S$998" },
+  "Personal Decision": { zh: "决策咨询", en: "Decision Consultation" },
   Other: { zh: "其他", en: "Other" },
 };
 
