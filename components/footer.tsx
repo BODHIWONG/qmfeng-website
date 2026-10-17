@@ -99,7 +99,7 @@ export default function Footer() {
           <div className="text-xs leading-6 text-white/45">
             <p className="font-semibold text-[#d6ad63]">QIMING FENG SHUI WISDOM PTE. LTD.</p>
             <p className="mt-2">Blk 210 New Upper Changi Road #01-729, Singapore 460210</p>
-            <p>Singapore · In Person · Online · WhatsApp +65 8990 9257</p>
+            <p>Singapore · In Person · Online · WhatsApp +65 8990 9257 / +65 8959 3499</p>
           </div>
           <div className="flex flex-col gap-3 md:items-end">
             <Link href={localizeHref("/contact")} className="inline-flex justify-center bg-[#d6ad63] px-6 py-3 text-sm font-bold uppercase tracking-[0.1em] text-black hover:bg-[#f4dfb0]">
