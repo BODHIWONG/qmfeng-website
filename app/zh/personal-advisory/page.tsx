@@ -12,6 +12,19 @@ export const metadata: Metadata = {
       "zh-SG": "https://www.qmfeng.com/zh/personal-advisory",
     },
   },
+  openGraph: {
+    title: "新加坡奇门遁甲决策分析｜个人与企业重大选择",
+    description: "启明遁甲结合奇门遁甲与现实条件，为个人及企业提供事业方向、合作、人事、投资项目与重大选择的决策分析；单次咨询分为S$398、S$698及S$998档位。",
+    url: "https://www.qmfeng.com/zh/personal-advisory",
+    siteName: "启明遁甲 Qimen Strategy",
+    locale: "zh_SG",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "新加坡奇门遁甲决策分析｜个人与企业重大选择",
+    description: "启明遁甲结合奇门遁甲与现实条件，为个人及企业提供事业方向、合作、人事、投资项目与重大选择的决策分析；单次咨询分为S$398、S$698及S$998档位。",
+  },
 };
 
 export default function ChinesePersonalAdvisoryPage() {
