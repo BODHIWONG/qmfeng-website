@@ -137,11 +137,11 @@ export default function ConsultationForm({ defaultConsultationType, className = 
       </div>
 
       <div className="grid gap-5 sm:grid-cols-2">
-        <label><span className="mb-2 block text-sm font-semibold text-white/82">{t("姓名 *", "Name *")}</span><input className={inputClass} value={form.name} onChange={(e) => update("name", e.target.value)} autoComplete="name" /></label>
+        <label><span className="mb-2 block text-sm font-semibold text-white/82">{t("姓名", "Name")}</span><input className={inputClass} value={form.name} onChange={(e) => update("name", e.target.value)} autoComplete="name" /></label>
         <label><span className="mb-2 block text-sm font-semibold text-white/82">{t("电话 / WhatsApp *", "Phone / WhatsApp *")}</span><input className={inputClass} value={form.phone} onChange={(e) => update("phone", e.target.value)} autoComplete="tel" /></label>
       </div>
 
-      <label className="mt-5 block"><span className="mb-2 block text-sm font-semibold text-white/82">Email *</span><input className={inputClass} type="email" value={form.email} onChange={(e) => update("email", e.target.value)} autoComplete="email" /></label>
+      <label className="mt-5 block"><span className="mb-2 block text-sm font-semibold text-white/82">{t("电子邮件（选填）", "Email (optional)")}</span><input className={inputClass} type="email" value={form.email} onChange={(e) => update("email", e.target.value)} autoComplete="email" /></label>
 
       <label className="mt-5 block">
         <span className="mb-2 block text-sm font-semibold text-white/82">{t("咨询方向 *", "Advisory Area *")}</span>
@@ -152,7 +152,7 @@ export default function ConsultationForm({ defaultConsultationType, className = 
       </label>
 
       <label className="mt-5 block">
-        <span className="mb-2 block text-sm font-semibold text-white/82">{t("您希望讨论的决定或情况 *", "Decision or Situation *")}</span>
+        <span className="mb-2 block text-sm font-semibold text-white/82">{t("您希望讨论的决定或情况（选填）", "Decision or Situation (optional)") }</span>
         <textarea className={`${inputClass} min-h-36 resize-y`} value={form.message} onChange={(e) => update("message", e.target.value)} placeholder={t("例如：正在考虑新市场、合伙、关键人事、接班安排，或个人重大选择。", "For example: a new market, partnership, key hire, succession issue or major personal decision.")} />
       </label>
 

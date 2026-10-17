@@ -78,7 +78,7 @@ export function validateConsultationSubmission(input: unknown): ConsultationVali
     Record<"name" | "phone" | "email" | "consultationType" | "message" | "consent", string>
   > = {};
 
-  if (name.length < 2) fieldErrors.name = "Please enter your name.";
+
   if (
     !phone ||
     !PHONE_ALLOWED_PATTERN.test(phone) ||
@@ -87,9 +87,9 @@ export function validateConsultationSubmission(input: unknown): ConsultationVali
   ) {
     fieldErrors.phone = "Please enter a valid phone number, including the country code.";
   }
-  if (!email || !EMAIL_PATTERN.test(email)) fieldErrors.email = "Please enter a valid email address.";
+  if (email && !EMAIL_PATTERN.test(email)) fieldErrors.email = "Please enter a valid email address.";
   if (!isConsultationType(consultationType)) fieldErrors.consultationType = "Please select a consultation type.";
-  if (message.length < 10) fieldErrors.message = "Please provide a little more detail about your enquiry.";
+
   if (!consent) fieldErrors.consent = "Please confirm the privacy consent.";
 
   if (Object.keys(fieldErrors).length > 0) return { success: false, fieldErrors };
