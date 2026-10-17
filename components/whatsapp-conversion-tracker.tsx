@@ -32,7 +32,7 @@ function inferServiceType(link: HTMLAnchorElement) {
   if (link.dataset.conversion) return link.dataset.conversion;
 
   const path = window.location.pathname.toLowerCase();
-  const href = decodeURIComponent(link.href).toLowerCase();
+  const href = link.href.toLowerCase();
   const label = (link.innerText || link.getAttribute("aria-label") || "").toLowerCase();
 
   if (
