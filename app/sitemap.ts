@@ -26,6 +26,7 @@ const localizedRoutes = [
   "/chairman-founder-advisory",
   "/family-business-succession",
   "/personal-advisory",
+  "/feng-shui-planning",
   "/insights",
   "/founder",
   "/contact",
@@ -39,6 +40,8 @@ const supportingPages = [
   "/chairman-founder-advisory",
   "/family-business-succession",
   "/personal-advisory",
+  "/feng-shui-planning",
+  "/commercial-feng-shui",
   "/courses",
   "/qi-men-dun-jia-course-singapore",
   "/founder",
@@ -80,6 +83,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/chairman-founder-advisory",
     "/family-business-succession",
     "/personal-advisory",
+    "/feng-shui-planning",
     "/contact",
   ];
 
