@@ -5,11 +5,27 @@ import { useEffect } from "react";
 const WHATSAPP_CONVERSION_SEND_TO = "AW-17926881970/wGZiCKyN1sscELKFmuRC";
 
 function isWhatsAppLink(href: string) {
-  return (
-    href.includes("wa.me/6589593499") ||
-    href.includes("api.whatsapp.com/send") ||
-    href.startsWith("whatsapp://")
-  );
+  try {
+    const url = new URL(href, window.location.origin);
+    const hostname = url.hostname.toLowerCase();
+    const pathname = url.pathname.toLowerCase();
+
+    if (url.protocol === "whatsapp:") return true;
+
+    if (hostname === "wa.me") return true;
+
+    if (
+      hostname === "api.whatsapp.com" ||
+      hostname === "web.whatsapp.com" ||
+      hostname === "www.whatsapp.com"
+    ) {
+      return pathname === "/send" || pathname.startsWith("/send/");
+    }
+
+    return false;
+  } catch {
+    return false;
+  }
 }
 
 function inferServiceType(link: HTMLAnchorElement) {
