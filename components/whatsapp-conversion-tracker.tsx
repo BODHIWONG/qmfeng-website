@@ -31,10 +31,21 @@ function isWhatsAppLink(href: string) {
 function inferServiceType(link: HTMLAnchorElement) {
   if (link.dataset.conversion) return link.dataset.conversion;
 
-  const path = window.location.pathname;
+  const path = window.location.pathname.toLowerCase();
   const href = decodeURIComponent(link.href).toLowerCase();
+  const label = (link.innerText || link.getAttribute("aria-label") || "").toLowerCase();
 
-  if (path.includes("enterprise-strategic-advisory") || href.includes("founder business advisory")) {
+  if (
+    path.includes("feng-shui-planning") ||
+    path.includes("commercial-feng-shui") ||
+    href.includes("feng shui") ||
+    href.includes("feng-shui") ||
+    label.includes("风水") ||
+    label.includes("feng shui")
+  ) {
+    return "feng_shui_planning";
+  }
+  if (path.includes("enterprise-strategic-advisory") || href.includes("founder business advisory") || label.includes("企业战略顾问") || label.includes("business strategic advisory")) {
     return "founder_business_advisory";
   }
   if (path.includes("founder-wealth-investment-advisory") || href.includes("wealth") || href.includes("investment")) {
