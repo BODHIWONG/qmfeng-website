@@ -5,20 +5,47 @@ import { useEffect } from "react";
 const WHATSAPP_CONVERSION_SEND_TO = "AW-17926881970/wGZiCKyN1sscELKFmuRC";
 
 function isWhatsAppLink(href: string) {
-  return (
-    href.includes("wa.me/6589593499") ||
-    href.includes("api.whatsapp.com/send") ||
-    href.startsWith("whatsapp://")
-  );
+  try {
+    const url = new URL(href, window.location.origin);
+    const hostname = url.hostname.toLowerCase();
+    const pathname = url.pathname.toLowerCase();
+
+    if (url.protocol === "whatsapp:") return true;
+
+    if (hostname === "wa.me") return true;
+
+    if (
+      hostname === "api.whatsapp.com" ||
+      hostname === "web.whatsapp.com" ||
+      hostname === "www.whatsapp.com"
+    ) {
+      return pathname === "/send" || pathname.startsWith("/send/");
+    }
+
+    return false;
+  } catch {
+    return false;
+  }
 }
 
 function inferServiceType(link: HTMLAnchorElement) {
   if (link.dataset.conversion) return link.dataset.conversion;
 
-  const path = window.location.pathname;
-  const href = decodeURIComponent(link.href).toLowerCase();
+  const path = window.location.pathname.toLowerCase();
+  const href = link.href.toLowerCase();
+  const label = (link.innerText || link.getAttribute("aria-label") || "").toLowerCase();
 
-  if (path.includes("enterprise-strategic-advisory") || href.includes("founder business advisory")) {
+  if (
+    path.includes("feng-shui-planning") ||
+    path.includes("commercial-feng-shui") ||
+    href.includes("feng shui") ||
+    href.includes("feng-shui") ||
+    label.includes("风水") ||
+    label.includes("feng shui")
+  ) {
+    return "feng_shui_planning";
+  }
+  if (path.includes("enterprise-strategic-advisory") || href.includes("founder business advisory") || label.includes("企业战略顾问") || label.includes("business strategic advisory")) {
     return "founder_business_advisory";
   }
   if (path.includes("founder-wealth-investment-advisory") || href.includes("wealth") || href.includes("investment")) {
