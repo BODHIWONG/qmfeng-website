@@ -63,7 +63,7 @@ export default function ContactPageContent() {
             </div>
 
             <a
-              href="https://wa.me/6589593499?text=Hello%20Qimen%20Strategy%2C%20I%20have%20an%20urgent%20enquiry.%20My%20situation%20is%3A"
+              href="https://wa.me/6589909257?text=Hello%20Qimen%20Strategy%2C%20I%20have%20an%20urgent%20enquiry.%20My%20situation%20is%3A"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-8 inline-flex items-center gap-3 border border-[#d6ad63]/60 px-6 py-3.5 text-sm font-bold text-[#f4dfb0] hover:bg-[#d6ad63]/10"
