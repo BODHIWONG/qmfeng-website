@@ -28,14 +28,16 @@ const DISPLAY_TYPES: ConsultationType[] = [
   "Chairman & Founder Advisory",
   "Family Business & Succession",
   "Personal Decision",
+  "Feng Shui",
   "Other",
 ];
 
 const TYPE_LABELS: Partial<Record<ConsultationType, { zh: string; en: string }>> = {
-  "Business Advisory": { zh: "企业战略顾问", en: "Enterprise Strategic Advisory" },
+  "Business Advisory": { zh: "企业长期陪跑", en: "Long-term Business Advisory" },
   "Chairman & Founder Advisory": { zh: "董事长与创始人顾问", en: "Chairman & Founder Advisory" },
   "Family Business & Succession": { zh: "家族企业与传承", en: "Family Business & Succession" },
   "Personal Decision": { zh: "决策咨询", en: "Decision Consultation" },
+  "Feng Shui": { zh: "个人与企业风水布局", en: "Personal & Business Feng Shui Planning" },
   Other: { zh: "其他", en: "Other" },
 };
 
