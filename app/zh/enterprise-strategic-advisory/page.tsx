@@ -12,6 +12,19 @@ export const metadata: Metadata = {
       "zh-SG": "https://www.qmfeng.com/zh/enterprise-strategic-advisory",
     },
   },
+  openGraph: {
+    title: "新加坡企业长期陪跑顾问｜启明遁甲",
+    description: "面向新加坡创业者、企业主与管理团队的长期顾问服务，围绕经营目标、重大决策、团队合作、组织变化与阶段性复盘提供持续支持。",
+    url: "https://www.qmfeng.com/zh/enterprise-strategic-advisory",
+    siteName: "启明遁甲 Qimen Strategy",
+    locale: "zh_SG",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "新加坡企业长期陪跑顾问｜启明遁甲",
+    description: "面向新加坡创业者、企业主与管理团队的长期顾问服务，围绕经营目标、重大决策、团队合作、组织变化与阶段性复盘提供持续支持。",
+  },
 };
 
 export default function ChineseEnterprisePage() {
