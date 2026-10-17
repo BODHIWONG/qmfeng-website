@@ -78,7 +78,7 @@ export function validateConsultationSubmission(input: unknown): ConsultationVali
     Record<"name" | "phone" | "email" | "consultationType" | "message" | "consent", string>
   > = {};
 
-  if (name.length < 2) fieldErrors.name = "Please enter your name.";
+
   if (
     !phone ||
     !PHONE_ALLOWED_PATTERN.test(phone) ||
