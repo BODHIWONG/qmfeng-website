@@ -3,7 +3,6 @@
 import { Clock3, MapPin, MessageCircle } from "lucide-react";
 import FloatingActions from "@/components/floating-actions";
 import Footer from "@/components/footer";
-import Navbar from "@/components/navbar";
 import { useLanguage } from "@/contexts/language-context";
 
 export default function ContactPageContent() {
@@ -11,8 +10,7 @@ export default function ContactPageContent() {
 
   return (
     <div className="min-h-screen bg-[#070604] text-white">
-      <Navbar />
-      <main className="px-4 pb-20 pt-32 md:pb-28 md:pt-40">
+      <main className="px-4 pb-20 pt-16 md:pb-28 md:pt-24">
         <div className="container mx-auto grid max-w-6xl gap-10 lg:grid-cols-[0.82fr_1.18fr] lg:items-start">
           <section>
             <p className="text-xs font-bold uppercase tracking-[0.28em] text-[#d6ad63]">
