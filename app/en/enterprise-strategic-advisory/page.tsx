@@ -3,8 +3,8 @@ import EnterprisePage from "@/app/enterprise-strategic-advisory/page";
 import { FixedLanguageProvider } from "@/contexts/language-context";
 
 export const metadata: Metadata = {
-  title: "Business Strategic Advisory Singapore｜Qimen Strategy",
-  description: "Private strategic advisory for founders, business owners and executives facing growth, transition, people, partnerships and major decisions.",
+  title: "Long-term Business Advisory Singapore | Qimen Strategy",
+  description: "Ongoing advisory for Singapore business owners and leadership teams across priorities, major decisions, partnerships, people, organisational change and execution reviews.",
   alternates: {
     canonical: "https://www.qmfeng.com/en/enterprise-strategic-advisory",
     languages: {
