@@ -12,6 +12,19 @@ export const metadata: Metadata = {
       "zh-SG": "https://www.qmfeng.com/zh/enterprise-strategic-advisory",
     },
   },
+  openGraph: {
+    title: "Long-term Business Advisory Singapore | Qimen Strategy",
+    description: "Ongoing advisory for Singapore business owners and leadership teams across priorities, major decisions, partnerships, people, organisational change and execution reviews.",
+    url: "https://www.qmfeng.com/en/enterprise-strategic-advisory",
+    siteName: "Qimen Strategy | 启明遁甲",
+    locale: "en_SG",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Long-term Business Advisory Singapore | Qimen Strategy",
+    description: "Ongoing advisory for Singapore business owners and leadership teams across priorities, major decisions, partnerships, people, organisational change and execution reviews.",
+  },
 };
 
 export default function EnglishEnterprisePage() {
