@@ -10,6 +10,7 @@ const LOCALIZED_PATHS = new Set([
   "/",
   "/enterprise-strategic-advisory",
   "/commercial-feng-shui",
+  "/feng-shui-planning",
   "/family-business-succession",
   "/chairman-founder-advisory",
   "/personal-advisory",
@@ -20,7 +21,7 @@ const LOCALIZED_PATHS = new Set([
 
 const links = [
   { href: "/personal-advisory", zh: "奇门决策", en: "Qimen Decisions" },
-  { href: "/commercial-feng-shui", zh: "风水布局", en: "Feng Shui" },
+  { href: "/feng-shui-planning", zh: "风水布局", en: "Feng Shui Planning" },
   { href: "/enterprise-strategic-advisory", zh: "企业长期陪跑", en: "Business Advisory" },
   { href: "/insights", zh: "洞察", en: "Insights" },
   { href: "/founder", zh: "关于启明", en: "About" },
