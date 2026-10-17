@@ -25,7 +25,7 @@ const pillars = [
     titleEn: "Personal & Business Feng Shui",
     bodyZh: "为住宅、办公室、店铺及企业经营空间提供风水评估与布局建议，结合实际用途、空间动线、使用者需求及经营场景，制定可执行的优化方向。",
     bodyEn: "Feng Shui assessment and layout guidance for homes, offices, retail units and business premises, tailored to how the space is used, movement through the environment, occupants' needs and business operations.",
-    href: "/commercial-feng-shui",
+    href: "/feng-shui-planning",
     ctaZh: "了解风水布局",
     ctaEn: "Explore Feng Shui Planning",
   },
