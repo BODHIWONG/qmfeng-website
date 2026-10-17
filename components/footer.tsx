@@ -8,10 +8,9 @@ const CONSULTATION_WHATSAPP =
   "https://wa.me/6589909257?text=Hi%20Qimen%20Strategy%2C%20I%27d%20like%20to%20arrange%20a%20private%20conversation.%20My%20current%20situation%20is%3A";
 
 const advisoryLinks = [
-  { href: "/enterprise-strategic-advisory", zh: "企业战略顾问", en: "Enterprise Strategic Advisory" },
-  { href: "/chairman-founder-advisory", zh: "董事长与创始人顾问", en: "Chairman & Founder Advisory" },
-  { href: "/family-business-succession", zh: "家族企业与传承", en: "Family Business & Succession" },
-  { href: "/personal-advisory", zh: "决策咨询", en: "Decision Consultation" },
+  { href: "/personal-advisory", zh: "奇门遁甲决策分析", en: "Qimen Decision Analysis" },
+  { href: "/feng-shui-planning", zh: "个人与企业风水布局", en: "Personal & Business Feng Shui" },
+  { href: "/enterprise-strategic-advisory", zh: "企业长期陪跑", en: "Long-term Business Advisory" },
 ];
 
 const insightLinks = [
@@ -47,17 +46,17 @@ export default function Footer() {
               </div>
               <div>
                 <p className="text-lg font-bold uppercase tracking-[0.12em] text-white">Qimen Strategy</p>
-                <p className="mt-1 text-[0.65rem] tracking-[0.12em] text-[#d6ad63]">Strategic Decision Advisory</p>
+                <p className="mt-1 text-[0.65rem] tracking-[0.12em] text-[#d6ad63]">{t("奇门决策 · 风水布局 · 企业长期陪跑", "Qimen Decisions · Feng Shui · Business Advisory")}</p>
               </div>
             </div>
             <p className="max-w-md text-sm leading-7 text-white/52">
               {t(
-                "启明遁甲立足新加坡，为企业主、领导者与家族企业提供战略决策顾问服务。我们结合现实商业经验与奇门决策分析，帮助决策者在重大承诺之前看见更完整的局势。",
-                "Singapore-based strategic decision advisory for business owners, leaders and family enterprises, combining practical business experience with Qimen-based decision analysis."
+                "启明遁甲立足新加坡，提供奇门遁甲个人与企业决策分析、住宅及商业空间风水布局，以及企业长期陪跑顾问服务。",
+                "Singapore-based advisory offering Qimen Dunjia decision analysis for individuals and businesses, personal and commercial Feng Shui planning, and long-term business advisory."
               )}
             </p>
             <p className="mt-5 text-sm font-semibold text-[#d6ad63]">
-              {t("重大决策之前，先看全局。", "See the Whole Game Before You Decide.")}
+              {t("以奇门观势，以布局应局，以陪跑助企业走得更稳。", "Read the Situation. Align the Space. Build with Ongoing Advisory.")}
             </p>
             <p className="mt-3 text-xs font-semibold uppercase tracking-[0.16em] text-white/32">Reality × Qimen · Target Theory · Gyroscope Theory</p>
           </div>
