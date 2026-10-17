@@ -9,6 +9,7 @@ import { useLanguage } from "@/contexts/language-context";
 const LOCALIZED_PATHS = new Set([
   "/",
   "/enterprise-strategic-advisory",
+  "/commercial-feng-shui",
   "/family-business-succession",
   "/chairman-founder-advisory",
   "/personal-advisory",
@@ -18,10 +19,11 @@ const LOCALIZED_PATHS = new Set([
 ]);
 
 const links = [
-  { href: "/enterprise-strategic-advisory", zh: "战略顾问", en: "Advisory" },
-  { href: "/family-business-succession", zh: "家族企业", en: "Family Business" },
+  { href: "/personal-advisory", zh: "奇门决策", en: "Qimen Decisions" },
+  { href: "/commercial-feng-shui", zh: "风水布局", en: "Feng Shui" },
+  { href: "/enterprise-strategic-advisory", zh: "企业长期陪跑", en: "Business Advisory" },
   { href: "/insights", zh: "洞察", en: "Insights" },
-  { href: "/founder", zh: "关于", en: "About" },
+  { href: "/founder", zh: "关于启明", en: "About" },
 ];
 
 function stripLocale(pathname: string) {
@@ -74,8 +76,8 @@ export default function Navbar() {
         <Link href={localizeHref("/")} className="flex items-center gap-3" aria-label="Qimen Strategy home">
           <BrandMark light={scrolled} />
           <div>
-            <div className={`text-sm font-semibold tracking-[0.14em] ${scrolled ? "text-white" : "text-[#241b14]"}`}>QIMEN STRATEGY</div>
-            <div className="mt-1 text-[0.62rem] tracking-[0.14em] text-[#b58743]">STRATEGIC DECISION ADVISORY</div>
+            <div className={`text-sm font-semibold tracking-[0.14em] ${scrolled ? "text-white" : "text-[#241b14]"}`}>启明遁甲 · QIMEN STRATEGY</div>
+            <div className="mt-1 text-[0.62rem] tracking-[0.14em] text-[#b58743]">{lang === "zh" ? "奇门决策 · 风水布局 · 企业长期陪跑" : "QIMEN DECISIONS · FENG SHUI · BUSINESS ADVISORY"}</div>
           </div>
         </Link>
 
@@ -86,30 +88,28 @@ export default function Navbar() {
               {lang === "zh" ? item.zh : item.en}
             </Link>
           ))}
-          <Link href={localizeHref("/personal-advisory")} className={`text-sm ${scrolled ? "text-white/78 hover:text-[#e2bd6b]" : "text-[#2a2118]/75 hover:text-[#9d733c]"}`}>
-            {lang === "zh" ? "决策咨询" : "Decision Consultation"}
-          </Link>
+          <button onClick={() => router.push(localizeHref("/contact"))} className={`border px-3 py-2 text-xs font-semibold tracking-[0.14em] ${scrolled ? "border-white/20 text-white/75" : "border-[#c5ad91]/60 text-[#4a3a2a]/70"}`}>{lang === "zh" ? "联系" : "Contact"}</button>
           <button onClick={toggleLanguage} className={`border px-3 py-2 text-xs font-semibold tracking-[0.14em] ${scrolled ? "border-white/20 text-white/75" : "border-[#c5ad91]/60 text-[#4a3a2a]/70"}`}>{lang === "zh" ? "EN" : "中文"}</button>
           <Link href={localizeHref("/contact")} className="bg-[#d0a14a] px-5 py-3 text-xs font-bold uppercase tracking-[0.1em] text-black hover:bg-[#e2bd6b]">
-            {lang === "zh" ? "预约私密沟通" : "Request a Private Conversation"}
+            {lang === "zh" ? "预约初步沟通" : "Arrange a Conversation"}
           </Link>
         </div>
 
         <div className="flex items-center gap-3 xl:hidden">
           <button onClick={toggleLanguage} className={`border px-2.5 py-1.5 text-xs ${scrolled ? "border-white/20 text-white" : "border-[#c5ad91]/60 text-[#4a3a2a]"}`}>{lang === "zh" ? "EN" : "中"}</button>
-          <button onClick={() => setIsOpen(!isOpen)} className={scrolled ? "text-white" : "text-[#241b14]"}>{isOpen ? <X size={24} /> : <Menu size={24} />}</button>
+          <button onClick={() => setIsOpen(!isOpen)} className={scrolled ? "text-white" : "text-[#241b14]"} aria-label={isOpen ? "Close menu" : "Open menu"}>{isOpen ? <X size={24} /> : <Menu size={24} />}</button>
         </div>
       </div>
 
       {isOpen && (
         <div className="bg-black px-6 pb-6 xl:hidden">
-          {[{ href: "/", zh: "首页", en: "Home" }, ...links, { href: "/personal-advisory", zh: "决策咨询", en: "Decision Consultation" }].map((item) => (
+          {[{ href: "/", zh: "首页", en: "Home" }, ...links].map((item) => (
             <Link key={item.href} href={localizeHref(item.href)} onClick={() => setIsOpen(false)} className="block border-b border-white/10 py-4 text-sm text-white/85">
               {lang === "zh" ? item.zh : item.en}
             </Link>
           ))}
           <Link href={localizeHref("/contact")} onClick={() => setIsOpen(false)} className="mt-5 block bg-[#d0a14a] px-5 py-4 text-center text-sm font-bold text-black">
-            {lang === "zh" ? "预约私密沟通" : "Request a Private Conversation"}
+            {lang === "zh" ? "预约初步沟通" : "Arrange a Conversation"}
           </Link>
         </div>
       )}
