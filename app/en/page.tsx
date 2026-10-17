@@ -3,9 +3,9 @@ import HomePage from "@/app/page";
 import { FixedLanguageProvider } from "@/contexts/language-context";
 
 export const metadata: Metadata = {
-  title: "Qimen Strategy Singapore | Strategic Decision Advisory",
+  title: "Qimen Strategy Singapore | Decision Analysis, Feng Shui & Business Advisory",
   description:
-    "Strategic decision advisory for business owners, leaders and family enterprises, combining practical business experience with Qimen-based decision analysis.",
+    "Singapore-based Qimen Strategy offering Qimen Dunjia decision analysis for individuals and businesses, personal and commercial Feng Shui planning, and long-term business advisory.",
   alternates: {
     canonical: "https://www.qmfeng.com/en",
     languages: {
