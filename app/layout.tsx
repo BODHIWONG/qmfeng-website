@@ -45,12 +45,16 @@ const OG_IMAGE =
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.qmfeng.com"),
   title: {
-    default: "Qimen Strategy Singapore｜Strategic Decision Advisory",
+    default: "Qimen Strategy Singapore | Qimen Decisions, Feng Shui & Business Advisory",
     template: "%s",
   },
   description:
-    "Singapore-based strategic decision advisory for business owners, leaders and family enterprises. Qimen Strategy combines practical business experience with Qimen-based decision analysis across strategy, people, timing, succession and major decisions.",
+    "Singapore-based Qimen Dunjia decision analysis for individuals and businesses, personal and commercial Feng Shui planning, and long-term business advisory for owners and leadership teams.",
   keywords: [
+    "Qimen Dunjia decision analysis Singapore",
+    "Personal Feng Shui Singapore",
+    "Business Feng Shui Singapore",
+    "Long-term business advisory Singapore",
     "Strategic decision advisory Singapore",
     "Business strategic advisory Singapore",
     "Chairman advisor Singapore",
@@ -65,6 +69,9 @@ export const metadata: Metadata = {
     "家族企业传承",
     "重大决策咨询",
     "奇门遁甲决策咨询",
+    "住宅风水布局",
+    "企业风水布局",
+    "企业长期陪跑",
     "启明遁甲",
   ],
   authors: [{ name: "Huang Qiming" }],
@@ -77,9 +84,9 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Qimen Strategy Singapore｜Strategic Decision Advisory",
+    title: "Qimen Strategy Singapore | Qimen Decisions, Feng Shui & Business Advisory",
     description:
-      "Strategic decision advisory for business owners, leaders and family enterprises, combining practical business experience with Qimen-based decision analysis.",
+      "Qimen Dunjia decision analysis, personal and commercial Feng Shui planning, and long-term business advisory in Singapore.",
     url: "https://www.qmfeng.com/en",
     siteName: "Qimen Strategy｜启明遁甲",
     images: [
@@ -87,7 +94,7 @@ export const metadata: Metadata = {
         url: OG_IMAGE,
         width: 1200,
         height: 630,
-        alt: "Qimen Strategy Singapore — Strategic Decision Advisory",
+        alt: "Qimen Strategy Singapore — Qimen Decisions, Feng Shui and Business Advisory",
       },
     ],
     locale: "en_SG",
@@ -95,9 +102,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Qimen Strategy Singapore | Strategic Decision Advisory",
+    title: "Qimen Strategy Singapore | Qimen Decisions, Feng Shui & Business Advisory",
     description:
-      "Strategic decision advisory for business owners, leaders and family enterprises in Singapore and online.",
+      "Qimen Dunjia decision analysis, personal and business Feng Shui, and long-term business advisory in Singapore and online.",
     images: [OG_IMAGE],
   },
   robots: { index: true, follow: true },
