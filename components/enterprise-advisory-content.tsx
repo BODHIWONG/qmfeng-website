@@ -35,7 +35,7 @@ export default function EnterpriseAdvisoryContent() {
       <main>
         <section className="px-4 pb-20 pt-36 md:pb-28 md:pt-44">
           <div className="container mx-auto max-w-6xl">
-            <p className="text-xs font-bold uppercase tracking-[0.28em] text-[#d6ad63]">Enterprise Strategic Advisory</p>
+            <p className="text-xs font-bold uppercase tracking-[0.28em] text-[#d6ad63]">{t("企业长期陪跑 · 战略决策顾问", "LONG-TERM BUSINESS ADVISORY · STRATEGIC DECISIONS")}</p>
             <h1 className="mt-6 max-w-5xl text-4xl font-semibold leading-tight text-[#f4dfb0] md:text-6xl" style={{ fontFamily: "var(--font-cormorant), var(--font-noto-serif), serif" }}>
               {t("重大经营决定，不应只看眼前答案。", "High-Stakes Business Decisions Deserve a Wider Field of View.")}
             </h1>
