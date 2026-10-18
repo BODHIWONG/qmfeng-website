@@ -14,7 +14,7 @@ import {
   GraduationCap,
 } from "lucide-react";
 
-const WA_LINK = "https://wa.me/6589593499";
+const WA_LINK = "https://wa.me/6589909257";
 
 const quickLinks = [
   {
@@ -92,7 +92,7 @@ export default function FloatingActions() {
               {t("快速咨询", "Quick Enquiry")}
             </p>
             <p className="mb-3 text-xs text-[oklch(0.72_0.02_70)]">
-              {t("正式 WhatsApp：+65 8959 3499", "Official WhatsApp: +65 8959 3499")}
+              {t("WhatsApp：+65 8990 9257", "WhatsApp: +65 8990 9257")}
             </p>
             <div className="space-y-2">
               {quickLinks.map((link, i) => {
