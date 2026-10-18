@@ -83,7 +83,7 @@ export default function ServiceCards() {
             <p className="font-bold text-[#2a2118]">{t("服务范围清晰，合作方式灵活", "Clear Scope, Flexible Engagement")}</p>
             <p className="mt-1 text-sm text-[#6b5a48]">{t("可从单次决策咨询或风水评估开始；企业长期陪跑则按目标、范围与服务频率定制。", "Start with a focused decision consultation or Feng Shui assessment. Ongoing business advisory is scoped around objectives, needs and cadence.")}</p>
           </div>
-          <Link href={localizeHref("/contact")} className="inline-flex items-center gap-2 text-sm font-bold text-[#8a642f]">{t("讨论适合的服务", "Discuss the Right Service")}<ArrowRight size={16} /></Link>
+          <a href="https://wa.me/6589909257" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm font-bold text-[#8a642f]">{t("讨论适合的服务", "Discuss the Right Service")}<ArrowRight size={16} /></a>
         </div>
       </div>
     </section>
