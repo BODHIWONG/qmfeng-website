@@ -11,8 +11,8 @@ const tiers = [
     nameZh: "个人专题咨询", nameEn: "Personal Consultation",
     labelZh: "个人问题与发展方向", labelEn: "Personal Matters & Direction",
     bodyZh: "聚焦个人生活、关系与发展中的具体问题。", bodyEn: "Focused guidance for personal, relationship and development questions.",
-    topicsZh: ["感情与关系", "工作与职业发展", "个人发展方向"],
-    topicsEn: ["Relationships", "Work & career development", "Personal direction"],
+    topicsZh: ["感情与关系", "工作与职业发展", "个人发展方向", "学业与人生选择"],
+    topicsEn: ["Relationships", "Work & career development", "Personal direction", "Education & life choices"],
     messageZh: "你好，启明遁甲，我想咨询个人专题问题。我的情况是：", messageEn: "Hello Qimen Strategy, I would like to enquire about a personal matter. My situation is:",
   },
   {
