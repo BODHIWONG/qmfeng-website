@@ -1,12 +1,14 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight, Home, Building2, ClipboardCheck, Compass, MessageCircle } from "lucide-react";
+import { ArrowRight, Home, Building2, ClipboardCheck, Compass, MessageCircle, BriefcaseBusiness, CheckCircle2 } from "lucide-react";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import FloatingActions from "@/components/floating-actions";
 import { useLanguage } from "@/contexts/language-context";
 import { useLocalizedHref } from "@/hooks/use-localized-href";
+
+const WHATSAPP_URL = "https://wa.me/6589909257";
 
 const serviceAreas = [
   {
@@ -47,22 +49,22 @@ export default function FengShuiPlanningContent() {
         <section className="relative overflow-hidden border-b border-[#d6ad63]/20 px-4 pb-20 pt-36 md:pb-28 md:pt-44">
           <div className="pointer-events-none absolute right-0 top-20 h-80 w-80 rounded-full bg-[#d6ad63]/[0.06] blur-3xl" />
           <div className="container relative mx-auto max-w-6xl">
-            <p className="text-xs font-bold uppercase tracking-[0.28em] text-[#d6ad63]">{t("启明遁甲 · 空间风水", "QIMEN STRATEGY · FENG SHUI PLANNING")}</p>
+            <p className="text-xs font-bold uppercase tracking-[0.28em] text-[#d6ad63]">{t("启明遁甲 · 核心业务", "QIMEN STRATEGY · CORE SERVICE")}</p>
             <h1 className="mt-6 max-w-5xl text-4xl font-semibold leading-tight text-[#f4dfb0] md:text-6xl" style={{ fontFamily: "var(--font-cormorant), var(--font-noto-serif), serif" }}>
-              {t("让空间布局，回应真实的生活与经营需求。", "Align the Space with the Way You Live and Work.")}
+              {t("风水布局，不止看空间，更要理解人在其中如何生活与经营。", "Feng Shui Begins with Understanding How People Live and Work in a Space.")}
             </h1>
             <p className="mt-7 max-w-3xl text-base leading-8 text-white/68 md:text-lg">
-              {t("立足新加坡，提供个人住宅与企业商业空间的风水评估和布局建议。我们从空间用途、实际限制与使用者需求出发，帮助客户更有条理地审视环境与布局选择。", "Based in Singapore, we provide Feng Shui assessment and layout guidance for homes and business premises. Recommendations start with the purpose of the space, practical constraints and the needs of the people who use it.")}
+              {t("风水布局是启明遁甲的核心服务。我们为住宅、店铺、办公室及企业经营空间提供专业评估与布局建议，结合空间格局、使用需求和现实条件，协助客户厘清优先事项与可执行的调整方向。", "Feng Shui planning is a core service of Qimen Strategy. We assess homes, retail units, offices and business premises, considering spatial layout, how the space is used and practical constraints to identify priorities and actionable adjustments.")}
             </p>
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
               <Link href={localizeHref("/contact")} className="inline-flex items-center justify-center gap-3 bg-[#d6ad63] px-7 py-4 text-sm font-bold text-black hover:bg-[#f4dfb0]">
-                {t("预约初步沟通", "Arrange an Initial Conversation")}<ArrowRight size={17} />
-              </Link>
+                {t("WhatsApp 咨询风水布局", "Enquire About Feng Shui")}<MessageCircle size={17} />
+              </a>
               <Link href={localizeHref("/commercial-feng-shui")} className="inline-flex items-center justify-center gap-2 border border-white/20 px-7 py-4 text-sm font-semibold text-white/82 hover:border-[#d6ad63]">
                 {t("查看企业商业风水详情", "Explore Commercial Feng Shui")}<ArrowRight size={16} />
               </Link>
             </div>
-            <div className="mt-10 grid gap-px border border-white/10 bg-white/10 sm:grid-cols-3">
+            <div className="mt-10 grid gap-px border border-[#d6ad63]/25 bg-[#d6ad63]/20 sm:grid-cols-3">
               {[t("住宅与家庭空间", "Homes & Living Spaces"), t("办公室与店铺", "Offices & Retail"), t("企业经营场所", "Business Premises")].map((item) => <div key={item} className="bg-black/70 px-4 py-4 text-center text-xs font-bold tracking-[0.08em] text-[#e8cc91]">{item}</div>)}
             </div>
           </div>
@@ -71,20 +73,21 @@ export default function FengShuiPlanningContent() {
         <section className="bg-[#f6f0e7] px-4 py-20 text-[#241b14] md:py-28">
           <div className="container mx-auto max-w-6xl">
             <div className="mx-auto mb-12 max-w-4xl text-center">
-              <p className="text-xs font-bold uppercase tracking-[0.24em] text-[#956b32]">{t("两类空间服务", "Two Areas of Practice")}</p>
-              <h2 className="mt-4 text-3xl font-bold leading-tight md:text-5xl">{t("先理解空间如何被使用，再讨论如何布局。", "Understand How the Space Is Used Before Planning It.")}</h2>
+              <p className="text-xs font-bold uppercase tracking-[0.24em] text-[#956b32]">{t("启明遁甲核心风水服务", "CORE FENG SHUI SERVICES")}</p>
+              <h2 className="mt-4 text-3xl font-bold leading-tight md:text-5xl">{t("从住宅到商业空间，提供有针对性的风水布局建议。", "Purposeful Feng Shui Guidance for Homes and Business Spaces.")}</h2>
             </div>
-            <div className="grid gap-6 lg:grid-cols-2">
+            <div className="grid items-stretch gap-6 lg:grid-cols-2">
               {serviceAreas.map((area) => {
                 const Icon = area.icon;
                 return (
-                  <article key={area.titleEn} className="flex flex-col border border-[#d8c6aa] bg-white p-7 md:p-9">
-                    <div className="flex h-14 w-14 items-center justify-center border border-[#b88943]/45 text-[#956b32]"><Icon size={25} /></div>
+                  <article key={area.titleEn} className="group flex h-full flex-col border border-[#d8c6aa] bg-white p-7 transition-all duration-300 hover:border-[#b88943] hover:shadow-xl md:p-9">
+                    <div className="flex h-14 w-14 items-center justify-center border border-[#b88943]/45 bg-[#f6f0e7] text-[#956b32] transition-colors group-hover:bg-[#17130f] group-hover:text-[#d6ad63]"><Icon size={25} /></div>
                     <h3 className="mt-6 text-2xl font-bold leading-tight md:text-3xl">{t(area.titleZh, area.titleEn)}</h3>
                     <p className="mt-4 text-sm leading-7 text-[#665440]">{t(area.introZh, area.introEn)}</p>
                     <ul className="mt-6 space-y-3">
                       {area.pointsZh.map((point, index) => <li key={point} className="flex items-start gap-3 text-sm leading-6 text-[#493a2a]"><ClipboardCheck size={17} className="mt-0.5 shrink-0 text-[#9b7136]" />{t(point, area.pointsEn[index])}</li>)}
                     </ul>
+                    <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="mt-7 inline-flex items-center justify-between border-t border-[#eadfce] pt-5 text-sm font-bold text-[#8c6127] transition-colors hover:text-[#241b14]">{t("咨询此类风水布局", "Enquire About This Feng Shui Service")}<ArrowRight size={17} /></a>
                   </article>
                 );
               })}
@@ -123,7 +126,7 @@ export default function FengShuiPlanningContent() {
             <MessageCircle size={28} className="mx-auto text-[#d6ad63]" />
             <h2 className="mt-6 text-3xl font-semibold leading-tight text-[#f4dfb0] md:text-5xl">{t("告诉我们你的空间与主要关注点。", "Tell Us About Your Space and Priorities.")}</h2>
             <p className="mx-auto mt-5 max-w-2xl text-base leading-8 text-white/65">{t("初步沟通时可准备物业类型、地点、平面图（如有）、空间用途及希望解决的问题。我们会据此确认适合的评估方式与服务范围。", "For an initial conversation, prepare the property type, location, floor plan if available, how the space is used and your main concerns. We will then clarify the appropriate assessment approach and scope.")}</p>
-            <Link href={localizeHref("/contact")} className="mt-8 inline-flex items-center gap-3 bg-[#d6ad63] px-8 py-4 text-sm font-bold text-black hover:bg-[#f4dfb0]">{t("联系启明遁甲", "Contact Qimen Strategy")}<ArrowRight size={17} /></Link>
+            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="mt-8 inline-flex items-center gap-3 bg-[#d6ad63] px-8 py-4 text-sm font-bold text-black hover:bg-[#f4dfb0]">{t("WhatsApp 咨询风水布局", "Enquire About Feng Shui on WhatsApp")}<MessageCircle size={17} /></a>
           </div>
         </section>
       </main>
