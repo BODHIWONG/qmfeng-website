@@ -11,10 +11,10 @@ export const decisionPageContent: ServicePageContent = {
     "适用于事业、工作、合作、关系、搬迁与其他重要选择。启明遁甲结合现实背景与奇门决策分析，帮助客户看清方向、时机、人事关系与潜在风险。",
   heroSubtitleEn:
     "For career, work, partnerships, relationships, relocation and other important choices. Qimen Strategy combines real-world context with Qimen-based decision analysis to clarify direction, timing, people dynamics and potential risks.",
-  trustPointsZh: ["S$398 · S$698 · S$998", "私密一对一", "线上或 Bedok", "按问题复杂度匹配"],
-  trustPointsEn: ["S$398 · S$698 · S$998", "Private 1-to-1", "Online or Bedok", "Matched by Decision Complexity"],
-  priceZh: "S$398 · S$698 · S$998｜按决策复杂度选择",
-  priceEn: "S$398 · S$698 · S$998 · Selected by Decision Complexity",
+  trustPointsZh: ["个人专题", "商业专题", "综合决策", "预约制咨询"],
+  trustPointsEn: ["Personal Matters", "Business Matters", "Complex Decisions", "By Appointment"],
+  priceZh: "预约制｜了解需求后确认服务范围与费用",
+  priceEn: "By appointment · Scope and fee confirmed after an initial enquiry",
   symptomsTitleZh: "你是否正在面对这些决定？",
   symptomsTitleEn: "Are you facing one of these decisions?",
   symptomsZh: [
@@ -59,8 +59,8 @@ export const decisionPageContent: ServicePageContent = {
     {
       titleZh: "匹配服务",
       titleEn: "Match the Advisory Level",
-      descZh: "根据问题复杂度与影响范围确认 S$398、S$698 或 S$998 咨询。",
-      descEn: "Select the S$398, S$698 or S$998 consultation according to complexity and impact.",
+      descZh: "了解问题复杂度与影响范围后，确认适合的服务范围与费用。",
+      descEn: "Confirm the appropriate scope and fee after reviewing complexity and impact.",
     },
     {
       titleZh: "决策分析",
@@ -103,8 +103,8 @@ export const decisionPageContent: ServicePageContent = {
     {
       qZh: "咨询费用是多少？",
       qEn: "What are the consultation fees?",
-      aZh: "个人决策咨询分为 S$398、S$698 与 S$998 三档，根据问题复杂度、影响范围与所需分析深度匹配。",
-      aEn: "Decision Consultation is offered at S$398, S$698 and S$998, matched to the complexity, impact and depth of analysis required.",
+      aZh: "请先通过 WhatsApp 简要说明问题背景与希望解决的核心事项。我们会根据问题复杂度、影响范围与所需分析深度，沟通适合的服务范围与费用。",
+      aEn: "Briefly share your context and core question through WhatsApp. The appropriate service scope and fee will be discussed based on complexity, impact and depth of analysis required.",
     },
     {
       qZh: "奇门遁甲在咨询中扮演什么角色？",
