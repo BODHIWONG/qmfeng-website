@@ -11,8 +11,8 @@ const tiers = [
     nameZh: "个人专题咨询", nameEn: "Personal Consultation",
     labelZh: "个人问题与发展方向", labelEn: "Personal Matters & Direction",
     bodyZh: "聚焦个人生活、关系与发展中的具体问题。", bodyEn: "Focused guidance for personal, relationship and development questions.",
-    topicsZh: ["感情与关系", "工作与职业发展", "个人发展方向", "学业与人生选择"],
-    topicsEn: ["Relationships", "Work & career development", "Personal direction", "Education & life choices"],
+    topicsZh: ["感情与关系", "工作与职业发展", "个人发展方向"],
+    topicsEn: ["Relationships", "Work & career development", "Personal direction"],
     messageZh: "你好，启明遁甲，我想咨询个人专题问题。我的情况是：", messageEn: "Hello Qimen Strategy, I would like to enquire about a personal matter. My situation is:",
   },
   {
@@ -57,7 +57,8 @@ export default function PersonalAdvisoryContent() {
           <div className="container mx-auto max-w-6xl">
             <div className="grid items-stretch gap-5 lg:grid-cols-3">
               {tiers.map((tier, index) => (
-                <article key={tier.nameEn} className={`flex flex-col border p-6 md:p-7 ${tier.featured ? "border-[#b88943] bg-[#17130f] text-white shadow-xl" : "border-[#d8c6aa] bg-white"}`}>
+                <article key={tier.nameEn} className={`group relative flex h-full flex-col overflow-hidden border p-6 transition-all duration-300 md:p-7 ${tier.featured ? "border-[#b88943] bg-[#17130f] text-white shadow-xl" : "border-[#d8c6aa] bg-white hover:border-[#b88943] hover:shadow-lg"}`}>
+                  <div className={`absolute inset-x-0 top-0 h-[2px] ${tier.featured ? "bg-[#d6ad63]" : "bg-transparent transition-colors duration-300 group-hover:bg-[#b88943]"}`} />
                   <div className="mb-5 flex items-center justify-between">
                     <span className={`flex size-12 items-center justify-center rounded-full ${tier.featured ? "border border-[#d6ad63]/50 bg-[#d6ad63]/10 text-[#d6ad63]" : "bg-[#f6f0e7] text-[#8c6127]"}`}>{index === 0 ? <UserRound size={22} /> : index === 1 ? <ChartNoAxesCombined size={22} /> : <Compass size={22} />}</span>
                     <span className={`text-sm tracking-widest ${tier.featured ? "text-[#d6ad63]" : "text-[#a77b35]"}`}>0{index + 1}</span>
@@ -69,7 +70,7 @@ export default function PersonalAdvisoryContent() {
                   <div className={`mt-5 border-t pt-5 ${tier.featured ? "border-white/10" : "border-[#eadfce]"}`}>
                     <p className={`mb-4 text-xs font-semibold tracking-wider ${tier.featured ? "text-[#d6ad63]" : "text-[#8c6127]"}`}>{t("常见咨询主题", "TYPICAL TOPICS")}</p>
                     {(t(tier.topicsZh.join("|"), tier.topicsEn.join("|"))).split("|").map((item) => (
-                      <p key={item} className="mb-3 flex items-start gap-2 text-sm"><CheckCircle2 size={16} className={`mt-0.5 shrink-0 ${tier.featured ? "text-[#d6ad63]" : "text-[#b88943]"}`} />{item}</p>
+                      <p key={item} className="mb-3 flex items-start gap-2 text-sm leading-6"><CheckCircle2 size={16} className={`mt-0.5 shrink-0 ${tier.featured ? "text-[#d6ad63]" : "text-[#b88943]"}`} />{item}</p>
                     ))}
                   </div>
                   <Link
@@ -77,7 +78,7 @@ export default function PersonalAdvisoryContent() {
                     data-conversion="personal_decision_consultation"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`mt-auto inline-flex items-center justify-between px-5 py-4 text-sm font-bold ${tier.featured ? "bg-[#d6ad63] text-black" : "border border-[#9c7238] text-[#7f5a28]"}`}
+                    className={`mt-auto inline-flex items-center justify-between px-5 py-4 text-sm font-bold transition-colors duration-200 ${tier.featured ? "bg-[#d6ad63] text-black hover:bg-[#e5c17a]" : "border border-[#9c7238] text-[#7f5a28] hover:bg-[#f6f0e7]"}`}
                   >
                     {t("在 WhatsApp 上咨询", "Enquire on WhatsApp")}<ArrowRight size={16} />
                   </Link>
