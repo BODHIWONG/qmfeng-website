@@ -361,7 +361,7 @@ export default function CommercialFengShuiContent() {
         <section id="office-importance" className="bg-[#f6f0e6] px-4 py-20 text-[#241b14] md:py-28">
           <div className="container mx-auto max-w-6xl">
             <p className="text-xs font-bold uppercase tracking-[0.24em] text-[#a8753f]">
-              {t("Office风水的重要性", "Why Office Feng Shui Matters")}
+              {t("办公空间风水的重要性", "Why Office Feng Shui Matters")}
             </p>
             <h2
               className="mt-4 max-w-4xl text-3xl font-bold leading-tight md:text-5xl"
