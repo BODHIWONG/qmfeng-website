@@ -57,7 +57,7 @@ export default function FengShuiPlanningContent() {
               {t("风水布局是启明遁甲的核心服务。我们为住宅、店铺、办公室及企业经营空间提供专业评估与布局建议，结合空间格局、使用需求和现实条件，协助客户厘清优先事项与可执行的调整方向。", "Feng Shui planning is a core service of Qimen Strategy. We assess homes, retail units, offices and business premises, considering spatial layout, how the space is used and practical constraints to identify priorities and actionable adjustments.")}
             </p>
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-              <Link href={localizeHref("/contact")} className="inline-flex items-center justify-center gap-3 bg-[#d6ad63] px-7 py-4 text-sm font-bold text-black hover:bg-[#f4dfb0]">
+              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-3 bg-[#d6ad63] px-7 py-4 text-sm font-bold text-black hover:bg-[#f4dfb0]">
                 {t("WhatsApp 咨询风水布局", "Enquire About Feng Shui")}<MessageCircle size={17} />
               </a>
               <Link href={localizeHref("/commercial-feng-shui")} className="inline-flex items-center justify-center gap-2 border border-white/20 px-7 py-4 text-sm font-semibold text-white/82 hover:border-[#d6ad63]">
