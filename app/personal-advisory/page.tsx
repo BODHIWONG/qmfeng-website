@@ -5,7 +5,7 @@ import PersonalAdvisoryContent from "@/components/personal-advisory-content";
 export const metadata: Metadata = {
   title: "Decision Consultation Singapore｜Qimen Strategy",
   description:
-    "Private decision consultation in Singapore for business, career, partnerships, relationships, relocation and major life decisions. Choose S$398, S$698 or S$998 according to decision complexity.",
+    "Private decision consultation in Singapore for business, career, partnerships, relationships, relocation and major life decisions. Service scope and fees are confirmed after an initial enquiry.",
   keywords: [
     "Decision consultation Singapore",
     "Strategic decision advisory Singapore",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Decision Consultation Singapore | Qimen Strategy",
     description:
-      "Private decision consultation at S$398, S$698 or S$998, matched to the complexity and impact of the decision rather than time alone.",
+      "Decision consultation for personal matters, business and complex decisions. Service scope and fees are confirmed after an initial enquiry.",
     url: "https://www.qmfeng.com/personal-advisory",
     type: "website",
   },
@@ -46,20 +46,7 @@ const structuredData = {
   url: "https://www.qmfeng.com/personal-advisory",
   description:
     "Private decision consultation for business, career, partnerships, relationships, relocation and major life decisions, using practical context together with Qimen-based decision analysis.",
-  hasOfferCatalog: {
-    "@type": "OfferCatalog",
-    name: "Decision Consultation",
-    itemListElement: [
-      { name: "Essential Decision Consultation", price: "398", currency: "SGD" },
-      { name: "Comprehensive Decision Consultation", price: "698", currency: "SGD" },
-      { name: "Strategic Decision Consultation", price: "998", currency: "SGD" },
-    ].map((item) => ({
-      "@type": "Offer",
-      price: item.price,
-      priceCurrency: item.currency,
-      itemOffered: { "@type": "Service", name: item.name },
-    })),
-  },
+  serviceType: ["Personal Consultation", "Business Consultation", "Complex Decision Consultation"],
 };
 
 export default function PersonalAdvisoryPage() {
