@@ -7,34 +7,9 @@ import Footer from "@/components/footer";
 import { useLanguage } from "@/contexts/language-context";
 
 const tiers = [
-  {
-    nameZh: "核心决策咨询",
-    nameEn: "Essential Decision Consultation",
-    price: "S$398",
-    labelZh: "一个明确的核心决策",
-    labelEn: "One Focused Decision",
-    bodyZh: "适合一个清晰、边界明确的问题，例如工作机会、合作选择、感情去留、行动时机或单一方向判断。",
-    bodyEn: "For one clearly defined decision such as a job offer, partnership choice, relationship direction, timing or a single strategic question.",
-  },
-  {
-    nameZh: "综合决策咨询",
-    nameEn: "Comprehensive Decision Consultation",
-    price: "S$698",
-    labelZh: "多个相互关联的问题",
-    labelEn: "Connected Decisions",
-    bodyZh: "适合多个问题彼此牵动的情况，例如事业、创业、关系、迁移或家庭选择需要放在同一局势中综合判断。",
-    bodyEn: "For interconnected decisions where business, career, relationships, relocation or family choices need to be examined together.",
-    featured: true,
-  },
-  {
-    nameZh: "战略决策咨询",
-    nameEn: "Strategic Decision Consultation",
-    price: "S$998",
-    labelZh: "高影响、高复杂度决策",
-    labelEn: "High-Stakes Decision",
-    bodyZh: "适合企业主、高管、创业者及重大人生转折，涉及多变量、较高影响与更深入的综合决策分析。",
-    bodyEn: "For entrepreneurs, senior professionals and major turning points involving multiple variables, higher stakes and deeper strategic analysis.",
-  },
+  { nameZh: "个人专题咨询", nameEn: "Personal Consultation", labelZh: "个人问题与发展方向", labelEn: "Personal Matters & Direction", bodyZh: "适用于感情与关系、工作与职业发展、个人成长及发展方向等具体问题。", bodyEn: "For focused personal matters such as relationships, work, career development and personal direction.", messageZh: "你好，启明遁甲，我想咨询个人专题问题。我的情况是：", messageEn: "Hello Qimen Strategy, I would like to enquire about a personal matter. My situation is:" },
+  { nameZh: "商业专题咨询", nameEn: "Business Consultation", labelZh: "经营、合作与项目判断", labelEn: "Business, Partnerships & Projects", bodyZh: "适用于生意经营、合作伙伴关系、项目选择、业务推进与商业发展等问题。", bodyEn: "For business operations, partnerships, project choices, business execution and commercial development.", messageZh: "你好，启明遁甲，我想咨询商业专题问题。我的情况是：", messageEn: "Hello Qimen Strategy, I would like to enquire about a business matter. My situation is:", featured: true },
+  { nameZh: "综合决策咨询", nameEn: "Complex Decision Consultation", labelZh: "多因素交织的复杂问题", labelEn: "Complex, Interconnected Decisions", bodyZh: "适用于涉及多个因素、多个选项或较大影响范围，需要统筹分析的复杂决策。", bodyEn: "For complex decisions involving multiple factors, options or significant impact that require an integrated assessment.", messageZh: "你好，启明遁甲，我想咨询复杂或综合决策问题。我的情况是：", messageEn: "Hello Qimen Strategy, I would like to enquire about a complex decision. My situation is:" },
 ];
 
 export default function PersonalAdvisoryContent() {
@@ -60,23 +35,18 @@ export default function PersonalAdvisoryContent() {
           <div className="container mx-auto max-w-6xl">
             <div className="grid gap-6 lg:grid-cols-3">
               {tiers.map((tier) => (
-                <article key={tier.price} className={`flex flex-col border p-8 ${tier.featured ? "border-[#b88943] bg-[#17130f] text-white shadow-2xl" : "border-[#d8c6aa] bg-white"}`}>
+                <article key={tier.nameEn} className={`flex flex-col border p-8 ${tier.featured ? "border-[#b88943] bg-[#17130f] text-white shadow-2xl" : "border-[#d8c6aa] bg-white"}`}>
                   <p className={`text-xs font-bold uppercase tracking-[0.2em] ${tier.featured ? "text-[#d6ad63]" : "text-[#9c7238]"}`}>{t(tier.labelZh, tier.labelEn)}</p>
                   <h2 className={`mt-4 text-2xl font-bold ${tier.featured ? "text-[#f4dfb0]" : "text-[#241b14]"}`}>{t(tier.nameZh, tier.nameEn)}</h2>
-                  <div className={`mt-6 text-4xl font-semibold ${tier.featured ? "text-[#f4dfb0]" : "text-[#7f5a28]"}`}>{tier.price}</div>
+                  
                   <p className={`mt-6 text-sm leading-7 ${tier.featured ? "text-white/68" : "text-[#5d4d3c]"}`}>{t(tier.bodyZh, tier.bodyEn)}</p>
                   <div className={`mt-7 border-t pt-6 ${tier.featured ? "border-white/10" : "border-[#eadfce]"}`}>
-                    {[t("私密预约", "Private appointment"), t("线上或Bedok面谈", "Online or Bedok"), t("以决策复杂度匹配服务", "Matched to decision complexity")].map((item) => (
+                    {[t("私密预约", "Private appointment"), t("线上或 Bedok 面谈", "Online or in-person in Bedok"), t("先了解需求，再确认服务范围", "Scope confirmed after understanding your needs")].map((item) => (
                       <p key={item} className="mb-3 flex items-start gap-2 text-sm"><CheckCircle2 size={16} className="mt-0.5 shrink-0 text-[#b88943]" />{item}</p>
                     ))}
                   </div>
                   <Link
-                    href={`https://wa.me/6589593499?text=${encodeURIComponent(
-                      t(
-                        `您好，我想了解${tier.nameZh}（${tier.price}）。我正在面对一个重要决定，希望先说明情况。`,
-                        `Hello, I would like to enquire about the ${tier.nameEn} (${tier.price}). I am facing an important decision and would like to briefly explain my situation.`
-                      )
-                    )}`}
+                    href={`https://wa.me/6589909257?text=${encodeURIComponent(t(tier.messageZh, tier.messageEn))}`}
                     data-conversion="personal_decision_consultation"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -90,8 +60,8 @@ export default function PersonalAdvisoryContent() {
 
             <div className="mt-12 grid gap-5 border-t border-[#d8c6aa] pt-8 md:grid-cols-2">
               <div className="bg-white px-6 py-5 text-sm leading-7 text-[#5d4d3c]">
-                <p className="font-semibold text-[#7f5a28]">{t("个人决策咨询", "Decision Consultation")}</p>
-                <p className="mt-2">{t("三档服务按决策复杂度与影响程度匹配，而不是简单按咨询时长区分。", "The three consultation levels are matched to decision complexity and impact, rather than simply to session length.")}</p>
+                <p className="font-semibold text-[#7f5a28]">{t("咨询方式", "How It Works")}</p>
+                <p className="mt-2">{t("先通过 WhatsApp 说明问题背景与目标，再根据实际需求确认适合的服务范围与费用。", "Share your context and objective on WhatsApp first. The appropriate scope and fee will then be confirmed based on your needs.")}</p>
               </div>
               <div className="bg-[#17130f] px-6 py-5 text-sm leading-7 text-white/68">
                 <p className="font-semibold text-[#d6ad63]">{t("企业与家族企业顾问", "Enterprise & Family Business Advisory")}</p>
