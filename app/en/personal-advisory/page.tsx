@@ -4,7 +4,7 @@ import { FixedLanguageProvider } from "@/contexts/language-context";
 
 export const metadata: Metadata = {
   title: "Qimen Dunjia Decision Analysis Singapore | Qimen Strategy",
-  description: "Qimen Dunjia decision analysis for individuals and businesses in Singapore, covering career, partnerships, key people, projects and major choices. Consultation options are S$398, S$698 and S$998 by decision complexity.",
+  description: "Qimen Dunjia decision analysis for personal matters, business decisions and complex choices in Singapore. Enquire via WhatsApp to discuss the question and relevant context.",
   alternates: {
     canonical: "https://www.qmfeng.com/en/personal-advisory",
     languages: {
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Qimen Dunjia Decision Analysis Singapore | Qimen Strategy",
-    description: "Qimen Dunjia decision analysis for individuals and businesses in Singapore, covering career, partnerships, key people, projects and major choices. Consultation options are S$398, S$698 and S$998 by decision complexity.",
+    description: "Qimen Dunjia decision analysis for personal matters, business decisions and complex choices in Singapore. Enquire via WhatsApp to discuss the question and relevant context.",
     url: "https://www.qmfeng.com/en/personal-advisory",
     siteName: "Qimen Strategy | 启明遁甲",
     locale: "en_SG",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Qimen Dunjia Decision Analysis Singapore | Qimen Strategy",
-    description: "Qimen Dunjia decision analysis for individuals and businesses in Singapore, covering career, partnerships, key people, projects and major choices. Consultation options are S$398, S$698 and S$998 by decision complexity.",
+    description: "Qimen Dunjia decision analysis for personal matters, business decisions and complex choices in Singapore. Enquire via WhatsApp to discuss the question and relevant context.",
   },
 };
 
