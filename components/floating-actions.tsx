@@ -19,33 +19,33 @@ const WA_LINK = "https://wa.me/6589909257";
 const quickLinks = [
   {
     icon: UserRound,
-    labelZh: "聚焦决策咨询 · S$398",
-    labelEn: "Focused Decision Consultation · S$398",
-    message: "Hi Qimen Strategy, I'd like to enquire about the S$398 focused decision consultation. My current situation is:",
+    labelZh: "个人专题咨询",
+    labelEn: "Personal Consultation",
+    message: "你好，启明遁甲，我想咨询个人专题问题。我的情况是：",
   },
   {
     icon: Sparkles,
-    labelZh: "深度决策咨询 · S$698",
-    labelEn: "In-Depth Decision Consultation · S$698",
-    message: "Hi Qimen Strategy, I'd like to enquire about the S$698 in-depth decision consultation. My current situation is:",
+    labelZh: "商业专题咨询",
+    labelEn: "Business Consultation",
+    message: "你好，启明遁甲，我想咨询商业专题问题。我的情况是：",
   },
   {
     icon: Briefcase,
-    labelZh: "企业战略顾问",
-    labelEn: "Business Strategic Advisory",
-    message: "Hi Qimen Strategy, I'd like to enquire about Business Strategic Advisory. My current business challenge is:",
+    labelZh: "综合决策咨询",
+    labelEn: "Complex Decision Consultation",
+    message: "你好，启明遁甲，我想咨询复杂或综合决策问题。我的情况是：",
   },
   {
     icon: Building2,
-    labelZh: "商业风水｜办公室·工厂·办公大楼",
-    labelEn: "Commercial Feng Shui",
-    message: "Hi Qimen Strategy, I'd like to enquire about Commercial Feng Shui. Property type: Office / Factory / Warehouse / Corporate Building. Approximate size or floors: ____. Location: ____. Industry: ____. My main concern is: ____. ",
+    labelZh: "个人与企业风水布局",
+    labelEn: "Personal & Business Feng Shui",
+    message: "你好，启明遁甲，我想咨询个人或企业风水布局。我的情况是：",
   },
   {
     icon: GraduationCap,
     labelZh: "了解奇门课程",
     labelEn: "Qi Men Courses",
-    message: "Hi Qimen Strategy, could you share details about your Qi Men courses?",
+    message: "你好，启明遁甲，请介绍奇门课程详情。",
   },
 ];
 
