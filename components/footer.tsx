@@ -24,7 +24,7 @@ const companyLinks = [
   { href: "/founder", zh: "关于黄启明", en: "About Huang Qiming" },
   { href: "/enterprise-strategic-advisory", zh: "我们的方法", en: "Our Approach" },
   { href: "/insights", zh: "案例研究", en: "Case Studies" },
-  { href: "/contact", zh: "预约私密沟通", en: "Request a Private Conversation" },
+
 ];
 
 export default function Footer() {
@@ -102,9 +102,9 @@ export default function Footer() {
             <p>Singapore · In Person · Online · WhatsApp +65 8990 9257 / +65 8959 3499</p>
           </div>
           <div className="flex flex-col gap-3 md:items-end">
-            <Link href={localizeHref("/contact")} className="inline-flex justify-center bg-[#d6ad63] px-6 py-3 text-sm font-bold uppercase tracking-[0.1em] text-black hover:bg-[#f4dfb0]">
+            <a href={CONSULTATION_WHATSAPP} target="_blank" rel="noopener noreferrer" className="inline-flex justify-center bg-[#d6ad63] px-6 py-3 text-sm font-bold uppercase tracking-[0.1em] text-black hover:bg-[#f4dfb0]">
               {t("预约私密沟通", "Request a Private Conversation")}
-            </Link>
+            </a>
             <a href={CONSULTATION_WHATSAPP} target="_blank" rel="noopener noreferrer" className="text-xs font-semibold text-white/42 transition hover:text-[#d6ad63]">
               {t("WhatsApp 联系 →", "WhatsApp →")}
             </a>
