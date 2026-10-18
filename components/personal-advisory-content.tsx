@@ -41,21 +41,21 @@ export default function PersonalAdvisoryContent() {
     <div className="min-h-screen bg-[#0e0c0a] text-white">
       <Navbar />
       <main>
-        <section className="relative overflow-hidden border-b border-[#d6ad63]/20 px-4 pb-16 pt-32 md:pb-20 md:pt-36">
+        <section className="relative overflow-hidden border-b border-[#d6ad63]/20 px-4 pb-14 pt-28 md:pb-16 md:pt-32">
           <div className="container mx-auto max-w-6xl">
             <p className="text-xs font-bold uppercase tracking-[0.28em] text-[#d6ad63]">{t("决策咨询", "Decision Consultation")}</p>
-            <h1 className="mt-6 max-w-4xl text-4xl font-semibold leading-tight text-[#f4dfb0] md:text-6xl" style={{ fontFamily: "var(--font-cormorant), var(--font-noto-serif), serif" }}>
-              {t("启明遁甲决策咨询", "Qimen Strategy Decision Consultation")}
+            <h1 className="mt-5 max-w-4xl text-4xl font-semibold leading-[1.18] text-[#f4dfb0] md:text-5xl lg:text-6xl" style={{ fontFamily: "var(--font-cormorant), var(--font-noto-serif), serif" }}>
+              {t("个人、商业与综合决策咨询", "Personal, Business & Complex Decision Consultation")}
             </h1>
-            <p className="mt-7 max-w-3xl text-base leading-8 text-white/68 md:text-lg">
-              {t("从个人发展到商业经营，再到多因素交织的重大选择。奇门提供分析视角，最终决定始终由你作出。", "From personal development to business and complex decisions. Qimen offers an analytical perspective; the final decision remains yours.")}
+            <p className="mt-5 max-w-3xl text-base leading-8 text-white/68 md:text-lg">
+              {t("围绕个人发展、商业经营与复杂选择，提供有针对性的奇门决策分析。分析用于辅助判断，最终决定由你作出。", "Focused Qimen decision analysis for personal development, business and complex choices. The analysis supports your judgment; the final decision remains yours.")}
             </p>
           </div>
         </section>
 
-        <section className="bg-[#f6f0e7] px-4 py-14 text-[#241b14] md:py-20">
+        <section className="bg-[#f6f0e7] px-4 py-12 text-[#241b14] md:py-16">
           <div className="container mx-auto max-w-6xl">
-            <div className="grid gap-6 lg:grid-cols-3">
+            <div className="grid items-stretch gap-5 lg:grid-cols-3">
               {tiers.map((tier, index) => (
                 <article key={tier.nameEn} className={`flex flex-col border p-6 md:p-7 ${tier.featured ? "border-[#b88943] bg-[#17130f] text-white shadow-xl" : "border-[#d8c6aa] bg-white"}`}>
                   <div className="mb-5 flex items-center justify-between">
@@ -85,15 +85,12 @@ export default function PersonalAdvisoryContent() {
               ))}
             </div>
 
-            <div className="mt-10 grid gap-5 border-t border-[#d8c6aa] pt-7 md:grid-cols-2">
+            <div className="mt-8 border-t border-[#d8c6aa] pt-6">
               <div className="bg-white px-6 py-5 text-sm leading-7 text-[#5d4d3c]">
                 <p className="font-semibold text-[#7f5a28]">{t("咨询原则", "Our Approach")}</p>
                 <p className="mt-2">{t("先厘清问题与现实背景，再结合实际条件进行分析。奇门提供参考视角，不代替客户作出决定。", "We first clarify the question and real-world context, then assess the situation. Qimen offers a perspective; it does not make the decision for you.")}</p>
               </div>
-              <div className="bg-[#17130f] px-6 py-5 text-sm leading-7 text-white/68">
-                <p className="font-semibold text-[#d6ad63]">{t("企业与家族企业顾问", "Enterprise & Family Business Advisory")}</p>
-                <p className="mt-2">{t("企业、董事长与家族企业项目根据实际决策范围、复杂度与合作深度进行私密评估。", "Enterprise, Chairman and Family Business engagements are scoped privately according to the decision context, complexity and depth of engagement.")}</p>
-              </div>
+
             </div>
           </div>
         </section>
