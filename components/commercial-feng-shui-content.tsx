@@ -374,7 +374,7 @@ export default function CommercialFengShuiContent() {
             </h2>
             <p className="mt-5 max-w-4xl text-base leading-8 text-[#5f4e3d]">
               {t(
-                "Office风水仍然是商业风水的重要基础。老板和管理层长期工作的环境、员工如何协作、客户如何进入和感受公司，都会在日常经营中不断重复。",
+                "办公空间风水是商业风水的重要组成部分。老板和管理层长期工作的环境、员工如何协作、客户如何进入和感受公司，都会在日常经营中不断重复。",
                 "Office Feng Shui remains a core part of Commercial Feng Shui. The environment in which leaders work, the way teams collaborate and the experience clients have when entering the company are repeated every business day."
               )}
             </p>
