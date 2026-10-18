@@ -45,7 +45,7 @@ export default function PersonalAdvisoryContent() {
           <div className="container mx-auto max-w-6xl">
             <p className="text-xs font-bold uppercase tracking-[0.28em] text-[#d6ad63]">{t("决策咨询", "Decision Consultation")}</p>
             <h1 className="mt-6 max-w-4xl text-4xl font-semibold leading-tight text-[#f4dfb0] md:text-6xl" style={{ fontFamily: "var(--font-cormorant), var(--font-noto-serif), serif" }}>
-              {t("根据决策复杂度选择深度，而不是按时间计价。", "Choose the depth by decision complexity, not by the clock.")}
+              {t("启明遁甲决策咨询", "Qimen Strategy Decision Consultation")}
             </h1>
             <p className="mt-7 max-w-3xl text-base leading-8 text-white/68 md:text-lg">
               {t("从个人发展到商业经营，再到多因素交织的重大选择。奇门提供分析视角，最终决定始终由你作出。", "From personal development to business and complex decisions. Qimen offers an analytical perspective; the final decision remains yours.")}
