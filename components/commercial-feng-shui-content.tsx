@@ -19,7 +19,7 @@ import Footer from "@/components/footer";
 import FloatingActions from "@/components/floating-actions";
 import { useLanguage } from "@/contexts/language-context";
 
-const WHATSAPP_BASE = "https://wa.me/6589593499";
+const WHATSAPP_BASE = "https://wa.me/6589909257";
 
 function whatsappLink(message: string) {
   return `${WHATSAPP_BASE}?text=${encodeURIComponent(message)}`;
@@ -30,6 +30,7 @@ const GENERAL_WHATSAPP_MESSAGE =
 
 const serviceTypes = [
   {
+    image: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1000&q=85",
     icon: Building2,
     titleZh: "办公室风水",
     titleEn: "Office Feng Shui",
@@ -45,6 +46,7 @@ const serviceTypes = [
       "Hello Qimen Strategy, I would like to enquire about Office Feng Shui. Property type: Office. Approximate size: ____. Location: ____. Industry: ____. Team size: ____. My main concern is: ____. ",
   },
   {
+    image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=1000&q=85",
     icon: Factory,
     titleZh: "工厂与工业空间风水",
     titleEn: "Factory & Industrial Feng Shui",
@@ -60,6 +62,7 @@ const serviceTypes = [
       "Hello Qimen Strategy, I would like to enquire about Factory & Industrial Feng Shui. Property type: Factory / Industrial Facility / Warehouse. Approximate size: ____. Location: ____. Industry: ____. Main production or logistics concern: ____. ",
   },
   {
+    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1000&q=85",
     icon: Landmark,
     titleZh: "企业办公大楼与总部风水",
     titleEn: "Corporate Building & Headquarters Feng Shui",
@@ -312,8 +315,13 @@ export default function CommercialFengShuiContent() {
                 const Icon = service.icon;
                 const bullets = lang === "zh" ? service.bulletsZh : service.bulletsEn;
                 return (
-                  <article key={service.titleEn} className="flex h-full flex-col border border-[#d6ad63]/25 bg-white/[0.035] p-7">
-                    <Icon className="text-[#d6ad63]" size={27} />
+                  <article key={service.titleEn} className="flex h-full flex-col overflow-hidden border border-[#d6ad63]/25 bg-white/[0.035]">
+                    <div className="relative h-48 overflow-hidden">
+                      <img src={service.image} alt={t(service.titleZh, service.titleEn)} loading="lazy" className="h-full w-full object-cover transition duration-500 hover:scale-[1.03]" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#070604]/75 via-transparent to-transparent" />
+                      <Icon className="absolute bottom-4 left-5 text-[#f0c875]" size={27} />
+                    </div>
+                    <div className="flex flex-1 flex-col p-7">
                     <h3 className="mt-5 text-2xl font-semibold text-[#f4dfb0]">{t(service.titleZh, service.titleEn)}</h3>
                     <p className="mt-3 text-sm font-semibold leading-6 text-[#d6ad63]">{t(service.suitableZh, service.suitableEn)}</p>
                     <p className="mt-4 text-sm leading-7 text-white/62">{t(service.bodyZh, service.bodyEn)}</p>
@@ -334,6 +342,7 @@ export default function CommercialFengShuiContent() {
                       {t("咨询此项服务", "Enquire About This Service")}
                       <ArrowRight size={16} />
                     </a>
+                    </div>
                   </article>
                 );
               })}
