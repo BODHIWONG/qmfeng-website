@@ -243,8 +243,16 @@ export default function CommercialFengShuiContent() {
     <div className="min-h-screen bg-[#070604] text-white">
       <Navbar />
       <main>
-        <section className="relative overflow-hidden border-b border-[#d6ad63]/20 px-4 pb-20 pt-36 md:pb-28 md:pt-44">
+        <section className="relative isolate overflow-hidden border-b border-[#d6ad63]/20 px-4 pb-20 pt-36 md:pb-28 md:pt-44">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_82%_18%,rgba(214,173,99,0.20),transparent_36%)]" />
+          <div className="absolute inset-y-0 right-0 hidden w-[58%] md:block">
+            <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1800&q=90" alt="" className="h-full w-full object-cover object-center opacity-75" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#070604] via-[#070604]/75 to-[#070604]/10" />
+          </div>
+          <div className="absolute inset-0 md:hidden">
+            <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=900&q=80" alt="" className="h-full w-full object-cover opacity-20" />
+            <div className="absolute inset-0 bg-[#070604]/70" />
+          </div>
           <div className="container relative mx-auto max-w-6xl">
             <div className="max-w-5xl">
               <p className="text-xs font-bold uppercase tracking-[0.28em] text-[#d6ad63]">
