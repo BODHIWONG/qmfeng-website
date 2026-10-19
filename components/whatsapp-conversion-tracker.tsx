@@ -45,6 +45,7 @@ function inferServiceType(link: HTMLAnchorElement) {
 declare global {
   interface Window {
     gtag?: (...args: unknown[]) => void;
+    oaiq?: (...args: unknown[]) => void;
   }
 }
 
@@ -57,6 +58,13 @@ export default function WhatsAppConversionTracker() {
       if (!link || !isWhatsAppLink(link.href)) return;
 
       const serviceType = inferServiceType(link);
+
+      // Record a WhatsApp contact-intent conversion in OpenAI Ads.
+      if (typeof window.oaiq === "function") {
+        window.oaiq("measure", "lead_created", {
+          type: "customer_action",
+        });
+      }
 
       if (typeof window.gtag === "function") {
         window.gtag("event", "whatsapp_click", {
