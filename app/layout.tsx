@@ -6,6 +6,11 @@ import SiteStructuredData from "@/components/site-structured-data";
 import WhatsAppConversionTracker from "@/components/whatsapp-conversion-tracker";
 import "./globals.css";
 
+const openAiAdsPixelInit = [
+  '(function(w,d,s,u){if(w.oaiq)return;var q=function(){q.q.push(arguments)};q.q=[];w.oaiq=q;var j=d.createElement(s);j.async=1;j.src=u;var f=d.getElementsByTagName(s)[0];f.parentNode.insertBefore(j,f)})(window,document,"script","https://bzrcdn.openai.com/sdk/oaiq.min.js");',
+  'oaiq("init",{pixelId:"Etg829rh4oDyxewp7qa3gn"});',
+].join("\n");
+
 const googleAdsId = "AW" + "-" + "17926881970";
 const googleAdsLoader = `https://www.googletagmanager.com/gtag/js?id=${googleAdsId}`;
 const googleAdsInit = [
@@ -122,6 +127,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en-SG" className="bg-background">
       <body className={`${notoSerifSC.variable} ${notoSansSC.variable} ${lato.variable} ${cormorant.variable} font-sans antialiased`}>
+        <Script id="openai-ads-pixel" strategy="afterInteractive" dangerouslySetInnerHTML={{ __html: openAiAdsPixelInit }} />
         <Script async src={googleAdsLoader} strategy="afterInteractive" />
         <Script id="google-ads-init" strategy="afterInteractive" dangerouslySetInnerHTML={{ __html: googleAdsInit }} />
         <SiteStructuredData />
