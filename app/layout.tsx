@@ -127,7 +127,8 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en-SG" className="bg-background">
       <body className={`${notoSerifSC.variable} ${notoSansSC.variable} ${lato.variable} ${cormorant.variable} font-sans antialiased`}>
-        <Script id="openai-ads-pixel" strategy="afterInteractive" dangerouslySetInnerHTML={{ __html: openAiAdsPixelInit }} />\n        <Script async src={googleAdsLoader} strategy="afterInteractive" />
+        <Script id="openai-ads-pixel" strategy="afterInteractive" dangerouslySetInnerHTML={{ __html: openAiAdsPixelInit }} />
+        <Script async src={googleAdsLoader} strategy="afterInteractive" />
         <Script id="google-ads-init" strategy="afterInteractive" dangerouslySetInnerHTML={{ __html: googleAdsInit }} />
         <SiteStructuredData />
         <WhatsAppConversionTracker />
