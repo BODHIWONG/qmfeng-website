@@ -9,7 +9,7 @@ import "./globals.css";
 const openAiAdsPixelInit = [
   '(function(w,d,s,u){if(w.oaiq)return;var q=function(){q.q.push(arguments)};q.q=[];w.oaiq=q;var j=d.createElement(s);j.async=1;j.src=u;var f=d.getElementsByTagName(s)[0];f.parentNode.insertBefore(j,f)})(window,document,"script","https://bzrcdn.openai.com/sdk/oaiq.min.js");',
   'oaiq("init",{pixelId:"Etg829rh4oDyxewp7qa3gn"});',
-].join("\\n");
+].join("\n");
 
 const googleAdsId = "AW" + "-" + "17926881970";
 const googleAdsLoader = `https://www.googletagmanager.com/gtag/js?id=${googleAdsId}`;
