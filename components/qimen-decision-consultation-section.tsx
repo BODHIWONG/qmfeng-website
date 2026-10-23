@@ -1,13 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, BadgeDollarSign, CheckCircle2, Clock3, MessageCircle, ShieldCheck } from "lucide-react";
+import { ArrowRight, CheckCircle2, Clock3, MessageCircle, ShieldCheck } from "lucide-react";
 import { useLanguage } from "@/contexts/language-context";
 
-const WA_LINK = [
-  "https://wa.me/6589593499",
-  "text=Hello%20Qimen%20Strategy%2C%20I%20would%20like%20to%20book%20a%20Qimen%20Decision%20Consultation%20from%20S%24396.",
-].join("?");
+const WA_LINK = "https://wa.me/6589593499";
 
 const includedItems = [
   { zh: "完整奇门决策分析", en: "Full Qimen Strategy reading" },
@@ -17,8 +14,8 @@ const includedItems = [
 
 const boundaryItems = [
   {
-    zh: "基础奇门决策咨询 S$396 起，适用于个人方向、事业选择、关系判断与重要决策参考。",
-    en: "Qimen Decision Consultation starts from S$396, suitable for personal direction, career choices, relationship clarity and important decision support.",
+    zh: "服务范围与费用将在初步沟通、了解具体问题后确认。",
+    en: "Service scope and fees are confirmed after an initial conversation about your specific needs.",
   },
   {
     zh: "复杂个案、企业决策或后续顾问支持，将根据实际需求另行评估。",
@@ -65,9 +62,8 @@ export default function QimenDecisionConsultationSection() {
 
             <div className="grid gap-4 sm:grid-cols-3">
               <div className="border border-[oklch(0.86_0.035_70)] bg-white p-5">
-                <BadgeDollarSign className="mb-3 text-[oklch(0.60_0.08_65)]" size={26} />
-                <p className="text-xs font-bold uppercase tracking-[0.18em] text-[oklch(0.50_0.03_60)]">{t("费用", "Rate")}</p>
-                <p className="mt-2 text-3xl font-bold text-[oklch(0.15_0.02_60)]">S$396 起</p>
+                <p className="text-xs font-bold uppercase tracking-[0.18em] text-[oklch(0.50_0.03_60)]">{t("服务范围", "Scope")}</p>
+                <p className="mt-2 text-lg font-bold leading-snug text-[oklch(0.15_0.02_60)]">{t("按具体需求确认", "Tailored to your needs")}</p>
               </div>
 
               <div className="border border-[oklch(0.86_0.035_70)] bg-white p-5">
@@ -94,7 +90,7 @@ export default function QimenDecisionConsultationSection() {
             <div>
               <p className="mb-3 text-xs font-bold uppercase tracking-[0.28em] text-[oklch(0.72_0.12_70)]">QIMEN STRATEGY</p>
               <h3 className="mb-6 text-2xl font-bold leading-tight text-white md:text-4xl" style={{ fontFamily: "var(--font-cormorant), var(--font-noto-serif), serif" }}>
-                {t("S$396 起包含什么？", "What does From S$396 include?")}
+                {t("咨询服务包含什么？", "What does the consultation include?")}
               </h3>
 
               <div className="space-y-4">
@@ -118,7 +114,7 @@ export default function QimenDecisionConsultationSection() {
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="inline-flex flex-1 items-center justify-center gap-3 bg-[oklch(0.72_0.12_70)] px-6 py-4 text-sm font-bold uppercase tracking-wider text-[oklch(0.06_0.02_60)] transition hover:scale-[1.01]">
                 <MessageCircle size={18} />
-                {t("预约奇门决策", "Book Qimen Decision")}
+                {t("在 WhatsApp 上咨询", "Enquire on WhatsApp")}
               </a>
 
               <a href="#enquiry" className="inline-flex flex-1 items-center justify-center gap-3 border border-[oklch(0.72_0.12_70)] px-6 py-4 text-sm font-bold uppercase tracking-wider text-[oklch(0.72_0.12_70)] transition hover:bg-[oklch(0.72_0.12_70)] hover:text-[oklch(0.06_0.02_60)]">
