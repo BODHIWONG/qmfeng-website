@@ -41,10 +41,10 @@ const content: ServicePageContent = {
     "启明遁甲个人重大决策咨询，适合正在面对事业方向、关系进退、搬迁、投资、家庭选择或人生阶段转折的人。通过奇门遁甲与现实处境分析，帮助你在行动前看清时机、方向、人事关系、状态消耗与下一步代价。",
   heroSubtitleEn:
     "Qimen Strategy Personal Major Decision Advisory is designed for clients facing career direction, relationship choices, relocation, investment, family decisions or major life transitions. It reviews timing, direction, people dynamics, state and practical cost before action.",
-  trustPointsZh: ["事业方向", "关系选择", "搬迁投资", "S$398 起"],
-  trustPointsEn: ["Career Direction", "Relationship Choice", "Move & Investment", "From S$398"],
-  priceZh: "S$398 起｜按复杂度确认",
-  priceEn: "From S$398 · Scope-Based Pricing",
+  trustPointsZh: ["事业方向", "关系选择", "搬迁投资", "预约制咨询"],
+  trustPointsEn: ["Career Direction", "Relationship Choice", "Move & Investment", "By Appointment"],
+  priceZh: "预约制｜按服务范围确认",
+  priceEn: "By Appointment · Scope-Based Pricing",
   symptomsTitleZh: "适合哪些情况？",
   symptomsTitleEn: "Which situations is this for?",
   symptomsZh: [
@@ -98,8 +98,8 @@ const content: ServicePageContent = {
     {
       qZh: "费用如何确认？",
       qEn: "How is the fee confirmed?",
-      aZh: "个人重大决策咨询 S$398 起。若涉及复杂情感关系、婚姻、多方关系、投资判断、搬迁风水或后续顾问支持，将根据范围确认费用。",
-      aEn: "Personal Major Decision Advisory starts from S$398. Complex relationship, marriage, multi-party, investment, relocation Feng Shui or follow-up advisory cases are scoped separately.",
+      aZh: "个人重大决策咨询的费用会根据问题复杂度、影响范围、所需分析深度及后续支持需求确认。",
+      aEn: "Fees for Personal Major Decision Advisory are confirmed based on complexity, impact, depth of analysis and any follow-up support required.",
     },
     {
       qZh: "需要准备什么？",
@@ -110,8 +110,8 @@ const content: ServicePageContent = {
   ],
   ctaTitleZh: "先看清局势，再决定下一步",
   ctaTitleEn: "Clarify the situation before deciding your next step",
-  ctaBodyZh: "个人重大决策咨询适合正在面对事业、关系、搬迁、投资、家庭或人生方向卡点的人。基础咨询 S$398 起。",
-  ctaBodyEn: "Personal Major Decision Advisory is suitable for clients facing career, relationship, relocation, investment, family or life-direction decisions. Entry consultation starts from S$398.",
+  ctaBodyZh: "个人重大决策咨询适合正在面对事业、关系、搬迁、投资、家庭或人生方向卡点的人。具体服务范围与费用将在初步沟通后确认。",
+  ctaBodyEn: "Personal Major Decision Advisory is suitable for clients facing career, relationship, relocation, investment, family or life-direction decisions. Scope and fees are confirmed after an initial enquiry.",
   waTextZh: "你好，启明遁甲 Qimen Strategy，我想预约个人重大决策咨询。",
   waTextEn: "Hello Qimen Strategy, I would like to book a Personal Major Decision Advisory session."
 };
