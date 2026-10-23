@@ -6,7 +6,7 @@ import { relationshipPageContent } from "@/lib/relationship-page-data";
 export const metadata: Metadata = {
   title: "Relationship & Marriage Advisory Singapore｜Qimen Strategy",
   description:
-    "Private relationship and marriage advisory in Singapore. Share the situation first and Qimen Strategy will help confirm whether a S$398 focused consultation, S$698 in-depth consultation or S$998 major decision consultation is appropriate.",
+    "Private relationship and marriage advisory in Singapore. Share the situation first and Qimen Strategy will confirm the appropriate consultation scope and fee based on your needs.",
   keywords: [
     "Relationship consultation Singapore",
     "Marriage consultation Singapore",

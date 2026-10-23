@@ -13,8 +13,8 @@ export const relationshipPageContent: ServicePageContent = {
     "For relationship, marriage, direction and stay-or-leave decisions. Briefly share the situation through WhatsApp and the consultant will help confirm the appropriate consultation pathway.",
   trustPointsZh: ["私密一对一", "线上或 Bedok", "咨询内容保密", "预约制"],
   trustPointsEn: ["Private 1-to-1", "Online or Bedok", "Confidential", "By Appointment"],
-  priceZh: "奇门遁甲咨询 S$396｜重大决策咨询 S$1,696",
-  priceEn: "Qi Men Consultation S$396 · Major Decision Consultation S$1,696",
+  priceZh: "预约制｜了解需求后确认服务范围与费用",
+  priceEn: "By appointment · Scope and fee confirmed after an initial enquiry",
   symptomsTitleZh: "你是否正在面对这些情况？",
   symptomsTitleEn: "Are you facing one of these situations?",
   symptomsZh: [
@@ -46,9 +46,9 @@ export const relationshipPageContent: ServicePageContent = {
   approachTitleZh: "咨询流程",
   approachTitleEn: "Consultation Process",
   approachIntroZh:
-    "先说明目前的关系情况。顾问会根据问题性质，协助确认适合 S$396 奇门遁甲咨询，或 S$1,696 重大决策咨询。",
+    "先说明目前的关系情况。顾问会根据问题性质与复杂度，协助确认适合的咨询服务范围与费用。",
   approachIntroEn:
-    "Start by sharing the current relationship situation. The consultant will help determine whether the S$396 Qi Men consultation or the S$1,696 Major Decision Consultation is appropriate.",
+    "Start by sharing the current relationship situation. The consultant will help determine the appropriate consultation scope and fee based on the nature and complexity of the matter.",
   steps: [
     {
       titleZh: "说明情况",
@@ -103,8 +103,8 @@ export const relationshipPageContent: ServicePageContent = {
     {
       qZh: "感情问题应该选择哪一种咨询？",
       qEn: "Which consultation should I choose for a relationship concern?",
-      aZh: "请先通过 WhatsApp 简要说明情况。顾问会协助确认适合 S$396 奇门遁甲咨询，或 S$1,696 重大决策咨询。",
-      aEn: "Briefly share the situation through WhatsApp. The consultant will help confirm whether the S$396 Qi Men consultation or S$1,696 Major Decision Consultation is appropriate.",
+      aZh: "请先通过 WhatsApp 简要说明情况。顾问会根据问题复杂度、分析深度与实际服务范围，协助确认适合的咨询方案与费用。",
+      aEn: "Briefly share the situation through WhatsApp. The consultant will confirm the appropriate consultation scope and fee based on complexity, depth of analysis and actual needs.",
     },
     {
       qZh: "咨询内容是否保密？",
