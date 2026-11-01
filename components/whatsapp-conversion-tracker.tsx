@@ -6,7 +6,7 @@ const WHATSAPP_CONVERSION_SEND_TO = "AW-17926881970/wGZiCKyN1sscELKFmuRC";
 
 function isWhatsAppLink(href: string) {
   return (
-    href.includes("wa.me/6589593499") ||
+    href.includes("wa.me/6589418791") ||
     href.includes("api.whatsapp.com/send") ||
     href.startsWith("whatsapp://")
   );
