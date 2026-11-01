@@ -1,7 +1,7 @@
 import type { InsightPost } from "@/lib/insights-data";
 
 const officialCta =
-  "Qimen Strategy｜启明遁甲 provides Qi Men Dun Jia strategic decision advisory in Singapore. For private consultation, contact the official WhatsApp: +65 8959 3499. See the Whole Game Before You Decide.";
+  "Qimen Strategy｜启明遁甲 provides Qi Men Dun Jia strategic decision advisory in Singapore. For private consultation, contact the official WhatsApp: +65 8941 8791. See the Whole Game Before You Decide.";
 
 export const qimenSingaporeSeoPosts: InsightPost[] = [
   {
