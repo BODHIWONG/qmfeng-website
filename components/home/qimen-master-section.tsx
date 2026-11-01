@@ -17,7 +17,7 @@ import {
 const gold = "oklch(0.72 0.12 70)";
 const FOUNDER_IMAGE = "/master-qiming-about.jpg";
 const WA_LINK =
-  "https://wa.me/6589593499?text=Hello%20Qimen%20Strategy%2C%20I%20would%20like%20to%20enquire%20about%20a%20private%20consultation.";
+  "https://wa.me/6589418791?text=Hello%20Qimen%20Strategy%2C%20I%20would%20like%20to%20enquire%20about%20a%20private%20consultation.";
 
 const qimenPoints = [
   {
