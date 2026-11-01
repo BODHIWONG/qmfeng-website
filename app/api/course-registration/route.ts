@@ -194,7 +194,7 @@ function emailHtml(record: Record<string, unknown>, internal: boolean) {
             )
             .join("")}
         </table>
-        <p style="margin:24px 0 0;line-height:1.7;">Official WhatsApp: +65 8959 3499<br>Location: Blk 210 New Upper Changi Road #01-729, Singapore 460210</p>
+        <p style="margin:24px 0 0;line-height:1.7;">Official WhatsApp: +65 8941 8791<br>Location: Blk 210 New Upper Changi Road #01-729, Singapore 460210</p>
       </div>
     </div>
   </body>
