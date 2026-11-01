@@ -6,7 +6,7 @@ import { MapPin, Clock, ArrowRight } from "lucide-react";
 
 const WA_INSIGHT = "https://wa.me/6589418791";
 const WA_EXCLUSIVE = "https://wa.me/6589418791";
-const WA_QR_CODE = "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/21901776249073_.pic_hd-jGn7S6Y6By7U2hSddw2bgXpKvUqd7R.jpg";
+const WA_QR_CODE = "/whatsapp-qr.svg";
 
 const STUDIO_LAT = 1.3236;
 const STUDIO_LNG = 103.9273;
