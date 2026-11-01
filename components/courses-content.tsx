@@ -8,7 +8,7 @@ import FloatingActions from "@/components/floating-actions";
 import { useLanguage } from "@/contexts/language-context";
 
 const WA_LINK =
-  "https://wa.me/6589593499?text=Hello%20Qimen%20Strategy%2C%20I%20would%20like%20to%20enquire%20about%20the%20Qi%20Men%20Dun%20Jia%20course%20pathway%20in%20Singapore.";
+  "https://wa.me/6589418791?text=Hello%20Qimen%20Strategy%2C%20I%20would%20like%20to%20enquire%20about%20the%20Qi%20Men%20Dun%20Jia%20course%20pathway%20in%20Singapore.";
 const FOUNDATION_REGISTER_LINK = "/course-registration?course=qimen-foundation&batch=2026-09-19";
 
 const levels = [
