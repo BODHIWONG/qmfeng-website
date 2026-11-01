@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle2, Clock3, MessageCircle, ShieldCheck } from "lucide-react";
 import { useLanguage } from "@/contexts/language-context";
 
-const WA_LINK = "https://wa.me/6589593499";
+const WA_LINK = "https://wa.me/6589418791";
 
 const includedItems = [
   { zh: "完整奇门决策分析", en: "Full Qimen Strategy reading" },
