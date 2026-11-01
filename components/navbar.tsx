@@ -90,7 +90,7 @@ export default function Navbar() {
           ))}
 
           <button onClick={toggleLanguage} className={`border px-3 py-2 text-xs font-semibold tracking-[0.14em] ${scrolled ? "border-white/20 text-white/75" : "border-[#c5ad91]/60 text-[#4a3a2a]/70"}`}>{lang === "zh" ? "EN" : "中文"}</button>
-          <a href="https://wa.me/6589909257" target="_blank" rel="noopener noreferrer" className="bg-[#d0a14a] px-5 py-3 text-xs font-bold uppercase tracking-[0.1em] text-black hover:bg-[#e2bd6b]">
+          <a href="https://wa.me/6589418791" target="_blank" rel="noopener noreferrer" className="bg-[#d0a14a] px-5 py-3 text-xs font-bold uppercase tracking-[0.1em] text-black hover:bg-[#e2bd6b]">
             {lang === "zh" ? "预约初步沟通" : "Arrange a Conversation"}
           </a>
         </div>
@@ -108,7 +108,7 @@ export default function Navbar() {
               {lang === "zh" ? item.zh : item.en}
             </Link>
           ))}
-          <a href="https://wa.me/6589909257" target="_blank" rel="noopener noreferrer" onClick={() => setIsOpen(false)} className="mt-5 block bg-[#d0a14a] px-5 py-4 text-center text-sm font-bold text-black">
+          <a href="https://wa.me/6589418791" target="_blank" rel="noopener noreferrer" onClick={() => setIsOpen(false)} className="mt-5 block bg-[#d0a14a] px-5 py-4 text-center text-sm font-bold text-black">
             {lang === "zh" ? "预约初步沟通" : "Arrange a Conversation"}
           </a>
         </div>
