@@ -177,7 +177,7 @@ function renderParagraph(content: string, index: number, category: string) {
     return (
       <a
         key={index}
-        href={`https://wa.me/6589593499?text=${encodeURIComponent(whatsappText)}`}
+        href={`https://wa.me/6589418791?text=${encodeURIComponent(whatsappText)}`}
         target="_blank"
         rel="noopener noreferrer"
         className="mt-8 inline-flex items-center justify-center border border-[oklch(0.60_0.08_65)] bg-[oklch(0.60_0.08_65)] px-6 py-3 text-sm font-bold uppercase tracking-[0.1em] text-[oklch(0.08_0.02_60)] transition-colors hover:bg-transparent hover:text-[oklch(0.72_0.12_70)]"
