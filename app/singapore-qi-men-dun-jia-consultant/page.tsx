@@ -6,7 +6,7 @@ import Footer from "@/components/footer";
 import FloatingActions from "@/components/floating-actions";
 
 const WA_LINK =
-  "https://wa.me/6589593499?text=Hello%20Qimen%20Strategy%2C%20I%20would%20like%20to%20book%20a%20private%20Qi%20Men%20Dun%20Jia%20consultation%20in%20Singapore.";
+  "https://wa.me/6589418791?text=Hello%20Qimen%20Strategy%2C%20I%20would%20like%20to%20book%20a%20private%20Qi%20Men%20Dun%20Jia%20consultation%20in%20Singapore.";
 
 export const metadata: Metadata = {
   title:
@@ -120,9 +120,9 @@ const faqs = [
     q: "How do I book a consultation?",
     qZh: "如何预约咨询？",
     a:
-      "You can contact Qimen Strategy directly on WhatsApp at +65 8959 3499 to confirm your question, timing and consultation type.",
+      "You can contact Qimen Strategy directly on WhatsApp at +65 8941 8791 to confirm your question, timing and consultation type.",
     aZh:
-      "你可以直接通过 WhatsApp +65 8959 3499 联系启明遁甲决策智库，确认你的问题、时间与咨询类型。",
+      "你可以直接通过 WhatsApp +65 8941 8791 联系启明遁甲决策智库，确认你的问题、时间与咨询类型。",
   },
 ];
 
@@ -291,7 +291,7 @@ export default function SingaporeQiMenDunJiaConsultantPage() {
                 See the bigger picture before you decide.
               </h2>
               <p className="mx-auto mt-6 max-w-3xl text-base leading-8 text-white/68 md:text-lg">
-                Contact Qimen Strategy directly through WhatsApp at +65 8959 3499 to book a private Qi Men Dun Jia consultation in Singapore.
+                Contact Qimen Strategy directly through WhatsApp at +65 8941 8791 to book a private Qi Men Dun Jia consultation in Singapore.
               </p>
               <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
                 <a
@@ -300,7 +300,7 @@ export default function SingaporeQiMenDunJiaConsultantPage() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center bg-[#d6ad63] px-7 py-4 text-sm font-bold uppercase tracking-[0.16em] text-black transition hover:bg-[#f4dfb0]"
                 >
-                  WhatsApp +65 8959 3499
+                  WhatsApp +65 8941 8791
                 </a>
                 <Link href="/insights" className="inline-flex items-center justify-center border border-[#d6ad63]/70 px-7 py-4 text-sm font-bold uppercase tracking-[0.16em] text-[#f4dfb0] transition hover:bg-[#d6ad63]/10">
                   View Case Library
