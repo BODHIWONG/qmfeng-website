@@ -8,7 +8,7 @@ import FloatingActions from "@/components/floating-actions";
 import { useLanguage } from "@/contexts/language-context";
 import { useLocalizedHref } from "@/hooks/use-localized-href";
 
-const WHATSAPP_URL = "https://wa.me/6589909257";
+const WHATSAPP_URL = "https://wa.me/6589418791";
 
 const serviceAreas = [
   {
