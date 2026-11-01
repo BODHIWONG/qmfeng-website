@@ -74,7 +74,7 @@ export default function PersonalAdvisoryContent() {
                     ))}
                   </div>
                   <Link
-                    href={`https://wa.me/6589909257?text=${encodeURIComponent(t(tier.messageZh, tier.messageEn))}`}
+                    href={`https://wa.me/6589418791?text=${encodeURIComponent(t(tier.messageZh, tier.messageEn))}`}
                     data-conversion="personal_decision_consultation"
                     target="_blank"
                     rel="noopener noreferrer"
