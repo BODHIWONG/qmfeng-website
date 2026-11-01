@@ -77,7 +77,7 @@ const sections = [
   {
     title: "10. Contact",
     body: [
-      "For batch changes, replacement participants or course questions, contact Qimen Strategy Academy through WhatsApp at +65 8959 3499.",
+      "For batch changes, replacement participants or course questions, contact Qimen Strategy Academy through WhatsApp at +65 8941 8791.",
       "Last updated: 20 July 2026.",
     ],
   },
