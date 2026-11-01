@@ -6,7 +6,7 @@ import Footer from "@/components/footer";
 import FloatingActions from "@/components/floating-actions";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 
-const WA_LINK = "https://wa.me/6589909257";
+const WA_LINK = "https://wa.me/6589418791";
 
 export type ServiceStep = {
   titleZh: string;
