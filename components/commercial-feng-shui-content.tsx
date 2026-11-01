@@ -19,7 +19,7 @@ import Footer from "@/components/footer";
 import FloatingActions from "@/components/floating-actions";
 import { useLanguage } from "@/contexts/language-context";
 
-const WHATSAPP_BASE = "https://wa.me/6589909257";
+const WHATSAPP_BASE = "https://wa.me/6589418791";
 
 function whatsappLink(message: string) {
   return `${WHATSAPP_BASE}?text=${encodeURIComponent(message)}`;
