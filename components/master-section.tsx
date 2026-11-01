@@ -5,7 +5,7 @@ import { useLanguage } from "@/contexts/language-context";
 
 const MASTER_PHOTO = "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/21541776220030_.pic_hd.jpg-6V5qFhJBRIsH83yzddW0fPuXqELuBa.png";
 const QIMEN_COMPASS = "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/21711776224675_.pic_hd.jpg-e4KblAWrbDj5x5doZNK2XS1KduaUCr.png";
-const WA_LINK = "https://wa.me/message/55HSHDNBMWPLA1";
+const WA_LINK = "https://wa.me/6589418791";
 
 const fadeIn = {
   hidden: { opacity: 0, y: 30 },
