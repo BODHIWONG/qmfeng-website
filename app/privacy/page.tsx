@@ -14,7 +14,7 @@ const sections = [
     title: "1. Who We Are",
     body: [
       "This Privacy Policy applies to Qimen Strategy｜启明遁甲决策智库, operated by QIMING FENG SHUI WISDOM PTE. LTD. in Singapore.",
-      "Business address: Blk 210 New Upper Changi Road #01-729, Singapore 460210. Official WhatsApp: +65 8959 3499.",
+      "Business address: Blk 210 New Upper Changi Road #01-729, Singapore 460210. Official WhatsApp: +65 8941 8791.",
     ],
   },
   {
@@ -76,7 +76,7 @@ const sections = [
   {
     title: "10. Contact and Updates",
     body: [
-      "For privacy questions, access or correction requests, consent withdrawal or complaints, contact our Data Protection Contact through WhatsApp at +65 8959 3499 or write to the business address above.",
+      "For privacy questions, access or correction requests, consent withdrawal or complaints, contact our Data Protection Contact through WhatsApp at +65 8941 8791 or write to the business address above.",
       "We may update this policy when our services, systems or legal obligations change. The current version will be published on this page.",
       "Last updated: 20 July 2026.",
     ],
