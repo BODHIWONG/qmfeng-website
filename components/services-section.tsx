@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { useLanguage } from "@/contexts/language-context";
 
-const WA_LINK = "https://wa.me/message/55HSHDNBMWPLA1";
+const WA_LINK = "https://wa.me/6589418791";
 
 // 服务图标 - 使用SVG实现浮雕金属效果
 const CompassIcon = () => (
@@ -283,7 +283,7 @@ export default function ServicesSection() {
 
                   {/* 预约咨询按钮 */}
                   <a
-                    href={`https://wa.me/message/55HSHDNBMWPLA1?text=${encodeURIComponent(service.waMsg)}`}
+                    href={`https://wa.me/6589418791?text=${encodeURIComponent(service.waMsg)}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1 mt-4 px-4 py-1.5 text-xs tracking-widest uppercase border border-[oklch(0.60_0.08_65)] text-[oklch(0.50_0.06_65)] hover:bg-[oklch(0.60_0.08_65)] hover:text-white transition-all duration-300"
