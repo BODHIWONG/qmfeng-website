@@ -27,7 +27,7 @@ export const metadata: Metadata = {
 
 const REGISTRATION_LINK = "/course-registration?course=qimen-foundation&batch=2026-09-19";
 const WA_LINK =
-  "https://wa.me/6589593499?text=Hi%2C%20I%27m%20interested%20in%20the%20Qi%20Men%20Dun%20Jia%20course%20pathway.%20May%20I%20know%20which%20level%20is%20suitable%20for%20me%3F";
+  "https://wa.me/6589418791?text=Hi%2C%20I%27m%20interested%20in%20the%20Qi%20Men%20Dun%20Jia%20course%20pathway.%20May%20I%20know%20which%20level%20is%20suitable%20for%20me%3F";
 
 const curriculum = [
   ["01", "Qimen Framework", "奇门遁甲基础框架", "Understand the overall structure, modern decision-support value and responsible application boundaries."],
