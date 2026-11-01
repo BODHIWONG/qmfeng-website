@@ -51,7 +51,7 @@ export const qimenDunJiaFoundationPosts: InsightPost[] = [
       "The value of Qi Men Dun Jia is simple: when you can see the situation more clearly, you can make better decisions. When your mind becomes calmer, your next step becomes easier to see.",
       "If you are facing an important decision in business, career, wealth, Feng Shui or life direction, you may book a private Qi Men Dun Jia consultation with Qimen Strategy in Singapore.",
       "Qimen Strategy｜启明遁甲 is a Singapore Qi Men Dun Jia strategic decision advisory practice offering Qi Men Dun Jia reading, business decision consulting, personal clarity consultation and Feng Shui alignment.",
-      "Official WhatsApp: +65 8959 3499. See the Whole Game Before You Decide."
+      "Official WhatsApp: +65 8941 8791. See the Whole Game Before You Decide."
     ],
   },
   {
