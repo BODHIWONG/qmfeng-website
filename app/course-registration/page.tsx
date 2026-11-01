@@ -8,7 +8,7 @@ import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import FloatingActions from "@/components/floating-actions";
 
-const WHATSAPP_NUMBER = "6589593499";
+const WHATSAPP_NUMBER = "6589418791";
 const LOCATION = "Blk 210 New Upper Changi Road #01-729, Singapore 460210";
 const COMPANY = "QIMING FENG SHUI WISDOM PTE. LTD.";
 const PAYNOW_UEN = "202313112R";
