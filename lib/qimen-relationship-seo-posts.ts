@@ -1,7 +1,7 @@
 import type { InsightPost } from "@/lib/insights-data";
 
 const relationshipCta =
-  "Qimen Strategy｜启明遁甲 offers Relationship Decision Clarity in Singapore as a specialised advisory area within major life decision consulting. For a private consultation, contact the official WhatsApp: +65 8959 3499. See the situation clearly before you decide.";
+  "Qimen Strategy｜启明遁甲 offers Relationship Decision Clarity in Singapore as a specialised advisory area within major life decision consulting. For a private consultation, contact the official WhatsApp: +65 8941 8791. See the situation clearly before you decide.";
 
 export const qimenRelationshipSeoPosts: InsightPost[] = [
   {
