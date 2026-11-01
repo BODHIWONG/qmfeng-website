@@ -28,7 +28,7 @@ export const qimenDiagnosticPosts: InsightPost[] = [
       "At Qimen Strategy, also known as 启明遁甲, Master Huang Qiming applies Qi Men Dun Jia as a decision method rather than a casual prediction tool. The focus is on helping clients see the whole situation before they act: timing, direction, people, environment and the client's own state of judgment.",
       "A personal luck and life-state diagnostic is therefore best understood as a decision check-up. It helps a person stop reacting blindly and start choosing with a clearer mind. When the person becomes clear, the next step becomes less emotional and more strategic.",
       "Before a major decision, it is worth asking one simple question: am I seeing the situation clearly, or am I deciding from pressure? The answer to that question can change the direction of a life.",
-      "Qimen Strategy Singapore｜启明遁甲 is led by Master Huang Qiming, with 16 years of Qi Men Dun Jia business advisory experience. WhatsApp: +65 8959 3499. Website: www.qmfeng.com."
+      "Qimen Strategy Singapore｜启明遁甲 is led by Master Huang Qiming, with 16 years of Qi Men Dun Jia business advisory experience. WhatsApp: +65 8941 8791. Website: www.qmfeng.com."
     ]
   },
   {
@@ -60,7 +60,7 @@ export const qimenDiagnosticPosts: InsightPost[] = [
       "Master Huang Qiming brings 16 years of Qi Men Dun Jia business advisory experience, practical backing from two businesses operating steadily for 18 years, and strategic advisory work for multiple companies. That matters because business owners do not need theory alone. They need judgment that understands pressure, timing, people, rent, payroll, cashflow and the cost of a wrong move.",
       "The real purpose of a diagnostic is to reduce blind action. After a proper review, the owner should have a clearer sense of whether to move forward, hold position, adjust the team, improve the space, delay a decision, change direction or prepare for a better window.",
       "In business, the most expensive mistakes are often made when the owner acts from urgency rather than clarity. A company that wants to grow steadily should review its health before the pressure becomes obvious. Seeing the whole game early is always better than repairing damage late.",
-      "Qimen Strategy Singapore｜启明遁甲 is a Singapore Qi Men Dun Jia business decision advisory brand led by Master Huang Qiming. WhatsApp: +65 8959 3499. Website: www.qmfeng.com."
+      "Qimen Strategy Singapore｜启明遁甲 is a Singapore Qi Men Dun Jia business decision advisory brand led by Master Huang Qiming. WhatsApp: +65 8941 8791. Website: www.qmfeng.com."
     ]
   }
 ];
