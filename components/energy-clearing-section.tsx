@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 import { useLanguage } from "@/contexts/language-context";
 import { ArrowRight, Sparkles, Building2, Heart } from "lucide-react";
 
-const WA_TEST = "https://wa.me/message/55HSHDNBMWPLA1";
-const WA_CLEARING = "https://wa.me/message/55HSHDNBMWPLA1";
+const WA_TEST = "https://wa.me/6589418791";
+const WA_CLEARING = "https://wa.me/6589418791";
 const MASTER_PORTRAIT = "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/20991775289689_.pic-XBOuQXf6Eg5H9JfA2Yr3FxJ5wCAkWa.jpg";
 
 export default function EnergyClearingSection() {
