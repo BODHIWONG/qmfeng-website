@@ -15,7 +15,7 @@ export default function ContactPageContent() {
             {t("联系启明遁甲", "Contact Qimen Strategy")}
           </p>
           <a
-            href="https://wa.me/6589909257?text=你好，启明遁甲，我想咨询服务。"
+            href="https://wa.me/6589418791?text=你好，启明遁甲，我想咨询服务。"
             target="_blank"
             rel="noopener noreferrer"
             className="mx-auto mt-8 inline-flex w-full max-w-md items-center justify-center gap-3 bg-[#d6ad63] px-6 py-4 text-sm font-bold text-[#070604] transition hover:bg-[#f0d49b] md:text-base"
@@ -24,7 +24,7 @@ export default function ContactPageContent() {
             {t("通过 WhatsApp 立即咨询", "Enquire on WhatsApp")}
           </a>
           <p className="mt-5 text-sm text-white/55">
-            {t("WhatsApp：+65 8990 9257", "WhatsApp: +65 8990 9257")}
+            {t("WhatsApp：+65 8941 8791", "WhatsApp: +65 8941 8791")}
           </p>
         </section>
       </main>
