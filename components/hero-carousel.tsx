@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useLanguage } from "@/contexts/language-context";
 import { ArrowRight, ChevronLeft, ChevronRight, MapPin } from "lucide-react";
 
-const WA_LINK = "https://wa.me/message/55HSHDNBMWPLA1";
+const WA_LINK = "https://wa.me/6589418791";
 const MASTER_PORTRAIT = "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/21541776220030_.pic_hd.jpg-35nwtPAyHHfdwcY3t4OK24vMip1AFl.png";
 
 // Three Core Pillars - Focused Messaging
