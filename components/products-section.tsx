@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { useLanguage } from "@/contexts/language-context";
 import { ArrowRight } from "lucide-react";
 
-const WA_PRODUCTS = "https://wa.me/message/55HSHDNBMWPLA1";
+const WA_PRODUCTS = "https://wa.me/6589418791";
 
 const PRODUCTS = [
   {
