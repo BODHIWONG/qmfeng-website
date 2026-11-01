@@ -38,7 +38,7 @@ export default function ContactSuccessContent() {
 
           <div className="mt-9 flex flex-col justify-center gap-4 sm:flex-row">
             <a
-              href="https://wa.me/6589593499?text=Hello%20Qimen%20Strategy%2C%20I%20have%20submitted%20the%20website%20enquiry%20form%20and%20my%20matter%20is%20urgent.%20My%20enquiry%20is%3A"
+              href="https://wa.me/6589418791?text=Hello%20Qimen%20Strategy%2C%20I%20have%20submitted%20the%20website%20enquiry%20form%20and%20my%20matter%20is%20urgent.%20My%20enquiry%20is%3A"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-3 bg-[#d6ad63] px-7 py-4 text-sm font-bold uppercase tracking-[0.12em] text-black hover:bg-[#f4dfb0]"
