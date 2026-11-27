@@ -39,7 +39,7 @@ export default function HeroSimple() {
               {t("预约初步沟通", "Arrange an Initial Conversation")}<ArrowRight size={17} />
             </Link>
             <Link href="#services" className="inline-flex items-center justify-center gap-2 border border-white/20 px-7 py-4 text-sm font-semibold text-white/82 hover:border-[#d6ad63] hover:text-[#f4dfb0]">
-              {t("了解三大核心业务", "Explore Our Three Core Services")}<ArrowRight size={16} />
+              {t("了解核心服务", "Explore Our Core Services")}<ArrowRight size={16} />
             </Link>
           </motion.div>
           <div className="mt-10 grid max-w-4xl grid-cols-1 gap-px border border-white/10 bg-white/10 sm:grid-cols-3">

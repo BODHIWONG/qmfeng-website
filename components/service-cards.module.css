@@ -1,0 +1,86 @@
+.section {
+  --paper: #f4f0e8;
+  --ink: #202422;
+  --serif: var(--font-cormorant), var(--font-noto-serif), serif;
+  background: var(--paper);
+  color: var(--ink);
+  scroll-margin-top: 5rem;
+}
+.heading, .footer {
+  padding-inline: clamp(1.4rem, 5vw, 6rem);
+  display: flex;
+  align-items: center;
+}
+.heading {
+  padding-block: clamp(2.25rem, 5vw, 5rem) clamp(1.4rem, 3vw, 2.5rem);
+  gap: 2rem;
+}
+.heading h2 {
+  font: 500 clamp(1.8rem, 3vw, 3rem)/1.2 var(--serif);
+}
+.heading span {
+  flex: 1;
+  height: 1px;
+  background: #c9c2b3;
+}
+.pair { display: grid; gap: 2px; }
+.card {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  min-width: 0;
+  min-height: clamp(28rem, 106vw, 37rem);
+  color: white;
+  background: #292b2a;
+}
+.photo { object-fit: cover; object-position: 50% 38%; z-index: -2; }
+.card:first-child::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(0deg, #101312f2, #101312b8 28%, transparent 69%);
+}
+.caption {
+  margin: clamp(1.4rem, 3.4vw, 4rem);
+  width: calc(100% - 2 * clamp(1.4rem, 3.4vw, 4rem));
+}
+.card:nth-child(2) .caption {
+  background: var(--paper);
+  color: var(--ink);
+  padding: clamp(1.35rem, 2.4vw, 2.5rem);
+  margin-top: 12rem;
+  max-width: 31rem;
+  border-top: 2px solid #a48755;
+}
+.caption h3 {
+  font: 500 clamp(2rem, 3.4vw, 4.2rem)/1.09 var(--serif);
+  text-wrap: balance;
+}
+.caption p {
+  margin-top: .95rem;
+  max-width: 36ch;
+  font-size: clamp(1rem, 1.2vw, 1.125rem);
+  line-height: 1.55;
+}
+.action, .footer a {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.15rem;
+  min-height: 44px;
+  font-size: .91rem;
+}
+.action { margin-top: 1rem; border-bottom: 1px solid currentColor; }
+.card:focus-visible { outline: 3px solid #dbb776; outline-offset: -5px; }
+.footer { justify-content: flex-end; padding-block: .8rem; }
+.footer a:hover { text-decoration: underline; }
+@media (min-width: 768px) {
+  .pair { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .card { min-height: clamp(34rem, 46vw, 48rem); }
+}
+@media (prefers-reduced-motion: no-preference) and (hover: hover) {
+  .photo { transition: transform .8s ease; }
+  .card:hover .photo { transform: scale(1.025); }
+}
