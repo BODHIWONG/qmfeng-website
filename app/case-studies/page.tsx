@@ -52,105 +52,36 @@ function CaseStudiesContent() {
   ];
 
   return (
-    <main className="bg-[#050403] text-white">
-      <section className="relative overflow-hidden border-b border-[#d6ad63]/20 px-4 py-24 md:py-32">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_78%_18%,rgba(214,173,99,0.2),transparent_34%)]" />
-        <div className="container relative mx-auto max-w-6xl">
-          <p className="mb-5 text-xs font-bold uppercase tracking-[0.34em] text-[#d6ad63]">
-            STRATEGIC CASE STUDIES · QIMEN STRATEGY SINGAPORE
-          </p>
-
-          <h1
-            className="max-w-5xl text-5xl font-semibold uppercase leading-[0.95] tracking-[0.06em] text-[#f4dfb0] md:text-7xl"
-            style={{ fontFamily: "var(--font-cormorant), var(--font-noto-serif), serif" }}
-          >
-            Realignment Stories
-          </h1>
-
-          <h2 className="mt-5 text-3xl font-semibold tracking-[0.18em] text-[#d6ad63] md:text-5xl">
-            {t("商业案例 · 决策洞察", "Business Cases · Decision Insight")}
-          </h2>
-
-          <p className="mt-8 max-w-3xl text-lg leading-9 text-white/78 md:text-xl">
-            {t(
-              "案例不是为了制造神话，而是为了说明启明遁甲如何在真实商业情境中观察时机、方向、人事关系与环境摩擦。",
-              "Case studies are not written to create myths. They explain how Qimen Strategy observes timing, direction, human dynamics and environmental friction in real business situations."
-            )}
-          </p>
-
-          <p className="mt-4 max-w-3xl text-base leading-8 text-white/68">
-            {t(
-              "以下内容采用隐私保护方式呈现，重点是局势、战略观察、调整方向与结果，而不是夸大承诺。",
-              "The following cases are presented with privacy protection. The focus is situation, strategic observation, adjustment and result — not exaggerated promises."
-            )}
-          </p>
+    <main className="bg-[#F5F2EC] text-[#202124]">
+      <section className="bg-[#202124] text-[#F5F2EC] px-6 py-24 md:py-36">
+        <div className="mx-auto max-w-6xl">
+          <p className="text-xs tracking-[0.28em] text-[#C9B58D]">QIMING DUNJIA / SELECTED CASES</p>
+          <h1 className="mt-8 max-w-4xl text-5xl leading-tight md:text-7xl" style={{fontFamily:"var(--font-cormorant), var(--font-noto-serif), serif"}}>The Strategic Archive</h1>
+          <h2 className="mt-5 text-xl md:text-3xl">{t("战略实践档案","Perspectives on complex decisions")}</h2>
+          <p className="mt-8 max-w-2xl text-base leading-8 text-[#DAD6CE]">{t("从时机、人事关系到商业空间，以东方战略智慧审视现实情境。","Exploring timing, human dynamics and business environments through Eastern strategic wisdom and real-world perspectives.")}</p>
         </div>
       </section>
-
-      <section className="px-4 py-20 md:py-28">
-        <div className="container mx-auto max-w-6xl space-y-8">
-          {studies.map((study, index) => (
-            <article key={study.title} className="border border-[#d6ad63]/20 bg-white/[0.035] p-8 md:p-10">
-              <p className="text-xs font-bold uppercase tracking-[0.26em] text-[#d6ad63]">
-                Case {index + 1} · {study.category}
-              </p>
-
-              <h3 className="mt-4 text-3xl font-semibold text-[#f4dfb0] md:text-4xl">
-                {study.title}
-              </h3>
-
-              <p className="mt-2 text-lg tracking-[0.12em] text-[#d6ad63]">
-                {study.zhTitle}
-              </p>
-
-              <div className="mt-8 grid gap-6 md:grid-cols-2">
-                <div>
-                  <p className="text-sm font-bold uppercase tracking-[0.22em] text-[#d6ad63]">Situation</p>
-                  <p className="mt-3 text-base leading-8 text-white/72">{study.situation}</p>
-                </div>
-
-                <div>
-                  <p className="text-sm font-bold uppercase tracking-[0.22em] text-[#d6ad63]">Strategic Observation</p>
-                  <p className="mt-3 text-base leading-8 text-white/72">{study.observation}</p>
-                </div>
-
-                <div>
-                  <p className="text-sm font-bold uppercase tracking-[0.22em] text-[#d6ad63]">Adjustment</p>
-                  <p className="mt-3 text-base leading-8 text-white/72">{study.adjustment}</p>
-                </div>
-
-                <div>
-                  <p className="text-sm font-bold uppercase tracking-[0.22em] text-[#d6ad63]">Result</p>
-                  <p className="mt-3 text-base leading-8 text-white/72">{study.result}</p>
-                </div>
-              </div>
-            </article>
-          ))}
-        </div>
+      <section className="mx-auto max-w-6xl px-6 py-16 md:py-28">
+        <p className="mb-10 max-w-3xl text-sm leading-7 text-[#55534F]">{t("以下为既有案例叙述，采用隐私保护方式呈现。相关结果不构成未来表现的保证。","The following existing case narratives are presented with privacy protection. Outcomes do not guarantee future performance.")}</p>
+        {studies.map((study,index)=>(
+          <article key={study.title} className="grid gap-8 border-t border-[#B9A37A] py-12 md:grid-cols-[1fr_1.5fr] md:gap-16 md:py-20">
+            <header>
+              <p className="text-xs tracking-[0.22em] text-[#756344]">{String(index+1).padStart(2,"0")} / {study.category}</p>
+              <h3 className="mt-6 text-3xl leading-tight md:text-4xl" style={{fontFamily:"var(--font-cormorant), var(--font-noto-serif), serif"}}>{t(study.zhTitle,study.title)}</h3>
+            </header>
+            <div className="grid gap-8 sm:grid-cols-2">
+              {[[t("情境","Situation"),study.situation],[t("战略观察","Strategic observation"),study.observation],[t("调整方向","Adjustment"),study.adjustment],[t("案例叙述中的结果","Reported outcome"),study.result]].map(([label,value])=>(
+                <div key={label}><h4 className="text-xs font-semibold uppercase tracking-wider text-[#756344]">{label}</h4><p className="mt-3 text-base leading-7 text-[#454440]">{value}</p></div>
+              ))}
+            </div>
+          </article>
+        ))}
       </section>
-
-      <section className="border-t border-[#d6ad63]/20 bg-[#080603] px-4 py-20">
-        <div className="container mx-auto max-w-5xl text-center">
-          <p className="text-xs font-bold uppercase tracking-[0.28em] text-[#d6ad63]">
-            SEE THE WHOLE GAME
-          </p>
-
-          <h2
-            className="mt-5 text-3xl font-semibold leading-tight text-[#f4dfb0] md:text-5xl"
-            style={{ fontFamily: "var(--font-cormorant), var(--font-noto-serif), serif" }}
-          >
-            {t(
-              "真正的案例价值，是让客户看见自己正在经历的局。",
-              "The value of a case study is helping clients recognise the situation they are already in."
-            )}
-          </h2>
-
-          <Link
-            href="/qimen-strategy-business"
-            className="mt-10 inline-flex items-center justify-center border border-[#d6ad63]/70 px-7 py-4 text-sm font-bold uppercase tracking-[0.16em] text-[#f4dfb0] transition hover:bg-[#d6ad63]/10"
-          >
-            {t("理解启明遁甲", "Understand Qimen Strategy")}
-          </Link>
+      <section className="bg-[#202124] px-6 py-20 text-[#F5F2EC]">
+        <div className="mx-auto max-w-6xl">
+          <p className="text-xs tracking-[0.24em] text-[#C9B58D]">REALITY × QIMEN</p>
+          <h2 className="mt-5 max-w-3xl text-3xl leading-tight md:text-5xl">{t("从另一个角度审视重要决策。","Consider important decisions from another perspective.")}</h2>
+          <Link href="/contact" className="mt-8 inline-flex border border-[#B9A37A] px-6 py-4 text-sm transition hover:bg-white/10 focus-visible:outline focus-visible:outline-2">{t("预约私人咨询","Private consultation")}</Link>
         </div>
       </section>
     </main>
